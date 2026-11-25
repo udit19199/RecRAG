@@ -1,0 +1,25 @@
+[
+  {"id": "6456be149fd6b88d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6b853154db243670", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 74, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 74, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 74, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 74, "quote": "and is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 49, "quote": "The understandings that Israel reached with Hamas in 2012"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 49, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 49, "quote": "\"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 97, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]}
+]

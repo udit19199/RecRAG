@@ -1,0 +1,21 @@
+[
+  {"id": "d50dc23602c035f2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 18, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 18, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 31, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 31, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "3f86a6a39704ebbe", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]}
+]

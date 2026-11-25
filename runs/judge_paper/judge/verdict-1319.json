@@ -1,0 +1,63 @@
+[
+  {
+    "id": "e409beb38c9009c2",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 94, "quote": "Prince William (played by Rufus Kampa)"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 30, "quote": "William (Rufus Kampa) is left heartbroken with grief"}
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {"item": 30, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}
+        ]
+      }
+    ]
+  }
+]

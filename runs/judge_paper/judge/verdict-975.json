@@ -1,0 +1,15 @@
+[
+  {"id": "94e56b3458dd4da2", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 68, "quote": "Zazie Beetz will be back as Arthur’s neighbor"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 68, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 68, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 25, "quote": "A refreshing take on Mary Jane’s stealth missions makes her a strong character in Marvel’s Spider-Man 2"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 71, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}]}
+  ]},
+  {"id": "34c7d92fd4e40ce3", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

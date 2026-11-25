@@ -1,0 +1,47 @@
+[
+  {
+    "id": "0660b384eb947659",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 79,
+            "quote": "We all found ourselves at home looking at the people we worked with, the people we went out for drinks with and the people in our extended family on a computer screen"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 79,
+            "quote": "he told Fox News Digital"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 68,
+            "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 68,
+            "quote": "We used to play in person, but since the pandemic I run the game virtually online from my house."
+          }
+        ]
+      }
+    ]
+  }
+]

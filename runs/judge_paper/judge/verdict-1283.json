@@ -1,0 +1,42 @@
+[
+  {
+    "id": "fa4489cd459debb4",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 80, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 80, "quote": "Time-restricted eating can also improve the quality of sleep, he noted, which can help the brain recover better."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 63, "quote": "Today, the internet is littered with tips and tricks that promise a sound sleep"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 63, "quote": "but not all of them are effective and none are"}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 63, "quote": "and none are foolproof."}
+        ]
+      }
+    ]
+  }
+]

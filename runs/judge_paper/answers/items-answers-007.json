@@ -1,0 +1,141 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "cc12ef9700eb7e9d",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles portray Bankman-Fried as involved; TechCrunch says Ellison took the funds under his instruction, not without his knowledge."
+  },
+  {
+   "id": "557179a068835abe",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from broad influence over search and the internet’s appearance to specific alleged harms to publishers and their revenue."
+  },
+  {
+   "id": "ec1950727a9d9748",
+   "kind": "answer",
+   "question": "According to Fortune, has the perspective on 'Housing affordability' in the housing market changed between the article published on October 6, 2023, which mentioned that affordability would improve as inflation fades and the Federal Reserve cuts interest rates, and the article published on October 20, 2023, which reported that housing affordability is worse now than during the Great Financial Crisis?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes—from expecting future improvement to reporting affordability as worse than during the Great Financial Crisis."
+  },
+  {
+   "id": "4932c24f8ad1bba1",
+   "kind": "answer",
+   "question": "Between the report from The Age on October 22, 2023, claiming that Google manipulates Search to minimize ad revenue, and the report from TechCrunch on December 15, 2023, alleging that Google \"siphons off\" news publishers' content and ad revenue through anticompetitive means, is there consistency in the portrayal of Google's influence on ad revenue and content distribution?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes—both portray Google’s influence over search and content distribution as benefiting its business, though they describe different alleged practices."
+  },
+  {
+   "id": "ad72ba7e9c9ce031",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: gameplay errors in the final versus past defeats and respect for Argentina."
+  },
+  {
+   "id": "fb502b648fe29447",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes—from leading both companies to claiming he could no longer manage both and lacked awareness of key financial matters."
+  },
+  {
+   "id": "5dd2bf0471a42a2c",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's actions published before October 31, 2023, and The Verge report on Sam Bankman-Fried's acknowledgment of financial discrepancies, was there a change in the narrative regarding Sam Bankman-Fried's awareness of the financial issues?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from portraying himself as shocked and unaware, the narrative shifted to his acknowledgment that he’d been told about the $8 billion shortfall."
+  },
+  {
+   "id": "05c80ea36cd298c4",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's actions published before October 31, 2023, and The Verge report on Sam Bankman-Fried's acknowledgment of financial discrepancies, was there a change in the narrative regarding Sam Bankman-Fried's awareness of the financial issues?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from maintaining innocence to acknowledging he had been told about the $8 billion discrepancy."
+  },
+  {
+   "id": "d733141a95732722",
+   "kind": "answer",
+   "question": "Did the 'Sporting News' report on the Michigan sign-stealing scandal involving the Wolverines indicate a consistent or inconsistent portrayal of the situation compared to the earlier report by 'The New York Times' on the reactions of college football coaches to the alleged espionage?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Consistent overall."
+  },
+  {
+   "id": "e9b5bc748df070b6",
+   "kind": "answer",
+   "question": "Has the perspective on managing dementia in 'The Guardian' articles shown a change from the time Susan Saunders was reported to be caring for her mother with dementia (published at '2023-10-10') to the more recent report on new Alzheimer’s drugs (published at '2023-12-17')?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from lifestyle and research-trial advice to cautious hope for drugs that directly slow Alzheimer’s and earlier diagnosis."
+  },
+  {
+   "id": "b03b85d324c54d24",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "Different stages/versions of the same Gemini project."
+  },
+  {
+   "id": "3f498a10c62acbf8",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles portray Bankman-Fried as involved; TechCrunch says Ellison acted under his instruction."
+  },
+  {
+   "id": "a1fd952e5f9d6589",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both portray challenges, but in different situations: gameplay struggles in the final and past defeats to Argentina."
+  },
+  {
+   "id": "03e01340064b72e5",
+   "kind": "answer",
+   "question": "Between the report by The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the report by TechCrunch on the class action antitrust suit against Google published on December 15, 2023, was there a change in the portrayal of Google's business practices with respect to their impact on other companies?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from allegedly limiting search competition through default deals to harming publishers by diverting their content, readers, and ad revenue."
+  },
+  {
+   "id": "fe1cd13be3971a40",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present challenges, but in different contexts."
+  }
+ ],
+ "evidence": []
+}

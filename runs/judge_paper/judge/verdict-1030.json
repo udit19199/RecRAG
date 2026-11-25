@@ -1,0 +1,39 @@
+[
+{"id": "62aaf07d8741b8e8", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 32, "quote": "“But nah, it was awesome.”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 32, "quote": "On Saturday, the competition also said goodbye to a range of players"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 32, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 32, "quote": "Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 32, "quote": "On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 32, "quote": "Hawthorn’s Akec Makur Chuot"}]},
+{"fact": "0.6", "status": "stated", "evidence": [{"item": 32, "quote": "Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 41, "quote": "Western Bulldogs forward Richelle Cranston"}, {"item": 41, "quote": "The Dogs are Cranston’s third club"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 41, "quote": "Western Bulldogs forward Richelle Cranston"}, {"item": 41, "quote": "The Dogs are Cranston’s third club after starting at Melbourne"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 41, "quote": "Western Bulldogs forward Richelle Cranston"}, {"item": 41, "quote": "The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 41, "quote": "Western Bulldogs forward Richelle Cranston"}, {"item": 41, "quote": "before heading to the Bulldogs last year"}]}
+]},
+{"id": "112ccb4e6d4fa4ae", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "7dd88d448ba2d090", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "759ed6842916571c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,70 @@
+[
+{"id": "443d09446bba975f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "b92681d684a8ebd5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []}
+]},
+{"id": "d20fc2455cce76c6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "9d96bbe0cc376437", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "aa631af96cf575d6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "7798ff2ba2607f70", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 44, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 44, "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 22, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 22, "quote": "We look at Valve and we see a store that could be both, but they’ve decided to focus exclusively on games."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 25, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 25, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+]},
+{"id": "6977c2bd86d28841", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

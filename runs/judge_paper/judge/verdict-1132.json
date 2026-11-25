@@ -1,0 +1,27 @@
+[
+  {
+    "id": "b325c467186b2b69",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "so bring things up,” Alev said."}]}
+    ]
+  },
+  {
+    "id": "b0ec2eadd60b2f21",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []},
+      {"fact": "2.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

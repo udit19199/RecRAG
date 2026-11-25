@@ -1,0 +1,8 @@
+[
+  {"id": "7785e971dc4d4bcc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 70, "quote": "Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 70, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 27, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]}
+  ]}
+]

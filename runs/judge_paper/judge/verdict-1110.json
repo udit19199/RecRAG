@@ -1,0 +1,38 @@
+[
+  {"id": "047bd70cf6780142", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]}
+  ]},
+  {"id": "036aef4b1b437408", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "af6be8f66fdbe855", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "53f9a5473e22d14b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []}
+  ]}
+]

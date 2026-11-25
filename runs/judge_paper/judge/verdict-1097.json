@@ -1,0 +1,42 @@
+[
+  {"id": "c98204195e6b4808", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 41, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 41, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 41, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 41, "quote": "The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 98, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 98, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 98, "quote": "Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville."}]}
+  ]},
+  {"id": "da8ac766e8b7d876", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ed5a7f900356d932", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "595f8b53e42868a4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

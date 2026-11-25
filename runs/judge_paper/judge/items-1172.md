@@ -1,0 +1,2080 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=53f6b6fc2631b119 ===
+Gold sentences and facts:
+Sentence 0: For all their own flaws Bayern are basically a good version of whatever it is United are attempting to piece together.
+  Fact 0.0: Bayern have their own flaws.
+  Fact 0.1: Bayern are basically a good version of whatever Manchester United are attempting to piece together.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 1>
+
+<item 2>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+If these numbers are any evidence, a Canelo vs. McGregor clash would break all their previous records by a mile.
+
+A substantial step toward Mayweather’s net worth/Billionaire status
+
+It’s no secret that Floyd Mayweather is the richest boxer in the world. The legendary undefeated boxer boasts a staggering net worth of $450 million. It makes
+the retired boxer the richest personality in boxing to ever exist. Despite retiring from the sport, he occasionally fights in exhibition matches, generating
+millions each time. In addition, Floyd has made over a billion dollars in the span of his career.
+
+ADVERTISEMENT Article continues below this ad
+
+via Getty LAS VEGAS, NEVADA – JUNE 29: Floyd Mayweather Jr. attends a game between the New York Liberty and the Las Vegas Aces at Michelob ULTRA Arena on June
+29, 2023 in Las Vegas, Nevada. The Aces defeated the Liberty 98-81.
+</item 2>
+
+<item 3>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+So, a fight with McGregor could earn him anywhere from $55 to $60 million, adding to his $180 million. Meaning his total net worth would jump up to $240
+million.
+
+ADVERTISEMENT Article continues below this ad
+
+While matching Floyd’s net worth is no easy feat, if anyone can do it – it’s Canelo Alvarez. However, only time will tell if the fight can ever materialize. In
+case it does, it will be a spectacle the whole world would come together to witness. Do you think McGregor vs. Canelo can happen? Who would win the fight?
+
+Watch This Story: Here’s How $200,000,000 Worth Canelo Alvarez Spent His First Ever Million
+</item 3>
+
+<item 4>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+The Aces defeated the Liberty 98-81. NOTE TO USER: User expressly acknowledges and agrees that, by downloading and or using this photograph, User is consenting
+to the terms and conditions of the Getty Images License Agreement. (Photo by Ethan Miller/Getty Images)
+
+However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years. If Canelo vs. McGregor ever manages to
+materialize, it could help Canelo take a significant leap to Mayweather’s net worth. The financial windfall from such a humongous clash would be substantial,
+driving him closer to Mayweather’s level of wealth. If Canelo’s past earnings are any evidence, this fight will be bigger than ever before. Canelo’s biggest
+fight to date is $45 million from the third encounter with Golovkin.
+</item 4>
+
+<item 5>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Furthermore, Canelo and McGregor’s careers are intertwined with the legendary Floyd Mayweather. ‘Money’ faced both fighters at one point or the other, leaving
+each with a boxing lesson. When Mayweather defeated Canelo, it pushed him to hone his skills while starting a lifelong rivalry. On the other hand, McGregor made
+his boxing debut against Mayweather, losing the fight but leaving with a fat stack.
+
+Implications of a fight between Canelo Alvarez and Conor McGregor
+
+The excitement and allure of two mammoths of combat sports getting in the ring to pummel each other to the brink of their endurance is undeniable. Not to
+mention, the fight will leave either party significantly wealthier than before. A potential clash between Saul Canelo Alvarez and the ‘Notorious’ Conor McGregor
+would not just be a dream come true for fans everywhere. It would also be a money magnet that would funnel income from a variety of channels.
+</item 5>
+
+<item 6>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Crossover boxing matches are all the rage these days. Until a few days ago, the phenomenon was limited to influencers and MMA stars. But after a recent quarrel
+on X (formerly Twitter) between Conor McGregor and Canelo Alvarez, a potential crossover boxing match has the boxing world buzzing with excitement. If the fight
+were to turn into a reality, it could help ‘Cinnamon’ get closer to his former rival Floyd Mayweather in terms of net worth.
+
+America’s Favorite Video Today
+
+The talks of Conor McGregor vs. Floyd Mayweather began with a tweet that launched a fiery exchange of words between these two mammoths of combat sports. The
+brash and confident ‘Notorious’ McGregor turned to X, praising Mayweather’s 2013 performance against Canelo. But he also boasted about landing more punches on
+‘Money’ Mayweather than the Mexican superstar. Canelo quickly retorted, asserting he would need only one hand to make quick work of McGregor.
+</item 6>
+
+<item 7>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+It would also be a money magnet that would funnel income from a variety of channels.
+
+A few of those lucrative channels of income would be revenue from pay-per-view sales, live gate revenue, merchandise sales from either party and various
+promotional events from the fight. What’s more, if anyone wondered if people would want to watch the fight. The attention it has gathered in the small span of
+their X (Twitter) feud should be evidence enough. Not to mention, both fighters command a massive fan base, counted in millions across the globe.
+
+Canelo Alvarez and McGregor’s history of massive purses
+
+If Canelo’s PPV pull was ever in question, his history of fight purses should convince everyone. Stepping back in time, Canelo’s fight with Mayweather collected
+2.2 million pay-per-view buys. His 2017 bout against Julio César Chávez Jr. collected 1 million PPV buys.
+</item 7>
+
+<item 8>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+Later, the banter further escalated, bringing a potential fight in the picture.
+
+Canelo Alvarez’s earnings and Floyd Mayweather’s influence
+
+ADVERTISEMENT Article continues below this ad
+
+Canelo Alvarez reached his career high by becoming the first boxer to become the undisputed champion at super-middleweight by holding onto the WBA Super, WBC,
+and Ring Magazine super middleweight titles since 2020, and the IBF nd WBO titles since 2021. Meanwhile, his pockets became deeper and deeper, to the point that
+Canelo boasts a $180 million net worth in 2023. The most significant addition to his bank balance came when he signed a lucrative $365 million deal with DAZN
+and Golden Boy Promotions.
+</item 8>
+
+<item 9>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+collected 1 million PPV buys. Canelo’s first battle with Gennady Golovkin gathered 1.3 million PPV sales. In his most recent battle against Jermell Charlo, the
+fight collected 700K PPV sales. These were just to name a few; over the years, Canelo has fought in increasingly profitable bouts.
+
+On the other hand, Conor McGregor has created his own history in MMA as well as boxing. First of all, McGregor’s fight against Mayweather generated 4.3 million
+pay-per-view buys. His second fight against Dustin Poirier collected 1.6 million buys. The infamous fight against Khabib Nurmagomedov saw 2.4 million PPV sales.
+And lastly, his second fight against Nate Diaz collected 1.65 million PPV buys. If these numbers are any evidence, a Canelo vs.
+</item 9>
+
+<item 10>
+Potential Conor McGregor Fight Could Help Canelo Alvarez Come a Step Closer to Surpass Floyd Mayweather’s Net Worth and His Billionaire Status (Essentially
+Sports, 2023-10-18T21:27:46+00:00)
+via Imago RECORD DATE NOT STATED Saul -Canelo- Alvarez MEX vs Jermell Charlo USA – Weigh-in ceremony Saul -Canelo- Alvarez MEX during the weigh-in ceremony
+prior to the Boxing fight against Jermell Charlo USA, at the T-Mobile Arena Explanade on September 29, 2023. brbr Saul -Canelo- Alvarez MEX durante la ceremonia
+de pesaje previo a la pelea de Box contra Jermell Charlo USA, en la Explanada del Arena T-Mobile el 29 de septiembre de 2023. LAS VEGAS NEVADA ESTADOS UNIDOS
+PUBLICATIONxNOTxINxMEXxCHNxRUS Copyright: xDavidxLeahx 20230929183529_BOX_2023_ALV_CHA_WEIGH_ALVAREZ44.
+</item 10>
+=== END ITEM id=53f6b6fc2631b119 ===
+
+=== ITEM id=fe75afe4a610cf23 ===
+Gold sentences and facts:
+Sentence 0: It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club.
+  Fact 0.0: It could mean some sort of progress.
+  Fact 0.1: Ratcliffe was born in Manchester.
+  Fact 0.2: Ratcliffe has a vision to revolutionise the club.
+  Fact 0.3: The progress would happen if Ratcliffe follows through with his vision.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United gave a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+<item 1>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+If he's out, Boyd is a must-start, and you can try one of Cincinnati's secondary receivers in deep leagues.
+
+WEEK 10 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is T.J. Hockenson playing Week 10?
+
+UPDATE: NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans.
+
+UPDATE 2: Hockenson is officially ACTIVE.
+
+Hockenson (ribs) is listed as "questionable" for Week 10, but he's already said he plans to play on Sunday. The tight end has dealt with his fair share of
+injury woes this season, however, he's yet to miss a game.
+</item 1>
+
+<item 2>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+ET, according to ESPN's Jeremy Fowler. The receiver was limited in practice thanks to the toe injury that has plagued him since leaving Week 8's game against
+the Eagles, but barring a setback, he will return to action this weekend.
+
+The receiver was working his way into flex territory with a couple of good performances before picking up the injury. However, we wouldn't consider him to be
+worthy of a fantasy start this week unless you're in a bind. It's unclear whether Samuel will regain the same workload or if he'll be playing in limited action
+as he works his way back. Jamison Crowder emerged in Samuel's absence and Jahan Dotson has seen his production drastically increase, as well. The wait-and-see
+approach is the preferred one heading into Week 10.
+</item 2>
+
+<item 3>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+Jaguars), and Dalton Kincaid (@ Chiefs) aren't far behind. LaPorta and Njoku both have great matchups against defenses that entered last week in the top 10 in
+fantasy points per game (FPPG) allowed to TEs, and we know what Kelce, Hockenson, and Kincaid do every week in PPR formats.
+
+George Kittle (vs. Seahawks) doesn't have a great matchup -- especially when you remember that he had just three catches for 19 yards against Seattle in Week 12
+-- but he remains a must-start given his high ceiling in any matchup.
+
+WEEK 14 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start-sit
+
+Who are the best fantasy TE sleepers, pickups, & streamers in Week 14?
+
+It can be tough to trust Taysom Hill (vs.
+</item 3>
+
+<item 4>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+It can be tough to trust Taysom Hill (vs. Panthers) in full-point PPR leagues, but a matchup against the league's second-worst run defense gives him a high
+ceiling regardless of format. He's been more involved as a receiver this year, so he'll get a few catches to go along with the rushing stats, too. With Derek
+Carr (concussion) banged up, Hill might throw more this week, too.
+
+Gerald Everett (vs. Broncos) and Isaiah Likely (vs. Rams) have matchups against bottom-six TE defenses, and Cole Kmet (vs. Lions), Jake Ferguson (vs. Eagles),
+and Kyle Pitts (vs. Buccaneers) also have above-average matchups that give them higher floors and higher ceilings than usual.
+
+For those in deeper leagues, Tyler Conklin (vs.
+</item 4>
+
+<item 5>
+DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments (Sporting News, 2023-12-07T22:18:00+00:00)
+If they're trailing, JSN should see action with a negative game script.
+
+WEEK 14 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+TE Brevin Jordan, Texans @ Jets ($3,100). Jordan was a great streaming option and fill-in for the crowd that lost Dalton Schultz (hamstring) on Sunday, hauling
+in three-of-four targets for 64 yards against the Broncos. If Schultz is out again, Jordan is a serviceable option that has touchdown upside against a reeling
+Jets team that is busy booking vacations or plotting how to find themselves on a different roster in 2024. If Schultz does play, we'll pivot to the Jets' Tyler
+Conklin, who is $100 less and has plenty of opportunity in an even better matchup.
+
+FLEX WR Jameson Williams, Lions @ Bears ($3,500).
+</item 5>
+
+<item 6>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Chase put a scare into the fantasy community on Wednesday when he was listed as a DNP, but after logging back-to-back limited practices, there is a lot more
+optimism heading into Sunday. With Tee Higgins (hamstring) already ruled out, Cincinnati will be hoping Chase can feel healthy enough to play when they host the
+Texans at 1 p.m. ET on Sunday.
+
+The Bengals, despite getting a win over the Bills last Sunday, are a beaten-down bunch. Their defense will also be without a prominent edge rusher, Sam Hubbard,
+complicating matters for a team hoping to stack wins as they compete for an AFC North crown. On the bright side, Joe Burrow appears to be finally healthy and
+should have no problems targeting Tyler Boyd, Trenton Irwin, and Andrei Iosivas in the passing game. If Chase does end up suiting up, fantasy owners should
+enjoy an even larger workload than the receiver already had.
+</item 6>
+
+<item 7>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Jefferson (hamstring) is officially listed as "questionable" for Sunday's game against the Saints. Kickoff is slated for 1 p.m. ET, but fantasy owners won't
+have to wait long for news on the star receiver. In order to be eligible to play, Jefferson will need to be activated by 4 p.m. ET on Saturday. Earlier in the
+week head coach Kevin O'Connell said that it would be "a little aggressive" for Jefferson to get back on the field this week. However, the receiver's three
+straight limited practices were enough for the team to at least weigh the decision, but thankfully, an early answer awaits.
+
+WEEK 10 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start 'em, sit 'em
+
+Jefferson's fantasy outlook is always through the roof, but it will be interesting to see if that changes with Josh Dobbs under center instead of Kirk Cousins.
+</item 7>
+
+<item 8>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week
+9 as a big part of the offense with Josh Dobbs under center.
+
+As long as Hockenson is playing, he's not being benched in any fantasy format. The tight end projects as a top option at the position and remains the Vikings'
+leader in targets with 80 on the season. Dobbs enjoyed targeting the tight ends in Arizona and continued that trend in his Minnesota debut. The floor for
+Hockenson is equivalent to that of a rooftop bar.
+
+WEEK 10 DFS: DK lineup | FD lineup | Best values | Best stacks
+
+Is Curtis Samuel playing Week 10?
+
+UPDATE: Samuel is officially ACTIVE.
+
+Samuel (toe) is expected to play on Sunday when the Commanders take on the Seahawks at 4:25 p.m. ET, according to ESPN's Jeremy Fowler.
+</item 8>
+
+<item 9>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning back the clocks last week, it now gets darker earlier for the foreseeable future. That darkness allows us to see the stars on a clear night, so
+it's only natural to wonder if the pass-catching stars will shine bright in Week 10 of the NFL season. We already know Tee Higgins and Nico Collins are OUT,
+while Justin Jefferson, Ja'Marr Chase, and T.J. Hockenson are among the other star pass-catchers beaten up heading into the week. Can we expect them on the
+field when the action kicks off Sunday?
+
+Below, we'll give you the latest news on these ailing pass-catchers and break down how their injuries could potentially affect the Week 10 fantasy landscape.
+
+WEEK 10 INJURY UPDATES: Early WRs | RBs
+
+Is Justin Jefferson playing Week 10?
+
+UPDATE: The Vikings will not activate Jefferson before Sunday's game and have officially ruled him OUT, according to NFL Network's Tom Pelissero.
+</item 9>
+
+<item 10>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+In addition, K.J. Osborn (concussion) is also listed as "questionable," though his status steadily improved throughout the week from DNP on Wednesday to full
+practice on Friday. If Jefferson is back, he's a must-start. If Jefferson is out but Osborn returns, both Osborn and Jordan Addison are worth using.
+
+WEEK 10 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is Ja'Marr Chase playing Week 10?
+
+UPDATE: ESPN's Jeremy Fowler reported late Saturday that the Bengals are "hopeful" that Chase will play against Houston, but they won't know for sure until
+after a pre-game workout.
+
+UPDATE 2: Chase is officially ACTIVE.
+
+Chase (back) appears ready to take his status down to kickoff. According to The Athletic's Dianna Russini, the Bengals' star receiver will work out on Sunday
+morning and his status will be determined afterward.
+</item 10>
+=== END ITEM id=fe75afe4a610cf23 ===
+
+=== ITEM id=d4c35acd521221c6 ===
+Gold sentences and facts:
+Sentence 0: It will attempt to argue that Google restrains competition within two separate markets, including the distribution of apps to Android users and the market for payment processing solutions for content inside Android apps.
+  Fact 0.0: The case will attempt to argue that Google restrains competition within two separate markets.
+  Fact 0.1: One of the two markets is the distribution of apps to Android users.
+  Fact 0.2: The other market is the market for payment processing solutions for content inside Android apps.
+Sentence 1: Google’s public documentation says it uses three categories to rank results that are local to a searcher: relevance, distance, and prominence.
+  Fact 1.0: Google's public documentation says Google uses three categories to rank results that are local to a searcher.
+  Fact 1.1: The three categories are relevance, distance, and prominence.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google 'siphons off' news publishers' content.
+  Fact 2.2: The case argues that Google 'siphons off' news publishers' readers.
+  Fact 2.3: The case argues that Google 'siphons off' news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+
+=== END ITEM id=d4c35acd521221c6 ===
+
+=== ITEM id=1a4744e38bc898d8 ===
+Gold sentences and facts:
+Sentence 0: For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.
+  Fact 0.0: The victory has the Swans challenging for a top-eight spot.
+  Fact 0.1: The Swans are challenging for a top-eight spot alongside the likes of Gold Coast.
+  Fact 0.2: The Swans are challenging for a top-eight spot alongside the likes of Geelong.
+  Fact 0.3: The Swans are challenging for a top-eight spot alongside the likes of Collingwood.
+  Fact 0.4: The Swans are challenging for a top-eight spot alongside the likes of St Kilda.
+  Fact 0.5: The Swans are challenging for a top-eight spot alongside the likes of Carlton.
+Sentence 1: With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot.
+  Fact 1.0: Sydney is in ninth place.
+  Fact 1.1: St Kilda is in eighth place.
+  Fact 1.2: Only 0.4 of a percentage point separates Sydney in ninth and St Kilda in eighth.
+  Fact 1.3: The win assured the Swans of retaking eighth spot.
+Sentence 2: “Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting our games,” she said.
+  Fact 2.0: The speaker said that her team has put a lot of work into sourcing some wonderful food offerings.
+  Fact 2.1: The speaker said that her team has put a lot of work into sourcing entertainment for kids.
+  Fact 2.2: The speaker said that her team has put a lot of work into sourcing activities for kids.
+  Fact 2.3: The speaker said that her team has had a local focus in promoting its games.
+
+Retrieved items:
+<item 1>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Height and speed
+
+AFL player comparison: Max Gawn (Melbourne)
+
+"He's got the most upside of any player in our state."
+
+
+
+You're going to want to learn more about South Australian Taylor Goad, a 206cm ruckman that is seriously quick.https://t.co/KztP0FJ4wL — AFL (@AFL) November 6,
+2023
+
+Advertisement
+
+Phoenix Gothard
+
+State: NSW/ACT
+
+State League Club: Murray Bushrangers
+
+Community Club: Albury
+
+Date of Birth 07/09/05
+
+Height: 178cm
+
+A small forward who came to prominence with his creative forward play for the Allies in their unbeaten National Championship-winning run, where he was a
+livewire at ground level and averaged 10.3 disposals, three tackles and a goal a game.
+</item 1>
+
+<item 2>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+ETF provider Betashares, which manages $30 billion in funds, reached an agreement to acquire Bendigo and Adelaide Bank’s superannuation business, in its first
+venture into the superannuation sector. Betashares said it was part of a longer-term strategy to expand the business into the broader financial sector. Shares
+in Bendigo increased 0.6 per cent on the news. REITS (up 0.4 per cent) was the strongest sector on the index as Goodman added 0.5 per cent and Dexus climbed 2.8
+per cent. The laggards Casino operator Star Entertainment Group’s shares hit an all-time low of 60¢ after it raised $565 million. They closed the session 16 per
+cent weaker at 63¢. Star, which raised $800 million in February, has had to return to the market for fresh funding and is hoping to raise $750 million at a
+share price of 60¢ a share.
+</item 2>
+
+<item 3>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was a threatening target up forward for the Allies during this year’s National Championships averaging 13 disposals and seven marks as well as kicking 11 goals
+in four matches to be a vital cog in the title-winning team. Overall, he kicked 29 goals in eight matches this season to round off a splendid underage career.
+Will receive a bid from a rival club very early on Draft night which the Suns will gladly match.
+
+Weapon: Aerial ability and second efforts at ground level
+
+AFL player comparison: Charlie Curnow (Carlton)
+
+Nick Watson
+
+State: Victoria Metro
+
+State League Club: Eastern Ranges
+
+Community Club: Montrose
+
+Date of Birth: 24/02/05
+
+Height: 170cm
+
+A quick, agile and crafty forward who has a real appetite for the contest. Gave a glimpse of his potential in 2022 when he booted 23 goals in 10 matches in the
+talent pathway.
+</item 3>
+
+<item 4>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But crowds are short of targets that could accelerate the extension of the regular season, which grows from 10 games this year to 12 games by 2025.
+
+5,474 fans were at North Sydney Oval to watch the Swans’ first AFLW victory earlier in the season. Photograph: Jack Snape/The Guardian
+
+The league enjoyed strong attendances in round one, which were partly attributed to the so-called Matildas effect, but some clubs have struggled to attract fans
+in large numbers this season. Crowds of less than 1,500 have been recorded in both traditional markets such as Melbourne and Perth, as well as areas targeted
+for growth like Blacktown and the Gold Coast.
+
+The A-League Women launched this month with a first round highlighted by a crowd of more than 11,000 in Sydney.
+</item 4>
+
+<item 5>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was an outstanding player for Victoria Country at the National Championships to earn All Australian honours, which included a match-winning performance against
+Victoria Metro in the final game where he amassed 22 disposals, 10 marks and four goals. Was also dominant for the Gippsland Power to win their best and fairest
+and earn selection in the Coates Talent League Team of the Year. Finished the year with 42 goals across 20 matches in all competitions. His natural leap was
+highlighted at the national Draft Combine with his running vertical jump of 97cm ranked second overall. Hails from a talented football family, with his brother
+Xavier now at Essendon and sister Yasmin playing for Port Adelaide.
+</item 5>
+
+<item 6>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+But two goals from Amelia Radford and Georgia Gee kept the hosts close, while defender Ellyse Gamble (nine intercept possessions) proved a roadblock for the
+Suns’ attackers. Single lit up the park with a clinical slice through the corridor, dodging two tackles to put the ball in the hands of Georgia Clayden, who
+capped the centre clearance with the only major of the third term. With both sides goalless in the final quarter, the Suns were able to cruise home. With AAP
+</item 6>
+
+<item 7>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+A very clean ball handler with a dazzling burst of speed, he was a consistent performer across all four matches for the Allies, averaging 16.5 disposals at 80
+percent efficiency. His speed and power really shone through at the national Draft Combine where he was ranked second in the 20m sprint (2.92 seconds) and
+standing vertical jump (78cm) as well as being third in the running vertical jump (95cm) which confirmed his elite athletic profile.
+
+Weapon: Speed and ball use
+
+AFL player comparison: Dan Houston (Port Adelaide)
+
+Will Green
+
+State: Victoria Metro
+
+State League Club: Northern Knights
+
+Community Club: Northcote
+
+Date of Birth: 08/09/05
+
+Height: 204cm
+
+Developing tall who impressed throughout the year with his ruck craft, marking and mobility when playing for the Northern Knights, Victoria Metro and the
+Australia under-18 team.
+</item 7>
+
+<item 8>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“I can name the whole team. Everyone had their second in the last couple minutes.
+
+“That was such a team effort, everyone had a moment there when they had to put their head over the footy and lay a tackle and not let it slip.” Swanson (25
+disposals, eight clearances) stood out for the Eagles, while Bombers workhorse Maddy Prespakis (30 disposals, nine clearances) was typically prominent in the
+midfield alongside Georgia Nanscawen (21, six). With two rounds left, West Coast have a chance to build their winning streak when they meet the bottom of the
+table Western Bulldogs next round. Slipping one place to sixth, Essendon have must-win matches against Carlton and Gold Coast on the road to the finals. The
+Bombers will be without Steph Cain, who was sidelined with a concussion after an elbow to the head from Swanson.
+</item 8>
+
+<item 9>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+He capped off a great year playing in the Sandringham Dragons premiership team in the Coates Talent League.
+
+Weapon: Height and intercept marking
+
+AFL player comparison: Jake Lever (Melbourne)
+
+Connor O’Sullivan
+
+State: NSW/ACT
+
+State League Club: Murray Bushrangers
+
+Community Club: Albury
+
+Date of Birth: 19/05/05
+
+Height: 198cm
+
+Advertisement
+
+Athletic tall defender who was outstanding for the title-winning Allies at the National Championships winning their MVP award and All Australian honours. He
+averaged 17.8 disposals at 86 percent efficiency as well as averaging 8.2 marks and providing great rebound to lead the Allies defence. He has an exciting
+natural leap, good speed and elite endurance highlighted with a top 10 placing in the 2km time trial at the national AFL Draft Combine with a time of 6:11.
+</item 9>
+
+<item 10>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+He has been part of the Sydney Swans’ Academy since the under-10s.
+
+Weapon: Contested ball-winning ability
+
+AFL player comparison: Tim Taranto (Richmond)
+
+Lance Collard
+
+State: Western Australia
+
+State League Club: Subiaco
+
+Community Club: North Beach
+
+Date of Birth: 26/03/05
+
+Height: 180cm
+
+Small forward who is extremely dangerous around goals. Booted 39 goals in 16 matches in Western Australia’s pathway this year where he played predominantly at
+Colts level. Also represented his state in three games at the National Championships which gave him a taste of playing against the nation’s best. He then
+highlighted his potential by kicking five-goal bags in three of the final five games of the WAFL Colts season.
+</item 10>
+
+<item 11>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Progressed from dominating under-18 games at club level to playing seven matches at reserves level averaging 18.7 disposals. Featured among South Australia’s
+best in the National Championship matches against the Allies and Victoria Metro and averaged 18 disposals, 3.8 clearances and 8.5 tackles across the tournament.
+Showcased his power and speed at the national Draft Combine with his running vertical jump of 95cm ranking third and 2.93 seconds for the 20m spring ranking
+fifth.
+
+Weapon: Power and left-foot kick
+
+Player Comparison: Jack Crisp (Collingwood)
+
+Will McCabe
+
+State: South Australia
+
+State League Club: Central District
+
+Community Club: Tanunda
+
+Date of Birth: 29/09/05
+
+Height: 197cm
+
+A tall defender who has also gone forward at times this year and has continued to develop nicely. A competitive type who has a good natural leap and is very
+strong overhead.
+</item 11>
+
+<item 12>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+A mobile and competitive player still honing his ruck craft, he is a member of Fremantle’s NGA program with the Dockers able to match a rival club’s bid should
+it come after selection 40 in the Draft. Tested well at the national Draft Combine with his running vertical jump of 94cm ranked fifth overall, while his 3.07
+seconds on the 20m sprint was impressive for a player of his size.
+
+Weapon: Height and overhead marking
+
+AFL player comparison: Tim English (Western Bulldogs)
+
+Joel Freijah
+
+Pronunciation: Free-jah
+
+State: Victoria Country
+
+State League Club: GWV Rebels
+
+Community Club: Horsham Saints
+
+Date of Birth: 14/11/05
+
+Height: 190cm
+
+A wingman who has real composure, is clean below his knees and distributes the ball very well.
+</item 12>
+
+<item 13>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+The laggards On the losing end, energy companies (down one per cent) weighed down the index. Woodside (down 0.8 per cent), Santos (down 0.4 per cent) and Ampol
+(down 1.2 per cent) dropped, along with coal miners Yancoal (down 1.7 per cent) and Whitehaven (down 2 per cent). Lynas Rare Earths (down 3.1 per cent) was the
+biggest large-cap decliner, while industrials companies (down 0.2 per cent) including Computershare (down 2.9 per cent), Seven West Holdings (down 1.9 per cent)
+and Worley (down 1.3 per cent) were also weaker. The lowdown
+
+TMS Capital portfolio manager Ben Clark said the big news for markets on Monday was the trading update from Westpac, which he said led a resurgence in the
+banking sector’s performance.
+</item 13>
+
+<item 14>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+Alyssa Healy has rejected any suggestion Australia’s stranglehold on international women’s cricket is slipping, saying their Test loss to India is barely a blip
+on the team’s record.
+
+Australia stumbled to their first Test defeat to India by eight wickets in Mumbai on Sunday, after being outplayed by the hosts in foreign spinning conditions.
+
+The loss comes after one of the more difficult periods for the Australian side in the past six years, with the retirements of Meg Lanning and Rachael Haynes.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+After winning their fourth straight global ICC event earlier this year in the 50-over World Cup, Australia retained the Ashes via a drawn multi-format series in
+England in July.
+
+That tour included losing four of six white-ball matches, with Australia’s win in the Test enough to have them level on points with England and hold onto the
+trophy.
+</item 14>
+
+<item 15>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot. If the Saints had
+qualified, it would have been their maiden finals appearance. Saints goalkicker Jesse Wardlaw had a heavy collision with Carlton’s Keeley Sherar late in the
+final quarter of their clash.
+
+Georgia Patrikios showed her class in the do-or-die match, collecting 25 disposals and eight contested possessions in a powerhouse display, while Hannah Priest
+was a brick wall in defence, with nine intercept possessions. Abbie McKay worked overtime to counter Patrikios in the midfield, but her side was outclassed
+across the park. McKay racked up 28 disposals and 12 clearances alongside Mimi Hill (30 disposals), while defender Sherar (17) toiled against a potent Saints
+attack. Meanwhile, Sydney prevailed in a fierce tug-of-war with the Dockers to seal their first AFLW finals appearance.
+</item 15>
+
+<item 16>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“We love going in those four walls. We train there three, four times a week. So having that familiarity of the ground is awesome ... So I would be super-excited
+to make finals for one, but then play at home would be just that extra and having all our support behind us really drives us on the field.” Tears abound in
+Phillips’ emotional farewell
+
+There were emotional scenes at Alberton Oval as the siren sounded on AFLW great Erin Phillips’ last game, with Port Adelaide saluting her with a huge 58-point
+win over Greater Western Sydney on Saturday. The crowd, which included Phillips’ father Greg and mother Julie (both in tears after the game), more family and
+friends, and Adelaide captain Chelsea Randall, erupted as the curtain finally came down for the three-time premiership player after eight seasons and 67 games.
+</item 16>
+
+<item 17>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+AAP Cats secure elimination final home-ground advantage
+
+Geelong have not only secured their spot in the top eight with a huge 40-point win over Hawthorn on Saturday at GMHBA Stadium but locked in home-ground
+advantage for the first elimination final. The Cats finished sixth, with the 9.6 (60) to 3.2 (20) win over the Hawks boosting their percentage to a healthy
+141.2, almost 40 ahead of Essendon, who sit one rung below them on equal points. Momentum is also in Geelong’s favour after two big wins in a row, having
+demolished Richmond by 38 points last weekend. Chloe Scheer (left) and Julia Crockett-Grills of the Cats celebrate. Credit: Getty Against the Hawks, they
+controlled ball movement from the get-go, kicking four goals straight to open the match and keeping their opposition goalless to half-time.
+</item 17>
+
+<item 18>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Meanwhile, healthcare heavyweight CSL shed 1.4 per cent, weighing down the healthcare sector and insurance companies IAG (down 2.6 per cent) and Suncorp (down 2
+per cent) gave back some of their gains from Tuesday. Gold miners Newcrest (down 2.1 per cent) and Evolution (down 3.5 per cent) were also among the biggest
+large-cap decliners after the spot gold price dropped 0.9 per cent overnight. Information technology (down 1.1 per cent) was the weakest sector on the local
+bourse with WiseTech losing 1.4 per cent. The lowdown
+
+Novus Capital senior client adviser Gary Glover said the Australian sharemarket was surprisingly resilient following a negative lead from Wall Street and the
+latest inflation data, with markets starting to wake up to the fact that interest rates could stay higher for longer. “Considering the damage overnight in the
+US, Australian markets held on pretty well,” he said.
+</item 18>
+
+<item 19>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Played all four games for Victoria Metro at the National Championships and was his team’s best player in the loss to the Allies, while also shining with 22
+disposals in the win over Western Australia. Across his 16 matches with the Eastern Ranges in the Coates Talent League he averaged 19.4 disposals to be one of
+their most consistent players during their run to the grand final. Recorded a slick time of 2.92 seconds on the 20m sprint during the national Draft Combine
+highlighting his dazzling acceleration and backed it up by recording 6:28 for the 2km time trial which demonstrated a combination of elite speed and endurance
+which are essential to play on the wing.
+
+Weapon: Elite speed and ball use
+
+AFL player comparison: Nick Martin (Essendon)
+</item 19>
+
+<item 20>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+An excellent decision-maker and ball user by hand or foot, he averaged 19.5 disposals, 12.5 contested possessions and 6.5 clearances to finish third in the
+Larke Medal voting and took out Victoria Country’s MVP. Further added to his very impressive record by earning selection in the All Australian team for the
+second year in a row. Handled the step up to playing senior football with three impressive games in the VFL and was the best player for the Australia under-18
+team in its match against Port Adelaide’s SANFL team.
+</item 20>
+
+<item 21>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Bridie Hipwell kicked the only goal of the third quarter to give Hawthorn a game-high nine-point lead. Loading Richmond rebounded in the last term, with
+Courtney Jones ending Hawthorn’s three-goal run with her first touch of the night, cutting the margin to three points. Dogged by inaccuracy in front of goal,
+Yassir reduced the deficit to a single point before finally breaking through on her third attempt. That put the Tigers ahead by six points with 11 minutes left,
+before Caitlin Greiser sealed the win with a massive goal from 45 metres.
+</item 21>
+
+<item 22>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+AFL Talent Ambassador Kevin Sheehan has revealed his top 40 prospects ahead of this month’s AFL Draft.
+
+Sheehan’s picks were announced in a press release by the AFL on Thursday. The 2023 draft will be held on November 20 and 21 with the rookie draft to follow a
+day later.
+
+Sheehan has profiled all 129 players who attended the 2023 AFL Draft Combine or 2023 AFL State Draft Combine last month. His full list can be found at the AFL
+Draft Hub.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The AFL Draft will be shown on Fox Footy and Kayo.
+</item 22>
+
+<item 23>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+AAP Pies hold on against comeback Cats
+
+Sunday’s clash between Collingwood and Geelong at Victoria Park was less about who was the overall better side than it was decided by who could adapt best to
+the blustery wind and rain. The answer: the Magpies. Collingwood survived a fourth quarter comeback from Geelong to finish with a six-point victory and stay
+firmly in finals contention, whereas the Cats now face an uphill battle to finish in the eight in two weeks’ time. Jordyn Allen of the Magpies is tackled by
+Geelong’s Claudia Gunjaca in the round-eight match at Victoria Park. Credit: Getty Geelong scored just one point in the first quarter and had just 1.3 on the
+board at three-quarter-time, but kicked two goals to none in the final term to close in on Collingwood.
+</item 23>
+
+<item 24>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Michael Prior guided West Coast to a gutsy win. Credit: Getty
+
+Aisling McCarthy and Amy Franklin drew first blood for West Coast within the opening five minutes, while the hosts were kept goalless. The Bombers only added
+three behinds in the second term and the Eagles failed to score as the blustery conditions took their toll on the game. West Coast’s Kellie Gibson broke the
+goal drought with the only major of the third quarter, before the home side came to life with the wind at their backs in the final term, with skipper Bonnie
+Toogood and Amber Clarke reducing the margin to four points. Toogood continued to pepper the scoreboard, but the Eagles held on to secure a rare victory. “We’ve
+had a horror week back at home, and it’s been really bloody tough on all of us, and Mick as well. I’m just really proud of the girls,” West Coast captain Emma
+Swanson said post-game on the broadcast. “I can name the whole team.
+</item 24>
+
+<item 25>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“But I go out with on a happy note. I love these girls and I’ll be over at the pancake pocket [Pancake Parlour at Whitten Oval] watching them from now on and
+have a few bevs on the sideline.” Roos’ lock in top-four spot; Dogs have issues to work through in off-season North Melbourne secured third spot on the ladder
+and the double chance in finals after downing the Western Bulldogs by a whopping 46 points. They will head into finals with momentum but a glaring issue to work
+on: kicking accuracy. Despite the comfortable win, they could have done a lot more damage after booting double the number of behinds to goals.
+
+Star midfielder Ash Riddell, who had 36 touches and seven clearances, said she was excited to go up against Melbourne or Adelaide in the first weekend of finals
+depending on other results this round, as they were the only two sides who beat them this year.
+</item 25>
+
+<item 26>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Intercept marking
+
+AFL player comparison: Will Day (Hawthorn)
+
+Advertisement
+
+James Leake
+
+State: Tasmania
+
+State League Club: Tasmania Devils
+
+Community Club: Launceston
+
+Date of Birth: 02/10/05
+
+Height: 187cm
+
+Medium defender and forward who won All Australian honours as a defender for the Allies at the National Championships in the middle of the season then played
+some eye-catching matches as a forward for the Tasmania Devils in the Coates Talent League during a breakout season. With mercurial ability in the air and
+uncanny ability around goals he looks to have unique versatility which was on display during 11 matches for the Devils where averaged 16.1 disposals and kicked
+17 goals, which included a five-goal haul against the Dandenong Stingrays in Round 17.
+</item 26>
+
+<item 27>
+ASX set to open higher as Wall Street rebounds; $A rises (The Age, 2023-10-04T21:01:01+00:00)
+That will arrive on Friday. But “if Friday’s report also shows the labour market is cooling, stock investors may worry a little less about indefinitely higher
+interest rates,” said Mike Loewengart, head of model portfolio construction at Morgan Stanley Global Investment Office. A second report on the economy said
+growth in US services industries slowed in September by a touch more than economists expected.
+
+It also offered some hints of sticky pressure on inflation, with prices paid by services companies rising last month at a similar rate as in August. Oil prices
+tumbled on Wednesday to take some heat off inflation. Benchmark US crude fell $US5.01 to settle at $US84.22 per barrel for its worst drop in just over a year.
+It’s been pulling back since, topping $US93 last week. Brent crude, the international standard, lost $US5.11 to $US85.81. Loading Prices for crude had been
+generally charging higher from $US70 during the summer, following announcements of cuts to production by some oil-producing countries.
+</item 27>
+
+<item 28>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+If the Lions had lost, they were at risk of falling out of the top four with second-season side Essendon chasing their spot. Last season’s best and fairest Ally
+Anderson said her side loved playing at its training ground in Springfield, which it has made a fortress, and work well in hot conditions . “It was really hot.
+It was a grind… But yeah, it was a good finish,” Anderson told Fox Footy post-game. “Every week that we play here, every time that we play here, we get better
+and better. So, it was just a matter of time before we finally got the first win and then it hopefully [will] open the floodgates a bit.”
+
+The Lions next play St Kilda before taking on the reigning premiers Melbourne in the final round. After this weekend, they have staked their claim as being
+premiership contenders again. Adelaide will play top-four side North Melbourne next weekend before 18th-placed Western Bulldogs.
+</item 28>
+
+<item 29>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+“Even at Henson Park [the Swans’ other home ground in Sydney’s gentrified inner west], they’ve gone to microbreweries in the local area and invited them in, but
+also promoted through their clientele to come to the football.”
+
+The Swans forward Bella Smith said the players were proud of the club’s attendance record, and were grateful for the support. “We get there two hours before the
+start of the game and the hill [at Henson Park] is bare. When you come out for the first team warm-up, the hill is slowly filling and then by the time the first
+bounce gets around, it is full,” she said. “You can hear it, the atmosphere is amazing.”
+
+The average attendance for the AFLW is a little over 2,500 a match this year, tracking approximately on par with previous seasons and with a finals uptick
+likely to come.
+</item 29>
+
+<item 30>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+His 6:37 for the 2km time trial at the national Draft Combine was a strong performance for a player of his type.
+
+Weapon: Contested ball-winning and ball use
+
+AFL player comparison: Tom Green (GWS Giants)
+
+Koltyn Tholstrup
+
+Pronunciation: Foal-strup
+
+State: Western Australia
+
+State League Club: Subiaco
+
+Community Club: Newtown Condingup
+
+Date of Birth: 28/06/05
+
+Height: 186cm
+
+A talented player with an elite work rate who often plays as a high half forward and sometimes goes through the midfield. He is a fearless competitor with
+excellent game sense and a penetrating kick. He played the final three games for Western Australia at the National Championships after missing the first with
+injury and didn’t miss a beat to average 18.7 disposals.
+</item 30>
+
+<item 31>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I don’t think I’ve been as nervous to kick a goal in my life, to be honest,” she joked. “But nah, it was awesome.” On Saturday, the competition also said
+goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season,
+and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+
+Cranston, who was an inaugural AFLW player, will start kidney dialysis in January so had no option but to hang up the boots and focus on her treatment and
+health. “[I’m feeling] sad. Emotions hit me when the siren went. It’s been a really emotional week, the girls have really gotten around me. But yeah, my health
+has sort of deteriorated, it’s been a really hard year,” Cranston told Fox Footy after the Bulldogs lost to North Melbourne 7.13 (55) to 1.3 (9).
+</item 31>
+
+<item 32>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+His natural leap was on display at the national Draft Combine where he featured in the top 10 performers in both the standing vertical jump (75cm) and running
+vertical jump (91cm).
+
+Weapon: Aerial ability and left-foot kicking
+
+AFL player comparison: Hayden Young (Fremantle)
+
+Angus Hastie
+
+State: Victoria Country
+
+State League Club: Geelong Falcons
+
+Community Club: Geelong West Giants
+
+Date of Birth: 19/09/05
+
+Height: 190cm
+
+An athletic medium defender who sets the play up from defence with his run and ball use. Has shown a preparedness to back himself and take the game on to create
+opportunities for his team. His intercepting ability is also a strength which saw him represent Victoria Country in all four matches at the National
+Championships. Played 13 matches with the Geelong Falcons in the Coates Talent League this year averaging 20 disposals and 4.6 marks.
+</item 32>
+
+<item 33>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Aerial skill and goal sense
+
+AFL player comparison: Isaac Heeney (Sydney Swans)
+
+Charlie Edwards
+
+State: Victoria Country
+
+State League Club: Sandringham Dragons
+
+Community Club: Sandhurst
+
+Date of Birth: 18/05/05
+
+Height: 191cm
+
+Medium defender and midfielder who emerged as the year progressed and is now considered a possible Draft bolter given his rapid progression for the Sandringham
+Dragons in their road to the Coates Talent League premiership. Showed real class with his athleticism and ball use once moved into the midfield with his
+29-disposal performance against the Dandenong Stingrays in Round 13 an eye-catcher. Is also a talented cricketer and has spent only one year in the AFL Talent
+Pathway system after playing underaged football at Sandhurst before moving to Melbourne Grammar.
+</item 33>
+
+<item 34>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Single filled the massive Rowbottom-size gap, collecting 25 disposals and six clearances in her prolific performance across the field while also playing a
+crucial tagging role on Maddy Prespakis. Coast with the most: Georgia Clayden of the Suns celebrates after kicking a goal. Credit: AFL Photos / Getty Images The
+former rugby sevens player was well-supported by Claudia Whitford (25 possessions) and Alison Drennan (22 touches). Prespakis was held to eight contested
+possessions, well below a season average of 14 per game, while Georgia Nanscawen proved a potent threat with 13 contested possessions and three score
+involvements.
+
+The Bombers broke through first with a goal from Amber Clarke but young talent Darcie Davies (two goals) was able to respond after being gifted 50 metres from a
+protected area infringement by Mia Bush. Daisy D’Arcy, Jacqueline Dupuy, Jamie Stanton and Davies attempted to break away from the low-scoring tug-of-war in the
+second with goals of their own.
+</item 34>
+
+<item 35>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Composure and step through congestion
+
+AFL player comparison: Adam Cerra (Carlton)
+
+George Stevens
+
+State: Victoria Country
+
+State League Club: GWV Rebels
+
+Community Club: South Warrnambool
+
+Date of Birth: 14/04/05
+
+Height: 189cm
+
+Advertisement
+
+A strong-bodied defender who also plays as an inside midfielder to great effect. He reads the cues to intercept well when playing across half back, is a good
+decision-maker and has a penetrating kick. Had an outstanding year which included captaining the Australia under-18 team during the AFL Academy’s matches
+against SANFL and VFL sides. Won All Australian honours at the National Championships when representing Victoria Country and was named captain of the Coates
+Talent League Team of the Year after averaging 28.8 disposals and five tackles across 13 matches for the GWV Rebels, also winning the club’s best and fairest
+award.
+</item 35>
+
+<item 36>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But Livingstone said the AFL was happy with the level of competition. “Our ladder, from position five to 13 – there’s only a game separating it. It just shows
+that this is a really competitive competition.”
+</item 36>
+
+<item 37>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+A fine intercept mark and displays fantastic speed away from the contest. Averaged 17.7 disposals in 10 matches for the Power to catch the attention of AFL
+scouts. Is the brother of Hawthorn star Changkuoth Jiath and a member of the Hawks’ NGA program. Performed solidly during testing at the state Draft Combine in
+Melbourne with his 3.03 seconds on the 20m sprint and 6:32 seconds for the 2km time trial both impressive results.
+</item 37>
+
+<item 38>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Has a sharp competitive edge which has seen him already play 10 senior matches for Subiaco in the WAFL. Tested impressively at the national Draft Combine to
+record the second quickest time on the agility test (8.19) and a top ten finish in the 2km time trial (6:17).
+
+Weapon: Power and clean hands
+
+AFL player comparison: Cameron Rayner (Brisbane Lions)
+
+Jed Walter
+
+State: Queensland
+
+State League Club: Gold Coast Suns Academy
+
+Community Club: Palm Beach Currumbin
+
+Date of Birth: 08/06/05
+
+Height: 194cm
+
+A strong and powerful tall forward who has taken all before him across the past two years for the Gold Coast Suns Academy and Allies, winning All Australian
+honours at under 18 level in both seasons. Has a real physical presence up forward with his appetite for the contest, along with his second efforts and tackling
+pressure.
+</item 38>
+
+<item 39>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was also named captain of the All Australian team after leading the Allies to their first title. Caught the eye with a strong performance for the Australia
+under-18 team in its representative match against Port Adelaide’s SANFL side and backed it up in the second match against Carlton’s VFL side where he collected
+24 disposals to be one of Australia’s best in victory. Finished the year as a back-to-back Coates Talent League premiership player with the Sandringham Dragons
+where he averaged 31 disposals across nine matches.
+</item 39>
+
+<item 40>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“It was an awesome game and four quarters of Port Adelaide footy … It was awesome to finish up like that,” Phillips told Fox Footy after the 13.10 (88) to 4.6
+(30) win over the Giants. Erin Phillips celebrates a goal during her final AFLW match. Credit: AFL Photos Earlier, she told the ABC that she wanted her legacy
+to include doing everything she could to grow the game.
+
+“Hopefully I can be remembered as someone who took their opportunities, loved the game and was willing to do whatever it took to ensure the next generation was
+in a better position,” she said. Richelle Cranston of the Bulldogs is chaired off the ground by teammates Isabelle Pritchard and Ellie Blackburn after
+announcing her retirement. Credit: Getty The 38-year-old kicked a momentous goal from a set shot in the final quarter, and she was smothered by her jubilant
+teammates afterwards.
+</item 40>
+
+<item 41>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+The Dogs have plenty to work on for next season as they look to regain a competitive edge, which was lost after a finals berth last year. Along with being in a
+rebuild, they were badly injury-hit this season and used 32 players, more than any other club. Suns secure finals spot AAP Unsung hero Lucy Single has helped
+Gold Coast book their second AFLW finals appearance with a 14-point win over Essendon. Losing midfield powerhouse Charlie Rowbottom to an ankle injury proved no
+obstacle in the Suns’ maiden clash with the Bombers, as they finished the regular season in fifth spot after a 6.3 (39) to 3.7 (25) victory to kick off pride
+round at Great Barrier Reef Arena on Friday.
+
+While their men’s side have yet to make a finals appearance, this is the second time Gold Coast’s women have clinched a play-off spot, having also done so in
+the cancelled 2020 season.
+</item 41>
+
+<item 42>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+Fans of Australian rules football in the Harbour City have a reputation for being fickle. After a winless campaign in 2022, the Swans – led by ex-Collingwood
+player Chloe Molloy – have been competitive this season. The team won their first AFLW match in round one and are within a game of the top eight with two rounds
+to play.
+
+But general manager of women’s football at the AFL, Nicole Livingstone, said the Swans’ off-field offering had tapped into something “uniquely Sydney” and
+helped make matches more attractive.
+
+“To go to North Sydney Oval and to have quince paste and hand-picked grapes, cheddar cheese and biscuits in a little box that’s got this beautiful wrapping on
+it – they’ve really thought about what they’re doing and made it an experience,” she said.
+</item 42>
+
+<item 43>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Lions’ Orla O’Dwyer speeds away against the Crows. Credit: Getty Images Adelaide started fast but the game evened up as the Lions had the better of the
+second quarter with three goals to one. The Crows then took back control in the third with three goals to none, which set the stage for a tense final term. The
+fourth quarter was a heated arm wrestle, and scores were tied with four minutes left on the clock. The Lions’ Bella Dawes kicked the only goal of the last term,
+but it was a series of behinds in the final minutes that won the game for them, including one from Lily Postlethwaite that broke the stalemate.
+
+Adelaide’s Niamh Kelly navigates her way through traffic against brisbane. Credit: Getty The two sides have had intense battles in the competition’s history,
+including two grand finals, and this was no different.
+</item 43>
+
+<item 44>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+His agility, speed for his size and precise kicking are all features of his game.
+
+Weapon: Intercept ability and precise ball use
+
+AFL player comparison: Steven May (Melbourne)
+
+Advertisement
+
+Harry DeMattia
+
+Pronunciation: De-matt-e-ya
+
+State: Victoria Country
+
+State League Club: Dandenong Stingrays
+
+Community Club: Edithvale-Aspendale
+
+Date of Birth: 11/09/05
+
+Height: 185cm
+
+A midfielder/forward with a combination of speed and endurance which enables him to cover the ground and compete in the air and at ground level. A left footer,
+he brings real pressure with his ability to lay run down tackles against the flow of play. Shared the role of Victoria Country co-captain with Harley Reid and
+performed consistently.
+</item 44>
+
+<item 45>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Tackled above waist and below shoulders. No sling or double motion. Sheppard lands on her back. ′ ‘Girls’ play hard too,” Harford said on X, the social media
+site formerly known as Twitter. This echoed Collingwood defender and Fox Footy commentator Ruby Schleicher’s thoughts at the time, who called it a “monster
+tackle” but believed it was “fair”. “I don’t see any dirtiness in that,” Schleicher said on Fox Footy. “It was pretty heavy on her head, wasn’t it? I look at
+that – I still see a fair tackle. There’s no doubt the match review [officer] will look at it because they have to I guess. The duty of care for the player.”
+
+The decision a week comes after Adelaide premiership defender Najwa Allen was handed a three-ban suspension, the longest ban in AFLW history, for a high bump on
+Western Bulldog Kirsten McLeod. The Crows elected not to challenge the decision.
+</item 45>
+
+<item 46>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+A competitive type who has a good natural leap and is very strong overhead. He had an excellent year at under-18 level for Central District where he averaged
+21.8 disposals and 5.9 marks across nine matches. He was also one of South Australia’s better players at the National Championships. Is eligible to join
+Hawthorn under the father-son rule as the son of Luke McCabe who played 138 games for the Hawks from 1995 to 2004.
+
+Weapon: Overhead marking
+
+AFL player comparison: Jordan Ridley (Essendon)
+
+Advertisement
+
+Colby McKercher
+
+State: Tasmania
+
+State League Club: Tasmania Devils
+
+Community Club: Launceston
+
+Date of Birth: 12/04/05
+
+Height: 180cm
+
+Had an outstanding year which included winning the Coates Talent League’s Morrish Medal and finishing runner-up in the Larke Medal at the National
+Championships.
+</item 46>
+
+<item 47>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Geelong coach Daniel Lowther said the strong winds made it hard for his side to clear the ball out of their defensive 50-metre zone and to move the ball with
+any certainty around the ground.
+
+Loading “At one point the rain hit our box, it was flowing,” Lowther said. “Both teams had to fight in the conditions, but it didn’t help the game. “Our marking
+contest wasn’t too flash, our ground ball representation was a bit hit and miss, so our defence were under a bit more pressure than they should have been, but
+they fought back really well,” Lowther said. Collingwood next play a Sydney line-up including former Magpies star Chloe Molloy, while Geelong will take on
+Richmond at Ikon Park.
+
+Dockers spoil Saints’ finals hopes Fremantle recorded a comfortable 24-point win yesterday to bring an abrupt end to St Kilda’s four-game streak and dash their
+AFLW finals hopes. J’Noemi Anderson is tackled by a group of Dockers.
+</item 47>
+
+<item 48>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Hanks was pivotal for the Demons and starred with 26 disposals, seven tackles and one goal, while her partner in the midfield Olivia Purcell had 28 touches,
+five clearances and five tackles. For the Roos, Ash Riddell led the disposal count with 31, while skipper Emma Kearney was crucial in defence. Melbourne’s
+Alyssa Bannan is tackled by Lulu Pullar of the Kangaroos. Credit: Getty Hanks said with the state of competition, they just had to take it week by week, but it
+was good to get the win. “We knew we were up against the best tonight,” said Hanks. “It’s a nice feeling tonight.”
+
+Lions roar in big battle Meanwhile, on Saturday afternoon, the Brisbane Lions put an end to Adelaide’s unbeaten run with a three-point victory at Brighton Homes
+Arena in a top-four thriller, 5.12 (42) to 6.3 (39), in a spectacle worthy of being a final.
+</item 48>
+
+<item 49>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Showcased his athletic prowess at the national Draft Combine where he produced the quickest time on the agility test (8.16 seconds) and a top ten finish on the
+20m sprint (2.92 seconds). Is a member of the West Coast Eagles’ Next Generation Academy meaning they can match any bid after selection 40 in this year’s Draft.
+
+Advertisement
+
+Weapon: Speed and innate goal sense
+
+AFL player comparison: Charlie Cameron (Brisbane Lions)
+
+Jordan Croft
+
+State: Victoria Metro
+
+State League Club: Calder Cannons
+
+Community Club: Maribyrnong Park
+
+Date of Birth: 12/05/05
+
+Height: 200cm
+
+A tall forward who is lightly built but extremely athletic. He uses his mobility and height to create opportunities as a marking forward, with his speed and
+precise kicking key features of his game. He only fully focused on a potential AFL career last year after previously playing volleyball.
+</item 49>
+
+<item 50>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+CLICK HERE for a seven-day free trial to watch the AFL on KAYO
+
+KEVIN SHEEHAN’S TOP 40 PROSPECTS: VIA THE AFL
+
+Kynan Brown
+
+State: Victoria Metro
+
+State League Club: Oakleigh Chargers
+
+Community Club: Blackburn
+
+Date of Birth: 13/01/05
+
+Height: 181cm
+
+Left-footed inside midfielder who has quick hands, sharp vision and creates play through the middle of the ground with his creativity. Had a remarkably
+consistent year which included starring for Victoria Metro in the National Championships averaging 22.8 disposals at 80 percent efficiency as well as 4.5
+clearances and 4.8 tackles to win their best and fairest award. Had similar numbers with the Oakleigh Chargers in the Coates Talent League including kicking
+five goals and having 25 disposals in a best on ground performance in the Wildcard Round win against the Northern Knights.
+</item 50>
+
+<item 51>
+ASX set to open lower as Wall Street closes September with more losses (The Sydney Morning Herald, 2023-10-01T18:19:08+00:00)
+The National Australia Bank has forecast another rate hike to 4.35 per cent in November. Elsewhere, Wall Street closed out its worst month and quarter of the
+year with more losses on Friday. The S&P 500 slipped 0.3 per cent and the majority of stocks within the index sank. The Dow Jones fell 0.5 per cent and the
+Nasdaq composite edged 0.1 per cent higher. The Australian sharemarket is set to retreat, with futures pointing to a fall of 38 points, or 0.5 per cent, at the
+open. Solid gains for stocks early on faded as pressure built from within the bond market. After easing earlier in the day on encouraging signals about
+inflation, Treasury yields got back to rising as the day progressed. The yield on the 10-year Treasury yield returned to 4.58 per cent, where it was late
+Thursday, after dipping to 4.52 per cent. It’s again near its highest level since 2007.
+</item 51>
+
+<item 52>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Clean hands and vision
+
+AFL player comparison: Hugh McCluggage (Brisbane Lions)
+
+Taylor Goad
+
+State: South Australia
+
+State League Club: South Adelaide
+
+Community Club: Willunga
+
+Date of Birth: 28/04/05
+
+Height: 206cm
+
+Developing ruckman who only began to focus on a potential AFL career this year after initially applying his natural talent to basketball. Showed splendid
+improvement throughout the season playing at under-18 level for his state and club. Was particularly impressive in South Adelaide’s premiership campaign where
+he averaged 10.4 disposals, 25 hitouts and 2.2 marks in 13 matches. Both his standing vertical jump of 74cm and 20m sprint time of 2.965 seconds were ranked in
+the top 10 at the national Draft Combine and gave distinct indications of his elite athletic tools.
+</item 52>
+
+<item 53>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Also featured among Victoria Country’s best at the National Championships and produced a strong performance when representing Australia as part of the AFL
+Academy in the clash against Port Adelaide’s SANFL team, racking up 19 disposals and taking five marks. His running capacity was confirmed when he finished
+second in the 2km time trial at the national Draft Combine with a time of 5:52. He also demonstrated his power by producing the best running vertical jump with
+his 98cm effort.
+
+Weapon: Elite running and ball-winning ability
+
+AFL player comparison: Sam Walsh (Carlton)
+
+Caleb Windsor
+
+State: Victoria Metro
+
+State League Club: Eastern Ranges
+
+Community Club: Lysterfield
+
+Date of Birth: 09/06/05
+
+Height: 184cm
+
+A wingman with pace to burn. His preparedness to take the game on is a real weapon along with his decision-making and ball use.
+</item 53>
+
+<item 54>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Lions duo Charlotte Mullins and Ruby Svarc celebrate. Credit: Getty Images The Lions got the game on their terms early with five repeat entries into the
+attacking 50m in the opening 10 minutes of the game. Davidson and Ellie Hampson drew first blood before Casey Sherriff kicked Melbourne’s opening goal.
+
+Tayla Harris, Tyla Hanks and Hore slotted a goal each in the second term to put their side ahead. Crumbling under the Brisbane attack, the visitors conceded
+four unanswered goals from Taylor Smith, Sophie Conway (two goals) and Ruby Svarc while remaining goalless in the third term. Midfield stars Olivia Purcell (14
+contested possessions) and Tyla Hanks (11) showed their mettle as they attempted to drag their side over the line, but the Demons were outclassed and sorely
+missing Paxy Paxman (hamstring). Melbourne could be without Maeve Chaplin in their finals campaign, after the defender sustained a concussion injury in the
+third term.
+</item 54>
+
+<item 55>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+J’Noemi Anderson is tackled by a group of Dockers. Credit: AFL Photos The Dockers dominated the Saints from the start to win 6.9 (45) to 3.3 (21) at Fremantle
+Oval. Having been on the verge of making their first finals appearance, St Kilda (4-4) could now miss the top eight even if they beat the fourth-placed Brisbane
+Lions and the ninth-placed Carlton.
+
+Dana East was everywhere for Fremantle, leading the game in disposals (19) and contested possessions (11), alongside Orlagh Lally (19 disposals, five
+clearances). Jamiee Lambert was the shining light for the otherwise subdued Saints, collecting a game-high seven clearances and 13 contested possessions. Docker
+Hayley Miller hunts a loose ball against St Kilda. Credit: Getty Fremantle flew out of the gates from the first siren, producing their highest-scoring quarter
+of the season with 26 points in the opening term.
+</item 55>
+
+<item 56>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was also impressive for the Murray Bushrangers in the Coates Talent League, averaging 16 disposals and 3.7 tackles across 10 matches and booted nine goals. His
+high natural leap and pace were both prominent at the national Draft Combine with his standing vertical leap of 78cm ranked second overall and his time of 2.96
+seconds on the 20m sprint ranked in the top ten.
+
+Weapon: Elusiveness and creativity
+
+AFL player comparison: Tom Papley (Sydney Swans)
+
+Will Graham
+
+State: Queensland
+
+State League Club: Gold Coast Suns Academy
+
+Community Club: Palm Beach Currumbin
+
+Date of Birth: 27/07/05
+
+Height: 186cm
+
+Adapted seamlessly to playing in defence for the Allies after predominantly playing midfield for the Gold Coast Suns Academy.
+</item 56>
+
+<item 57>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Averaged 17.1 disposals at 76 percent efficiency and kicked seven goals across 12 matches in the Coates Talent League to announce himself as a Draft prospect.
+His 6:24 in the 2km time trial at the state Draft Combine in Victoria was impressive for a player of his type.
+
+Weapon: Rebound and ball use
+
+AFL player comparison: Bailey Dale (Western Bulldogs)
+
+Mitchell Edwards
+
+State: Western Australia
+
+State League Club: Peel Thunder
+
+Community Club: South Mandurah
+
+Date of Birth: 02/06/05
+
+Height: 206cm
+
+Advertisement
+
+An exciting ruckman still growing into his body. Has the height and natural leap to give his team a distinct advantage at stoppages. Has continued to develop
+this year and shown glimpses of his aerial ability at state under-18 level and took several exciting marks during the National Championships.
+</item 57>
+
+<item 58>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Didn’t test at the national Draft Combine due to injury.
+
+Weapon: Neat kicking and ball-winning ability
+
+AFL player comparison: Jack Macrae (Western Bulldogs)
+
+Riley Hardeman
+
+State: Western Australia
+
+State League Club: Swan Districts
+
+Community Club: Caversham
+
+Date of Birth: 27/02/05
+
+Height: 185cm
+
+Left-footed medium defender who is strong overhead, has line-breaking speed and is a penetrating kick. These attributes were on show as captain of Western
+Australia at the National Championships where he earned All Australian selection after averaging 18.5 disposals and 5.8 marks and displayed composure under
+pressure. Made his senior debut for Swan Districts this year and impressed when representing Australia as part of the AFL Academy.
+</item 58>
+
+<item 59>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Uses his dazzling speed to break the lines and kicks the ball with pinpoint accuracy on his preferred left foot. Averaged 32.8 disposals and 5.8 clearances
+across four matches for the Allies at the National Championships to earn All Australian honours. Was equally dominant for the Tasmania Devils in the Coates
+Talent League having more than 30 disposals in seven of his nine matches and also kicked 12 goals. Showed he could match it against more experienced opponents
+by having 20 disposals and three clearances in Australia’s win over Carlton’s VFL team.
+</item 59>
+
+<item 60>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Richmond were just absolute beasts, especially their midfielders. They really worked hard all night,” Hawthorn coach Bec Goddard said after the game. “Our work
+rate really dropped off and we just watched them play some really good footy. “If you’re a Hawks fan, you would’ve seen some really exciting moments of footy
+tonight.
+
+“Keep getting excited. We are coming, we’re growing, we’re getting better.” Hawthorn’s Irish ace Aine McDonagh kicked the opening goal before Tigers skipper
+Katie Brennan slotted two unanswered majors to celebrate her 50th game in style. Fellow 50-gamer Greta Bodey put boot to ball to snatch her own goal before
+quarter-time. A skirmish erupted in the second term after Brennan took exception to a tackle by Mattea Breed on Laura McClelland. McClelland was gifted a
+50-metre penalty following a bump against Sarah Hosking by Sophie Locke and converted from inside the goal square while players were occupied by the tussle.
+</item 60>
+
+<item 61>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Magpies ruck Sabrina Frederick, who starred with 39 hit-outs and used her height to bring the ball to ground at the advantage of her midfielders, said her side
+had been practising for games like this.
+
+“Even in the chaos, it’s quite comfortable because we train it. We train what scenarios to do in what moments, and even though it’s a bit crazy, it felt so
+calm. We put players in place and we know what we’re doing,” said Frederick. “But close games are good ones, for everyone. We knew they were going to come out
+like that [in the last quarter]. When they’re down, they’re just going to give us everything.” Collingwood’s Brianna Davey kicks her team forward against
+Geelong. Credit: Getty Frederick admitted at times she “couldn’t see” and felt like she could be “blown away”.
+</item 61>
+
+<item 62>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+???
+
+
+
+Watch the Vic Metro v Vic Country game: https://t.co/YWgc6dPtb1 pic.twitter.com/ajKnGaievS — AFL (@AFL) September 22, 2022
+
+Darcy Wilson
+
+State: Victoria Country
+
+State League Club: Murray Bushrangers
+
+Community Club: Wangaratta Rovers
+
+Date of Birth: 18/08/05
+
+Height: 186cm
+
+An elusive and creative forward or wingman who covers the ground exceptionally well and has innate ability around goals. He is still developing physically but
+had an outstanding 2023 season. Averaged 25.4 disposals and kicked 16 goals for the Murray Bushrangers to win the team’s best and fairest and earn selection in
+the Coates Talent League Team of the Year.
+</item 62>
+
+<item 63>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+Quince paste and hand-picked grapes have played a part in helping the Sydney Swans launch themselves to the top of the AFLW attendance charts, less than two
+years after their first match in the women’s league.
+
+The Swans play their final home match of the regular season this weekend with an average attendance of 4,365 from four games so far – 124 more than the next
+best club Adelaide – and a marquee pride match against Collingwood at Henson Park to come on Sunday where a crowd in excess of 4,000 is expected.
+
+The club’s focus has been to target local communities and make match days compelling for fans on and off the field, according to executive GM of marketing at
+the Swans, Loretta Johns.
+
+“Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting
+our games,” she said.
+
+Fans of Australian rules football in the Harbour City have a reputation for being fickle.
+</item 63>
+
+<item 64>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+???
+
+
+
+The 200cm forward is an elite runner, sharp kick and strong mark.#AFLDraft pic.twitter.com/f9twMnNtfO — AFL (@AFL) October 12, 2023
+
+Daniel Curtin
+
+State: Western Australia
+
+State League Club: Claremont
+
+Community Club: West Coast
+
+Date of Birth: 08/03/05
+
+Height: 197cm
+
+A left-footed defender who experienced a frustrating run with injury during the 2022 season. Managed to get back to play in the AFL Futures game at the MCG on
+AFL Grand Final day and excelled for Team Houli with 22 disposals and nine marks to claim best on the ground honours.
+</item 64>
+
+<item 65>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+He also impressed for the Australia under-18 team in its second match against Carlton’s VFL side at Marvel Stadium, gathering 26 disposals and six clearances to
+claim the medal as his team’s best player.
+
+Weapon: One-touch hands and creativity
+
+AFL player comparison: Touk Miller (Gold Coast Suns)
+
+Advertisement
+
+Ryley Sanders
+
+State: Tasmania
+
+State League Club: Sandringham Dragons
+
+Community Club: North Launceston
+
+Date of Birth: 21/01/05
+
+Height: 185cm
+
+Strong-bodied midfielder who is powerful and courageous in his attack on the ball and the pressure he exerts on the opposition. Strong two-way running is
+another feature of his game and was on display in dominating for the Allies at the National Championships, averaging 35 disposals at 80 percent efficiency, 14.5
+contested possessions, five clearances and four tackles to win the Larke Medal as the best and fairest player.
+</item 65>
+
+<item 66>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+His ferocious attack on the ball and his opponent helped set the tone for the Allies to dominate the midfield battle throughout the National Championships and
+he was rewarded with All Australian honours. Averaged 29.2 disposals, 11.2 contested possessions and a team-high 6.8 tackles across four matches for the Allies
+and showed excellent repeat speed and courage as well as clean hands playing both on the inside and outside. His 6:06 effort in the 2km time trial at the
+national Draft Combine showcased his elite endurance. He has been part of the Sydney Swans’ Academy since the under-10s.
+</item 66>
+
+<item 67>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+It was the Western Bulldogs’ eighth loss in a row, and their biggest-ever defeat, and they have just two rounds left to clinch a win this season. They next play
+17th-placed West Coast and then top-four side North Melbourne. For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes
+of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.
+
+The Swans, who went winless in their debut season last year, were propelled to victory by a Chloe Molloy masterclass. After a five-goal second term, which
+included a four-minute burst of three majors, Sydney had already brought up their largest score in an AFLW game by halftime. Swan Chloe Molloy celebrates a
+goal. Credit: AFL Photos / Getty Images The Bulldogs held their own in the last quarter, but the damage had already been done. The total was also the biggest
+the Dogs have conceded in their history, topping the 83 Melbourne kicked against them in round three.
+</item 67>
+
+<item 68>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Crows elected not to challenge the decision. ‘Horror week’: Bombers stunned by struggling, controversy-hit Eagles West Coast withstood a late-term surge
+from Essendon to narrowly claim their second win of the AFLW season.
+
+Fresh off a controversy caused by comments their coach Michael Prior made following last week’s 70-point loss to Melbourne, the Eagles prevailed 3.5 (23) to 2.7
+(19) in a slugfest at the appropriately named Windy Hill on Sunday. West Coast’s Kate Bartlett (left) and Isabella Lewis celebrate Sunday’s surprise win over
+Essendon flanked by their teammates. Credit: Getty Prior had blasted the decision to pit strugglers West Coast against defending premiers Melbourne, saying:
+“How we play that team is beyond me. That is what you get when you get fixturing like that.” He later backtracked on the criticism, but his comments did put
+added pressure and focus on his team this week. Michael Prior guided West Coast to a gutsy win.
+</item 68>
+
+<item 69>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Intercept ability and long kick
+
+AFL player comparison: Callum Wilkie (St Kilda)
+
+Cooper Simpson
+
+State: Victoria Country
+
+State League Club: Dandenong Stingrays
+
+Community Club: Mt Martha
+
+Date of Birth: 13/02/05
+
+Height: 181cm
+
+An ultra professional midfielder with pace, composure and great finishing skills. Also has a neat step through traffic and runs hard both offensively and
+defensively. Has shown the ability to perform when challenged and in the big moments when the game is on the line. Started the season in good touch with the
+Dandenong Stingrays in the Coates Talent League but suffered an ankle injury in Victoria Country’s opening game of the National Championships and was unable to
+play any further matches at that level. Made an impressive return for the final four matches with the Stingrays including having 28 disposals against the
+Tasmania Devils which reminded scouts of his class and AFL potential.
+</item 69>
+
+<item 70>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+???https://t.co/nf4CwUbK9A — AFL (@AFL) November 11, 2023
+
+Archer Reid
+
+State: Victoria Country
+
+State League Club: Gippsland Power
+
+Community Club: Inverloch-Kongwak
+
+Date of Birth: 19/09/05
+
+Height: 203cm
+
+A mobile tall forward who is an exceptional overhead mark, good below his knees and has a natural goal sense. Continued to develop physically and improved his
+forward craft as the season progressed. Averaged 13.5 disposals, five marks and kicked 16 goals in 11 matches in the Coates Talent League for the Gippsland
+Power to finish runner-up in the club’s best and fairest award.
+</item 70>
+
+<item 71>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Continued that form into this season and was outstanding for Western Australia at the National Championships winning his team’s MVP award and All-Australian
+honours after averaging 23.5 disposals and 6.5 marks playing as a defender and midfielder. Played a handful of senior games for Claremont and ended the season
+being one of his team’s best in a premiership win at under-18 level. His agility, speed for his size and precise kicking are all features of his game.
+</item 71>
+
+<item 72>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Holds his ground very well both under the ball in stoppages and marking contests and provides great opportunities for his teammates at ground level. Averaged 12
+disposals and 24 hitouts when representing Victoria Metro at the National Championships to earn All Australian honours. Both his running vertical jump of 87cm
+and 2km time of 6:34 seconds at the national Draft Combine were impressive indicators of his natural leap and endurance.
+
+Weapon: Mobility and marking
+
+AFL player comparison: Brodie Grundy (Sydney Swans)
+
+Clay Hall
+
+State: Western Australia
+
+State League Club: Peel Thunder
+
+Community Club: Harvey Brunswick Leschenault
+
+Date of Birth: 12/05/05
+
+Height: 189cm
+
+Advertisement
+
+Prolific disposal winner who uses the ball effectively on his preferred left foot and excels at stoppages using his clean hands and vision to create for his
+team.
+</item 72>
+
+<item 73>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I’m excited like I think the group’s coming together really nicely and where really well-prepared compared to previous years,” Riddell told Fox Footy. “So, I
+can’t wait I think it’s an exciting time for us.” The game was one-way traffic against the Dogs with the game played almost entirely in the Roos’ attacking
+half. Riddell credited her side’s “team performance” after two losses to the Dees and Crows. North Melbourne have secured a top-four spot for finals. Credit:
+Getty For the Western Bulldogs, it was another tough day out as they notched their ninth loss of the season. They won just one game this year, an eight-point
+victory last weekend over 17th-placed West Coast.
+
+Britney Gutknecht kicked the Dogs’ only goal against the Kangaroos, which came early in the final term to avoid a record for the lowest AFLW score in the
+history of the competition.
+</item 73>
+
+<item 74>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Kicked 39 goals across all matches in the talent pathway this year, which included games for Victoria Metro and the Australia under-18 team. Tested extremely
+well at the national Draft Combine with results of 3.02 seconds on the 20m sprint along with 6:35 for the 2km time trial indications of his athletic prowess. Is
+the nephew of two-time Richmond premiership star Josh Caddy.
+
+Weapon: Contested marking and goalkicking
+
+AFL player comparison: Taylor Walker (Adelaide Crows)
+
+Caiden Cleary
+
+State: NSW-ACT
+
+State League Club: Sydney Swans Academy
+
+Community Club: Sydney University
+
+Date of Birth: 05/03/05
+
+Height: 182cm
+
+An in-and-under player who extracts the ball well from stoppages.
+</item 74>
+
+<item 75>
+ASX to rise after interest rate hopes boost US shares (The Sydney Morning Herald, 2023-11-05T20:56:22+00:00)
+“Westpac’s results were better than expected, especially because it’s been a bit of a perennial underperformer in the past few years,” he said, adding that it
+set the tone for results from NAB and ANZ, which are due to report in the next week. Loading Clark also said there was a reversal of the interest-rate trade
+seen in recent weeks. “Long-term bond yields came off quite significantly in the last few days following weaker than expected employment data on Friday, which
+has seen some investors swivel back into growth stocks,” he said. The market has now switched from pricing in an 80 per cent chance of a rate rise on Tuesday to
+50-50, Clark said.
+
+On Wall Street, the S&P 500 climbed 40.56 points on Friday, or 0.9 per cent, to 4,358.3.
+</item 75>
+
+<item 76>
+ASX set to drop as Wall Street’s September slump deepens (The Sydney Morning Herald, 2023-09-26T19:11:30+00:00)
+Tweet of the day Quote of the day “The Senate committees have the power to summons witnesses within Australia but have no enforceable powers for witnesses who
+are overseas,” said Senator Bridget McKenzie as former Qantas boss Alan Joyce chose not to front the Senate select committee into the federal government’s
+decision to reject extra flights from Qatar Airways due to “personal commitments”.
+</item 76>
+
+<item 77>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Conversely, the score was the most the Saints have conceded in any quarter this season.
+
+Aine Tighe set the tone for the Dockers with a brilliant goal less than 30 seconds into the first quarter, followed by two majors from Gabby O’Sullivan and
+another by Angelique Stannett. Ella Friend slotted a much-needed goal for the visitors to make it 4.2 (26) to 1.3 (9) at quarter-time. With less than a minute
+till the long break, captain Hayley Miller (two goals) kicked the only major of the second quarter to give Fremantle a comfortable 26-point lead at half-time.
+Despite two goals from Tyanna Smith and J’Noemi Anderson in the second half, the Saints struggled to eat into the deficit. Fremantle (4-4) face reigning
+premiers Melbourne next, before finishing the season against 11th-placed Sydney.
+</item 77>
+
+<item 78>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Tested very well at the state Draft Combine in Victoria with his 6:12 on the 2km time trial and 3.04 seconds for the 20m sprint rounding off a productive
+season. Is eligible to be selected under the father-son rule as the son of former Melbourne utility Nathan D Brown, who played 146 games for the Demons.
+
+Weapon: Footy IQ and ball-winning ability
+
+AFL player comparison: Errol Gulden (Sydney Swans)
+
+Cal Twomey believes father-son prospect Kynan Brown has shown enough to be on an AFL list in 2024, but is more likely to be a later selection in the Draft
+</item 78>
+
+<item 79>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+“We’ll continue to keep building the base and keep building the foundations and have it not just strong at year seven, season eight, but strong for generations
+to come.”
+
+In a bid to improve the spectacle of the AFLW, the league introduced longer quarters this year and an interchange cap to help increase scoring. The effect,
+according to Livingstone, has been positive.
+
+“We’ve increased game time by eight minutes per match, on average, and we’ve had record scores across the rounds,” she said. “Whereas leading into the season we
+hadn’t scored more than 100 goals in a round, we’ve regularly been scoring over 100 goals in a round.”
+
+The Swans recorded their highest total last round, in their 14-12-96 to 6-3-39 defeat of the Western Bulldogs, the league’s winless bottom side. Molloy recorded
+17 score involvements to set a new AFLW mark.
+
+But Livingstone said the AFL was happy with the level of competition.
+</item 79>
+
+<item 80>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Oct 8th, 2023
+
+Oct 8th, 2023
+
+S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by
+Fiji and Portugal in Toulouse.
+
+Australia will gather together in their plush Saint-Galmier hotel at 9pm local time (6am Monday AEDT) to view what will almost certainly be their World Cup
+execution.
+
+The Wallabies are currently sitting second in Pool C but a single bonus point would be enough for Fiji to leapfrog them and advance to the quarter-finals in
+Marseille.
+
+Watch all the action from Rugby World Cup 2023 on the home of rugby, Stan Sport.
+</item 80>
+
+<item 81>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Comeback kings Richmond take the points in Cairns A late goal by Emelia Yassir has helped Richmond to their first win in four games, putting their AFLW finals
+campaign back on track with an 11-point victory over Hawthorn. Tight tussle: Richmond’s Emelia Yassir is tackled. Credit: Getty Images Separated by one point at
+half-time and down by nine points entering the last quarter, the Tigers pulled off a 6.5 (41) to 4.6 (30) victory to keep their finals hopes alive at Cazaly’s
+Stadium in Cairns on Friday night.
+
+Hawthorn were limited to just one point in the decisive final quarter. Midfield duo Monique Conti (35 disposals, seven clearances) and Grace Egan (28, 5) were
+typically influential for Richmond, while Hawthorn were led by Emily Bates (18, four) and Jasmine Fleming (18, one). “Richmond were just absolute beasts,
+especially their midfielders.
+</item 81>
+
+<item 82>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But more modest attendances in subsequent games, including two sub-2,000 crowds in Perth, suggest the popularity of the Matildas’ run to the semi-finals has
+only had a limited impact on support for domestic women’s sport.
+
+skip past newsletter promotion Sign up to Australia Sport Free newsletter Get a daily roundup of the latest sports news, features and comment from our
+Australian sports desk Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see
+our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google
+reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Livingstone said the “green and gold fever” associated with the Women’s World Cup was a one-off and the AFL has plans in place for long-term growth.
+</item 82>
+
+<item 83>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Infratil (down 3.6 per cent), Meridian Energy (down 2.7 per cent) and Resmed (down 2 per cent) were among the biggest large-cap decliners. The lowdown The
+Australian sharemarket shook off a positive lead from Wall Street on Wednesday after hotter-than-expected inflation data raised the prospect of another interest
+rate rise at the Reserve Bank’s next meeting, which would weigh on the equity market. Interest-rate sensitive sectors, including REITS and consumer companies,
+were among the weakest on the local bourse as investors digested the news.
+
+GSFM investment strategist Stephen Miller said the inflation data, taken with the October Reserve Bank board meeting minutes, which revealed the board had “low
+tolerance for a slower return of inflation to target than currently expected”, made the possibility of an interest rate rise from the central bank in November a
+“near certainty”. However, commodity prices supported mining companies as iron ore prices increased 2.9 per cent overnight, bolstering Australia’s iron ore
+giants.
+</item 83>
+
+<item 84>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Announced himself as an AFL prospect when he kicked six goals from 26 disposals in the GWV Rebels’ loss to the Dandenong Stingrays in Round 4. He holds his
+width when playing on the wing which provides his team with an outlet option with its ball movement. Had a consistent year at club level averaging 19.6
+disposals in 14 matches for the Rebels and finished third in the best and fairest while playing in all four matches for Victoria Country. A strong all-round
+athlete, he ran a time of 2.98 seconds in the 20m sprint during pre-season testing and then completed the 2km time trial in 6:13 at the national Draft Combine.
+</item 84>
+
+<item 85>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Also showed he can go forward and have an impact during his time with the Murray Bushrangers.
+
+Weapon: Rebound ability and athleticism
+
+AFL player comparison: Sam Taylor (GWS Giants)
+
+Ethan Read
+
+State: Queensland
+
+State League Club: Gold Coast Suns Academy
+
+Community Club: Palm Beach Currumbin
+
+Date of Birth 07/07/05
+
+Height: 202cm
+
+Mobile and skillful ruckman whose work rate and ball use are outstanding features of his game, along with his aggressive work at stoppages. A member of the Gold
+Coast Suns Academy, he was a dominant force for the Allies at the National Championships and earned All Australian honours. Had a massive impact on all four
+games, averaging 21.5 disposals at 76 percent efficiency, 7.5 marks and 13 hitouts to play an important role in the Allies’ first title win.
+</item 85>
+
+<item 86>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+We’re stoked. It’s pretty special for the club.” Missing star ruck Ally Morphett to a season-ending wrist injury, Laura Gardiner stood the tallest in the
+midfield, while Molloy (two goals), Montana Ham, Privitelli and Brooke Lochland hit the scoreboard. An off-season recruit from Geelong, 20-year-old Gardiner had
+the ball on a string with a game-high 33 disposals and 18 contested possessions.
+
+Demons denied the minor premiership The Brisbane Lions have toppled AFLW heavyweights Melbourne by 25 points to clinch a double chance in the finals and deny
+the Demons the minor premiership. A year after Melbourne walked away with the 2022 premiership, the Lions avenged their upset grand final loss by defeating the
+defending premiers 8.5 (53) to 4.4 (28) at Brighton Homes Arena on Saturday. Melbourne’s Lauren Peace fights for the ball againt the Lions.
+</item 86>
+
+<item 87>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Dogs forward reveals battle with kidney disease Western Bulldogs forward Richelle Cranston has revealed she’s been living, and playing, with stage five chronic
+kidney disease. “I still manage to do the things I love,” the inaugural AFLW player posted to Instagram. “It’s just really hard sometimes.” Richelle Cranston of
+the Bulldogs: “It’s just really hard sometimes.” Credit: Getty Images The 34-year-old posted the caption along with a video detailing her life with the disease
+including weekly blood tests and daily blood pressure checks, tracking water and food intake, taking medications including resonium (to lower potassium levels),
+all while training in the high-performance environment.
+
+The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year. Cranston lined up for
+the Bulldogs in her side’s 57-point loss to Sydney on Saturday at Whitten Oval, 14.12 (96) to 6.3 (39).
+</item 87>
+
+<item 88>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+He only fully focused on a potential AFL career last year after previously playing volleyball. Starred with the Calder Cannons and Victoria Metro this year
+kicking 33 goals in the talent pathway. His 2km time of 6:05 at the national Draft Combine was a strong indicator of his elite endurance but also his
+competitiveness for a player of his size. Is eligible to join the Western Bulldogs under the father-son rule as the son of former Bulldogs utility Matthew
+Croft, who played 186 games for the club.
+
+Weapon: Aerial ability
+
+AFL player comparison: Max King (St Kilda)
+
+Jordan Croft has nominated as a father-son prospect for the Western Bulldogs ????
+</item 88>
+
+<item 89>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Versatility and contested ball-winning ability
+
+AFL player comparison: Callum Mills (Sydney Swans)
+
+"All through my junior football, my dad placed a big emphasis on playing every position. I think that came to the fore this year a little bit."
+
+
+
+Tassie’s 'Mr Fix-It' James Leake is shaping as a first-round pick following an impressive season.https://t.co/fwnC96Uzdw — AFL (@AFL) November 3, 2023
+
+Kane McAuliffe
+
+State: South Australia
+
+State League Club: North Adelaide
+
+Community Club: Central Augusta
+
+Date of Birth: 01/03/05
+
+Height: 187cm
+
+A powerful midfielder who wins his own ball and is a penetrating left-foot kick. Is a strong and aggressive tackler as well as being an accomplished extractor
+of the ball from stoppages using his clean hands and vision to set up the play.
+</item 89>
+
+<item 90>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Marking on the lead and goalkicking accuracy
+
+AFL player comparison: Bayley Fritsch (Melbourne)
+
+Ollie Murphy
+
+State: Victoria Metro
+
+State League Club: Sandringham Dragons
+
+Community Club: East Brighton Vampires
+
+Date of Birth: 16/09/05
+
+Height: 200cm
+
+A lightly built tall defender who sets up the play with his neat left-foot kicking. Although new to playing in defence this season he adapted remarkably well.
+Shows real composure with the ball in hand and is strong overhead. Is also a capable decision maker on when to mark or spoil in one-on-one contests. Was
+outstanding for Victoria Metro in the National Championships and won his team’s MVP award along with All Australian honours after averaging 11.2 disposals and
+4.5 marks per match.
+</item 90>
+
+<item 91>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Chloe Scheer was once again the star in front of goals with three majors, while the Cats finished with seven individual goalkickers. Georgie Prespakis (35
+touches, eight clearances) and Amy McDonald (23 touches, eight clearances) were a formidable midfield duo, while the retiring Renee Garing had a whopping 11
+tackles. Overall, it was a strong team effort from a side that will be hungry for a finals win. Last year, the Cats had an impressive home-and-away run but
+bowed out narrowly in an elimination final to North Melbourne. Geelong young defender Rebecca Webster told this masthead earlier in the week how important the
+home crowd is for them come knockout finals. “Playing at GMHBA is like a massive advantage for us,” said Webster. “We love going in those four walls. We train
+there three, four times a week.
+</item 91>
+
+<item 92>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Down by four points at half-time in the low-scoring game, a third-term goal from Rebecca Privitelli sparked the Swans to a 5.10 (40) to 2.6 (18) win on Sunday
+at Fremantle Oval.
+
+The second-year expansion side stormed home with three unanswered goals to secure eighth spot. It’s a dramatic improvement, with the Swans winless in their
+first season. “Any club that’s able to go from winless one year to a finals berth, it’s incredible,” Sydney co-captain Chloe Molloy told Fox Footy after the
+match. “You can see the emotion on the girls’ faces. Coming into the season, the odds were against us. Just to get into the eight, we’ve managed to do that.
+We’re stoked. It’s pretty special for the club.”
+</item 92>
+
+<item 93>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+WEEK ONE FINALS FIXTURE SATURDAY NOVEMBER 11 First Qualifying Final: Adelaide v Brisbane Lions, 2.35pm local (3.05pm AEDT), Norwood Oval First Elimination
+Final: Gold Coast v Sydney, 6.15pm local (7.15pm AEDT), Heritage Bank Stadium SUNDAY NOVEMBER 12 Second Elimination Final: Geelong v Essendon, 1.05pm AEDT,
+GMHBA Stadium Second Qualifying Final: Melbourne v North Melbourne, 3.05pm AEDT, Ikon Park The eight was not decided until the final game of the regular season,
+when Sydney downed Fremantle by 22 points to leapfrog St Kilda into the final spot, after the Saints had kept themselves in the race with a 20-point win over
+Carlton earlier in the day, 7.4 (46) to 3.8 (26).
+</item 93>
+
+<item 94>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 94>
+
+<item 95>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+The laggards Real estate investment trusts (REITS, down 2 per cent) dropped further following the latest inflation data, with Mirvac (down 3.7 per cent) and
+Dexus (down 3.3 per cent) sliding lower. Dexus chief executive Darren Steinberg on Wednesday announced he would step down from the position next year after 11
+years at the helm. At the annual meeting in Sydney on Wednesday, the remuneration report received a first strike after failing to pass the 25 per cent voting
+threshold. Loading Consumer staples (down 1.4 per cent) were also weaker with Woolworths losing 2 per cent despite sales across the company rising 5.3 per cent
+in the 14 weeks to October, as it vowed to pass on easing costs for protein and fresh produce amid rising mortgage and rental pressures. In other company news,
+shares in embattled funds manager Magellan dropped 3.5 per cent after the abrupt departure of its chief executive, David George.
+</item 95>
+
+<item 96>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Kangaroos’ Alice O’Loughlin and Melbourne’s Maeve Chaplin battle for the ball. Credit: AFL Photos It was a hard-fought, low-scoring battle between the two
+powerhouse sides that play a similar game style. Each set up well, are fast and like a good dose of contested marking. But Narrm controlled more of the game by
+tightening around the contest and being cleaner going forward. They also defended extremely well by suffocating the opportunities North created and prevailed
+5.7 (37) to 2.2 (14). While the Demons scored just one goal a quarter in the second half – Tyla Hanks in the third and Eden Zanker in the fourth – the Kangaroos
+were goalless for three terms, having led by five points at the first change. Their opening goals were thanks to Niamh Martin and Tess Craven.
+
+Then a crafty goal from Demons skipper Kate Hore to open the second term put her side up, and Melbourne never gave up the lead.
+</item 96>
+
+<item 97>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Has already played nine matches at senior level with Peel Thunder averaging 18.9 disposals. Starred when he represented Western Australia at the National
+Championships averaging 27.2 disposals, 11 contested possessions, six clearances and five tackles to win All Australian honours. Is the son of former West Coast
+Eagles and Geelong Cats forward Derek Hall but is not eligible as a father-son to either club given Derek played only two games for the Eagles and 74 matches
+for the Cats. Didn’t test at the national Draft Combine due to injury.
+</item 97>
+
+<item 98>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Melbourne’s Lauren Peace fights for the ball againt the Lions. Credit: Getty Images The Lions were at risk of slipping from the top four after last week’s
+21-point loss to St Kilda, but will now finish the home-and-away season fourth, avoiding a sudden-death elimination final and marking coach Craig Starcevich’s
+75th game in style.
+
+Meanwhile, Melbourne ceded the minor premiership to Adelaide and dropped to second spot. The Lions put on a show across the park, with powerhouse duo Ally
+Anderson (22 disposals) and Jade Ellenger (22) going to work in the midfield while Dakota Davidson (two goals) led the charge in the forward line. Captain Bre
+Koenen was superb in defence as she played on Melbourne’s leader Kate Hore, collecting a game-high 12 intercept possessions and limiting the prolific goalkicker
+to just one goal. Lions duo Charlotte Mullins and Ruby Svarc celebrate.
+</item 98>
+
+<item 99>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Consistent high-level performances
+
+AFL player comparison: Andrew Brayshaw (Fremantle)
+
+Ari Schoenmaker
+
+Pronunciation: Show-en-maker
+
+State: Tasmania
+
+State League Club: Tasmania Devils
+
+Community Club: Launceston
+
+Date of Birth: 07/01/05
+
+Height: 194cm
+
+Left-footed tall defender who reads the game exceptionally well, is a good interceptor and prodigious kick of the ball. Had a very impressive back half of the
+year, which included being selected for the Allies in their final two matches of the National Championships. He also showed the ability to play on the wing and
+averaged 27 disposals at 75 percent efficiency as well as 5.9 marks and 9.6 rebound 50s in his eight matches with the Tasmania Devils in the Coates Talent
+League to be one of their most impressive performers.
+</item 99>
+
+<item 100>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Power and contested ball-winning ability
+
+AFL player comparison: Dustin Martin (Richmond)
+
+Archie Roberts
+
+State: Victoria Metro
+
+State League Club: Sandringham Dragons
+
+Community Club: Hampton Rovers
+
+Date of Birth: 18/11/05
+
+Height: 184cm
+
+A left-footed half-back who is a penetrating kick, smart interceptor and uses his anticipation and clean hands to have an impact. Showed good rebounding speed
+and fine decision-making ability to set up play from defence for Victoria Metro during the National Championships, where he averaged 20.8 disposals and 3.8
+marks to earn All Australian honours before becoming a back-to-back premiership player for the Sandringham Dragons in the Coates Talent League. His impressive
+time of 6:08 for the 2km time trial at the national Draft Combine gave a glimpse of his elite endurance and competitiveness.
+</item 100>
+=== END ITEM id=1a4744e38bc898d8 ===
+
+=== ITEM id=1a281ec635e6937a ===
+Gold sentences and facts:
+Sentence 0: Al Saadi said that her frustration with Meta is common among Palestinians, both in occupied territories and across the diaspora.
+  Fact 0.0: Al Saadi said her frustration with Meta is common among Palestinians.
+  Fact 0.1: Al Saadi said her frustration with Meta is common among Palestinians in occupied territories.
+  Fact 0.2: Al Saadi said her frustration with Meta is common among Palestinians across the diaspora.
+Sentence 1: Meta wants to shift the burden of monitoring social media usage among teens back to the app stores — and to parents.
+  Fact 1.0: Meta wants to shift the burden of monitoring teens' social media usage back to the app stores.
+  Fact 1.1: Meta wants to shift the burden of monitoring teens' social media usage back to parents.
+
+Retrieved items:
+
+=== END ITEM id=1a281ec635e6937a ===

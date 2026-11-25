@@ -1,0 +1,16 @@
+[
+  {"id": "18c0fb3fb78d694c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 43, "quote": "had paid $26.3 billion in 2021 to multiple browsers, phones and platforms"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 43, "quote": "from companies including Apple, Samsung and Mozilla"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 43, "quote": "The Verge reports"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 53, "quote": "To make its case, Epic plans to bring claims"}, {"item": 53, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 53, "quote": "distribution of apps to Android users"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 53, "quote": "the market for payment processing solutions for content inside Android apps"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 86, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 86, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 86, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 86, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+  ]}
+]

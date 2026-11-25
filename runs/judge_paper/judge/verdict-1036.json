@@ -1,0 +1,97 @@
+[
+  {
+    "id": "935dae619c6b69e4",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 56,
+            "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 48,
+            "quote": "In March 2022, Will slapped Chris Rock at the 94th annual Oscars"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 56,
+            "quote": "She explained at the time of the 2022 Academy Awards, when Will slapped Chris Rock, they had been separated for six years."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 17,
+            "quote": "Outsiders are now aware that Jada and Will have been separated since 2016, but the timeline of her relationship with Alsina is still fuzzy."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 17,
+            "quote": "the timeline of her relationship with Alsina is still fuzzy."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6b340a44476d1edc",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.3",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

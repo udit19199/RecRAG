@@ -1,0 +1,74 @@
+[
+  {
+    "id": "ccd8e73c1c057900",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Altman’s exit “is indeed shocking as he has been the face of” generative AI technology, said Gartner analyst Arun Chandrasekaran."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 47, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 47, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 71, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 71, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 71, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}
+        ]
+      }
+    ]
+  },
+  {
+    "id": "802af255cc101497",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  }
+]

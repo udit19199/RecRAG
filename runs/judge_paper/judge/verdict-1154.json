@@ -1,0 +1,22 @@
+[
+  {"id": "b09f7a7340960250", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 26, "quote": "he added, recalling the 2-0 defeat by Canada in 2022."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 27, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 27, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+  ]},
+  {"id": "406a401e505647eb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

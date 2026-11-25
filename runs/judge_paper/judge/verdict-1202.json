@@ -1,0 +1,78 @@
+[
+  {
+    "id": "b28a416408e597ad",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "Erik ten Hag is a top coach from Ajax"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "they need a top blueprint not only for now but for the next five years"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "they need a top blueprint not only for now but for the next five years, and work towards that"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "and sometimes on that journey there are hard moments when you don't get the right results"}
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {"item": 1, "quote": "even though you're doing the right things"}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 42, "quote": "Manchester United are out of Europe altogether"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 42, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford"}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 42, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 20, "quote": "Kingsley Coman's winning goal coming from the forward almost walking through the middle of their team"},
+          {"item": 42, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}
+        ]
+      },
+      {
+        "fact": "1.4",
+        "status": "stated",
+        "evidence": [
+          {"item": 42, "quote": "where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}
+        ]
+      }
+    ]
+  }
+]

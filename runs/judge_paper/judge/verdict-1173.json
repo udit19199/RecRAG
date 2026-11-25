@@ -1,0 +1,29 @@
+[
+  {"id": "36db5411992fb2aa", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "831bc37363f7accf", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "900d180df7f4bc4f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 65, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "0.1", "status": "contradicted", "evidence": [{"item": 65, "quote": "if the Manchester born Ratcliffe follows through with his vision"}, {"item": 60, "quote": "a straight shootout between Oldham-born Ratcliffe, who had previously offered"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 65, "quote": "if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 65, "quote": "It could, though, mean some sort of progress, if the Manchester born Ratcliffe follows through with his vision to revolutionise the club."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 93, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 93, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 93, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 93, "quote": "Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side."}]}
+  ]}
+]

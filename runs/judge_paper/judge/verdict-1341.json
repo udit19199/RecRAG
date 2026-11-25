@@ -1,0 +1,56 @@
+[
+  {
+    "id": "6f4b67929e6380b2",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 67, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 67, "quote": "with the Director-General of the National Economic and Development Authority"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 67, "quote": "the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU)"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 67, "quote": "The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 62, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 62, "quote": "Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director"}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 62, "quote": "which will reduce the company’s board to five directors."}
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "baea6b7160599319",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 92, "quote": "Kelce's 81.3 average receiving yards per game against the Raiders since 2019"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 92, "quote": "Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 92, "quote": "Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 92, "quote": "suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 26, "quote": "The first link between Swift and Kelce was established in 2016"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 26, "quote": "The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 26, "quote": "Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023"}
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 26, "quote": "Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023"}
+        ]
+      }
+    ]
+  }
+]

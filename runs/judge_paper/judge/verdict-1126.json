@@ -1,0 +1,40 @@
+[
+  {"id": "d02d9e1dceda4d44", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 43, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 43, "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 67, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]},
+    {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 67, "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."}]}
+  ]},
+  {"id": "85322f09c1cbbd4f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "18390d69942f96b7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "c21cb5fc238f37c8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

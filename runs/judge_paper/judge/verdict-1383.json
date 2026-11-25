@@ -1,0 +1,10 @@
+[
+  {"id": "84b284e2e09467f8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 23, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 23, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 23, "quote": "There, you can find stories like this in-depth breakdown of what to expect from both sides of the SBF case, where the prosecution and defense could gain ground or fall short in their arguments and what the takeaways were from the opening arguments."}]}
+  ]}
+]

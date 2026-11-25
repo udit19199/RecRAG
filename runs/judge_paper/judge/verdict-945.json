@@ -1,0 +1,33 @@
+[
+{"id": "ec9c4db9d9d6dffe", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "f7bc660272b24c9b", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "76fc6326064072ec", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 9, "quote": "DeepMind, Google’s premier AI research lab"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 9, "quote": "DeepMind, Google’s premier AI research lab, is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 9, "quote": "is expected to debut a next-gen chatbot, Gemini, before the end of the year."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "DeepMind, Google’s premier AI research lab"}, {"item": 34, "quote": "But it didn’t release the full model, Gemini Ultra"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 34, "quote": "only a “lite” version called Gemini Pro."}]}
+]}
+]

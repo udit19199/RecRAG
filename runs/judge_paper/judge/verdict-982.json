@@ -1,0 +1,21 @@
+[
+  {"id": "ae0e7b957ab5c6fa", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 52, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 52, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 91, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 91, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 91, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 91, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 91, "quote": "The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy Valley."}]}
+  ]},
+  {"id": "304e5293096a9da8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

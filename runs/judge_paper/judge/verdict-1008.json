@@ -1,0 +1,12 @@
+[
+  {"id": "a94288701fc4b6b4", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "It gave the JackJumpers a game-high 19-point lead"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 30, "quote": "after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 30, "quote": "Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 30, "quote": "It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled out)."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "9:20 p.m. — Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Nathaniel Lowe makes the play to retire Carroll, and that will bring the Rangers back up to bat with a 10-0 lead."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 17, "quote": "that will bring the Rangers back up to bat with a 10-0 lead."}]}
+  ]}
+]

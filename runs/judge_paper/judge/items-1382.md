@@ -1,0 +1,1656 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=e4fcb84da041f3f8 ===
+Gold sentences and facts:
+Sentence 0: Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington.
+  Fact 0.0: Instead, Marshall will start freshman Cole Pennington.
+  Fact 0.1: Cole Pennington is a freshman.
+  Fact 0.2: Cole Pennington is the son of former Marshall star QB Chad Pennington.
+  Fact 0.3: Chad Pennington is a former Marshall star QB.
+Sentence 1: Geno Smith's night appears to be done as Drew Lock is back in for the Seahawks.
+  Fact 1.0: Geno Smith's night appears to be done.
+  Fact 1.1: Drew Lock is back in for the Seahawks.
+
+Retrieved items:
+<item 1>
+Fantasy Football RB Rankings Week 12: Who to start, best sleepers at running back (Sporting News, 2023-11-21T21:33:00+00:00)
+Both Darrell Henderson and Royce Freeman (@ Cardinals) would be decent dart throws in a week filled with byes, but their floors in a zero-bye week seem too low
+to trust them if Kyren Williams is back and at 100 percent. The matchup is juicy, but we have no idea what to expect from a touch-share perspective, so these
+guys are no better than desperation, TD-dependent flexes.
+
+Speaking of guys coming back from injury, we saw Khalil Herbert (@ Vikings) return to the field for Chicago against the Lions last week. However, his
+performance left a lot to be desired. He finished with just 35 yards on 16 carries and wound up vastly overshadowed by Justin Field's 100-yard rushing effort.
+Even worse, D'Onta Foreman scored the Chi's lone rushing TD on the afternoon.
+
+I don't care what your team looks like — you shouldn't be starting Chuba Hubbard or Miles Sanders (@ Titans).
+</item 1>
+
+<item 2>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+The Commanders offensive line has had some ugly showings lately against the Cowboys (four sacks, 49% pass rush pressure rate allowed), the Giants (four sacks,
+32.7% pressure rate allowed) and the Seahawks (three sacks, 46.8% pressure rate allowed). Somehow these results are better than what they were allowing through
+much of the first two months of the year. Sam Howell getting the ball out faster has been a positive in this regard but a negative for his numbers in three of
+his past four games (the one game he did really well in was sort of fluky). The matchup is a good test for the Dolphins pass rush post-Phillips, one that it
+should pass without giving up much in the way of deep completions.
+
+STARTS: Tyreek Hill, Jaylen Waddle, Raheem Mostert, Tua Tagovailoa, Terry McLaurin (low-end WR2),
+</item 2>
+
+<item 3>
+Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF? (Sporting News, 2023-11-30T21:31:00+00:00)
+The Seahawks have now joined the bottom five teams in giving up fantasy points to running backs. Pollard has come on the past two weeks against the Panthers and
+Commanders after sliding into RB2 range. Pollard scoots to something like 80 and a score. Dowdle is a stretch to get mop-up production, however,
+
+Start: WR CeeDee Lamb
+
+Lamb can eat again in the slot against Jamal Adams, as he avoids the Seahawks' better cornerbacks on the outside. Again, don't expect a massive game because the
+running game, defense, and special teams will have plenty of success in another big victory.
+
+Sit: WR Brandin Cooks
+
+Cooks is the one Cowboy to fade this week vs. rookie Devon Witherspoon, who's quickly emerging as the Seahawks' best corner. The nature of the zone defense is
+to limit big plays.
+</item 3>
+
+<item 4>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 4>
+
+<item 5>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+Marshall prediction: Frank Harris leads Roadrunners past the Herd
+
+Even with the transfer portal hitting this game hard, the UTSA offense will be too much for Marshall to keep up with. The Roadrunners push the pace in a way
+that Marshall can't replicate, and the Thundering Herd aren't efficient enough to make the most of what few scoring opportunities they'll have.
+
+The Thundering Herd could find themselves down several scores by the end of the first frame if Pennington turns the ball over, as he's prone to do. UTSA is a
+well-oiled machine against teams with similar or worse talent, and Marshall is in that latter category.
+
+It's a big number to lay, but we're on the favorite Tuesday night.
+
+Pick: UTSA
+</item 5>
+
+<item 6>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Cover 7 | Monday A daily NFL destination that provides in-depth analysis of football’s biggest stories. Each Monday, Mike Sando breaks down the six most
+impactful takeaways from the week.
+
+The San Francisco 49ers entered Week 6 riding a 15-game winning streak and looking unstoppable with a young quarterback, Brock Purdy, who was making the game
+look easy. They exited with a 19-17 defeat at Cleveland, injuries to key players and, for the first time this season, a question mark or two.
+
+Advertisement
+
+With the previously unbeaten Philadelphia Eagles also losing ugly Sunday, this edition of the Pick Six column addresses key questions facing Super Bowl
+favorites with one-third of the 18-week regular season nearly complete.
+
+So far this season, we’ve seen the Miami Dolphins set NFL records for offense, only to lose by four touchdowns in their lone game against a true contender.
+We’ve seen the Kansas City Chiefs win with defense, sometimes in spite of their offense. We’ve seen the Buffalo Bills incur devastating injuries.
+</item 6>
+
+<item 7>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Meanwhile, Pipkins was also limited on Friday.
+
+The Patriots will be down a couple of wide receivers as Douglas and Boutte have been ruled out after not practicing on Friday. For Douglas, he missed the entire
+week due to a concussion he suffered against the Giants, while Boutte was downgraded on the injury report on Thursday and missed back-to-back days due to an
+illness on top of his shoulder injury.
+
+Lions (-4) at Saints
+
+The Lions just designated Hooker for return, who has been rehabbing a torn ACL he suffered at Tennessee last year, this week so the rookie quarterback was not
+expected to be activated this week. Meanwhile, Anzalone did not practice at all this week, so his prospects look bleak for Week 13. As for Jackson, he was a
+full participant on both Thursday and Friday.
+
+Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a
+chance to play.
+</item 7>
+
+<item 8>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week
+9 as a big part of the offense with Josh Dobbs under center.
+
+As long as Hockenson is playing, he's not being benched in any fantasy format. The tight end projects as a top option at the position and remains the Vikings'
+leader in targets with 80 on the season. Dobbs enjoyed targeting the tight ends in Arizona and continued that trend in his Minnesota debut. The floor for
+Hockenson is equivalent to that of a rooftop bar.
+
+WEEK 10 DFS: DK lineup | FD lineup | Best values | Best stacks
+
+Is Curtis Samuel playing Week 10?
+
+UPDATE: Samuel is officially ACTIVE.
+
+Samuel (toe) is expected to play on Sunday when the Commanders take on the Seahawks at 4:25 p.m. ET, according to ESPN's Jeremy Fowler.
+</item 8>
+
+<item 9>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Matthew Stafford (@ Ravens), Geno Smith (@ 49ers), and Josh Dobbs (@ Raiders) are all risky against some of the league's better pass defenses. Stafford faces a
+sound Ravens stop unit that entered their Week 13 bye allowing the second-fewest FPPG to QBs.
+
+There's a chance the Vikings opt to start fellow QB Nick Mullens over Dobbs after his debacle last Monday night against the Bears, but if Minnesota elects to
+stick with Dobbs, his rocky Week 12 outing concerns us against a Raiders defense that's been one of the more efficient pass defenses since Week 5, sitting
+eighth in dropback EPA.
+
+On the other hand, after an elite Week 13 effort in Seattle's one-possession loss to Dallas, fantasy owners might go looking to chase points with Smith, but
+replicating last week's showing against the 49ers is a completely different ask for a QB who's underwhelmed this season.
+</item 9>
+
+<item 10>
+Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines (Sporting News, 2023-11-25T23:20:56+00:00)
+Michigan never played from behind against the Buckeyes. What was Moore thinking in that situation?
+
+"Let's go," Moore said. "That's it. The players just practiced so well this week, and when you have confidence they are going to execute at a high level, it's
+just like first down."
+
+Moore favored a conservative game plan the previous two weeks against No. 11 Penn State and Maryland; one that amounted to 91 running plays and 31 pass
+attempts. Yet he was the aggressor in The Game. The Wolverines converted three fourth-down conversions in the first half. McCarthy – who finished 16 of 20 for
+148 yards and a TD – threw a 22-yard touchdown to Roman Wilson between two defenders for a 14-3 lead.
+
+Interim coach Sherrone Moore leads Michigan to win
+
+​​"Coach Moore said from the get-go that he was going to the most-aggressive game he's ever called," McCarthy said.
+</item 10>
+
+<item 11>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Wilson ranks top-10 among quarterbacks in completion rate (50%) and yards per attempt (17.2) with the second-lowest off-target rate (12.5%) on those long throws
+but is below league-average in overall attempts. His numbers are also inflated because of that Commanders game and the Hail Mary he hit on.
+
+VS. OUTSIDE WRs: The Jets allow the second-highest catch rate to perimeter guys (79.4%), but they're top-five in yards per catch (10.7), ADOT (10.38) and
+completions allowed of 20-plus yards (three, which is best in NFL). Outside guys have also seen the third-fewest targets because teams know not to attack there.
+
+WILSON: 50 of his 132 passes (38%) have gone to outside receivers this year. Seven of his nine touchdowns have headed that way too. This is a problem for
+Wilson.
+</item 11>
+
+<item 12>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+His off-target rate in the fourth was 9.1%, which was closer to what he had averaged in his first three games (13.6%).
+
+BRONCOS: Have allowed season-best Fantasy numbers to each of the past three quarterbacks they've played this season. They're a terrific matchup for anybody
+right now. Remember this when we talk about the Jets.
+
+COMMANDERS: Sport a slightly below-average pass rush pressure rate thanks to only one game all year with a rate over 30% (52.7% at Denver, and Wilson still had
+a great game even if you take away a Hail Mary touchdown catch). They rank seventh in sacks (13) and 13h in pressures (53), which again floats around league
+average.
+
+BEARS: Rank league-worst in pass rush pressure rate allowed at 47.4% of their snaps -- nearly one out of every two drop backs is pressured.
+</item 12>
+
+<item 13>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Not far behind sits Tua Tagovailoa (vs. Titans), who shredded the Commanders' defense to the tune of 280 yards and two TDs in Sunday's blowout. Another juicy
+matchup awaits against a lackluster Tennessee coverage unit. Dak Prescott (vs. Eagles) remains a top-three play in Sunday's rematch versus the Eagles, a team he
+torched for 374 yards and three TDs in a narrow 28-23 loss in Week 9.
+
+Jalen Hurts (@ Cowboys) and the Eagles look to get back on track in a pivotal NFC East clash in Dallas, facing a Cowboys defense that let Geno Smith post
+top-end QB1 numbers against them last week. Patrick Mahomes (vs. Bills) is in line to put up strong numbers in a potential shootout against Buffalo, and
+although his receiving corps has its issues, the reigning MVP is still a top-five play this week.
+
+Lamar Jackson (vs.
+</item 13>
+
+<item 14>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Which QBs are on bye in Week 14?
+
+Coinciding with the end of the fantasy regular season, Week 14 is the last week of byes, as the Cardinals and Commanders are the last two teams to take their
+mandatory PTO. That means two starting-caliber QBs (Kyler Murray and Sam Howell) are on the shelf, slightly impacting the QB pool.
+
+WEEK 14 PPR RANKINGS:
+
+RBs | WRs | TEs | D/STs | Kickers
+
+The bigger losses, though, come on the defensive side of the ball, as fantasy owners won't be able to start QBs going up against two subpar pass defenses in
+Washington and Arizona. Starting any QB facing the Commanders' swiss-cheese defense has yielded strong returns. Arizona has been just as inefficient, entering
+Week 13 ranking 30th in dropback EPA.
+</item 14>
+
+<item 15>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Tack on the ascending secondary the Falcons seem to have and the Commanders' diffusion of targets and McLaurin is at best a low-end flex. I'd rather roll the
+dice on Drake London, Tyler Lockett or Garrett Wilson.
+
+LAST WEEK: Hopeful that his target edge over his teammates would keep growing, and even in a favorable game script where the Commanders were trailing by three
+scores before halftime, McLaurin only saw five targets against the Bears' heavy zone coverage.
+
+FILM: On the 10 third-down routes McLaurin ran last week, he drew extra coverage on four of them, got open on two of them (Howell threw elsewhere) and was a
+decoy on Curtis Samuel's touchdown. What happened? Sam Howell was getting rid of the ball quickly and to shorter distances as the Bears were getting some
+pressure on him. By the end of the game McLaurin's body language seemed dispirited.
+</item 15>
+
+<item 16>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+Chase Harrison, QB (transfer portal)
+
+Brandon McElroy, DL (transfer portal)
+
+Caleb Coombs, WR (transfer portal)
+
+Zion Odoms, WR (transfer portal)
+
+Jayven Hall, LB (transfer portal)
+
+Cam Fancher, QB (transfer portal)
+
+Thomas Lane, DL (transfer portal)
+
+Chinazo Obobi, OT (transfer portal)
+
+Maurice Jones, RB (transfer portal)
+
+Sean Sallis, TE (transfer portal)
+
+Myles Bell, DB (transfer portal)
+
+Trent Holler, iOL (transfer portal)
+
+Joshua McTier, CB (transfer portal)
+
+Jabarrek Hopkins, DL (transfer portal)
+
+CK Obobi, OL (transfer portal)
+
+Sean Ellis, TE (transfer portal)
+
+TyShawn Hurst, OT (transfer portal)
+
+Elijah Russell, EDGE (transfer portal)
+
+UTSA vs.
+</item 16>
+
+<item 17>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+— Pete Thamel (@PeteThamel) November 9, 2023
+
+Big Ten commissioner to miss College Football Playoff meeting Thursday
+
+Tony Pettiti is set to be absent from the College Football Playoff meeting set to take place in Dallas on Thursday. That leads to further speculation that
+punishment could be coming soon in Michigan's sign-stealing scandal.
+
+Big Ten commish Tony Petitti will NOT be in Dallas for today’s @CFBPlayoff meeting. — Heather Dinich (@CFBHeather) November 9, 2023
+
+Wednesday, Nov. 8
+
+Ohio State denies having shared Michigan's play signals with Purdue
+
+Ohio State coach Ryan Day was asked about the allegations that Ohio State had given information about Michigan's signs to Purdue before the Big Ten championship
+game in 2022. He denied them forthright.
+
+“I can tell you this right now that nobody here did any of that,” Day said, per the Columbus Dispatch.
+</item 17>
+
+<item 18>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Stroud all have more potential to help you win.
+
+LAST WEEK: After an interception, Goff marched downfield and got the Lions a touchdown, then gave way to David Montgomery to pound the Packers into submission.
+He had his lowest number of pass attempts (28) and yards (210) this year, and threw just one touchdown for the third time in four games.
+
+PANTHERS: At 27.9% are dead last in pass rush pressure rate through four weeks. The only game this season when they had some pressure on a quarterback was
+against the Seahawks, who have a beat-up offensive line. The Lions offensive line is near full strength and have allowed Goff to be sacked five times through
+four games.
+
+QUARTERBACKS: Have failed to top 20 Fantasy points against the Panthers this season. That includes Kirk Cousins last week, who only threw 19 times in a win (and
+had two touchdowns but just 13 Fantasy points).
+</item 18>
+
+<item 19>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Will the Harbaugh-Petitti battle lead to an unsettling end for Michigan? President Santa Ono and athletic director Warde Manuel have voiced their support for
+Harbaugh, but that has been more about due process than admitting to any wrongdoing.
+
+It has thrust the Wolverines – a talented team led by J.J. McCarthy, Blake Corum and a defense that allows 7.5 points per game – into a villain role, complete
+with visits from Ric Flair. That only works when you are winning. One loss, and all this could unravel, and the Terps and Buckeyes still remain on the schedule.
+
+Will a national championship outweigh the stain on their reputation? The answer is almost always yes for the fans, but the program might feel a different
+long-term result.
+</item 19>
+
+<item 20>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Projected stats for all starting quarterbacks are available at Sportsline.
+</item 20>
+
+<item 21>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+UTSA is 5-6-1 ATS and 4-7-1 to the OVER.
+
+UTSA Roadrunners opting out of Scooter's Coffee Frisco Bowl
+
+The Roadrunners will be without their best defensive player, Trey Moore, as he looks to jump to a Power 5 school. Moore led the conference in sacks, so he's a
+star-level absence for the unit.
+
+Here are USTA players who won't play in the Frisco Bowl.
+
+Trey Moore, EDGE (transfer portal)
+
+Syrus Dumas, DB (transfer portal)
+
+Xavier Spencer, CB (transfer portal)
+
+Kyle Eaves, WR (transfer portal)
+
+Marshall Thundering Herd betting news
+
+The toughest blow for Marshall in this game is being without second-year starting QB Cam Fancher (transfer portal). Instead, Marshall will start freshman Cole
+Pennington, who is the son of former Marshall star QB Chad Pennington.
+</item 21>
+
+<item 22>
+Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF? (Sporting News, 2023-11-30T21:31:00+00:00)
+Here's looking at who to start in seasonal leagues and DFS lineups from the latest edition of TNF:
+
+MORE THURSDAY NIGHT FOOTBALL:
+
+DK lineup | FD lineup | ATS pick | Best props
+
+Seahawks: Who to start, sit in fantasy football on TNF
+
+Sit: QB Geno Smith
+
+Smith has dropped from the top 12 last season to cumulative QB20 in 2023. He's had two great starts and three so-so ones, but the rest has been forgettable. The
+Cowboys have allowed only two strong fantasy performances by quarterbacks, (Brock Purdy and Jalen Hurts), and we don't expect Smith to make it three.
+
+Sit: RB Zach Charbonnet
+
+There was a black fly in the Charbonnet against the 49ers last week.
+</item 22>
+
+<item 23>
+Will the Panthers fire Frank Reich? Impatient David Tepper could turn up Carolina's hot seat with 'Thursday Night Football' loss (Sporting News,
+2023-11-06T21:17:51+00:00)
+The Panthers entered the 2023 NFL season shrouded in optimism. The team had moved on from Matt Rhule, who proved to be an ineffective NFL coach, and added a
+potential franchise quarterback to the fold in Bryce Young.
+
+The hope was that those moves would turn Carolina into a contender in the wide-open NFC South.
+
+Instead, they find themselves not only at the bottom of the division but also sporting one of the worst records in the NFL at 1-7.
+
+Young hasn't yet looked comfortable in the Panthers' offense, and he is coming off one of his worst games as a starter against the Colts. He threw three
+interceptions in that contest, including two pick-sixes to Kenny Moore in a 27-13 defeat.
+
+MORE: Full list of rookie quarterbacks to start an NFL game in 2023
+
+The rest of the Panthers' offense hasn't been much better.
+</item 23>
+
+<item 24>
+Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines (Sporting News, 2023-11-25T23:20:56+00:00)
+It will continue at least into the Big Ten championship game against No. 17 Iowa. You know that off-the-field story by now. That is the one where this team
+continues to overcome obstacles – self-inflicted and otherwise. The on-field story is a withering march through the Big Ten toward a third straight College
+Football Playoff berth.
+
+It could have ended with Ohio State. Jim Harbaugh's three-game suspension from the Big Ten as a result of the illegal in-person scouting and sign-stealing
+operation dominated headlines more than the Wolverines dominated opponents in the second half of the season. Ohio State had not lost three in a row to Michigan
+since 1995-97.
+
+The Buckeyes were due, right?
+
+Michigan acting coach Sherrone Moore had other plans. He beat Ohio State coach Ryan Day. Cornerback Will Johnson set the tone by intercepting Ohio State
+quarterback Kyle McCord with 7:32 left in the first quarter.
+</item 24>
+
+<item 25>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Especially when you face a defensive coordinator who says, ‘You show me you can beat me throwing the ball outside the numbers — best of luck, and to do that,
+you are going to have to take a five-step drop and I’m going to have Myles Garrett chasing you every play.'”
+
+Advertisement
+
+• Kansas City Chiefs: Is the explosive passing game gone for good?
+
+What I think: The Chiefs have never scored less per game on offense through six games or a full season since Patrick Mahomes became their quarterback. They have
+also never enjoyed larger average point differentials (9.8 per game), because their defense is so much better. I think the pass offense will become slightly
+more explosive as Mahomes gets reps with his receivers, but I’m not expecting a huge shift.
+
+The Chiefs are averaging 9.5 plays per touchdown drive when starting at least 70 yards from the opponent’s goal line, per TruMedia.
+</item 25>
+
+<item 26>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Nobody has really emerged in the AFC to unseat these teams at the top.”
+
+• Miami Dolphins: Has Tua Tagovailoa proven he’s built to last?
+
+What I think: It was tough watching Tagovailoa last season without worrying for his physical well-being. I’ve never felt that way watching him so far this
+season, and will feel even better if he plays a full game against Philadelphia in Week 7. New England, Kansas City, the Jets (twice), Washington, Tennessee,
+Dallas, Baltimore and Buffalo will all get their shots at Tagovailoa. I’m cautiously optimistic, but think there will be games when defense muddy the picture
+sufficiently to create turnovers.
+
+Exec comment: “Interesting team. They put up 70 on Denver and should have put up 70 on the Giants. No one can keep up with that kind of firepower. But they also
+haven’t really beaten anyone. They were down 14 points to Carolina.
+</item 26>
+
+<item 27>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+WEEK 14 DFS:
+
+DK lineup | FD lineup | Best values | Best stacks
+
+What are the biggest QB injuries in Week 14?
+
+Leading into Week 13, Dorian Thompson-Robinson (concussion) was the lone QB injury situation we were closely monitoring. Even if Thompson-Robinson is able to
+clear concussion protocol in time for Week 14, we expect Flacco to make his second start as a Brown.
+
+This week, we unfortunately saw Kenny Pickett (ankle) and Derek Carr (head, shoulder, back) exit their respective contests with injuries, complicating their
+statuses for Week 14. We've replaced both QBs with backups Mitchell Trubisky and Jameis Winston, respectively, as early indications point toward both missing
+time.
+
+UPDATE: Trevor Lawrence suffered an ankle injury on Monday, which will likely keep him out for at least a week and open the door for C.J. Beathard (vs. Browns)
+to start.
+</item 27>
+
+<item 28>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Washington could be without its starting center this weekend as it plays host to Miami. Larsen, who missed Wednesday's practice due to a knee injury, was
+limited on Friday and is officially listed as questionable. Meanwhile, the Commanders will play Week 13 without Forbes Jr., who has been sidelined since
+suffering an elbow injury against the Giants in Week 11. Head coach Ron Rivera called the injury "significant" earlier this week.
+
+Broncos at Texans (-3)
+
+Denver's lone player with an injury designation for Week 13 is Mathis, who did not practice Friday after being limited on Thursday. Outside of him, the Broncos
+are healthy heading into this matchup with Houston. Wideouts Jerry Jeudy (groin) and Marvin Mims Jr. (hamstring) were both full participants on Friday after
+being limited on Thursday.
+
+Dell logged back-to-back days as a limited participant in practice to end the week and is officially questionable.
+</item 28>
+
+<item 29>
+Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines (Sporting News, 2023-11-25T23:20:56+00:00)
+Say what you will about the adults who were involved in the in-person scouting scandal. Staffer Conor Stallions and assistant coach Chris Partridge are gone.
+Harbaugh was suspended. He addressed the team Friday, and McCarthy listened closely.
+
+"The one thing he said that stuck out, the whole mantra, 'The Team, The Team, The Team,'" McCarthy said. "He said we are that team."
+
+That is true. This is the most mature player-led Michigan football team on the field since 1997 – when the program beat Ohio State 20-14 in a top-five showdown
+and split the national championship with Nebraska.
+
+Since then, the Buckeyes found a way in these high-magnitude games, with 2006 and 2016 the best examples. On a stage that was somewhere in between those
+classics, the Wolverines pointed the pressure in the other direction. Marvin Harrison Jr.
+</item 29>
+
+<item 30>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+As for this season, not so much.
+
+Sean Payton should be at the forefront of the conversation. It's one thing to turn around a team that was dreadful last season. But he has taken one that got
+off to a horrible start and turned things around in-season.
+
+Oh — and he has resurrected Russell Wilson's career.
+
+That alone should put him at the top of the list, but he may need to get Denver into the playoffs to convince voters.
+
+Comeback Player of the Year
+
+Current favorite: Demar Hamlin
+
+Longshot: Russell Wilson
+
+Coming back from a life-threatening injury like a cardiac arrest makes Hamlin a great candidate to win CPOY. However, it would be understandable if voters were
+to look elsewhere since Hamlin has seldom been active on game day and rarely seen the field.
+
+It will depend on how vital voters deem playing to be.
+
+Wilson was supposed to be the next great franchise quarterback for the Broncos when they acquired him prior to last season.
+</item 30>
+
+<item 31>
+Hottest seat on each NFC team: Buns burning for these four head coaches (Yardbarker, 2023-11-30T22:29:33+00:00)
+NEW YORK GIANTS | Quarterback Daniel Jones: Out for the season with an ACL injury, Jones has no way to dissuade Giants ownership from taking a quarterback high
+in the QB-rich 2024 NFL Draft. New York can (and will) get out of his $160M contract in 2025.
+
+PHILADELPHIA EAGLES | Wide receiver Quez Watkins: Philadelphia’s supposed No. 3 receiver has a measly four catches for 21 yards. While he missed five games with
+a hamstring injury, Olamide Zaccheaus and Julio Jones combined for 132 yards receiving and three touchdowns.
+
+WASHINGTON COMMANDERS | Owner Josh Harris: He oversaw the controversial “Process” as owner of the Philadelphia 76ers. He’ll need a better plan this offseason
+when “I’m not Dan Snyder” stops working. At 4-8, the Commanders are floundering in his first season of ownership.
+</item 31>
+
+<item 32>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Payton is the only other coach with more than one such game over the past three-plus seasons.
+
+The irony is rich in Denver, where Payton’s predecessor, Nathaniel Hackett, was mocked for his game management so thoroughly, the team made him hire veteran
+assistant Jerry Rosburg to help him after only three games (Denver was 2-1 at that point). The Broncos under Hackett had trouble getting out of the huddle on
+time.
+
+Hackett took the hit for those issues, but when the problem recurred under Payton, the blame shifted to Wilson, the common denominator.
+
+Advertisement
+
+All of this is pointing toward a future in Denver that includes Payton but not Wilson. Payton’s game plans over the past two weeks were conservative enough to
+suggest the coach was publicly demonstrating he does not think he can run his offense as currently configured, despite some success on the ground. These game
+plans were conservative enough to signal a potential in-season quarterback change.
+</item 32>
+
+<item 33>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+On the season he's totaled 28 rushes for 134 yards and a score.
+
+Sneaky Sleeper (Lineup Decisions) Projections powered by Sportsline Sam Howell QB WAS Washington • #14
+
+Age: 23 • Experience: 2 yrs. Weekly Breakdown MATCHUP vs CHI WAS -6 O/U 44.5 OPP VS QB 31st PROJ PTS 21.3 QB RNK 14th YTD Stats PAYDS 961 RUYDS 82 TD 5 INT 5
+FPTS/G 16.1 The Commanders like limiting Howell's pass attempts in general -- he's only thrown over 31 times in high-scoring shootouts like in Weeks 2 and 4.
+While there's potential for that on Thursday, it's not a certainty. Howell could just as easily put up nominal stats to help the Commanders bring home a win.
+</item 33>
+
+<item 34>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Alas, we've reached the final week of the fantasy football regular season. Although fantasy's highest-scoring position has been beaten and battered this year,
+there are serviceable signal-callers out there capable of leading your team to victory in a pivotal week. Our Week 14 fantasy QB rankings will help you make the
+right start 'em, sit 'em moves to cap off the regular season.
+
+We're still dealing with byes -- and we had two more QB injuries last week -- but the position remains deep with high-scoring studs and potential sleepers. As
+we saw last week, we're at the point in the season where weather could factor into start-sit decisions, but finding quarterback production shouldn't be a
+problem in 10- and 12-team leagues.
+
+With that in mind, let's dissect this week's QB rankings and put you on a path to end your season with a "W."
+
+Which QBs are on bye in Week 14?
+</item 34>
+
+<item 35>
+Monday Night Football DraftKings Picks: NFL DFS lineup advice for Week 15 Eagles-Seahawks Showdown tournaments (Sporting News, 2023-12-18T22:47:00+00:00)
+The receiver has been prone to being undisciplined on the field, however, resulting in an ejection against the 49ers last week. That is always a concern when
+trusting Metcalf, but we take the good with the bad since the ceiling is so high. No matter who ends up starting at QB, the WR is in line for another dominant
+showing against one of the league's most generous secondaries.
+
+FLEX QB Geno Smith, Seahawks ($9,400)
+
+Metcalf won't be throwing the ball to himself and he's not one to get opportunities in the running game, meaning that someone will be setting him up for
+success. And since Smith appears ready to play, he finds himself with a spot in our lineup. In the event that he doesn't play, however, we will turn to Drew
+Lock ($9,200) in his place. Regardless, the Seattle quarterbacks are set up for success and should be able to light up the skies on Monday night.
+</item 35>
+
+<item 36>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Although the Big Ten has closed its investigation, we are continuing to cooperate with the NCAA as it moves forward with its ongoing investigation. Consistent
+with our commitment to integrity, we will continue to take the appropriate actions, including disciplinary measures, based on information we obtain. Earlier
+today, Michigan Athletics relieved Chris Partridge of his duties as a member of the Michigan Football staff. Due to employee privacy laws, we are unable to
+comment further."
+
+Because Michigan and Harbaugh on Thursday dropped their litigation against the Big Ten, he will not be on Michigan's sideline this week against Maryland and
+next week against Ohio State to end the regular season.
+
+Former Wolverines assistant and Harbaugh confidant Biff Poggi on Friday offered his former boss an invitation. Poggi, in his first year as Charlotte's head
+coach, asked Harbaugh to join the 49ers for their games vs. Rice on Saturday and at South Florida on Nov. 25.
+</item 36>
+
+<item 37>
+Michigan State hires Jonathan Smith: Oregon State coach leaves alma mater to take over Spartans job (CBSSports.com, 2023-11-25T23:12:10+00:00)
+"All of Beaver Nation should thank him for the lasting legacy he has left to his alma mater and wish him and his family nothing but the best moving forward."
+
+Smith held multiple assistant jobs from 2002-17 before returning to his alma mater as coach in 2018. Smith spent six seasons as an assistant under former
+college football coach Chris Petersen, first as Boise State's quarterbacks coach from 2012-13 and then as Washington's quarterbacks coach and offensive
+coordinator from 2014-17. His time in Seattle included a Pac-12 title and College Football Playoff berth for Washington during the 2016 season.
+
+Smith's exit from Oregon State comes at a point where the Beavers face much uncertainty as the Pac-12 prepares to lose 10 of its 12 members ahead of the 2024
+season. Oregon State and Washington State are the only schools in the conference that have not been picked up by other power leagues.
+</item 37>
+
+<item 38>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Beathard (vs. Browns) to start.
+
+We'll be updating these QB rankings throughout the week, so check back for the latest player movement and analysis.
+
+Fantasy QB Rankings Week 14: Who to start, sit at quarterback
+
+These rankings are based on four-point passing TD scoring
+
+Rank Player
+
+1 Josh Allen, Bills @ Chiefs
+
+2 Tua Tagovailoa, Dolphins vs. Titans
+
+3 Dak Prescott, Cowboys vs. Eagles
+
+4 Jalen Hurts, Eagles @ Cowboys
+
+5 Patrick Mahomes, Chiefs vs. Bills
+
+6 Lamar Jackson, Ravens vs. Rams
+
+7 Jared Goff, Lions @ Bears
+
+8 C.J. Stroud, Texans @ Jets
+
+9 Brock Purdy, 49ers vs. Seahawks
+
+10 Jordan Love, Packers @ Giants
+
+11 Justin Herbert, Chargers vs. Broncos
+
+12 Russell Wilson, Broncos @ Chargers
+
+13 Justin Fields, Bears vs.
+</item 38>
+
+<item 39>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Smith did return, however, for the final drive of the game in the losing effort. Head coach Pete Carroll said that Smith will "make it back." When asked if that
+means for Thursday's matchup against San Francisco, the coach said, "I would think so."
+
+Sam Howell (Commanders) received medical attention on the sidelines after enduring several hard hits to the upper body on a touchdown run against the Giants. He
+was quickly cleared of a potential concussion, however, and remained in the game. Veteran journeyman Jacoby Brissett is Washington's backup.
+
+RB
+
+Aaron Jones (Packers) suited up against the Chargers despite a lingering hamstring issue, only to manage just five carries before suffering a knee injury. The
+former Pro Bowler needed help to leave the field and was then carted to the locker room, replaced by A.J. Dillon.
+</item 39>
+
+<item 40>
+Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF? (Sporting News, 2023-11-30T21:31:00+00:00)
+Again, you can't expect more than WR3 production, which is where his overall scoring has been in 2023.
+
+Start: WR Tyler Lockett
+
+While Metcalf is WR34 in terms of total points this season in half-point PPR, Lockett is only two notches higher at WR32. They finished as WR13 and WR18,
+respectively, last season, so it's a big dropoff. Lockett also has a decent matchup vs. Stephon Gilmore. He, like Metcalf, remains a volume-based WR3.
+
+WEEK 13 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Sit: WR Jaxon Smith-Njigba
+
+Smith-Njigba can be a bit interesting if you are desperate in a deeper league because he has the matchup on par with the other two wideouts vs. Jourdan Lewis.
+</item 40>
+
+<item 41>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Broncos
+
+12 Russell Wilson, Broncos @ Chargers
+
+13 Justin Fields, Bears vs. Lions
+
+14 Gardner Minshew, Colts @ Bengals
+
+15 Matthew Stafford, Rams @ Ravens
+
+16 Trevor Lawrence, Jaguars @ Browns
+
+17 Geno Smith, Seahawks @ 49ers
+
+18 Derek Carr, Saints vs. Panthers
+
+19 Joe Flacco, Browns @ Jaguars
+
+20 Baker Mayfield, Buccaneers @ Falcons
+
+21 Josh Dobbs, Vikings @ Raiders
+
+22 Jake Browning, Bengals vs. Colts
+
+23 Bryce Young, Panthers @ Saints
+
+24 Aidan O'Connell, Raiders vs. Vikings
+
+25 Desmond Ridder, Falcons vs. Buccaneers
+
+26 Will Levis, Titans @ Dolphins
+
+27 Bailey Zappe, Patriots @ Steelers
+
+28 Mitch Trubisky, Steelers @ Patriots
+
+29 Tommy DeVito, Giants vs. Packers
+
+30 Zach Wilson, Jets vs. Texans
+</item 41>
+
+<item 42>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Cornerback Cam Taylor-Britt hurt his foot in practice and is out.
+
+For the Jaguars, Travis Etienne (ribs) is also expected to play, Doug Pederson told reporters, despite the running back being limited in practice all week.
+Strange was a late addition to the injury report, not practicing Saturday.
+</item 42>
+
+<item 43>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+MORE: Inside the Cowboys historic offensive explosion vs. Giants
+
+11. Seattle Seahawks 6-3 (13)
+
+The Seahawks needed every ounce of their offense around Geno Smith to rally to beat the Commanders, but the get-well performance worked well for him, Kenneth
+Walker and the wide receivers. The defense could be more consistent.
+
+12. Minnesota Vikings 6-4 (14)
+
+The new man on the Vikings, Josh Dobbs, keeps producing the same results they were enjoying offensively with Kirk Cousins, thanks to more help from the running
+game for Kevin O'Connell and the defense overall under Brian Flores. Their 0-3 and 1-4 starts are distant memories as the Vikings look for a sixth straight win
+in Week 11 vs. Denver.
+
+13. Houston Texans 5-4 (16)
+
+The Texans are looking great with C.J. Stroud leading their offense and now they've found some running game, too.
+</item 43>
+
+<item 44>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+There isn’t a Josh Allen on the Giants or Vikings.
+
+Minnesota in particular finds itself in an interesting spot, with Kirk Cousins approaching free agency and playing well enough, most likely, to keep the Vikings
+from climbing too high in the draft order.
+
+Advertisement
+
+“They already gave a contract to (tight end) T.J. Hockenson, and they are going to give one to (receiver) Justin Jefferson,” an exec said. “Now, what? Are you
+going into the rookie pool and taking the fourth-best quarterback in the draft? You can look like Atlanta with (Desmond) Ridder pretty quick.”
+
+6. Two-minute drill: There were already many ways to win a game before the Dolphins invented another one.
+
+The Dolphins were one of 223 teams since 2000 to be favored by at least 13.5 points in a regular-season or playoff game. Seventeen of those 223 teams fell
+behind by 14 or more. Six of the 17 won anyway.
+</item 44>
+
+<item 45>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+The 23-year-old ranks first in the NFL in QBR (76) and touchdown passes (29) while ranking third in passing yards (3,795), all of which are especially
+impressive considering he's coming off offseason elbow surgery.
+
+Jackson might not be posting the ridiculous numbers he did during his 2019 MVP campaign, but the adjustment in his play style in his first season under OC Todd
+Monken has led to sustainable, winning football. Nevertheless, Baltimore needs an upset win for Jackson to capture another MVP Award, as he has thrown for 3,105
+yards and 17 touchdowns while adding 741 yards on the ground with five scores this season.
+
+49ers RB Christian McCaffrey: If Purdy wasn't playing at such a high level — and the MVP wasn't a quarterback-driven award — it'd be difficult to argue against
+McCaffrey taking home the honors.
+</item 45>
+
+<item 46>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+These game plans were conservative enough to signal a potential in-season quarterback change. Denver faces Green Bay and Kansas City over the next two weeks
+before heading into its Week 9 bye.
+
+5. You play to win the game, but can you win too quickly? The Giants and Vikings are test cases.
+
+The New York Giants and Minnesota Vikings exceeded expectations under first-year head coaches in 2022. Both reached the playoffs. Both are struggling in their
+second seasons, facing difficult questions about the future. Would they have been better off enjoying only moderate success early? That could depend on how well
+the football leadership has communicated with ownership.
+
+Every head coach and general manager wants to win as much as possible, but the goal is to build for the long term, which can require time to do things with
+sustainability in mind. Bad teams that win right away can reset expectations for fans and ownership, making it less practical to take one step backward in the
+short term for a better shot at taking two steps forward down the line.
+</item 46>
+
+<item 47>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+They are gaining more than 15 yards on just 11 percent of pass plays, down from 21 percent through six games last season and 19 percent for 2022 overall. Jalen
+Hurts, A.J. Brown, DeVonta Smith and Dallas Goedert are still on the team, so I’m inclined to trust the production will return. But there’s also a lingering
+fear defenses have caught up to aspects of the Eagles’ scheme. Does Philly have a counterpunch?
+
+Advertisement
+
+Exec comment: “People are going to crush Hurts and the offense. They are just churning the clock so much. It just feels like they are imposing their will on
+teams through the run game and through their short passing and it just hasn’t taken off from an explosive passing standpoint, so when they play a team that can
+move the ball on them through the air, it presents some challenges.”
+</item 47>
+
+<item 48>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+• Baltimore Ravens: Are the Ravens better off shifting to more of a pass-oriented offense?
+
+What I think: Baltimore has never scored fewer points or amassed less offensive EPA through the first six games of a season with Lamar Jackson in the lineup.
+The schedule and injuries have played roles, but with the Ravens shifting toward a more conventional pass offense, are the explosive quarterback runs mostly in
+the past? Jackson has one rush longer than 20 yards (he’s had four or five by now previously). He’s gaining at least eight yards on 15 percent of carries, half
+his previous rate. I’m not expecting a consistent precision passing game to suddenly materialize. Will this new offense be tougher to defend?
+
+Advertisement
+
+Exec comment: “The defense keeps them in it, but I don’t necessarily think this offensive change is going to make them any better when it counts. Lamar Jackson
+does not appear as dynamic as a runner, but in this offense, he does not need to be.
+</item 48>
+
+<item 49>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I'd rather start Jahmyr Gibbs, Dameon Pierce and Najee Harris.
+
+LAST WEEK: His playing time hit a season-low 43% of the snaps as he continued losing third-down work to Chuba Hubbard. It hasn't crushed his reception totals at
+all but it's notable that his only game with more than four grabs came with Andy Dalton under center. Sanders also played just 31% of the Panthers' second-half
+snaps, a big-time change after his second-half snaps were a lot closer to Hubbard's in Weeks 2 and 3.
+
+SANDERS: His yards per carry has tumbled like a bowling ball downstairs this season, going from 4.0 against the Falcons to 3.1 against the Saints to 2.7 against
+the Seahawks to 1.5 against the Vikings. Tough matchups? Sure, even including the Vikings. Doesn't mean it's not a good look.
+</item 49>
+
+<item 50>
+Top 25 MLB offseason trade candidates (Yardbarker, 2023-11-13T23:16:32+00:00)
+16. Mariners SP
+
+We initially had Bryan Woo in this spot. It could just as easily have been Bryce Miller or Emerson Hancock, so we’ll cheat and just mention the Seattle rotation
+in general.
+
+They’re almost certainly not going to trade George Kirby. It’d take a lot to pry away Logan Gilbert. Moving any of Woo, Miller or Hancock could be more
+appealing for a front office that is looking for ways to add long-term offensive upside.
+
+None of that trio has even reached one year of major league service. Hancock only has three big league starts under his belt. Miller and Woo spent more time in
+the rotation this year, starting 25 and 18 games respectively. They both turned in mid-rotation results.
+
+Other clubs probably have differing opinions on which right-hander they prefer. (The Mariners likely have their own slight preferences.) They’d all have
+significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+
+17.
+</item 50>
+
+<item 51>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Michigan took control with the running game. Donovan Edwards ripped off a 22-yard run, and Corum added a 44-yard run to set up a 3-yard TD run. Edwards added a
+22-yard TD run on the next drive. The same “Lightning and Lightning” tandem that burned the Nittany Lions last year staked Michigan to a 14-9 halftime lead.
+
+MORE: Michigan got off easy with Harbaugh suspension
+
+Then, the Wolverines took the ball out of quarterback J.J. McCarthy's hand. The Wolverines had 30 rushing attempts and zero passing attempts save a pass to
+tight end Colston Loveland that drew a pass interference call. McCarthy finished 7 of 8 passing for 60 yards in what has to be the most conservative
+play-calling victory in a top-10 showdown in recent memory. Was this old-school Big Ten football or Big Ten West football in disguise?
+</item 51>
+
+<item 52>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+Maybe the Patriots will turn to another running back in hopes of finding anything that can help take pressure off of their depleted passing game. I can't
+recommend Stevenson as a start until we see proof of him playing well -- a favorable road matchup alone isn't enough. I'd rather start Jerome Ford, Zack Moss
+and D'Onta Foreman.
+
+LAST WEEK: Was the first time Stevenson did not have 16 or more touches in a game. He had eight carries and no receptions. He also played a season-low 50% of
+the snaps but did handle 10 of 16 snaps on third/fourth downs. Stevenson started and played the first two series, then Elliott started off the next two series,
+but they rotated in and out for each other the whole game. Elliott continued to be the Patriots RB of choice in the two-minute offense to end the first half.
+
+STEVENSON: Nothing has changed in terms of his efficiency.
+</item 52>
+
+<item 53>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Helmet technology
+
+CBSSports.com reported on Oct. 20 that the NCAA rules committee is giving teams the option of coach-to-player helmet communication to relay plays from the
+sideline during bowl season this year. Tablets will inevitably follow, and here is the sliver of good that will come from this scandal.
+
+It's about damn time. Death to sandwich-board playcalling, please. Bring on those playsheets where coaches simply have to cover their mouth. This is one
+instance where emulating the NFL game is overdue.
+
+Sherrone Moore
+
+If Moore is going to be a head coach, then Saturday’s victory against the Nittany Lions was a fitting audition. The Wolverines rushed for 227 yards – including
+32 straight run plays – in grinding out a top-10 victory at one of the toughest environments in the FBS at Beaver Stadium.
+
+Moore was emotional - complete with NSFW language – in the aftermath.
+
+Sherrone Moore filled in for Jim Harbaugh as Michigan's coach today.
+</item 53>
+
+<item 54>
+Michigan conquers Ohio State again, but the story is far from over for 2023 Wolverines (Sporting News, 2023-11-25T23:20:56+00:00)
+They have, and the last two years ended with victories in the Big Ten championship game before losses to Georgia and TCU in the CFP semifinals. The NCAA
+investigation will continue, but if Saturday proved anything, the Wolverines will play out the rest of the season on their terms.
+
+This Michigan story is far from over, and Harbaugh returns Monday.
+
+Boom, indeed.
+</item 54>
+
+<item 55>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Easy peasy!
+
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Both teams had a week of rest, so don't treat this like a typical Thursday game. But do expect the Cowboys defense to keep the pressure on Geno Smith and a
+Seattle offense that's struggled to gain consistency over the last month. Smith actually did OK completing passes last week when pressured (60% completion rate)
+but not at an efficient level (5.4 yards per attempt). Just two QBs have exceeded 250 yards and four QBs have thrown multiple touchdowns against Dallas this
+year; I don't like Smith's chances to do either, which hurts any upside case for any Seahawks receiver. By the way, Curtis Samuel was the first receiver to get
+100 yards on the Cowboys this year, and it took him 12 targets and 9 catches to get there.
+</item 55>
+
+<item 56>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+He is regulated to pass from the pocket, but you are taking away the biggest weapon the offense had when you do that. Odell (Beckham) is not that guy anymore.
+Who are you truly afraid of on that offense? Nobody but Lamar, and if you are not using Lamar in a certain capacity, he becomes just like the rest of these
+quarterbacks around the league — hit or miss.”
+
+• Jacksonville Jaguars: Are they ready for prime time?
+
+What I think: Trevor Lawrence’s knee injury was the big concern coming out of Sunday. If he’s out, expectations shift dramatically. More than the other AFC
+contenders, the Jaguars seem early in their life cycle, still finding their way. That makes them a little harder to trust in big spots but also leaves greater
+space for growth. Let’s hope those test results on Lawrence’s knee come back clear.
+
+Exec comment: “I like Jacksonville. Doug (Pederson) has a championship pedigree. This team is relatively young. They are scrappy.
+</item 56>
+
+<item 57>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+The wideout still has another hurdle to pass to be cleared to play on Sunday so his status is still very much up in the air.
+
+Falcons (-2) at Jets
+
+Atlanta is relatively healthy coming into this matchup. Hollins, who injured his ankle in Week 9, participated on a limited basis every day this week, which is
+encouraging for his prospects to play on Sunday. As for Hughes, he practiced fully all week after suffering a hand injury last weekend against the Saints.
+Linebacker Nate Landman (thigh) missed practice on Wednesday but will play vs. New York.
+
+Rodgers was once again limited in practice but, as expected, will not be activated this week and will be sidelined as he continues his recovery from a torn
+Achilles just a few months ago. Meanwhile, Cook popped up on the injury report due to a shoulder injury, but head coach Robert Saleh told reporters Friday that
+the back should be fine.
+</item 57>
+
+<item 58>
+NFL roundup: Pats hit new low as Lions reach 9-3 for first time since 1962 (The Guardian, 2023-12-03T22:11:26+00:00)
+The 49ers spent an offseason chirping at the Birds – Samuel called one Eagles cornerback “trash” – and then entered the Linc as a rare betting favorite against
+a 10-win team at home.
+
+The Eagles (10-2) suffered a scare when Hurts jogged off the field in the fourth and went straight to the locker room. He was cleared to play and returned to
+action with about 10 minutes left. It was not immediately clear when Hurts was injured.
+
+By the time last season’s NFL MVP runner-up returned, the Eagles trailed 35-13 and were on their way toward their first home loss of the season. Hurts did hit
+DeVonta Smith for a two-yard TD on his return drive. He finished 26-of-45 passing for 298 yards. Purdy put the finishing touches on the win with a 46-yard TD to
+Samuel.
+
+Perhaps all that braggadocio paid off for the 49ers.
+</item 58>
+
+<item 59>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+He was seen walking on the sidelines shortly afterward but ruled doubtful to return. Rookie Zach Charbonnet, who entered Week 11 with just over 200 rushing
+yards on the year, replaced Walker as Seattle's top ball carrier. Following the game, Seahawks head coach Pete Carroll told reporters Walker suffered an
+"oblique strain that was legit" and could miss time.
+
+D'Onta Foreman (Bears) remained a headliner of Chicago's backfield against the Lions, even with Khalil Herbert back from injured reserve, but managed just 14
+yards on the ground before suffering an ankle injury. He walked off with a limp and attempted to run on the sidelines but did not return to the field after the
+Bears ruled him questionable.
+
+Pick Six Newsletter Crafted By The Best NFL Experts Get the day's big stories + fun stuff you love like mock drafts, picks and power rankings.
+</item 59>
+
+<item 60>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Was this old-school Big Ten football or Big Ten West football in disguise?
+
+Michigan's defense clamped on Penn State quarterback Drew Allar (10 of 22, 70 yards, TD), and the Nittany Lions had one play of more than 20 yards. Corum closed
+the drama with a 30-yard TD.
+
+The same-old questions about Nittany Lions coach James Franklin in big games resurfaced, but those are back-page headlines in the Big Ten East race. The quirky
+tiebreaker involving Big Ten West opponents? That's out the door. The winner-take-all showdown between Ohio State and Michigan? There are a full two weeks of
+anticipation for that now.
+
+Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns. Moore's postgame emotion was a headline, but there is a
+reality that set in through a brutal watch of a second half.
+
+McCarthy is a leader.
+</item 60>
+
+<item 61>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+2 now, and the debate with the Buckeyes and No. 1 Georgia is going to perk up more than ever. They are the three best teams in the country, but only one has
+uncertainty with the head coach.
+
+Whether they admit it or not, Michigan still needs Harbaugh for those moments, especially in two weeks.
+
+The reality is he might not be present for that one either.
+</item 61>
+
+<item 62>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+But rather than lead the team back to prominence, Wilson was terrible and so was Denver.
+
+This season, Wilson has played well even when the Broncos have not. He is not producing mind-blowing stat lines, but he is keeping his team competitive, playing
+efficiently and not making many mistakes.
+
+Until his three-interception day last week, he had the best touchdown-to-interception ratio in the league. But even with those picks, his is still second-best.
+</item 62>
+
+<item 63>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+The UTSA Roadrunners (8-4) take on the Marshall Thundering Herd (6-6) on Tuesday night in the Scooter's Coffee Frisco Bowl (9 p.m ET, ESPN). The matchup sees
+the Roadrunners as large betting favorites on odds boards. Currently, USTA is favored by on the point spread, with Marshall available for on the moneyline.
+
+The Roadrunners are in their 13th season as a program but have yet to win a bowl game. This is the fourth bowl game they've played in five years. Marshall is
+competing in a bowl game for the seventh straight year.
+
+These teams have been on different streaks as the year has progressed. UTSA has won seven of its last eight games, while Marshall has lost six of its last
+eight.
+
+Here are the live odds, team betting news, player props and our betting prediction for UTSA vs. Marshall in Tuesday's Scooter's Coffee Frisco Bowl.
+</item 63>
+
+<item 64>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Mark Andrews had a great game against Seattle, but even he didn't score. I suspect the Seahawks will have a plan to try and cover Ferguson near the end zone
+without having to sacrifice too much elsewhere. He's a low-upside play I'd sit for Juwan Johnson, Gerald Everett and Logan Thomas.
+
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Seven straight quarterbacks to face the Broncos have failed to get to 20 Fantasy points, including Josh Allen once and Patrick Mahomes twice! Denver's forced at
+least one turnover from a quarterback in eight straight games and kept quarterbacks to under 7.0 yards per attempt in five straight. Denver also seems to be
+playing a lot of heavy zone coverage to deter quarterbacks from throwing deep, mostly Cover-3, and they're also starting to blitz more over the last month than
+they did before.
+</item 64>
+
+<item 65>
+Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF? (Sporting News, 2023-11-30T21:31:00+00:00)
+This is the good advice that you should take: Be wary of anyone who's rushed for just 47 yards two straight weeks despite getting significant duty with Kenneth
+Walker III (oblique) on the shelf. Charbonnet's also not doing much in the passing game, and this is as bad of a matchup as San Francisco was last week. You
+should do better, even in a big bye.
+
+WEEK 13 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start-sit
+
+Start: WR DK Metcalf
+
+Metcalf can flash big plays and stay involved in games...until he disappears when Smith can't get the ball to him. Smith might be judicious about throwing his
+way with second-year corner sensation DaRon Bland in coverage. That said, you simply can't sit DeKaylin Zacharius against anyone because of his big-game
+ability.
+</item 65>
+
+<item 66>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+For Taylor, he underwent surgery on his thumb this week and is expected to miss at least a couple of weeks, which will thrust Zack Moss into a more prominent
+role in the Colts backfield.
+
+Burks is the only Titan to have an injury designation entering the weekend, but the wideout was a full participant in Friday's practice. However, he will need
+to clear the final stages of concussion protocol in order to play.
+
+Dolphins (-9.5) at Commanders
+
+Every player who the Dolphins listed as questionable for Sunday's game against Washington was able to practice on a limited basis on Friday. That includes
+Cotton and Lamm, who both were DNPs earlier in the week. Rookie running back De'Von Achane was a full participant in Friday's practice and head coach Mike
+McDaniel said he will play this week after missing time with a knee injury.
+
+Washington could be without its starting center this weekend as it plays host to Miami.
+</item 66>
+
+<item 67>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+Week 11 of the 2023 NFL season has provided plenty of drama, from the Bears hanging with the Lions to the Giants getting a rebound from emergency quarterback
+Tommy DeVito. But the latest round of regular-season action has also brought another wave of unfortunate injuries. Here's a roundup of the latest big names to
+go down around the league:
+
+QB
+
+C.J. Stroud (Texans) left for a single play against the Cardinals after absorbing a hard hit, with backup Davis Mills entering in relief. Stroud did not receive
+an injury designation, however, and returned after a quick check-in from trainers.
+
+Geno Smith (Seahawks) suffered an injury to his throwing arm after guiding a 16-7 lead over the Rams, showing frustration while trying to stretch the arm after
+a hit from Aaron Donald. Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left
+in the third quarter.
+</item 67>
+
+<item 68>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Week 13 is in full swing and teams are starting to truly jockey for playoff position as we rocket down the stretch run of the regular season. Of course, with it
+being so late in the year, injuries continue to be a predominant storyline to monitor heading into each slate and this weekend is no different. Specifically,
+the quarterback position in Cleveland has taken an interesting turn with veteran Joe Flacco named the starter against the Rams with Dorian Thompson-Robinson
+ruled out with a concussion. And that's just one situation that we'll be monitoring below.
+
+Here's a look at all of the final injury reports for Week 13.
+
+All NFL odds via SportsLine Consensus odds.
+
+Chargers (-5.5) at Patriots
+
+Allen made his return to practice on a limited basis on Friday and is officially questionable for Sunday's matchup in New England due to a quad injury.
+Meanwhile, Pipkins was also limited on Friday.
+</item 68>
+
+<item 69>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+Marshall prop bets at BetMGM Sportsbook
+
+BetMGM Sportsbook offers some excellent player props for the Scooter's Coffee Frisco Bowl between the Roadrunners and Thundering Herd.
+
+Frank Harris prop bets
+
+237.5 passing yards OVER (-115) / UNDER (-115)
+
+Passing TDs OVER 1.5 (-125) / UNDER 1.5 (-105)
+
+Anytime touchdown scorer (-110)
+
+Joshua Cephus props bets
+
+80.5 receiving yards OVER (-115) / UNDER (-115)
+
+Anytime touchdown scorer (-190)
+
+Rasheen Ali prop bets
+
+80.5 rushing yards OVER (-115) / UNDER (-115)
+
+Anytime touchdown scorer (-175)
+
+Kevorian Barnes prop bets
+
+64.5 rushing yards OVER (-115) / UNDER (-115)
+
+Anytime touchdown scorer (-135)
+
+Robert Henry prop bets
+
+Anytime touchdown scorer (-130)
+
+UTSA vs.
+</item 69>
+
+<item 70>
+Why is Brock Purdy called Mr. Irrelevant? Story behind 49ers QB's nickname explained (Sportskeeda, 2023-10-10T22:30:20+00:00)
+He hasn't been spectacular this season, but at least he's starting games at the highest level.
+
+3. Malik Willis, Tennessee Titans, Pick 86 - D
+
+Willis is the QB2 or QB3 in Tennessee, depending on who you ask. That's interesting, considering that some draft analysts thought him the most naturally gifted
+QB in the 2022 Draft class. Unfortunately, he is fighting a losing battle in Tennessee, as the franchise drafted the highly rated Will Levis to take his place.
+A "D" grade might even be generous.
+
+4. Matt Corral, Carolina Panthers, Pick 94 - E
+
+The Panthers have mainly ignored Coral as they elected to trade up to number one for Bryce Young in the 2023 Draft. This tells you about the franchise's faith
+in the Ole Miss alum. Coral left the franchise ahead of his sophomore season.
+
+5.
+</item 70>
+
+<item 71>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+The Conference has confirmed that it is not aware of any information suggesting Coach Harbaugh's involvement in the allegations. The University continues to
+cooperate fully with the NCAA's investigation.
+
+From the Big Ten:
+
+"The Big Ten Conference's commitment to student-athletes, sportsmanship and the commissioner's duty to protect the integrity of competition will never waver.
+Today's decision by the University of Michigan to withdraw its legal challenge against the conference's November 10th notice of disciplinary action is
+indicative of the high standards and values that the conference and the university seek to uphold, the University of Michigan is a valued member of the Big Ten
+Conference and the conference will continue to work cooperatively with the university and the NCAA during this process."
+
+Monday, Nov. 13
+
+Harbaugh says he'll state his case at Friday hearing
+
+Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday, though he mostly avoided addressing the only topic on anyone's mind.
+</item 71>
+
+<item 72>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Lamar Jackson (vs. Rams) faces an exploitable L.A. secondary, while Jared Goff (@ Bears) looks to build off a dominant Week 13 effort against an ascending
+Chicago stop unit. C.J. Stroud (@ Jets) sees a slight dip in his Week 14 ranking in a tough road test against the Jets, but the Rookie of the Year frontrunner
+still profiles as a set-it-and-forget-it QB1.
+
+Who are the best fantasy QB sleepers, waiver pickups in Week 14?
+
+Week 14 is a challenging one from streaming perspective, as Gardner Minshew (@ Bengals), Jameis Winston (vs. Panthers), Baker Mayfield (@ Falcons), and Joe
+Flacco (@ Jaguars) look like the best options.
+
+Minshew is executing Shane Steichen's scheme at an efficient clip and now faces a Cincinnati stop unit that ranks below the league average in dropback EPA.
+</item 72>
+
+<item 73>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+That figure was 7.8 in Mahomes’ first year as the starter and has climbed every season since. It’s a testament to the Chiefs’ adaptability, but also a
+reflection of plummeting explosive play rates.
+
+Exec comment: “Yeah, it looks harder for them on offense until Mahomes finds (Travis) Kelce on every major third down, every major two-minute play, every major
+touchdown. Kansas City has the luxury of their best players being their toughest players. Chris Jones is a very tough player. Kelce is a very tough player.
+Mahomes is a very tough player. You wonder why they win the games? Because the games are won by the toughest teams most of the time.”
+
+• Philadelphia Eagles: Has Jalen Hurts regressed? Where are the explosive pass plays?
+
+What I think: Explosive passing is down through most of the league, including for the Eagles.
+</item 73>
+
+<item 74>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Will Harbaugh be on the field before the end of the regular season? The Big Ten made a Friday ruling that will prohibit Harbaugh from being on the field for the
+final three regular-season games as a result of the in-person scouting and sign-stealing scandal that led to the resignation of staffer Conor Stallions. ESPN
+reported there will be a temporary restraining order hearing on Nov. 17 that will answer that question.
+
+On the field, Michigan answered the question about its College Football Playoff. Sort of. The Wolverines proved they could beat Penn State (8-2, 5-2) in a
+20-yard box. Neither team completed a pass of 20 yards or more. Michigan trailed 3-0 after the first quarter. The Wolverines had eight carries for 10 yards, and
+Penn State's Abdul Carter set the tone with a jarring hit on Blake Corum that nearly resulted in a fumble.
+
+Michigan took control with the running game.
+</item 74>
+
+<item 75>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Receiving Yards Through Six NFL Games Rk Player Season Yds 1 Don Hutson 1942 819 2 Tyreek Hill 2023 812 3 Wes Welker 2011 785 4 Elroy Hirsch 1951 766 5 Santana
+Moss 2005 743 6 DeAndre Hopkins 2015 726 7 Raymond Berry 1960 725 8 Jerry Rice 1986 723 9 Bob Boyd 1954 718 10 Bobby Mitchell 1962 714
+
+• Jared Goff is enjoying the second-best start to a season for his career from a statistical standpoint, behind only his 2018 Super Bowl season with the Rams.
+With the Lions at 5-1 and Goff heading toward a likely contract extension, could another team come after his injured backup, former University of Tennessee
+quarterback Hendon Hooker?
+</item 75>
+
+<item 76>
+Seahawks-Cowboys Fantasy Start 'Em Sit 'Em Week 13: Should you start Zach Charbonnet, Jake Ferguson on TNF? (Sporting News, 2023-11-30T21:31:00+00:00)
+Jourdan Lewis. JSN can mirror some of the production Curtis Samuel gave the Commanders last week in Dallas, but forget 100 yards. Around 50 yards seems like the
+ceiling with a big boost from garbage time.
+
+Sit: TEs Noah Fant and Will Dissly
+
+Noah Gray is a better fantasy player than Noah Fant this season. Will Dissly is barely a better fantasy player than Will Mallory this season.
+
+WEEK 13 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Sit: Seahawks D/ST
+
+The Seahawks are getting better defensively against the pass, but that's not enough to trust them here, as they're getting gashed on the ground, too.
+
+Sit: K Jason Myers
+
+This is actually not a good spot for one of the most reliable fantasy kickers, given the Cowboys don't give up many field-goal attempts.
+</item 76>
+
+<item 77>
+North Texas vs. SMU odds, props, predictions: Red hot Mustangs could overpower not-so-Mean Green (Sporting News, 2023-11-07T21:01:59+00:00)
+The Mustangs own a five-game winning streak, and in his past four games Stone has thrown 122 passes, 10 for touchdowns and none for interceptions. He’s also run
+it in twice.
+
+He threw for 300 yards against Prairie View A&M, and in this golden four-game stretch he’s accumulated 1,171 aerial yards.
+
+Receivers RJ Maryland and Jordan Hudson have five TD catches apiece, and Roderick Daniels Jr. has four. Three others have two. Jaylan Knighton (511 yards, four
+TDs) paces the ground game.
+
+However, Stone’s sterling development might have found a speed bump last week at Rice when he left early in the fourth quarter after getting hit hard. He zipped
+to the locker room and returned, minus his helmet.
+
+If concussion protocol restricts him from playing Friday, look for redshirt freshman Kevin Jennings to start for SMU.
+</item 77>
+
+<item 78>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+• San Francisco 49ers: What do they have in Purdy?
+
+What I think: Let’s start with what the 49ers do not have in Purdy. They do not have an AFC North-certified, weatherproof Ben Roethlisberger clone able to
+overpower the elements, break away from defensive linemen and thrive in the conditions Purdy faced against Cleveland. What they do have is a good, young
+quarterback well-suited to run Kyle Shanahan’s offense at a high level by making quick decisions when given time to find open receivers.
+
+Exec comment: “The 49ers knew they needed a good quarterback to win the Super Bowl, and they knew they could help Purdy be that. Give him a great receiving
+tight end, two good receivers and a great halfback who fits the system, and they’ll get someone open on every pass play. But then Deebo Samuel gets hurt,
+Christian McCaffrey gets hurt, and now we don’t have as many guys open.
+</item 78>
+
+<item 79>
+Hottest seat on each NFC team: Buns burning for these four head coaches (Yardbarker, 2023-11-30T22:29:33+00:00)
+SAN FRANCISCO 49ERS | Head coach Kyle Shanahan: The 49ers have done almost everything possible under Shanahan except win a Super Bowl. Fair or not, not winning
+a title with a stacked roster — especially on offense (Christian McCaffrey, Deebo Samuel, Brock Purdy, George Kittle) — would be a massive disappointment. His
+job is in zero danger, but his rep may be.
+
+SEATTLE SEAHAWKS | Quarterback Geno Smith: The Seahawks passed on drafting a QB in 2023 and re-signed Smith, but he has taken a significant step back. Entering
+Thursday's game against Dallas, his completion percentage was down from 2022 (69.8 to 65.4 percent) despite the impressive offensive weapons around him. Seattle
+has an out in his contract after this season that would only carry a $17.4 million dead-cap number, per Spotrac.
+</item 79>
+
+<item 80>
+Why is Brock Purdy called Mr. Irrelevant? Story behind 49ers QB's nickname explained (Sportskeeda, 2023-10-10T22:30:20+00:00)
+Eight quarterbacks were selected before Purdy in the 2023 NFL Draft. Their names are Kenny Pickett (Pittsburgh Steelers), Desmond Ridder (Atlanta Falcons),
+Malik Willis (Tennessee Titans), Matt Corral (Carolina Panthers), Bailey Zappe (New England Patriots), Sam Howell (Washington Commanders), Chris Oladokun
+(Pittsburgh Steelers) and Skylar Thompson (Miami Dolphins). As you can tell, the "Mr. Irrelevant" of this Draft has had, by far, the best NFL career so far from
+the bunch.
+
+Which way should Giants next year? Fire up our 2024 NFL Draft Simulator to get NY back in contention
+
+The 2022 NFL Draft's Mr. Irrelevant is the franchise QB of one of the best teams in the NFL, the San Francisco 49ers. Since breaking into the starting lineup,
+Purdy has made a mockery of his "Mr. Irrelevant" tag.
+</item 80>
+
+<item 81>
+DraftKings Picks Week 14: Best NFL DFS lineup advice for daily fantasy football tournaments (Sporting News, 2023-12-07T22:18:00+00:00)
+Because we splurged for McCaffrey and Kamara, we had to sacrifice salary elsewhere, and London is a high-upside option even in an offense that doesn't throw the
+ball with efficiency.
+
+WR Jaxon Smith-Njigba, Seahawks @ 49ers ($4,100). Is a takeover underway in the Seahawks offense? Smith-Njigba is coming off a game against the Cowboys that saw
+him collect seven-of-11 targets for 62 yards. It's a step up from a disappointing outing against San Francisco, but Tyler Lockett's involvement seems to be
+lessening as of late with the rookie stepping up. It wasn't a great day for the Seattle offense on Thanksgiving against the Niners, but the Seahawks should put
+up a better effort against a divisional opponent they know so well. If they're trailing, JSN should see action with a negative game script.
+</item 81>
+
+<item 82>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Three of the seven teams passed, resulting in one first down, one sack and Hurts’ interception. Of these three teams, only the Eagles lost the game.
+
+3. The 49ers lost Sunday when their rookie kicker missed from 41 yards. Is San Francisco wise trusting a championship roster to a rookie’s foot come playoff
+time?
+
+The 49ers raised eyebrows among some when they used their second-highest pick in the 2023 draft — a third-round choice, 99th overall — for a kicker. The
+selection of Michigan’s Jake Moody gave the 49ers a cost-effective successor to veteran Robbie Gould. General manager John Lynch called Moody a potentially
+“foundational” player whose stock in the draft was so high, other teams were trying to trade ahead of San Francisco for a shot at him.
+
+Who do you want lining up the potential winning kick in a Super Bowl?
+</item 82>
+
+<item 83>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Sherrone Moore filled in for Jim Harbaugh as Michigan's coach today.
+
+
+
+He was emotional after defeating Penn State.
+
+
+
+"I want to thank Coach Harbaugh. ... I love the s— out of you man."
+
+
+
+🎥: @CFBONFOX pic.twitter.com/NmXZWrGxCM — The Sporting News (@sportingnews) November 11, 2023
+
+Moore, however, will emerge as a leading candidate for some jobs as a result, and that is a huge victory for one of the nation’s top assistants.
+
+Losers
+
+Connor Stalions
+
+Stalions made a name for himself. He will be remembered as the Michigan staffer as the center of this sign-stealing scandal. Stalions resigned on Nov. 3. The
+NCAA investigation whether Michigan was involved with in-person scouting, which is prohibited by the NCAA, put Stalions into the college football consciousness.
+</item 83>
+
+<item 84>
+Shohei Ohtani rumors tracker: Latest news, updates on free agent's MLB future (Sporting News, 2023-11-27T21:20:11+00:00)
+Interesting, certainly.
+
+Mariners out of the Ohtani chase?
+
+Date: Nov. 17
+
+Source: Daniel Kramer, MLB.com
+
+Here’s the key piece of the article: “Industry sources told MLB.com this week that landing Ohtani doesn’t appear to be within the Mariners’ realistic agenda
+this offseason.”
+
+In a way, that’s surprising. The Mariners seem to check a lot of boxes for Ohtani. They’re set up to win for a long time with a bunch of young starting pitchers
+and a co-superstar in Julio Rodriguez. Plus, Ohtani would get to be part of the quest for the franchise’s first World Series title, he’d get to wear the same
+uniform as his baseball hero, Ichiro, and he’s lived there in the offseason. So it must be about the money, and Seattle’s reluctance to even get in the
+conversation. That’s gotta be super disappointing for Mariners fans starved for a title, right?
+</item 84>
+
+<item 85>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Randy Mueller raised the thought last week, recalling examples from his career as a GM when offering a pick one round higher than a prospect’s actual draft
+round proved alluring. Detroit used a third-round choice for Hooker, who is recovering from ACL surgery. Hooker would have been valued higher if healthy. Could
+that be true again at some point in the future?
+
+• News that Indianapolis Colts rookie quarterback Anthony Richardson might undergo season-ending shoulder surgery could carry a silver lining. Richardson got to
+play enough for the Colts to evaluate where he stands, but if he shuts it down for the season, neither he nor the team would have to suffer through a full
+season of growing pains. Gardner Minshew’s three-pick game against Jacksonville on Sunday works against the idea Indy is better positioned to compete with the
+journeyman in the lineup, but most coaches and execs I’ve spoken with believe that to be the case in the short term.
+</item 85>
+
+<item 86>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+PAST THREE WEEKS: McLaurin has led all Commanders wide receivers in targets and all Commanders players in receptions. He's the No. 1 guy, and his big Week 4
+game (8-86-0 with an offensive fumble recovery for a touchdown) would have been even bigger if Sam Howell had better ball placement on a deep pass McLaurin was
+open for.
+
+BEARS: Are expected to play again without top outside cornerback Jaylon Johnson and safety Eddie Jackson. Not that those two absences led to a bonanza from
+Broncos receivers; Russell Wilson spread the ball around. But if McLaurin remains the target leader then he'll have the best shot at a big game. Rookies Tyrique
+Stevenson and Terell Smith figure to line up across from McLaurin the most.
+</item 86>
+
+<item 87>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+Michigan noted that regarding evidence, there is nothing it is aware of to claim athletics personnel at Michigan committed the allegations, and said the rule
+pertaining to electronic recordings of games is limited to the use of field equipment used by the institution for the game it is currently playing. It also said
+Michigan has not seen much evidence, but rather has just heard a summary of second- and third-hand information.
+
+The letter also said given the use of sign decoding by other universities, there is little reason to believe Stalions' efforts proved meaningful, and pointed
+out the teams' average margin of victory since Stalions was suspended. It said the information obtained is "at most a reflection of information that teams can
+and easily do obtain through public and permissible sources," and because of that it is "highly dubious" that Stalions' observations would have a "material
+effect on the integrity of the competition."
+</item 87>
+
+<item 88>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+Expect more of the same from QB Justin Herbert and his stud back against the Jets, who have allowed 46 receiving yards per game to RBs (sixth-most in the NFL).
+They'll try to shut him down this Sunday, but it would feel so empty without AE!
+
+Jahan Dotson, WR, Commanders @ Patriots — OVER 45.5 receiving yards
+
+We've come full circle with Dotson, who made our preseason sleepers column then faded into early-season obscurity only to emerge again over the past two weeks.
+Curtis Samuel was clearly not right last week, and the second-year wideout more than made up for it. Dotson caught 8-of-10 targets for 108 yards and a TD, a
+stellar encore to his Week 7 line of five catches for 43 yards. The banged-up Patriots defense will be primarily focused on stopping stud Commanders receiver
+Terry McLaurin, which should open up plenty of opportunities for Dotson.
+</item 88>
+
+<item 89>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Stroud's Houdini act has helped him beat most of the defenses he's faced, and this one isn't worthy of being feared, but there is some worry Stroud have a
+monster game without some massive yards after the catch (YAC) from his receivers. Fortunately he ranks ninth-best on the season among qualifying QBs in YAC per
+completion (5.37).
+
+STARTS: C.J. Stroud, Tank Dell, Nico Collins, Courtland Sutton, Devin Singletary, Javonte Williams, Russell Wilson
+
+C.J. Stroud, Tank Dell, Nico Collins, Courtland Sutton, Devin Singletary, Javonte Williams, Russell Wilson SITS: Jerry Jeudy, both DSTs; Dalton Schultz is OUT
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Russell Wilson QB DEN Denver • #3
+
+Age: 35 • Experience: 12 yrs.
+</item 89>
+
+<item 90>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+I'm pretty certain they're not bad enough to make Tim Boyle look like Tim Tebow or even Tim Hasselbeck, but I do wonder if they're juuust bad enough to give
+better-than-normal numbers to Garrett Wilson and Breece Hall. Reinforcements along the O-line should help the Jets' cause against a Falcons defense that's
+blitzed at a league-average rate, is eighth-lowest in pass rush pressure rate and is fifth-lowest in sacks (28).
+</item 90>
+
+<item 91>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+Marshall in Tuesday's Scooter's Coffee Frisco Bowl.
+
+Live odds for UTSA vs. Marshall: Point spread, moneyline, total
+
+Check out UTSA vs. Marshall live odds, including the spread, moneyline and total available at the best online sportsbooks.
+
+More: North Carolina vs. West Virginia odds in Duke's Mayo Bowl | Best college football betting promos
+
+UTSA Roadrunners betting news
+
+UTSA has hit its stride over the second half of the season, before losing 29-16 to Tulane in its last outing. The Roadrunners scored at least 34 points in every
+win since Oct. 7, proving to be an offensive juggernaut. Everything starts with star QB Frank Harris.
+
+The dual-threat QB has completed 64.9% of his passes this season for 2,506 yards and 18 touchdowns.
+</item 91>
+
+<item 92>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+ET, according to ESPN's Jeremy Fowler. The receiver was limited in practice thanks to the toe injury that has plagued him since leaving Week 8's game against
+the Eagles, but barring a setback, he will return to action this weekend.
+
+The receiver was working his way into flex territory with a couple of good performances before picking up the injury. However, we wouldn't consider him to be
+worthy of a fantasy start this week unless you're in a bind. It's unclear whether Samuel will regain the same workload or if he'll be playing in limited action
+as he works his way back. Jamison Crowder emerged in Samuel's absence and Jahan Dotson has seen his production drastically increase, as well. The wait-and-see
+approach is the preferred one heading into Week 10.
+</item 92>
+
+<item 93>
+Michigan didn't need Jim Harbaugh against Penn State, but Ohio State is a different game (Sporting News, 2023-11-11T21:32:44+00:00)
+Who is the good guy? Who is the villain? Ohio State and Michigan locked in their answers a long time ago. More than 17 million people watched last year's
+matchup – a 45-23 Michigan victory where Stalions' involvement continues to be scrutinized through a double-barrel Big Ten and NCAA investigation. Big Ten
+commissioner Tony Petitti's ruling sent a shockwave through the conference Friday, mainly because the third game means Harbaugh will not be on the sideline for
+The Game. Early forecasts say 20 million will tune in for The Game this year.
+
+Will Harbaugh really not be there? That is for the courts to decide, but Moore’s comments suggest Harbaugh, president Santa Ono and athletic director Warde
+Manuel are on a united front; consequences be damned in 2024 and beyond.
+
+In the short term? The College Football Playoff committee could slide Michigan up to No. 2 now, and the debate with the Buckeyes and No.
+</item 93>
+
+<item 94>
+Fantasy Football QB Rankings Week 14: Who to start, best sleepers at quarterback (Sporting News, 2023-12-07T22:06:00+00:00)
+Assuming Winston gets the starting nod in place of the banged-up Derek Carr (head, shoulder, back), his gunslinger play style could lead to a respectable
+fantasy output against the reeling Panthers.
+
+Mayfield wasn't asked to do much with his arm in Week 13, but a potential negative game script in Atlanta could force him to air the ball out at a higher clip,
+boosting his fantasy prospects. Although the Browns didn't get the win in Flacco's first start with his new team, the veteran did everything he could to keep
+Cleveland within striking distance, racking up 254 yards and two TDs. Another 250-plus yard, multi-TD effort could again be in store if he continues to start in
+place of Dorian Thompson-Robinson (concussion).
+
+WEEK 14 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start-sit
+
+Who are the biggest potential QB busts in Week 14?
+</item 94>
+
+<item 95>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+The 2017 Eagles won a Super Bowl with rookie Jake Elliott performing well. The 2012 Super Bowl champion Ravens had rookie Justin Tucker, while the 2006 Patriots
+trusted rookie Stephen Gostkowski.
+
+4. Do they make wristbands for head coaches? That is not the only question facing the Broncos.
+
+Denver Broncos coach Sean Payton has made clear his frustration with quarterback Russell Wilson in myriad ways, including when he suggested Wilson could at some
+point wear a wristband if it would help speed up communication in the huddle.
+
+We joked on the Football GM Podcast that the head coach himself could have used a wristband to assist with game management after the Broncos called timeout
+before punting with 22 seconds left in the first half of a 19-8 defeat at Kansas City in Week 6. Payton said he thought Denver was heading into third down, not
+fourth, when he called timeout, helping the Chiefs’ drive to a field goal.
+
+It wasn’t an isolated miscue.
+</item 95>
+
+<item 96>
+Why is Brock Purdy called Mr. Irrelevant? Story behind 49ers QB's nickname explained (Sportskeeda, 2023-10-10T22:30:20+00:00)
+Coral left the franchise ahead of his sophomore season.
+
+5. Bailey Zappe, New England Patriots, Pick 137 - C-
+
+Mac Jones' backup plays for the worst Patriots team of the past twenty years. It's not a dream spot for the Western Kentucky alum.
+
+6. Sam Howell, Washington Commanders, Pick 144 - B
+
+Howell is the franchise quarterback for the usually trigger-happy Washington Commanders franchise. This shows that the Commanders' new ownership group has faith
+in Howell's ability to quarterback the team. He gets a positive grade for that sole reason.
+
+7. Chris Oladokun, Pittsburgh Steelers, Pick 241 - F
+
+Oladokun is yet to make a start in the NFL. He'll be rated an F until he changes that. However, that won't be on the team that drafted him, as he was waived by
+the Steelers a while ago.
+
+8.
+</item 96>
+
+<item 97>
+UTSA vs. Marshall odds, props, predictions: Roadrunners lay big spread in Frisco Bowl (Sporting News, 2023-12-18T22:29:26+00:00)
+Pennington has thrown six interceptions and zero touchdowns on only 79 passing attempts this season.
+
+Marshall's offense will continue to run through star RB Rasheen Ali. The senior speedster carried the offense even when Fancher was under center, totaling 1,256
+yards and 15 touchdowns on the season. This offense has struggled despite Ali's efforts, ranking 93rd in scoring and 89th in yards per game.
+
+On the season, Marshall is 4-8 ATS and 6-6 on the O/U board. The Herd won only three of their eight conference games on the season.
+
+Marshall Thundering Herd opting out of Scooter's Coffee Frisco Bowl
+
+While UTSA has the biggest individual loss for this game, the Herd's depth has taken a huge blow thanks to transfer portal entrants.
+</item 97>
+
+<item 98>
+NFL Week 13 injuries: Browns to start Joe Flacco with Dorian Thompson-Robinson out, Saints' Olave questionable (CBSSports.com, 2023-12-01T22:52:36+00:00)
+Brown is also questionable but did not practice Friday due to a knee injury.
+
+Panthers at Buccaneers (-5.5)
+
+Carolina may be down two tight ends this weekend as the club has ruled out Hurst and is listing Tremble as doubtful. This is the third straight game Hurst will
+miss. The team will also be without Bell and will likely look to rookie Alex Cook to start. Meanwhile, corner CJ Henderson (concussion) was a full participant
+on Friday and carries no designation heading into the weekend.
+
+Tampa Bay is pretty banged up coming into Week 13, particularly on the defense side of the ball. The Bucs will be without key pieces David, Dean, and White when
+they play host to Carolina. Meanwhile, Godwin did not practice Friday after being added to the injury report on Thursday with a neck injury.
+
+49ers (-3) at Eagles
+
+Each of the 49ers' questionable players were limited Friday and did not practice the previous two days.
+</item 98>
+
+<item 99>
+Michigan sign-stealing scandal news: Latest updates on possible Jim Harbaugh suspension from NCAA cheating investigation (Sporting News,
+2023-11-06T23:58:04+00:00)
+On the field, Michigan is in the midst of what could be a historic season. Off the field, the the focus has rarely been on the team's success.
+
+An investigation into Michigan's alleged sign-stealing scheme, centered on now-fired staffer Connor Stalions, continues to evolve by the hour, with one update
+after another adding another wrinkle to the saga that began in October. The Big Ten suspended coach Jim Harbaugh for three games on Friday with the team on a
+plane en route to Penn State, and although Michigan had hoped to block the suspension, the Wolverines will be without their coach on the sidelines in Happy
+Valley.
+
+The Sporting News is tracking the latest updates from the Michigan sign-stealing scandal. Follow along with the newest developments below.
+
+MORE ON MICHIGAN SIGN-STEALING:
+
+Michigan sign-stealing scandal updates
+
+Friday, Nov.
+</item 99>
+
+<item 100>
+Michigan sign-stealing scandal winners and losers, from Jim Harbaugh to Tony Petitti (Sporting News, 2023-11-11T22:50:13+00:00)
+Will Harbaugh finally take the parachute to the NFL? Those are questions bound to come up at the end of the 2023 season.
+
+BENDER: Michigan will need Jim Harbaugh against Ohio State
+
+Big Ten
+
+This is the fourth football scandal in less than a calendar year.
+
+Three former Iowa football players and a student manager were charged in an illegal sports wagering scandal. Several student-athletes face allegations of
+placing bets on games in which they played in. Northwestern coach Pat Fitzgerald was fired on July 10 after a hazing investigation into the program. Fitzgerald
+is suing the university for wrongful termination. Michigan State fired Mel Tucker on Sept. 27 after allegations of sexual misconduct from Brenda Tracy, a
+speaker on sexual assault awareness.
+
+Now, Michigan has a scandal on the field, and they countered with allegations that Ohio State and Rutgers leaked Michigan's signs to Purdue in last year's Big
+Ten championship game.
+</item 100>
+=== END ITEM id=e4fcb84da041f3f8 ===

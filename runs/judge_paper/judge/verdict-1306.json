@@ -1,0 +1,22 @@
+[
+{"id": "1c1be2da11fe08d7", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 56, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+]},
+{"id": "19e92b2ca58681d9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]}
+]

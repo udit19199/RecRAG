@@ -1,0 +1,1616 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=29a8c634e255b8f6 ===
+Gold sentences and facts:
+Sentence 0: From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant.
+  Fact 0.0: The Netflix description states that Jess and Bill Walker are doing their best to keep their family connected.
+  Fact 0.1: Jess and Bill Walker are doing their best to keep their family connected as their children grow older.
+  Fact 0.2: Jess and Bill Walker's children are growing more independent.
+  Fact 0.3: Jess and Bill Walker's children are growing more distant.
+Sentence 1: Speaking of the Christmas season, McLean — born in New Rochelle, New York — said that "the holidays are a time for families to come together.
+  Fact 1.0: McLean spoke about the Christmas season.
+  Fact 1.1: McLean was born in New Rochelle, New York.
+  Fact 1.2: McLean said that the holidays are a time for families to come together.
+
+Retrieved items:
+<item 1>
+This Christmas let your home be the centre of the celebrations with these festive ideas from The White Company (The Independent - Life and Style,
+2023-10-13T15:00:43+00:00)
+Time for the main event…
+
+(The White Company)
+
+It’s the moment we’ve all been waiting for and, let’s be honest, not everything will go to plan. There may be squabbles and you may not have got round to making
+your own Christmas pudding. But there’s so much more to enjoy and you’ll learn to appreciate that, whatever happens, your Christmas will be wonderful just the
+way it is.
+
+Of course, it’s kids that make Christmas extra special, and with The Little White Company you’ll find great gifts for the youngest members of the family besides
+those friends with newborns. We love their Jingles Reindeer Comforter which is made from recycled fibres and has a squidgy red nose and felt antlers for an
+all-over soft and soothing feel.
+
+The White Company also has plenty of affordable gifts for grown ups that make great stocking fillers or presents for those surprise visitors.
+</item 1>
+
+<item 2>
+The best shows to stream in December (The Sydney Morning Herald, 2023-11-30T22:00:00+00:00)
+The spotted white beagle and his adolescent cohort – Charlie Brown, Marcie, Peppermint Patty, and many more – have always transferred easily from a panel on the
+page to an animation frame, and this official adaptation has a trademark mix of wry humour, flights of fantasy, and heartwarming camaraderie. Happiness is
+Holiday Traditions is a bonus special to close off the third season of the series, and it will stay true to the rule that helps make Peanuts endure: no adults
+are seen or heard. Also on Apple TV+: The trailer for Family Plan (December 15), an action-comedy feature where Mark Wahlberg plays a former master assassin who
+left the trade and secretly built a new life in the American suburbs as a cheerful husband and father, is goofy as all heck. The question is whether it’s
+ludicrous fun or just sappy shenanigans?
+</item 2>
+
+<item 3>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+Will Smith y Jada Pinkett Smith (Getty Images)
+
+According to Lucas, some of the controversy surrounding Will and Jada’s relationship ties back to the 2022 Academy Awards - when the King Richard star jumped
+onto the stage and struck Rock across the face after the comedian made a joke about Jada’s shaved head, which is a result of her alopecia. “Keep my wife’s name
+out of your f***ing mouth,” Will yelled. Now that it’s been revealed the couple was separated at the time, Lucas questioned Will’s behaviour and word choice
+during the awards ceremony.
+
+“That’s a weird reaction to have somebody who you’ve been broken up with for six years, you know? So, were they really broken up or is Jada saying that as an
+attention-seeking thing?” he asked.
+
+However, Winter still believes the controversial incident speaks different volumes about the work Will has put into his relationship.
+</item 3>
+
+<item 4>
+Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player (The New York Times, 2023-12-15T21:32:52+00:00)
+Rachel has no interest in taking ayahuasca. But she is grateful her husband discovered it.
+
+Advertisement
+
+“After he did ayahuasca, he became like my dream husband,” Rachel says. “I was nervous about what it would do to him, but he came back a totally new man, so
+appreciative of me and our family.”
+
+Bills safety Jordan Poyer with his wife, Rachel, and their daughter, Aliyah. (Courtesy of Rachel Bush Poyer)
+
+Highest-version Poyer made Poyer aware he was not doing the little things — waking up with a smile, giving Rachel a hug on his way out, or being present even
+when his attention could be divided.
+
+Poyer has turned off his DMs on Instagram and deleted his Twitter/X account. Instagram features a For You page — a personalized feed based on user engagement
+patterns. In the past, Poyer’s was filled with posts of other girls, according to Rachel.
+</item 4>
+
+<item 5>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+Parenting no longer starts and stops with our children. Nor is it confined to those who have children. In a time of unrelenting change and ever-extending life,
+most of us will – at some stage – find ourselves “parenting” our own parents.
+
+Indeed, many of us – particularly those who had families later – will find ourselves simultaneously parenting our kids and our parents. In one breath we’ll be
+begging our children to swap French fries for vegetables, and in the next breath we’ll be urging our parents to exchange cake for sardines. Little wonder
+today’s midlifers are known as the sandwich generation.
+
+The relentless pace of technology – accelerated by the Covid-19 pandemic – has made everything infinitely more complicated, leaving many older (and not-so-old)
+people baffled and frustrated.
+</item 5>
+
+<item 6>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+While she has found a place with her birth parents, Bazella knows she may never solve the mystery of how she was switched at birth.
+
+"I lost 39 years," Bazella said. "There’s a lot of grieving with that."
+
+Still, Bazella said she believes she's found unconditional love with her mother.
+
+"It's overwhelming for me coming from where I have been," she added.
+
+"I always felt like I was kind of in survival mode and alone. I finally feel at peace with everything, which is really nice."
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+As for Geerts, she said she hopes to make up for lost time.
+
+"One of the main dreams is that we stay healthy and I live long enough, like a hundred years at least — so we can make up some of this time," Geerts said.
+</item 6>
+
+<item 7>
+Christmas proves that love triumphs over hate — even amid war, suffering, tragedy and turmoil (FOX News - Lifestyle, 2023-12-23T14:20:43+00:00)
+But nothing really seems to change … A lot of that has to do with human nature."
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+Longfellow's poem still bears the truth because it was based on divine reality.
+
+Yes, hate is strong — but God's love is stronger.
+
+Wars do bring death — but God through Jesus Christ has conquered death.
+
+And because God is now "with us," there is hope ... even with a broken heart.
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+And there is triumph even amid tragedy.
+
+This Christmas Day, strain your ears, push aside the din of the culture, the city, the war, the pain … and hear the bells.
+</item 7>
+
+<item 8>
+Meet the American who made cranberries a Turkey Day tradition, Marcus Urann, farmer with can-do spirit (FOX News - Lifestyle, 2023-11-23T08:50:55+00:00)
+"They’ve been part of a fabric of our region from Indigenous people until today."
+
+Urann saw what cranberries could be far beyond the land of the Pilgrims.
+
+"I felt I could do something for New England," Urann told the Associated Press in a story that ran around the nation on Thanksgiving in 1959.
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+"You know, everything in life is what you do for others."
+
+To read more stories in this unique "Meet the American Who…" series from Fox News Digital, click here .
+</item 8>
+
+<item 9>
+This Christmas let your home be the centre of the celebrations with these festive ideas from The White Company (The Independent - Life and Style,
+2023-10-13T15:00:43+00:00)
+The White Company is gearing up for Christmas with a range of new products that can give an extra cosy touch to your home or make affordable gifts to place
+beneath the tree. From wreaths and garlands that beckon guests through the door, to warming scents that put everyone in the mood for Christmas, you will be
+ready to welcome friends and family throughout the coming months.
+
+The White Company is known for its carefully crafted products and an attention to detail that make it one of Britain’s most cherished lifestyle brands. Their
+Christmas collection, available now, is full of festive products that not only make great presents, but can also help place your home at the centre of the
+celebrations. Here we share some of The White Company’s festive suggestions and pick out a few of our favourite products from their extensive range
+
+Make your home an open house
+
+(The White Company)
+
+Friends make the season much more enjoyable, so be sure to get your home ready so you can welcome them with warmth and friendship.
+</item 9>
+
+<item 10>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While it’s often viewed as a day for Americans to express what they’re grateful for, that doesn’t mean that everyone will celebrate. More specifically, the
+event has been viewed as deeply controversial over the years, due to the contentious history of the first Thanksgiving celebration in the 17th century.
+
+The holiday has been linked to instances of cultural appropriation, with some Americans believing that its history is frequently white-washed, prompting them to
+condemn or ignore Thanksgiving as a whole.
+
+However, the holiday itself has inspired another tradition of Friendsgiving – which can be held before, during, or even after the 23rd of November this year.
+The activity typically consists of a celebration with close pals since some Americans don’t have the opportunity to return home for the holidays.
+
+Over the years, people have celebrated Friendsgiving in a similar vein as Thanksgiving, with everyone sitting around the table for one big feast. It’s also
+often done in a potluck style, with each guest bringing their own dish to contribute.
+</item 10>
+
+<item 11>
+Alcoholism, Ayahuasca and the Enlightenment of an N.F.L. Player (The New York Times, 2023-12-15T21:32:52+00:00)
+In the past, Poyer’s was filled with posts of other girls, according to Rachel. Now there’s nothing on Poyer’s For You page except football and ayahuasca. She
+knows because they have one another’s passwords.
+
+“His attention now is 100 percent on me, his family and his career,” says Rachel, who has more than 4 million Instagram followers, an OnlyFans page and a line
+of skincare products.
+
+Some players feel more pressure when the end is closer than the beginning. The Bills have an out in Poyer’s contract after this season. He isn’t stressing about
+any of it. His focus is here and now.
+
+Poyer has thought about becoming a football commentator after retirement. But he has more to offer than sports talk. He could talk about why he’s never had a
+vaccine, why Aliyah is homeschooled, or how he believes God transcends religions.
+
+He could discuss why he has always thought he might be an alien.
+</item 11>
+
+<item 12>
+Christmas proves that love triumphs over hate — even amid war, suffering, tragedy and turmoil (FOX News - Lifestyle, 2023-12-23T14:20:43+00:00)
+Emanuel means "God with us." That means because of Christmas, a new, category-busting power has come into the world, one not available for the tens of thousands
+of years of human existence before.
+
+Grace and a love that surpasses all understanding is what became available because of Christmas.
+
+The story of Longfellow's famous poem is now the subject of a feature-length film, "I Heard the Bells," available on demand through most cable and streaming
+platforms.
+
+To an age of AI and computer technology, a little story about a 19th century poet may seem anachronistic.
+
+Longfellow's poem still bears the truth because it was based on divine reality.
+
+But bestselling author and nationally syndicated columnist Cal Thomas notes that from his standpoint, things never really change.
+
+Said Thomas, "You can change hairstyles, clothes, styles, modes of transportation. You can even change politicians. But nothing really seems to change … A lot
+of that has to do with human nature."
+</item 12>
+
+<item 13>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+In addition, vendors are also selling a range of goodies – from ornaments to jewellery to scarves – which is the perfect chance to do some early holiday
+shopping.
+
+Hosting a movie marathon
+
+Instead of hosting a big dinner, you could opt for another budget-friendly activity at your home: hosting a movie marathon. With the help of your friends, you
+can make a list of any horror, romance, or comedy movies that you want to watch for the day. You could also top off the activity off by supplying an assortment
+of snacks for your pals, or by cooking a meal all together.
+
+Your movie options can also match the theme of Thanksgiving, with films like A Beautiful Day in the Neighborhood (2019), Toy Story (1995), Addams Family Values
+(1993) and A Charlie Brown Thanksgiving (1973). If you want, you could add some Christmas movies to the mix, including Elf (2003), It’s A Wonderful Life (1947)
+and Steel Magnolias (1989).
+</item 13>
+
+<item 14>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+During his time in Belfast, Kalmus strummed a mandolin in a Celtic folk music group that meets at the eco-village, along with his son Zane, Wilcox-Hughes and
+her daughter, Etta. He picked berries and ate fresh goat cheese and helped Ethan load hay into a neighbor’s barn.
+
+climate scientist music group (Evan Bush / NBC News)
+
+He spoke at the local library about climate change. He shared art, food and labor with neighbors. He saw how a community was sprouting up around the Possibility
+Alliance — people willing to sacrifice the conveniences of a modern life built on fossil fuels.
+
+He felt safer here and more energized to work.
+
+It wasn’t about the place, but the people, he realized.
+
+People at the center
+
+Maine, like anywhere else, isn’t immune to climate change. But here, at least, he had people who understood his angst, who could share music and joy, who were
+willing to make their own sacrifices, and who were trying to prepare their community in the way they thought was best.
+</item 14>
+
+<item 15>
+At Christmas, Don McLean sings the praises of 'Silent Night,' other holiday classics: 'My mother's favorite' (FOX News - Lifestyle, 2023-12-17T09:00:48+00:00)
+Read this article for free! Plus get unlimited access to thousands of articles, videos and more with your free account! Please enter a valid email address. By
+entering your email, you are agreeing to Fox News Terms of Service and Privacy Policy , which includes our Notice of Financial Incentive . To access the
+content, check your email and follow the instructions provided.
+
+Don McLean, the iconic artist and musician behind the mega-hit "American Pie" and other well-known hit songs, has just released a new album of classic Christmas
+tunes — and shared a personal connection to one of the songs with Fox News Digital in an exclusive phone interview this week.
+
+He said "Silent Night," which he performs on the album, "was my mother's favorite song that I used to sing at Christmastime for her."
+
+He added, "It's powerful. It's a powerful song."
+</item 15>
+
+<item 16>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+Being social, says Laird, is as important as trying new things: “Research shows that those who are more social are also more resilient to chronic conditions and
+often have a stronger immune system.”
+
+Anyone with older parents should be urging them out for a walk five days a week Dr Eamon Laird, health and ageing researcher
+
+Depression among the elderly is on the rise and often goes unnoticed. Gerontologists now believe that it is one of the most common psychiatric disorders among
+the elderly – with half of all cases going undiagnosed. When elderly parents become depressed (many of them come from a generation not accustomed to talking
+about their mental health), it can be difficult to know how to respond. But Laird’s latest report suggests that a daily walk could help. His study of more than
+4,000 older adults found that as little as 20 minutes of daily walking could cut the risk of depression by up to 43%.
+</item 16>
+
+<item 17>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+He has been on a 15-year quest to halt climate change and has already oriented most everything in his life to minimize his own climate footprint and maximize
+what he can do to push society to change.
+
+Nothing has been enough.
+
+And so this summer, as extreme heat and rainfall battered many American communities, Kalmus visited Maine searching for something different. He was looking not
+for climate solutions, but for new ways to withstand climate change’s harms — and also to make peace with the grief that often feels inescapable for those who
+reckon with global warming daily.
+
+climate scientist exercise bicycle environmentalist (Evan Bush / NBC News)
+
+That search brought him to an unusual community called the Possibility Alliance, a homestead where a small group of people is trying to figure out how to live
+in a world headed for a breakdown (as they see it).
+
+Its leaders eschew capitalism, grow much of their own food, and live without electricity. They’ve dedicated their lives to protest, living off the land as
+simply as possible, and are preparing their community for ecological disaster and to host climate refugees.
+</item 17>
+
+<item 18>
+This Christmas let your home be the centre of the celebrations with these festive ideas from The White Company (The Independent - Life and Style,
+2023-10-13T15:00:43+00:00)
+We suspect this Scent Stories Hamper will go down well with any recipient, with candles, hand wash, diffusers and more wrapped up in a hand-woven basket. The
+scents of myrrh, fir tree and Nordic wood will have your lucky recipient breathing in the magic of Christmas through a swirl of seasonal aromas.
+
+Enjoy the in-between days
+
+(The White Company)
+
+We all lose track of time over Christmas, not sure what day it is or questioning if it’s OK to eat mince pies and brandy butter for breakfast. But there’s still
+plenty of time for fun and relaxation – a visit to see old friends, a quiet walk in the frosty woods and, of course, the fizz and sparkle of new year parties.
+
+To help you get out of the house, even on the coldest mornings, this Down Filled Oversized Puffer Coat will keep you warm and help to make you look and feel
+great, despite the excesses of Christmas.
+</item 18>
+
+<item 19>
+Christmas proves that love triumphs over hate — even amid war, suffering, tragedy and turmoil (FOX News - Lifestyle, 2023-12-23T14:20:43+00:00)
+Read this article for free! Plus get unlimited access to thousands of articles, videos and more with your free account! Please enter a valid email address. By
+entering your email, you are agreeing to Fox News Terms of Service and Privacy Policy , which includes our Notice of Financial Incentive . To access the
+content, check your email and follow the instructions provided.
+
+How can there be "Joy To the World" when there is so much sorrow on Earth?
+
+How can there be thoughts of sleigh bells jingling, chestnuts roasting on an open fire or Jack Frost nipping at our noses when war rages in Israel and Ukraine,
+and deep hatred of God's chosen people continues seething in our nation's streets?
+
+Henry Wadsworth Longfellow, one of America's greatest poets, thought the same exactly 160 years ago.
+</item 19>
+
+<item 20>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I think anytime that emotions are heightened, with the holidays certainly being one of those times, our expectations are really high,” she said. “We’re
+expecting it to be this joyful, happy, perfect occasion. So, we sometimes forget that the holidays come with a lot of stress.”
+
+Despite tensions between relatives at the dinner table, that doesn’t mean your relationship shouldn’t be celebrated. Saba Lurie is a licensed marriage and
+family therapist at Take Root Thereapy in California. She explained to The Independent that while there isn’t a right or wrong time to introduce your partner to
+your family, the intentions of such an introduction must be clear. Not only should you have already discussed where your relationship is headed, but you should
+also tell your partner everything they need to know about your family.
+
+“I think you should tell the person why you’re bringing them home for the holidays, so you’re on the same page about the intentions and what’s motivating the
+decision to include,” she said.
+</item 20>
+
+<item 21>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+"Many parents make the mistake of teaching their children that Christmas is a time to make a ‘wish list’ and get what they want," she said.
+
+"Many parents make the mistake of teaching their children that Christmas is a time to make a ‘wish list’ and get what they want."
+
+"This is loads of fun, but can often create a big case of 'the gimmes’ in your children."
+
+She added, "Life is balance. It’s about receiving and giving."
+
+As parents guide their kids to create a wish list, Keeley encouraged them to spend equal time creating a list of gifts to give to family and friends.
+
+"Collaborate with them on what they want to give to the people they love, and encourage them to use their imagination and creative ability, not just your credit
+card," she said.
+</item 21>
+
+<item 22>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feeding friends and family is perhaps one of the most humane acts we can pursue. It’s less about the spirit of giving, and more about admitting that people
+have innate, basic needs, like food and social comfort, and that those needs are best fulfilled when people work in tandem. Honestly, we should try to do it
+more on every other day of the year: The number of people volunteering to help feed the homeless and families in need peaks around November and December, but
+that energy needs to be carried through the preceding 10 months, too.
+
+Spider-Man represents these needs, even though very few of us have to balance photojournalist work, a fraught dating life, and pummeling Dr. Octopus. Peter
+Parker is often the most financially strapped among his Avengers buddies, and frequently the loneliest, too. Those are recognizable traits among many young
+people, even those without radioactive-spider powers. When you’re growing up and trying to figure out the world, it’s easy to feel lost and isolated.
+</item 22>
+
+<item 23>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+But the amount of time they’ve spent separated begs questions about all long-term relationships in general. When is it the time for couples to throw the towel
+in? And when should separations ultimately become the end result that couples have tried to avoid: divorce.
+
+While there’s never a simple answer to the question, relationship experts have discovered the signs that it’s time to keep fighting for the one you love, or
+time to let them go.
+
+Speaking to The Independent, New York City-based relationship expert Susan Winter highlighted the jarring differences between a separation and divorce. When it
+comes to divorce, Hollywood couples can notably get involved in lengthy legal processes, from dividing financial assets to creating child custody agreements.
+Although we don’t know the terms of Jada and Will’s separation, Winter believes that they’re showcasing a non-conventional relationship that’s not familiar to
+the public. Will and Jada’s dynamic includes living in separate homes, but it could be a choice that’s for the better.
+</item 23>
+
+<item 24>
+This Christmas let your home be the centre of the celebrations with these festive ideas from The White Company (The Independent - Life and Style,
+2023-10-13T15:00:43+00:00)
+Embrace the magic of Christmas
+
+(The White Company)
+
+From counting down the days with an Advent calendar, to making your own decorations, or simply digging out your favourite festive fashions, the season is full
+of little moments that make Christmas so unique, so give yourself time to enjoy the wonder of it all.
+
+This Snowy Advent Calendar will appeal to younger members of the family – a charming penguin with 25 numbered pockets that you’ll have fun filling with treats
+and gifts. Made from super soft velboa faux fur, no-one will be able to resist giving it a cuddle when its pockets are finally empty.
+
+You’ll also find an Advent Calendar that comes packed with daily indulgent treats in its 25 drawers. We’ve had a sneak peak and can reveal it contains candles,
+shower gels, nail creams and more seasonal scents and wellness goodies – 25 moments of joy!
+
+These days, everyone loves a Christmas jumper, but you can still keep snug with a touch of elegance while dressing for the season.
+</item 24>
+
+<item 25>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Will Smith has spoken out about his “tumultuous” relationship with his wife, Jada Pinkett Smith, while speaking to a crowd of fans in Baltimore, Maryland.
+
+The 55-year-old actor took the stage at the Enoch Pratt Free Library on 18 October, as he made an appearance at a press event for his wife’s book, Worthy,
+alongside their two children – Jaden, 25, and Willow, 22.
+</item 25>
+
+<item 26>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+That isn’t necessarily a cause for concern, as long as you inform your significant other about the interworkings of your family dynamics.
+
+“I think that we tend to be our best relational self when we’ve really done the work around understanding all of our past relationships,” Zar explained. “You
+can tell your partner: ‘I don’t have a close relationship with my brother, and here’s why. Here are the intentional choices that I’ve made around it.’ Or you
+can say: ‘Here’s my chosen family. These are the people who are important to me.’ Your significant other will see that you’ve been introspective and have
+takeaways around how you’ve navigated your family’s origin.”
+
+As long as you and your partner have discussed your relationship expectations - both before and during the holidays – introducing them to your family may deepen
+your relationship and could be a step in the right direction.
+</item 26>
+
+<item 27>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+“It’s an LAT partnership, meaning ‘living apart together,’” Winter said. “While everybody is at a different point as to why they are doing this, the centre
+point is the same: the preservation of the partnership is paramount. Separations can also be beneficial if both individuals are working on themselves and have
+the mutual goal of reuniting, or making their relationship better. However, that doesn’t necessarily mean that their improved relationship will result in them
+living together again.”
+
+On the other hand, dating coach Jacob Lucas - who’s based in the UK - acknowledged that not all separations end in resolutions. When couples opt not to live
+together anymore, it could create an emotional disconnect between them. If a lack of connection occurred before couples separated, that separation doesn’t
+necessarily make the issues go away. In fact, Lucas believes that in these situations, couples could also be avoiding the inevitable breakup for the sake of
+comfortability.
+</item 27>
+
+<item 28>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Sure, everyone in that room is trying to hold things together. Mary Jane wants to impress Norman, Harry wants to impress Norman and Mary Jane, Peter loves Mary
+Jane but doesn’t dare hurt Harry, and Aunt May is finishing what’s presumably a dope turkey, in an attempt to care for all of them.
+
+It’s the trying that counts: Life can be hard, weird, and cruel, but while sitting down for a meal with our nearest and dearest, maybe for at least a little
+while, we won’t need to have it all figured out.
+
+Not all Spider-Man Thanksgiving dinners end up falling apart, and some succeed in reminding Peter that he isn’t alone. The first season of The Spectacular
+Spider-Man ends with a bang: One of Peter’s closest pals, Eddie Brock, has become Venom, and has threatened everyone Peter holds dear. This comes just after
+Peter himself was infected by the symbiote, and went through the now-iconic throes of pushing everyone away.
+</item 28>
+
+<item 29>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+When it comes to introducing your partner to your family, there’s still some extra planning to be done ahead of time. If you’re travelling this month, you may
+need to decide on sleeping arrangements - as opposed to residing in your parent’s house - in order to minimise family stress.
+
+“It would be really helpful to have conversations beforehand, so it’s clear what you are agreeing or not agreeing to,” Lurie explained. “For example, if your
+family isn’t comfortable with you bringing someone home and sleeping in the same bedroom, then you and your partner may stay elsewhere. But those would be
+conversations that you all need to have together. It really depends on your relationship with your family and with your partner.”
+
+It’s also important to be checking in with your partner while spending time with your family. These check-ins may include some quality time together, so that
+any family drama that may arise isn’t hurting your relationship.
+
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’
+</item 29>
+
+<item 30>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+Between being a mom and a new grad with a salary to match, Plauché says she can barely manage her daily expenses. Still, she feels a responsibility to give her
+family gifts because that’s how they have traditionally shown each other love.
+
+“I don’t want to give my family this message that they’re not loved and it definitely adds a lot of pressure,” she said.
+
+Johnson feels guilty because the holidays are the time she feels she can show her family how grateful she is for them. She has always prided herself on being a
+great gift giver who not only finds something nice but knows how to spot unique and special gifts.
+
+“I think I’m a little embarrassed to tell them that this year I might not be able to be a good gift giver,” said Johnson.
+
+Acknowledging that you’re feeling pressure is a good first step towards making a plan to set expectations and be realistic about what you can spend.
+</item 30>
+
+<item 31>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+While the winter holidays are still weeks away, you could use your Friendsgiving to host your annual gift exchanges.
+
+For example, many friend groups in the US have opted for the budget-friendly activity of Secret Santa, where each person is randomly assigned someone to give a
+gift to. During the exchange, you then reveal to your pal that you’re their “secret Santa,” before giving them their present.
+</item 31>
+
+<item 32>
+Arnold Schwarzenegger, Reese Witherspoon parent with tough love: 'Learning from failure' (FOX News - Entertainment, 2023-10-10T08:00:40+00:00)
+To help keep their kids grounded, Kunis revealed in a 2020 interview on "The Late Show with Stephen Colbert" how she keeps their privilege in check.
+
+"I like to remind them that Mommy and Daddy have money, but they’re broke all the time," she said with a laugh. "That is not their bedroom, it is my bedroom
+that I’m letting them use, so they better take good care of it."
+
+She continued, "I say this in jest, but really they don’t have things … they’re raised on hand-me-downs from girlfriends’ kids’ clothing; we garden."
+
+Kunis noted her kids are lucky to be born into a famous family and wants to ensure they are grateful.
+
+"Our kids are super-fortunate," she said. "Regardless, they were born at the right time to the right people, and I love them, but they’re not going to be
+entitled a--holes."
+</item 32>
+
+<item 33>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"I do remember the day I had to give her up," Geerts told Fox News Digital.
+
+"I got to name her and I got to dress her. There was a lady there to take her away, and she was kind of shaky and it scared me because I didn’t want her to pick
+her up."
+
+Geerts said she thought about her daughter every single year on her birthday.
+
+Now that the two have met, they've been getting together several times a year, either in California or Minnesota.
+
+COUPLE OF 60 YEARS, SEPARATED FOR 215 DAYS AMID PANDEMIC, REUNITES IN TOUCHING VIDEO: 'I MISSED YOU SO MUCH'
+
+And from the first time they met in person, they began discovering things they have in common.
+
+"We both keep things in order," Bazella said. "We have our lists and we like to get things done."
+</item 33>
+
+<item 34>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+With this in mind, parents should avoid "processing their frustration around the holidays audibly around the children," she said.
+
+"The ‘mom brain’ is wired to process problems rapidly and move on to solutions," she said. "The ‘child brain,’ however, is wired to process a problem internally
+and take on the responsibility."
+
+Said Keeley, "Knowing this, make sure you don’t do any ‘grinchy griping’ out loud to the children. You may see it as temporary venting, but they see it as, ‘Mom
+is upset and I’m probably the reason.’"
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+Instead, parents should stay calm, find a reason to be grateful and vocalize it, even when frustrations accumulate.
+
+5. Neglecting the ‘give list’
+
+While building a wish list is fun for kids, Keeley emphasized the moral importance of the "give list."
+</item 34>
+
+<item 35>
+Charlie Sheen is 'single dad' to twins, follows John Travolta, Liam Neeson raising kids solo (FOX News - Entertainment, 2023-12-17T10:00:59+00:00)
+After years of getting along, some tension began to show in 2022. Spears and Federline both shared negative posts on social media about the other, which they
+both deleted. Soon after, Preston and Jayden did a rare interview with ITV to discuss the situation.
+
+While Jayden clarified that there was "no hate" involved towards anyone, he said that "it will take a lot of time and effort" to fix their relationship with
+their mother. He clarified, "I 100% think this can be fixed. It's just going to take a lot of time and effort. I just want her to get better mentally. When she
+gets better, I really want to see her again."
+
+In a message directly to Spears, he said, "I love you a lot, I hope for the best for you. Maybe one day we can sit down like this and talk again."
+
+LIKE WHAT YOU’RE READING?
+</item 35>
+
+<item 36>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+While on his working vacation in Maine, Kalmus invited NBC News for a short visit to the community to see the crisis through the eyes of Americans taking it as
+seriously as anyone.
+
+The Possibility Alliance is an 11-acre homestead that operates without power, running water or a sewer system. The Hughes family, which operates the alliance,
+pays only one monthly bill for landline phone service. (Evan Bush / NBC News)
+
+Detoxifying
+
+About a decade ago, Kalmus ditched a promising academic career in astrophysics to study the physics of climate change instead.
+
+He made other changes too. He stopped flying, became a vegetarian and ditched gasoline-powered cars (he drives a Tesla), cutting his personal emissions by about
+90%, according to his math.
+
+It wasn’t a political statement, but a detoxification.
+
+“Burning fossil fuels started to feel more and more disgusting,” he said.
+
+Ethan Hughes, who operates the Possibility Alliance, rejects globalization and thinks capitalism is a ruinous symptom of “greed and separation.”
+</item 36>
+
+<item 37>
+At Christmas, Don McLean sings the praises of 'Silent Night,' other holiday classics: 'My mother's favorite' (FOX News - Lifestyle, 2023-12-17T09:00:48+00:00)
+McLean said, "I want to share something on this point. Jack Nicholson, who is a very smart man, said something very important here. He said, 'I don't think the
+American public wants to be moved anymore.' He doesn't think people want to feel things. And I am here to tell you: They do feel things, but they don't have
+anybody out there who's giving them anything to feel."
+
+He went on, "It's all spectacle and empty. For example, we have a terribly, terribly empty political situation right now. I've never seen anything like it in my
+life. Everywhere you look, there's an empty suit. Nobody's got any brains. They don't know how to use the English language — it's pathetic."
+
+McLean said that "this is where music comes in. It can help you. It can help you feel better — but we have to get over things.
+</item 37>
+
+<item 38>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“The amount of media and content that we consume, political and cultural, where people get their information … It’s getting more and more intertwined,” Henry
+said. “To be effective ideologically, when it comes to campaigns and these wins that we want, we have to understand how these ecosystems work, and be
+strategically using them or else we risk being left behind.”
+
+Engaging with voters online requires more than just working with popular creators. In Ramaswamy’s case, an endorsement from Jake Paul only drove animosity from
+TikTok viewers. While his older brother, Logan Paul, has made the occasional social commentary on his podcast, the younger Paul has rarely engaged with politics
+or social issues. Jake Paul is generally disliked online for the running list of allegations against him, including sexual assault accusations.
+
+The Paul brothers have a reputation of promoting anyone and anything for a paycheck, and when Jake Paul posted a political endorsement out of the blue, viewers
+immediately questioned how much Ramaswamy paid him.
+</item 38>
+
+<item 39>
+At Christmas, Don McLean sings the praises of 'Silent Night,' other holiday classics: 'My mother's favorite' (FOX News - Lifestyle, 2023-12-17T09:00:48+00:00)
+It can help you feel better — but we have to get over things. We have to get over stuff. Like our grandparents and our parents did — they got over things.
+People are going to experience things, but they need to get over them."
+
+Of the enduring force and affect of music, McLean added, "Think of 9/11. Buildings were toppling over. New York City was closed down. Terrible. But you can't
+close music down. A song exists on a record, of course, but then it exists in the minds of millions of people. And so it's a monument, in a way. It's a very
+powerful thing."
+
+"You can't close music down. A song exists on a record, of course, but then it exists in the minds of millions of people."
+
+And "I realized when I was young guy that I didn't want to be a poet.
+</item 39>
+
+<item 40>
+Jada Pinkett Smith and Will Smith have been separated since 2016 - when should couples just get divorced? (The Independent - Life and Style,
+2023-10-16T13:41:30+00:00)
+“I feel as though Will has a tremendous love and commitment to Jada, as well as to the marriage and the family unit,” she said. “The pride that he takes in
+defending his wife is extraordinary, almost to the detriment of his image, at times.”
+
+Ultimately, the public will never fully know what “heavy-duty work” Will and Jada are doing in their relationship, and according to Winter, it’s not necessarily
+any of our business. Still, she believes that their choice to separate is something fluid and outside of the traditional marriage design - an evolving model
+that could also come to serve other couples. If Will and Jada have been spending seven years apart as a married couple, why would they decide to go back to
+living in the same household?
+
+“They’re in the rough with a machete, carving a new path for themselves,” Winter said. “Why would they say: ‘Hey, let’s go back to the house and just relax?’
+</item 40>
+
+<item 41>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"Merry Christmas" has a whole new meaning for a woman who gets to spend holiday time with her birth mother after a nearly 40-year search that revealed she may
+have been switched at birth.
+
+"It means the world for me to be with my mom at the Christmas holiday," Diane Bazella, 64, of Minnetonka, Minnesota, told Fox News Digital in a phone interview.
+
+"It’s all about love," she added. "My prayers have been answered, and my heart is full. We both hope we have many more Christmases to spend together."
+
+COUPLE ADOPTS FLORIDA BABY WHO WAS ABANDONED IN THE WOODS ABOUT AN HOUR AFTER HER BIRTH
+
+Enjoying Christmastime with her oldest child — and only daughter — has been a long time coming for Sherri Geerts, 81, of Sunnyvale, California, Geerts told Fox
+News Digital.
+
+"It’s a story with a good ending," Geerts told Fox News Digital.
+</item 41>
+
+<item 42>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+says McDonald. “How do we do this and have a family if the whole business is relying on us showing up together at the same time?”
+
+Advertisement
+
+The only way to ensure it wouldn’t be an issue was to create a contingency plan. In their case, that plan involved expanding Shameless Media by growing the team
+and up-skilling junior employees. While neither Andrews nor McDonald sees kids in her near future, they found it reassuring to work towards a solution.
+Regardless of the topic of conversation, whether it be personal or work-focused, the two try to be completely honest with each other. “We realised with every
+honest conversation we had, our relationship was so much better – it was far more intimate,” says McDonald. The relationship McDonald and Andrews have with
+Shameless listeners is also based on trust. Their podcast episodes are meticulously well-researched, book recommendations are solid and the advice given via
+their Ask Shameless newsletter aims to always hit the mark.
+</item 42>
+
+<item 43>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Marvel built its comic book revolution on the back of one idea: rendering colorful superheroes as relatable. In the mid 20th century, DC do-gooders were
+essentially square-jawed Sunday school teachers, which let Marvel corner the market on heroes with human depth and fragility. The Fantastic Four were vulnerable
+to insecurity and in-fighting. The X-Men represented the cost of bigotry on a wide scale.
+
+But Spider-Man represented this new wave best. Consumed by youthful everyman angst and desperate to find balance in his life, Spider-Man is broadly sympathetic.
+We identify with his struggles and his little glimmers of connection and triumph — which makes him the perfect superhero for Thanksgiving. And Spider-Man
+writers know it.
+
+Thanksgiving has a complicated history, tied to the roots of American colonialism, and more recently processed through a lens of joyful capitalism. But feeding
+friends and family is perhaps one of the most humane acts we can pursue.
+</item 43>
+
+<item 44>
+The best video games of the year so far (Polygon, 2023-10-31T16:30:45+00:00)
+At its best, you really can feel the Force around you. —CA
+
+31. Connections
+
+Developer: The New York Times
+
+Where to play: Android, browser, and iOS
+
+After the acquisition of viral hit Wordle, The New York Times’ Crossword ecosystem leveled up to full-fledged attention competitor — NYT is a media company with
+a gaming platform. And its staff of puzzle writers and editors are not stooping to mind-numbing mobile content to keep the expansion going. Connections, its
+latest title to pair well with morning coffee, is one of the year’s best games.
+
+Connections offers you a grid of 16 words and a mission: Detect the common threads between four different sets of words without embarrassing yourself. The
+grouping logic ranges from simple (“animals”) to silly (“synonyms for farting”) to sneaky (“countries when the letter ‘A’ is added”).
+</item 44>
+
+<item 45>
+The best tabletop RPGs we played in 2023 (Polygon, 2023-12-13T15:00:00+00:00)
+Here’s what we found.
+
+City of Winter
+
+Linda Codega, Ennie Award-winning entertainment journalist
+
+My friends and I still talk about the weekend we spent playing City of Winter. With lightweight rules but a heavy emphasis on the kind of ephemera usually
+reserved for much crunchier games, creating space for this game is almost as important as who you chose to play it with. Characters travel along a cloth map
+that illustrates a landscape with only barest indications of topography; the focus instead relies on themes of assimilation, diaspora, and — most importantly to
+the narrative — baggage. As a family of immigrants (bound by blood or by choice), players describe their home, their traditions, and then, as a darkness comes
+from the west side of the map, they leave it all behind, choosing what traditions and rituals they pick up from the places they visit and what they hold on to
+from their homeland.
+</item 45>
+
+<item 46>
+8 authors and their 8 gift book picks for this holiday season (TechCrunch, 2023-12-01T16:05:15+00:00)
+Wiggins and Jones cover the idea of data from the advent of statistics through today. The book is well-researched, as you’d expect from a couple of Columbia’s
+top professors, but it’s also an interesting and engaging read. It’s a perfect gift for anyone who wants to know how our data-driven society got to where we are
+today and where it might take us tomorrow.
+
+Barr Moses
+
+Barr Moses is the CEO and co-founder of Monte Carlo, a data observability startup. She also co-wrote a technical book on the topic: O’Reilly’s “Data Quality
+Fundamentals: A Practitioner’s Guide to Building Trustworthy Data Pipelines,” sharing advice on achieving reliable data at scale.
+
+Book recommendation: “Dare to Lead: Brave Work. Tough Conversations. Whole Hearts,” by Brené Brown
+
+Reading a Brené Brown book is like tackling the Sunday crossword puzzle – equal parts challenging and rejuvenating – and Dare to Lead is no different.
+</item 46>
+
+<item 47>
+Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages (FOX News - Entertainment,
+2023-11-27T11:00:44+00:00)
+The rule that works for them? "It’s always family first."
+
+CLICK HERE TO SIGN UP FOR THE ENTERTAINMENT NEWSLETTER
+
+WATCH: KEITH URBAN TALKS OPENING THE 2023 ACM AWARDS AND HIS MARRIAGE WITH NICOLE KIDMAN
+
+"It's balanced, so it means it goes out of balance sometimes, and we just put it back in balance," Urban told Fox News Digital ahead of the 2023 ACM Awards this
+year. "It's never perfectly in balance, but we get it back on track."
+
+Kidman and Urban, both Australian, met in 2005. Kidman had previously been married to actor Tom Cruise, with whom she adopted two children over the course of
+their marriage.
+
+The lovebirds are parents to Sunday Rose and Faith Margaret.
+</item 47>
+
+<item 48>
+At 37, Alexandra found herself broke, heartbroken and living with her parents (The Age, 2023-11-25T18:00:00+00:00)
+We’ve also worked out our perfect system for sharing the load; they’ll cook dinner for half the week, for example, and we’ll cook the other half, so the
+division of labour has been a positive experience. Loading The most challenging aspects? They’re retired, so they’re home a lot. And I work from home, so it’s a
+little tougher for me than it is for Dane, who works in an office. I get lots of invitations from my mother-in-law to join her and her friends for lunch or
+coffee when I’m supposed to be working, which is probably not the worst thing to complain about. Despite our love for his parents, the anxiety Dane and I have
+been feeling has increased as time’s gone by. So much so that we’ve just agreed to move into a friend’s holiday home, sight unseen, even though we’ll have to
+move back in with Dane’s parents during the times the friend wants to use it, such as at Christmas.
+</item 48>
+
+<item 49>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+Aunt May has just gotten out of the hospital, and even noted jerk “Flash” Thompson has given Peter hell for how awful he’s been acting.
+
+Peter, attempting to make things right, opts to cook the Thanksgiving meal all by himself, but mostly succeeds in ruining the kitchen. No worries — Gwen Stacy
+and her father, along with a recuperating Aunt May and her doctor, all help out, and the episode concludes with a pleasant dinner. There are no big turns or
+twists, aside from Aunt May revealing that she’s publishing a cookbook. It’s just simple, earned solace in a life marked by chaos. Peter even gets a kiss from
+Gwen on his porch, a sequence conducted with a John Hughes sense of satisfying romantic flair.
+
+Various Spider-Man comics have also dabbled in seeing what Thanksgiving looks like when you’re young and arachnid-themed, but real life has associated
+Spider-Man with the holiday, too. Spider-Man is the only Marvel character to rate a balloon in the Macy’s Thanksgiving Parade.
+</item 49>
+
+<item 50>
+Arnold Schwarzenegger, Reese Witherspoon parent with tough love: 'Learning from failure' (FOX News - Entertainment, 2023-10-10T08:00:40+00:00)
+I want to know who they’re with, where they’re going. Even now that they’re driving, I want them to text me when they arrive and when they’re heading home."
+
+LIKE WHAT YOU’RE READING? CLICK HERE FOR MORE ENTERTAINMENT NEWS
+
+Bure explained that they "work hard to keep our communication open and talk through any situation" and they are "always willing to listen."
+
+"But I don’t always say yes," she added. "My goal as a parent is not to make my kids happy but to guide them to be respectful, curious, responsible, resilient,
+kind, giving and thoughtful adults."
+
+NATASHA BURE PRAISES MOM CANDACE CAMERON FOR HER FAITH, BEING 'BOLD' AMID BACKLASH
+
+Kristen Bell and Dax Shepard
+
+Kristen Bell and Dax Shepard share two daughters together, Lincoln, 10, and Delta, 8, and have been married for 10 years.
+</item 50>
+
+<item 51>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Going hiking
+
+Depending on the weather outside, your plans for Friendsgiving could consist of going on a hike. Whether it’s at your local park or a trail that’s an hour or so
+away from you, hiking is the perfect daytime activity for you and your friend group – no matter how big or small.
+
+Decorating or baking sweets
+
+(Getty Images)
+
+Decorating or baking some sweet treats is another easy indoor activity. Whether you make a pie from scratch or simply frost your ready-bake sugar cookies, it’s
+something interactive for you and your pals to do together.
+
+You can also opt for treats that are on theme with the fall and winter seasons, from baking an apple crisp to decorating gingerbread cookies.
+
+Running a Turkey trot
+
+Whether it’s before, during, or after Thanksgiving Day, many cities in America host an annual Turkey Trot run.
+</item 51>
+
+<item 52>
+Mysterious dog respiratory illness: What to know (Yahoo News, 2023-11-21T20:37:35+00:00)
+“Or hire a dog walker,” he added. “It might not be perfect, but it’s better than nothing. Also, you might want to consider having Thanksgiving at home.”
+
+Ultimately, your dog might be happier at home with a house sitter or a dog walker stopping by multiple times during the day than going to a kennel, Jandrey
+said.
+
+“It’s best to leave them in their own environment,” he added.
+
+This article was originally published on NBCNews.com
+</item 52>
+
+<item 53>
+Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages (FOX News - Entertainment,
+2023-11-27T11:00:44+00:00)
+Even if you have a problem, if you have a great sense of humor, if you say something you can’t take back [you] usually have some crazy way of getting out of
+it," Parton remarked.
+
+NICOLE KIDMAN, KEITH URBAN OSCARS PDA HEATS UP RED CARPET
+
+Keith Urban and Nicole Kidman
+
+Keith Urban and Hollywood actress Nicole Kidman have a few rules that keep their union strong.
+
+While the couple have been married for 17 years, Urban gave a glimpse into their long-lasting relationship and shared that it is not always easy managing his
+career with his personal life.
+
+The rule that works for them? "It’s always family first."
+</item 53>
+
+<item 54>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+Months later, after returning “kicking and screaming” to the “quote-unquote real world,” Kalmus was planning a return trip to the Possibility Alliance over the
+winter holidays.
+
+He was still mulling why the Possibility Alliance’s “low energy” lifestyle had felt so meaningful and what was missing from modern life.
+
+Ethan Hughes his goats out to
+
+“Everything is too fast,” Kalmus said. “It’s obvious to a lot of people, but it’s a new revelation to me. There’s nothing more important in life than
+relationships.”
+
+This article was originally published on NBCNews.com
+</item 54>
+
+<item 55>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+For the occasion, everyone can bring a different type of wine – from red to white – and give a few sips from each bottle a shot. If you’re someone who’s a big
+fan of wine, you could even end up discovering a brand that becomes your new favourite drink. When hosting the activity, you could make your own charcuterie
+board – filled with different meats and cheeses – to pair with wine.
+
+Playing a football game
+
+If your friends have a fun, competitive side, you can take part in another outdoor activity. You and your friend group can host the event in any big outdoor
+space you’d like, whether it’s a local park or your pal’s backyard.
+
+In addition, football meets the typical theme of Thanksgiving, as a beloved tradition on the actual holiday is to watch a sports game with the family.
+
+Hosting an early holiday gift exchange
+
+Who’s to say that you can’t give your gifts to your friends a bit early this season?
+</item 55>
+
+<item 56>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+Pressures are high for parents and caregivers around the holidays.
+
+That means there’s room for error, according to parenting expert Hannah Keeley, who offered up some of the biggest mistakes parents tend to make at
+Christmastime.
+
+In an email she sent to Fox News Digital, Virginia-based Keeley identified the top five holiday blunders that parents often make.
+
+HOME FOR THE HOLIDAYS? HERE'S HOW TO AVOID STRESS AROUND FAMILY MEMBERS, ACCORDING TO EXPERTS
+
+Here are the mistakes Keeley thinks parents should try to avoid.
+
+Diving right in …
+
+1. Creating unrealistic expectations
+
+Parents who make a "must-do" Christmas list that’s a "mile long" at the "first sniff of peppermint mochas" are perhaps setting themselves up for failure — and
+Keeley said she empathized with this instinct.
+
+Doing the most could lead to a season of disappointment, she warned.
+
+CHRISTMAS TREE SHOPPING?
+</item 56>
+
+<item 57>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+“We love our family and we love each other. It’s more of a life partnership," Jada explained. "Now, 10 years from now, Hoda, who knows?”
+
+During a 2018 episode of her Facebook Watch series, Red Table Talk, Jada doubled down on her stance about divorce, as she recalled the the hard conversation she
+had with Will about the topic before they got married.
+
+(Getty Images)
+
+“I told Will from the gate, I said let me tell you something: ‘If you marry me, know this: we’re gonna be together. We’re going to be under the same roof,’” she
+said. “For me personally, I’m not mature enough to have a divorce, I’m just not. I don’t think I would ever be mature enough, I don’t.”
+</item 57>
+
+<item 58>
+Are NBA Christmas Day Games a Better Tradition Than NFL Thanksgiving Day Games? (Essentially Sports, 2023-12-25T21:27:33+00:00)
+This season, NFL’s Thanksgiving Day games created history. Across all the three games, the NFL recorded an average viewership of 34.1 million. These figures
+surpassed last year’s record viewership of 33.6 million. Furthermore, the combined unduplicated audience for all three games reached 133 million, marking the
+second-highest total audience on Thanksgiving, surpassed only by last year’s numbers.
+
+These figures paint a pretty one-sided picture, but the choice is much more nuanced. Comparing the NBA Christmas Day Games and NFL Thanksgiving Day Games comes
+down to personal preference. Each tradition holds its own significance, adding to the diverse fabric of American sports culture. Whether one prefers the slam
+dunks and three-pointers of the NBA or the hard-hitting action on the football field, both traditions offer a festive and entertaining way to celebrate holidays
+with family and friends.
+
+Are the NFL’s new decisions threatening the NBA’s Christmas Day dominance?
+</item 58>
+
+<item 59>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"We have our lists and we like to get things done."
+
+CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER
+
+"I also remember the first time we met — ee were getting ready to go out and she dug in her purse and pulled out all these tubes of lipstick. I said, ‘Oh my
+God. You've surpassed me.’ We both constantly put on lipstick. It's so funny."
+
+Bazella continued, "We both like [garden] gnomes and we’re kind of collecting them now. Our mannerisms are similar. We have the same sense of humor."
+
+"One of the main dreams is that we stay healthy and I live long enough … so we can make up some of this time." — Sherri Geerts
+
+Bazella said she has met all four of her siblings — and also has formed a relationship with her birth father, Victor Rebeck, 84.
+</item 59>
+
+<item 60>
+At Christmas, Don McLean sings the praises of 'Silent Night,' other holiday classics: 'My mother's favorite' (FOX News - Lifestyle, 2023-12-17T09:00:48+00:00)
+His touring schedule in the year ahead may take him to the Far East, he suggested.
+
+"As you may have remembered, the president of South Korea [Yoon Suk Yeol] sang ‘American Pie’ to our president in the White House this year — it was a big
+story, and he got a guitar signed by me," McLean said of the state dinner event held by the Biden White House on April 26.
+
+McLean's recent tours over the past two years have celebrated the now 50-plus anniversary of "American Pie," the 8½-minute folk-rock ballad and cultural
+touchstone about the loss of innocence among the early rock ‘n’ roll generation.
+
+Music "can help you. It can help you feel better — but we have to get over things. We have to get over stuff." — Don McLean to Fox News Digital
+
+After spending eight weeks on the charts, the song hit No. 1 on the Billboard chart on Jan.
+</item 60>
+
+<item 61>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+MICHIGAN SIBLINGS REUNITE WITH THEIR 3-YEAR-OLD BROTHER AFTER HIS 6-MONTH HOSPITAL STAY FOR CANCER TREATMENT
+
+"I was shocked and just so confused," Bazella said. "But at the same time, I wasn’t."
+
+"When I met my mom, I truly felt unconditional love." — Diane Bazella
+
+Over the next four years, Bazella reached out to people who were listed on her genealogy report, trying to figure out how they could be related, but with no
+success.
+
+Finally, one woman she contacted, who showed up as a close DNA match, emailed her back.
+
+"She reached out and said, ‘I want to figure this out with you,’" Bazella said.
+
+It took the two women more than a year to unravel the story.
+
+"We were thinking [that] maybe I had a different birth father … and that maybe it was one of her relatives," Bazella said.
+</item 61>
+
+<item 62>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"It’s a story with a good ending," Geerts told Fox News Digital.
+
+For Bazella, it appeared the search for her birth parents would not be an ordinary one — but rather an epic journey with numerous twists and turns.
+
+TEXAS SIBLINGS REUNITE IN EMOTIONAL VIDEO AFTER BROTHER SAVES 2-YEAR-OLD SISTER FROM DROWNING
+
+The process took grit and determination, research and genealogical skills and most of all, a deep-rooted desire to find out where she belonged, Bazella said.
+
+‘Spent a lot of time’
+
+Bazella first found Geerts, her birth mother, in May 2021, and they met in person in 2022.
+
+But it was only recently that she actually found the courage to share the story of her decades-long search, she said.
+
+"I’ve spent a lot of time dealing with the healing part of it," Bazella said.
+</item 62>
+
+<item 63>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+CHRISTMAS TREE SHOPPING? HERE'S HOW TO SELECT THE PERFECT ONE FOR YOU
+
+"Aside from the time I asked my husband to turn our bathroom into a Hallmark movie and he actually pulled it off, unrealistic expectations around Christmas
+usually just set up moms for inevitable disappointment," Keeley said.
+
+"Beautiful family Christmas memories can be made without the drive-in ‘Grinch’ movie, the tacky light tour and the neighborhood Christmas cookie bake-off all in
+the same weekend."
+
+Instead, parents should "take it easy and leave plenty of room to relax," said Keeley.
+
+2. Using Christmas as a bribe
+
+While it’s easy for parents to use a message of "be good or else" as a parenting tactic before Santa Claus comes down the chimney, Keeley said this approach
+lowers parenting standards.
+
+"I refer to this tactic as ‘stooping to Santa,’" she said. "Don’t lower your parenting standards to bribery, especially around a season and a character that is
+supposed to symbolize peace and goodwill on Earth."
+</item 63>
+
+<item 64>
+Jonathan Roumie on faith and prayer life during Advent and always: 'God hasn't forsaken us' (FOX News - Lifestyle, 2023-12-05T09:00:54+00:00)
+HALLOW APP ANNOUNCES COLLABORATION WITH LIAM NEESON FOR NEW ADVENT SERIES THIS YEAR
+
+People can "disconnect from the chaos of the real world, the divisiveness, the anxiety" that exists, said Roumie, by connecting with Jesus through prayer.
+
+They can find "peace and a deeper relationship with Christ, and I think that's really the goal of the prayer challenge," he said.
+
+Roumie said that building a habit of prayer "is easier than people think."
+
+He added, "As you consistently tap into that habit, you find your relationship with Jesus growing deeper and deeper, just automatically. And as a result, you
+then experience much more peace, tranquility and serenity in your life and the ability to really muscle through some of the most difficult obstacles and
+challenges that life can throw at you," he said.
+</item 64>
+
+<item 65>
+Arnold Schwarzenegger, Reese Witherspoon parent with tough love: 'Learning from failure' (FOX News - Entertainment, 2023-10-10T08:00:40+00:00)
+The couple has been honest about the trials and tribulations of raising their kids, especially to keep them grounded.
+
+"It’s very important to me that they share a bedroom. I think their lives will be easier than most other people’s on the planet, and to develop a good
+character, it’s important to always be going through something," Bell told Self in 2020.
+
+"I like the fact that they will have to figure out how to share a bedroom, figure out how to share your closet, figure out how to share your space," she
+continued. "If that’s the worst thing about your life, that you have to share a bedroom with your sister, you’re going to be OK."
+
+CLICK HERE TO GET THE FOX NEWS APP
+
+Bell also laid out her strict screen-time rules, but she admits they get a little lax on the weekends.
+
+"They’re not allowed to play with our phones or have any screens really.
+</item 65>
+
+<item 66>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+But he found himself daydreaming of a simpler life, where he could keep bees, grow vegetables and press cider to drink on a Friday night and live closer to the
+land.
+
+Visiting the Possibility Alliance, a sprawling 11-acre homestead filled with fruit trees, goats, chickens and a garden, allowed him to scratch an itch he’d
+entertained for much of his adult life.
+
+The Hughes family, which operates the homestead, and its guests live largely without electricity or modern technology.
+
+The family of four doesn’t fly because of climate concerns and also doesn't own a car. Their main use of fossil fuels is to take passenger trains to climate
+protests.
+
+They try to eschew capitalism and have built, instead, a "gift economy" where resources are shared and skills are traded among neighbors in this tiny corner of
+Maine. They grow much of their own food, hold trainings for climate protesters and plan to host refugees as climate disasters worsen.
+
+Nights are illuminated by candlelight. Neighbors drop by without notice.
+
+“We’ve created what existed 100 years ago,” Ethan Hughes said.
+</item 66>
+
+<item 67>
+Are NBA Christmas Day Games a Better Tradition Than NFL Thanksgiving Day Games? (Essentially Sports, 2023-12-25T21:27:33+00:00)
+ADVERTISEMENT Article continues below this ad
+
+The Milwaukee Bucks and the New York Knicks get the festive proceedings underway at Madison Square Garden. Furthermore, the Warriors are scheduled to face the
+reigning champions, the Denver Nuggets. Apart from these two intriguing matchups, the league has also scheduled Lakers vs Celtics, Heat vs Sixers, and Suns vs
+Mavs for Christmas. With only a few hours left until the tip-off, fans can kick back and enjoy the NBA with friends and family on the joyous occasion that is
+Christmas.
+
+Watch this Story: Chris Paul annihilates Scott Foster after the controversial call, ‘Don’t use a tech to get your point across’
+</item 67>
+
+<item 68>
+The best shows to stream in December (The Sydney Morning Herald, 2023-11-30T22:00:00+00:00)
+The question is whether it’s ludicrous fun or just sappy shenanigans? Wahlberg’s Dan Morgan, who has to go on a Las Vegas road trip with his blissfully unaware
+family after his cover is blown, dispatching goons while carrying his youngest in a BabyBjorn and stunt driving in a family minivan are positive signs. Michelle
+Monaghan (True Detective) plays Mrs Morgan, who quietly thinks her husband is a little vanilla, and the fine Irish actor Ciaran Hinds (There Will Be Blood) goes
+full villain. November highlights: The Buccaneers placed a modern teen lens on Edith Wharton’s period marital drama, while Godzilla and pals returned for
+Monarchy: Legacy of Monsters and space race alternate history For All Mankind reached the 21st century.
+
+Advertisement
+</item 68>
+
+<item 69>
+Arnold Schwarzenegger, Reese Witherspoon parent with tough love: 'Learning from failure' (FOX News - Entertainment, 2023-10-10T08:00:40+00:00)
+SARAH MICHELLE GELLAR, FREDDIE PRINZE JR REVEAL SECRETS BEHIND THEIR LONG-LASTING MARRIAGE
+
+"They know they can’t break [those rules]," he said. "Friendships come and go. I tell my kids all the time that family is forever. So, we have rules, and
+they’ve got to follow [them]."
+
+Gellar told Us Weekly in 2020 that as parents their "expectations are a little higher than most."
+
+"I think [our children] know what the rules are," she said at the time. "We have [family dinner] as many nights as we can. We have no phones at the table. We
+sit, we all have dinner together."
+
+Ashton Kutcher and Mila Kunis
+
+Ashton Kutcher and Mila Kunis have been married since 2015 and share two children, daughter Wyatt, 9, and son Dmitri, 6.
+</item 69>
+
+<item 70>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+These parents, said Keeley, "subconsciously compensate for a lack of self-worth and validate their role as a [parent] by creating too much busyness in their
+life."
+
+She said that "all that results from a mom who runs herself into the ground is just that: a mom who runs herself into the ground."
+
+DELICIOUS CUT-OUT SUGAR COOKIES FOR CHRISTMAS: TRY THE SIMPLE RECIPE
+
+She added, "If this is you, take a breath, put away the to-do list and ask yourself, ‘What would I have to believe in order to have a relaxed and joyful
+Christmas?’ Maybe we can use that as a guide to sit back and relax."
+
+4. Griping like the Grinch
+
+Parents should be sure not to be "grinchy" around their kids amid holiday stress, Keeley said.
+
+Children up to the age of 9 process information egocentrically, she said — which means if there’s a problem, they see themselves as the cause.
+</item 70>
+
+<item 71>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+She’s been looking into gifting a used book to her dad and because she loves painting and already has all the tools, she’s working on a painting for her mom.
+
+Other affordable alternatives can be sending hand written notes to your loved ones, buying from thrift stores, hosting a cookie bake off or simply spending
+quality time with your family.
+
+___
+
+The Associated Press receives support from Charles Schwab Foundation for educational and explanatory reporting to improve financial literacy. The independent
+foundation is separate from Charles Schwab and Co. Inc. The AP is solely responsible for its journalism.
+</item 71>
+
+<item 72>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+However, during an appearance on the Today show on 16 October, Jada clarified to Hoda Kotb that she and the Suicide Squad actor are “working hard” and are
+“concentrating on healing” to get their relationship to a better place.
+
+“There’s no finding another great love, and I think that’s the point,” she said. “It’s like we are in a place now that we are in a deep, healing space. And we
+are really concentrating on healing the relationship between us.”
+
+The Girls Trip star continued: “There’s no divorce on paper. We really have been working hard. That’s the whole thing. We are working very hard at bringing our
+relationship together. Back to a life partnership.”
+</item 72>
+
+<item 73>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Prior to sharing the video, Smith showed his support for his partner and her success in a statement toThe New York Times. During the interview, the outlet noted
+that Smith said his wife’s memoir “kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” he added.
+
+In an interview with People published on 10 October, Jada first revealed that she and her husband were living separately. “We’ve been doing some really
+heavy-duty work together,” she said. “We just got deep love for each other and we are going to figure out what that looks like for us.”
+</item 73>
+
+<item 74>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+In the last few years I’ve witnessed friends and family dashing to help parents with poorly designed online banking systems, unruly fridge alarms, “upgraded”
+software that has changed beyond recognition, apps and phones that don’t function as expected, and numerous other technical challenges.
+
+Frankly, technology is often baffling to me, too. Luckily I have kids who delight in parenting me – advising, explaining and guiding me on all things digital.
+But studies suggest that this helpfulness might not be as beneficial as we think. Grappling with new and baffling things forces the ageing brain to work in
+novel ways. A recent study from the University of Texas involving more than 200 elderly adults found that those who engaged with technology had better cognition
+and memory than their non-engaging peers.
+
+Digital engagement – whatever the device – protects the brain
+
+Even the stress we experience while battling with our computer can be helpful, sharpening our mental acuity. The study authors concluded that digital engagement
+– whatever the device – protects the brain.
+</item 74>
+
+<item 75>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+Or, it could have a simpler meaning - the holidays being an opportunity to bring two important people in your life together and get to know each other.
+
+Regardless of what your relationship with your family is like, deciding how and when to introduce your partner to your loved ones is entirely up to you. “I
+don’t think there’s ever going to be a perfect time for folks,” Lurie said. “I think it’ll depend on the relationship between the two partners and also on the
+family dynamics, and what feels more comfortable for all parties. I don’t think there’s going to be a right or wrong time for the introduction.”
+</item 75>
+
+<item 76>
+Will Smith speaks to crowd about ‘tumultuous’ relationship with Jada Pinkett Smith (The Independent - Life and Style, 2023-10-19T16:16:20+00:00)
+Speaking to the crowd, Will said that Jada’s positive relationship with Zampino allowed all three of his children the chance to grow up together.
+
+“Can you show up and love somebody for the rest of your life, even when you don’t agree with them?” he asked. “Jada is the best friend I have ever had on this
+planet and I am going to show up for her and support her for the rest of my life.”
+
+This isn’t the first time that Will has opened up about his relationship, as it’s continued to make headlines. Earlier this week, he appeared to mock the
+publicity storm surrounding him and Jada in a video titled “Official statement” shared on Instagram. “So, here’s the thing. My opinion is... uh…” the actor
+said, before sneezing into the crook of his arm. As he sneezed, the video comically zoomed out to show several different landscapes including lakes and
+mountains.
+</item 76>
+
+<item 77>
+Every movie and show coming to Netflix in November (Polygon, 2023-11-01T12:00:00+00:00)
+Over the course of two-episodes, discover your new favorite comedian.
+
+Available Nov. 29
+
+American Symphony (Netflix Documentary)
+
+Bad Surgeon: Love Under the Knife (Netflix Documentary)
+
+From Netflix: This shocking docuseries about one of the biggest frauds in modern medical history exposes a thoracic surgeon famous for groundbreaking
+achievements in the field of regenerative medicine.
+
+Available Nov. 30
+
+The Bad Guys: A Very Bad Holiday (Netflix Family)
+
+From Netflix: Mr. Wolf and his crew of animal outlaws realize they’ll need to restore the city’s Christmas spirit to keep their annual holiday heist afloat.
+
+Family Switch (Netflix Film)
+
+From Netflix: Jess and Bill Walker are doing their best to keep their family connected as their children grow older, more independent, and more distant. When a
+chance encounter with an astrological reader causes the family to wake up to a full body switch, on the morning of the most important day of each of their
+lives, can the Walkers unite to land a promotion, college interview, record deal and soccer tryout?
+</item 77>
+
+<item 78>
+How the conspiracy-fueled Epoch Times went mainstream and made millions (Hacker News, 2023-10-16T03:41:24+00:00)
+Through the early aughts, The Epoch Times grew from an online effort to a weekly physical newspaper, with a home base in New York and a TV production company,
+New Tang Dynasty Television. It raised money from followers and was staffed by unpaid volunteers. It ran aggregated articles on international issues from Voice
+of America next to Thanksgiving Day explainers, dispatches from Falun Gong parades, and exposés on atrocities alleged to have been committed by the Chinese
+Communist Party.
+
+By 2019, it had gone mostly digital and was spending millions of dollars on creating a network of Facebook pages and groups and running aggressive pro-Trump ad
+campaigns. The move toward explicit support of Republicans, despite Li’s teachings to stay away from U.S. politics, was foreshadowed by Li’s comments at a Falun
+Gong conference a year before.
+
+Li said that Falun Gong’s media ought to put a “constructive” spin on the news, to advance the group’s aims.
+</item 78>
+
+<item 79>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+The study authors concluded that digital engagement – whatever the device – protects the brain. These findings reflect earlier studies that discovered that
+older people who made active use of technology were less likely to get dementia.
+
+Dr Eamon Laird, researcher in health and ageing at Limerick university, agrees that we should be encouraging older parents to try new things. And the further
+out of their comfort zone they feel, the better. “It’s always good to keep the mind active and fresh,” he told me. “New challenges can help build and maintain
+new brain connections and can be good for brain and overall health.”
+
+If older people use technology to keep in touch with extended family and friends, that’s a double whammy. When my 84-year-old mother recently joined Instagram,
+she not only expanded her grey matter but she also found an effective means of staying in touch with her grandchildren.
+</item 79>
+
+<item 80>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family.
+However, it’s likely you’ve found yourself mulling over an array of reasons why the holidays may not be the right time for such an introduction.
+
+The holiday season is often perceived as the most wonderful time of year, but that’s not necessarily the case for everyone.
+</item 80>
+
+<item 81>
+26-year-old with $145,000 in student debt can't afford Christmas. She's giving 'affordable gifts or combining gifts with my older sister' (Fortune,
+2023-12-23T15:13:12+00:00)
+If you are looking for a budget template, Microsoft Office offers a holiday spending-focused version.
+
+COMMUNICATE WITH YOUR LOVED ONES
+
+If you’re experiencing a lot of financial pressure this holiday season, Alev recommends that you try to communicate your feelings to your loved ones.
+
+“One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments,
+so bring things up,” Alev said.
+
+Sharing your financial struggles can be hard. If you want to talk but don’t want to share every detail of your financial struggles, that’s okay. Ultimately,
+what you want is for your loved ones to understand how you’re feeling.
+
+Plauché just recently started sharing her money worries with her family.
+
+“I have been open with my family, just that I’m not going to be able to give gifts that year,” she said.
+
+EXPERIENCES VS.
+</item 81>
+
+<item 82>
+Country music couples Tim McGraw, Faith Hill and Garth Brooks, Trisha Yearwood share tips to lasting marriages (FOX News - Entertainment,
+2023-11-27T11:00:44+00:00)
+After her recovery, the "El Shaddai" crooner shared the stage with her husband Gill during the Christmas season for several performances. Grant and Gill have
+been married for 23 years.
+
+CHRIS STAPLETON EXPLAINS HOW HE AND WIFE KEEP ROMANCE ALIVE, ‘OVERCOME OBSTACLES’ TOGETHER
+
+Chris Stapleton and Morgane Stapleton
+
+Chris Stapleton revealed a few tips about his marriage to his wife of 16 years, Morgane Stapleton.
+
+"The key to a successful marriage, I’d say communication," Stapleton, 45, told Fox News Digital at the 2023 Rock & Roll Hall of Fame induction ceremony.
+
+"We’re always working on that… love and kindness and patience. I think you have those things in play, hopefully, you can overcome whatever obstacles."
+</item 82>
+
+<item 83>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+And Sherri Nordlie Geerts was her mother.
+
+Bazella emailed Geerts and they started corresponding regularly.
+
+"I lost 39 years … There’s a lot of grieving with that." — Diane Bazella
+
+"We were slowly getting to know each other through email," Bazella said. "She had a lot on her plate as a caregiver to her husband, so we were slowly
+establishing our mother-daughter relationship."
+
+A LIFE IN PICTURES: FROM BIRTH INTO ADULTHOOD, A FATHER TAKES HIS SON’S PHOTO EVERY DAY FOR DECADES
+
+Finally, on Christmas Day 2021, Bazella and Geerts heard each other’s voices over the phone for the first time.
+
+They met in person in July 2022.
+
+Since then, they have been talking on the phone frequently, sometimes for hours at a time.
+
+‘Same sense of humor’
+
+During their conversations, Geerts opened up about having a baby when she was just 18 years old.
+</item 83>
+
+<item 84>
+Thanksgiving is Spider-Man’s holiday (Polygon, 2023-11-23T16:04:00+00:00)
+But feelings of loneliness spike during the holidays, meaning that there’s a good chance you’ll feel even more like Peter Parker when late November rolls
+around.
+
+It’s what makes the Thanksgiving scene in the 2002 Spider-Man film so engaging. That whole movie is an exercise in heart-on-your-sleeve sweetness. Everyone
+who’s seen it knows the Thanksgiving dinner rapidly descends into chaos, with Norman Osborn ominously sticking his fingers into Aunt May’s sweet-potato
+casserole, figuring out Spider-Man’s secret identity, and delivering a grossly sexist diatribe to his son Harry, leaving Harry and Mary Jane at odds with each
+other. Aunt May and Peter clearly wind up with a ton of leftovers after everyone else storms out.
+
+But for Peter, who’s just lost his Uncle Ben and has been facing the initial trials of being Spider-Man, there’s a nice moment of personal respite at the
+opening of that scene, where he walks into a room where he knows he’s loved, bearing an offering of cranberry sauce,.
+</item 84>
+
+<item 85>
+Woman switched at birth spends holidays with birth mom after decades-long search: 'Feel at peace' (FOX News - Lifestyle, 2023-12-15T09:30:54+00:00)
+"I’ve spent a lot of time dealing with the healing part of it," Bazella said.
+
+"I think it kind of gives people hope that miracles are still going on, and the world needs to hear that right now. So that’s part of the reason I’ve stepped
+out and told my story now."
+
+HOLOCAUST SURVIVOR IS FINALLY REUNITED WITH THE FAMILY THAT SAVED HIS LIFE
+
+When Bazella was five years old, her parents, Walter and Ila Peterson, told her she was adopted.
+
+"I finally feel at peace with everything, which is really nice." — Diane Bazella
+
+That was the start of her quest to locate her birth parents, and in the 1980s she did just that.
+
+Bazella spent the next 39 years trying to bond with the woman whose name appeared on her birth certificate as well as those she thought were her biological
+family.
+
+"I'm thinking I found my birth parents and my half-siblings," Bazella said.
+</item 85>
+
+<item 86>
+A scientist reckons with climate grief (Yahoo News, 2023-12-24T13:06:02+00:00)
+Kalmus, trailed by a reporter, buzzed around the homestead like a giddy kid, hiking back and forth to a home in an eco-village near the Possibility Alliance
+where he was living and working on his research. He tramped down a forest trail in bare feet, paused work for a midday dip in a shady stream and never changed
+his T-shirt.
+
+He ground his coffee with a mortar and pestle, thumbed through a book of Enneagram personality types on the porch with his son Zane and listened to Ethan’s
+stories about sailing across the Atlantic in a cargo ship to avoid the carbon emissions of flying.
+
+“I feel met by Peter,” Sarah Wilcox-Hughes said of Kalmus. “I don’t feel like there are many people prioritizing the needs of the planet as he is and we are.”
+
+Kalmus found life in Belfast, and at the Possibility Alliance, slower, richer and more connected to the natural world.
+</item 86>
+
+<item 87>
+Jonathan Roumie on faith and prayer life during Advent and always: 'God hasn't forsaken us' (FOX News - Lifestyle, 2023-12-05T09:00:54+00:00)
+CLICK HERE TO GET THE FOX NEWS APP
+
+So it's challenged me on that level.
+
+But as it challenges me, it also allows me to go further in that relationship — and to deepen my prayer life.
+</item 87>
+
+<item 88>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“Sometimes it can be helpful for them to know about the dynamics that they’re stepping into and how they can best support you. Frankly, they should be aware if
+there is tension or if there is stress within your family.”
+
+(Getty Images)
+
+Communication before the holidays goes both ways, and there are things that your family should know about your significant other too. “If there’s something
+about your partner that could be surprising to your family, or that’s a notable difference from who someone you’ve brought home before, tell your relatives
+that,” Zar said. “Let’s set your family and partner up for success.”
+
+Before bringing your significant other home for the holidays, you may want to express to your family how you wish for them to feel included - such as
+incorporating your partner’s family traditions into your own celebration. However, Zar advised against oversharing information before Christmas. You still want
+your family and partner to connect in person, rather than hearing about each other through the grapevine.
+</item 88>
+
+<item 89>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+The Santa bribe turns the focus of Christmas into "selfish gain on the part of your children," Keeley added.
+
+"Love your kids enough to learn how to manage their behavior appropriately and teach them self-discipline."
+
+"It’s also lazy parenting, which never pays off in the long run," she said. "Being a mom is a professional career and deserves to be treated accordingly."
+
+She added, "Love your kids enough to learn how to manage their behavior appropriately and teach them self-discipline."
+
+3. Becoming a ‘holiday martyr’
+
+It’s important to keep the holidays well-rounded, Keeley said.
+
+5 HOLIDAY DECORATING MISTAKES THAT COULD REDUCE YOUR CHEER THIS YEAR
+
+She called out "martyr moms" who are at their "peak performance" during Christmastime, putting everyone else before themselves.
+
+"They wear themselves out making sure everyone else has the perfect Christmas, but never put themselves on the receiving end," she said.
+</item 89>
+
+<item 90>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+In a recent poll from the American Psychological Association, 41 per cent of US adults said their stress levels increased from November to January when compared
+to other months of the year. Nearly 50 per cent of Americans also described their stress level during the season as “moderate”.
+
+Everyone has different concerns leading up to Christmas, Hanukkah, or New Years - from family drama at the dinner table to a small spats with your mother about
+decorations. With what can be stressful events, it only begs the question: do you really want to bring your partner into the mix? While it’s important to
+eventually introduce your loved ones to your significant other, relationship experts believe there are some discussions you should have beforehand, especially
+during the holidays.
+
+Speaking to The Independent, Rachel Zar - a licensed marriage and family therapist at Spark Chicago Therapy - acknowledged that while every family is different,
+there’s a variety of problems that could arise during the holiday season - mainly because we put too much pressure on having a joyful holiday.
+</item 90>
+
+<item 91>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+How worried are they about getting it wrong? Turns out, not very. Andrews and McDonald know what good advice looks like, and how to give it. “I think the best
+advice is often not a statement – it’s a question,” says Andrews. “It’s listening to what someone’s dilemma is, then posing a question that helps them
+re-frame.” As two women who are constantly being asked for advice, what are the questions they ask themselves? “What’s the next thing?” says Andrews, without
+hesitation. “I’m constantly wondering, what’s the next show that isn’t out there.”
+
+Advertisement
+</item 91>
+
+<item 92>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+Michelle Andrews wears Friends With Frank “Marlowe” blazer, $549, and “Sabine” trousers, $399. Veja shoes, $240, from Hype DC. Credit: Hugh Stewart In many
+ways, the relationship between Shameless Media and its audience is much like that between the friends. It began with a shared interest in celebrity gossip and
+TV shows, before moving into more personal recommendations of books and podcasts, until eventually reaching the stage where life’s most personal questions can
+be asked and answered. Ask Shameless, which lands in more than 64,000 subscriber inboxes each Friday, answers reader questions about work, dating, friendship
+and more. The best of these advice columns have been published in a new book, 4am: Answers to the conundrums that keep you up at night. Andrews and McDonald’s
+second book feels markedly different to their first, The Space Between.
+</item 92>
+
+<item 93>
+This Christmas let your home be the centre of the celebrations with these festive ideas from The White Company (The Independent - Life and Style,
+2023-10-13T15:00:43+00:00)
+They come in a range of colours to suit your style and are made from pure GCS-certified yarns to take the chill off your feet. And seeing as everyone loves cosy
+socks at Christmas, we think they’re also a great choice for gifting.
+
+For even more cosiness we think you should consider this Faux Fur Throw, made from soft and silky recycled fibres, and matching Soft Fur Hot Water Bottle. They
+give so much cuddle comfort on chilly winter evenings that you won’t mind how long spring takes to come around.
+
+Mix old traditions with new rituals
+
+(The White Company)
+
+We all have traditions that are handed down through generations – things like opening the sloe gin after the last day of work or a ceremonial placing of the
+star on top of the Christmas tree. This year, why not start a new ritual such as a designated ‘morning in bed’ or an ‘afternoon pyjama party’, to make sure that
+Christmas is done your way.
+</item 93>
+
+<item 94>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+However, you don’t need to have a big meal to celebrate your Friendsgiving, as there are many ways to change up your usual plans this year.
+
+Here’s a list of activities that you could do for Friendsgiving that aren’t the typical sit-down dinner.
+
+Shopping at local holiday markets
+
+(Getty Images)
+
+While Christmas is still over a month away, many cities in the US already have their holiday-themed markets up and running. And since Friendsgiving isn’t
+necessarily held on the Thanksgiving holiday, why not use it as an opportunity to check out some new shops?
+
+For example, in New York City, Bank of America is currently hosting its annual Winter Village at Bryant Park in Manhattan. At the beloved New York City spot,
+there’s a wide variety of food vendors, so you and your friends can take your pick at what you want for dinner and dessert.
+</item 94>
+
+<item 95>
+The 5 biggest mistakes parents make at Christmastime, according to a parenting expert (FOX News - Lifestyle, 2023-12-09T19:46:55+00:00)
+CLICK HERE TO GET THE FOX NEWS APP
+
+"Even if it's a pine cone covered in peanut butter and bird seed for loved ones to use as a bird feeder, the gift came from the heart and a beautiful lesson was
+learned — that’s the best Christmas gift of all," she said.
+</item 95>
+
+<item 96>
+Jada Pinkett Smith reveals why she and Will Smith never signed a prenup (The Independent - Life and Style, 2023-10-16T15:48:10+00:00)
+Jada then praised her children for how they’ve helped her grow, adding: “My children, they’re little gurus. They’ve taught me a deep sense of self-acceptance.”
+
+On 16 October, Will broke his silence on his wife’s comments during an interview with the New York Times. The outlet noted that he said his partner’s memoir
+“kind of woke him up” and that he has now realised she is more “resilient, clever and compassionate than he’d understood”.
+
+“When you’ve been with someone for more than half of your life, a sort of emotional blindness sets in, and you can all too easily lose your sensitivity to their
+hidden nuances and subtle beauties,” Will added.
+</item 96>
+
+<item 97>
+Should you introduce your partner to your family during the holidays? Relationship experts weigh in (The Independent - Life and Style,
+2023-12-12T16:02:44+00:00)
+“I’d recommend pulling your partner aside and saying: ‘How are we doing?’ Like a temperature check,” she added. “Those are points where the two of you can come
+and remind each other: ‘We are a team in this.’ Or, the two of you could go on a walk and separate from the family, just for a little bit of time to reset
+within the relationship.”
+
+During the holiday season, your partner may be seeing how you interact with your family for the first time. But that’s not necessarily a bad thing, according to
+the relationship experts. “I think introducing a significant other to family is a really vulnerable act, and that vulnerability is going to be what allows for
+greater intimacy,” Lurie said. “When your significant other sees you with your family, they may see another side of you that they may not have had access to
+before.”
+
+(Getty Images)
+
+On the other hand, your partner could learn that your relationship with your parents and extended family members is complex.
+</item 97>
+
+<item 98>
+From a Turkey trot to a movie marathon, Friendsgiving celebrations that aren’t a sit-down dinner (The Independent - Life and Style, 2023-11-17T16:20:48+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+As Thanksgiving fast approaches, Americans are in the midst of writing their menus and buying the ingredients for their lavish feasts. And although it’s a day
+filled with food and family, there is another popular tradition that’s held around the holiday: Friendsgiving.
+
+Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year.
+</item 98>
+
+<item 99>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+Michelle Andrews (right) wears Venroy shirt, $280, and pants, $280. Credit: Hugh Stewart
+
+Advertisement
+
+Only five per cent of the letters submitted to the Ask Shameless inbox are published. But after reading hundreds of requests for advice in the past three years,
+Andrews and McDonald are in touch with the most prevalent issues plaguing women today. One of those, says Andrews, is that “a lot of young women do not receive
+the basic level of affection, attention or love from their male partners”. While there are questions the pair don’t feel qualified to answer yet – such as when
+to have kids – there’s also a kind of magic in the fact that Shameless listeners have access to McDonald and Andrews while they’re still in the thick of these
+struggles themselves. Loading Building a brand on trust is both a big achievement and a risk. How worried are they about getting it wrong? Turns out, not very.
+</item 99>
+
+<item 100>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+The respect they have for each other is clear, and it’s why they work so well together. Since launching Shameless, their lives have been entwined. Since
+meeting, they have been through break-ups, engagements and now weddings. When Andrews tied the knot with her long-term partner Mitchell Rees last December,
+McDonald was a bridesmaid. Now, McDonald is planning her own wedding, to partner Oliver Keogh, which will take place next year. Years ago, when discussing when,
+or even if, they each wanted to have kids, it was a conversation they knew they needed to have not just as friends but as business partners. “How do we do this
+and have a family if the whole business is relying on us showing up together at the same time?” Zara McDonald “I hate that we had to do this, but it was like,
+how do we have kids?” says McDonald.
+</item 100>
+=== END ITEM id=29a8c634e255b8f6 ===

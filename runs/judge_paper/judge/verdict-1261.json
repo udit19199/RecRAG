@@ -1,0 +1,37 @@
+[
+  {
+    "id": "db2da0a070757df1",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 20,
+            "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 20,
+            "quote": "He also believes that after everything on social media becomes so perfectly curated for us"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 21,
+            "quote": "What we have done since then, all the success and failures [matters in our preparation]."
+          }
+        ]
+      }
+    ]
+  }
+]

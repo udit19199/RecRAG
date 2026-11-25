@@ -1,0 +1,11 @@
+[
+  {
+    "id": "bb1b7dc777408501",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 41, "quote": "MLB Network's Jon Morosi reports the superstar is \"likely to decide on a team within the next week,\" according to a source."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 41, "quote": "MLB Network's Jon Morosi reports the superstar is \"likely to decide on a team within the next week,\" according to a source."}]}
+    ]
+  }
+]

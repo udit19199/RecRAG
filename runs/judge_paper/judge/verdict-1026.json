@@ -1,0 +1,72 @@
+[
+  {
+    "id": "34a59c9c8ebab126",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 83,
+            "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 81,
+            "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 81,
+            "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ab536637db639e14",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

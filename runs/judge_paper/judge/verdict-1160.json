@@ -1,0 +1,35 @@
+[
+  {
+    "id": "3699c6cfa2e1ae5f",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "In the year since Altman catapulted ChatGPT to global fame"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 26, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 26, "quote": "he has become Silicon Valley’s sought-after voice on the promise and potential dangers of artificial intelligence"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 26, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future."}]},
+      {"fact": "0.4", "status": "stated", "evidence": [{"item": 26, "quote": "his sudden and mostly unexplained exit brought uncertainty to the industry’s future."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 91, "quote": "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 91, "quote": "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 91, "quote": "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 91, "quote": "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 91, "quote": "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 91, "quote": "This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing FTX fallout."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 52, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 52, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 52, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+    ]
+  },
+  {
+    "id": "193317dd70470c14",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "0.4", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

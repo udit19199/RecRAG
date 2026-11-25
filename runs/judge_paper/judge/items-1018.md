@@ -1,0 +1,1513 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=cf4d8cee2f980542 ===
+Gold sentences and facts:
+Sentence 0: Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight.
+  Fact 0.0: Miami has five remaining opponents.
+  Fact 0.1: Four of Miami's five remaining opponents have pass defenses ranked in the league's top eight.
+Sentence 1: 152.67 -- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+  Fact 1.0: Tyreek Hill missed last week's game.
+  Fact 1.1: Tyreek Hill now needs to average almost 153 yards per game in his final three games.
+  Fact 1.2: The figure cited is 152.67 yards per game.
+  Fact 1.3: Tyreek Hill's stated goal is 2,000 receiving yards this season.
+
+Retrieved items:
+<item 1>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+But they float around league average in catch rate allowed (77.8%, below league average) and yards per catch (8.9, better than league average). However, no team
+has allowed more first-down receptions to tight ends (17). Keep in mind, this defense hasn't seen tight ends better than Evan Engram, Sam LaPorta or Dalton
+Schultz.
+
+COMMANDERS: Throw to their tight ends on 26.3% of their throws, fourth-most in football. But that hasn't always meant a huge target share for Thomas. In Weeks 1
+and 5 he saw at least 22.9% of Sam Howell's targets. He left Week 2 after suffering a concussion and was absent in Week 3; then was not part of the game plan
+much in Week 4 (7.7% target share against Philadelphia). Perhaps it's all health related and Thomas' volume from last week will stick.
+</item 1>
+
+<item 2>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP @ CAR GB -5 O/U 36.5 OPP VS WR 12th PROJ PTS 10.6 WR RNK 37th YTD Stats REC 52 TAR 84 REYDS 567 TD 7 FPTS/G 10.8 Jordan Addison WR MIN
+Minnesota • #3
+
+Age: 21 • Experience: Rookie Weekly Breakdown MATCHUP vs DET DET -3 O/U 47 OPP VS WR 7th PROJ PTS 13.7 WR RNK 29th YTD Stats REC 62 TAR 90 REYDS 824 TD 9 FPTS/G
+14.2 Chris Godwin WR TB Tampa Bay • #14
+
+Age: 27 • Experience: 7 yrs.
+</item 2>
+
+<item 3>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+The 23-year-old ranks first in the NFL in QBR (76) and touchdown passes (29) while ranking third in passing yards (3,795), all of which are especially
+impressive considering he's coming off offseason elbow surgery.
+
+Jackson might not be posting the ridiculous numbers he did during his 2019 MVP campaign, but the adjustment in his play style in his first season under OC Todd
+Monken has led to sustainable, winning football. Nevertheless, Baltimore needs an upset win for Jackson to capture another MVP Award, as he has thrown for 3,105
+yards and 17 touchdowns while adding 741 yards on the ground with five scores this season.
+
+49ers RB Christian McCaffrey: If Purdy wasn't playing at such a high level — and the MVP wasn't a quarterback-driven award — it'd be difficult to argue against
+McCaffrey taking home the honors.
+</item 3>
+
+<item 4>
+Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-12-03T23:00:04+00:00)
+They're back in the postseason race, all on the back of their lithe young hurler.
+
+Miss any of the game? The Sporting News tracked live updates from Sunday's clash under the lights at Lambeau Field below.
+
+Chiefs vs. Packers final score
+
+Q1 Q2 Q3 Q4 Final Chiefs 3 3 6 7 19 Packers 7 7 7 6 27
+
+Chiefs vs. Packers results, highlights from 'Sunday Night Football'
+
+(All times Eastern)
+
+11:28 p.m.: Game. Set. Match. Mahomes' Hail Mary falls harmlessly to the turf, giving the Packers a much-needed win. What a game!
+
+11:25 p.m.: Proper make-up call by the referees there, as Valdez-Scantling was almost certainly impeded illegally while streaking down the field. Should've been
+a pass interference. It wasn't, though.
+</item 4>
+
+<item 5>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+There will be many difficult decisions to be made in Week 16. It is the Fantasy Football semifinals in most leagues and there is a certain finality to every
+decision. There's no shortage of things to stress over as a Fantasy manager. Whether or not you start Rashee Rice shouldn't be one of them. While Rice is just
+WR29 on the season, that's mostly due to a slow start, and his hot start has pushed him into must-start, borderline top-12 territory.
+
+The Chiefs' star rookie has four straight games with at least nine targets and he's scored at least 14 PPR Fantasy points in all of those games. Since Week 12,
+only Deebo Samuel and CeeDee Lamb have scored more PPR Fantasy points that Rice.
+
+On paper, the matchup doesn't look great, because the Raiders have been above average in terms of limiting the Fantasy production of wide receivers.
+</item 5>
+
+<item 6>
+Jaguars vs. Saints live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-10-19T22:00:04+00:00)
+The Saints cut into the Jags' lead, making it a one-score content again.
+
+10:06 p.m. — After Hill got the Saints down to the Jacksonville 23, a penalty on second down pushes New Orleans 10 yards back, and the offense can't move the
+chains. Once again, the Saints have to kick a field field.
+
+10:02 p.m. — Taysom Hill hasn't been used really at all this game, but the QB/TE hybrid keeps a read option and barrels for a gain of six yards, down to the
+Jacksonville 23. For the first time since the opening drive, the Saints have been able to pick up multiple first downs and drive down the field, getting close
+to the red zone.
+
+Taysom Hill still showing he can do a little bit of everything.
+</item 6>
+
+<item 7>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+In addition, K.J. Osborn (concussion) is also listed as "questionable," though his status steadily improved throughout the week from DNP on Wednesday to full
+practice on Friday. If Jefferson is back, he's a must-start. If Jefferson is out but Osborn returns, both Osborn and Jordan Addison are worth using.
+
+WEEK 10 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Is Ja'Marr Chase playing Week 10?
+
+UPDATE: ESPN's Jeremy Fowler reported late Saturday that the Bengals are "hopeful" that Chase will play against Houston, but they won't know for sure until
+after a pre-game workout.
+
+UPDATE 2: Chase is officially ACTIVE.
+
+Chase (back) appears ready to take his status down to kickoff. According to The Athletic's Dianna Russini, the Bengals' star receiver will work out on Sunday
+morning and his status will be determined afterward.
+</item 7>
+
+<item 8>
+Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-12-03T23:00:04+00:00)
+He's unable to find the target again on the two-point conversion, however, keeping the Packers in control (just barely).
+
+Packers 14, Chiefs 12
+
+9:54 p.m.: Mahomes does it again! Delicate touch pass between the Magic Man and Kelce results in yet another first down on third-and-long. Kelce's up to 81
+yards on four grabs. Kansas City is threatening to breach into the red zone.
+
+9:47 p.m.: Mahomes hits Kelce with a floated effort as the Chiefs open the first half with a flourish. Need more of that going forward.
+
+End of second quarter: Packers 14, Chiefs 6
+
+9:10 p.m.: FIELD GOAL! Kansas City's explosive offense has been held in check thus far. Despite showing flashes of what they can accomplish, the Chiefs were
+held to another field goal in this one. Yikes...
+
+Packers 14. Chiefs 6
+
+9:00 p.m.
+</item 8>
+
+<item 9>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+As usual, we'll update these WR PPR rankings throughout the week, so check back for the latest player movement and analysis.
+
+Fantasy WR PPR Rankings Week 13: Who to start, sit at wide receiver
+
+Rankings based on PPR scoring formats
+
+Rank Player
+
+1 Tyreek Hill, Dolphins @ Commanders
+
+2 CeeDee Lamb, Cowboys vs. Seahawks
+
+3 Amon-Ra St. Brown, Lions @ Saints
+
+4 Keenan Allen, Chargers @ Patriots
+
+5 Mike Evans, Buccaneers vs. Panthers
+
+6 A.J. Brown, Eagles vs. 49ers
+
+7 Michael Pittman Jr., Colts @ Titans
+
+8 Ja'Marr Chase, Bengals @ Jaguars
+
+9 Jaylen Waddle, Dolphins @ Commanders
+
+10 Tank Dell, Texans vs. Broncos
+
+11 Brandon Aiyuk, 49ers @ Eagles
+
+12 Garrett Wilson, Jets vs. Falcons
+
+13 Calvin Ridley, Jaguars vs.
+</item 9>
+
+<item 10>
+Jaguars vs. Saints live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-10-19T22:00:04+00:00)
+Taysom Hill still showing he can do a little bit of everything. @T_Hill4#JAXvsNO on Prime Video
+
+Also available on #NFLPlus https://t.co/89nUeCngbn pic.twitter.com/EA5c1wWtX7 — NFL (@NFL) October 20, 2023
+
+10:01 p.m. — The Saints needed half a yard, Kamara gave them 17. The Saints running back sprints downfield for a major gain on fourth down.
+
+10 p.m. — The Saints can't convert on third down, coming up a half a yard short. However, Allen is keeping the offense out to go for it on fourth down. New
+Orleans is now one for nine tonight on third down.
+
+9:58 p.m. — The second half is underway in New Orleans. The Saints get the ball to start the half, in desperate need of generating anything on offense.
+</item 10>
+
+<item 11>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+Not only has he produced at a high level, but his play has been instrumental in the Vikings turning things around after a 1-4 start.
+
+He may not have the name recognition that Parsons, Garrett and Watt have, but he has played as well, if not better, this season. If he can continue to produce,
+he at least deserves to be in the conversation, if not win.
+
+Coach of the Year
+
+Current favorite: Dan Campbell +200 (via DraftKings)
+
+Longshot: Sean Payton +2200 (via DraftKings)
+
+Campbell has done a tremendous job with the Lions, but it is fair to wonder if he's the betting favorite because of how well he has done his job this season or
+over the last two. This year, the team benefited from the groundwork laid last season.
+
+If there were a reward for the best coach over two seasons, he would deserve it. As for this season, not so much.
+</item 11>
+
+<item 12>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP @ MIA MIA -1.5 O/U 51 OPP VS WR 15th PROJ PTS 19.4 WR RNK 2nd YTD Stats REC 103 TAR 141 REYDS 1306 TD 10 FPTS/G 21.6 The choice between
+Lamb and Tyreek Hill will not be an easy one. The tiebreaker for me is that Lamb is $900 cheaper and Hill may still not be 100% by the time the Cowboys and
+Dolphins kick off. Last week was the first time since Week 9 that Lamb failed to reach the end zone and the second time since Week 5 that he didn't score at
+least 17 PPR Fantasy points.
+
+Contrarian DFS Play (WR Preview) Projections powered by Sportsline Jaylen Waddle WR MIA Miami • #17
+
+Age: 25 • Experience: 3 yrs.
+</item 12>
+
+<item 13>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP @ NYJ NYJ -3 O/U 37 OPP VS WR 14th WR RNK 30th ROSTERED 58% YTD Stats REC 56 TAR 77 REYDS 549 TD 5 FPTS/G 11 Samuel was the top waiver
+wire add at wide receiver last week as well, but he still sits at just 57% rostered. He has three straight games with double-digit Fantasy points and he's
+topped 19 in two of those games. The matchup isn't great but it's easier for him than it is for Terry McLaurin and Jahan Dotson.
+</item 13>
+
+<item 14>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“The Taylor Swift and Travis Kelce news has been a pop cultural moment we’ve leaned into in real time, as it’s an intersection of sport and entertainment, and
+we’ve seen an incredible amount of positivity around the sport.”
+
+“The vast majority of our content has remained focused on the game, our players and variety of other initiatives, including our Toy Story Funday Football
+alt-cast, the international games and more,” they continued.
+</item 14>
+
+<item 15>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+Stroud: Stroud is having one of the best statistical rookie seasons of all time. He ranks in the top 10 in passing yards (2,270), touchdown passes (14) and
+passer rating (102.9), and has only thrown one interception. The Texans (4-4) aren’t close to a .500 team without him.
+
+INDIANAPOLIS COLTS | RB Zack Moss: With Jonathan Taylor missing the first four weeks of the season, Moss stepped up in a big way. After not playing in Week 1,
+he rushed for 445 yards and scored four touchdowns over his next four games to help Indy win three of four and stay in the thick of the AFC South. Moss is
+second in the NFL in rushing, 37 yards behind San Francisco's Christian McCaffrey.
+</item 15>
+
+<item 16>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+He's still worth trotting out there over Logan Thomas, Dallas Goedert and Cole Kmet, but keep expectations around 70 yards on six catches.
+
+LAST WEEK: Came alive against the Texans' zone-heavy defense with season-highs in targets (11), catches (seven) and yards (87). This was his second game of his
+last three where his target share was over 23%. It was nice to see him as a key part of the offense, but I can't help but notice he played a season-low 53% of
+the snaps.
+
+FILM: Two things helped Pitts out: One, he looked a little quicker off the snap and a little faster when running straight. He's still lumbering when he changes
+directions in his routes but perhaps he's slowly getting healthier. Two, Desmond Ridder seemed very comfortable throwing into tighter windows to Pitts in zone
+coverage as the two had some good timing down, mainly on dig and out-breaking routes.
+</item 16>
+
+<item 17>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+As recently as 2020 he leaned on Hunter Henry while with the Chargers, and even in two of his hey-day years with the Bills did he work tightly with Charles
+Clay. He shouldn't be a detriment.
+
+THIS SEASON: Waller has the highest target share on the G-Men, but it's 20.8%. His ADOT also sits at 8.9, and both that number and the target share got lifted
+up by the Giants' decision to force-feed targets to Waller last week. He also ran more downfield routes than we're used to seeing. If the Giants stick with this
+then Waller can meet some of his lofty expectations. But I think if Brian Daboll had it his way he'd try to find explosive plays from all of his receivers and
+spread the ball around.
+</item 17>
+
+<item 18>
+NFL DFS picks Week 15: Best sleepers, value players for FanDuel, DraftKings, SuperDraft lineups (Sporting News, 2023-12-13T20:32:00+00:00)
+6x); Tyler Allgeier, Falcons at Panthers (DK: $4,400 | FD: $5,700 | SD: 1.6x)
+
+WEEK 15 PPR RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+NFL DFS Picks Week 15: WR sleepers, values for DraftKings, FanDuel, SuperDraft
+
+Rashee Rice, Chiefs at Patriots (DK: $6,100 | FD: $6,500 | SD: 1.35x)
+
+With Isiah Pacheco (shoulder) banged up, Rice seems like Kansas City's best skill-position player this side of Travis Kelce. He's certainly the most sure-handed
+wideout on the Chiefs (not saying much, but still), and he has electric after-the-catch playmaking ability (which is good, considering Patrick Mahomes has
+struggled with deep-ball accuracy).
+</item 18>
+
+<item 19>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+He got open on a handful of third-down plays when he didn't get a target last week.
+
+TANNEHILL: Is the top problem Hopkins has right now. Hopkins' 38-yard deep-ball catch last week could have been as many as 50 yards if Tannehill hit him in
+stride, and the gimmick-play touchdown would have obviously been a massive point-getter had Tannehill been slightly more on-target there. There was even a
+target into the end zone that was a miscommunication between Hopkins and Tannehill. On the season Tannehill has a 13% off-target rate but over the past two
+games that number has ballooned to 18%, which is ... yikes.
+
+TITANS: The second problem Hopkins has right now is a Titans offense that's stayed true to their run-first preference -- at least when they win.
+</item 19>
+
+<item 20>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+I'd expect that to be out the window now -- Flacco wasn't shy about chucking the rock deep with the Jets, attempting passes of 15-plus Air Yards on 20 percent
+of his throws, and he had no problem focusing on one primary receiver (Garrett Wilson had 8, 14 and 11 targets in Flacco's starts). The hope is that both Flacco
+and Cooper are experienced and capable enough to develop rhythm to salvage the Browns passing game. It's the only thing to buy into here as the Rams have
+allowed the 12th fewest Fantasy points to wide receivers on the season and happen to have done well against deep throws against wide receivers (40% completion
+rate allowed, two touchdowns, both top six on the season). Cooper's volume should hopefully push him to a decent Fantasy stat line. I'd give him a whirl over
+Terry McLaurin, Marquise Brown and Diontae Johnson.
+</item 20>
+
+<item 21>
+NFL roundup: Pats hit new low as Lions reach 9-3 for first time since 1962 (The Guardian, 2023-12-03T22:11:26+00:00)
+Keenan Allen came back from a thigh injury to catch five passes for 58 yards. But the only scoring the Chargers could manage was a pair of 38-yard field goals
+in the second quarter. New England made a quarterback switch, benching Mac Jones in favor of Bailey Zappe. But the Patriots (2-10) still lost their fifth
+straight game. For the first time in franchise history, the Patriots have been shut out at home twice in a season. Zappe was sacked five times – two by Khalil
+Mack, giving him a career-high 15 for the season and 99 in his career. Zappe was 13 for 25 for 141 yards; he did avoid an interception for the first time in
+three games, the previous two in relief of Jones.
+
+Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15.
+</item 21>
+
+<item 22>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Don't expect the Chiefs to start running until it's time to chew the clock.
+
+Our pick: Pass
+
+Seemingly Ranch: Travis Kelce Last TD Scorer (+550)
+
+Ranch is a fine condiment and beloved by many, which makes this wager something that should be seen as an insult to ranch fans everywhere. Unless the Jets make
+this a close game or send it to overtime, we have a hard time believing that Kelce will even be on the field to score the last touchdown. Avoid this one like
+people with taste buds avoid bleu cheese and treat your nuggets with respect.
+
+Our pick: Pass
+
+Plot Twist: Zach Wilson to have 300+ Passing Yards (+1800)
+
+If you asked the average Jets' fan what is holding this roster back, the overwhelming results would be Wilson. "I'm the problem, it's me," would probably
+qualify as the lyrics played in his walk-up song if fans had anything to say about it.
+</item 22>
+
+<item 23>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+9:43 p.m. — Hill is up to 65 yards on eight catches. No other Dolphins receiver has more than two catches, and Hill now has 879 yards on the season.
+
+Eagles 17, Dolphins 10
+
+9:39 p.m. TOUCHDOWN — Tagovailoa hits Hill in the end zone for a touchdown! Hill was facing double coverage but simply beat both defenders. Miami has the
+deficit back to one possession.
+
+9:38 p.m. — Rookie Nolan Smith sacks Tagovailoa with 44 seconds remaining in the half.
+
+9:37 p.m. — The Dolphins are down to the Eagles' 29-yard line after catches by Braxton Berrios and Tyreek Hill. They have a chance to score on back-to-back
+possessions, as they get the ball out of halftime.
+
+9:33 p.m. TWO-MINUTE WARNING — Woah!
+</item 23>
+
+<item 24>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson.
+
+-- Deebo Samuel is on pace to become just the fourth player since 1992 to average more than 11 yards per target with at least 60 targets in multiple seasons.
+The other three are Tyreek Hill, Tyler Lockett, and DeSean Jackson. 18 -- Puka Nacua needs 18 more catches to set the rookie record for most catches in a
+season.
+
+-- Puka Nacua needs 18 more catches to set the rookie record for most catches in a season. 152.67 -- After missing last week's game, Tyreek Hill now needs to
+average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving yards this season.
+
+-- After missing last week's game, Tyreek Hill now needs to average almost 153 yards per game in his final three to reach his stated goal of 2,000 receiving
+yards this season.
+</item 24>
+
+<item 25>
+NFL roundup: Pats hit new low as Lions reach 9-3 for first time since 1962 (The Guardian, 2023-12-03T22:11:26+00:00)
+Carolina Panthers 18–21 Tampa Bay Buccaneers
+
+Tampa Bay’s Mike Evans scored on a 75-yard reception and joined Jerry Rice as the only players in NFL history to string together 10 consecutive seasons with
+1,000-plus yards receiving. Evans finished with seven receptions for 162 yards, increasing his season totals to 61 catches for 1,012 yards and 10 touchdowns.
+Rice has the league record of 11 straight seasons with more than 1,000 yards receiving. The Bucs won for only the second time in the past eight games. Carolina
+scored late to pull within a field goal, but No 1 overall draft pick Bryce Young threw an interception to end any chance of coming from behind to win in the
+Panthers’ debut under interim coach Chris Tabor.
+</item 25>
+
+<item 26>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I'd rather start Breece Hall, Rhamondre Stevenson, Dameon Pierce and Jaleel McLaughlin (if Javonte Williams sits out).
+
+LAST WEEK: Harris had his first game with over 100 total yards against the Texans and averaged 5.1 yards per rush, just shy of the season-high he technically
+had on six carries against the 49ers in Week 1. A 32-yard reception helped him cross the triple-digit barrier.
+
+HARRIS: This might shock you, but Harris is averaging 4.3 yards per run this year with a 12.2% explosive run rate. Would you believe the explosive run rate,
+which reflects the frequency of his 12-plus-yard runs, is fifth-best among 44 qualifying running backs?! He's also 13th in avoided tackle rate and top-10 in
+yards after contact per carry at 3.53.
+
+TOUCHDOWNS: Harris has zero.
+</item 26>
+
+<item 27>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Christmas Day isn't just for the NBA, as the NFL is set to air an exciting triple-header featuring fierce division clashes and a highly anticipated matchup we
+could see again on Super Bowl Sunday. Here are the top players and storylines to monitor for Monday's slate.
+
+Las Vegas Raiders (6-8) at Kansas City Chiefs (9-5) | 1 p.m. ET
+
+New chapter in Patrick Mahomes-Maxx Crosby rivalry: This hasn't been as much of a rivalry between the teams as of late, with Kansas City holding a 10-1 record
+over the Raiders since Mahomes became its starting quarterback. Yet it has sparked an exciting feud between the two-time Super Bowl MVP and the two-time Pro
+Bowler Crosby, who has five sacks in nine career games against the Chiefs.
+
+Mahomes and Crosby might not like facing one another, though it's clear there's mutual respect between the two, which only makes their rivalry more intriguing
+to watch.
+
+Can Raiders QB Aidan O’Connell earn next season’s starting job?
+</item 27>
+
+<item 28>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Per a Deadline report, NBC accumulated an average of 27m viewers, with a total of 29m tuning in during the second quarter.
+
+“That’s gotta be an NFL record right there,” Jason told his younger brother, as he noted that about two million viewers were estimated to be female. “I think a
+few of them might have been there for Deadpool and, uh, Taylor.”
+
+In the YouTube comments under the New Heights video podcast, fellow fans shared their opinions on the NFL’s coverage. “I agree the NFL needs to calm down.
+Pissing off football fans is not how you repay your boi [sic] for all he’s done for the sport,” one person wrote.
+
+Another remarked: “Pity Taylor. All she ever wanted was to watch the football game. Now she’s being blamed and hated left and right.”
+
+“The NFL needs to seriously tone it down and let Trav and Tay explore this beautiful thing they have going on in peace,” someone else said.
+</item 28>
+
+<item 29>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+He’s third in the NFL in passing yards (2,442), fourth in TD passes (17) and third in QBR (73). The 28-year-old might capture his third MVP, as oddschecker
+notes he’s favored to win the award again.
+
+LAS VEGAS RAIDERS | Defensive end Maxx Crosby: Despite a weak supporting cast, Crosby thrives. He has 9.5 of the Raiders’ 24 sacks and is tied for the league
+lead in tackles for loss (13). If the two-time Pro Bowler keeps dominating, he will generate more Defensive Player of the Year buzz.
+
+LOS ANGELES CHARGERS | WR Keenan Allen: The 31-year-old is the centerpiece of the offense and leads the team in yards receiving (720) and receptions (62).
+Through Week 9, Pro Football Focus gave him a receiving grade of 84.6, eighth among WRs.
+</item 29>
+
+<item 30>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+That included in the second half when he saw one target and couldn't catch it. He definitely wasn't shadowed by anyone and was almost never double-teamed,
+though there were a couple of routes where a safety was in proximity. It could have had more to do with the Texans attacking the middle of the field against the
+Falcons' zone coverage.
+
+SAINTS: Have played the fifth-fewest snaps of zone coverage this season and have ignored tendencies some quarterbacks have had through the early portion of the
+season. It's just what they like to do. Stud cornerback Marshon Lattimore has not followed receivers much this season, playing 87% of his snaps at right
+cornerback (to the left of the quarterback). Their other primary outside corner, Paulson Adebo, has allowed a 50% catch rate on the season with minimal YAC.
+</item 30>
+
+<item 31>
+Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-12-03T23:00:04+00:00)
+(Via: @Chiefs)
+
+
+
+📺: NBC & Peacock pic.twitter.com/baSjmT7IR5 — Sunday Night Football on NBC (@SNFonNBC) December 4, 2023
+
+Travis Kelce takes the field for another prime time game with Taylor Swift.
+
+(Via: @Chiefs)
+</item 31>
+
+<item 32>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+UNCATCHABLE: Of the 43 targets Garrett Wilson has seen from Zach Wilson, 14 of them (33%) have been uncatchable.
+
+EAGLES: Have let up a slew of receiving numbers by virtue of seeing so many passes thrown against them (27.4 targets per game just to wide receivers). So
+naturally they rank in the bottom five in catches allowed, YAC allowed and touchdowns allowed. But on per-target metrics they're doing all right. A 60.6%
+completion rate allowed is 10th-best, 11.4 yards per catch allowed is seventh-best and 4.06 YAC/reception is on par with the league average.
+
+PASS RUSH: As overworked as the Eagles secondary has been, their pass rush has been solid. Against soft O-lines in Washington and L.A., the Eagles have put
+pressure on at a rate of 37.6% and have blitzed 33.3% of snaps.
+</item 32>
+
+<item 33>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+The fact that he has 13 total targets in his past three games combined makes it tough to buy into him suddenly getting 10-plus targets this week. The matchup is
+also a problem -- the Browns have the defensive backs to hang tight with a slower-than-normal Kupp in man-to-man coverage, which they play in a lot. The Browns
+also have the pass rush to force Matthew Stafford to get the ball out quickly and without much distance. I'm not that nervous to bench Kupp for Rashee Rice,
+Courtland Sutton and both of the top Seattle WRs.
+</item 33>
+
+<item 34>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Six of the 17 won anyway. The Dolphins were the only one of those 223 teams to win and cover the spread, which was 13.5 for this game.
+
+• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games. That ranks second in NFL
+history to Hall of Famer Don Hutson, who had 819 yards through six with Green Bay in 1942.
+</item 34>
+
+<item 35>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+His high-value touch share is the icing on the cake and hopefully can lead to him scoring just over 12 PPR points for the second week in a row. I'd take my
+chances with him over low-upside running backs like Gus Edwards, Antonio Gibson and Jonathan Taylor (for now he's low-upside).
+
+LAST WEEK: I surmised that Flowers would be targeted more if the Ravens run game couldn't get going. Sure enough, it didn't, and Flowers saw a season-high 11
+targets at Pittsburgh. Unfortunately, Flowers underwhelmingly caught just five balls for 73 yards with two drops that would have pushed his yardage over 100 had
+he held on to both targets.
+
+AIR YARDS: Flowers was targeted downfield more last week than in any game this season with a 15.27 Average Depth of Target (ADOT). It was the first time he had
+a double-digit ADOT and more than six targets.
+</item 35>
+
+<item 36>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+NEW ENGLAND PATRIOTS | S Jabrill Peppers: There hasn't been much to get excited about in New England, but the versatile defensive back is a bright spot and a
+respected voice in the locker room. Peppers has 54 tackles — three for loss — one interception, one forced fumble and a team-leading six passes defended. For a
+team facing as many uncertainties as the Patriots are, Peppers is a solid piece to build around in the short term. — Colum Dell
+
+AFC West
+
+DENVER BRONCOS | CB Patrick Surtain II: In eight games, the 23-year-old budding star has one interception and eight passes defended, tied for 11th in the NFL.
+Don’t be surprised if he earns a second straight Pro Bowl nod.
+
+KANSAS CITY CHIEFS | QB Patrick Mahomes: A shaky receiving corps hasn’t fazed Mahomes.
+</item 36>
+
+<item 37>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+Even if you take out the Bears game the Chiefs have yielded a 56.8% catch rate and 2.93 YAC/reception with a 10.9 receiving average to the Lions, Jaguars and
+Jets. Drill down even further and they're great against outside receivers like Addison in terms of catch rate (45.8%) and YAC/reception (2.86), but they have
+allowed 15.0 yards per catch specifically to outside receivers. It's the only saving grace Addison has.
+
+Start 'em 10.0-7.00 6.99 - 5.01 5.00 - 0 Sit 'em
+
+Start Him (Lineup Decisions) Projections powered by Sportsline Garrett Wilson WR NYJ N.Y. Jets • #17
+
+Age: 23 • Experience: 2 yrs.
+</item 37>
+
+<item 38>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP vs DAL MIA -1.5 O/U 51 OPP VS WR 7th PROJ PTS 14.2 WR RNK 16th YTD Stats REC 71 TAR 99 REYDS 964 TD 4 FPTS/G 14.8 We expect Hill to
+return this week, which should drive people off of Waddle. But there is at least a chance that Hill won't be 100% and Waddle will still be Tua Tagovailoa's top
+target. Waddle has been the quintessential DFS tournament play as of late with three of seven games over 19 PPR Fantasy points, topping 26 twice.
+
+WR Preview Heath's Projections
+
+My full set of Week 16 Fantasy Football projections for every position are now available on SportsLine. Find out which of my favorite plays are projected to
+score higher than consensus rankings and which don't live up to their draft hype, at least in Week 16.
+</item 38>
+
+<item 39>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+Bills
+
+65 Tutu Atwell, Rams @ Ravens
+
+66 Treylon Burks, Titans @ Dolphins
+
+67 Josh Reynolds, Lions @ Bears
+
+68 Nick Westbrook-Ikhine, Titans @ Dolphins
+
+69 Cedric Tillman, Browns vs. Jaguars
+
+70 Marquez Valdes-Scantling, Chiefs vs. Bills
+
+71 Dontayvion Wicks, Packers @ Giants
+
+72 Hunter Renfrow, Raiders vs. Vikings
+
+73 Darnell Mooney, Bears vs. Lions
+
+74 Skyy Moore, Chiefs vs. Bills
+
+75 Kalif Raymond, Lions @ Bears
+
+76 A.T. Perry, Saints vs. Panthers
+
+77 Cedrick Wilson, Dolphins vs. Titans
+
+78 Trenton Irwin, Bengals vs. Colts
+
+79 Michael Gallup, Cowboys vs.
+</item 39>
+
+<item 40>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The hardcore football fans are pretty much done with the NFL harping about Travis Kelce and Taylor Swift. Reality TV star Rachel Lindsay, a longtime NFL fan,
+recently slammed the “obnoxious” coverage, highlighting the “exhausting” uptick in Swifties obsessing over football. But that’s just one example of how fans are
+finding this fixation a little too disrespectful towards the sport.
+
+America’s Favorite Video Today
+
+From the league’s humble beginnings in 1920 to the $18 billion juggernaut that it is today, the ride has been rocky with more than just a few small bumps along
+the road. But with the ambitious target that NFL Commissioner, Roger Goodell, has set for 2027, is there a new strategy in the 104-year-old league’s master plan
+to dominate the world sporting scene?
+
+Why the ‘Traylor’ saga will be the key to Roger Goodell’s $27 billion target?
+</item 40>
+
+<item 41>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning back the clocks last week, it now gets darker earlier for the foreseeable future. That darkness allows us to see the stars on a clear night, so
+it's only natural to wonder if the pass-catching stars will shine bright in Week 10 of the NFL season. We already know Tee Higgins and Nico Collins are OUT,
+while Justin Jefferson, Ja'Marr Chase, and T.J. Hockenson are among the other star pass-catchers beaten up heading into the week. Can we expect them on the
+field when the action kicks off Sunday?
+
+Below, we'll give you the latest news on these ailing pass-catchers and break down how their injuries could potentially affect the Week 10 fantasy landscape.
+
+WEEK 10 INJURY UPDATES: Early WRs | RBs
+
+Is Justin Jefferson playing Week 10?
+
+UPDATE: The Vikings will not activate Jefferson before Sunday's game and have officially ruled him OUT, according to NFL Network's Tom Pelissero.
+</item 41>
+
+<item 42>
+Fantasy Football TE PPR Rankings Week 14: Who to start, best sleepers at tight end (Sporting News, 2023-12-07T22:14:00+00:00)
+It can be tough to trust Taysom Hill (vs. Panthers) in full-point PPR leagues, but a matchup against the league's second-worst run defense gives him a high
+ceiling regardless of format. He's been more involved as a receiver this year, so he'll get a few catches to go along with the rushing stats, too. With Derek
+Carr (concussion) banged up, Hill might throw more this week, too.
+
+Gerald Everett (vs. Broncos) and Isaiah Likely (vs. Rams) have matchups against bottom-six TE defenses, and Cole Kmet (vs. Lions), Jake Ferguson (vs. Eagles),
+and Kyle Pitts (vs. Buccaneers) also have above-average matchups that give them higher floors and higher ceilings than usual.
+
+For those in deeper leagues, Tyler Conklin (vs.
+</item 42>
+
+<item 43>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+To Travis and Taylor, "Welcome to New York." It's been waiting for you. Well, actually, the swamps of northern New Jersey have. Enjoy the traffic and a look at
+the famous skyline.
+
+For bettors, where there is hype, there's also an opportunity to make some money. FanDuel has released a special prop bets menu, cleverly called "Prop Stars"
+for the Swift-inspired wagers. Here's a look at how you can catch some cash in prime time.
+
+MORE: Jets vs. Chiefs betting preview
+
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4
+
+Top of the Charts: Travis Kelce to have the Most Receiving Yards in the Game (+140)
+
+The Jets know that Kelce is trouble long before he even walks in. If they want any chance in this game, they'll have to slow down No. 87.
+</item 43>
+
+<item 44>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The October 1 matchup between the Chiefs and the Jets drew 27 million viewers. And became the most-watched Sunday TV show since the last Super Bowl! And the
+last Super Bowl had an actual concert by Rihanna.
+
+Revealed: The Dark Side Of Pat McAfee & Why Rob Gronkowski Is In The Firing Line
+
+Kaepernick, who? Deflategate, what? In the media frenzy surrounding the two lovebirds, other issues get thrown out of the window. How can fans forget that the
+NFL is also organizing games outside the American borders with a view to garnering international appeal? The NFL has scheduled 5 games abroad this season. It is
+also addressing the concussion controversies. It recently added both new concussion rules and a new $100 million initiative called “Play Smart, Play Safe,” to
+make the sport safer for players. And all the effort is showing.
+</item 44>
+
+<item 45>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+ET, according to ESPN's Jeremy Fowler. The receiver was limited in practice thanks to the toe injury that has plagued him since leaving Week 8's game against
+the Eagles, but barring a setback, he will return to action this weekend.
+
+The receiver was working his way into flex territory with a couple of good performances before picking up the injury. However, we wouldn't consider him to be
+worthy of a fantasy start this week unless you're in a bind. It's unclear whether Samuel will regain the same workload or if he'll be playing in limited action
+as he works his way back. Jamison Crowder emerged in Samuel's absence and Jahan Dotson has seen his production drastically increase, as well. The wait-and-see
+approach is the preferred one heading into Week 10.
+</item 45>
+
+<item 46>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+That one went for 32 yards against the Eagles in Week 1. Since then his longest reception has been for seven yards.
+
+SAINTS: Are sixth-best in rushing average to RBs (3.6) and are top-10 in basically every single run defense metric you could think of, including missed tackles
+with just nine on the year. The only rusher to exceed 10 Fantasy points against them, PPR or not, was Derrick Henry in Week 1. He had 13 PPR points. No one's
+run for a touchdown on them either.
+
+SAINTS: Aren't quite as impressive against running backs through the air, but they're not awful. Figure them as league average across the board except in
+YAC/reception (8.53), but that was due to a massive catch-and-run by Henry in Week 1.
+</item 46>
+
+<item 47>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Receiving Yards Through Six NFL Games Rk Player Season Yds 1 Don Hutson 1942 819 2 Tyreek Hill 2023 812 3 Wes Welker 2011 785 4 Elroy Hirsch 1951 766 5 Santana
+Moss 2005 743 6 DeAndre Hopkins 2015 726 7 Raymond Berry 1960 725 8 Jerry Rice 1986 723 9 Bob Boyd 1954 718 10 Bobby Mitchell 1962 714
+
+• Jared Goff is enjoying the second-best start to a season for his career from a statistical standpoint, behind only his 2018 Super Bowl season with the Rams.
+With the Lions at 5-1 and Goff heading toward a likely contract extension, could another team come after his injured backup, former University of Tennessee
+quarterback Hendon Hooker?
+</item 47>
+
+<item 48>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Especially when you face a defensive coordinator who says, ‘You show me you can beat me throwing the ball outside the numbers — best of luck, and to do that,
+you are going to have to take a five-step drop and I’m going to have Myles Garrett chasing you every play.'”
+
+Advertisement
+
+• Kansas City Chiefs: Is the explosive passing game gone for good?
+
+What I think: The Chiefs have never scored less per game on offense through six games or a full season since Patrick Mahomes became their quarterback. They have
+also never enjoyed larger average point differentials (9.8 per game), because their defense is so much better. I think the pass offense will become slightly
+more explosive as Mahomes gets reps with his receivers, but I’m not expecting a huge shift.
+
+The Chiefs are averaging 9.5 plays per touchdown drive when starting at least 70 yards from the opponent’s goal line, per TruMedia.
+</item 48>
+
+<item 49>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+What are the biggest WR injuries in Week 14?
+
+In Week 13, Demario Douglas (concussion) and Rashid Shaheed (thigh) missed game action, and Tank Dell (leg), Amari Cooper (concussion), Christian Watson
+(hamstring), and Marquise Brown (heel) exited early from their respective games.
+
+UPDATE: Christian Kirk suffered a groin injury on Monday night, and he figures to be more doubtful than questionable for this week's game against Cleveland. If
+he's out, Zay Jones and Tim Jones will see more targets, but with Trevor Lawrence (ankle) also hurt, it's tough to count on either.
+
+UPDATE: Douglas (concussion) has been ruled OUT for Week 14.
+
+As usual, we'll update these WR PPR rankings throughout the week, so check back for the latest player movement and analysis.
+</item 49>
+
+<item 50>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+And all the effort is showing.
+
+According to Joe Pompliano, “The NFL will bring in $20 billion in revenue this year, more than the Premier League, La Liga, Bundesliga, Serie A, and Ligue 1
+combined.” Coming to the strategy part, a curious mind would perhaps think can they take a leaf out of the NBA’s playbook and reinvigorate its appeal as it aims
+to conquer international audiences?
+
+Can the NFL take a leaf out of the NBA’s grisly past and glorious recovery?
+
+The NFL is already the world’s richest league. Calling it an incredible feat would be a gross understatement. Consider this: the English Premier League, which
+is broadcast in over 212 territories, has a revenue of just $6 billion, while football games are primarily viewed in America only. However, the NFL does not
+just want to stop at $18 billion.
+</item 50>
+
+<item 51>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Wilson has turned into "Checkdown Charlie" as a result of conservative coaching, and we don't expect that to change in the early going. Lean into the narrative
+and sprinkle a little cash on Kelce to break the plane first.
+
+Our pick: Bet on it
+
+FriENDZONE: Travis Kelce to NOT score a TD (+120)
+
+Obviously, based on our last recommendation, we're friendzoning this bet and not laying down any action on it.
+
+Our pick: Pass
+
+Running Away Together: Chiefs to have 150+ Total Rushing Yards (+420)
+
+The strength of the Jets roster is along the defensive line, and the Chiefs are a pass-first team that loves to light it up through the air. This is the first
+time that Patrick Mahomes is playing in the New York area. He'll want to put on a show, and Andy Reid certainly isn't going to hold him back.
+</item 51>
+
+<item 52>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+87. This is a New York defense that's been very good, although not quite great, over the last year and continues to improve. Robert Saleh's troops have held
+opponents in check, giving their anemic offense a fighting chance most weeks, but if there's one thing that Gang Green struggles to defend against, it's the
+tight end. They're giving up the fifth-most receiving yards to the position this season (56.3) and just allowed Pharoah Brown to beat them for a long 58-yard
+touchdown last Sunday. Getting +140 is a nice price for the best pass-catcher in this game, but there's too much blowout potential to warrant taking a flier
+here.
+
+Our pick: Pass
+
+Seeing Red: Chiefs to Win by 22+ (+380)
+
+If this bet ends up cashing, the "Seeing Red" tagline would apply to a lot more than just Chiefs fans.
+</item 52>
+
+<item 53>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+But there is a solid chance he does not hit that mark. Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight. If he
+slows down, someone like CeeDee Lamb could catch up.
+
+Based on his current season average, Lamb is on track for close to 1,600 yards, but based on his production over the last seven games, he could finish with
+closer to 1,800 yards.
+
+He will probably need Hill to fade down the stretch to have a shot. But if Hill does and he continues to produce, Lamb could steal OPOY from Hill.
+
+Defensive Player of the Year
+
+Current favorite(s): Micah Parsons , Myles Garrett , and T.J. Watt
+
+, Myles Garrett , and T.J. Watt Longshot: Danielle Hunter
+
+Hunter leads the league in tackles for a loss and is third in sacks with 13.5 (behind Khalil Mack and Watt).
+</item 53>
+
+<item 54>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Can Raiders QB Aidan O’Connell earn next season’s starting job?: After leading the offense on seven touchdown scoring drives in last week's 63-21 win over the
+Chargers, the rookie fourth-rounder aims to further establish himself as a serious contender for Las Vegas' starting job next season. Despite the encouraging
+performance, O'Connell has been inconsistent across six games as the full-time starter, throwing for 1,300 yards, seven touchdowns, and five interceptions.
+
+However, a stellar showing against the NFL's fifth-ranked pass defense (202.5 yards per game allowed) would benefit his bid to be the starter in 2024.
+
+Chiefs TE Travis Kelce: Yes, his girlfriend will be in town for the holiday. Kelce is averaging 89.6 yards per game with global popstar Taylor Swift in
+attendance this season but is coming off his worst outing in her presence, catching five passes for 28 yards.
+</item 54>
+
+<item 55>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+I think he'll continue to see high-value targets near the end zone and, hopefully, a small uptick in targets. I'd start him as a No. 2 receiver over Terry
+McLaurin, any Broncos wideouts and any Packers wideouts.
+
+LAST WEEK: Was so close to having a monster game. He was the designed target on a trick play and saw the ball fall just past his outstretched hands in the end
+zone. He also had two targets inside the 10-yard line (his first two of the season) and two end-zone targets including the aforementioned trick play (his first
+two of the season). The heavy dose of targets inside the 10 and into the end zone are positive signs that the Titans are trying to get him going as a playmaker.
+
+FILM: Hopkins might be 31 years old but he moved really, really well, creating separation with outstanding footwork and having just enough speed to stay a step
+ahead of defenders.
+</item 55>
+
+<item 56>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"'Taylor wants a guy that's into his career, does his own thing, but is also supportive and understands her,' the source added, "and Travis fits those
+qualities.'"
+
+Sept. 25: Kelce jersey sales skyrocket
+
+Call it what you want; I'll call it the Taylor Swift effect. Since Swift attended the Chiefs game, there was a 400% increase in Kelce jersey sales, his podcast
+is No. 1 overall on Apple, he gained over 380,000 Instagram followers, and 24.3 million people watched the game, making it the No. 1 game last week, according
+to Front Office Sports.
+
+There has also been triple the "Chiefs" searches on web and triple the Chiefs ticket sales on Stubhub.
+
+Sept. 25: Belichick weighs in on the matter
+
+
+
+New England Patriots head coach does not always comment on situations that take place in the game, but he was fully ready with a sound bite on the Kelce-Swift
+situation.
+</item 56>
+
+<item 57>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+It's not glamorous, but they'll score again. Shutting out NFL teams is no easy task, but the Chiefs defense is much improved and the Jets look like a team that
+doesn’t have a quarterback. Don’t consider it likely to hit, but +3400 wagers hardly ever are. Consider this a fun bet, unless you’re a Jets fan, and see how
+long K.C. can keep NYC off the scoreboard. They might just do it for the entire game.
+
+Our pick: Bet on it (with a small wager)
+</item 57>
+
+<item 58>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Geno Smith's struggles complicate their fantasy prospects, as well.
+
+What are the biggest WR injuries in Week 13?
+
+Entering Week 12, Tee Higgins (hamstring), Noah Brown (knee), Treylon Burks (concussion), and Kadarius Toney (ankle, hip) all failed to suit up due to nagging
+injuries. For now, we've placed Higgins and Brown in our Week 13 list and omitted Burks and Toney. We'll also be eyeing the Chargers' Josh Palmer (knee), who's
+eligible to come off the IR this week but probably won't suit up against New England.
+
+Last week, the most notable WRs to exit their respective games with injuries include Chris Olave (concussion), Amari Cooper (ribs), Demario Douglas
+(concussion), and Rashid Shaheed (thigh). We've left all four WRs out of our initial Week 13 list but will closely monitor their teams' injury reports to gauge
+their playing prospects.
+</item 58>
+
+<item 59>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+As for this season, not so much.
+
+Sean Payton should be at the forefront of the conversation. It's one thing to turn around a team that was dreadful last season. But he has taken one that got
+off to a horrible start and turned things around in-season.
+
+Oh — and he has resurrected Russell Wilson's career.
+
+That alone should put him at the top of the list, but he may need to get Denver into the playoffs to convince voters.
+
+Comeback Player of the Year
+
+Current favorite: Demar Hamlin
+
+Longshot: Russell Wilson
+
+Coming back from a life-threatening injury like a cardiac arrest makes Hamlin a great candidate to win CPOY. However, it would be understandable if voters were
+to look elsewhere since Hamlin has seldom been active on game day and rarely seen the field.
+
+It will depend on how vital voters deem playing to be.
+
+Wilson was supposed to be the next great franchise quarterback for the Broncos when they acquired him prior to last season.
+</item 59>
+
+<item 60>
+Fantasy Football Week 13 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-11-30T22:10:58+00:00)
+Weekly Breakdown MATCHUP vs CAR TB -5.5 O/U 37 OPP VS WR 15th PROJ PTS 12.5 WR RNK 32nd YTD Stats REC 53 TAR 82 REYDS 606 TD 1 FPTS/G 11.2 Remember when Chris
+Godwin was known for being a super-reliable SLOT receiver? Those were the days. This season he's lined up wide on 68% of his snaps. Can't help but think that's
+caused the massive change in his production this year -- that and his quarterback isn't a serial slot-targeter (or a Hall of Famer). Godwin's been under 60
+yards in five straight, hasn't had a game with even 10 PPR points since Week 8 and has one touchdown on the year despite being tied for 12th among all NFL
+players in end-zone targets with nine.
+</item 60>
+
+<item 61>
+2023 NFL Week 11 injury roundup: Rams WR Cooper Kupp, Seahawks RB Kenneth Walker III among stars to exit (CBSSports.com, 2023-11-19T23:51:49+00:00)
+I agree to receive the "Pick Six Newsletter" and marketing communications, updates, special offers (including partner offers), and other information from CBS
+Sports and the Paramount family of companies. By pressing sign up, I confirm that I have read and agree to the Terms of Use and acknowledge Paramount's Privacy
+Policy See All Newsletters Please check the opt-in box to acknowledge that you would like to subscribe. Thanks for signing up! Keep an eye on your inbox. Sorry!
+There was an error processing your subscription.
+
+WR
+
+Tyreek Hill (Dolphins) briefly left Miami's game against the Raiders while nursing a hand injury and was ruled questionable to return, but he took the field
+again soon afterward, securing seven catches for 80 yards and a score before halftime. Hill has left multiple games this year, only to return in all of them.
+
+Cooper Kupp (Rams) had just a single catch against the Seahawks before suffering an ankle injury while blocking.
+</item 61>
+
+<item 62>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Jefferson (hamstring) is officially listed as "questionable" for Sunday's game against the Saints. Kickoff is slated for 1 p.m. ET, but fantasy owners won't
+have to wait long for news on the star receiver. In order to be eligible to play, Jefferson will need to be activated by 4 p.m. ET on Saturday. Earlier in the
+week head coach Kevin O'Connell said that it would be "a little aggressive" for Jefferson to get back on the field this week. However, the receiver's three
+straight limited practices were enough for the team to at least weigh the decision, but thankfully, an early answer awaits.
+
+WEEK 10 FANTASY ADVICE:
+
+Sleepers | Busts | Projections | Start 'em, sit 'em
+
+Jefferson's fantasy outlook is always through the roof, but it will be interesting to see if that changes with Josh Dobbs under center instead of Kirk Cousins.
+</item 62>
+
+<item 63>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+McCaffrey, who seems poised to win the Offensive Player of the Year Award, leads the NFL in rushing (1,292 yards) and total yards per game (128.6) this season
+and is tied for first in touchdowns (20).
+
+Ravens TE Isaiah Likely thriving in the starting role: The Ravens offense hasn't lost a step since losing one of the team's top weapons in tight end Mark
+Andrews (ankle) in Week 11, largely due to Likely's emergence.
+
+The second-year tight end has averaged 64.3 yards over his last three games, which is particularly noteworthy since Andrews averaged 54.4 yards per game before
+sustaining his injury.
+
+Should we expect a defensive battle?: While both teams boast offenses that rank in the top five in yardage and scoring, this may not turn into a shootout.
+</item 63>
+
+<item 64>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+I'm hoping for a bounce back in Week 16. Dontayvion Wicks WR GB Green Bay • #13
+
+Age: 22 • Experience: Rookie Weekly Breakdown MATCHUP @ CAR GB -5 O/U 37.5 OPP VS WR 22nd WR RNK 35th ROSTERED 15% YTD Stats REC 31 TAR 49 REYDS 491 TD 1 FPTS/G
+6.5 If Christian Watson and Jayden Reed remain out then Wicks might just be the best option available. He should certainly be started in more leagues than he is
+currently rostered in. His seven targets in Week 15 were a career high and part of a trend. His snap share has increased for three weeks in a row.
+
+WR Preview DFS Plays
+
+Top DFS Play (WR Preview) Projections powered by Sportsline CeeDee Lamb WR DAL Dallas • #88
+
+Age: 24 • Experience: 4 yrs.
+</item 64>
+
+<item 65>
+Dolphins vs. Eagles live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-22T23:28:04+00:00)
+— Oh yeah, Julio Jones is back in the NFL.
+
+What a group 🤌 pic.twitter.com/fV9WgGOpRY — Philadelphia Eagles (@Eagles) October 22, 2023
+
+7:41 p.m. — Believe it or not, Tyreek Hill has a chance to break 1,000 yards tonight. He would need 186, but with the way he's played this season, that at least
+seems to be within reach.
+
+7:29 p.m. — Don't forget the Eagles will be back in Kelly Green tonight. This will be a fascinating uniform matchup.
+
+7:20 p.m. — It's 55 degrees and dropping in Philadelphia. That's not unusual for the Eagles, but will Tua Tagovailoa be able to rise to the occasion in cooler
+weather?
+
+What channel is Dolphins vs. Eagles on today?
+
+Game: Dolphins vs. Eagles
+
+Dolphins vs.
+</item 65>
+
+<item 66>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+Revisiting the NBA caricature back in time, the New York Knicks became the first all-Black team in 1979. But their fans made their disapproval very apparent.
+“It wasn’t so much New York attitudes, but fans around the league let you know how they felt about you as an opponent and as a Black man as well,” Knicks star
+Earl Monroe told Newsday.
+
+USA Today via Reuters May 15, 2021; San Antonio, Texas, USA; Phoenix Suns forward Torrey Craig (12) and San Antonio Spurs forward Keldon Johnson (3) fight for
+loose ball as Suns guards Devin Booker (1) and Chris Paul (3) look on in the third quarterat AT&T Center. Mandatory Credit: Scott Wachter-USA TODAY Sports
+
+We could list out all the scandals, fights, and controversies here, but you get the idea.
+</item 66>
+
+<item 67>
+FanDuel Picks Week 15: Best NFL DFS lineup advice for daily fantasy football tournaments (Sporting News, 2023-12-13T20:28:00+00:00)
+Nacua checks in at $200 less and is arguably better than Kupp in fantasy at this stage. In a game where every dollar counts, pocketing that extra $200 can
+really pay off at another roster spot.
+
+WR Rashee Rice, Chiefs @ Patriots ($6,500). There are plenty of issues with the Chiefs' receivers, but Rice is not one of them. The rookie has been very
+impressive through the first 14 weeks of his NFL career and hauled in yet another touchdown on Sunday to post a respectable fantasy showing. He's been targeted
+29 times over the past three games and scored twice. We can expect New England will try to take away Travis Kelce, meaning that the opportunities could be
+coming even more often for Rice in Week 15.
+
+WEEK 15 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+TE Chig Okonkwo, Titans vs. Texans ($5,000).
+</item 67>
+
+<item 68>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+The Texans offense looks like one to avoid as long as C.J. Stroud is out. Ja'Marr Chase WR CIN Cincinnati • #1
+
+Age: 23 • Experience: 3 yrs. Tee Higgins is a No. 2 receiver and Tyler Boyd is a fine flex.
+
+WR Preview Numbers to Know
+
+69.9% -- Nearly 70% of Rashee Rice's receiving yards have come after the catch, that's tops amongst wide receivers with at least 50 targets.
+
+-- Nearly 70% of Rashee Rice's receiving yards have come after the catch, that's tops amongst wide receivers with at least 50 targets. 11.4 -- Deebo Samuel is
+on pace to become just the fourth player since 1992 to average more than 11 yards per target with at least 60 targets in multiple seasons. The other three are
+Tyreek Hill, Tyler Lockett, and DeSean Jackson.
+</item 68>
+
+<item 69>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+But this hot stretch started against the Raiders, when Rice scored 24.7 PPR Fantasy points against them in Week 12. They are playing a style of defense that
+limits big plays but allows throws underneath which fits Rice and his 4.3 ADOT perfectly. While the Raiders have surrendered the 11th-fewest passing yards this
+season, they've given up the fourth-most yards after the catch.
+
+If Rice is on your roster, he's in your starting lineup. You have plenty of other things to stress about.
+
+Heath's Week 16 Previews: QB | RB | WR TE
+
+
+
+You can find more in my weekly projections over at SportsLine. Now here is the rest of the Week 16 WR Preview:
+
+WR Preview Who's Out
+
+The following players are not being projected to play Week 16 at this time. Here's what it means:
+
+Nico Collins WR HOU Houston • #12
+
+Age: 24 • Experience: 3 yrs.
+</item 69>
+
+<item 70>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+COLLINS: It's minor but Collins does see a higher target per route run rate against man coverage (25%) than zone (22.2%). He also has a higher catch rate
+(87.5%) and higher receiving average (23.3) against man than zone (65.4% and 17.8). However, he's run nearly four times as many routes against zone coverage
+compared to man.
+
+MATCHUPS: It's also worth pointing out that Collins' two really big games came in Week 2 (vs. Indianapolis) and Week 4 (vs. Pittsburgh), both teams that rank in
+the bottom-10 in Fantasy points allowed to wide receivers. The Saints are in the top half.
+
+STROUD: Has been outstanding against man coverage all year, completing a higher rate of passes (67.6%) for 3.5 more yards per attempt (11.1) than versus zone
+(7.6).
+</item 70>
+
+<item 71>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+However, the NFL does not just want to stop at $18 billion. It wants to become a $27 billion league in 4 years. But it must address a few skeletons in its
+closet before reaching that goal.
+
+If you were around in the 1970s (that would make you at least 50 years old today), you would know that the NBA did not have the mass appeal that it enjoys now.
+With average game attendance hovering around 8,000 a game, it was one of the darkest periods of the basketball league. Drug abuse, brawls on the hardwood court
+that sometimes spilled over onto coaches and players – it wasn’t a pretty sight. As reported in the Washington Post, even though there are no reliable figures
+on cocaine use by players, “estimates by people in the game range from 40 percent to 75 percent.”
+</item 71>
+
+<item 72>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+Which WRs are on bye in Week 14?
+
+The final set of bye weeks sees only the Commanders and Cardinals idle, resulting in the losses of Terry McLaurin, Marquise Brown, Jahan Dotson, Curtis Samuel,
+Rondale Moore, and Greg Dortch.
+
+WEEK 14 PPR RANKINGS:
+
+QBs | RBs | TEs | D/STs | Kickers
+
+Even worse, Washington and Arizona sit as two of the weakest pass defenses in the league, so fantasy owners won't be able to count on big stats from their
+receivers going against the Commanders and Cardinals.
+
+WEEK 14 STANDARD RANKINGS:
+
+QBs | RBs | WRs | TEs | D/STs | Kickers
+
+Who are the best fantasy WRs in Week 14?
+
+The league's leading receiver, Tyreek Hill (vs.
+</item 72>
+
+<item 73>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+After turning in three limited practices this week, we'll trust that Hockenson is ready to go, especially since he continued to play through the ailment in Week
+9 as a big part of the offense with Josh Dobbs under center.
+
+As long as Hockenson is playing, he's not being benched in any fantasy format. The tight end projects as a top option at the position and remains the Vikings'
+leader in targets with 80 on the season. Dobbs enjoyed targeting the tight ends in Arizona and continued that trend in his Minnesota debut. The floor for
+Hockenson is equivalent to that of a rooftop bar.
+
+WEEK 10 DFS: DK lineup | FD lineup | Best values | Best stacks
+
+Is Curtis Samuel playing Week 10?
+
+UPDATE: Samuel is officially ACTIVE.
+
+Samuel (toe) is expected to play on Sunday when the Commanders take on the Seahawks at 4:25 p.m. ET, according to ESPN's Jeremy Fowler.
+</item 73>
+
+<item 74>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Travis Kelce has been catching a lot more than footballs lately, and fans everywhere have been swift to hop on the Taylor Swift bandwagon. The celebrity couple
+has been in the news for well over a week now, and despite the fatigue from many -- Chris 'Mad Dog' Russo's rant being among the most vocal -- companies like
+FanDuel just can't help but lean into a profitable storyline. Are they for real or is this "Love Story" just some extravagant publicity stunt?
+
+Time will tell, but one thing's for certain when it comes to the media, social media, newspapers, football fans, Swifties, and just about everyone else within
+the 50 states and U.S. territories, including Puerto Rico and Guam: "You need to calm down." Regardless, Kelce and Swift take their tour on the road to
+Broadway, a place that puts on all the great shows.
+</item 74>
+
+<item 75>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Weekly Breakdown MATCHUP vs IND ATL -1 O/U 44.5 OPP VS WR 9th PROJ PTS 10.7 WR RNK 19th YTD Stats REC 58 TAR 86 REYDS 769 TD 2 FPTS/G 11.5 Amari Cooper WR CLE
+Cleveland • #2
+
+Age: 29 • Experience: 9 yrs. Weekly Breakdown MATCHUP @ HOU HOU -2.5 O/U 42.5 OPP VS WR 21st PROJ PTS 13.6 WR RNK 20th YTD Stats REC 61 TAR 113 REYDS 985 TD 3
+FPTS/G 12.5 Romeo Doubs WR GB Green Bay • #87
+
+Age: 23 • Experience: 2 yrs.
+</item 75>
+
+<item 76>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+From Colin Kaepernick taking a knee during the national anthem to protest against racism, to domestic violence by players, to the Deflategate and Bountygate
+scandals. But there have been bigger crises as well. The Union of Concerned Scientists accused the NFL of trying to intimidate scientists studying the link
+between CTE and pro football. The NFL is already way past other leagues in terms of revenue, and now with the pivotal shift in its strategy, “America’s favorite
+pastime” is on its way to world domination.
+
+ADVERTISEMENT Article continues below this ad
+
+Editorial Disclaimer: The views expressed are those of the author and do not necessarily reflect the views of EssentiallySports.
+
+Watch This Story: Will Patrick Mahomes Eclipse Tom Brady as the NFL Goat? Travis Kelce Responds
+</item 76>
+
+<item 77>
+Baker Mayfield stats today: Buccaneers QB keeps Tampa Bay atop NFC South with sparkling showing vs. Packers (Sporting News, 2023-12-17T23:05:13+00:00)
+It was the finest display of Mayfield's season and one of the best of his career. It's also one of the greatest showings in recent Lambeau Field history;
+according to ESPN Stats and Info, Mayfield is just the sixth opposing QB to toss for at least 350 yards and four touchdowns in a single game there.
+
+Per @ESPNStatsInfo, Baker Mayfield is the sixth visiting QB throw for 350 yards and four TDs at Lambeau Field all time. Kirk Cousins (2018) was the last to do
+it. — Rob Demovsky (@RobDemovsky) December 17, 2023
+
+Mayfield has shown off his arm talent in years past. He's hit the 300-yard mark on 12 separate occasions. He's also showcased inch-perfect precision, having
+completed at least 75% of his passes 10 other times.
+
+He's rarely done so together, though.
+</item 77>
+
+<item 78>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+$28 billion. And just like that, their target will be met.
+
+USA Today via Reuters NFL, American Football – Taylor Swift reacts while sitting next to Donna Kelce watching the Kansas City Chiefs vs Chicago Bears game
+during the first half at GEHA Field at Arrowhead Stadium, Kansas City, Missouri, USA | Image Credits: Denny Medley-USA TODAY Sports/Reuters
+
+And while analysts like Stephen A. Smith may go around telling people they should be embarrassed of themselves for getting so invested in someone else’s
+relationship, it is good business for the NFL. TMZ reported that #87’s jersey sales skyrocketed 400% and his Instagram followers by 276%. Yahoo Finance reported
+a 53% rise in viewership among teen girls. Who would have thought in their wildest dreams that the NFL would manage to rope in this part of the population? The
+October 1 matchup between the Chiefs and the Jets drew 27 million viewers.
+</item 78>
+
+<item 79>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+</item 79>
+
+<item 80>
+Fantasy Football WR PPR Rankings Week 13: Who to start, best sleepers at wide receiver (Sporting News, 2023-11-29T20:27:00+00:00)
+Tyreek Hill (@ Commanders in Week 13) did his thing despite a tough matchup in Week 12, resulting in Miami's WR1 returning to the top spot against a putrid
+Washington stop unit. CeeDee Lamb (vs. Seahawks) isn't far behind, as Dallas' WR1 aims to maintain his efficient play against Seattle.
+
+Amon-Ra St. Brown (@ Saints) has been a target hog the past several weeks, seeing at least nine looks in each of his past six games. Don't expect his workload
+to decrease in a bounce-back game for the Lions. Keenan Allen (@ Patriots) looks to continue his dominant ways, as Justin Herbert's go-to target routinely has
+double-digit target potential.
+
+Mike Evans (vs. Panthers) sits in our top five for Week 13, totaling four TDs over the past three weeks. A.J. Brown (vs.
+</item 80>
+
+<item 81>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+STEVENSON: The Patriots front five has gone through all kinds of issues and as a result have contributed to Stevenson averaging 0.98 yards before contact per
+rush this season. That ranks 29th out of 44 qualifying running backs. And if you think that's bad then consider his yards after contact per rush average of
+1.75, which is dead-last among those same 44 qualifiers.
+
+EXPLOSIVE RUNS: Stevenson has one (1) explosive carry of 12 or more yards. It was against Miami. It went 12 yards. This is a big change from 2022 when he had 21
+explosive runs and an explosive run rate of 10%, which was eighth-best.
+
+RECEIVING: Is averaging 4.0 targets per game and catching 75% of them but is getting just 7.3 yards per catch and has one (1) explosive catch of 16 or more
+yards.
+</item 81>
+
+<item 82>
+Fantasy Injury Updates Week 10: News on Justin Jefferson, Ja'Marr Chase, T.J. Hockenson & Curtis Samuel (Sporting News, 2023-11-11T21:17:00+00:00)
+Chase put a scare into the fantasy community on Wednesday when he was listed as a DNP, but after logging back-to-back limited practices, there is a lot more
+optimism heading into Sunday. With Tee Higgins (hamstring) already ruled out, Cincinnati will be hoping Chase can feel healthy enough to play when they host the
+Texans at 1 p.m. ET on Sunday.
+
+The Bengals, despite getting a win over the Bills last Sunday, are a beaten-down bunch. Their defense will also be without a prominent edge rusher, Sam Hubbard,
+complicating matters for a team hoping to stack wins as they compete for an AFC North crown. On the bright side, Joe Burrow appears to be finally healthy and
+should have no problems targeting Tyler Boyd, Trenton Irwin, and Andrei Iosivas in the passing game. If Chase does end up suiting up, fantasy owners should
+enjoy an even larger workload than the receiver already had.
+</item 82>
+
+<item 83>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+STEVENSON: Nothing has changed in terms of his efficiency. We can blame the offensive line to some degree but Stevenson has averaged 0.97 yards before contact
+per rush this season. That ranks 30th out of 41 qualifying running backs. And if you think that's bad then consider his yards after contact per rush average of
+1.79, which is dead last among those same 41 qualifiers.
+
+EXPLOSIVE RUNS: Stevenson has one (1) explosive carry of 12 or more yards. It was against Miami. It went 12 yards. This is a big change from 2022 when he had 21
+explosive runs and an explosive run rate of 10%, which was eighth-best.
+
+RECEIVING: Is averaging 3.6 targets per game and catching 67% of them but is getting just 7.3 yards per catch and has one (1) explosive catch of 16 or more
+yards.
+</item 83>
+
+<item 84>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+But Wilson doesn't have time to be the anti-hero, or villain, as traditionalists would say. He needs to flip the script and shake it off. The Jets need to let
+him sling the ball around the field instead of worrying about the bad turnovers. They aren't winning this game 14-10, and they aren't winning anything if they
+can't let their quarterback be who he is. Are we betting this? Absolutely not, but that would be one heck of a plot twist, right? Perhaps the script writers are
+working overtime.
+
+Our pick: Pass
+
+Platinum Performance: Travis Kelce to Score 3+ TDs (+2500)
+
+When it comes to Kelce's greatest hits, he prefers to save them for division rivals like the Raiders and Chargers. In your wildest dreams this bet might hit,
+and it might happen in reality too.
+</item 84>
+
+<item 85>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+The league's leading receiver, Tyreek Hill (vs. Titans in Week 14), stands as the unquestioned WR1 for Week 14 after torching the Commanders to the tune of five
+catches, 157 yards, and two TDs. CeeDee Lamb (vs. Eagles) and the Cowboys look to avenge their road loss to the Eagles in Week 9, as Dallas' WR1 routinely has
+double-digit reception potential.
+
+Amon-Ra St. Brown (@ Bears) was relatively quiet this past week, but he's likely to rebound against a Bears defense that he totaled nine catches for 95 yards
+against in Week 11. A.J. Brown (@ Cowboys) reached the century mark for the first time in four games in Week 13, and another high-usage day looks to be in store
+for a potential shootout.
+
+Keenan Allen (vs. Broncos) caught just five-of-nine targets last week, but as L.A.
+</item 85>
+
+<item 86>
+NFL awards odds: Six longshots bettors should consider for MVP, OPOY, DPOY and more (Sporting News, 2023-12-05T20:45:25+00:00)
+1 seed in the conference.
+
+Compared to the 49ers, Cowboys and Eagles, Goff and the Lions may have the easiest schedule to finish the season.
+
+But bettors should also pay attention to C.J. Stroud. He leads the league in passing yards, is one of four quarterbacks eho have started the whole season with a
+passer rating over 100, and his touchdown to interception ratio is the best in the NFL (4 to 1)
+
+As for the value of his play, Stroud has taken one of the worst teams in the NFL (11 total wins the last three seasons) and turned it into a playoff contender
+and potential division champion.
+
+Offensive Player of the Year
+
+Current favorite: Tyreek Hill
+
+Longshot: CeeDee Lamb
+
+There's a good reason why Tyreek Hill is such a heavy favorite to win OPOY. The Dolphins wide receiver is on track to become the first player with 2,000-plus
+receiving yards in a single season.
+</item 86>
+
+<item 87>
+Fantasy Football WR PPR Rankings Week 14: Who to start, best sleepers at wide receiver (Sporting News, 2023-12-07T22:11:00+00:00)
+Fantasy WR PPR Rankings Week 14: Who to start, sit at wide receiver
+
+Rankings based on full-point PPR scoring formats
+
+Rank Player
+
+1 Tyreek Hill, Dolphins vs. Titans
+
+2 CeeDee Lamb, Cowboys vs. Eagles
+
+3 Amon-Ra St. Brown, Lions @ Bears
+
+4 A.J. Brown, Eagles @ Cowboys
+
+5 Keenan Allen, Chargers vs. Broncos
+
+6 Justin Jefferson, Vikings @ Raiders
+
+7 Stefon Diggs, Bills @ Chiefs
+
+8 Mike Evans, Buccaneers @ Falcons
+
+9 Michael Pittman Jr., Colts @ Bengals
+
+10 Davante Adams, Raiders vs. Vikings
+
+11 Brandon Aiyuk, 49ers vs. Seahawks
+
+12 Nico Collins, Texans @ Jets
+
+13 Ja'Marr Chase, Bengals vs. Colts
+
+14 Cooper Kupp, Rams @ Ravens
+
+15 Chris Olave, Saints vs.
+</item 87>
+
+<item 88>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+Expect more of the same from QB Justin Herbert and his stud back against the Jets, who have allowed 46 receiving yards per game to RBs (sixth-most in the NFL).
+They'll try to shut him down this Sunday, but it would feel so empty without AE!
+
+Jahan Dotson, WR, Commanders @ Patriots — OVER 45.5 receiving yards
+
+We've come full circle with Dotson, who made our preseason sleepers column then faded into early-season obscurity only to emerge again over the past two weeks.
+Curtis Samuel was clearly not right last week, and the second-year wideout more than made up for it. Dotson caught 8-of-10 targets for 108 yards and a TD, a
+stellar encore to his Week 7 line of five catches for 43 yards. The banged-up Patriots defense will be primarily focused on stopping stud Commanders receiver
+Terry McLaurin, which should open up plenty of opportunities for Dotson.
+</item 88>
+
+<item 89>
+NFL Best Bets Week 9: Colts clobber Panthers, Dolphins drop Chiefs in Germany (Sporting News, 2023-11-03T20:56:00+00:00)
+MORE SUPERDRAFT DFS & FANTASY PROPS: How to play SuperDraft
+
+This one should be a tightly-contested, high-scoring game — with heavy playoff implications, because we all know this could be an AFC Championship preview — so
+expect Rice to be very busy through all four frames in Frankfurt. The Dolphins have allowed the fifth-most receptions and the 12th-most yards to wideouts this
+season. If a bounce-back week is meant to be, Sir Rashee is our destiny.
+
+Austin Ekeler, RB, Chargers @ Jets — OVER 29.5 receiving yards
+
+Guess who's back? Back again...Ek is back....tell a friend. The Chargers finally got their best player back to full health, with Ekeler exploding for 123 yards
+and a TD against the Bears last weekend. A whopping 94 of those 123 yards came through the air, as the PPR god gashed Chicago for chunk yardage a handful of
+times.
+</item 89>
+
+<item 90>
+MVPs for all 16 AFC teams at the midpoint (Yardbarker, 2023-11-09T21:51:02+00:00)
+MIAMI DOLPHINS | WR Tyreek Hill: Arguably the best wide receiver in the NFL, Hill has somehow reached a new level of dominance in his age-29 season. The
+seven-time Pro Bowler leads the NFL in receiving yards (1,076) and TD catches (eight). As long as the Dolphins maintain their success on offense down the
+stretch, Hill should earn Offensive Player of the Year honors. He's on pace to break Calvin Johnson's season record for receiving yards (1,964).
+
+
+
+NEW YORK JETS | LB Quincy Williams: While his brother, Quinnen, may be the better-known Jets defender in the family, Williams — the AFC Defensive Player of the
+Month for October — is also making a name for himself. Aside from being the fifth-highest-rated linebacker in the NFL by Pro Football Focus, Williams is tied
+for 17th in tackles (74) and tied for ninth in TFLs (nine) among all defenders.
+</item 90>
+
+<item 91>
+Bills vs. Chargers odds, props, predictions: Buffalo faces struggling L.A. with eyes on AFC playoff picture (Sporting News, 2023-12-21T19:35:54+00:00)
+With Buffalo likely to cruise, this isn’t a far-fetched chain of events to target.
+
+Gerald Everett OVER receiving yards
+
+Whether Easton Stick continues to play decently or if he doesn’t, this prop line for receiving yards should be attainable for Chargers TE Gerald Everett in Week
+16. Everett has tallied 41, 39, 44 and 43 receiving yards in his last four outings. The Bills are likely to score a lot, necessitating that Los Angeles passes a
+lot. Even if this wasn’t a game with such a big spread, it is a small ask to suggest that Everett can net half of what he’s averaged in the past month.
+
+Bills vs. Chargers prediction: Bills continue to roll
+
+The Chargers new coach isn’t going to be able to right all his team’s wrongs overnight, but losing by less than 38 would be a great place to start.
+</item 91>
+
+<item 92>
+Fantasy Football Week 16 Wide Receiver Preview: Waiver adds, DFS plays, and more (CBSSports.com, 2023-12-19T20:51:32+00:00)
+Projected stats for all starting quarterbacks are available at Sportsline.
+</item 92>
+
+<item 93>
+Bills vs. Chargers odds, props, predictions: Buffalo faces struggling L.A. with eyes on AFC playoff picture (Sporting News, 2023-12-21T19:35:54+00:00)
+Before Week 15, Cook hadn’t rushed more than 17 times in a game. After carrying 25 times vs. Dallas (and earning AFC Offensive Player of the Week status), BIlls
+fans must be extremely hopeful that their offensive attack continues to involve Cook handling more than 20 rushes per game.
+
+Cook’s 179-yard outburst coupled with backup Ty Johnson’s shoulder injury in Week 15 should both contribute to Cook garnering 20-plus touches this week.
+
+Chargers betting news: Los Angeles limps toward the finish line
+
+The Chargers were supposed to be good but are not. It seemed unlikely that coach Brandon Staley was going to be their guy past this year, especially on the
+heels of their crushing playoff exit in Jacksonville where they blew a 27-point lead and lost in historic fashion. However, giving up 63 points to a team that
+had just been shut out 3-0 four days earlier was enough to cause Los Angeles ownership to hit the shred button.
+</item 93>
+
+<item 94>
+Baker Mayfield stats today: Buccaneers QB keeps Tampa Bay atop NFC South with sparkling showing vs. Packers (Sporting News, 2023-12-17T23:05:13+00:00)
+Mayfield threw a TD pass to all four levels of the field for the third time in his career, the most by any QB since 2016.#TBvsGB | #GoBucs
+pic.twitter.com/OpmeWv4ThM — Next Gen Stats (@NextGenStats) December 17, 2023
+
+The film told a similar story. Mayfield looked composed in the pocket, letting loose as he slung the hazel-tinted chamber in all sorts of different directions.
+He hit that much-vaunted 158.3 perfect passer rating, becoming the first visiting quarterback to ever record such a mark at Lambeau. And he did so in style,
+whipping whistlers beyond Green Bay surveillance with a variety of targets. Five different Buccaneers wide receivers recorded at least 40 receiving yards on the
+day.
+
+Chris Godwin was Mayfield's favorite battery mate. He caught 10 passes for 155 yards, by far his best showing of the year.
+</item 94>
+
+<item 95>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+That figure was 7.8 in Mahomes’ first year as the starter and has climbed every season since. It’s a testament to the Chiefs’ adaptability, but also a
+reflection of plummeting explosive play rates.
+
+Exec comment: “Yeah, it looks harder for them on offense until Mahomes finds (Travis) Kelce on every major third down, every major two-minute play, every major
+touchdown. Kansas City has the luxury of their best players being their toughest players. Chris Jones is a very tough player. Kelce is a very tough player.
+Mahomes is a very tough player. You wonder why they win the games? Because the games are won by the toughest teams most of the time.”
+
+• Philadelphia Eagles: Has Jalen Hurts regressed? Where are the explosive pass plays?
+
+What I think: Explosive passing is down through most of the league, including for the Eagles.
+</item 95>
+
+<item 96>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+They are gaining more than 15 yards on just 11 percent of pass plays, down from 21 percent through six games last season and 19 percent for 2022 overall. Jalen
+Hurts, A.J. Brown, DeVonta Smith and Dallas Goedert are still on the team, so I’m inclined to trust the production will return. But there’s also a lingering
+fear defenses have caught up to aspects of the Eagles’ scheme. Does Philly have a counterpunch?
+
+Advertisement
+
+Exec comment: “People are going to crush Hurts and the offense. They are just churning the clock so much. It just feels like they are imposing their will on
+teams through the run game and through their short passing and it just hasn’t taken off from an explosive passing standpoint, so when they play a team that can
+move the ball on them through the air, it presents some challenges.”
+</item 96>
+
+<item 97>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+In your wildest dreams this bet might hit, and it might happen in reality too. Kelce could be schmoozing in the suite when the second half begins rather than
+throwing blocks and catching footballs on the field. But if the Jets keep it close, they are prone to being exploited by players like Kelce. With receivers
+lacking on the Chiefs sideline, the tight end might put on a show that is typically only found in show business. Considering he hosted “Saturday Night Live”
+back in March, Kelce is familiar with how to tell a story. We have him scoring once, so what’s another two times to cash a monster long shot? Don't count on it,
+but don't rule it out either. And please, have fun and bet responsibly.
+</item 97>
+
+<item 98>
+NFL Fantasy Football Week 5 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-04T21:56:25+00:00)
+3 wide receiver in the offense behind Justin Jefferson and K.J. Osborn, but even with the donut Addison still has a five-catch lead on Osborn on the season with
+68 more yards gained.
+
+THIS WEEK: You can bank on the Vikings reversing course against the Chiefs. Two of the past three offenses against Kansas City wound up throwing at least 71% of
+their snaps. The team that didn't? Chicago, who was so badly blown out by halftime that they ran the ball 55% of their second-half snaps just to get out of
+Arrowhead.
+
+CHIEFS: Have been stout against receivers all season long, ranking top-five in catch rate allowed (53.4%) and YAC/reception allowed (2.96), and sixth-best in
+yards per catch given up (11.1).
+</item 98>
+
+<item 99>
+NFL Fantasy Football Week 6 Lineup Decisions: Starts, Sits, Sleepers, Busts to know for every game (CBSSports.com, 2023-10-12T21:23:16+00:00)
+But I would rather start Christian Kirk, Marquise Brown, Michael Pittman and Jakobi Meyers as WR2 options this week.
+
+Sneaky Sleeper in PPR (Lineup Decisions) Projections powered by Sportsline Justice Hill RB BAL Baltimore • #43
+
+Age: 26 • Experience: 5 yrs. Weekly Breakdown MATCHUP @ TEN BAL -4 O/U 41 OPP VS RB 14th PROJ PTS 7.5 RB RNK 29th YTD Stats RUYDS 115 REC 7 REYDS 25 TD 3 FPTS/G
+9.3 It's a little gutsy to go with Hill, who has been inefficient for much of the year. We're counting on the Ravens outsmarting the big size of the Titans
+defensive line and utilizing Hill for his speed along the edges and in the passing game.
+</item 99>
+
+<item 100>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+ADVERTISEMENT Article continues below this ad
+
+How can you not love Taylor Swift? Most of the 12 Grammy Awardee’s songs are about that warm fuzzy feeling and chemical reaction that we call love. And her
+songs have earned the support of 103.7992 million Swifties in the world. Yeah, we don’t have a round figure for that. We have the exact figure up to four
+decimals. That’s how much data we have on her. Football has 184 million fans. The league is able to generate a revenue of $18 billion from 184 million. If it
+adds 104 (after rounding 103.7992) million to that number, guess how much revenue it will generate? $28 billion. And just like that, their target will be met.
+</item 100>
+=== END ITEM id=cf4d8cee2f980542 ===

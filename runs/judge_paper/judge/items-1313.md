@@ -1,0 +1,1562 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=c3318c13d838892c ===
+Gold sentences and facts:
+Sentence 0: Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+  Fact 0.0: A trial hearing took place on Monday.
+  Fact 0.1: The Monday trial hearing revealed many tidbits.
+  Fact 0.2: Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 0.3: Google tried to have Chrome preinstalled on iPhones.
+  Fact 0.4: Google tried to take its default search engine position further.
+  Fact 0.5: The hearing revealed other tidbits in addition to these.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup reported that Google spent $26.3 billion in 2021 making itself the default search engine across platforms.
+  Fact 1.1: The last roundup reported that Google tried to have Chrome preinstalled on iPhones.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google siphons off news publishers' content.
+  Fact 2.2: The case argues that Google siphons off news publishers' readers.
+  Fact 2.3: The case argues that Google siphons off news publishers' ad revenue.
+  Fact 2.4: The case argues that Google does this through anticompetitive means.
+
+Retrieved items:
+<item 1>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+</item 1>
+
+<item 2>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+“I think some people think that they saw our first date at that game? We would never be psychotic enough to hard launch a first date,” Swift joked.
+
+Back in April, it was revealed that Swift and British actor Joe Alwyn had broken up after six years of dating. The former couple were notoriously private, as
+the Conversations with Friends star previously expressed he didn’t want to discuss their relationship because it “feeds into a weird part of the culture”.
+
+Now, Swift has shared that she has nothing to hide in her new relationship with Kelce. “When you say a relationship is public, that means I’m going to see him
+do what he loves, we’re showing up for each other, other people are there and we don’t care,” she said. “The opposite of that is you have to go to an extreme
+amount of effort to make sure no one knows that you’re seeing someone. And we’re just proud of each other.”
+</item 2>
+
+<item 3>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 3>
+
+<item 4>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Taylor Swift has revealed when her relationship with Travis Kelce really started.
+
+The 33-year-old singer spoke candidly about the romance during a recent interview with Time after she was named the magazine’s 2023 Person of the Year. Speaking
+to the publication, she said she connected with Kelce in July, after he confessed on his podcast that he tried and failed to give her a friendship bracelet with
+his phone number on it during one of her Eras Tour shows.
+</item 4>
+
+<item 5>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 5>
+
+<item 6>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 6>
+
+<item 7>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+In an interview withWSJ Magazine, published on 20 November, he described how much he admires her skills as a musician. “I’ve never been a man of words. Being
+around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+However, he also acknowledged the heavy public attention around his private life as a result of his relationship, noting he’s “never dated anyone with that kind
+of aura around them”. But, according to Kelce, he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life. When she acts like
+that I better not be the one acting all strange.”
+</item 7>
+
+<item 8>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Travis’ teammates also showed up to the after-party, as well as his mom, Donna Kelce. The party lasted until 2 am.”
+
+The late-night outing came days after the NFL star officially addressed ongoing dating rumours about him and the “Anti-Hero” singer. During an episode of The
+Pat McAfee Show on 21 September, he mocked his brother Jason Kelce for joking that he “100 per cent” believed his younger sibling was dating Swift.
+
+“It’s hilarious how much traction this has actually gotten, right now it’s like a game of telephone,” Kelce said. “Where everybody’s whispering in each other’s
+ears and hearing random stuff. No one actually knows what’s going on, especially when you got Jason Kelce on live television telling people just both sides - he
+doesn’t know, it’s true, this and that.”
+
+He also noted that he was still open to pursuing a relationship with Swift, revealing that he subtly asked if she’d want to attend one of his football games.
+</item 8>
+
+<item 9>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 9>
+
+<item 10>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 10>
+=== END ITEM id=c3318c13d838892c ===
+
+=== ITEM id=8e668371d9af17b0 ===
+Gold sentences and facts:
+Sentence 0: Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills.
+  Fact 0.0: Today, social networks are often run by large corporations.
+  Fact 0.1: Meta, Snap and Google are examples of large corporations that run social networks.
+  Fact 0.2: On social networks run by large corporations, advertisers pay the bills.
+Sentence 1: By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter.
+  Fact 1.0: By the end of 2012, Google and Facebook were angling to acquire the London lab.
+  Fact 1.1: Three people familiar with the matter said Google and Facebook were angling to acquire the London lab by the end of 2012.
+
+Retrieved items:
+<item 1>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 1>
+
+<item 2>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Could Altman have been working with — or against — OpenAI’s patron in secret? If Altman wanted to kill the golden goose by going independent, that might have
+activated the board’s fiduciary or otherwise statutory duty. On the other hand, if he was negotiating some other deal, like an acquisition or deeper and more
+exclusive integration, it could also have caused the board to bristle, either at the idea itself or at being excluded.
+
+But if Microsoft was as shocked as the rest of us, as one report has it, it could hardly be the kind of high-stakes conspiracy some seem to be hoping for. But
+one must assume that Microsoft would say that either way. Even if they’d been working with Altman on some kind of secret plan, they can truthfully say they were
+surprised by his firing. (And they “remain committed to our partnership.”)
+
+2. Do they disagree on long-term strategy?
+</item 2>
+
+<item 3>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 3>
+
+<item 4>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+According to him, the current generation of social networks are very passive. You don’t have to do much to spend two hours on TikTok or YouTube because these
+companies want you to spend as much time as possible in these apps. “We aspire to go back to these earlier precepts and make them work,” Martin said.
+
+That’s also the reason why Amo doesn’t want you to spend hours in the app. When you have a few minutes, you can open the app to check what’s new on your
+friends’ profiles by swiping up on the notification cards.
+
+When you’ve reached the last card, ID shows you a message that says “get some fresh air.” And then, the app closes itself. You’re back on the home screen, you
+can put your phone back in your pocket.
+
+Amo & ID
+
+ID is an opinionated take on social apps, but is it going to work?
+</item 4>
+
+<item 5>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+“Not consistently candid” is a very diplomatic way of saying Altman lied.
+
+It’s possible that Altman — and potentially OpenAI President Greg Brockman, who stepped down as chairman simultaneously, then resigned — wanted to make a bold
+move that he knew the board would not like. It’s not uncommon for these deals to be hammered out quietly in smoke- (or vape-) filled rooms and then presented as
+a fait accompli, but if it was controversial enough and the board found out about these maneuvers, it could be fuel for an ouster.
+
+But what kind of deal would be big and dangerous enough for a summary dismissal of the CEO and famous face of the company? The man was onstage two weeks ago; I
+just talked with him! What could have happened since then?
+
+Few would be shocked if Microsoft, which is deeply, deeply embedded in OpenAI as an investor and customer, is a factor here. Could Altman have been working with
+— or against — OpenAI’s patron in secret?
+</item 5>
+
+<item 6>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 6>
+
+<item 7>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+As it learns from the publishers and other content creators what they want and need, it then intends to use that understanding to build features and drive
+efforts that can help them reach their audiences.
+
+So far, what Mozilla has learned is that publishers today feel somewhat resigned and pessimistic about social networks. Twitter isn’t driving much traffic and,
+even though Instagram Threads appears interesting, Meta specifically said it wasn’t going to prioritize news on that platform. What Mozilla wants to accomplish,
+then, is to help reconfigure the Mastodon onboarding process so that when someone — including a publisher or creator — joins its instance (or the fediverse in
+general) they’re able to build their audience with more ease.
+
+“The baseline is just better onboarding, better connecting with accounts and communities,” explains O’Hara. “You might be interested in spaces where you can
+have the kinds of conversations that you want to be able to have; trust and safety practices that make you feel safe in order to participate. And I think also
+then access to content that spurs those conversations and seeds those conversations.
+</item 7>
+
+<item 8>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 8>
+
+<item 9>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+The idea, O’Hara said, is to rethink social networking from the ground up.
+
+Ford shutters SaaS app for field work: Ford has shut down VIIZR, a software-as-a-service company that, along with Salesforce, built an app to help tradespeople
+like plumbers, locksmiths and electricians to schedule field appointments, send invoices and manage customers, Kirsten reports. VIIZR, which was announced in
+December 2021, was a separate company majority owned by Ford, with Salesforce as a minority investor.
+
+Apple bets on generative AI: Apple CEO Tim Cook pushed back against the notion that the company was behind in AI on Apple’s Q4 earnings call with investors, as
+he highlighted technology developments that Apple had made recently that “would not be possible without AI.” Cook also said that Apple was working on generative
+AI technologies, lending credence to reports suggesting the company is on track to spend $1 billion per year on developing generative AI products.
+</item 9>
+
+<item 10>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+“This is another indication that AI is progressing faster than even many experts anticipated,” Victoria Krakovna, who would soon join DeepMind as an “AI safety”
+researcher, wrote in a blog post. DeepMind’s founders were increasingly worried about what Google would do with their inventions. In 2017, they tried to break
+away from the company. Google responded by increasing the salaries and stock award packages of the DeepMind founders and their staff. They stayed put. The
+ethics board never had a second meeting. The Breakup
+
+Convinced that Page’s optimistic view of AI was dead wrong, and angry at his loss of DeepMind, Musk built his own lab. OpenAI was founded in late 2015, just a
+few months after he met with Altman at the Rosewood hotel in Silicon Valley. Sam Altman Credit: Bloomberg Businessweek Musk pumped money into the lab, and his
+former PayPal buddies – Hoffman and Thiel – came along for the ride.
+</item 10>
+
+<item 11>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 11>
+
+<item 12>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 12>
+
+<item 13>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+Hinton turned Baidu down, but the money got his attention. The Cambridge-educated British expatriate had spent most of his career in academia, except for
+occasional stints at Microsoft and Google, and was not especially driven by money. But he had a neurodivergent child, and the money would mean financial
+security. “We did not know how much we were worth,” Hinton said. He consulted lawyers and experts on acquisitions and came up with a plan: “We would organise an
+auction, and we would sell ourselves.” The auction would take place during an annual AI conference at the Harrah’s hotel and casino on Lake Tahoe. Big Tech took
+notice.
+
+Google, Microsoft, Baidu and other companies were beginning to believe that neural networks were a path to machines that could not only see but also hear,
+write, talk and — eventually — think. Loading Page had seen similar technology at Google Brain, his company’s AI lab, and he thought Hinton’s research could
+elevate his scientists’ work.
+</item 13>
+
+<item 14>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta’s position that apps are somehow different, then, is a fairly extreme position to take.
+
+“Instead of designing its products with kids’ safety and privacy in mind, Meta would rather push blame onto parents and other companies to obscure the damage
+they’ve already done to young people,” said Sacha Haworth, executive director of the Tech Oversight Project, a nonprofit devoted to reigning in Big Tech, in
+reaction to the news. “No one disputes that Google and Apple need to do more to protect children on their platforms, apps and devices. That fact does not
+absolve Mark Zuckerberg or Meta for years of willful negligence, and this announcement shows that the company’s outright hostility toward protecting kids is
+sewn into the fabric of its profit model.”
+
+Apple and Google did not return requests for comment.
+
+Updated, 11/15/23, 4:40 PM ET, with comment from Tech Oversight Project.
+</item 14>
+
+<item 15>
+Deepfake election risks trigger EU call for more generative AI safeguards (TechCrunch, 2023-09-26T17:26:57+00:00)
+“We continue to fight against covert influence operations (CIO) and we do not allow attempts to sway public opinion while misleading our platform’s systems or
+community about the identity, origin, operating location, popularity, or purpose of the account.”
+
+“CIOs continue to evolve in response to our detection and networks may attempt to reestablish a presence on our platform. This is why we continue to iteratively
+research and evaluate complex deceptive behaviours and develop appropriate product and policy solutions. We continue to provide information about the CIO
+networks we identify and remove in this report and within our transparency reports here,” it adds.
+</item 15>
+
+<item 16>
+There’s something going on with AI startups in France (TechCrunch, 2023-11-09T14:51:44+00:00)
+In other news, I’ve heard that Steeve Morin, a key member of the team behind Zenly, a popular consumer app that was acquired by Snap, is also creating an AI
+startup called ZML. The team will focus on improving machine learning inference and other low-level tools.
+
+Maxime Germain, the founder of mental health startup Jour, which was acquired by Alan, is leaving Alan to start Heart Hands, an AI startup that is developing a
+“second brain in your pocket,” as an investor described it to me.
+
+Pierre Valade, the founder of Sunrise and Jumbo, is putting together a team for an AI startup currently called Chief of Staff. Hugo Mercier is working on an AI
+startup in stealth mode as well.
+
+I think it’s safe to call this new wave of startups a trend. While the overall tech ecosystem is still experiencing a downturn, there’s an absurd amount of
+activity among French startups at the early stage with new AI startups getting founded at a rapid pace and VC firms fighting for the most competitive funding
+rounds.
+</item 16>
+
+<item 17>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+It’s a co-founder with Meta after all. I’d venture to guess more exposure for its burgeoning generative AI platform. IBM’s most recent earnings were boosted by
+enterprises’ interest in generative AI, but the company has stiff competition in Microsoft and OpenAI (and to a lesser extent Google), which are jointly
+developing enterprise-focused AI services that directly compete with IBM’s.
+
+I’ve asked IBM’s PR, which first informed me of the AI Alliance’s founding, about the curious omissions from the early membership, like Stanford (which has a
+prominent AI research lab, Stanford HAI), MIT (which is at the forefront of robotics research) and high-profile AI startups like Anthropic, Cohere and Adept. A
+press rep didn’t respond as of publication time. But the same philosophical differences that kept Google and Microsoft away likely were at play; I’d wager it’s
+no accident that Anthropic, Cohere and Adept have relatively few open source AI projects to their names.
+</item 17>
+
+<item 18>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+In our proprietary view of the GenAI tech stack, we categorize the landscape into four distinct layers: foundation model providers, middle-tier companies,
+end-market or top-layer applications, and full stack or end-to-end vertical companies.
+
+We think that most of the opportunity lies in the application layer, and within that layer, we believe that in the near future, the best applications will
+harness their in-house expertise to build specialized middle-layer tooling and blend them with the appropriate foundational models. These are “vertically
+integrated” or “full-stack” applications. For startups, this approach means a shorter time-to-market. Without negotiating or integrating with external entities,
+startups can innovate, iterate and deploy solutions at an accelerated pace. This speed and agility can often be the differentiating factor in capturing market
+share or meeting a critical market need before competitors.
+
+On the other hand, we view the middle layer as a conduit, connecting the foundational aspects of AI with the refined specialized application layer.
+</item 18>
+
+<item 19>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+That’s one takeaway, at least, from the recent shutdown of Pebble (formerly T2), a Twitter clone that put trust and safety at the forefront of its development
+process. The app never gained more than 20,000 users, and the founders now believe that its approach to moderation may have been correct, but it wasn’t a growth
+driver. In other words, people may say they want to feel safer when participating online, but clearly, that isn’t their only need.
+
+Mozilla’s instance, still in private testing, has a small team of moderators that will grow when the instance launches to the public in the coming months.
+
+“It’s not just a commitment, it’s beyond foundational for us — that is the thing that is going to be true about this instance,” O’Hara says of Mozilla’s plans
+to heavily moderate its space. Though Mozilla will also rely on technology to do some of the work, it wants to make sure the human moderators, “feel protected,
+supported and respected for their work,” she adds.
+</item 19>
+
+<item 20>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+“The [World Health Organization] now calls it the loneliness epidemic. And if they say that it’s an epidemic, it’s because it’s actually infectious. In other
+words, if you’re isolated, your loved ones are too because you’re unreachable. So during the two hours you’re on TikTok, they have no one to talk to,” Martin
+told me.
+
+“And at the same time, the human needs that the social consumer space can fulfill are no longer covered by these products, whereas they used to be,” he added.
+“In the early days of Facebook, I don’t know if you remember, profiles were sort of a mash-up. There were drawings, games, photos, text. You’d write long
+comments, it could be a poem . . . And on the other hand, it was a reminder that you mattered to these people.”
+
+According to him, the current generation of social networks are very passive.
+</item 20>
+
+<item 21>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+The three men and others pledged to put $US1 billion into the project, which Altman, who was 30 at the time, would help run. To get them started, they poached
+Ilya Sutskever from Google. (Sutskever was one of the graduate students Google “bought” in Hinton’s auction.) Initially, Musk wanted to operate OpenAI as a
+nonprofit, free from the economic incentives that were driving Google and other corporations. But by the time Google wowed the tech community with its Go stunt,
+Musk was changing his mind about how it should be run. He desperately wanted OpenAI to invent something that would capture the world’s imagination and close the
+gap with Google, but it wasn’t getting the job done as a nonprofit.
+
+In late 2017, Musk hatched a plan to wrest control of the lab from Altman and the other founders and transform it into a commercial operation that would join
+forces with Tesla and rely on supercomputers the car company was developing, according to four people familiar with the matter.
+</item 21>
+
+<item 22>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+“Not everyone wants to use one product,” he said to my colleague Alex Heath earlier this fall, “and I think making it so that they can use an alternative but
+can still interact with people on the network will make it so that that product also is more valuable.” Mark Zuckerberg! Said that! He understands that people
+want to feel like their social connections and content belong to them, not to a company that can disappear or pivot or change its ways. And let’s be real: if
+Meta can’t build and maintain the One True Social Network For Everybody, nobody can. It’s well past time to try something else.
+
+The only way to see your Facebook posts is to sign up for Facebook’s rules, Facebook’s aesthetic, Facebook’s features, Facebook’s moderation, Facebook’s
+algorithm, and Facebook’s business model.
+
+Right now, every social platform is a universe unto itself.
+</item 22>
+
+<item 23>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+(I was going to write this up next week, so thanks OpenAI board for eating my lunch.)
+
+If you were the board and facing the mounting accusations that your product was built on a dataset that includes thousands or millions of copyrighted works —
+and your CEO had systematically downplayed the potential liability there — how would you feel? I’d feel very hurt.
+
+But again, if copyright liability was the reason, it seems unlikely that the board would promote the CTO. Presumably, OpenAI’s Chief Science Officer Ilya
+Sutskever would also have been in the know, and he’s still on the board.
+
+7. Did CTO Mira Murati launch a coup?
+
+Probably not — she seems cool, and anyway what CTO wants to be CEO? Mira, answer my email!
+
+8. Was it a “personal matter”?
+
+When someone is kicked out in a hurry, it’s not uncommon that there was some kind of unprofessional behavior in the workplace. Some CEOs get a pass on things
+like having kids with direct reports, but not all.
+</item 23>
+
+<item 24>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+When considering the landscape of foundational layer model providers like Alphabet/Google’s Bard, Microsoft/OpenAI’s GPT-4, and Anthropic’s Claude, it’s evident
+that the more significant players possess inherent advantages regarding data accessibility, talent pool and computational resources. We expect this layer to
+settle into an oligopolistic structure like the cloud provider market, albeit with the addition of a strong open source contingency that will drive considerable
+third-party adoption.
+
+As we look at the generative AI tech stack, the largest market opportunity lies above the model itself. Companies that introduce AI-powered APIs and operational
+layers for specific industries will create brand-new use cases and transform workflows. By embracing this technology to revolutionize workflows, these companies
+stand to unlock substantial value.
+
+However, it’s essential to recognize that the market is still far from being crystallized. LLMs are still in their infancy, with adoption at large corporations
+and startups lacking full maturity and refinement. We need robust tools and platforms to enable broader utilization among businesses and individuals.
+</item 24>
+
+<item 25>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Altman and others pushed back, Musk quit and said he would focus on his own AI work at Tesla. In February 2018, he announced his departure to OpenAI’s
+staff on the top floor of the startup’s offices in a converted truck factory, three people who attended the meeting said. When he said that OpenAI needed to
+move faster, one researcher retorted at the meeting that Musk was being reckless. Musk called the researcher a “jackass” and stormed out, taking his deep
+pockets with him. OpenAI suddenly needed new financing in a hurry. Altman flew to Sun Valley for a conference and ran into Satya Nadella, Microsoft’s CEO. A
+tie-up seemed natural. Altman knew Microsoft’s chief technology officer, Kevin Scott. Microsoft had bought LinkedIn from Hoffman, an OpenAI board member.
+Nadella told Scott to get it done. The deal closed in 2019.
+</item 25>
+
+<item 26>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Google is now making it the default sign-in method for all users.
+
+2 sec, let me text you some cash: When questioned about Mastercard’s prospects in emerging markets such as India, Mastercard’s CFO Sachin Mehra praised UPI for
+helping with digitization but voiced reservations about its commercial sustainability, saying it is an “incredibly painful experience” for ecosystem
+participants.
+
+Bravely browsing — or searching — for a new job . . . : Brave Software, the maker of Brave Browser and Search, confirmed that it has laid off 9% of its
+workforce across departments.
+</item 26>
+
+<item 27>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+They soon realized that China had entered a new era, where the regulatory hurdles for running a startup have significantly heightened.
+
+The year 2022 saw just $14.5 billion invested in Chinese companies by U.S.-headquartered VCs, compared to $45.4 billion the year before.
+
+To launch an AI service in China, for example, a company needs to navigate a multitude of complications, which can include obtaining a license for its large
+language model, seeking regulatory approval for its algorithms and implementing a costly censorship mechanism to comply with censorship requirements.
+
+“You need to pick sides. You either focus on China or go overseas, otherwise, you end up doing double the workload but with a lot less funding secured from the
+last two years,” said one of the five China-based VCs we interviewed for the story. We also spoke to six diaspora Chinese entrepreneurs. Due to the sensitivity
+of the topic, all of them have asked to remain anonymous.
+
+Some ambitious, well-funded AI startups want to target both sides.
+</item 27>
+
+<item 28>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+But years before OpenAI’s near meltdown, there was a little-publicised but ferocious competition in Silicon Valley for control of the technology that is now
+quickly reshaping the world, from how children are taught to how wars are fought. The birth of DeepMind Five years before the Napa Valley party and two before
+the cat breakthrough on YouTube, Demis Hassabis, a 34-year-old neuroscientist, walked into a cocktail party at Thiel’s San Francisco town house and realised he
+had hit pay dirt. There in Thiel’s living room, overlooking the city’s Palace of Fine Arts and a swan pond, was a chessboard. Hassabis had once been the
+second-best player in the world in the under-14 category. “I was preparing for that meeting for a year,” Hassabis said. “I thought that would be my unique hook
+in: I knew that he loved chess.”
+</item 28>
+
+<item 29>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Battery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software that can be slipped into just about any
+lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.
+
+What lies beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched
+on where startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.
+</item 29>
+
+<item 30>
+EU commissioner sidesteps MEPs’ questions about CSAM microtargeting (TechCrunch, 2023-10-25T21:02:44+00:00)
+In the event MEPs got some bare bones detail.
+
+Asked for a list of these contacts, the commissioner responded that she’d met with Google six times; Microsoft, Meta and TikTok three times each; twice with
+Twitter (X); and once apiece with Apple and Amazon. She also said she’d met with the child safety organizations Thorn (twice) and Brave Movement (twice); and
+with Tech Alliance and ICANN once apiece.
+
+In wider responses related to concerns about how much commercial interest had influenced the Commission, Johansson highlighted her decision for the
+CSAM-scanning proposal to be “technology neutral” — meaning the draft regulation does not support any specific tech solution — with the suggestion being EU
+lawmakers had resisted lobbying by companies for a law that would explicitly favor their existing tech tools.
+
+She also denied that only Thorn and Microsoft have technology “that is necessary for the scanning” — claiming that’s “absolutely not true”.
+
+“There are no specific technologies mentioned [in the proposal] and I think this is an important part.
+</item 30>
+
+<item 31>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+The article is well worth a read, to figure out in which circumstances you can expect a decent return on investment on your event-going antics.
+
+Today’s newsletter is going to be a bit more to the point than usual: I’m laid up at home with pneumonia (yes, I really am an 86-year-old grandmother.
+Surprise!), so forgive the antibiotics-addled ramblings this week. I hope I’ll be back with non-pharmaceutically-enhanced ramblings next week.
+
+Artificial intelligence: Y’all just can’t get enough
+
+Our most-read stories consistently continue to be about AI. No big surprise, perhaps, the AI hype cycle continues apace. This week there’s been a bunch of
+stories about the seedy underbelly of AI, including how humans are part of the problem, continuing to trick AI systems into generating boobs and 9/11 memes. Oh,
+humans. We spoke with investors to figure out whether the future of AI has hope for us beyond daft memes. (Spoiler alert: Yes.)
+</item 31>
+
+<item 32>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+With Amo, the founder of Zenly wants to make social apps social again The startup raised $20 million and is launching ID today
+
+In 2018, I wrote a TechCrunch article stating that 2018 was “the year social networks were no longer social.” Reflecting on that article, I’m not sure that 2018
+was the turning point. But the premise of the article still holds up well.
+
+At some point, social networks were no longer about connecting with your closest friends, keeping up with long-distance family members and feeling a special
+connection with people you love.
+
+TikTok, Instagram, Snapchat, Facebook, YouTube and X (formerly Twitter) are all slowly evolving to become the same infinite scrollable feed of
+algorithm-optimized short videos from top performers.
+
+And it turns out that I’m not the only one who has noticed that social networks have been slowly drifting away from their original purpose.
+</item 32>
+
+<item 33>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+You cannot escape conversations about AI no matter how far or fast you run. Hyperbole abounds around what current AI tech will be able to do (revolutionize
+every industry!) and what current AI tech will be able to do (take over the world!). Closer to the ground, TechCrunch+ is working to understand where startups
+might find footholds in the market by levering large language models (LLMs), a recent and impactful new method of creating artificially intelligent software.
+
+How AI will play in startup land is not a new topic of conversation. A few years back, one venture firm asked how AI-focused startups would monetize and whether
+they would suffer from impaired margins due to costs relating to running models on behalf of customers. That conversation died down, only to come roaring back
+in recent quarters as it became clear that while LLM technology is quickly advancing, it’s hardly cheap to run in its present form.
+
+But costs are only one area where we have unanswered questions.
+</item 33>
+
+<item 34>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+I have to wonder if those decisions to change these policies were in response to competition from other platforms.
+
+I would say it this way: I think they are an acknowledgement, and maybe a closer connectivity to the community via Dan specifically. I credit Dan in his short
+time as CEO to really make some big, hard decisions. Both the launch of Partner Plus, as well as simulcasting, the embed stuff we talked about in the keynote —
+these are three things that I think are very much an acknowledgement of the feedback from the community. We’ve made that change, so I wouldn’t call it out of
+competitive pressures. I would call it out of focus on the community.
+</item 34>
+
+<item 35>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+It has been a whirlwind four days for OpenAI, the generative AI poster child behind the smash hit ChatGPT.
+
+Seemingly out of nowhere, the OpenAI board ousted CEO and co-founder Sam Altman and demoted president and co-founder Greg Brockman, who subsequently resigned,
+paving the way for what looked like a mutiny by staff insisting the founders be reinstated post-haste. By then, Microsoft had already hired Altman and Brockman
+to head up a new internal AI unit, though, as things transpired, nothing had actually been signed yet, with rumors suggesting that the ousted leaders might
+actually return to OpenAI after all — in some capacity, at least.
+
+The situation remains fluid, and any number of potential outcomes still remain on the table. But the whole debacle has shone a spotlight on the forces that
+control the burgeoning AI revolution, leading many to question what happens if you go all-in on a centralized proprietary player, and what happens if things
+then go belly-up?
+</item 35>
+
+<item 36>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+For sure, Meta isn’t the only company flaunting its “open” approach to AI development — notably, the likes of Hugging Face, Mistral AI and 01.AI, which have all
+raised sizeable sums at lofty valuations with similar goals in mind. But as a $900 billion juggernaut with a long history of courting developers through open
+source endeavors, Meta is perhaps best positioned to capitalize on the mess that OpenAI has created for itself. Its decision to pursue “openness” over
+“closedness” seems to be well vindicated right now, and regardless of whether Llama is or isn’t really open source, it’s likely “open enough” for most people.
+
+It’s still too early to make any surefire claims on what impact the OpenAI fallout will have on LLM development and uptake in the future. Altman and Brockman
+are undoubtedly steady hands for a commercial AI startup, and they may even return to steward OpenAI.
+</item 36>
+
+<item 37>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+But some might argue that it’s unhealthy that so much focus lies on just a handful of people — and it’s telling that their departure has created such widespread
+havoc.
+</item 37>
+
+<item 38>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Or what if, and again this is purely speculation, Altman has been secretly pursuing an internal project, perhaps at significant cost, against the advice of the
+board and without the necessary safety measures that probably should accompany such research? It sounds a little wild, but firing your CEO like this is also a
+little wild.
+
+Some kind of major mismatch in the financial department could be cause for dismissal, but it’s hard to imagine what Altman could have kept from the board and
+CTO that would be so damning.
+
+There’s also the possibility that Altman was making personal investments in a way that the board disagreed with. With OpenAI poised to be a kingmaker in the
+field, he would certainly be in a position of power. One would think that, as an ideologically driven person already rich beyond belief and at the head of the
+world’s leading AI company, Altman would have risen beyond having to do this kind of side deal, or at the very least that scrutiny on him and those close to him
+would prevent them. But one can never be sure.
+
+4.
+</item 38>
+
+<item 39>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+Now, those companies have a clear horse in the race and perhaps regulatory capture on the mind… but they’re not wrong entirely. Meta continues to take
+calculated open sourcing risks (within the bounds of regulators’ tolerances), releasing text-generating models like Llama that bad actors have gone on to abuse
+but which plenty of developers have built useful apps upon.
+
+“The platform that will win will be the open one,” Yann LeCun, Meta’s chief AI scientist, was quoted as saying in an interview with The New York Times — and
+who’s among the more than 70 influential signers of a letter calling for more openness in AI development. LeCun has a point; according to one estimate,
+Stability AI’s open source AI-powered image generator, Stable Diffusion, released last August, is now responsible for 80% of all AI-generated imagery.
+
+But wait, you might say — what does IBM gain from the AI Alliance? It’s a co-founder with Meta after all.
+</item 39>
+
+<item 40>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+But eight years later, the argument between the two men seems prescient. The question of whether AI will elevate the world or destroy it – or at least inflict
+grave damage – has framed an ongoing debate among Silicon Valley founders, chatbot users, academics, legislators and regulators about whether the technology
+should be controlled or set free. Loading That debate has pitted some of the world’s richest men against one another: Musk, Page, Mark Zuckerberg of Meta, tech
+investor Peter Thiel, Satya Nadella of Microsoft and Sam Altman of OpenAI. All have fought for a piece of the business – which one day could be worth trillions
+of dollars – and the power to shape it. At the heart of this competition is a brain-stretching paradox. The people who say they are most worried about AI are
+among the most determined to create it and enjoy its riches. They have justified their ambition with their strong belief that they alone can keep AI from
+endangering Earth. Musk and Page stopped speaking soon after the party that summer.
+</item 40>
+
+<item 41>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+If anything, Ohanian credits Twitter (now called X) with coming up with the best system for moderation so far.
+
+“Community Notes, I personally think is a good — it’s the best measure I’ve seen yet. And frankly, I wish we had thought of it first,” he said.
+
+Still, he called out the notion that a platform, like X, can be a town square.
+
+“The public square [analogy]…falls flat. Because if that then implies that it’s a public square, which means like, what? a town or a city? If you’re the person
+in charge of it, you’re the mayor. But there’s no democratic election,” Ohanian pointed out. “You’re a CEO. So then you’re like the king? If you want to lean
+into the town square thing, fine. Just own it and say, yeah, it’s a town square and I am the infinite dictator, tyrant of it.”
+</item 41>
+
+<item 42>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+By the spring of 2010, they were building their dream machine. They wholeheartedly believed that because they understood the risks, they were uniquely
+positioned to protect the world. “I don’t see this as a contradictory position,” said Mustafa Suleyman, one of the three DeepMind founders. “There are huge
+benefits to come from these technologies. The goal is not to eliminate them or pause their development. The goal is to mitigate the downsides.” Loading Having
+won over Thiel, Hassabis worked his way into Musk’s orbit. About two years later, they met at a conference organised by Thiel’s investment fund, which had also
+put money into Musk’s company SpaceX. Hassabis secured a tour of SpaceX headquarters. Afterward, with rocket hulls hanging from the ceiling, the two men lunched
+in the cafeteria and talked. Musk explained that his plan was to colonise Mars to escape overpopulation and other dangers on Earth.
+</item 42>
+
+<item 43>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Do you expect startups to build striated solutions for individual layers of the LLM stack, or pursue a more vertical approach?
+
+While there are startups specializing in parts of the stack (like Pinecone), Valor’s focus is on applied AI, which we define as AI that is solving a customer
+problem. Saile.ai is a good example — it uses AI to generate closeable leads for the Fortune 500. Or Funding U using its own trained dataset to create a more
+useful credit risk score. Or Allelica, using AI on treatment solutions applied to individual DNA to find the best medical treatment for you personally in a
+given situation.
+
+Companies like Datadog are building products to support the expanding AI market, including releasing an LLM observability tool. Will efforts like what Datadog
+has built (and similar output from large/incumbent tech powers) curtail the market area where startups can build and compete?
+
+Tools like Datadog can only help the acceptance of AI tools if they succeed in monitoring AI performance bottlenecks.
+</item 43>
+
+<item 44>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+Consumers are hungry for a new way of social networking, where trust and safety are paramount and power isn’t centralized with a Big Tech CEO in charge… or at
+least that’s what Mozilla believes. The mission-driven tech company behind the Firefox browser, Pocket reader and other apps is now investing its energy into
+the so-called “fediverse” — a collection of decentralized social networking applications, like Mastodon, that communicate with one another over the ActivityPub
+protocol.
+
+The idea is to rethink social networking from the ground up.
+
+Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills. This has created a world where modern
+social networks are profit-driven, and consumer needs aren’t always at the forefront, Mozilla believes. This disconnect between what people want and what
+today’s networks offer hit an inflection point last year, when billionaire Elon Musk bought Twitter, leading to a surge of interest in alternatives to
+centralized social networking, including apps like Mastodon and Bluesky.
+</item 44>
+
+<item 45>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+He said he never conceived of the influence the site would one day hold — when Reddit became a multibillion-dollar business with hundreds of millions of users.
+That thought would have been “ludicrous,” he said. And he certainly never could have imagined his startup could have become so successful that it could affect
+elections and democracies.
+
+“To… think Oh my god, I’m gonna be so successful, it could have a tremendous impact on democracy would take a level of delusion that even I, as a first-time
+CEO, just couldn’t have,” he noted. “Was that a blind spot? Absolutely,” he admitted.
+
+Ohanian identified that another part of the problem is that there are more people online today than early tech founders may have imagined. Though he’s glad that
+access to the technology has broadened, that has come with many complications.
+</item 45>
+
+<item 46>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+As the price passed $US30 million, Microsoft quit, but it rejoined the bidding at $US37 million. “We felt like we were in a movie,” Hinton said. Then Microsoft
+dropped out a second time. Only Baidu and Google were left, and they pushed the bidding to $US42 million, $US43 million. Finally, at $US44 million, Hinton and
+his students stopped the auction. The bids were still climbing, but they wanted to work for Google. And the money was staggering. It was an unmistakable sign
+that deep-pocketed companies were determined to buy the most talented AI researchers, which was not lost on Hassabis at DeepMind. He had always told his
+employees that DeepMind would remain an independent company. That was, he believed, the best way to ensure its technology didn’t turn into something dangerous.
+But as Big Tech entered the talent race, he decided he had no choice: It was time to sell.
+</item 46>
+
+<item 47>
+X (formerly Twitter) is worst for disinformation, per EU analysis (TechCrunch, 2023-09-26T13:02:43+00:00)
+Subscription revenues to a revamped Twitter Blue paid offering (now called X Premium) don’t appear to have been substantial enough to plug the ad gap — which
+may explain Musk’s recent suggestion he plans to charge all users a small fee. However ending free access to X could be the final nail in the coffin of the
+platform as a real-time information network if it triggers a further/final exodus of remaining legacy users whose knowledge and engagement lent Twitter its
+original value.
+
+Disinformation and spammers may rush in to fill the gap, generating a parody of activity, but without a critical mass of genuine users to pay attention and
+contribute value and vitality — aka the life-blood of a bona fide information network — X really will mark the spot of Twitter’s demise.
+
+Also today, a report by misinformation watcher NewsGuard found that a decision by Musk to remove labels denoting state-run or government-affiliated media
+accounts led to a surge in propaganda spreading on X, with Russia’s RT seeing the biggest gains per the analysis.
+
+From the report:
+</item 47>
+
+<item 48>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+(Spoiler alert: Yes.)
+
+Rumors are swilling that OpenAI may be considering developing its own AI chips. That’s going to get interesting, especially if you’ll recall that Nvidia’s
+ongoing stock market rally is likely driven by the current boom in AI. The company’s ChatGPT’s mobile app hit a record $4.6 million in revenue last month, but
+growth is slowing. Oh, and there’s no need to shed tears for Nvidia quite yet; Brian’s piece breaking down how Nvidia became a major player in robotics is super
+interesting.
+
+Adobe has doubled down on its Firefly generative AI models. This week, Frederic covered how the software can now generate more realistic images and can help
+artists create vector graphics in Illustrator. Neato.
+
+More on the AI front
+
+If AI can’t go to the mountain, the mountain will come to AI: Dutch startup Tidalflow exits stealth with backing from Google’s Gradient Ventures. It is aiming
+to help any software play nice with ChatGPT and other LLM ecosystems.
+</item 48>
+
+<item 49>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Aside from forcing platforms to allow some forms of content that would otherwise be disallowed, these laws also seek to force social media companies to provide
+users with individualized explanations when their content is removed or restricted. Because this process is largely conducted algorithmically now — generally
+with light human intervention or oversight — social media companies might need to reimagine their content moderation systems or hire way more humans to respond
+to these incidents. Those kind of adjustments would likely be costly and difficult to scale.
+
+“As you can imagine, that can get kind of onerous when you’re taking down millions and millions of pieces of content a day, and much of that activity of the
+vast majority of it is currently being done automatically,” Barrett said. “The idea that a human being would have to go back and explain each time something
+came down would be quite a challenge.”
+</item 49>
+
+<item 50>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Despite the problems with social media and the urgency, in terms of its impact on society, Ohanian believes there’s still some hope. He noted, for example, that
+the founders his fund 776 invests in are much smarter and more aware of the issues than he ever was at their age. Perhaps the next platforms will still be
+addictive, but in a way that doesn’t “further disrupt democracy,” he mused.
+
+He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not. “I think we’ll
+see a rebirth of live gatherings and in-person experiences…the bright side of this is that I hope it then gets us back in touch with our humanity, and the
+things that no amount of AI can replace.”
+
+“I want to be an optimist about it,” Ohanian added. “And I think there’s still a path forward but we’re fighting against very, very strong human things.
+</item 50>
+
+<item 51>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+I think the leadership at Hyundai — the chairman visited me last week, and we’re in close touch with him and the people who work with him — think that getting
+into the 22nd century is an important thing to do and we’re getting started on it now.”
+
+Pratt adds, “There’s actually this alignment that’s happening between cars and robotics, as well. Rod Brooks was the one who a few years ago said that modern
+cars are eldercare robots. I think that’s really true. You think about the amount of computers in them, the amount of software that’s in them. TRI has different
+divisions inside of it, one of which works on very advanced things in cars that is completely overlapping with some of the software and some of the concepts
+that we’re using in the robotics space.”
+
+For its part, the Boston Dynamics AI Institute lists three key pillars of its research: intelligence, dexterity and mobility. That’s effectively making robots
+that are smarter, better at mobile manipulation and move more dynamically.
+</item 51>
+
+<item 52>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+They believed that AI could find a cure for cancer or solve climate change, but they worried that AI bots might do things their creators had not intended. If
+the machines became more intelligent than humans, the Rationalists argued, the machines could turn on their creators. Thiel had become enormously wealthy
+through an early investment in Facebook and through his work with Musk in the early days of PayPal. He had developed a fascination with the singularity, a trope
+of science fiction that describes the moment when intelligent technology can no longer be controlled by humanity.
+
+With funding from Thiel, Yudkowsky had expanded his AI lab and created an annual conference on the singularity. Years before, one of Hassabis’ two colleagues
+had met Yudkowsky, and he snagged them speaking spots at the conference, ensuring they’d be invited to Thiel’s party. Yudkowsky introduced Hassabis to Thiel.
+Hassabis assumed that lots of people at the party would be trying to squeeze their host for money.
+</item 52>
+
+<item 53>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+There’s this picture from more than a decade ago that still goes viral on the web every once in a while. You’ve probably seen it: it was created by the venture
+capitalist Andrew Parker, and it compares a few dozen startups with subsections of Craigslist. Back then, Craigslist was all things to all people online, and a
+generation of startups figured they could do part of the job a lot better.
+
+Some of those companies failed — sometimes because of Craigslist! — but some also became gigantically successful. Airbnb worked because it was more searchable,
+reliable, and trustworthy than a random Craigslist listing; StubHub sold you secondhand tickets without the 50 percent chance those tickets were fake; Etsy
+offered a much more fun shopping and discovery experience than a bunch of text listings and crappy photos.
+
+For a decade, startups tried to unbundle Craigslist. Now they can do the same for social networks.
+</item 53>
+
+<item 54>
+X plans to use payment, phone and ID verification to stop bots, in addition to the new $1/yr fee (TechCrunch, 2023-10-18T17:33:48+00:00)
+A report this week from market intelligence firm Similarweb, for example, found that X’s web traffic and monthly active users on mobile had declined
+post-acquisition.
+
+Users today have far more options for microblogging and public discourse, thanks to products from Twitter-like startups and tech companies such as Spill,
+Bluesky, Pebble, Countersocial, Spoutible, Hive and the open source platform Mastodon, as well as efforts from tech giants, like Meta’s new app Threads. Few of
+the other social apps currently charge a fee, unless it’s for premium features, like some of the third-party Mastodon apps do.
+
+In addition to presenting friction at sign-up, other critics have argued a fee could exclude genuine users and increase the digital divide.
+</item 54>
+
+<item 55>
+OpenAI buffs safety team and gives board veto power on risky AI (TechCrunch, 2023-12-18T20:12:25+00:00)
+Of course, the result of said drama was the sidelining of two of the more critical voices and the appointment of some money-minded guys (Bret Taylor and Larry
+Summers), who are sharp but not AI experts by a long shot.
+
+If a panel of experts makes a recommendation, and the CEO makes decisions based on that information, will this friendly board really feel empowered to
+contradict them and hit the brakes? And if they do, will we hear about it? Transparency is not really addressed outside a promise that OpenAI will solicit
+audits from independent third parties.
+
+Say a model is developed that warrants a “critical” risk category. OpenAI hasn’t been shy about tooting its horn about this kind of thing in the past — talking
+about how wildly powerful their models are, to the point where they decline to release them, is great advertising. But do we have any kind of guarantee this
+will happen, if the risks are so real and OpenAI is so concerned about them? Maybe it’s a bad idea. But either way it isn’t really mentioned.
+</item 55>
+
+<item 56>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+In addition to academic partners such as the University of Tokyo, UC Berkeley, the University of Illinois, Cornell and the aforementioned Imperial College
+London and Yale, Sony, ServiceNow, the National Science Foundation, NASA, Oracle, the Cleveland Clinic and Dell have pledged their participation in some form.
+
+MLCommons, the engineering consortium behind MLPerf, the benchmarking suite used by major chip manufacturers to evaluate their hardware’s AI performance, is
+also a founding AI Alliance member. So are LangChain and LlamaIndex, two creators behind some of the more widely used tools and frameworks for building apps
+powered by text-generating AI models.
+
+But without the participation of so many major AI industry players — and lacking deadlines or even concrete objectives — can the AI Alliance succeed? What would
+success look like, even?
+
+Beats me.
+
+The vast number of competing interests — from healthcare networks (Cleveland Clinic) to insurance providers (Roadzen) — won’t make it easy for the Alliance’s
+members to coalesce around a single, united front.
+</item 56>
+
+<item 57>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+“The co-founders themselves came to the conclusion that they wished to depart OpenAI to start their own company, made this known to OpenAI’s leadership, and
+over several weeks negotiated an exit on mutually agreeable terms.” Anthropic accepted a $US4 billion investment from Amazon and another $US2 billion from
+Google two years later. The Reveal After OpenAI received another $US2 billion from Microsoft, Altman and another senior executive, Greg Brockman, visited Bill
+Gates at his sprawling mansion on the shores of Lake Washington, outside Seattle. The Microsoft founder was no longer involved in the company day to day but
+kept in regular touch with its executives.
+
+Over dinner, Gates told them he doubted that large language models could work. He would stay sceptical, he said, until the technology performed a task that
+required critical thinking – passing an Advanced Placement biology test, for instance. Five months later, on August 24, 2022, Altman and Brockman returned and
+brought along an OpenAI researcher named Chelsea Voss.
+</item 57>
+
+<item 58>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+On the surface, Microsoft is currently looking like the biggest winner amidst the OpenAI turmoil, as it was already apparently looking to reduce its reliance on
+OpenAI even though it remains once of its major shareholders. But Facebook’s parent Meta could also stand to benefit, as businesses pursue multi-modal
+strategies or models with a more “open” ethos embedded.
+
+“Open source today offers a wide variety of models for companies to essentially diversify,” Ceze added. “By doing so, these startups can quickly pivot and
+minimize risk. There is also a major upside — many of these models already outperform the likes of OpenAI’s in terms [of] price-performance and speed.”
+
+A leaked internal memo from Google earlier this year seemed to express fears that despite the huge advances made by proprietary LLM models from the likes of
+OpenAI, open source AI would ultimately trump them all. “We have no moat, and neither does OpenAI,” the document noted.
+</item 58>
+
+<item 59>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+That’s effectively making robots that are smarter, better at mobile manipulation and move more dynamically. Raibert admits that “Boston Dynamics AI Institute”
+might not be the most instructive name, both with regard to confusion between itself and Boston Dynamics the company, as well as a seeming focus on AI over
+robotics. A name change is apparently coming, but nothing has been decided just yet.
+</item 59>
+
+<item 60>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+2. Do they disagree on long-term strategy?
+
+Despite being the hottest tech company in the world right now and everyone talking about ChatGPT, OpenAI isn’t exactly a sound business. It’s shoveling money
+into the furnace as fast as it can by serving, by all accounts, a fantastically expensive product at bargain-bin prices.
+
+That’s all well and good for a year or two, but at some point that strategy changes from a growth hack to an existential liability. Could Altman and the board
+have had irreconcilable differences on where that point lies?
+
+This doesn’t seem so likely. The company has been very deliberately pursuing this very publicly, confidently and on a long-term basis. Altman and the board seem
+to be in sync on this, at least for the present.
+
+3. Do the numbers not add up?
+
+On the other hand, could OpenAI be losing even more money than Altman admitted or projected? It seems impossible, but the costs of running this operation have
+no precedent, nor really does the operation itself.
+</item 60>
+
+<item 61>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Hiya, folks, and welcome to Week in Review (WiR), TechCrunch’s digest of the past week in tech news. It’s TC’s column that highlights the major stories over the
+past few days, and — we humbly submit — it’s a darn useful resource for folks on the go.
+
+This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing
+FTX fallout. Also on the agenda: Gmail’s harsher rules to prevent spam, TikTok testing an ad-free subscription plan, and LinkedIn going big on AI tools. And
+that’s not all.
+
+If you haven’t, sign up here to get WiR in your inbox every Saturday. And if you have, our thanks. Now, let’s get on with the news.
+</item 61>
+
+<item 62>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+I think even swifter than we realize.” The war in the Middle East may even be the tipping point, he theorized, as it’s now “abundantly clear” that we need
+something better to figure out the world than the platforms we have today.
+
+The founder, as you may recall, notably resigned from Reddit’s board in 2020 over differences of opinion on moderation and wanting to crack down on communities
+about violence and hate. It was a moment where he seemed to be reckoning with what his platform had wrought. At the time, he asked for his board seat to be
+replaced by a Black board member. The company agreed, appointing its first Black board member with Y Combinator partner Michael Seibel.
+
+Reddit also later banned several toxic communities, including r/donaldtrup following violence at the U.S. Capitol, and Ohanian says that the site has “gotten
+demonstrably better,” since, as well as better as a business.
+</item 62>
+
+<item 63>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+“[They] aren’t just putting forward the kind of standards that are good for people, but are just good for their bottom lines.”
+
+Plus, she adds, consumers are now becoming aware of this, which is new.
+
+“Consumers feel that the vibes are off a little bit…these platforms aren’t necessarily working in their best interests, or satisfying them,” O’Hara points out.
+
+For Mozilla, that discontent presented an opportunity to enter the social networking space and compete for consumers’ attention. In its case, however, the
+broader goal is to help the fediverse itself gain traction, not just its own Mastodon server.
+
+“We’re not seeking to get, like 2 billion users on our instance. We want people to have choice and agency,” says O’Hara, adding that choice is in line with
+Mozilla’s values.
+
+However, the company is aiming to tackle some of the obstacles that have prevented users from joining and participating in the fediverse so far, including the
+technical hurdles around onboarding, finding people to follow and discovering interesting content to discuss.
+</item 63>
+
+<item 64>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+We need robust tools and platforms to enable broader utilization among businesses and individuals. Startups have the opportunity here to act quickly, find novel
+solutions to emerging problems, and define new categories.
+
+Interestingly, even large tech companies recognize the gaps in their services and have begun investing heavily in startups alongside VCs. These companies apply
+AI to their internal processes and thus see the value startups bring to LLM deployment and integration. Consider the recent investments from Microsoft, Nvidia,
+and Salesforce into companies like Inflection AI and Cohere.
+
+What can be done to ensure industry-specific startups that tune generative AI models for a specific niche will prove defensible?
+
+To ensure industry-specific startups will prove defensible in the rising climate of AI integration, startups must prioritize collecting proprietary data,
+integrating a sophisticated application layer and assuring output accuracy.
+
+We have established a framework to assess the defensibility of application layers of AI companies. First, the application must address a real enterprise pain
+point prioritized by executives.
+</item 64>
+
+<item 65>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+It has evolved into working in humanitarian aid, delivering emergency food supplies to people in need in Afghanistan and Turkey.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Another superconductor disappointment: Tim writes that a new, supposedly room-temperature superconducting material isn’t what the scientific community hoped it
+would be. With the Nature-published paper detailing the material facing retraction, the odds of researchers discovering a room-temperature superconductor are
+looking even longer.
+
+Klarna inches toward an IPO: Mary Ann and Alex write that Swedish fintech Klarna is taking steps toward an eventual IPO. The company has initiated a process for
+a legal entity restructuring to set up a holding company in the U.K.
+</item 65>
+
+<item 66>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+Musk and Page stopped speaking soon after the party that summer. A few weeks later, Musk dined with Altman, who was then running a tech incubator, and several
+researchers in a private room at the Rosewood hotel in Menlo Park, California, a favoured deal-making spot close to the venture capital offices of Sand Hill
+Road.
+
+That dinner led to the creation of a startup called OpenAI later in the year. Backed by hundreds of millions of dollars from Musk and other funders, the lab
+promised to protect the world from Page’s vision. Thanks to its ChatGPT chatbot, OpenAI has fundamentally changed the technology industry and has introduced the
+world to the risks and potential of artificial intelligence. OpenAI is valued at more than $US80 billion ($A123 billion), according to two people familiar with
+the company’s latest funding round, although Musk and Altman’s partnership didn’t make it. The two have since stopped speaking. Elon Musk and Sam Altman.
+</item 66>
+
+<item 67>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+This got the attention of another Silicon Valley powerhouse, Google, and specifically Page. He saw a demonstration of DeepMind’s machine playing Atari games. He
+wanted in. The talent auction In the spring of 2012, Geoffrey Hinton, a 64-year-old professor at the University of Toronto, and two graduate students published
+a research paper that showed the world what AI could do. They trained a neural network to recognise common objects such as flowers, dogs and cars.
+
+Scientists were surprised by the accuracy of the technology built by Hinton and his students. One who took particular notice was Yu Kai, an AI researcher who
+had met Hinton at a research conference and had recently started working for Baidu, a giant Chinese internet company. Baidu offered Hinton and his students
+$US12 million to join the company in Beijing, according to three people familiar with the offer. Hinton turned Baidu down, but the money got his attention.
+</item 67>
+
+<item 68>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+Researchers inside OpenAI, Google and other companies thought this rapidly improving technology could be a path to AGI. But Amodei was unhappy about the
+Microsoft deal because he thought it was taking OpenAI in a really commercial direction. He and other researchers went to the board to try to push Altman out,
+according to five people familiar with the matter. After they failed, they left. Like DeepMind’s founders before them, they worried that their new corporate
+overlords would favour commercial interests over safety.
+
+In 2021, the group of about 15 engineers and scientists created a new lab called Anthropic. The plan was to build AI the way the effective altruists thought it
+should done – with very tight controls. “There was no attempt to remove Sam Altman from OpenAI by the co-founders of Anthropic,” said an Anthropic spokesperson,
+Sally Aldous.
+</item 68>
+
+<item 69>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+It’s difficult to extrapolate from the 2015 and 2020 numbers to today’s (which, as we have seen from the evidence presented here, will almost certainly not be
+the whole story), but Bonta noted that the large figures are presented for impact, not as legal justification.
+
+“The basic premise remains that their social media platforms are used by millions of children under 13. Whether it’s 30 percent, or 20 or 10 percent… any child,
+it’s illegal,” he said. “If they were doing it at any time, it violated the law at that time. And we are not confident that they have changed their ways.”
+
+An internal presentation called “2017 Teens Strategic Focus” appears to specifically target kids under 13, noting that children use tablets as early as 3 or 4,
+and “Social identity is an Unmet need Ages 5-11.”
+</item 69>
+
+<item 70>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+But as for social media as a whole, of which Reddit would presumably play a part, Ohanian said it brings out the “worst parts of our nature in many ways.”
+What’s more, he expressed worries about the desire for people to be first and win on whatever leaderboard a platform features, which then leads to a situation
+where misinformation is able to spread.
+
+Humans evolved trusting the faces & voices we knew around the campfire. The idea of believing something bc of experts/institutions you've never met is actually
+new to our species. I visited @UVADemocracy + chatted with @karaswisher + @dkroy about what's next for social media. pic.twitter.com/PMBXi7T3vv — Alexis Ohanian
+🇦🇲 (@alexisohanian) October 31, 2023
+
+“Now, there’s so much pressure to be first, and UGC — user-generated content — will always win. It won’t always be right, though.
+</item 70>
+
+<item 71>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 71>
+
+<item 72>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+And if we can solve it, it will do so much good. It really, really will because we will find out we have more in common than not,” he said.
+</item 72>
+
+<item 73>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+It’s just that in a fediverse-dominated world, the way to win is not to achieve excellent lock-in and network effects. The only way to win is to build the best
+product.
+
+This is really not a particularly hot take, by the way. Even the most successful centralized platforms have long understood that a protocol-driven social web is
+a good idea. Jack Dorsey used to say that Twitter was better as a protocol than a platform, and started the project that became Bluesky before also helping get
+Nostr going. (We really don’t need to get into the whole story of what happened to Twitter since then, except to say that the speed with which that platform
+changed made a lot of people acutely aware that we need a social ecosystem that can resist the whims of a single company or CEO.)
+
+Meanwhile, Meta CEO Mark Zuckerberg seems to earnestly believe that bringing Threads to the fediverse is a good idea, both for its product and for its business.
+</item 73>
+
+<item 74>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+Three years later, Pratt was named TRI’s CEO. Raibert continued as Boston Dynamics’ CEO until 2019, handing the reins over to longtime employee Rob Playter, who
+managed the company’s shift to more commercial pursuits. Last year, Raibert (who still serves as BD’s chairman) founded the Boston Dynamics AI Institute. The
+organization has a lot in common with TRI. Both are dedicated to pure research, with the backing of two major automakers (Toyota and Hyundai).
+
+I recognize that “pure research” is a bit of a loaded term. The concept is certainly a hopeful one: finding a method that can sustain research outside of the
+pressures of academia and corporate R&D.
+
+Asked whether there is pressure from Toyota to productize, Pratt says, “There actually is not, and I’m not saying that just to be nice. I think one of the great
+things about companies that have existed for long times is that this isn’t the first time that they’ve done R&D.
+</item 74>
+
+<item 75>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+But one can never be sure.
+
+4. Could it be a major security or privacy incident?
+
+The idea that the company has experienced a major, perhaps pervasive, security issue is bolstered by the fact that Microsoft reportedly suspended use of ChatGPT
+internally a few days ago. OpenAI subsequently stopped allowing new signups. If there was a serious security problem in its biggest product and Altman
+downplayed it, that would obviously create distrust with the board.
+
+There is also the potential for misuse at scale with the enormous amount of personal data that travels through OpenAI’s APIs and services.
+
+Working against this theory is the fact that CTO Mira Murati was just elevated to interim CEO in Altman’s place. It seems unlikely that anything
+security-related would go through the CEO and not the CTO, or that the two would be at odds to the point where one could be fired like this and the other
+swapped in to clean up the mess. As the board’s statement notes, Murati is in charge of product and safety, among other things.
+</item 75>
+
+<item 76>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Third-party Reddit app Narwhal says it hopes to survive Reddit’s app purge with a subscription plan.
+
+Apropos “getting together,” Amanda reports that VidCon is still kickin’. For the first time, the conference hosted an industry leadership summit, where creator
+economy experts and creators could hash out their grievances with the state of the business and share ideas to make the job of a creator more sustainable. That
+makes sense, unlike creators raising venture capital: It’s so eye-wateringly hard to make money as a creator, I’d love to see the pitch that convinces a VC to
+cut a check to a creator, with a realistic expectation of a venture-scale return.
+
+Maybe they were hiding behind the sofa?: Sarah reports that Mastodon actually has 407K+ more monthly users than it thought — and it seems like Twitter has a lot
+more traffic than Musk said. Still, the peak now is about the same as it was a decade ago, and it’s unclear what the social platform can do to encourage more
+growth.
+</item 76>
+
+<item 77>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Not Sonos fast there: Audio company Sonos scored a big $32.5 million win against Google a while back. Now it transpires that the company’s patents were deemed
+unenforceable and invalid. Whoops. A federal judge threw out the $32.5 million win this week.
+
+When it clicks, it really clicks: We took a deep look at Pixel 8, and our team discovered that it delivers solid performance and design upgrades. The camera got
+a particularly enthusiastic shout-out, with Darrell declaring that Google’s Pixel 8 Pro camera is the new mobile photography champ, and Brian waxing lyrical
+about the phone’s picture-snapper in “The camera’s still the thing.”
+
+Who needs computers anyway?: It seems like all our mobile devices may be starting to cannibalize sales of personal computers — Ron reports that PC shipments
+decline slows in Q3 2023 and that Apple’s sales plunge over 23%.
+
+Let’s get together
+
+Reddit’s API-powered chaos continues, but it appears that things are starting to resolve a little.
+</item 77>
+
+<item 78>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Google bought DeepMind, it bought the whole thing. Musk was out. Financially, he had come out ahead, but he was unhappy. Three Google executives now firmly
+in control of DeepMind were there: Page; Sergey Brin, a Google co-founder and Tesla investor; and Eric Schmidt, Google’s chair. Among the other attendees were
+Reid Hoffman, another PayPal founder; and Toby Ord, an Australian philosopher studying “existential risk”.
+
+The DeepMind founders reported that they were pushing ahead with their work but that they were aware the technology carried serious risks. Suleyman, the
+DeepMind co-founder, gave a presentation called “The Pitchforkers Are Coming.” AI could lead to an explosion in disinformation, he told the board. He fretted
+that as the technology replaced countless jobs in the coming years, the public would accuse Google of stealing their livelihoods. Google would need to share its
+wealth with the millions who could no longer find work and provide a “universal basic income,” he argued. Musk agreed.
+</item 78>
+
+<item 79>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Does Reddit co-founder Alexis Ohanian have regrets over his creation? The entrepreneur and founder of venture fund Seven Seven Six, speaking at an event at the
+University of Virginia, espoused a fairly negative view of the current social media landscape and the creator economy — an environment where he says, everyone
+has “been so trained and conditioned now to just get the likes and retweets, get the upvotes…I wish I could be more optimistic about it, but we’re seeing it
+play out before our eyes.” Still, he ultimately described himself as a “techno-optimist” — an apparent nod to a16z General Partner Marc Andreessen’s recent
+diatribe where he claimed technology could solve all our problems.
+
+“Guilty as charged,” Ohanian said, during his interview with Kara Swisher. “I do think that pendulum will swing back. I think even swifter than we realize.”
+</item 79>
+
+<item 80>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+Now they can do the same for social networks. Image: Andrew Parker
+
+This is the same opportunity in front of the social media landscape right now: a rare chance to unbundle the internet, to pull apart an existing system and
+rebuild it, piece by piece, in vastly better ways. If we do this correctly — if the next phase of how we congregate and communicate online is built for humans
+and not advertisers — there won’t be a new titanic company to rival Meta or a platform with eye-poppingly huge numbers like Facebook. What we’ll get instead is
+something much bigger: an entirely new infrastructure for our online lives that no company or platform controls.
+
+The reason this suddenly feels possible is the emergence of the fediverse. In a sentence, the fediverse is an interconnected set of apps that can all read and
+write the same content.
+</item 80>
+
+<item 81>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+Countless startups and scale-ups have built businesses atop OpenAI’s proprietary GPT-X large language models (LLMs), and over the weekend hundreds of OpenAI
+customers reportedly started contacting OpenAI’s rivals, which include Anthropic, Google and Cohere, concerned that their own businesses might be impacted if
+OpenAI was to disintegrate overnight.
+
+Over-reliance
+
+The panic has been palpable. But there are precedents from elsewhere in the technology sphere, perhaps most notably that of the cloud computing industry, which
+became renowned for the way it locked companies in to centralized, vortex-like silos.
+
+“Part of the frenzy around the future of OpenAI is due to too many startups over-relying on their proprietary models,” Luis Ceze, University of Washington
+computer science professor and OctoML CEO, told TechCrunch in an emailed statement. “It’s dangerous to put all your chips in one basket — we saw that in the
+early cloud days which led to companies shifting to multi-cloud and hybrid environments.”
+</item 81>
+
+<item 82>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation. Its policies have resulted in increased hate speech
+and toxic content on the platform, some studies have shown.
+
+Mozilla believes there’s a better way forward and, more importantly, that now is exactly the right time to invest in that path. And, as a wholly owned
+subsidiary of a nonprofit, the company says it’s not motivated by generating earnings for shareholders or returning a VC investment, allowing it to progress
+with a collaborative approach where it takes in input from a lot of different voices.
+
+In an interview with TechCrunch, Mozilla Senior Director of Content Carolyn O’Hara explained why Mozilla has taken an interest in the fediverse and Mastodon,
+specifically, and how it expects to experiment in the months ahead.
+</item 82>
+
+<item 83>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+I’d bet heavily that ActivityPub becomes the default choice over time, but ultimately, it doesn’t matter so much which protocol wins as long as one of them
+does. We don’t need two internets, and we don’t need two social protocols. We need one thing that is both simple enough and big enough to handle all the ways we
+connect with each other online. No centralized platform has ever been big enough. The fediverse can be.
+
+Mastodon is the biggest thing in the fediverse so far, but it may not be for long. Image: Mastodon
+
+Decentralizing social media can sound like a sort of kumbaya anti-capitalist manifesto: “It’s about openness and sharing, not capitalism, man!” In practice it’s
+the opposite: it’s a truly free market approach to social networking. Mastodon may not be interested in becoming a trillion-dollar company, but there’s no
+reason there can’t be plenty of those built on the fediverse.
+</item 83>
+
+<item 84>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“They’re in the same ballpark, the sentiment is the same,” Barrett said. “Republican lawmakers in each state believe that — and said explicitly in the course of
+debating and passing these laws — that ‘Silicon Valley oligarchs’… are ideological liberals, and they are censoring people in our states who are conservative,
+and we are hereby ordering them to stop doing that.”
+
+How could the Supreme Court decision affect social media companies?
+
+If the court finds that social media companies don’t have a First Amendment right to curate the kinds of content that they allow, social platforms could look
+very different, at least in states that are trying to limit their moderation powers. After years of slow progress on misinformation — and worrisome backsliding
+on platforms like Elon Musk’s X — the Supreme Court’s decision could upend that process, sowing chaos online in the process.
+</item 84>
+
+<item 85>
+Flipboard becomes a federated app with support for ActivityPub (TechCrunch, 2023-12-18T16:00:49+00:00)
+“What are the implications of federation in the front end? How do we think about curation and all the things, all the capabilities and tools that we’ve created
+over the years? How does that work in a world that’s federated, and from a user experience point of view? That is a great question,” he said.
+
+Despite all the changes, Flipboard is not in need of raising funds to support its new developments. It’s running off the profits of its own business as it moves
+in this direction.
+
+The company is also betting on the fact that federated social media may only be the beginning of what’s to come for the web overall.
+
+“I saw what was happening with ActivityPub and it became very clear to me that this is the future of the web, period,” McCue said. “The social web is people
+linking to pages and people linking to people. So it’s a much more intricate web.”
+
+He sees Flipboard as a part of that opportunity.
+</item 85>
+
+<item 86>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 86>
+
+<item 87>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Incumbents like Datadog, New Relic and Splunk have all produced LLM observability tools and do appear to be putting a lot of R&D dollars behind this, which may
+curtail the market area in the short-term.
+
+However, as we have seen before with the inceptions of the internet and cloud computing, incumbents tend to innovate until innovation becomes stagnant. With AI
+becoming a household name that finds use cases in every vertical, startups have the chance to come in with innovative solutions that disrupt and reimagine the
+work of incumbents. It’s still too early to say with certainty who the winners will be, as every day reveals new gaps in existing AI frameworks. Therein lie
+major opportunities for startups.
+
+How much room in the market do the largest tech companies’ services leave for smaller companies and startups tooling for LLM deployment?
+</item 87>
+
+<item 88>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+First, the application must address a real enterprise pain point prioritized by executives. Second, to provide tangible benefits and long-term differentiation,
+the application should be composed of cutting-edge models that fit the specific and unique needs of the software. It’s not enough to simply plug into OpenAI;
+rather, applications should choose their models intentionally while balancing cost, compute, and performance.
+
+Third, the application is only as sophisticated as the data that it is fed. Proprietary data is necessary for specific and relevant insights and to ensure
+others cannot replicate the final product. To this end, in-house middle-layer capabilities provide a competitive edge while harnessing the power of foundational
+models. Finally, due to the inevitable margin of error of generative AI, the niche market must tolerate imprecision, which is inherently found in subjective and
+ambiguous content, like sales or marketing.
+
+How much technical competence can startups presume that their future enterprise AI customers will have in-house, and how much does that presumed expertise guide
+startup product selection and go-to-market motion?
+</item 88>
+
+<item 89>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 89>
+
+<item 90>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+This part of the stack includes cutting-edge capabilities, encompassing model fine-tuning, prompt engineering and agile model orchestration. It’s here that we
+anticipate the rise of entities akin to Databricks. Yet, the competitive dynamics of this layer present a unique challenge. Primarily, the emergence of
+foundation model providers expanding into middle-layer tools heightens commoditization risks. Additionally, established market leaders venturing into this space
+further intensify the competition. Consequently, despite a surge in startups within this domain, clear winners still need to be discovered.
+
+Companies like Datadog are building products to support the expanding AI market, including releasing an LLM observability tool. Will efforts like what Datadog
+has built (and similar output from large/incumbent tech powers) curtail the market area where startups can build and compete?
+
+LLM observability falls within the “middle layer” category, acting as a catalyst for specialized business applications to use foundational models.
+</item 90>
+
+<item 91>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+Hassabis replied that the plan would work – so long as superintelligent machines didn’t follow and destroy humanity on Mars, too. Musk was speechless. He hadn’t
+thought about that particular danger. Musk soon invested in DeepMind alongside Thiel, so he could be closer to the creation of this technology.
+
+Flush with cash, DeepMind hired researchers who specialised in neural networks, complex algorithms created in the image of the human brain. A neural network is
+essentially a giant mathematical system that spends days, weeks or even months identifying patterns in large amounts of digital data. First developed in the
+1950s, these systems could learn to handle tasks on their own. After analysing names and addresses scribbled on hundreds of envelopes, for instance, they could
+read handwritten text. DeepMind took the concept further. It built a system that could learn to play classic Atari games such as Space Invaders, Pong and
+Breakout to illustrate what was possible.
+</item 91>
+
+<item 92>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+AI was once laughed off. Now the richest men in Silicon Valley were shelling out billions to keep from being left behind. The lost ethics board
+
+When Musk invested in DeepMind, he broke his own informal rule – that he would not invest in any company he didn’t run himself. The downsides of his decision
+were already apparent when, only a month or so after his birthday spat with Page, he again found himself face to face with his former friend and fellow
+billionaire. Larry Page, co-founder of Google. Credit: Bloomberg The occasion was the first meeting of DeepMind’s ethics board, on August 14, 2015. The board
+had been set up at the insistence of the startup’s founders to ensure that their technology did no harm after the sale. The members convened in a conference
+room just outside Musk’s office at SpaceX. But that’s where Musk’s control ended. When Google bought DeepMind, it bought the whole thing. Musk was out.
+</item 92>
+
+<item 93>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter. Hassabis and his co-founders
+insisted on two conditions: No DeepMind technology could be used for military purposes, and its AGI technology must be overseen by an independent board of
+technologists and ethicists.
+
+Google offered $US650 million. Zuckerberg of Facebook offered a bigger payout to DeepMind’s founders but would not agree to the conditions. DeepMind sold to
+Google. Zuckerberg was determined to build an AI lab of his own. He hired Yann LeCun, a French computer scientist who had also done pioneering AI research, to
+run it. A year after Hinton’s auction, Zuckerberg and LeCun flew to Lake Tahoe for the same AI conference. While padding around a suite at the Harrah’s casino
+in his socks, Zuckerberg personally interviewed top researchers, who were soon offered millions of dollars in salary and stock. AI was once laughed off.
+</item 93>
+
+<item 94>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+That in and of itself is probably still largely unexplored territory that will see a lot of change and maturing in the next few years. One key aspect there
+might be cost monitoring as well since companies like OpenAI charge largely “by the token,” which is a very different metric than most cloud computing.
+
+What can be done to ensure industry-specific startups that tune generative AI models for a specific niche will prove defensible?
+</item 94>
+
+<item 95>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+The Boston Dynamics AI Institute is still in its infancy, and therefore doesn’t have much in the way of public facing research to show just yet. It is, however,
+doing a lot of hiring. This week it announced that MIT’s Kate Darling will lead research around “ethics and societal impact of robotics and AI.” From the
+institute:
+
+Darling’s team will explore immediate as well as long term questions on the implementation and use of robotics, impact on the workplace, infrastructure and
+other topics. The team will perform studies and experiments designed to generate data needed for others to make informed ethics and policy decisions, and will
+also develop a series of talks and workshops at the intersection of ethics, law, economics and robotics that will offer a platform for broad discussion.
+
+“I’ve heard Gill say that making a car is taking small bits of metal and banging them up, welding them together and attaching them,” Raibert says. “That’s a
+little on the primitive side. Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that.
+</item 95>
+
+<item 96>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+“The OpenAI / Microsoft drama underlines one of the big near-term risks with AI — that this next wave of technology is controlled by the same tiny set of
+players who have shaped that last era of the internet,” Mark Surman, president and executive director at the Mozilla Foundation, told TechCrunch. “We might have
+a chance of avoiding this if GPT-X were responsibly open sourced, giving researchers and startups a shot at making this technology safer, more useful and more
+trustworthy for people everywhere.”
+
+Open and shut
+
+In an open letter published by Mozilla a few weeks back, Meta’s chief AI scientist Yann LeCun joined some 70 other signatories in calling for more openness in
+AI development, though that letter has since garnered more than 1,700 signatures. The backdrop stems from Big Tech companies such as OpenAI and Google’s
+DeepMind calling for more regulation, warning of catastrophic consequences if the AI levers were to meet the wrong hands — in other words, they argued that
+proprietary AI is safer than open source.
+</item 96>
+
+<item 97>
+How the OpenAI fiasco could bolster Meta and the ‘open AI’ movement (TechCrunch, 2023-11-21T15:50:50+00:00)
+LeCun et al. disagree.
+
+“Yes, openly available models come with risks and vulnerabilities — AI models can be abused by malicious actors or deployed by ill-equipped developers,” the
+letter acknowledged. “However, we have seen time and time again that the same holds true for proprietary technologies — and that increasing public access and
+scrutiny makes technology safer, not more dangerous. The idea that tight and proprietary control of foundational AI models is the only path to protecting us
+from society-scale harm is naive at best, dangerous at worst.”
+
+On a personal level, LeCun has accused the big-name AI players of trying to secure “regulatory capture of the AI industry” by lobbying against open AI R&D. And
+on a company level, Meta is doing all it can to encourage collaboration and “openness,” recently partnering with Hugging Face to launch a new startup
+accelerator designed to spur adoption of open source AI models.
+
+But OpenAI was — up until last week, at least — still the AI darling everyone wanted to dance with.
+</item 97>
+
+<item 98>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 98>
+
+<item 99>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+It won’t always be right, though. But it becomes the epicenter of where the conversation is. And then I’ll think what percentage of our population really wants
+to earnestly take the breath and say, let me stop doomscrolling, and let me just wait until people can do the work, synthesize it and then help me react?” he
+continued.
+
+“We are also so plugged into all these storylines, whether it’s from traditional media, whether it’s from user-generated — someone on their phone, you know,
+posting to a Telegram group. We are overwhelmed and overloaded, and it’s unfortunately appealing to the worst parts of a lot of our instincts,” Ohanian added.
+
+In part, some of the issues around how social media platforms developed had to do with how the companies were originally developed. Ohanian, for example, shared
+that Reddit grew out of his running of a forum site in college, when he believed that online community felt as real as offline.
+</item 99>
+
+<item 100>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+His strategy was to arrange another meeting. There was a deep tension between the bishop and the knight, he told Thiel. The two pieces carried the same value,
+but the best players understood that their strengths were vastly different. It worked. Charmed, Thiel invited the group back the next day, where they gathered
+in the kitchen. Their host had just finished his morning workout and was still sweating in a shiny tracksuit. A butler handed him a Diet Coke. The three made
+their pitch, and soon Thiel and his venture capital firm agreed to put £1.4 million ($A2.7 million) into their startup. He was their first major investor.
+
+They named their company DeepMind, a nod to “deep learning,” a way for AI systems to learn skills by analysing large amounts of data; to neuroscience; and to
+the Deep Thought supercomputer from the sci-fi novel The Hitchhiker’s Guide to the Galaxy. By the spring of 2010, they were building their dream machine.
+</item 100>
+=== END ITEM id=8e668371d9af17b0 ===
+
+=== ITEM id=afa2aadf02213db9 ===
+Gold sentences and facts:
+Sentence 0: The winger came firing out of the gate, but the outlook has changed for the Devils in recent days after losing the superstar center Hughes to injury.
+  Fact 0.0: The winger came firing out of the gate.
+  Fact 0.1: The outlook has changed for the Devils in recent days.
+  Fact 0.2: The Devils lost the superstar center Hughes to injury.
+  Fact 0.3: The outlook for the Devils changed after they lost Hughes to injury.
+Sentence 1: Having to depend much on his weaker arm, Hamlin stayed in contention for the championship four race until the final race in Martinsville.
+  Fact 1.0: Hamlin had to depend much on his weaker arm.
+  Fact 1.1: Hamlin stayed in contention for the championship four race.
+  Fact 1.2: Hamlin stayed in contention until the final race in Martinsville.
+
+Retrieved items:
+
+=== END ITEM id=afa2aadf02213db9 ===

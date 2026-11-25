@@ -1,0 +1,16 @@
+[
+  {"id": "e80e025a8ada1701", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 30, "quote": "Rangers also make a lot of choices during character creation (and leveling up) that determine how they play."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 63, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 63, "quote": "During character creation, you must pick the otherworldy patron that you’ve decided to serve."}]}
+  ]},
+  {"id": "2c61ca3f529c6e91", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,9 @@
+[
+  {"id": "5de27b452526a234", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 61, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 61, "quote": "Shares of Rogers extended losses on news of the lawsuit, closing down 2.2% to C$53.07 in Toronto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 16, "quote": "Amazon tumbled 4 per cent after the Federal Trade Commission and 17 state attorneys general filed an antitrust lawsuit against it."}]}
+  ]}
+]

@@ -1,0 +1,49 @@
+[
+  {
+    "id": "ccb4ef2d1e036721",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 91, "quote": "In the wake of the Wallabies’ World Cup flop"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 91, "quote": "the Queensland Rugby Union have reaffirmed their position"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 91, "quote": "they are committed to moving to a centralised high-performance model"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 91, "quote": "won’t follow the NSW Waratahs by handing over the keys to Rugby Australia."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 74, "quote": "He will also be tasked with “integrating” the programs"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 74, "quote": "with RA trying to centralise all of the Super Rugby’s high-performance programs."}
+        ]
+      }
+    ]
+  }
+]

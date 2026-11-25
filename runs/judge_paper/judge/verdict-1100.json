@@ -1,0 +1,10 @@
+[
+  {"id": "0cbdc891648698cc", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 22, "quote": "Last week, the Supreme Court decided that it would hear the pair of cases"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "which revolve around Republicans crafting state-specific laws that order platforms to"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 22, "quote": "that order platforms to keep their hands off of some social media posts."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 100, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 100, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 100, "quote": "Under Musk, Twitter — now called X — has prioritized “free speech” managed by crowdsourced-based moderation."}]}
+  ]}
+]

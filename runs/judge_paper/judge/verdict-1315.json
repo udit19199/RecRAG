@@ -1,0 +1,119 @@
+[
+  {
+    "id": "acb27082000af565",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 20,
+            "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 20,
+            "quote": "For the past two weeks, coaches across college football have been riveted by the alleged Michigan sign-stealing scheme, but inside the Big Ten, the topic has been more than just a curiosity."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record."
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 7,
+            "quote": "While it is almost impossible to quantify how much the alleged in-person scouting and sign-stealing would have helped the Wolverines over the past two seasons, it will be a tough stain to erase knowing those violations are now on the Big Ten record."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "81b7853c00bfd061",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "1901cdbdf02a41b4",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "2f7a8ba61cc5f612",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "018fd0355ed71f2f",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

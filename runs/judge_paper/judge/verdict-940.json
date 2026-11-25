@@ -1,0 +1,42 @@
+[
+  {
+    "id": "0006d5b60d468a14",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 68, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 68, "quote": "Zazie Beetz will be back as Arthur’s neighbor and entirely unwitting love interest, Sophie."}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 68, "quote": "entirely unwitting love interest, Sophie."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 25, "quote": "Now, looking at Mary Jane in Marvel’s Spider-Man 2, there’s a very clear difference one can make out."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 71, "quote": "But then, there’s MJ as well who has made a comeback from the first installment."}
+        ]
+      }
+    ]
+  }
+]

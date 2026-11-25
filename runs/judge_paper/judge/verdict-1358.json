@@ -1,0 +1,51 @@
+[
+  {
+    "id": "3a1bc38256baf93f",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "In the third quarter, Uber generated $394 million in operating income"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 9,
+            "quote": "In the third quarter, Uber generated $394 million in operating income and $219 million worth of net income."
+          },
+          {
+            "item": 15,
+            "quote": "Uber reported net income of $221 million in the third quarter"
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 36,
+            "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 36,
+            "quote": "The ride-hail company claims that the rate of sexual assault reported on the app decreased 38% between its first and second reports."
+          }
+        ]
+      }
+    ]
+  }
+]

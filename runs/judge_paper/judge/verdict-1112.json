@@ -1,0 +1,17 @@
+[
+  {
+    "id": "a199f20c7c8fb66c",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "0.2", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 73, "quote": "She admits that she may have misinterpreted the evidence"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 73, "quote": "maintains that Google manipulates Search to maximise ad revenue."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 27, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 27, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.2", "status": "stated", "evidence": [{"item": 27, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.3", "status": "stated", "evidence": [{"item": 27, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+      {"fact": "2.4", "status": "stated", "evidence": [{"item": 27, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {"id": "762e3af92aa18e8f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "His career has only blossomed in the years since he took that trip"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "while some artists might feel trepidation at the attainment of so much success from such an early age, Mitchell is clear-eyed."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Mitchell is clear-eyed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 62, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 62, "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."}]}
+  ]},
+  {"id": "77df2b151e98dba4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

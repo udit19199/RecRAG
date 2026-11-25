@@ -1,0 +1,51 @@
+[
+{"id": "389cc0ccb0a1cbfe", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 55, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 55, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 55, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 55, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 42, "quote": "Alameda Research’s former CEO, Caroline Ellison"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 25, "quote": "We ultimately took about $14 billion, some of which we were not able to pay back."}, {"item": 34, "quote": "She was clear: Alameda took customer funds;"}]},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 77, "quote": "That credit line was used primarily for trading because it “allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified."}]},
+{"fact": "1.6", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 49, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 49, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 49, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 49, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head."}]}
+]},
+{"id": "524bcbcc2ba140e9", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 66, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 66, "quote": "It was Bankman-Fried’s decision, she said, as he was the CEO of FTX."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "f69d0e30c57e7169", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "8ee70a151b0a83d8", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]}
+]

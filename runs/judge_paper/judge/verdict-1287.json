@@ -1,0 +1,49 @@
+[
+  {
+    "id": "c7556df20b048c60",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 88, "quote": "In the long term, scientists also point to a number of recent developments"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 88, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 88, "quote": "In the long term, scientists also point to a number of recent developments which have raised hopes that it may be possible to tackle dementia more directly and effectively."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 33, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 33, "quote": "Health coach Susan Saunders found herself “parenting” her mother (who had dementia) while her own daughters were babies."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 33, "quote": "while her own daughters were babies."}
+        ]
+      }
+    ]
+  }
+]

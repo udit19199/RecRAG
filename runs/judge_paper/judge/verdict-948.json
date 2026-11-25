@@ -1,0 +1,50 @@
+[
+  {
+    "id": "5daf0c2d180314ea",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 14, "quote": "A number of videos posted to X since the attacks have been identified as entirely unrelated to the conflict"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 14, "quote": "entirely unrelated to the conflict — including footage that was filmed last month in Egypt"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 14, "quote": "even a clip from a video game that had been posted to the platform"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 14, "quote": "A number of videos posted to X since the attacks"},
+          {"item": 14, "quote": "even a clip from a video game that had been posted to the platform with a (false) claim it showed Hamas missile attacks on Israel."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 77, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 77, "quote": "We’ve reached out to the Commission with questions about how it plans to respond to this latest analysis of X’s role in spreading disinformation."}
+        ]
+      }
+    ]
+  }
+]

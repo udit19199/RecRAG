@@ -1,0 +1,45 @@
+[
+{"id": "82131b0b620ffcdf", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 26, "quote": "“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 27, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 27, "quote": "After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season."}]}
+]},
+{"id": "d08084e3a498a6e0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []},
+{"fact": "2.5", "status": "missing", "evidence": []},
+{"fact": "2.6", "status": "missing", "evidence": []},
+{"fact": "2.7", "status": "missing", "evidence": []}
+]},
+{"id": "8504bce5af3e8e72", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "137f761f431c73bd", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "1.5", "status": "missing", "evidence": []}
+]}
+]

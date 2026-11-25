@@ -1,0 +1,21 @@
+[
+  {"id": "eacdc2fe7d0145af", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 70, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 70, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Lions and Packers will be aired on Amazon Prime Video."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 27, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "For the masses of NFL fans across the U.S., Thursday's clash between the Bears and Panthers will be aired on Amazon Prime Video."}]}
+  ]},
+  {"id": "921a0c7f56821a85", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []},
+    {"fact": "2.5", "status": "missing", "evidence": []},
+    {"fact": "2.6", "status": "missing", "evidence": []},
+    {"fact": "2.7", "status": "missing", "evidence": []}
+  ]}
+]

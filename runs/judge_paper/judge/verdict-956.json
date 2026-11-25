@@ -1,0 +1,67 @@
+[
+  {
+    "id": "0364e0516f8f9761",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 18,
+            "quote": "alongside the big improvements, Valve has made a gaggle of minor physical upgrades with its new iteration."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 31,
+            "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 31,
+            "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "d15dfac4370ecb50",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 80,
+            "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 80,
+            "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 27,
+            "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."
+          }
+        ]
+      }
+    ]
+  }
+]

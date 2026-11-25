@@ -1,0 +1,49 @@
+[
+  {
+    "id": "92849eadc0cc6259",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 81, "quote": "president of baseball operations Jerry Dipoto"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 81, "quote": "They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 70, "quote": "Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts."}
+        ]
+      }
+    ]
+  }
+]

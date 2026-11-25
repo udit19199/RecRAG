@@ -1,0 +1,10 @@
+[
+  {"id": "147c1b868bc42651", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 59, "quote": "It’s not the NHL that he was playing in the last few years,” Davidson said"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 59, "quote": "the level of performance and how he could control a game and dominate a game in junior"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 59, "quote": "it indicated he was going to be able to do that at some point in the NHL"}]},
+    {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 44, "quote": "Evason spent the next several seasons working in the Predators organization as the head coach of their AHL affiliate, the Milwaukee Admirals. There, he helped guide more than a few future NHL stalwarts"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 44, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 44, "quote": "There, he helped guide more than a few future NHL stalwarts — namely Mattias Ekholm, Ryan Ellis, Filip Forsberg, Calle Järnkrok, Viktor Arvidsson, and Kevin Fiala, among many others"}]}
+  ]}
+]

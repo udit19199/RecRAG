@@ -1,0 +1,28 @@
+[
+  {
+    "id": "43321de41aa1cf55",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 85, "quote": "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 85, "quote": "10:59 p.m. — The Cowboys are moving the ball now, when it's a bit too late."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 20, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 20, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 20, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 20, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 20, "quote": "Mixon has been forced to step up without Burrow under center, doubling as a runner and receiver for Cincinnati."}]}
+    ]
+  },
+  {
+    "id": "c548d4e006f77fe7",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "2.0", "status": "missing", "evidence": []},
+      {"fact": "2.1", "status": "missing", "evidence": []},
+      {"fact": "2.2", "status": "missing", "evidence": []},
+      {"fact": "2.3", "status": "missing", "evidence": []}
+    ]
+  }
+]

@@ -1,0 +1,1595 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=82131b0b620ffcdf ===
+Gold sentences and facts:
+Sentence 0: “Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022.
+  Fact 0.0: The speaker said, 'Hopefully we can go one better this year.'
+  Fact 0.1: The speaker recalled the 2-0 defeat by Canada in 2022.
+Sentence 1: After a winless campaign in 2022, the Swans – led by ex-Collingwood player Chloe Molloy – have been competitive this season.
+  Fact 1.0: The Swans had a winless campaign in 2022.
+  Fact 1.1: The Swans are led by ex-Collingwood player Chloe Molloy.
+  Fact 1.2: The Swans have been competitive this season.
+
+Retrieved items:
+<item 1>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU also expressed its satisfaction that RA was willing to discuss the annual $1.7m being reinstated, which had been withheld because of the Covid pandemic
+to keep the game afloat.
+
+Meanwhile, The Roar understands the ACT Brumbies have sent RA confirmation of solvency for the next 12 months.
+
+RA was forced to take out a $40m loan from Ares to keep the game afloat.
+
+Advertisement
+
+While RA has around another $15m left to spend from the loan, the governing body is looking to borrow up to another $60m so they’re in the strongest possible
+position to capitalise on the two major money-making events – the 2025 British and Irish Lions series and home men’s World Cup in 2017 – and succeed.
+</item 1>
+
+<item 2>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was also named captain of the All Australian team after leading the Allies to their first title. Caught the eye with a strong performance for the Australia
+under-18 team in its representative match against Port Adelaide’s SANFL side and backed it up in the second match against Carlton’s VFL side where he collected
+24 disposals to be one of Australia’s best in victory. Finished the year as a back-to-back Coates Talent League premiership player with the Sandringham Dragons
+where he averaged 31 disposals across nine matches.
+</item 2>
+
+<item 3>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+“Even at Henson Park [the Swans’ other home ground in Sydney’s gentrified inner west], they’ve gone to microbreweries in the local area and invited them in, but
+also promoted through their clientele to come to the football.”
+
+The Swans forward Bella Smith said the players were proud of the club’s attendance record, and were grateful for the support. “We get there two hours before the
+start of the game and the hill [at Henson Park] is bare. When you come out for the first team warm-up, the hill is slowly filling and then by the time the first
+bounce gets around, it is full,” she said. “You can hear it, the atmosphere is amazing.”
+
+The average attendance for the AFLW is a little over 2,500 a match this year, tracking approximately on par with previous seasons and with a finals uptick
+likely to come.
+</item 3>
+
+<item 4>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+I’ve got the experience of being in difficult situations before,” Jones said.
+
+“This is not an unusual situation. You’ve got a team that was struggling for a period of time, you’ve got underneath it a system that’s not supporting it and at
+some stage you bottom out.
+
+“This is the opportunity now to change the team- as we’ve started with picking younger players with bright futures – and then we’ve got to look at the
+development system underneath as well.
+
+“It’s not a simple equation that the Wallabies are bad. Let’s be serious about this. The Wallabies are not where they need to be but underneath that we need to
+fix the system to go forward. And if we can do that now we’ve got a rosy future.”
+
+Sports opinion delivered daily
+</item 4>
+
+<item 5>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Every match ad free, live and on demand in 4K UHD
+
+The most likely outcome is that Fiji wins easily and the Wallabies will be pushing confirm on their off-season holiday plans.﻿
+
+"We've only got ourselves to blame, we put ourselves in this position," Wallabies centre Samu Kerevi, who was born in Fiji, said after an open training session
+in front of 1000 keen locals at the Andrezieux-Boutheon rugby club on Saturday.
+
+"We'll sit down as a team and watch together on Sunday night. I think we understand the situation ... our results and the way we played, we put ourselves in
+this position. So the team understands that and we have our belief in anything's possible at the World Cup.
+</item 5>
+
+<item 6>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Hanks was pivotal for the Demons and starred with 26 disposals, seven tackles and one goal, while her partner in the midfield Olivia Purcell had 28 touches,
+five clearances and five tackles. For the Roos, Ash Riddell led the disposal count with 31, while skipper Emma Kearney was crucial in defence. Melbourne’s
+Alyssa Bannan is tackled by Lulu Pullar of the Kangaroos. Credit: Getty Hanks said with the state of competition, they just had to take it week by week, but it
+was good to get the win. “We knew we were up against the best tonight,” said Hanks. “It’s a nice feeling tonight.”
+
+Lions roar in big battle Meanwhile, on Saturday afternoon, the Brisbane Lions put an end to Adelaide’s unbeaten run with a three-point victory at Brighton Homes
+Arena in a top-four thriller, 5.12 (42) to 6.3 (39), in a spectacle worthy of being a final.
+</item 6>
+
+<item 7>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Comeback kings Richmond take the points in Cairns A late goal by Emelia Yassir has helped Richmond to their first win in four games, putting their AFLW finals
+campaign back on track with an 11-point victory over Hawthorn. Tight tussle: Richmond’s Emelia Yassir is tackled. Credit: Getty Images Separated by one point at
+half-time and down by nine points entering the last quarter, the Tigers pulled off a 6.5 (41) to 4.6 (30) victory to keep their finals hopes alive at Cazaly’s
+Stadium in Cairns on Friday night.
+
+Hawthorn were limited to just one point in the decisive final quarter. Midfield duo Monique Conti (35 disposals, seven clearances) and Grace Egan (28, 5) were
+typically influential for Richmond, while Hawthorn were led by Emily Bates (18, four) and Jasmine Fleming (18, one). “Richmond were just absolute beasts,
+especially their midfielders.
+</item 7>
+
+<item 8>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+De Minaur, cheered on by his excited mum, then didn’t need similar heroics to Wednesday’s as he overcame the loss of the first two games.
+</item 8>
+
+<item 9>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+Three looming ODIs against India in the next week and three ensuing T20s will be the first showing of that, with the hosts also a rising force in the white-ball
+game.
+
+Advertisement
+
+“Within our group we’re really comfortable with where we’re at, and the progression we’re on,” Healy said.
+
+“Ultimately there’s a big T20 World Cup in Bangladesh towards the end of next year, that is a real carrot for us.
+
+“These are the sort of big trophies that we’re wanting to win.
+
+“And yes, every series in between now and then is important, but at the same time we’re building towards that World Cup.
+
+“Maybe you can ask me that (supremacy) question at the end of the six white-ball games to see how we’re going and we can answer that.
+
+“These next six games will probably give us a better indication about how we’re tracking but also what we might need to improve on.”
+</item 9>
+
+<item 10>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+Alyssa Healy has rejected any suggestion Australia’s stranglehold on international women’s cricket is slipping, saying their Test loss to India is barely a blip
+on the team’s record.
+
+Australia stumbled to their first Test defeat to India by eight wickets in Mumbai on Sunday, after being outplayed by the hosts in foreign spinning conditions.
+
+The loss comes after one of the more difficult periods for the Australian side in the past six years, with the retirements of Meg Lanning and Rachael Haynes.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+After winning their fourth straight global ICC event earlier this year in the 50-over World Cup, Australia retained the Ashes via a drawn multi-format series in
+England in July.
+
+That tour included losing four of six white-ball matches, with Australia’s win in the Test enough to have them level on points with England and hold onto the
+trophy.
+</item 10>
+
+<item 11>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The Melbourne Rebels are expected to follow.
+
+RA chief executive Phil Waugh says building trust back between the governing body and states is essential to their plans.
+
+Under fire Wallabies coach Eddie Jones also advocated for Australian rugby to move to a centralised model, believing the nation had fallen behind the rest of
+the world.
+
+“We’re a state-based union that’s run by the states, the national union wants to assume more responsibility and when things were going well, no one questioned
+that,” Jones said.
+
+Advertisement
+
+“But over the last period of time, they haven’t been going so well and this tournament’s probably been the icing on the cake where it’s got to a stage where I
+think people, most people probably think there’s time for change. But it’s not going to go easy.
+
+“[It’s] one of the key issues. We need to maximize the development of the players.
+</item 11>
+
+<item 12>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+His agility, speed for his size and precise kicking are all features of his game.
+
+Weapon: Intercept ability and precise ball use
+
+AFL player comparison: Steven May (Melbourne)
+
+Advertisement
+
+Harry DeMattia
+
+Pronunciation: De-matt-e-ya
+
+State: Victoria Country
+
+State League Club: Dandenong Stingrays
+
+Community Club: Edithvale-Aspendale
+
+Date of Birth: 11/09/05
+
+Height: 185cm
+
+A midfielder/forward with a combination of speed and endurance which enables him to cover the ground and compete in the air and at ground level. A left footer,
+he brings real pressure with his ability to lay run down tackles against the flow of play. Shared the role of Victoria Country co-captain with Harley Reid and
+performed consistently.
+</item 12>
+
+<item 13>
+England choose survival over oblivion and a chance of summer trip to France | Jonathan Liew (The Guardian, 2023-12-01T22:57:40+00:00)
+after newsletter promotion
+
+And clarity is perhaps what this team has been lacking most of late: clarity of selection, clarity of formation, clarity of mission and motivation. How much
+prestige should we really attach to the Nations League, anyway? Is it primarily an Olympic qualification shootout or something worth winning in its own right?
+England ended up trying to answer these questions on the hoof, and somehow it was only when their options had finally clarified down to one – survival or
+oblivion – that they recovered their poise and verve.
+
+This entire post-pandemic international cycle – a Euros, a World Cup, an Olympics and another Euros squeezed into three years – feels like a kind of sadism
+dressed up as a panorama of opportunity. There is a school of thought out there that a fallow summer might not have been the worst thing for this team: time to
+reflect and process, time to breathe, time to refresh.
+
+Instead, they now travel to Glasgow on Tuesday for one last push. The minds are still frazzled.
+</item 13>
+
+<item 14>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+With only 0.4 of a percentage point separating Sydney in ninth and St Kilda in eighth, the win assured the Swans of retaking eighth spot. If the Saints had
+qualified, it would have been their maiden finals appearance. Saints goalkicker Jesse Wardlaw had a heavy collision with Carlton’s Keeley Sherar late in the
+final quarter of their clash.
+
+Georgia Patrikios showed her class in the do-or-die match, collecting 25 disposals and eight contested possessions in a powerhouse display, while Hannah Priest
+was a brick wall in defence, with nine intercept possessions. Abbie McKay worked overtime to counter Patrikios in the midfield, but her side was outclassed
+across the park. McKay racked up 28 disposals and 12 clearances alongside Mimi Hill (30 disposals), while defender Sherar (17) toiled against a potent Saints
+attack. Meanwhile, Sydney prevailed in a fierce tug-of-war with the Dockers to seal their first AFLW finals appearance.
+</item 14>
+
+<item 15>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Conversely, the score was the most the Saints have conceded in any quarter this season.
+
+Aine Tighe set the tone for the Dockers with a brilliant goal less than 30 seconds into the first quarter, followed by two majors from Gabby O’Sullivan and
+another by Angelique Stannett. Ella Friend slotted a much-needed goal for the visitors to make it 4.2 (26) to 1.3 (9) at quarter-time. With less than a minute
+till the long break, captain Hayley Miller (two goals) kicked the only major of the second quarter to give Fremantle a comfortable 26-point lead at half-time.
+Despite two goals from Tyanna Smith and J’Noemi Anderson in the second half, the Saints struggled to eat into the deficit. Fremantle (4-4) face reigning
+premiers Melbourne next, before finishing the season against 11th-placed Sydney.
+</item 15>
+
+<item 16>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+“That judgment will be decided by the 2027 World Cup.”
+
+He said the team – including coaches and players – have already completed their own review of the World Cup disaster. The next one would be “a formal review to
+be done by independent consultants” and he was ready to participate.
+
+“I didn’t come back to Australia to have a holiday – sit down at Coogee Beach, eat fish and chips, have a nice flat white. It was always going to be a battle.
+When you’ve got a team that hasn’t done well for a long period of time, it’s always a battle.”
+
+Advertisement
+
+Jones said it was crucial that Rugby Australia got alignment in the code from grassroots through to the top team as it looks to rebuild it’s international
+standing. Australia, a two-time world champion, is currently ranked 10th in the world.
+
+“You just got to watch the quarterfinals at the weekend. We’re not at that level.
+</item 16>
+
+<item 17>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But Livingstone said the AFL was happy with the level of competition. “Our ladder, from position five to 13 – there’s only a game separating it. It just shows
+that this is a really competitive competition.”
+</item 17>
+
+<item 18>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“I’m excited like I think the group’s coming together really nicely and where really well-prepared compared to previous years,” Riddell told Fox Footy. “So, I
+can’t wait I think it’s an exciting time for us.” The game was one-way traffic against the Dogs with the game played almost entirely in the Roos’ attacking
+half. Riddell credited her side’s “team performance” after two losses to the Dees and Crows. North Melbourne have secured a top-four spot for finals. Credit:
+Getty For the Western Bulldogs, it was another tough day out as they notched their ninth loss of the season. They won just one game this year, an eight-point
+victory last weekend over 17th-placed West Coast.
+
+Britney Gutknecht kicked the Dogs’ only goal against the Kangaroos, which came early in the final term to avoid a record for the lowest AFLW score in the
+history of the competition.
+</item 18>
+
+<item 19>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+Leading the charge was the always outspoken Sir Geoff Boycott, who wrote in The Telegraph that the team were paying the price for poor preparation in the
+lead-up to the World Cup, as well as shoddy team selection extending back to The Ashes earlier this year.
+
+“It is an old saying: “By failing to prepare, you prepare to fail”,” Boycott wrote.
+
+“History shows that England rarely bat well in India where the ball spins. Our guys are okay on flat pitches but if it turns they have a problem.
+
+“So the best way to try and overcome that would have been for our squad of players to get to India early and play four or five warm-up matches. What did England
+do?
+
+Advertisement
+
+Plan only two warm-up games with one getting rained off. Not smart planning… batting and bowling against stiff opponents sharpens your game and puts you on your
+mettle. Against Sri Lanka, they were once again exposed.
+</item 19>
+
+<item 20>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was impossible to contain during this year’s National Championships booting 14 majors in four matches for Victoria Metro to top the goal kicking. He also
+averaged 12.2 disposals and was rewarded with All Australian selection. He further expanded his game by spending more in the midfield and across half back for
+the Eastern Ranges and averaged 20 disposals while kicking 11 goals in nine matches in the Coates Talent League.
+
+Weapon: Speed, agility and leap
+
+AFL player comparison: Shai Bolton (Richmond)
+
+Advertisement
+
+This is just what Nick Watson does ????
+</item 20>
+
+<item 21>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Lions’ Orla O’Dwyer speeds away against the Crows. Credit: Getty Images Adelaide started fast but the game evened up as the Lions had the better of the
+second quarter with three goals to one. The Crows then took back control in the third with three goals to none, which set the stage for a tense final term. The
+fourth quarter was a heated arm wrestle, and scores were tied with four minutes left on the clock. The Lions’ Bella Dawes kicked the only goal of the last term,
+but it was a series of behinds in the final minutes that won the game for them, including one from Lily Postlethwaite that broke the stalemate.
+
+Adelaide’s Niamh Kelly navigates her way through traffic against brisbane. Credit: Getty The two sides have had intense battles in the competition’s history,
+including two grand finals, and this was no different.
+</item 21>
+
+<item 22>
+Tennis News: Kyrgios escalates beef with Becker, change ‘warrior’ Novak had to make, WTA criticised for charisma fail (The Roar | Sports Writers Blog,
+2023-12-19T23:54:26+00:00)
+The Paris Olympics adds an extra high profile tournament to the four majors next year.
+
+It appears a big leap for Djokovic to win all five – considering he’s yet to claim a Grand Slam of all four – pulling up just short three times.
+
+While there are doubts over the fitness of Rafa Nadal – set to return in Brisbane ahead of the Australian Open – a hungry pack of new talent will be waiting for
+a slip up.
+
+Advertisement
+
+“I think that would be a little bit surprising [to win a Golden Slam],” Corretja said.
+
+“Because even if he improves his game so much, he’s getting older. It’s normal that he is getting older and the recovery is not the same.
+
+“I’m sure that he’s going to keep on winning Slams, but it’s going to be tougher and tougher and he knows that.”
+</item 22>
+
+<item 23>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Uses his dazzling speed to break the lines and kicks the ball with pinpoint accuracy on his preferred left foot. Averaged 32.8 disposals and 5.8 clearances
+across four matches for the Allies at the National Championships to earn All Australian honours. Was equally dominant for the Tasmania Devils in the Coates
+Talent League having more than 30 disposals in seven of his nine matches and also kicked 12 goals. Showed he could match it against more experienced opponents
+by having 20 disposals and three clearances in Australia’s win over Carlton’s VFL team.
+</item 23>
+
+<item 24>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Shared the role of Victoria Country co-captain with Harley Reid and performed consistently. Had an exciting year with the Dandenong Stingrays averaging 19
+disposals and 4.8 tackles to earn selection in the Coates Talent League Team of the Year. Recorded a top 10 finish in the 20m sprint at the national Draft
+Combine with a slick 2.99 seconds. A dual sports athlete who was a member of Australia’s under-19 cricket program.
+
+Weapon: Speed and endurance
+
+AFL player comparison: Jordan Dawson (Adelaide Crows)
+
+Zane Duursma
+
+State: Victoria Country
+
+State League Club: Gippsland Power
+
+Community Club: Foster
+
+Date of Birth: 28/08/05
+
+Height: 189cm
+
+A mercurial forward or midfielder who reads the play exceptionally well, is strong overhead and deadly accurate around the goals.
+</item 24>
+
+<item 25>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+Instead, in the Davis Cup final in Malaga, Australia will face an Italy team running hot on the heroics of their golden boy Sinner, who beat Djokovic in both
+the singles and the doubles in the space of five exhilarating hours in their semi-final on Saturday (Sunday AEDT). Jannik Sinner saved three match points before
+going on to beat Novak Djokovic. Credit: Getty Images In one of the great Davis Cup rubbers, Djokovic had held three match points against Sinner and was on the
+verge of a completing a relatively workaday 2-0 victory for the Serbs.
+
+But for only the fourth time in his unparalleled career, Djokovic was beaten from match-point up as Sinner roared back to complete his second victory over the
+master in just 12 days, winning 6-2, 2-6, 7-5.
+</item 25>
+
+<item 26>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+“Hopefully we can go one better this year,” he added, recalling the 2-0 defeat by Canada in 2022. De Minaur had been the hero on Wednesday, pulling out an
+extraordinary comeback win over Jiri Lehecka with Australia on the verge of defeat in their quarter-final with the Czech Republic.
+
+But he was happy to pass the laurels to Popyrin, a late squad replacement who’d been asked to take on the troublesome “second singles” role by Hewitt. Loading
+“Alexei hasn’t played for Australia in a very long time [two years], had a massive match today against a very high-quality opponent and dug super deep,” said de
+Minaur. Popyrin managed to deliver a rock solid game, making only 11 unforced errors to his erratic opponent’s 25, to prevail in just under an hour-and-a-half.
+“It was probably the biggest win of my career,” he admitted.
+</item 26>
+
+<item 27>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+Fans of Australian rules football in the Harbour City have a reputation for being fickle. After a winless campaign in 2022, the Swans – led by ex-Collingwood
+player Chloe Molloy – have been competitive this season. The team won their first AFLW match in round one and are within a game of the top eight with two rounds
+to play.
+
+But general manager of women’s football at the AFL, Nicole Livingstone, said the Swans’ off-field offering had tapped into something “uniquely Sydney” and
+helped make matches more attractive.
+
+“To go to North Sydney Oval and to have quince paste and hand-picked grapes, cheddar cheese and biscuits in a little box that’s got this beautiful wrapping on
+it – they’ve really thought about what they’re doing and made it an experience,” she said.
+</item 27>
+
+<item 28>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+Loading “We just want to win. We come into the club every day and get better, and we just set ourselves up, so when we come to game day, we know we’ve done
+everything, to get the result we want.” Maynard had a tumultuous start to September after his infamous collision with Melbourne’s Angus Brayshaw left the Demon
+concussed and him defending himself at the tribunal. With a three-match ban hanging over his head, Maynard feared his dream to achieve premiership glory could
+be lost before he beat the charge.
+
+Collingwood’s triumph helped banish the pain of their grand final defeat to West Coast in 2018, when Maynard was unfortunate not to receive a free kick for a
+block against Willie Rioli in the same passage that led to Dom Sheed’s match-winning goal. “Everyone knows that was a bizarre and crazy sort of week, mentally
+[after the Brayshaw incident],” Maynard said. “I wasn’t going well because of the what-ifs, if I missed this.
+</item 28>
+
+<item 29>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Aerial skill and goal sense
+
+AFL player comparison: Isaac Heeney (Sydney Swans)
+
+Charlie Edwards
+
+State: Victoria Country
+
+State League Club: Sandringham Dragons
+
+Community Club: Sandhurst
+
+Date of Birth: 18/05/05
+
+Height: 191cm
+
+Medium defender and midfielder who emerged as the year progressed and is now considered a possible Draft bolter given his rapid progression for the Sandringham
+Dragons in their road to the Coates Talent League premiership. Showed real class with his athleticism and ball use once moved into the midfield with his
+29-disposal performance against the Dandenong Stingrays in Round 13 an eye-catcher. Is also a talented cricketer and has spent only one year in the AFL Talent
+Pathway system after playing underaged football at Sandhurst before moving to Melbourne Grammar.
+</item 29>
+
+<item 30>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+“But I go out with on a happy note. I love these girls and I’ll be over at the pancake pocket [Pancake Parlour at Whitten Oval] watching them from now on and
+have a few bevs on the sideline.” Roos’ lock in top-four spot; Dogs have issues to work through in off-season North Melbourne secured third spot on the ladder
+and the double chance in finals after downing the Western Bulldogs by a whopping 46 points. They will head into finals with momentum but a glaring issue to work
+on: kicking accuracy. Despite the comfortable win, they could have done a lot more damage after booting double the number of behinds to goals.
+
+Star midfielder Ash Riddell, who had 36 touches and seven clearances, said she was excited to go up against Melbourne or Adelaide in the first weekend of finals
+depending on other results this round, as they were the only two sides who beat them this year.
+</item 30>
+
+<item 31>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+It was something that I’ll never forget.” Loading Australia, who lost last year’s final to Canada, has enjoyed a soft run on paper to this year’s decider,
+eliminating the Czech Republic and Finland – with neither country boasting a top-30 singles player – but will have earned their 29th Davis Cup title if they
+account for Italy. Canada defeated Italy in the Davis Cup round-robin matches in September, but bowed out to Finland in the knockout stage without Felix
+Auger-Aliassime and Denis Shapovalov, who have both battled injury and form. The final is due to start at 2am AEDT on Monday and will be broadcast on 9GEM.
+
+Sinner ends Djoker’s Davis Cup dream Novak Djokovic’s dream of capping his great season by blasting Serbia past Australia in the Davis Cup final was blown up by
+Jannik Sinner’s extraordinary double triumph over the world No.1.
+</item 31>
+
+<item 32>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+If the Lions had lost, they were at risk of falling out of the top four with second-season side Essendon chasing their spot. Last season’s best and fairest Ally
+Anderson said her side loved playing at its training ground in Springfield, which it has made a fortress, and work well in hot conditions . “It was really hot.
+It was a grind… But yeah, it was a good finish,” Anderson told Fox Footy post-game. “Every week that we play here, every time that we play here, we get better
+and better. So, it was just a matter of time before we finally got the first win and then it hopefully [will] open the floodgates a bit.”
+
+The Lions next play St Kilda before taking on the reigning premiers Melbourne in the final round. After this weekend, they have staked their claim as being
+premiership contenders again. Adelaide will play top-four side North Melbourne next weekend before 18th-placed Western Bulldogs.
+</item 32>
+
+<item 33>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Melbourne’s Lauren Peace fights for the ball againt the Lions. Credit: Getty Images The Lions were at risk of slipping from the top four after last week’s
+21-point loss to St Kilda, but will now finish the home-and-away season fourth, avoiding a sudden-death elimination final and marking coach Craig Starcevich’s
+75th game in style.
+
+Meanwhile, Melbourne ceded the minor premiership to Adelaide and dropped to second spot. The Lions put on a show across the park, with powerhouse duo Ally
+Anderson (22 disposals) and Jade Ellenger (22) going to work in the midfield while Dakota Davidson (two goals) led the charge in the forward line. Captain Bre
+Koenen was superb in defence as she played on Melbourne’s leader Kate Hore, collecting a game-high 12 intercept possessions and limiting the prolific goalkicker
+to just one goal. Lions duo Charlotte Mullins and Ruby Svarc celebrate.
+</item 33>
+
+<item 34>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the wake of the Wallabies’ World Cup flop, the Queensland Rugby Union have reaffirmed their position that they are committed to moving to a centralised
+high-performance model but won’t follow the NSW Waratahs by handing over the keys to Rugby Australia.
+
+They also expressed their strong support for Rugby Australia to conduct a “fully independent and transparent top-to-bottom review of the Wallabies program and
+how it can be improved” in light of the historic first World Cup pool exit.
+
+They added: “It should also provide a clear view of what is needed in a leadership and governance framework to ensure we put the right people, in the right
+roles, in the right system.”
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The QRU has also expressed their desire for Rugby Australia to reinstate the annual $1.7 million in funding to each of the Super Rugby franchises that was
+withdrawn following the Covid pandemic to help keep the game afloat.
+</item 34>
+
+<item 35>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+Brisbane Lions (2001-03), Geelong (2007, 2009, 2011), Hawthorn (2013-15) and Richmond (2017, 2019-20) all won three flags in short succession this century, with
+the Magpies’ challenge now to back up their memorable season. Brayden Maynard enjoys the Pies’ win. Credit: Eddie Jim Maynard initially baulked when asked
+whether Collingwood could win back-to-back flags, but said their bulletproof culture instilled belief they could “do anything”. “We’ve got to lap [this
+premiership] up, and we’re going to have some serious fun, and we might burn down Melbourne,” a still-disbelieving Maynard said.
+
+“I’m looking forward to celebrating with the team because it’s taken two years of getting after it and getting better every day – we’ve got better for this
+moment. Loading “We just want to win.
+</item 35>
+
+<item 36>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+It was the Western Bulldogs’ eighth loss in a row, and their biggest-ever defeat, and they have just two rounds left to clinch a win this season. They next play
+17th-placed West Coast and then top-four side North Melbourne. For the Swans, however, the victory has them challenging for a top-eight spot alongside the likes
+of Gold Coast, Geelong, Collingwood, St Kilda and Carlton.
+
+The Swans, who went winless in their debut season last year, were propelled to victory by a Chloe Molloy masterclass. After a five-goal second term, which
+included a four-minute burst of three majors, Sydney had already brought up their largest score in an AFLW game by halftime. Swan Chloe Molloy celebrates a
+goal. Credit: AFL Photos / Getty Images The Bulldogs held their own in the last quarter, but the damage had already been done. The total was also the biggest
+the Dogs have conceded in their history, topping the 83 Melbourne kicked against them in round three.
+</item 36>
+
+<item 37>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+The current tour of India is not a multi-format series, but the defeat in the one-off Test marks Australia’s first loss in a four-day game since January 2014.
+
+But quizzed over whether the defeat suggested Australia’s unprecedented period of dominance was ending, Healy was defiant.
+
+“It’s probably not even a blip,” Healy said.
+
+Advertisement
+
+“It (Test cricket) is a format where we’re not overly familiar with, in conditions that we’re not familiar with.
+
+“I see more positives out of this and than any sort of negativity.
+
+“There is always a lot of expectation and external noise about our team and how we’re performing.
+
+“They are so used to seeing us winning, that I think, at times, they forget that we’ve actually seen quite a lot of change over the last 12 to 18 months.
+
+“That kind of goes unnoticed external to our group.”
+
+Australia have spoken about shifting their mindset in white-ball cricket after the losses in England, pursuing a more attacking approach.
+</item 37>
+
+<item 38>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Molloy, the Swans’ star off-season recruit, turned on one of the best performances of her career to demolish their injury-hit hosts.
+
+The former Collingwood ace was a class above as she kicked 3.4 from her 28 possessions and played a crucial role in setting up numerous other Sydney goals.
+Loading “She [Molloy] was itching to get in there [in the midfield],” Swans coach Scott Gowans said. “We kept her forward deliberately. It was important Chloe
+played a good block of time forward so we could have a look at it.” The Blues lost to Greater Western Sydney by two points on Saturday afternoon, denying them
+the chance to leapfrog into the top eight, 8.1 (49) to 7.5 (47).
+
+Narrm reclaim top spot Reigning premiers Narrm have reclaimed top spot on the ladder and their position as flag favourites after defeating third-placed North
+Melbourne by 23 points at Ikon Park on Saturday night.
+</item 38>
+
+<item 39>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+Against Sri Lanka, they were once again exposed.
+
+“Too many of our guys just want to play crash, bang wallop all the time irrespective of the type of pitch or opposition. Again not smart.”
+
+The brunt of Boycott’s criticism of England’s team composition was directed at the continued struggles of Jonny Bairstow, who has averaged just 25.2 this
+tournament, and all-rounder Chris Woakes, whose nightmare campaign continued against Sri Lanka with figures of 0/30 from six overs and a fourth-ball duck.
+
+“Bairstow has struggled since his horrific injury [breaking his leg 12 months ago],” Boycott wrote.
+
+“I have said before I believe Jonny came back too soon and was short of fitness and match practice. In the recent five Ashes Tests his keeping at Lord’s was
+poor with missed chances and he made only three significant batting scores out of nine innings.
+</item 39>
+
+<item 40>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Michael Prior guided West Coast to a gutsy win. Credit: Getty
+
+Aisling McCarthy and Amy Franklin drew first blood for West Coast within the opening five minutes, while the hosts were kept goalless. The Bombers only added
+three behinds in the second term and the Eagles failed to score as the blustery conditions took their toll on the game. West Coast’s Kellie Gibson broke the
+goal drought with the only major of the third quarter, before the home side came to life with the wind at their backs in the final term, with skipper Bonnie
+Toogood and Amber Clarke reducing the margin to four points. Toogood continued to pepper the scoreboard, but the Eagles held on to secure a rare victory. “We’ve
+had a horror week back at home, and it’s been really bloody tough on all of us, and Mick as well. I’m just really proud of the girls,” West Coast captain Emma
+Swanson said post-game on the broadcast. “I can name the whole team.
+</item 40>
+
+<item 41>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+“Some of those cricketers on that park today would go in your best ever England white ball XI. It’s just been a bridge too far for most of them.
+
+“What I don’t like is giving players a cop out… when we win the 50-over World Cup and the 20-over World Cup, aren’t they great? We’re brilliant. And when the
+wheels come of it’s the structure. It’s the structure of English cricket, we’re a disgrace.
+
+“We play 20-over cricket, we play 100-ball cricket, we don’t play enough 50-over cricket – how much 50-over cricket domestically has Virat Kohli played? Or
+Heinrich Klaasen or anyone out here?
+
+“That’s what’s made this great side over the last six years, travelling round the world playing T20 franchises. It’s such a lame excuse.”
+</item 41>
+
+<item 42>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+The query is whether Italian captain Filippo Volandri will turn to Lorenzo Musetti, who battled a leg issue at the end of his three-set loss to Serbia’s Miomir
+Kecmanovic, or one of Lorenzo Sonego or Matteo Arnaldi.
+
+Popyrin won his only ATP Tour clash with Musetti – who has been as high as No.15 in the world – in a tight two-setter at last year’s Miami Masters, but the
+emerging Italian claimed three of their four showdowns at the next level down. He is yet to play against Sonego, who Arthurs expects to play. “I’m assuming they
+will back in Popyrin because he played pretty well a couple of nights ago, and with his firepower – he’s probably the key to the tie,” Arthurs said. “He’s
+showing all the signs of becoming a top-25 player in the next couple of years.
+</item 42>
+
+<item 43>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Composure and step through congestion
+
+AFL player comparison: Adam Cerra (Carlton)
+
+George Stevens
+
+State: Victoria Country
+
+State League Club: GWV Rebels
+
+Community Club: South Warrnambool
+
+Date of Birth: 14/04/05
+
+Height: 189cm
+
+Advertisement
+
+A strong-bodied defender who also plays as an inside midfielder to great effect. He reads the cues to intercept well when playing across half back, is a good
+decision-maker and has a penetrating kick. Had an outstanding year which included captaining the Australia under-18 team during the AFL Academy’s matches
+against SANFL and VFL sides. Won All Australian honours at the National Championships when representing Victoria Country and was named captain of the Coates
+Talent League Team of the Year after averaging 28.8 disposals and five tackles across 13 matches for the GWV Rebels, also winning the club’s best and fairest
+award.
+</item 43>
+
+<item 44>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Chloe Scheer was once again the star in front of goals with three majors, while the Cats finished with seven individual goalkickers. Georgie Prespakis (35
+touches, eight clearances) and Amy McDonald (23 touches, eight clearances) were a formidable midfield duo, while the retiring Renee Garing had a whopping 11
+tackles. Overall, it was a strong team effort from a side that will be hungry for a finals win. Last year, the Cats had an impressive home-and-away run but
+bowed out narrowly in an elimination final to North Melbourne. Geelong young defender Rebecca Webster told this masthead earlier in the week how important the
+home crowd is for them come knockout finals. “Playing at GMHBA is like a massive advantage for us,” said Webster. “We love going in those four walls. We train
+there three, four times a week.
+</item 44>
+
+<item 45>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+The Dogs have plenty to work on for next season as they look to regain a competitive edge, which was lost after a finals berth last year. Along with being in a
+rebuild, they were badly injury-hit this season and used 32 players, more than any other club. Suns secure finals spot AAP Unsung hero Lucy Single has helped
+Gold Coast book their second AFLW finals appearance with a 14-point win over Essendon. Losing midfield powerhouse Charlie Rowbottom to an ankle injury proved no
+obstacle in the Suns’ maiden clash with the Bombers, as they finished the regular season in fifth spot after a 6.3 (39) to 3.7 (25) victory to kick off pride
+round at Great Barrier Reef Arena on Friday.
+
+While their men’s side have yet to make a finals appearance, this is the second time Gold Coast’s women have clinched a play-off spot, having also done so in
+the cancelled 2020 season.
+</item 45>
+
+<item 46>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+Oct 8th, 2023
+
+Oct 8th, 2023
+
+S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by
+Fiji and Portugal in Toulouse.
+
+Australia will gather together in their plush Saint-Galmier hotel at 9pm local time (6am Monday AEDT) to view what will almost certainly be their World Cup
+execution.
+
+The Wallabies are currently sitting second in Pool C but a single bonus point would be enough for Fiji to leapfrog them and advance to the quarter-finals in
+Marseille.
+
+Watch all the action from Rugby World Cup 2023 on the home of rugby, Stan Sport.
+</item 46>
+
+<item 47>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Kangaroos’ Alice O’Loughlin and Melbourne’s Maeve Chaplin battle for the ball. Credit: AFL Photos It was a hard-fought, low-scoring battle between the two
+powerhouse sides that play a similar game style. Each set up well, are fast and like a good dose of contested marking. But Narrm controlled more of the game by
+tightening around the contest and being cleaner going forward. They also defended extremely well by suffocating the opportunities North created and prevailed
+5.7 (37) to 2.2 (14). While the Demons scored just one goal a quarter in the second half – Tyla Hanks in the third and Eden Zanker in the fourth – the Kangaroos
+were goalless for three terms, having led by five points at the first change. Their opening goals were thanks to Niamh Martin and Tess Craven.
+
+Then a crafty goal from Demons skipper Kate Hore to open the second term put her side up, and Melbourne never gave up the lead.
+</item 47>
+
+<item 48>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+AAP Cats secure elimination final home-ground advantage
+
+Geelong have not only secured their spot in the top eight with a huge 40-point win over Hawthorn on Saturday at GMHBA Stadium but locked in home-ground
+advantage for the first elimination final. The Cats finished sixth, with the 9.6 (60) to 3.2 (20) win over the Hawks boosting their percentage to a healthy
+141.2, almost 40 ahead of Essendon, who sit one rung below them on equal points. Momentum is also in Geelong’s favour after two big wins in a row, having
+demolished Richmond by 38 points last weekend. Chloe Scheer (left) and Julia Crockett-Grills of the Cats celebrate. Credit: Getty Against the Hawks, they
+controlled ball movement from the get-go, kicking four goals straight to open the match and keeping their opposition goalless to half-time.
+</item 48>
+
+<item 49>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 49>
+
+<item 50>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+NEW PODCAST! Michael Atkinson and Sam Worthington preview a thrilling final round of pool games to decide the quarter-finalists at the Rugby World Cup in
+France﻿
+
+He wanted to regain form at club level ﻿with Urayasu D-Rocks but his hand remained up for Test selection.
+
+"I chose to leave Australian shores and understand the ruling around that and what it holds," he said.
+
+"I've got to perform for my club first and if you get the call up, you get the call up. If you don't, I'll take my three months break and enjoy that."
+
+Kerevi is an unabashed Jones fan.
+
+Eddie Jones with fans during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"He's up at 4am working hard. We catch him in the gym, he's working hard and I swear he doesn't even sleep.
+</item 50>
+
+<item 51>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+Yet the 22-year-old proved absolutely nerveless, firing down an ace to save the third of the three match points, and then immediately turning the tables by
+breaking Djokovic in the very next game amid wild Italian celebrations in the stands at the Palacio de deportes Martin Carpena.
+
+Sinner then served out for a famous win, ending Djokovic’s cherished unbeaten 21-singles winning streak in the Davis Cup and becoming the first man since 2019
+to beat the Serb in singles twice in the same year. The drama between the two rivals wasn’t over, as the two teams inevitably both drafted in their top singles
+players into the doubles decider. Sinner was again magnificent and still looking ominously fresh after more than four hours on court, with Djokovic’s weak
+backhand into the net off the Italian’s second serve in the doubles on match point seeming to sum up his disappointment. The beneficiaries of all this?
+</item 51>
+
+<item 52>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+The beneficiaries of all this? Lleyton Hewitt’s Australian side, who were happily enjoying a day’s rest at their team hotel further down the Costa del Sol,
+watching the drama unfold on TV.
+
+While the Italy tie didn’t finish until 8.15pm after a noon start, Alex de Minaur and co should be fresh for combat in Sunday afternoon’s (Monday AEDT) final as
+they seek to lift the Davis Cup for the first time in 20 years. AAP De Minaur, Popyrin power Australia into Davis Cup final Lleyton Hewitt has declared his
+close-knit tennis band of brothers will give it “a hell of a shake” to bring back the Davis Cup to Australia after they roared into another final in Malaga.
+</item 52>
+
+<item 53>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But crowds are short of targets that could accelerate the extension of the regular season, which grows from 10 games this year to 12 games by 2025.
+
+5,474 fans were at North Sydney Oval to watch the Swans’ first AFLW victory earlier in the season. Photograph: Jack Snape/The Guardian
+
+The league enjoyed strong attendances in round one, which were partly attributed to the so-called Matildas effect, but some clubs have struggled to attract fans
+in large numbers this season. Crowds of less than 1,500 have been recorded in both traditional markets such as Melbourne and Perth, as well as areas targeted
+for growth like Blacktown and the Gold Coast.
+
+The A-League Women launched this month with a first round highlighted by a crowd of more than 11,000 in Sydney.
+</item 53>
+
+<item 54>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+"Last week 45,000 fans (versus Portugal), last night (60,000 in Lyon). Rugby's such a small aspect in terms of Australians but our fans have turned up here,
+we've seen them and spoken to them and their unconditional love for us, the fact that they came 20,000km to get here and support us, has been awesome.
+
+"My message is just to understand that we're working extremely hard, there's no stone unturned, especially the youth in this team, to leave the jersey in a
+better place and just to stick with us.
+
+"I know the results haven't been coming our way the last couple of years but when it does turn, that's what we're building towards.﻿"
+</item 54>
+
+<item 55>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+RA is also in the early stages of looking to renew its next broadcast deal, with the governing body hoping to at least double its current deal with Nine
+Entertainment/Stan Sport, which is seeing them paid $29m per year until the end of 2025.
+</item 55>
+
+<item 56>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+Speaking after the match, Buttler admitted his team had been ‘short of our best by a very long way’, saying there is ‘no clear answer’ as to how to turn their
+fortunes around.
+
+“It’s incredibly tough, an incredibly disappointing tournament. As captain, you feel that a lot,” he said.
+
+Advertisement
+
+“We’ve been short of our best by a very long way. I’m disappointed for myself and the boys that we’ve not given a good account of ourselves… if there was one
+golden nugget that we’re not doing then we’d pick that up.”
+
+Sports opinion delivered daily
+
+England’s tournament may only stay mathematically alive until Sunday evening (AEST), when they face the daunting challenge of tournament hosts India in Lucknow,
+with defeat certain to end their semi-final chances for good.
+</item 56>
+
+<item 57>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Single filled the massive Rowbottom-size gap, collecting 25 disposals and six clearances in her prolific performance across the field while also playing a
+crucial tagging role on Maddy Prespakis. Coast with the most: Georgia Clayden of the Suns celebrates after kicking a goal. Credit: AFL Photos / Getty Images The
+former rugby sevens player was well-supported by Claudia Whitford (25 possessions) and Alison Drennan (22 touches). Prespakis was held to eight contested
+possessions, well below a season average of 14 per game, while Georgia Nanscawen proved a potent threat with 13 contested possessions and three score
+involvements.
+
+The Bombers broke through first with a goal from Amber Clarke but young talent Darcie Davies (two goals) was able to respond after being gifted 50 metres from a
+protected area infringement by Mia Bush. Daisy D’Arcy, Jacqueline Dupuy, Jamie Stanton and Davies attempted to break away from the low-scoring tug-of-war in the
+second with goals of their own.
+</item 57>
+
+<item 58>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+Advertisement
+
+Healy called for Australia’s Test series in India to be extended to three matches their loss, their first in 11 Tests against India.
+
+The hosts easily chased down 75 in the fourth innings on Sunday.
+
+All out for 209 in their first innings, Australia looked far more confident in their second effort of 261 despite the wicket showing more signs of wear.
+
+And Healy believes three-Test tours of India would provide a better match-up between the two sides.
+
+“It would create a real contest over three games,” Healy said.
+
+“That would be an unbelievable experience for our group, and probably a true test of of both sides’ abilities.
+
+Advertisement
+
+“The one-off Test, India playing in their home conditions, you’d expect them to be heavy favourites.
+
+“But the way we tried to adapt and continue to learn throughout the four days was really impressive.
+
+“We would love to have another crack at it, show what we learned and put it into practice.”
+</item 58>
+
+<item 59>
+Tennis News: Kyrgios escalates beef with Becker, change ‘warrior’ Novak had to make, WTA criticised for charisma fail (The Roar | Sports Writers Blog,
+2023-12-19T23:54:26+00:00)
+I hope that one day we will be closer, to be able to sit and talk and reflect. It would be truly incredible.”
+
+Hewitt at the helm
+
+Australia’s David Cup captain Lleyton Hewitt will return to captain the Aussie team at the United Cup.
+
+Eighteen nations will contest the tournament in Perth and Sydney starting December 29 and ending on January 7.
+
+Advertisement
+
+The tournament began last year with Hewitt and Sam Stosur at the helm.
+
+David Witt, who helped lead the United States to the 2023 trophy, also returns in 2024 for the Americans’ title defence.
+
+Can Djokovic go the distance?
+
+Former Spanish star Alex Corretja has questioned Novak Djokovic durability ahead of a Golden Slam attempt in 2024.
+
+The Paris Olympics adds an extra high profile tournament to the four majors next year.
+</item 59>
+
+<item 60>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+But two goals from Amelia Radford and Georgia Gee kept the hosts close, while defender Ellyse Gamble (nine intercept possessions) proved a roadblock for the
+Suns’ attackers. Single lit up the park with a clinical slice through the corridor, dodging two tackles to put the ball in the hands of Georgia Clayden, who
+capped the centre clearance with the only major of the third term. With both sides goalless in the final quarter, the Suns were able to cruise home. With AAP
+</item 60>
+
+<item 61>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+England’s hopes of defending their World Cup crown are in tatters – and we’re barely halfway through the 2023 tournament.
+
+Second-last of ten on the table after a fourth abject loss in barely three weeks, this time by eight wickets and nearly 25 overs to spare against Sri Lanka
+having been bowled out for a miserable 156 in Bengaluru, the 2019 champions are now only mathematically a chance of scraping through to the semi-finals.
+
+They need not only to somehow turn their horrendous form around to win all four of their remaining matches, including an upcoming date with table-toppers and
+tournament favourites India, but also to hope numerous other results, including Australia to lose at least two and probably three of its own four games, to
+reach the knockout stage.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+As expected, the reaction from the UK, and from a swathe of English cricket greats, was scathing.
+</item 61>
+
+<item 62>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+But more modest attendances in subsequent games, including two sub-2,000 crowds in Perth, suggest the popularity of the Matildas’ run to the semi-finals has
+only had a limited impact on support for domestic women’s sport.
+
+skip past newsletter promotion Sign up to Australia Sport Free newsletter Get a daily roundup of the latest sports news, features and comment from our
+Australian sports desk Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see
+our Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google
+reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Livingstone said the “green and gold fever” associated with the Women’s World Cup was a one-off and the AFL has plans in place for long-term growth.
+</item 62>
+
+<item 63>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Dogs forward reveals battle with kidney disease Western Bulldogs forward Richelle Cranston has revealed she’s been living, and playing, with stage five chronic
+kidney disease. “I still manage to do the things I love,” the inaugural AFLW player posted to Instagram. “It’s just really hard sometimes.” Richelle Cranston of
+the Bulldogs: “It’s just really hard sometimes.” Credit: Getty Images The 34-year-old posted the caption along with a video detailing her life with the disease
+including weekly blood tests and daily blood pressure checks, tracking water and food intake, taking medications including resonium (to lower potassium levels),
+all while training in the high-performance environment.
+
+The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year. Cranston lined up for
+the Bulldogs in her side’s 57-point loss to Sydney on Saturday at Whitten Oval, 14.12 (96) to 6.3 (39).
+</item 63>
+
+<item 64>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+We need to maximize the development of the players. At the end of the day, that’s the key to success and alignment of your resources, for a small country.
+
+“Because Australia, if you look at the history of rugby, when we were amateur, we were probably ahead of the game because we had the influence of rugby league.
+We had the influence of AFL and our players were more professional than the rest of the world.”
+
+He added: “I know what’s going on and we need to get a better system of developing players. We need to develop better players and we need to develop a larger
+batch of better players and that only comes through changing the whole system.”
+
+While all five Australian Super Rugby sides fundamentally are on board with regards to moving to a centralised high-performance program, The Roar added that
+some states, including the ACT Brumbies as well as the QRU, don’t want to give up their commercial assets.
+</item 64>
+
+<item 65>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+We’re not at that level. And we can’t pretend to be at that level. But can we be at that level by 2027? Yes, we can,” said Jones.
+
+“We’re definitely off the pace but the opportunity to get better is there. I love the game. I love working with young players. I loved seeing some of the young
+players maturing during the World Cup and some of them struggle. And that’s all part of it. But I love the game and I love coaching the Wallabies.”
+
+Jones was named Wallabies coach at the start of the year as replacement for Dave Rennie. He came in with grand statements that his team could win the Rugby
+Championship, Bledisloe Cup and make a smash and grab on the World Cup.
+</item 65>
+
+<item 66>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+Hussain said post-match on Sky Sports that “back to back, I’ve not seen England play as badly as that”, adding that the team’s issues are less to do with the
+frequently-criticised The Hundred or a lack of 50-over cricket in the build-up to the tournament as it is the sudden and collective loss of form of the English
+batting order.
+
+“If you walk in that dressing room now and asked them to put their hand on their heart and say, are you in good nick? I reckon maybe one or two could say that,”
+Hussain said, later doubling down with a scathing editorial in the Daily Mail.
+
+Advertisement
+
+“They have all collapsed as a unit and their form has deserted them. Compare that to South Africa and their batting lineup, everyone’s in nick. You look at
+India and their batting lineup, Rohit [Sharma], KL Rahul, Virat Kohli, Shubman Gill – all in nick.
+</item 66>
+
+<item 67>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+“I was able to put lessons from that time into practice, develop and eventually return to the Socceroos much more prepared for the role. It’s been a privilege
+to be part of the national team again with the benefit of that experience, and I’m immensely proud of what this group has been able to achieve in the last four
+years.
+
+“In my opinion, there’s no greater honour than representing your nation on the international stage. I look at the young players coming through the Socceroos
+system now full of pride in the work they’ve put in to get where they are, and the journey that’s ahead of them.
+
+“I’ve always loved being a part of the Socceroos culture and my desire to see Australia fulfil its footballing potential is still driving me to take this group
+to further success.”
+
+Australia starts the road to north America in Melbourne at AAMI Park on Thursday night, before travelling to the Middle East to play Palestine next Wednesday
+(1.00am AEDT).
+</item 67>
+
+<item 68>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+That shortage of runs has carried over to his patchy one day performances.
+
+“Chris Woakes is an excellent bowler of swing and seam on English type pitches. His record abroad is poor as he does not have the pace or guile for flat batting
+surfaces. It is not the lad’s fault. He was selected but how could people picking the squad go against all the statistics.”
+
+Advertisement
+
+However, Boycott isn’t blaming captain Jos Buttler for the team’s woes, saying the skipper has an impossible job pulling together a ‘dysfunctional squad of
+players’ and that not even a ‘miracle man’ would have much of a prayer of salvaging any pride from the wreckage in India.
+
+“Too many people are criticising the captaincy of Buttler and judging him against the captaincy of Eoin Morgan when England won the World Cup four years ago,”
+he wrote.
+</item 68>
+
+<item 69>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+“It was probably the biggest win of my career,” he admitted. “To win a match that means so much to us, it’s an honour and something I’ll never forget. Nothing
+compares to this.
+
+“I thought I was ready but when I came out and heard the two sets of fans chanting so hard, but it was nerves that I’ve never experienced before.” Loading It
+wasn’t easy. The pressure was on with Thanasi Kokkinakis, the injured teammate he’d replaced, Purcell and Jordan Thompson having all lost opening singles ties
+in this year’s competition, and Popyrin struggled too against a big-hitting 22-year-old going for broke. But after repelling a set point in the opening stanza,
+Popyrin’s solidity in comparison to his increasingly erratic opponent helped silence a noisy contingent of Finnish fans, who’d been hoping to cheer their
+underdogs to a first-ever final.
+</item 69>
+
+<item 70>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Geelong coach Daniel Lowther said the strong winds made it hard for his side to clear the ball out of their defensive 50-metre zone and to move the ball with
+any certainty around the ground.
+
+Loading “At one point the rain hit our box, it was flowing,” Lowther said. “Both teams had to fight in the conditions, but it didn’t help the game. “Our marking
+contest wasn’t too flash, our ground ball representation was a bit hit and miss, so our defence were under a bit more pressure than they should have been, but
+they fought back really well,” Lowther said. Collingwood next play a Sydney line-up including former Magpies star Chloe Molloy, while Geelong will take on
+Richmond at Ikon Park.
+
+Dockers spoil Saints’ finals hopes Fremantle recorded a comfortable 24-point win yesterday to bring an abrupt end to St Kilda’s four-game streak and dash their
+AFLW finals hopes. J’Noemi Anderson is tackled by a group of Dockers.
+</item 70>
+
+<item 71>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+The Crows elected not to challenge the decision. ‘Horror week’: Bombers stunned by struggling, controversy-hit Eagles West Coast withstood a late-term surge
+from Essendon to narrowly claim their second win of the AFLW season.
+
+Fresh off a controversy caused by comments their coach Michael Prior made following last week’s 70-point loss to Melbourne, the Eagles prevailed 3.5 (23) to 2.7
+(19) in a slugfest at the appropriately named Windy Hill on Sunday. West Coast’s Kate Bartlett (left) and Isabella Lewis celebrate Sunday’s surprise win over
+Essendon flanked by their teammates. Credit: Getty Prior had blasted the decision to pit strugglers West Coast against defending premiers Melbourne, saying:
+“How we play that team is beyond me. That is what you get when you get fixturing like that.” He later backtracked on the criticism, but his comments did put
+added pressure and focus on his team this week. Michael Prior guided West Coast to a gutsy win.
+</item 71>
+
+<item 72>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Intercept marking
+
+AFL player comparison: Will Day (Hawthorn)
+
+Advertisement
+
+James Leake
+
+State: Tasmania
+
+State League Club: Tasmania Devils
+
+Community Club: Launceston
+
+Date of Birth: 02/10/05
+
+Height: 187cm
+
+Medium defender and forward who won All Australian honours as a defender for the Allies at the National Championships in the middle of the season then played
+some eye-catching matches as a forward for the Tasmania Devils in the Coates Talent League during a breakout season. With mercurial ability in the air and
+uncanny ability around goals he looks to have unique versatility which was on display during 11 matches for the Devils where averaged 16.1 disposals and kicked
+17 goals, which included a five-goal haul against the Dandenong Stingrays in Round 17.
+</item 72>
+
+<item 73>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+The 22-year-old Sinner, by now an irresistible force, then re-emerged to team up with Lorenzo Sonego and spray massive forehand winners around liberally as they
+outplayed a by now weary-looking Djokovic and Miomir Kecmanovic 6-3, 6-4. Djokovic had three match points in the singles rubber. Credit: Getty Images It was a
+crushing end to Djokovic’s hopes of ending his triumphant season, which has featured three grand slam victories and an ATP finals showdown victory over Sinner
+just six days ago, with a second Davis Cup title. After telling fans to “shut up” earlier in the week, he again got irritated with the crowd in the doubles,
+pretending to be the conductor to the Italian fans’ deafening chorus, but though he may be the greatest player who ever picked up a racquet, doubles looks an
+alien game to him.
+</item 73>
+
+<item 74>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+His ferocious attack on the ball and his opponent helped set the tone for the Allies to dominate the midfield battle throughout the National Championships and
+he was rewarded with All Australian honours. Averaged 29.2 disposals, 11.2 contested possessions and a team-high 6.8 tackles across four matches for the Allies
+and showed excellent repeat speed and courage as well as clean hands playing both on the inside and outside. His 6:06 effort in the 2km time trial at the
+national Draft Combine showcased his elite endurance. He has been part of the Sydney Swans’ Academy since the under-10s.
+</item 74>
+
+<item 75>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+He also impressed for the Australia under-18 team in its second match against Carlton’s VFL side at Marvel Stadium, gathering 26 disposals and six clearances to
+claim the medal as his team’s best player.
+
+Weapon: One-touch hands and creativity
+
+AFL player comparison: Touk Miller (Gold Coast Suns)
+
+Advertisement
+
+Ryley Sanders
+
+State: Tasmania
+
+State League Club: Sandringham Dragons
+
+Community Club: North Launceston
+
+Date of Birth: 21/01/05
+
+Height: 185cm
+
+Strong-bodied midfielder who is powerful and courageous in his attack on the ball and the pressure he exerts on the opposition. Strong two-way running is
+another feature of his game and was on display in dominating for the Allies at the National Championships, averaging 35 disposals at 80 percent efficiency, 14.5
+contested possessions, five clearances and four tackles to win the Larke Medal as the best and fairest player.
+</item 75>
+
+<item 76>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Lions duo Charlotte Mullins and Ruby Svarc celebrate. Credit: Getty Images The Lions got the game on their terms early with five repeat entries into the
+attacking 50m in the opening 10 minutes of the game. Davidson and Ellie Hampson drew first blood before Casey Sherriff kicked Melbourne’s opening goal.
+
+Tayla Harris, Tyla Hanks and Hore slotted a goal each in the second term to put their side ahead. Crumbling under the Brisbane attack, the visitors conceded
+four unanswered goals from Taylor Smith, Sophie Conway (two goals) and Ruby Svarc while remaining goalless in the third term. Midfield stars Olivia Purcell (14
+contested possessions) and Tyla Hanks (11) showed their mettle as they attempted to drag their side over the line, but the Demons were outclassed and sorely
+missing Paxy Paxman (hamstring). Melbourne could be without Maeve Chaplin in their finals campaign, after the defender sustained a concussion injury in the
+third term.
+</item 76>
+
+<item 77>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+Magpies ruck Sabrina Frederick, who starred with 39 hit-outs and used her height to bring the ball to ground at the advantage of her midfielders, said her side
+had been practising for games like this.
+
+“Even in the chaos, it’s quite comfortable because we train it. We train what scenarios to do in what moments, and even though it’s a bit crazy, it felt so
+calm. We put players in place and we know what we’re doing,” said Frederick. “But close games are good ones, for everyone. We knew they were going to come out
+like that [in the last quarter]. When they’re down, they’re just going to give us everything.” Collingwood’s Brianna Davey kicks her team forward against
+Geelong. Credit: Getty Frederick admitted at times she “couldn’t see” and felt like she could be “blown away”.
+</item 77>
+
+<item 78>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Weapon: Consistent high-level performances
+
+AFL player comparison: Andrew Brayshaw (Fremantle)
+
+Ari Schoenmaker
+
+Pronunciation: Show-en-maker
+
+State: Tasmania
+
+State League Club: Tasmania Devils
+
+Community Club: Launceston
+
+Date of Birth: 07/01/05
+
+Height: 194cm
+
+Left-footed tall defender who reads the game exceptionally well, is a good interceptor and prodigious kick of the ball. Had a very impressive back half of the
+year, which included being selected for the Allies in their final two matches of the National Championships. He also showed the ability to play on the wing and
+averaged 27 disposals at 75 percent efficiency as well as 5.9 marks and 9.6 rebound 50s in his eight matches with the Tasmania Devils in the Coates Talent
+League to be one of their most impressive performers.
+</item 78>
+
+<item 79>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+In the open letter to their members on Wednesday morning, QRU chief executive David Hanham and chairman Brett Clark moved to update constituents on the reform
+measures that RA is attempting to usher through the game.
+
+Last week, The Roar revealed that the New South Wales Rugby Union was in the latter stages of handing over their license to RA.
+
+By doing so, the NSW Waratahs, who were on the brink of insolvency, handed over their commercial and high-performance property.
+
+Advertisement
+
+The decision will see all male and female Waratahs players, including coaches and high-performance staff, as well as all commercial and operations staff, run
+out of RA’s office.
+
+NSW Waratahs chief executive Paul Doorn informed stakeholders of the decision last week.
+
+RA is cognisant that not every Super Rugby franchise will follow suit immediately, but the governing body is hopeful that now one of the two biggest states has
+agreed to hand over the keys, others will follow suit swiftly.
+</item 79>
+
+<item 80>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Played all four games for Victoria Metro at the National Championships and was his team’s best player in the loss to the Allies, while also shining with 22
+disposals in the win over Western Australia. Across his 16 matches with the Eastern Ranges in the Coates Talent League he averaged 19.4 disposals to be one of
+their most consistent players during their run to the grand final. Recorded a slick time of 2.92 seconds on the 20m sprint during the national Draft Combine
+highlighting his dazzling acceleration and backed it up by recording 6:28 for the 2km time trial which demonstrated a combination of elite speed and endurance
+which are essential to play on the wing.
+
+Weapon: Elite speed and ball use
+
+AFL player comparison: Nick Martin (Essendon)
+</item 80>
+
+<item 81>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“I can name the whole team. Everyone had their second in the last couple minutes.
+
+“That was such a team effort, everyone had a moment there when they had to put their head over the footy and lay a tackle and not let it slip.” Swanson (25
+disposals, eight clearances) stood out for the Eagles, while Bombers workhorse Maddy Prespakis (30 disposals, nine clearances) was typically prominent in the
+midfield alongside Georgia Nanscawen (21, six). With two rounds left, West Coast have a chance to build their winning streak when they meet the bottom of the
+table Western Bulldogs next round. Slipping one place to sixth, Essendon have must-win matches against Carlton and Gold Coast on the road to the finals. The
+Bombers will be without Steph Cain, who was sidelined with a concussion after an elbow to the head from Swanson.
+</item 81>
+
+<item 82>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Williams produced 21 points and six rebounds for South East Melbourne but Brisbane will still be without Baynes for next weekend’s double-header away to Perth
+and at home to Tasmania, and he needs to find some answers.
+
+“We’ve got to have solutions right now for two more games without Banger (Baynes) and that’s the thing that’s sitting right in the front of my head, but scoring
+73 points isn’t enough to get it done in this league,” Schueller said.
+
+“Then giving them 96 is way too many as well so we have a lot of stuff that we still have to work on.”
+
+JLA return lifts United to win in Wollongong
+
+Advertisement
+
+Melbourne United have celebrated the long-awaited return of Jo Lual-Acuil but it was fellow centre Ariel Hukporti who starred in a 101-91 defeat of the
+lllawarra Hawks.
+</item 82>
+
+<item 83>
+Tennis News: Kyrgios escalates beef with Becker, change ‘warrior’ Novak had to make, WTA criticised for charisma fail (The Roar | Sports Writers Blog,
+2023-12-19T23:54:26+00:00)
+While Djokovic ended 2023 as world No.1 for an eighth time, faced several defeats by the younger rivals including Lorenzo Musetti (at the Monte-Carlo Masters),
+Holger Rune (at the Rome Masters), Carlos Alcaraz (in the Wimbledon final) and Jannik Sinner (in the ATP Finals group stage and the Davis Cup).
+
+“In a way, I feel the match that he lost against [Jannik Sinner] in the Davis Cup might be good for him. It’s a wake-up call to say, ‘Okay, I’m doing
+unbelievably, but I can’t relax for one second because some of the guys behind me are going to push me so much. They’re very dangerous and they know they can
+beat me now,’” Corretja said.
+</item 83>
+
+<item 84>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+None of those targets were achieved and Jones changed his tune about building for the future when he named a young team for the doomed Cup campaign – where his
+team became the first Australians to bow out of a RWC in the pool stages.
+
+He finished the year with a 2-7 win loss record – the only two victories coming against lowly Georgia and Portugal.
+
+Advertisement
+
+On Tuesday he said he no regrets with leaving experienced players such as Quade Cooper and Michael Hooper out of the side for the tournament.
+
+“Everyone’s got their own judgment and they’re allowed to have that judgment,” he said. “My choice was that I decided to go with youth. And I stand by that
+because I think we’ve got a a lot of good young players who are really going to benefit from that experience at the World Cup, and going forward to the 2027
+World Cup.”
+</item 84>
+
+<item 85>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+But I don't think people really understand demons, everyone's fights in between.
+
+"Eddie's a human as well and at the end of the day it's a results-driven sport, you know, we need results to get that. But he's committed to us and we love that
+about him.
+
+"He hasn't thought about going home, he's thought about how we can contribute best and that's what we've done these last three days. I feel for him, you know,
+like as a head coach, you maybe can't show that side of himself.
+
+Eddie Jones and Will Skelton talk at Stade Roger Baudras. (Getty)
+
+"But he's been so strong for us and gives us strength to just be positive. And again, we put ourselves in this situation."
+
+Wide World of Sports also asked Kerevi to deliver a message to disillusioned Wallabies fans.﻿
+
+"I think at home there's so many sports going on and some saying rugby's dying, but rugby's massive here overseas," he said.
+</item 85>
+
+<item 86>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+Quince paste and hand-picked grapes have played a part in helping the Sydney Swans launch themselves to the top of the AFLW attendance charts, less than two
+years after their first match in the women’s league.
+
+The Swans play their final home match of the regular season this weekend with an average attendance of 4,365 from four games so far – 124 more than the next
+best club Adelaide – and a marquee pride match against Collingwood at Henson Park to come on Sunday where a crowd in excess of 4,000 is expected.
+
+The club’s focus has been to target local communities and make match days compelling for fans on and off the field, according to executive GM of marketing at
+the Swans, Loretta Johns.
+
+“Our team has put a lot of work into sourcing some wonderful food offerings, entertainment and activities for kids, while we’ve had a local focus in promoting
+our games,” she said.
+
+Fans of Australian rules football in the Harbour City have a reputation for being fickle.
+</item 86>
+
+<item 87>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+His serve was broken in the first set and his court positioning left a big hole for Sinner to blast his forehand through the world No.1 and Kecmanovic, who had
+earlier worn down Lorenzo Musetti 6-7 (7-9), 6-2, 6-1 in the tie’s opening singles. The tie, though, will forever be remembered for Sinner’s comeback triumph in
+their third brilliant singles duel in less than a fortnight. This time, the Sinner of the Turin group stages re-emerged, the young titan reprising his victory
+of 12 days ago when he became the only man since Djokovic’s Wimbledon final loss to Carlos Alcaraz to defeat the 24-time grand slam champion. Here he did
+something even more astonishing when, after soaking up immense pressure throughout the deciding set, he stared at 0-40 on his serve at 4-5.
+</item 87>
+
+<item 88>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+The second of Sinner’s Djokovic victories came in Italy’s impressive Davis Cup semi-final triumph over Serbia, after saving three consecutive match points on
+serve, before besting the world No.1 again in the doubles. World No.4 Sinner, coached by Australia’s Darren Cahill, is the first player to topple Djokovic twice
+in the same season since Russia’s Daniil Medvedev in 2019. Italian teammates Lorenzo Sonego and Jannik Sinner will face Australia in the Davis Cup final.
+Credit: Getty However, if Popyrin can get the job done in the No.2 singles then Australia will, at minimum, reach the doubles with a live chance, and a good
+one, with 2022 Wimbledon champions Max Purcell and Matt Ebden to be unleashed.
+</item 88>
+
+<item 89>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+Credit: AP It had followed a superb win from teammate Popyrin, who defied jangling nerves to earn a 7-6 (7-5), 6-2 victory over Otto Virtanen. It meant the
+Australians’ crack doubles team of Max Purcell and Matt Ebden weren’t even needed.
+
+It will be Australia’s 49th appearance in the Davis Cup final, as they seek the trophy for the 29th t28-time champions Australia, in a 49th final, seek a first
+win in the World Cup of men’s tennis in 20 years. “We’re a very solid squad, a lot of depth in every single position, and if we can get ourselves to a deciding
+doubles, we’ve got an unbelievable pairing as well,” de Minaur said. “So we singles guys have just got do our best to try and get a win and let the doubles guys
+do the job.
+</item 89>
+
+<item 90>
+Comeback kings Richmond take the AFLW points in Cairns (The Age, 2023-10-20T23:51:34+00:00)
+“Richmond were just absolute beasts, especially their midfielders. They really worked hard all night,” Hawthorn coach Bec Goddard said after the game. “Our work
+rate really dropped off and we just watched them play some really good footy. “If you’re a Hawks fan, you would’ve seen some really exciting moments of footy
+tonight.
+
+“Keep getting excited. We are coming, we’re growing, we’re getting better.” Hawthorn’s Irish ace Aine McDonagh kicked the opening goal before Tigers skipper
+Katie Brennan slotted two unanswered majors to celebrate her 50th game in style. Fellow 50-gamer Greta Bodey put boot to ball to snatch her own goal before
+quarter-time. A skirmish erupted in the second term after Brennan took exception to a tackle by Mattea Breed on Laura McClelland. McClelland was gifted a
+50-metre penalty following a bump against Sarah Hosking by Sophie Locke and converted from inside the goal square while players were occupied by the tussle.
+</item 90>
+
+<item 91>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+Loading Hewitt animatedly embraced Popyrin after his straight-sets victory over 171st-ranked Finn Otto Virtanen, but Australia’s Davis Cup captain would be even
+more thrilled if he could repeat the dose against Italy. Australia could also turn to an alternative No.2 singles option, with Jordan Thompson and Purcell
+waiting in the wings. “It’s everybody’s dream to play for their country,” Popyrin said. “I looked up to Lleyton, looked up to all the older Aussie legends. To
+be able to put on the green and gold, to be able to go out there and play for your country, no matter the format, if it’s this Davis Cup or the old Davis Cup,
+you give your all.
+
+“It’s nerves, it’s pressure – you’re playing for everybody back home. It’s something that nothing will ever compare to ... it really was the biggest moment of
+my career to get the first live rubber win, to get one foot into the final.
+</item 91>
+
+<item 92>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+The QRU confirmed that on Wednesday morning.
+
+Advertisement
+
+“The QRU is committed to working with Rugby Australia to lead reform of our game at a high-performance level, and help Rugby Australia develop an improved game
+through high-performance centralisation,” the statement read.
+
+“Centralisation” would include a national player-contracting model, and alignment of key high-performance staff, such as coaching, strength and conditioning,
+and medical to operate as one national system.”
+
+The letter pointed to RA’s involvement in Les Kiss’ appointment as Reds coach, with the former State of Origin winger turned coach, who has spent the best part
+of two decades coaching in Ireland and England, replacing Brad Thorn.
+
+As The Roar has previously reported, the QRU stopped short of wanting to hand over its commercial property.
+
+“While the QRU is very supportive of high-performance alignment, it will not agree to any proposal on centralising commercial or corporate functions,” the
+letter read.
+</item 92>
+
+<item 93>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+His junior career suggested he was going to be a very good player, and it’s unusual for someone to win the junior French Open and not go on to something big.
+Alexei Popyrin celebrates with Australian captain Lleyton Hewitt after his Davis Cup win. Credit: Getty Images “These moments can be a big springboard for
+someone like Alexei. He’s a confidence player, and this is a very big moment – whoever he plays, Musetti or Sonego. But he’s got to go out and embrace the
+moment, and he’s the type of player who will enjoy it.
+
+“I’d love to give de Minaur a chance with his fighting abilities, but the way Sinner has played the last six months, you’d have to say Sinner is the favourite.”
+</item 93>
+
+<item 94>
+Ground-breaking Gold Coast: Suns make AFLW finals for a second time (The Age, 2023-11-03T23:45:04+00:00)
+Down by four points at half-time in the low-scoring game, a third-term goal from Rebecca Privitelli sparked the Swans to a 5.10 (40) to 2.6 (18) win on Sunday
+at Fremantle Oval.
+
+The second-year expansion side stormed home with three unanswered goals to secure eighth spot. It’s a dramatic improvement, with the Swans winless in their
+first season. “Any club that’s able to go from winless one year to a finals berth, it’s incredible,” Sydney co-captain Chloe Molloy told Fox Footy after the
+match. “You can see the emotion on the girls’ faces. Coming into the season, the odds were against us. Just to get into the eight, we’ve managed to do that.
+We’re stoked. It’s pretty special for the club.”
+</item 94>
+
+<item 95>
+‘So used to seeing us winning’: Healy denies Aussie era ending after India loss, calls for more Tests (The Roar | Sports Writers Blog,
+2023-12-24T22:28:25+00:00)
+“We would love to have another crack at it, show what we learned and put it into practice.”
+
+Healy is realistic in conceding her wish is unlikely to be granted.
+
+The last women’s Test series of more than one match was way back in 2006, while India had not hosted any red-ball cricket for nine years before this summer.
+
+“The nature of the female game at the moment is it’s very white-ball dominant,” Healy said.
+
+“Trying to fit it all in to the calendar and fitting all the white-ball games in seems to take precedence.
+
+Advertisement
+
+“But you take three one-day games out, and we could probably play two more Test matches.”
+
+Australia’s captain is also insistent this Test should have formed part of a multi-format series, in the same way most top-tier women’s tours are now conducted.
+
+While one Test, three ODIs and three T20s will be played, each are individual contests rather than an overarching series in the same way the Ashes is decided.
+</item 95>
+
+<item 96>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+An excellent decision-maker and ball user by hand or foot, he averaged 19.5 disposals, 12.5 contested possessions and 6.5 clearances to finish third in the
+Larke Medal voting and took out Victoria Country’s MVP. Further added to his very impressive record by earning selection in the All Australian team for the
+second year in a row. Handled the step up to playing senior football with three impressive games in the VFL and was the best player for the Australia under-18
+team in its match against Port Adelaide’s SANFL team.
+</item 96>
+
+<item 97>
+Craft beer and cheese boxes: Swans tap into something ‘uniquely Sydney’ to draw AFLW crowds | Jack Snape (The Guardian, 2023-10-26T23:42:29+00:00)
+“We’ll continue to keep building the base and keep building the foundations and have it not just strong at year seven, season eight, but strong for generations
+to come.”
+
+In a bid to improve the spectacle of the AFLW, the league introduced longer quarters this year and an interchange cap to help increase scoring. The effect,
+according to Livingstone, has been positive.
+
+“We’ve increased game time by eight minutes per match, on average, and we’ve had record scores across the rounds,” she said. “Whereas leading into the season we
+hadn’t scored more than 100 goals in a round, we’ve regularly been scoring over 100 goals in a round.”
+
+The Swans recorded their highest total last round, in their 14-12-96 to 6-3-39 defeat of the Western Bulldogs, the league’s winless bottom side. Molloy recorded
+17 score involvements to set a new AFLW mark.
+
+But Livingstone said the AFL was happy with the level of competition.
+</item 97>
+
+<item 98>
+‘Biggest win of my career’: De Minaur, Popyrin power Australia into Davis Cup final (The Age, 2023-11-24T23:10:22+00:00)
+Following their 2-0 victory over Finland in Friday’s semi-final, executed superbly without a dropped set in singles wins for Alexei Popyrin and Alex de Minaur,
+team captain Hewitt said he couldn’t be prouder of their achievement in making back-to-back finals.
+
+And even though they’ll be facing either a Serbian side led by world No.1 Novak Djokovic or an Italian team inspired by young superstar Jannik Sinner in
+Sunday’s (Monday AEDT) final, the inspirational de Minaur was adamant: “No one really wants to play us.” He delivered once more for Australia, taking an 11th
+victory in his last 13 cup singles matches, sealing Friday’s (Saturday AEDT) win by defeating Emil Ruusuvuori 6-4, 6-3. Alex de Minaur stretches to return the
+ball against Finland’s Emil Ruusuvuori.
+</item 98>
+
+<item 99>
+Who’s the next Gawn, Grundy or Dusty? AFL’s talent guru names top 40 draft prospects and compares them to current stars (The Roar | Sports Writers Blog,
+2023-11-15T23:48:27+00:00)
+Was a threatening target up forward for the Allies during this year’s National Championships averaging 13 disposals and seven marks as well as kicking 11 goals
+in four matches to be a vital cog in the title-winning team. Overall, he kicked 29 goals in eight matches this season to round off a splendid underage career.
+Will receive a bid from a rival club very early on Draft night which the Suns will gladly match.
+
+Weapon: Aerial ability and second efforts at ground level
+
+AFL player comparison: Charlie Curnow (Carlton)
+
+Nick Watson
+
+State: Victoria Metro
+
+State League Club: Eastern Ranges
+
+Community Club: Montrose
+
+Date of Birth: 24/02/05
+
+Height: 170cm
+
+A quick, agile and crafty forward who has a real appetite for the contest. Gave a glimpse of his potential in 2022 when he booted 23 goals in 10 matches in the
+talent pathway.
+</item 99>
+
+<item 100>
+UK View: ‘A bridge too far’ – Boycott, former greats tear into ‘dysfunctional’ Poms with World Cup defence all but dead (The Roar | Sports Writers Blog,
+2023-10-26T23:01:13+00:00)
+It’s such a lame excuse.”
+
+Atherton described the England players as looking ‘dazed and shell-shocked, unable to comprehend what has befallen them’, and wrote in The Times that the Sri
+Lankan defeat officially represented the ‘end of an era’ for English white-ball supremacy.
+
+Advertisement
+
+“Each defeat, now four in five matches, has chipped away at the confidence of a group of players at the end of a cycle,” Atherton wrote.
+
+“No batsman looks in any kind of form. Every player has been used; some discarded and used again. They lost faith in their all-rounder strategy before the South
+Africa match, making three changes, and then went back to it here, making three more.
+
+“Players sense uncertainty in decision-making – and there has been a lot of uncertainty.
+
+“It was hard to think that they could put in a worse performance than in Mumbai but they managed it with the bat in Bengaluru.”
+</item 100>
+=== END ITEM id=82131b0b620ffcdf ===
+
+=== ITEM id=d08084e3a498a6e0 ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The trial's standout testimony in the second week came from Caroline Ellison.
+  Fact 0.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed she took the $14 billion to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto (TechCrunch never did, for what it’s worth).
+  Fact 1.0: Bankman-Fried was even compared to Warren Buffet.
+  Fact 1.1: Many people called Bankman-Fried the white horse of crypto.
+  Fact 1.2: TechCrunch never called Bankman-Fried the white horse of crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution painted Bankman-Fried as someone who knowingly committed fraud.
+  Fact 2.1: The prosecution said Bankman-Fried committed fraud to achieve great wealth.
+  Fact 2.2: The prosecution said Bankman-Fried committed fraud to achieve great power.
+  Fact 2.3: The prosecution said Bankman-Fried committed fraud to achieve great influence.
+  Fact 2.4: The defense countered that the FTX founder acted in good faith.
+  Fact 2.5: The defense said the FTX founder never meant to commit fraud.
+  Fact 2.6: The defense said the FTX founder never meant to steal.
+  Fact 2.7: The defense said the FTX founder basically got in over his head.
+
+Retrieved items:
+
+=== END ITEM id=d08084e3a498a6e0 ===
+
+=== ITEM id=8504bce5af3e8e72 ===
+Gold sentences and facts:
+Sentence 0: With this sale, they offer some of the best value in their class from one of the top names in the business.
+  Fact 0.0: With this sale, they offer some of the best value in their class.
+  Fact 0.1: They are from one of the top names in the business.
+Sentence 1: “Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday.
+  Fact 1.0: Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low.
+  Fact 1.1: Ramon Fernandez is the Chief Financial Officer of CMA CGM.
+  Fact 1.2: Ramon Fernandez told reporters on Friday that each actor will have to be responsible to ensure the market remains reasonable amid relatively low rates.
+
+Retrieved items:
+
+=== END ITEM id=8504bce5af3e8e72 ===
+
+=== ITEM id=137f761f431c73bd ===
+Gold sentences and facts:
+Sentence 0: Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana.
+  Fact 0.0: The U.S. will travel to GEODIS Park in Nashville, Tennessee on October 17.
+  Fact 0.1: The U.S. will play a friendly against Ghana at GEODIS Park.
+Sentence 1: Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania, who recorded their second win over Sydney in as many attempts this season.
+  Fact 1.0: Milton Doyle is a fellow import.
+  Fact 1.1: Majok Deng is a fellow import.
+  Fact 1.2: Milton Doyle scored 17 for Tasmania.
+  Fact 1.3: Majok Deng scored 17 for Tasmania.
+  Fact 1.4: Tasmania recorded their second win over Sydney this season.
+  Fact 1.5: Tasmania's second win over Sydney this season came in as many attempts as the team made this season.
+
+Retrieved items:
+
+=== END ITEM id=137f761f431c73bd ===

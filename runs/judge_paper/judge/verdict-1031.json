@@ -1,0 +1,24 @@
+[
+  {
+    "id": "52ac40c6d148a82a",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []}
+    ]
+  },
+  {
+    "id": "0237605749e1c4cd",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 48, "quote": "Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere."}]}
+    ]
+  }
+]

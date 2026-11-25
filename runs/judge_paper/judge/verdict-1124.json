@@ -1,0 +1,23 @@
+[
+  {"id": "d2c51c501f597941", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 7, "quote": "Kenneth Walker III (Seahawks) took four carries against the Rams before leaving with an oblique injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 94, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 94, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 94, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 94, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 94, "quote": "And Klopp has a new worry: the Reds are without Andy Robertson after the left-back suffered a shoulder injury while on international duty with Scotland."}]}
+  ]},
+  {"id": "7ab3251fc58f971c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "0.6", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

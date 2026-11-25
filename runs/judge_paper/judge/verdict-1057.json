@@ -1,0 +1,20 @@
+[
+  {"id": "ad200cf6acd2031b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 46, "quote": "Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 40, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 40, "quote": "That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference."}]}
+  ]},
+  {"id": "4f3b4f226cf61e4d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

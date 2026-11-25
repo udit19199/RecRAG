@@ -1,0 +1,17 @@
+[
+{"id": "e8b2760f3930bff2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "4a63b0d96bae4855", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 44, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 44, "quote": "Today, social networks are often run by large corporations — like Meta, Snap and Google — where advertisers pay the bills."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 93, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 93, "quote": "By the end of 2012, Google and Facebook were angling to acquire the London lab, according to three people familiar with the matter."}]}
+]}
+]

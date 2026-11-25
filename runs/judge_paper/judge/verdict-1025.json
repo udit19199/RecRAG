@@ -1,0 +1,75 @@
+[
+  {
+    "id": "6c5cd80a1d4f3400",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 43,
+            "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 43,
+            "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 43,
+            "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 43,
+            "quote": "McTominay is now United's top scorer for the season with six goals, one ahead of Bruno Fernandes and Rasmus Hojlund."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 67,
+            "quote": "Erling Haaland (Manchester City/Norway) - 50 goals"
+          },
+          {
+            "item": 67,
+            "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "contradicted",
+        "evidence": [
+          {
+            "item": 67,
+            "quote": "Erling Haaland (Manchester City/Norway) - 50 goals"
+          },
+          {
+            "item": 67,
+            "quote": "He has already been firing in many top-flight goals this term - as well as being the joint-leading scorer from the Champions League group stages."
+          }
+        ]
+      }
+    ]
+  }
+]

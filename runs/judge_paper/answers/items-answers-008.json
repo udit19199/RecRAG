@@ -1,0 +1,114 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "32013d2dffa704cb",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both portray challenges, but in different contexts."
+  },
+  {
+   "id": "5c2803a13bae91ba",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to the same Gemini project at different stages and versions."
+  },
+  {
+   "id": "f2243ccd96c62023",
+   "kind": "answer",
+   "question": "Who is the individual associated with the FTX trial, who was once considered a trustworthy figure in the cryptocurrency industry according to The Verge, and is accused by the prosecution of committing fraud for personal gain as reported by TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "be1ff3d613ea520e",
+   "kind": "answer",
+   "question": "What is the name of the company that Jay Brown, as reported by The Wall Street Journal, recently joined as a board member and, according to Forbes, is also planning to invest in?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "JKBX"
+  },
+  {
+   "id": "61c917acd622d365",
+   "kind": "answer",
+   "question": "Who is the individual reported by The Verge to have struggled with managing two companies due to their growth and also decided to use $1 billion of customer funds for a buyout, and is the same person mentioned by TechCrunch as having pleaded not-guilty to charges of fraud and conspiracy, with allegations of committing fraud for personal gain?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "7b5f401452065a5d",
+   "kind": "answer",
+   "question": "What entities, as reported by Sporting News, are known to modify their point spread, moneyline, and NBA Rookie of the Year betting lines in response to news, betting patterns, liability, and events such as injuries or roster changes?",
+   "gold_answers": [
+    "Sportsbooks"
+   ],
+   "model_answer": "Sportsbooks (bookmakers/oddsmakers)"
+  },
+  {
+   "id": "4be78cbff011932a",
+   "kind": "answer",
+   "question": "What entities, as reported by Sporting News, are known to modify their point spread, moneyline, and NBA Rookie of the Year betting lines in response to news, betting patterns, liability, and events such as injuries or roster changes?",
+   "gold_answers": [
+    "Sportsbooks"
+   ],
+   "model_answer": "Sportsbooks (bookmakers and oddsmakers)"
+  },
+  {
+   "id": "4165180bb1115ade",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from long-term planning for sustainable success to European failure and poor performance."
+  },
+  {
+   "id": "10ddfa4d067d3ee3",
+   "kind": "answer",
+   "question": "Which company, recently involved in an antitrust battle where it provided extensive evidence against claims of hiding discovery items, is the same entity that spent billions to be the default search engine and has faced allegations of both releasing only a \"lite\" version of an AI model and harming news publishers' revenues, as reported by TechCrunch?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (Alphabet)"
+  },
+  {
+   "id": "28c01d25271a6b79",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay offers price matching for qualifying items, with holiday-period exceptions."
+  },
+  {
+   "id": "7e5c938ae1cb0035",
+   "kind": "answer",
+   "question": "Who is the individual facing a criminal trial as reported by TechCrunch, alleged by Fortune to have built his crypto exchange's success on falsehoods, and according to the same source, convinced a former colleague from Jane Street to join his ventures, and is also accused by TechCrunch of committing fraud for personal gain?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "5ddf4267671e2646",
+   "kind": "answer",
+   "question": "Considering the information from a Wall Street Journal article and a New York Times piece on Andrew Beaton, which NFL team, known for its distinct helmet design, was the subject of Beaton's analysis regarding their strategic decisions in the off-season as reported by the Wall Street Journal, and also mentioned in the New York Times for their unexpected player trade move?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "Minnesota Vikings"
+  }
+ ],
+ "evidence": []
+}

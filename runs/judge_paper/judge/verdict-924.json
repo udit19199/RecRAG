@@ -1,0 +1,78 @@
+[
+  {
+    "id": "bc955a7d049dbfd2",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 86, "quote": "He revealed that he made a friendship bracelet"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 22, "quote": "famously trade and wear friendship bracelets at Swift’s Eras Tour concerts"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 42, "quote": "a friendship bracelet with his number on it"}
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 13, "quote": "I didn’t get to hand her one of the bracelets I made for her"},
+          {"item": 42, "quote": "intended to give Swift a friendship bracelet"}
+        ]
+      },
+      {
+        "fact": "0.4",
+        "status": "stated",
+        "evidence": [
+          {"item": 86, "quote": "seemingly expressing his interest in Swift"}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 26, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium"}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 26, "quote": "an invitation she famously accepted on 24 September."}
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 93, "quote": "Now, Swift has shared that she has nothing to hide"}
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 93, "quote": "Swift has shared that she has nothing to hide in her new relationship with Kelce"}
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 93, "quote": "her new relationship with Kelce"}
+        ]
+      }
+    ]
+  }
+]

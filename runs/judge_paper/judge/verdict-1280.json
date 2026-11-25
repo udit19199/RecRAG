@@ -1,0 +1,17 @@
+[
+  {
+    "id": "4fe06a8baedaaffd",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 77, "quote": "India will face New Zealand in the ongoing World Cup semi-final match"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 77, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 77, "quote": "India will face New Zealand in the ongoing World Cup semi-final match at the Wankhede Stadium in Mumbai on Wednesday (November 15)"}]},
+      {"fact": "1.0", "status": "contradicted", "evidence": [{"item": 71, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}, {"item": 71, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+      {"fact": "1.1", "status": "contradicted", "evidence": [{"item": 71, "quote": "Second-last of ten on the table after a fourth abject loss in barely three weeks"}, {"item": 71, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 71, "quote": "this time by eight wickets and nearly 25 overs to spare"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 71, "quote": "this time by eight wickets and nearly 25 overs to spare"}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 71, "quote": "nearly 25 overs to spare against Sri Lanka"}]},
+      {"fact": "1.5", "status": "contradicted", "evidence": [{"item": 71, "quote": "having been bowled out for a miserable 156 in Bengaluru, the 2019 champions"}, {"item": 71, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]},
+      {"fact": "1.6", "status": "contradicted", "evidence": [{"item": 71, "quote": "the 2019 champions are now only mathematically a chance of scraping through to the semi-finals"}, {"item": 71, "quote": "England’s hopes of defending their World Cup crown are in tatters"}]}
+    ]
+  }
+]

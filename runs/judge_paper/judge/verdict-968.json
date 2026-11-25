@@ -1,0 +1,67 @@
+[
+  {
+    "id": "68708c56ffd27b19",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 99,
+            "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 99,
+            "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 99,
+            "quote": "Hope has been rising on Wall Street recently that the US economy is slowing from its recent hot pace by just the right amount."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 78,
+            "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 78,
+            "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 78,
+            "quote": "A shutdown would drag on the US economy, raising the risk of a recession, though financial markets have held up relatively well through past shutdowns."
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {"id": "9f1bdb31c9640ac3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 28, "quote": "“I’m here until the end,” she said in her press conference on Friday."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 79, "quote": "He has been out of work since his Blues tenure came to a close back in April"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 79, "quote": "it would be a hard sell to fans after his time with the London club went so poorly."}]}
+  ]},
+  {"id": "0bab42eff071c501", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9ac93fe189c81c4a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

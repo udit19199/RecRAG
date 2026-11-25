@@ -36,7 +36,7 @@ if p.exists():
     REG["B4_100"] = json.load(open(p))["B4_100"]
 p = Path("runs/selection/paired/next_registry.json")
 if p.exists():
-    REG.update(json.load(p))
+    REG.update(json.load(open(p)))
 
 rows = {}
 for m, reps in REG.items():

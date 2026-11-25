@@ -1,0 +1,12 @@
+[
+  {"id": "c50c1179b63deb61", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "It has been expected since before he hit free agency that Ohtani would set the record"}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]}
+  ]}
+]

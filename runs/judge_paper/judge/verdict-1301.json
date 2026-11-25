@@ -1,0 +1,10 @@
+[
+  {"id": "1c5f7fe629c0967a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 37, "quote": "In July, speaking on the podcast he shares with his brother, New Heights"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 37, "quote": "Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 37, "quote": "Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 90, "quote": "On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 90, "quote": "an invitation she famously accepted on 24 September."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 82, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+  ]}
+]

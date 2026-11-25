@@ -1,0 +1,50 @@
+[
+{"id": "e68787dc3d4eb30d", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 54, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 54, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 54, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 54, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 54, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 54, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 69, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 69, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 69, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 69, "quote": "He was concerned because it \"seemed like a lot of money\" from FTX customers was at risk."}]}
+]},
+{"id": "54a44b069ae7f1bf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]},
+{"id": "48bae2d1db5a5487", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []}
+]},
+{"id": "e7921cf320932f7a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []}
+]},
+{"id": "c6748ba0faffb2ee", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

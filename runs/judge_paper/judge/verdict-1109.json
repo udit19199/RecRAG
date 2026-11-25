@@ -1,0 +1,19 @@
+[
+  {"id": "83c35bad9afd9d81", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 92, "quote": "He immediately left the game and proceeded to the locker room following the hit, and it was confirmed"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 92, "quote": "He immediately left the game and proceeded to the locker room following the hit"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 92, "quote": "it was confirmed that he would not return with a head injury."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 38, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 38, "quote": "The former All-Pro, who battled a lingering hamstring injury earlier this year"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 38, "quote": "received attention on the sidelines after limping off"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 38, "quote": "then left the game for further evaluation in the locker room."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 38, "quote": "then left the game for further evaluation in the locker room."}]}
+  ]},
+  {"id": "0ae0ebb255abb1e0", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

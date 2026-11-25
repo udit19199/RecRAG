@@ -1,0 +1,13 @@
+[
+  {"id": "bd15202998c548ba", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 86, "quote": "The company did accomplish that goal"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 86, "quote": "but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 86, "quote": "but in doing so, it inadvertently and profoundly changed how the internet looked."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 55, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 55, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 55, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 55, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]}
+]

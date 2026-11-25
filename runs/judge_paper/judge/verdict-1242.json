@@ -1,0 +1,10 @@
+[
+  {"id": "b57c800593fde339", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 80, "quote": "Depending on which one you get, it might come with USB ports"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 80, "quote": "it might come with USB ports so you can charge multiple devices in one outlet"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 51, "quote": "With a 10,000-mAh capacity"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 51, "quote": "WIRED contributor Simon Hill says it charged his iPhone 14 Pro once"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 51, "quote": "and then delivered an additional 64 percent the second time"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 51, "quote": "then delivered an additional 64 percent the second time before tapping out"}]}
+  ]}
+]

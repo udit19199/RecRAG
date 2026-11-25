@@ -1,0 +1,11 @@
+[
+  {
+    "id": "8b0542150af918b6",
+    "facts": [
+      {"fact": "0.0", "status": "missing"},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 38, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 38, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 38, "quote": "With a 10% surge in the stock this year, Seeking Alpha's Quant Rating system suggests a Hold, expressing concerns about valuation."}]}
+    ]
+  }
+]

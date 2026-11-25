@@ -1,0 +1,49 @@
+[
+  {
+    "id": "91af8192fda6f795",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 79, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 79, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 79, "quote": "India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 69, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 69, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 69, "quote": "It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup."}
+        ]
+      }
+    ]
+  }
+]

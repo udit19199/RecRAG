@@ -1,0 +1,24 @@
+[
+{"id": "06620e8c8066de2f", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "f55d59839e2a51cc", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "5b43d11410d5ad8e", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 60, "quote": "This whole line of argument is called “market definition.”"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 60, "quote": "If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google’s on the road to victory."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 35, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 35, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 35, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in 2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more."}]}
+]}
+]

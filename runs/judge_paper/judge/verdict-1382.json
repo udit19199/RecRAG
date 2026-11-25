@@ -1,0 +1,62 @@
+[
+  {
+    "id": "e4fcb84da041f3f8",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 21,
+            "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 21,
+            "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 21,
+            "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 21,
+            "quote": "Instead, Marshall will start freshman Cole Pennington, who is the son of former Marshall star QB Chad Pennington."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 67,
+            "quote": "Seattle quickly ruled him questionable to return with an elbow issue, and backup Drew Lock took over under center with 18 seconds left"
+          }
+        ]
+      }
+    ]
+  }
+]

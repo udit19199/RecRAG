@@ -1,0 +1,21 @@
+[
+  {"id": "313d888aa1875ea9", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 51, "quote": "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 51, "quote": "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."}]}
+  ]},
+  {"id": "0d6c502a339b2708", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

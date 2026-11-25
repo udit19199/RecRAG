@@ -1,0 +1,22 @@
+[
+  {"id": "be73cec7382825f6", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 56, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 56, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+  ]},
+  {"id": "b6eb4d14b65c8301", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7b65f35b2fc2c09e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

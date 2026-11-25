@@ -1,0 +1,34 @@
+[
+  {"id": "cc219888b07a4097", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 14, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 14, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 14, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 14, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 14, "quote": "Argentina, Japan, Chile, Samoa and Fiji have all provided highlights"}]},
+    {"fact": "0.5", "status": "stated", "evidence": [{"item": 14, "quote": "Los Pumas are also in the semi-finals"}]},
+    {"fact": "0.6", "status": "stated", "evidence": [{"item": 19, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+    {"fact": "0.7", "status": "stated", "evidence": [{"item": 19, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+    {"fact": "0.8", "status": "stated", "evidence": [{"item": 19, "quote": "Dominant wins over Argentina, Japan and Chile sealed passage to the last eight"}]},
+    {"fact": "0.9", "status": "stated", "evidence": [{"item": 14, "quote": "the narrow wins over both Samoa and Fiji in their last two games"}]},
+    {"fact": "0.10", "status": "stated", "evidence": [{"item": 14, "quote": "the narrow wins over both Samoa and Fiji in their last two games"}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 61, "quote": "The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 61, "quote": "their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 61, "quote": "Fiji and Portugal in Toulouse"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 61, "quote": "their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse"}]}
+  ]},
+  {"id": "0da5d0130864474e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

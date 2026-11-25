@@ -1,0 +1,16 @@
+[
+  {"id": "f8a7a53c8ef29c22", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 44, "quote": "Automakers and technology companies are building ever-more sophisticated digital platforms into the future generations of cars and other vehicles."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 23, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 23, "quote": "Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that."}]}
+  ]},
+  {"id": "0490ded3c6c82b4c", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

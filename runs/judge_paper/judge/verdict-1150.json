@@ -1,0 +1,11 @@
+[
+  {"id": "89e803e1edfaba7c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 77, "quote": "McHenry himself has brushed off attempts to take the job more permanently"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 77, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 77, "quote": "appointed to the role after the unprecedented ouster of McCarthy"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 77, "quote": "McHenry himself has brushed off attempts to take the job more permanently after he was appointed to the role after the unprecedented ouster of McCarthy more than two weeks ago."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 76, "quote": "Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 76, "quote": "Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 76, "quote": "Wall Street is also absorbing the ouster of Kevin McCarthy as the speaker of the House of Representatives."}]}
+  ]}
+]

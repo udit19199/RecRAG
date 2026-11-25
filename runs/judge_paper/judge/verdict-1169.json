@@ -1,0 +1,22 @@
+[
+{"id": "bdbcf41ecb7261d0", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 4, "quote": "The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform."}]},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 21, "quote": "Epic chose to focus more on simply painting Google as the bad guy on day one."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 26, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "4609612eea179b09", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

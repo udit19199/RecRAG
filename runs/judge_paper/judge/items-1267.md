@@ -1,0 +1,1789 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=93de1ef10981136e ===
+Gold sentences and facts:
+Sentence 0: If you've got your gift list handy, now's a good time to start checking it off so you won't be pressed for time or funds when Black Friday and Cyber Monday come around next month.
+  Fact 0.0: It is a good time to start checking off a gift list now.
+  Fact 0.1: Black Friday and Cyber Monday come around next month.
+  Fact 0.2: Checking off the gift list now means the reader won't be pressed for time or funds when Black Friday and Cyber Monday come around.
+Sentence 1: “One of the hardest things is resentment can build up if you feel like you need to buy gifts for your family and you can barely make your student loan payments, so bring things up,” Alev said.
+  Fact 1.0: Alev said one of the hardest things is that resentment can build up if you feel you need to buy gifts for your family and can barely make your student loan payments.
+  Fact 1.1: Alev said people should bring things up.
+
+Retrieved items:
+<item 1>
+Is Sam Bankman-Fried’s defense even trying to win? (The Verge, 2023-10-04T23:02:14+00:00)
+When he was evaluating the exchange, he thought the sheer volume of users was important, too — at the time, FTX was among the top three biggest exchanges. Plus,
+major VC firms had invested, and “they don’t commit hundreds of millions without doing due diligence, checking the books, the accountancy of the firm, going
+through several compliance process[es], so that was a vote of confidence for me,” Juilliard said. (Evidently he had not paid attention to the Elizabeth Holmes
+trial.)
+
+He also noted FTX’s glossy ads — featuring Gisele Bündchen, for instance — suggested a very high budget. It wouldn’t make sense to spend that much money unless
+FTX had very strong financials, Juilliard figured. He opened an account, transferred in both regular money and cryptocurrency, and used the exchange to execute
+his plan: buying Bitcoin to sell back in five to ten years at higher prices.
+</item 1>
+
+<item 2>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Using the effectively unlimited funds “allowed us to make profitable trades we couldn’t have made otherwise”
+
+Bankman-Fried didn’t grant Ellison equity, even though she asked; he told her it would be too complicated. Instead, she got a $200,000 salary, even as CEO, and
+bonuses twice a year, which ranged from $100,000 to $20 million.
+
+Initially, Alameda and FTX were “very integrated,” Ellison said. They were run by the same team, from the same office. And when Alameda was scrounging for
+funds, Bankman-Fried told Ellison that FTX would be a good source of capital. The $65 billion line of credit Alameda Research had meant that it did not have to
+post collateral. There was no contract and no written terms, she testified. It also wasn’t visible to FTX’s auditors — she’d raised the question with
+Bankman-Fried, and he told her not to worry about it.
+</item 2>
+
+<item 3>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+It is easy to lie with words and harder to lie with money. Bankman-Fried went around telling people that he wanted to make a lot of money to give it away, an
+idea of the Effective Altruism movement that Bankman-Fried affiliated himself with — but the amount of money he funneled to his Paper Bird vehicle alone was ten
+times the size of his philanthropic spending as outlined by Easton. And it was all vastly outweighed by his investments — the places where he could prove he was
+very smart by investing in the right companies early.
+
+And in brief, explosive testimony, former FTX lawyer Can Sun demonstrated what Bankman-Fried’s tactic was. During the days in November when the exchange
+imploded, Bankman-Fried was trying to raise money from Apollo, the private equity group. Apollo wanted an explanation for what had happened, and so
+Bankman-Fried came to Sun to ask him to come up with justifications for the missing funds.
+</item 3>
+
+<item 4>
+Is Sam Bankman-Fried a bad ‘man’ or a good ‘boy’? Lawyers swap opening statements before first witnesses take the stand (Fortune, 2023-10-04T23:32:53+00:00)
+FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that
+Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy
+and sell cryptocurrencies.
+
+In an analogy he employed throughout his opening statement, he said that “working at a startup is like building a plane as you’re flying it” and that businesses
+sometimes fail. In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from
+the inherent risk of the crypto markets.
+
+When the walls came closing in and the aforementioned plane approached the “eye of the storm,” Bankman-Fried did not act like someone who was guilty. Rather, he
+was willing to give up his personal wealth to make customers whole, Cohen argued.
+</item 4>
+
+<item 5>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+If it seems like his peer group supported him, or worse, fawned over him, that’s a real problem for the industry’s reputation.”
+
+After FTX declared bankruptcy, Bankman-Fried went on an extensive media tour, doing interviews with The New York Times’ Andrew Ross Sorkin and Good Morning
+America. Even under house arrest, he did interviews, including with The New Yorker. Bankman-Fried seemed to think that if he just explained things, everyone
+would understand that what he did was a mistake, not a crime.
+</item 5>
+
+<item 6>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+Joe Bankman, Bankman-Fried’s father. He is among the people included in the “small group chat,” the Signal group where the FTX inner circle strategized during
+the exchange’s last days.
+
+Barbara Fried’s political action committee, Mind the Gap. It is among the entities that received FTX customer money as political donations. Fried and Bankman
+lived together in a Bahamas house purchased for them using FTX investor funds, according to a financial expert called by the prosecution; in a lawsuit filed by
+FTX’s bankruptcy estate, Bankman and Fried are alleged to have been given $10 million of FTX customer funds.
+
+Gabe Bankman-Fried’s nonprofit, Guarding Against Pandemics, which got millions from FTX. He was also in a Signal group chat, Donations Processing, that Singh
+says was used to coordinate the transfer of FTX and Alameda money to various political causes. In that chat, he can be seen recommending some donations be made
+“in the dark” to avoid public relations headaches.
+</item 6>
+
+<item 7>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+Alameda’s credit line — which was taken in increments of $100,000 to $10 million at a time — was used for trading. Using the effectively unlimited funds
+“allowed us to make profitable trades we couldn’t have made otherwise,” Ellison testified.
+
+Customer funds were also used when Bankman-Fried bought back FTX shares from Binance, an early investor, in the summer of 2021. Bankman-Fried told Ellison it
+was “really important,” otherwise “Binance would do things to mess with FTX.” Ellison says she told him Alameda didn’t have the money. So Bankman-Fried took $1
+billion of FTX customer funds to buy out Binance, the first time Ellison recalled an amount that large. It was Bankman-Fried’s decision, she said, as he was the
+CEO of FTX.
+
+FTT was one of several “Sam coins”
+
+There was also the FTT token, which was created by Bankman-Fried and Wang.
+</item 7>
+
+<item 8>
+The FTX trial is bigger than Sam Bankman-Fried (The Verge, 2023-09-28T12:00:00+00:00)
+Bankman-Fried is accused of using “billions of dollars in misappropriated FTX customer deposits” to help buy more than $200 million of real estate for himself,
+make billions of dollars of investments for his own interest, and repay Alameda’s lenders, according to the indictment, Additionally, Bankman-Fried allegedly
+used more than $100 million of customer funds to make political contributions; prosecutors can show evidence of those contributions in this trial, even though
+they aren’t part of the charges brought. A second trial is scheduled for March 2024, with additional charges.
+
+Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry. He was also very interested
+in publicity, sitting for many interviews both before and after the fall of FTX. The quick rise of FTX as an industry force was at least in part due to
+Bankman-Fried’s appetite for attention.
+</item 8>
+
+<item 9>
+Sam Bankman-Fried was a terrible boyfriend (The Verge, 2023-10-10T23:50:21+00:00)
+It was that Ellison’s calculations assumed Alameda could borrow $1.8 billion in normal dollars and $1.5 billion in crypto from FTX. The spreadsheet makes this
+clear with a row labeled “FTX borrows,” which Ellison said were customer funds.
+
+Meanwhile, echoing Bankman-Fried and Ellison’s romantic relationship, FTX was keeping cozy private ties with Alameda yet publicly holding it at arm’s length. On
+January 14th, 2022, Bankman-Fried tweeted, “We’re launching a $2b venture fund: FTX Ventures!” Those funds came from Alameda, Ellison testified. But
+Bankman-Fried didn’t want to go public with the source of the funds. He said he thought Alameda’s brand was less good, and he didn’t want his name associated
+with it. Alameda also bought Robinhood shares for Bankman-Fried, who moved them to a vehicle called “Emergent Fidelity Technologies” to avoid association with
+Alameda.
+</item 9>
+
+<item 10>
+In the end, the FTX trial was about the friends screwed along the way (The Verge, 2023-10-26T12:00:00+00:00)
+A substantial chunk had been spent on various investments, including in the celebrity-connected venture firm K5, trading firm Modulo (co-founded by one of
+Bankman-Fried’s ex-girlfriends), and AI company Anthropic.
+
+Another $413 million had gone directly to Bankman-Fried himself, through his wholly-owned company Paper Bird. “Outflows to insiders,” which suggested Singh’s
+not-quite-loans were included, was $192 million; real estate was another $228 million; and the donations to Gabe Bankman-Fried’s Guarding Against Pandemics,
+combined with the philanthropy from the FTX Foundation, totaled less than $40 million.
+
+It is easy to lie with words and harder to lie with money.
+</item 10>
+=== END ITEM id=93de1ef10981136e ===
+
+=== ITEM id=d23734969de83be0 ===
+Gold sentences and facts:
+Sentence 0: “Users’ natural behavior for search is to follow the path of least resistance, i.e.
+  Fact 0.0: Users' natural behavior for search is to follow the path of least resistance.
+Sentence 1: “We make Google be the default search engine,” he said, “because we’ve always thought it was the best.
+  Fact 1.0: A speaker said 'We make Google be the default search engine.'
+  Fact 1.1: The speaker said the reason was 'because we've always thought it was the best.'
+
+Retrieved items:
+<item 1>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+Users can go to Deft and search for things like “wooden lamps with three legs under $400” or upload an image, and modify their search to “lamps under $400 that
+look like this.” While it’s hard to know you can do this if someone doesn’t tell you that it works, users can also paste the image directly into the search bar.
+The company is working on highlighting the image search feature better.
+
+The company said that it doesn’t just look at the listing and description for search results. It also looks at materials, reviews, photos and more. This way,
+when someone searches for a “pet-friendly” couch, Deft can return results with stain and scratch-resistant material.
+
+“You have companies like Google and Amazon that continue to push the most relevant listings down so they can make more advertising dollars.” Zach Hudson
+
+Deft is currently focusing on furniture and home décor search but aims to expand to different categories along the way. The company has built its own scraping
+tech to add products to its search results.
+</item 1>
+
+<item 2>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+And so even as Microsoft was crushing corporate competitors, the developer experience was excellent. [Editor’s note: Netscape might feel differently.]
+
+“Even as Microsoft was crushing corporate competitors, the developer experience was excellent.”
+
+Google and Apple both treat developers as adversaries — they try to attack our revenue streams and prevent us from competing with their products. They’ve built
+these massive self-preferencing schemes all around excluding developers and disadvantaging third-party developers. I think this is very shortsighted. I think
+any tech company — Apple, Google included — would be much better off in the long term if they viewed developers as awesome partners and did everything they
+could to support them and empower them and not get in their way financially.
+
+And this has been our philosophy with Unreal Engine, for example, and the Epic Games Store. We just want to be a cool partner that helps other companies succeed
+the way we do. And I think philosophy change... perhaps it will only come with a generational change in the company’s management.
+</item 2>
+
+<item 3>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+Google released its multi-search feature last year that lets users fuse images and text. Separately, Deft will also face competition from other startups like
+Objective, a Matrix Partners-backed startup building an API platform for multimodal search.
+
+Caroline Casson, a partner at Vitalize Venture Capital and an investor in Deft, believes the startup has an edge because of its knowledge graph for products.
+
+“Building a robust e-commerce search engine is incredibly complex on the backend. The extensive knowledge graph that Deft has built combined with AI search
+capabilities makes for a high-quality user experience. We were excited about early iterations of the product when we invested and we continue to be impressed
+with each product enhancement,” Casson told TechCrunch over email.
+
+Adii Pienaar, another investor, and co-founder of WooCommerce, which was acquired by Automattic, told TechCrunch over a call that he sees Deft as solving user
+experience problems.
+
+“Over the last couple of years, consumers have been trying out new ways to interact with and purchase products.
+</item 3>
+
+<item 4>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Looking back on all that had changed around what first attracted people to Google, from the introduction of ads to the efforts to keep users within the universe
+of Google products, this seemed to be the last straw.
+
+The second major reason why Google results feel different lately was, of course, SEO — specifically, the obnoxious-kid-refusing-to-behave-in-class kind of SEO.
+
+“SEO that goes against Google’s guidelines, it’s not new,” Ray explained. A decade ago, it used to be called “black hat” SEO, in comparison to the search
+engine-approved “white hat” tactics. And Google has, as Sullivan and many SEOs told me, gotten better over time at catching SEOs playing tricks on the
+algorithm.
+</item 4>
+
+<item 5>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 5>
+
+<item 6>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+and it replied with more options that were all over $300. Another observation from this test is that I tend to use the Google Search bar as much for returning
+to familiar sites as I do for searching for information, which means switching to another provider could be temporarily annoying simply because it wouldn’t
+remember all the places I’ve been. Is Google as the default unfair?
+
+In a response to the trial on Google’s blog, president of global affairs Kent Walker said the company’s search product was the favourite of users, browsers and
+device makers simply because it was the best in the business. And being default was not determinative, he said; changing from Google Search to any other search
+provider was easy, and the company competes with many others on phones and PCs. “People don’t use Google because they have to, they use it because they want
+to,” he said. “This lawsuit simply ignores how intensely competitive and dynamic the technology industry is today.”
+</item 6>
+
+<item 7>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+E-commerce search startup Deft is releasing a multimodal search function for users to get better results. The company, which opened its service to beta users in
+May, has rolled out the new search experience so users don’t have to describe the item in words.
+
+The company is trying to solve the problem of finding the right item without spending hours looking for a product. Often users end up with subpar results while
+searching for products because their search query description won’t match the details of listed items. The startup is relying on different techniques, including
+building its own parser and knowledge graph combined with large language models (LLMs) and multimodal search.
+
+Deft was founded in 2019 by Alex Gunnarson and Zach Hudson. Gunnarson started working on the idea after he couldn’t find a specific type of couch online even
+after putting in different parameters and descriptions. It took him hours to find a perfect result for his search, so Gunnarson decided to build a solution with
+Hudson.
+</item 7>
+
+<item 8>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+That doesn’t make its actions illegal, the company says.
+
+Monday’s trial hearing revealed plenty of juicy tidbits, including the $26.3 billion Google spent making itself the default search engine across platforms in
+2021, how Google tried to take it further and have Chrome preinstalled on iPhones and more.
+
+Google paid $26 billion in 2021 to be everyone’s default search engine
+
+When Google’s search head Prabhakar Raghavan testified in court on October 28, he revealed that the tech giant had paid $26.3 billion in 2021 to multiple
+browsers, phones and platforms, from companies including Apple, Samsung and Mozilla, The Verge reports.
+
+About $18 billion of that total amount went directly to Apple, according to a New York Times report published earlier this month. Google has had its deal with
+Apple in place since 2003.
+
+When questioned on the amount of money Google spends to get first pick of search engines, Pichai said that the decision was made with the consumer in mind.
+</item 9>
+
+<item 10>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+Thou shalt not have a competing store on iOS and thou shalt not use a competing payment method. And I think Apple should be receiving at least as harsh
+antitrust scrutiny as Google.
+
+It’s interesting to me that because Google distributes the Android operating system as open source, they had to put all these deals out in the open. More out in
+the open, I should say — certainly they still wanted to keep them secret.
+
+But I’m going down my story about all the best emails from the Epic v. Apple trial — and we do have a lot of documents from both Apple and Google that show they
+were similarly self-serving in terms of deals.
+
+I’d say this is the thing that’s disappointed me the most with Apple and Google: even at the peak of the antitrust trial against Microsoft, Microsoft was
+awesome to developers. Microsoft has always been awesome to developers, always being respectful, giving developers a great deal and treating them as partners,
+you know? And so even as Microsoft was crushing corporate competitors, the developer experience was excellent.
+</item 10>
+
+<item 11>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Enter Google. The company revolutionized search by evaluating websites based on links from other websites, seeing each link as a vote of relevance and
+trustworthiness. The founders pledged to be a neutral navigation system with no ads: just a clean white screen with a search box that would bring people off of
+the Google landing page and out to a helpful website as seamlessly as possible. Users quickly decided this link-based sorting methodology was superior to the
+existing search engines, and by the end of 1999, Google was handling the majority of online queries.
+
+“I was basically just spamming Facebook with cars and articles about cars and sending traffic to banner ads, and that turned into $120,000 a month.”
+
+Mapstead, like many of the early practitioners of SEO, figured out how to adapt. Almost as soon as Google took over, a secondary market emerged for links. For a
+few hundred bucks, a firm in India or the Philippines could provide thousands of links from blog networks built entirely for that purpose.
+</item 11>
+
+<item 12>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+This is where Bellshaw began to press on how exactly Apple decided Google had the best product. She asked Cue if Apple believes user privacy is important, to
+which he said, “Absolutely.” Then, she showed a series of emails and slides in which Cue and Apple railed against Google’s privacy policies. Cue readily agreed.
+“We’ve always thought we had better privacy than Google,” he told Bellshaw. He said that one provision of the ISA with Google was that Google had to allow
+people to search without logging in and that Apple has done things in Safari and around its platforms to make it harder for Google or anyone else to track
+users.
+
+Bellshaw never quite said it, but the DOJ’s implication seemed to be that, essentially, Google is a privacy menace anathema to everything Apple believes is
+important to its users, but Apple gives it a central place in its platform because Google pays it so handsomely. Bellshaw asked Cue to review some of Apple’s
+financial filings.
+</item 12>
+
+<item 13>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 13>
+
+<item 14>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 14>
+
+<item 15>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+During his time at Google, Cutts regularly received death threats and hate mail. When SEOs would send, say, a fruit plate or a brownie cake addressed to him at
+Google’s offices, he told me, “We’d take it down to the kitchen with a note warning: possibly poisoned.”
+
+After Cutts left, Google replaced him with a handful of people, none of whom could quite fill his shoes: “Those personalities sometimes were standoffish,”
+Forrester told me. “Some of them were superior. Some of them were a bit too wallflower.”
+
+One of the people Google brought in was Danny Sullivan, a former journalist who started Search Engine Land, the industry publication where Schwartz works, back
+in the 2000s.
+</item 15>
+
+<item 16>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+The RSAs also motivate other companies to make or sell more Android devices, he said.
+
+Expedia complains of too many ads on search, expensive ad payments
+
+On November 1, Barry Diller, chair of Expedia and IAC, testified about his concerns regarding the increasing number of ads in search results having an impact on
+organic listings.
+
+“I must say I’m on the edge of revolt now that Google’s actions are so punitive, not just for Expedia but also for IAC and all the players that depend upon
+something of a level playing field,” wrote Diller in a letter to Google back in 2019, according to Bloomberg.
+
+Google CEO Sundar Pichai fired back that Google’s travel listings was one of the most popular experiences the company built.
+
+Expedia execs also testified about the cost of ads and how increases had no impact on search results.
+</item 16>
+
+<item 17>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 17>
+
+<item 18>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+In October 2019, Epic internally said it might pursue an aggressive pursuit model with the Epic Games Store, where it would aggressively pay more for exclusive
+games and really pull in more and more users. Are you in the aggressive pursuit model?
+
+No, we’re in a different model, which is called the “Ridiculously aggressive pursuit model.” If it’s a 10-slide deck, that’s on slide 11.
+
+Did you get a bingo on your Verge bingo card?
+
+Yeah, I think it was almost a complete shutout. I think there was only one cell in the entire board that was missing. I was really impressed — the thing for
+that bingo card that really impressed me was “lick the cookie.” Do you remember? You may not even be old enough, but “lick the cookie” was in the 1999 US v.
+Microsoft antitrust trial.
+</item 18>
+
+<item 19>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Over the phone, Cutts came off as humble and thoughtful, acknowledging the nuances and challenges of the search engine business, while Sullivan sounded like an
+impatient corporate stooge, trying to gaslight me into believing the sky was red.
+
+But here’s the part where I started to feel the way I’ve felt so often in recent years, like I was losing my grip on reality: Sullivan was not the only person
+who tried to tell me that search results have improved significantly. Out of the dozen-plus SEOs that I spoke with at length, nearly every single one insisted
+that search results are way better than they used to be. And except for Sullivan, these were not people with an incentive to praise Google. If anything, these
+were folks who lamented how much harder it had become for them to take advantage of Google. Today, they told me, search results are just objectively more
+accurate. More useful. More difficult to manipulate.
+
+This was not what I had been noticing, and this was certainly not what I had been hearing from friends and journalists and friends who are journalists.
+</item 19>
+
+<item 20>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“I would wake up in a city and not know what time zone I was in,” he recalled. To slow the pace, he upped it to $5,000 a day, but “it seemed the more I raised
+my rates, the more gigs I was getting.”
+
+Nowadays, he mostly invests in cannabis and psychedelics. SEO just got to be too complicated for not enough money, he told me. Ward had told me the same thing,
+that she had stopped focusing on SEO years ago.
+
+I was considering how it was possible that so many people have been complaining recently about SEO ruining the internet if these people were telling me the SEO
+business is in decline when I met Jairo Bastilla. He was the kind of tall, charming man who described himself multiple times as “a nerd,” and he pointed out
+that even though working directly with search engine rankings is “no longer monetizing at the highest payout,” the same “core knowledge of SEO” remains relevant
+for everything from native advertising to social media.
+
+Translation? SEO is now baked into everything.
+</item 20>
+
+<item 21>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 21>
+
+<item 22>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 22>
+
+<item 23>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+law. The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair
+strategies to illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its
+devices and whether it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell
+Instagram and WhatsApp.
+
+This isn’t Google’s only antitrust case in trial right now. The search engine giant last week settled a separate antitrust lawsuit with dating site Match Group.
+On November 6, Google went to trial with Fortnite maker Epic Games. The latter hopes to prove that Google engages in anticompetitive behavior with regard to its
+Android app store, Google Play, and its commission structure.
+
+Now, onto the roundup!
+</item 23>
+
+<item 24>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Bellshaw asked Cue to review some of Apple’s financial filings. Isn’t it true that the ISA represents a significant portion of Apple’s profits, she asked? Cue
+said that’s not how Apple looks at it because it doesn’t account for all the work Apple did to make its platform so appealing that an agreement like this could
+work as well as it does.
+
+Later, after a closed session in the courtroom and a break for lunch, Google lawyer John Schmidtlein led Cue through a history of the Google / Apple
+partnership, and a history of the Safari browser. Cue noted that Safari’s combination of URL and search bar was a user interface innovation, and the seamless
+Google integration was part of what made it work. In early promotional materials for Safari, Schmidtlein pointed out, the Google integration was nearly always
+mentioned.
+</item 24>
+
+<item 25>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 25>
+
+<item 26>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“It’s because they don’t have the real expertise.” Clay is an avuncular man with a mustache who is often credited with coining the phrase “search engine
+optimization” and is therefore called “the father of SEO.” He told me his agency never hires an SEO with less than a decade of experience.
+
+“I don’t know if you can trust anything you read online.”
+
+Though Google publishes guidelines explaining how to do better in search (“Make your site interesting and useful”), the exact formula for how and why one
+website gets placed over another is top secret, meaning that SEO involves a lot of reverse engineering and guesswork. With no clear chain of cause and effect
+around why a site’s ranking has changed, a less talented practitioner can take on the mien of a premodern farmer, struggling to figure out how to make it rain.
+Should he do that dance he did last year the night before it poured? Or maybe sacrifice his firstborn?
+</item 26>
+
+<item 27>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 27>
+
+<item 28>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+In response, Google enacted a plan, which execs dubbed “Go Big in Europe,” to enhance search results in France and Germany in 2019 and 2020 with more local
+content: news, post-game soccer video highlights, information on local television options for streaming, and pronunciation practice for different language. The
+aim was to incentivize users to click on Google’s home screen, rather than the competition’s.
+
+That revelation effectively supports the Justice Department’s argument that Google, without the push of competition, has little incentive to improve its
+products, a classic consequence in a monopoly.
+
+Mozilla digs in on Google’s supremacy in search
+
+Interestingly, on November 1 Mozilla CEO Mitchell Baker provided a defense of Google’s quality as a search engine, even in “competitive” environments.
+Specifically, Baker recounted how, Mozilla “failed” when it switched Firefox’s default search engine from Google to Yahoo.
+</item 28>
+
+<item 29>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+You can’t just be the most powerful observer in the world for two decades and not deeply warp what you are looking at.
+
+For the past 25 years, the internet as we know it has been almost entirely defined and controlled by Google. What the SEOs do matters for all of us on a daily
+basis, distorting how we perceive the world in ways we can hardly begin to imagine or understand. Yet any money that any SEO has made is a fraction of a crumb
+compared to Google’s 10-layer cake. The company brings in hundreds of billions of dollars a year, profits that skew Google’s choices and priorities. As Google’s
+founders wrote back in 1997: “we expect that advertising funded search engines will be inherently biased towards the advertisers and away from the needs of the
+consumers.”
+
+At the end of the day, it’s Google’s world, and the SEOs are only living in it
+
+There’s a reason why most countries around the world have libraries that are public institutions: information that is controlled by a private business will
+always be subject to that business’s bottom line.
+</item 29>
+
+<item 30>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+The links that pop up when they go looking for answers online, they say, are “absolutely unusable”; “garbage”; and “a nightmare” because “a lot of the content
+doesn’t feel authentic.” Some blame Google itself, asserting that an all-powerful, all-seeing, trillion-dollar corporation with a 90 percent market share for
+online search is corrupting our access to the truth. But others blame the people I wanted to see in Florida, the ones who engage in the mysterious art of search
+engine optimization, or SEO.
+
+Doing SEO is less straightforward than buying the advertising space labeled “Sponsored” above organic search results; it’s more like the Wizard of Oz projecting
+his voice to magnify his authority. The goal is to tell the algorithm whatever it needs to hear for a site to appear as high up as possible in search results,
+leveraging Google’s supposed objectivity to lure people in and then, usually, show them some kind of advertising. Voilà: a business model!
+</item 30>
+
+<item 31>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Well… both sides lost! But Epic arguably lost more. Even though Apple has incredible power over the iPhone, Judge Yvonne Gonzalez Rogers ruled the company
+didn’t have an unfair monopoly in this case – partly because she decided the relevant market for Fortnite was “digital mobile gaming transactions” rather than,
+say, iPhone apps. She also decided that Epic violated its developer agreement with Apple and would have to pay.
+
+But she also barred Apple from keeping iPhone users in the dark about alternate ways they can pay for apps – and may have even allowed developers to add their
+own payment mechanisms. I won’t dwell on the Apple ruling, as I’m ethically bound, but my colleague Adi Robertson has a comprehensive breakdown.
+
+How can Epic possibly have a case against Google when Apple already won?
+
+Epic declined to answer this on the record, among other questions we asked... but three things to consider:
+
+1) That was a different case. Also, that one’s not over till the Supreme Court weighs in or declines to take a look.
+</item 31>
+
+<item 32>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+The startup said it is on track to hit 50,000 monthly active users by the end of this year. While co-founders didn’t reveal the exact search volume the product
+is catering to, they said Deft is seeing “tens of thousands” of searches every week. They added that people using Deft for the second time do more searches than
+their first visit.
+
+The team also noted that it has a conversion rate that is five times higher — a measure of people buying the product versus seeing it — compared to the standard
+e-commerce rate, which is around 2-3%, according to various estimates.
+
+Deft doesn’t show ads on its platform. Rather, it relies on affiliate commissions to generate revenue. However, the startup wants subscriptions to be its
+primary revenue driver.
+</item 32>
+
+<item 33>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The latest funding round brings QI Tech’s total capital raised to $262 million.
+
+New Web Summit CEO appointed: Former Wikimedia Foundation CEO Katherine Maher has been appointed as the new CEO of Web Summit, following the controversial
+departure of its previous leader, Paddy Cosgrave. Maher’s appointment comes as the tech conference faces a challenge to rebuild relationships and trust within
+the tech community.
+
+Top reads on TechCrunch this week
+
+Shinier, smarter maps: Google is rolling out a variety of updates for Maps, incorporating AI technology to enhance user experience. The feature is currently
+available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.
+
+From stop-and-start to charging ahead: Over on TC+, Tim has had it with U.S. automakers hesitating on EVs, as Ford and GM are showing signs of backing away from
+their commitment to electric vehicles. Cowards.
+</item 33>
+
+<item 34>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+The company has built its own scraping tech to add products to its search results. It shows results from Target, Pottery Barn and other places on the web. The
+company hasn’t added searches from Amazon yet because it feels there are a lot of “junk” listings on the site and it will take some work to clean up that data.
+
+Hudson told TechCrunch that there are a few plaguing problems with the traditional search experience that prevent users from finding a suitable item.
+
+“You have companies like Google and Amazon that continue to push the most relevant listings down so they can make more advertising dollars. Some easy searches
+are now hard because marketers have learned how to game these search engines. Plus, now you have AI content that is putting the burden on users to separate fact
+from fiction,” he said.
+
+The company raised $1.8 million in a seed round from Hustle Fund, Frontier VC, Vitalize, Long Ecommerce Ventures, 43 Ventures and angel investors.
+</item 34>
+
+<item 35>
+X plans to use payment, phone and ID verification to stop bots, in addition to the new $1/yr fee (TechCrunch, 2023-10-18T17:33:48+00:00)
+A report this week from market intelligence firm Similarweb, for example, found that X’s web traffic and monthly active users on mobile had declined
+post-acquisition.
+
+Users today have far more options for microblogging and public discourse, thanks to products from Twitter-like startups and tech companies such as Spill,
+Bluesky, Pebble, Countersocial, Spoutible, Hive and the open source platform Mastodon, as well as efforts from tech giants, like Meta’s new app Threads. Few of
+the other social apps currently charge a fee, unless it’s for premium features, like some of the third-party Mastodon apps do.
+
+In addition to presenting friction at sign-up, other critics have argued a fee could exclude genuine users and increase the digital divide.
+</item 35>
+
+<item 36>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+It has evolved into working in humanitarian aid, delivering emergency food supplies to people in need in Afghanistan and Turkey.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Another superconductor disappointment: Tim writes that a new, supposedly room-temperature superconducting material isn’t what the scientific community hoped it
+would be. With the Nature-published paper detailing the material facing retraction, the odds of researchers discovering a room-temperature superconductor are
+looking even longer.
+
+Klarna inches toward an IPO: Mary Ann and Alex write that Swedish fintech Klarna is taking steps toward an eventual IPO. The company has initiated a process for
+a legal entity restructuring to set up a holding company in the U.K.
+</item 36>
+
+<item 37>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+[Editor’s note: Every journalist in the courtroom agreed the jury was attentive; most were also surprised by the rapid verdict.]
+
+They got it, they got it quickly, and they were able to pull apart what was going on and contrast it with the fiction of the story that Google was trying to
+tell.
+
+What was something that surprised you in the courtroom, something you heard come to light that you hadn’t heard before?
+
+I’d suspected a lot of the practices that Google had, you know, since 2018 or so when we first started this, to such an extent that some folks would
+occasionally call me a conspiracy theorist. It was really, really interesting to see that my understandings of what Google was doing behind the scenes were
+actually true — you’re leaking our conversations to reporters to get negative stories written about us; you’re paying other developers off to convince them not
+to launch their own stores; they were going around and paying carriers and OEMs secretly not to carry competing stores.
+</item 37>
+
+<item 38>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+He realized that most search engines were just listing websites in order of how many times a search term appeared on the site and in its tags, so he focused on
+stuffing his sites with keywords, resubmitting his URL to the search engines, and waiting for the results to change.
+
+Mapstead started pulling in $25,000–$30,000 a month, working 12- to 14-hour days. “It was how long could I stay awake and how little life could I have because
+this was more money than I could have ever imagined in my lifetime,” he told me. “It was like I won the lottery, and I didn’t know how long it would last.”
+
+Around this time, in 1997, an Italian professor published a journal article about what he called Search Engines Persuasion. “Finding the right information on
+the World Wide Web is becoming a fundamental problem,” he wrote. “A vast number of new companies was born just to make customer Web pages as visible as
+possible,” which “has led to a bad performance degradation of search engines.”
+
+Enter Google.
+</item 38>
+
+<item 39>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 39>
+
+<item 40>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 40>
+
+<item 41>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 41>
+
+<item 42>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Quick backstory: Yahoo inked a deal with Mozilla way back in 2014 to pay the browser maker $375 million annually to be the default search engine on Firefox. At
+the time, Google was offering $276 million, said Baker. Reader, that was a bad deal.
+
+“I felt strongly that Yahoo was not delivering the search experience we needed and had contracted for,” she said, according to Bloomberg. The executive said
+Yahoo had promised to reduce the number of ads and offer less user tracking, but ended up gradually serving users more ads anyway.
+
+“The number of users who stayed with Firefox declined noticeably during the years when Yahoo was the default,” said Baker.
+
+Baker, who was providing a recorded deposition for Google’s defense, noted that Mozilla’s users apparently wanted and expected Google.
+
+However, that is not the full story. Yahoo was already well behind Google in terms of search technology at that point.
+</item 42>
+
+<item 43>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Forrester has a holistic understanding of the delicate push and pull between the SEOs desperate for clues on how to do their jobs better and the search engine
+trying to keep its secret-sauce algorithm proprietary. He also knows a huge range of people in the industry. Like Schwartz, he wanted to emphasize how hard
+everyone works. “I’ve lost track of how many people I know who built companies and sold them and have just, like, made wealth,” he told me. “That is not a
+40-hour commitment in the week. That is a 400-hour commitment.” (For the record, there are 168 hours in a week.)
+
+These days, Forrester lives in Los Angeles, and he asked me to meet him at one of his favorite restaurants, which felt like a British pub operated by Disney
+World, tucked away in a desert strip mall. Inside, every inch was covered in Anglophile paraphernalia, including Union Jack flags, a mural of Big Ben, and a red
+phone booth.
+</item 43>
+
+<item 44>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+He hoped to make Google and Apple’s services so connected as to be inseparable.
+
+The way Pichai pitched it would have been a win-win for both companies. Google gets more people searching on its platform — not to mention all that juicy data —
+and Apple would get more revenue, as a result of the lucrative search agreement the two signed.
+
+For whatever reason, Cook didn’t take the bait. Apple doesn’t preload third-party software onto its devices, and it wasn’t going to make an exception for
+Google.
+
+Google’s deleted chat logs
+
+During Pichai’s testimony, the DOJ touched on Google’s policy of deleting internal chat messages, despite being subject to a litigation hold. In February, the
+DOJ accused Google of systematically destroying chats through its history-off option, which deletes messages every 24 hours unless a user manually changed the
+setting.
+
+Pichai said that he took action against the history-off default for chat in February to comply with the DOJ’s litigation hold, according to CNBC.
+</item 44>
+
+<item 45>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Were all of us wrong? Or engulfed in some kind of Baader–Meinhof frequency bias delusion? Had I been researching a nonexistent problem? Were Google results
+actually amazing? Truly, I had lost the plot. Was the premise of this piece completely off? Was I the asshole who deserved to be attacked by an alligator?
+
+I began to worry all the people who were mad about search results were upset about something that had nothing to do with metrics and everything to do with
+feelings and ~vibes~ and a universal, non-Google-specific resentment and rage about how the internet has made our lives so much worse in so many ways, dividing
+us and deceiving us and provoking us and making us sadder and lonelier. Decades of American optimism about the wonderful potential of technology, from the Moon
+landing to personal computers to the iPhone, had finally, in the last few years, broken down into comprehensive chagrin at the petty, pathetic, and violent
+world enabled by our devices. Was all that really Google’s fault?
+</item 45>
+
+<item 46>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Bellshaw pulled up a message exchange in 2021 where Pichai asked for history to be turned off in a group chat. Pichai responded that he wanted to discuss a
+personnel matter and the subject had nothing to do with the litigation hold, which he said he takes great care to comply with.
+
+A moment of nostalgia for Internet Explorer
+
+Cast your memories back to 2005, when Microsoft’s Internet Explorer became the default search engine. Back then, Google’s legal chief David Drummond sent
+Microsoft an angry letter, saying that making Internet Explorer the search default was anticompetitive. Oh, how the tables have turned.
+
+After establishing that Google understands the inherent value of defaults, Bellshaw brought up Drummond’s letter to establish the hypocrisy of Google today. The
+letter declared that problems with a default setting are made worse by how changes to defaults are handled, and that most end users “do not change defaults.”
+</item 46>
+
+<item 47>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 47>
+
+<item 48>
+Meta seeks legislation that would require parents to approve teens’ app downloads (TechCrunch, 2023-11-15T17:13:10+00:00)
+Meta’s position that apps are somehow different, then, is a fairly extreme position to take.
+
+“Instead of designing its products with kids’ safety and privacy in mind, Meta would rather push blame onto parents and other companies to obscure the damage
+they’ve already done to young people,” said Sacha Haworth, executive director of the Tech Oversight Project, a nonprofit devoted to reigning in Big Tech, in
+reaction to the news. “No one disputes that Google and Apple need to do more to protect children on their platforms, apps and devices. That fact does not
+absolve Mark Zuckerberg or Meta for years of willful negligence, and this announcement shows that the company’s outright hostility toward protecting kids is
+sewn into the fabric of its profit model.”
+
+Apple and Google did not return requests for comment.
+
+Updated, 11/15/23, 4:40 PM ET, with comment from Tech Oversight Project.
+</item 48>
+
+<item 49>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“Before 2003,” Cue said, “the way that you searched the web was you had to go in and you had to type in google.com in the URL field, or you could type in
+another URL. We came up with the idea that if you type anything in the URL field that’s not a URL, it just goes to search.”
+
+Schmidtlein’s overall point was that Google helped Safari succeed not by forcing Apple’s hand, but by being a great product that integrated seamlessly with
+Apple’s own stuff. He referenced Apple’s deals with Yahoo and Bing that make those services easy to find, and both men argued that switching search engines is
+so easy as to be a non-issue. Bellshaw briefly stepped up to rebut that notion, and that was it for Cue’s testimony.
+
+At least, that’s all the testimony we saw. Like so many things in this trial, the star witness was kept mostly under wraps thanks to complaints and worries
+about revealing confidential numbers and corporate secrets.
+</item 49>
+
+<item 50>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 50>
+
+<item 51>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 51>
+
+<item 52>
+Temu was the most-downloaded iPhone app in the U.S. in 2023 (TechCrunch, 2023-12-12T16:47:19+00:00)
+3 app by U.S. downloads. Instagram and WhatsApp followed at No. 6 and No. 9, slipping in position from their ranking last year.
+
+Google, meanwhile, had dominated last year’s list with the No. 2 app YouTube, just behind TikTok, as well as No. 5 Google Maps, No. 6 Google Search and No. 7
+Gmail. In 2023, however, Google’s only two apps in the top 10 by downloads included No. 7 Google Search and No. 8 YouTube, both also slipping in ranking from
+last year.
+
+The shift in downloads could represent that U.S. tech giants are nearly at a market saturation point, where their apps aren’t as in demand as they were in
+previous years because many already have them installed.
+</item 52>
+
+<item 53>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Ray seemed like the most reasonable person I had spoken to so far. Sure, she called herself a “thought leader,” and yes, sure, she had changed her last name to
+improve her personal branding by more closely associating herself with her grandmother’s uncle, the artist Man Ray. Maybe some people would say that’s the kind
+of absurd behavior that merits being attacked by an alligator, but I was beginning to come down on the side of the SEOs, who seemed to have a lot less agency
+than I’d first imagined.
+
+Google had started with a noble cause: trying to make the internet easier to navigate at scale. The company did accomplish that goal, but in doing so, it
+inadvertently and profoundly changed how the internet looked. The problem lay in Google trying to be an objective and neutral arbiter of an information
+landscape that was meant to pretend it did not exist. You cannot design a free, automated system to help people find information without some people trying to
+game that system.
+</item 53>
+
+<item 54>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Battery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software that can be slipped into just about any
+lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.
+
+What lies beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched
+on where startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.
+</item 54>
+
+<item 55>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Then, she offered to take Forrester for a joyride around Seattle. Obviously, he said yes.
+
+Once he represented Bing, Forrester more or less stopped drinking at conferences, as had long been the case for his counterpart at Google, an engineer named
+Matt Cutts, who helped build and then ran the company’s web spam team before stepping back in 2014 and leaving in 2016.
+
+Cutts was a celebrity among SEOs, constantly mobbed with questions and complaints. When we spoke on the phone, he told me that before he left, he determined
+that he had sent about 50,000 emails to people outside of Google during his decade and a half at the company.
+
+Several SEOs described trying to get Cutts to drink at conferences so he would “spill secrets,” as one put it, but what generally ended up happening was that
+all the SEOs would get drunk instead. Meanwhile, Cutts would stay sober, jotting down the latest SEO methods on a small notepad, sitting quietly in the corner
+at the bar.
+</item 55>
+
+<item 56>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+When I finally manage to jump through the flaming rings necessary to be allowed to speak on the phone with Sullivan, albeit with a communications chaperone also
+on the line, I find him angry and defensive. He’s annoyed that anyone would think his era at Google has been less transparent than Cutts’ was: “We have reams of
+help documents!” he told me. “We have more people assigned to work with SEOs than we did when Matt worked here!”
+
+Sullivan is mad that the public and the media don’t really understand what he considers to be basic precepts about how search works, leading him to adopt a
+rather scolding tone online. He’s frustrated that people want to know every last detail about Google’s algorithm because even “if we listed all one thousand of
+the ranking signals” and how much each was worth, he said, that wouldn’t actually help SEOs do their jobs better, anyway.
+
+And most of all, Sullivan is pissed that people think Google results have gone downhill. Because they haven’t, he insisted.
+</item 56>
+
+<item 57>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Not Sonos fast there: Audio company Sonos scored a big $32.5 million win against Google a while back. Now it transpires that the company’s patents were deemed
+unenforceable and invalid. Whoops. A federal judge threw out the $32.5 million win this week.
+
+When it clicks, it really clicks: We took a deep look at Pixel 8, and our team discovered that it delivers solid performance and design upgrades. The camera got
+a particularly enthusiastic shout-out, with Darrell declaring that Google’s Pixel 8 Pro camera is the new mobile photography champ, and Brian waxing lyrical
+about the phone’s picture-snapper in “The camera’s still the thing.”
+
+Who needs computers anyway?: It seems like all our mobile devices may be starting to cannibalize sales of personal computers — Ron reports that PC shipments
+decline slows in Q3 2023 and that Apple’s sales plunge over 23%.
+
+Let’s get together
+
+Reddit’s API-powered chaos continues, but it appears that things are starting to resolve a little.
+</item 57>
+
+<item 58>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+More from the US v Google trial: Vertical search, pre-installs and the case of Firefox/Yahoo
+
+We’re nearly two months into the Justice Department’s landmark antitrust case against Google — one of the biggest fights in tech antitrust since the U.S. took
+Microsoft to trial in the 1990s — and the revelations just keep getting juicier.
+
+In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have
+Chrome preinstalled on iPhones. Over the past couple of weeks, more of the inner workings of Google has come to light, including some of the search engine’s
+most lucrative search queries, what the revenue-share agreements between Google and Android OEMs look like and why Expedia has a bone to pick with Google.
+
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S.
+</item 58>
+
+<item 59>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+“We try to get people up and running as fast as possible.”
+
+Cue acknowledged that the ISA didn’t allow Apple to offer users a choice of search engines during setup but also said he wouldn’t want to do that anyway. “We
+try to get people up and running as fast as possible,” he said. “Setup is just critical stuff.” Showing people a bunch of search engines they’ve never heard of
+would just be a bad user experience, he argued; even Cue couldn’t remember the names of some of the alternatives to Google. “We make Google be the default
+search engine,” he said, “because we’ve always thought it was the best. We pick the best one and let users easily change it.” (“Easily” is a persistent point of
+contention in this trial — DuckDuckGo’s CEO, who testified last week, claimed it takes “too many steps” to switch.)
+
+As for the privacy pop-ups? This is where Bellshaw began to press on how exactly Apple decided Google had the best product.
+</item 59>
+
+<item 60>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Now, onto the roundup!
+
+A window into Google’s most popular search queries
+
+Judge Amit Mehta ruled to make a list public that provides a glimpse of which search terms make Google the most money. The list of popular search terms ordered
+by revenue includes 20 terms that were lucrative for the week of September 22, 2018. Information like revenue per search term, how many queries each of those
+terms got, along with a separate list of popular search terms ordered by queries (not revenue), were all redacted. The list we can see is as follows:
+
+iPhone 8
+
+iPhone 8 plus
+
+Auto insurance
+
+Car insurance
+
+Cheap flights
+
+Car insurance quotes
+
+DirecTV
+
+Online colleges
+
+AT&T
+
+Hulu
+
+iPhone
+
+Uber
+
+Spectrum
+
+Comcast
+
+Xfinity
+
+Insurance quotes
+
+Free credit report
+
+Cheap car insurance
+
+AARP
+
+LifeLock
+
+There is, in reality, little surprise here.
+</item 60>
+
+<item 61>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+He said there still isn’t one.
+
+That question — whether Apple picked Google because it’s the most lucrative choice or the best product — was a key part of Cue’s testimony and, in fact, a key
+part of the DOJ’s entire case against Google. The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and
+many others — to ensure it is the default search engine on practically every platform.
+
+Bellshaw asked Cue a number of questions about the iPhone setup process. Those three screenshots showed the Appearance screen that shows up when you first boot
+up your iPhone so you can pick font sizes; the location-tracking prompt that appears when you open Maps; and the App Tracking Transparency pop-up that tells you
+when an app wants to collect your data. Cue objected to all these things being considered part of setup, but Bellshaw’s point was that Apple offers its users a
+choice about lots of things, big and small, and that search could be one of them.
+</item 61>
+
+<item 62>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Cutts, as an individual, seemed to be doing his best within an expanding corporate behemoth to remain approachable. “One thing I learned early on was that even
+when someone was shouting at you, there’s a kernel of something you needed to hear in the other person and listen to and respect and integrate and incorporate,”
+he told me. Most SEOs told me they appreciated his efforts. When Google released the 2011 Panda update that devastated a generation of SEO businesses, Cutts
+openly recognized the impossible task of achieving the kind of epistemological neutrality that Google’s founders had initially promised, telling Wired at the
+time, “[T]he only way to be neutral is either to randomize the links or to do it alphabetically.”
+
+Still, some blamed him personally for “killing” companies that had relied on the previous iteration of the algorithm. During his time at Google, Cutts regularly
+received death threats and hate mail.
+</item 62>
+
+<item 63>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“Maybe you ask a friend.”
+
+After hearing so much about what it was like to be an SEO, I decided it was time to better understand what’s been going on from the perspective of the search
+engine. Google was slow to allow someone to talk with me, possibly because of the giant PR clusterfuck that has been the company’s past year (accused by the
+federal government of being a monopoly; increasingly despised by the public; losing ground to Reddit, TikTok, and large language models), so I decided to start
+by meeting up with a chipper, charismatic man named Duane Forrester.
+
+Forrester was at Microsoft from 2007 until 2015, where he helped launch and manage Bing, the perpetual underdog to Google’s domination of online search. Before
+and after his time at Microsoft, Forrester worked as an SEO, so he sees the industry from both sides, like an aerospace engineer who spent a few years at the
+Department of Defense, left for the private sector, and now is much better at winning military contracts.
+</item 63>
+
+<item 64>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 64>
+
+<item 65>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Some people consider EEAT part of what’s making results better than ever. Others see it as a form of censorship, disproportionately affecting right-wing
+perspectives. Not every search query takes EEAT into account; Google has described heightened concern over sites that could impact safety, happiness, and the
+ability to be an informed citizen. But the point that really hit me was that for certain kinds of information, Google had undone one of the fundamental elements
+of what had made its results so appealing from the start. Now, instead of wild-west crowdsourcing, search was often reinforcing institutional authority.
+
+You can’t just be the most powerful observer in the world for two decades and not deeply warp what you are looking at
+
+This felt complicated at best. When it comes to health and wellness, for example, quackery is often in the eye of the beholder. Everyone knows someone who has
+struggled with the limits of Western medicine. So much of the original draw of the internet was the opportunity for outlier voices to be heard alongside
+established experts and elites.
+</item 65>
+
+<item 66>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Google is now making it the default sign-in method for all users.
+
+2 sec, let me text you some cash: When questioned about Mastercard’s prospects in emerging markets such as India, Mastercard’s CFO Sachin Mehra praised UPI for
+helping with digitization but voiced reservations about its commercial sustainability, saying it is an “incredibly painful experience” for ecosystem
+participants.
+
+Bravely browsing — or searching — for a new job . . . : Brave Software, the maker of Brave Browser and Search, confirmed that it has laid off 9% of its
+workforce across departments.
+</item 66>
+
+<item 67>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+We know that because they came to us and told us they were doing that. And we know it because after all that went down, I talked to an Activision employee who
+was close to that effort, working with the team building the store, and he reported that the entire store team Activision had employed to build their competing
+store had been disbanded as soon as Activision signed their deal with Google.
+
+[Editor’s note: We did not hear from such a person at trial; I’d be eager to speak to them now!]
+
+We know Activision was telling Google they were building their computing store; we know in Google internal discussions they said they didn’t want Activision
+building a competing store. They agreed to sign this deal, and they were gleeful about the fact they dissuaded perhaps their number one competitor at the time
+from launching their own store.
+
+Four years later, Microsoft acquired Activision Blizzard — and one of the big talking points from Microsoft to the European Union was that the merger
+strengthened the company overall in order to provide a viable computing store on iOS and Android.
+</item 67>
+
+<item 68>
+Here’s how Rainforest, a budding Stripe rival, aims to win over software companies (TechCrunch, 2023-10-08T14:16:01+00:00)
+They said: “Visa and MasterCard once imposed similar anti-steering rules on merchants accepting their cards but, after the Justice Department sued the networks
+for antitrust violations, they agreed in 2010 to eliminate their anti-steering rules as part of the settlement. With payments transitioning into the digital
+realm, PayPal has simply ripped a page right from the Visa and MasterCard [sic] playbook.”
+
+Meanwhile, Patrick McGahan, a partner at Scott+Scott who focuses on antitrust litigation, had an interesting take that actually involves both of those card
+giants. He told TechCrunch that the case illustrates that “the tensions between merchants and the payment system providers are not over, and that litigation
+regarding this key cost faced by merchants is likely to continue for some time.”
+
+He added: “Platform companies that operate as gatekeepers in their market, such as PayPal, will continue to be the subject of antitrust litigation as a result
+of the significant fees they charge.
+</item 68>
+
+<item 69>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Ray reassured me that I was not crazy. Google results today do feel different from how they felt just five or six years ago for two major reasons. The first was
+Google’s response to the disinformation panic around the 2016 election, which involved questioning the notion that the most reliable information could be chosen
+by a form of popularity, meaning how many links a site received from other sites. As a result, the algorithm seemed to change its approach to links, especially
+when it came to news and sites offering legal, financial, or health advice, and instead paid more attention to what Google came to call E-E-A-T: experience,
+expertise, authoritativeness, and trustworthiness.
+
+“E-E-A-T has had a pretty big impact on what types of results you see,” Ray told me. She’s done extensive (and fascinating) research around how certain sites
+have fared under these new guidelines: Urban Dictionary, down! Mayo Clinic, up! Some people consider EEAT part of what’s making results better than ever.
+</item 69>
+
+<item 70>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The process of this test did remind me how much data Google collects — not just my searches but anything I say to a smart speaker, any search result or ad that
+I click — which will be a point in favour of DuckDuckGo for some, even if it didn’t perform as well and is harder to read. The data collection does also mean
+that Google (not just search but also mobile widgets and other services) personalises to me more effectively. Loading Bing has overhauled its layout over the
+past year to be very graphic and augmented by generative AI explanations from its chatbot. I like the idea of being able to ask follow-up questions in searches
+this way, but in practice it’s not really there yet. In a search for “kids BMX bike green” (Google did pretty well and DuckDuckGo ignored the green part), Bing
+Chat offered a comparison of a few different options but they were too expensive. I asked, “any under $200?” and it replied with more options that were all over
+$300.
+</item 70>
+
+<item 71>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 71>
+
+<item 72>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 72>
+
+<item 73>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Yahoo was already well behind Google in terms of search technology at that point. But also, Firefox was very well behind Chrome, which ended 2014 with nearly
+50% market share and ended 2017 (when Google got prime default search position on Firefox) at nearly 65% of all web browser usage on desktop: and mobile is even
+more skewed to Chrome. In other words, the number of Firefox users might have been declining for other reasons, although pushing the blame on Yahoo certainly
+works in Google’s favor here!
+
+The trial continues…
+</item 73>
+
+<item 74>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+In 2009, Sullivan was described as “the closest approximation to an umpire in the search world,” so when he published “A deep look at Google’s biggest-ever
+search quality crisis” in 2017 and then took a job as Google’s public liaison for Search only a few months later, it felt to some SEOs as though a
+congressperson working on gun safety legislation had quit to become an NRA lobbyist.
+
+“There is a thread across the industry of people who believe that Google just made Danny an offer he couldn’t say no to, and it was designed essentially to take
+his voice out of the conversation,” Forrester told me. “I don’t believe that’s the case,” he went on, but compared to Cutts, “I think that Danny specifically
+stays out of a lot of public conversations because he is in those private conversations with businesses.”
+
+Was all that really Google’s fault? Or the SEOs? Or was this about something deeper and more human: the will to exploit something so much we destroy it.
+</item 74>
+
+<item 75>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“My favorite question to ask an SEO,” Cutts told me, was, “What’s the worst thing you’ve ever done?” which prompted responses that felt like “a cross between
+showing off and a confessional.” So many SEOs were tempted to reveal the vulnerabilities they’d discovered in Google’s algorithms, even when they were talking
+to the one person they really shouldn’t have been talking to, the guy who was planning to go back to his office and make those vulnerabilities disappear.
+
+As a former SEO himself, Forrester understood that the quality of Bing’s search results would be impacted by the work of SEOs, so it made sense to communicate
+with SEOs as much as possible. Cutts similarly tried to serve as a conduit between SEOs and Google, but Forrester felt that Google projected an attitude he
+described as: “We know what we’re doing, we will stop your attempts to game this, and you know what? We’ll just kind of ignore you, and when you give us
+feedback, eh, we don’t really care.”
+</item 75>
+
+<item 76>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+So far, its plan to forgo the gigafactory for local microfactories has proved anything but, writes Harri — thanks to missed production targets, low cash
+reserves, layoffs and a pivot.
+
+Audio
+
+It’s winter, it ain’t getting warmer (at least here in NYC), and I’d argue that there’s no better place to be than snuggled up indoors with a podcast for
+company. If you’re in need of material, TechCrunch has a few that should definitely be on your radar.
+
+This week on Equity, the crew dove deep into the encouraging signs from the fintech startup market, starting with Klarna’s Q3 results. From there, they looked
+at buy now, pay later consumer behavior and fintech fundraising results with a 2021 flavor.
+
+Meanwhile, Found featured Nasrat Khalid of Aseel, which started as an e-commerce company making it possible for local artisans in Afghanistan to sell to
+customers across the world.
+</item 76>
+
+<item 77>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+It was easy: buy links that led to your site and watch your ranking in Google’s results rise.
+
+I came to understand that, since the dawn of the internet, there have been people attempting to manipulate search and then people decrying those manipulations
+as the end of search’s ability to be useful. It works in cycles. People doing SEO find loopholes in the algorithm; critics complain about search results; search
+engines innovate and close the loopholes. Rinse, repeat.
+
+Before our current moment of widespread disillusionment with online information, the rise of SEO had reached a breaking point multiple times. In 2003, as Google
+approached the deadline to disclose pertinent business information leading up to its IPO, the company quietly released an update cracking down. By 2011, SEO was
+once again oppressively pervasive. TechCrunch published a story called “Why We Desperately Need a New (and Better) Google,” which argued that “Google has become
+a jungle: a tropical paradise for spammers and marketers.”
+</item 77>
+
+<item 78>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Eddy Cue, in a dark suit, peered down at the monitor in front of him. The screens in the Washington, DC, courtroom had briefly malfunctioned and left witnesses
+with only binders, but now the tech was up and running — showing an image of three iPhones, each demonstrating a part of the phone’s setup process. Cue squinted
+down at the screen.
+
+“The resolution on this is terrible,” he said. “You should get a Mac.” That got some laughs in an otherwise staid and quiet courtroom. Judge Amit Mehta,
+presiding over the case, leaned into his microphone and responded, “If Apple would like to make a donation…” That got even bigger laughs. Then everybody got
+back down to business.
+
+Cue was on the stand as a witness in US v. Google, the landmark antitrust trial over Google’s search business.
+</item 78>
+
+<item 79>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 79>
+
+<item 80>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Cue is one of the highest-profile witnesses in the case so far, in part because the deal between Google and Apple — which makes Google the default search engine
+on all Apple devices and pays Apple billions of dollars a year — is central to the US Department of Justice’s case against Google.
+
+Cue had two messages: Apple believes in protecting its users’ privacy, and it also believes in Google. Whether those two statements can be simultaneously true
+became the question of the day.
+
+Apple is in court because of something called the Information Services Agreement, or ISA: a deal that makes Google’s search engine the default on Apple’s
+products. The ISA has been in place since 2002, but Cue was responsible for negotiating its current iteration with Google CEO Sundar Pichai in 2016. In
+testimony today, the Justice Department grilled Cue about the specifics of the deal.
+
+When the two sides renegotiated, Cue said on the stand, Apple wanted a higher percentage of the revenue Google made from Apple users it directed toward the
+search engine.
+</item 80>
+
+<item 81>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+But Google denies pushing users towards the most monetisable subjects.
+
+Similarly, it’s also pretty common to see people complaining on the internet with some variation of “Google Search was a lot better 10 years ago”, which could
+absolutely be true. But it would be a stretch to assume that’s because of the company’s monetisation practices, when there’s a much simpler explanation. In
+2013, people were creating around 9 ZB of data every year (that’s nine zettabytes, or nine trillion gigabytes), which Google had to index constantly, whereas in
+2023 it’s more like 120 ZB. And not a whole lot of that is static websites like it was a decade ago, it’s live information that may be nested within various
+services and apps. What really happens when we search? Google has published extensive information about its Search procedures, so it’s not difficult to get its
+own take on what happens in the background when you send off a query.
+</item 81>
+
+<item 82>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 82>
+
+<item 83>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+she asked. “Or is this Google behaving differently than it used to?”
+
+Sullivan had tried to convince me that Google was not behaving differently and, in fact, had not changed its search criteria in any major way for the past 20
+years. Google wanted you to make good websites, and that was that. Everyone who tried to rank higher by messing with the algorithm would be blocked. Sullivan
+even insisted that what these rule-breakers did should not be called SEO: he deemed it all “spam.” What is spam? “Spam is stuff that search engines don’t like.”
+
+But the line between strategies that violate Google’s terms of service and strategies that don’t has always been blurry and inconsistently enforced. “I’ve never
+seen this much tension in the industry in terms of, like, what Google says to do and what people are doing and getting away with,” Ray told me. “If you’re gonna
+tell us that this stuff doesn’t work, make it stop working!”
+
+Ray seemed like the most reasonable person I had spoken to so far.
+</item 83>
+
+<item 84>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“They should untape the mouth!” someone shouted. “I’m not even scared.”
+
+As sunset turned to dusk, I found Daron Babin again, and he started telling me about one of his signature moves, back in the ’90s, involving fake domain names:
+“I could make it look like it was somebody else, but it actually redirected to me!” What he and his competitors did was legal but well beyond what the dominant
+search engine allowed. He never faced any consequences, but in the end, internet users at large felt the effects: “It muddied up Yahoo, ultimately,” he said,
+“but while it worked, we banked.”
+
+The situation sounded familiar. But I liked Babin. He was funny and smart, a keen observer of the SEO world. “We’re entering a very weird time, technologically,
+with AI, from an optimization standpoint,” he told me. Anyone who thought the internet was already saturated with SEO-oriented content should buckle up.
+</item 84>
+
+<item 85>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+In the beginning, the internet was seen as an improvement on the spirit of the public library. Here was an opportunity to transcend the gatekeepers controlling
+who could publish a book, allowing mankind to fully connect and share knowledge. Instead, we have ended up in a situation arguably worse than before, where
+nearly all online information runs through a single company, which assumes a veneer of civic utility, of impassive authority, when it is very much not a neutral
+entity.
+
+“There were so many true believers at Google in the early days,” Cutts told me. “As companies get big, it gets harder to get things done. Inevitably, people
+start to think about profit or quarterly numbers.” He claimed that, at least while he was there, search quality always came before financial goals, but he
+believes that the public underestimates how Google is shaping what they see, saying, “I deeply, deeply, deeply believe search engines are newspaper-like
+entities, making editorial decisions.”
+</item 85>
+
+<item 86>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 86>
+
+<item 87>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 87>
+
+<item 88>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 88>
+
+<item 89>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Although many of us may have rosy memories of how magical and cool Google seemed in the early days, most SEOs consider the years between 2003 and 2011 to be the
+boom times, when you could still get a fake corporate website listed above the real corporate website, and you could mess with the search results for a major
+political figure such that something sexual or racist would come up first.
+
+Google is harder to game now — it’s true. But the sheer volume of SEO bait being produced is so massive and so complex that Google is overwhelmed. “It’s
+exponentially worse,” Ray said. “People can mass auto-generate content with AI and other tools,” she went on, and “in many cases, Google’s algorithms take a
+minute to catch onto it.”
+
+The future that Babin had cackled about at the alligator party was already here. We humans and our pedestrian questions were getting caught up in a war of
+robots fighting robots, of Google’s algorithms trying to find and stop the AI-enabled sites programmed by SEOs from infecting our internet experience.
+</item 89>
+
+<item 90>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+However, the startup wants subscriptions to be its primary revenue driver. Deft is currently testing two paid tiers: a $10 a month plan, which will offer better
+search customization to filter out some brands, and a $20 per month plan, which will enable personal shopping service, that will continue to look for suitable
+products even after you stop searching manually.
+
+Up next, Deft aims to release a browser extension that helps users search for products by the end of this year or early next year. In the next three years, the
+company wants to build and release search APIs that other e-commerce sites could use.
+
+Challenges of building a search startup
+
+Given that it’s building a search solution for e-commerce, Deft already faces challenges from Amazon and Google. In September, Amazon updated its visual search
+feature that lets users snap a photo of a product and search for similar items on the platform. Google released its multi-search feature last year that lets
+users fuse images and text.
+</item 90>
+
+<item 91>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+He speculated that the company didn’t want the public to think too hard about how search works because that awareness “encourages regulators and makes people
+realize, ‘Oh, there’s a lot of money here.’”
+
+There has always been advertising and polemics from cranks, scammers, and liars. But now we see this stuff surfacing alongside truth, and we can’t tell the
+difference. We move through our lives with a greater sense of distrust and fear and insecurity. At the end of the day, it’s Google’s world, and the SEOs are
+only living in it.
+
+And as much as I might hate the way the SEOs who don’t follow Google’s rules have altered my online experience, the reality is that most people running a
+company will break whatever rules they are able to get away with breaking.
+</item 91>
+
+<item 92>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+The idea, O’Hara said, is to rethink social networking from the ground up.
+
+Ford shutters SaaS app for field work: Ford has shut down VIIZR, a software-as-a-service company that, along with Salesforce, built an app to help tradespeople
+like plumbers, locksmiths and electricians to schedule field appointments, send invoices and manage customers, Kirsten reports. VIIZR, which was announced in
+December 2021, was a separate company majority owned by Ford, with Salesforce as a minority investor.
+
+Apple bets on generative AI: Apple CEO Tim Cook pushed back against the notion that the company was behind in AI on Apple’s Q4 earnings call with investors, as
+he highlighted technology developments that Apple had made recently that “would not be possible without AI.” Cook also said that Apple was working on generative
+AI technologies, lending credence to reports suggesting the company is on track to spend $1 billion per year on developing generative AI products.
+</item 92>
+
+<item 93>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+I see Deft as creating a new kind of UX for purchasing,” he said.
+
+Startups like Neeva — which was founded by former Google execs — tried to convince people to switch to paid and private search with additional features.
+However, earlier this year, the startup shut down its consumer efforts and eventually got acquired by Snowflake.
+
+Pienaar said that Deft has to give compelling reasons to users to switch to its service.
+
+“Users’ natural behavior for search is to follow the path of least resistance, i.e. most people just pick up their phone and just use the default search engine.
+For Deft to change that behavior, they will need to create a high-value proposition,” he said.
+
+Amir Konigsberg, an investor and founder of e-commerce search startup Twiggle (which shut down), said his startup wanted to solve ChatGPT-type interactions in
+the shopping world. He said that the main problem for startups in this space is the go-to-market strategy and fundraising.
+</item 93>
+
+<item 94>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+He said that the main problem for startups in this space is the go-to-market strategy and fundraising.
+
+“The problem with competing with e-commerce players is not just about user experience, it’s also about logistics infrastructure and supply chain. So a startup
+catering to consumer search has to invest a lot of money into making it a viable business,” Konigsberg told TechCrunch.
+
+He also added that it will be difficult for a startup like Deft to build user loyalty while competing against Google and Amazon.
+
+Both Pienaar and Konigsberg said that Deft will have to involve retailers in the mix either as partners or as customers of their search product. Either way,
+it’s going to be interesting to see if Deft can build a user base on its own or sell its search feature to e-commerce retailers.
+</item 94>
+
+<item 95>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+He found the iMac to be lacking and not necessarily worth the upgrade from the 2021 model, excepting the M3 chip, which brings “impressive” performance gains
+over the already-powerful M1. As for the M3 Max MacBook Pro, Brian reports that, at $2,500 (plus some pricey add-ons), it successfully splits the difference
+between the Mac Studio and MacBook Air.
+
+Mozilla bets on a decentralized future: Sarah spoke with Mozilla senior director of content Carolyn O’Hara, who outlined Mozilla’s strategy where it concerns
+the “fediverse” — a collection of decentralized social networking applications, like Mastodon, that communicate with one another over the ActivityPub protocol.
+The idea, O’Hara said, is to rethink social networking from the ground up.
+</item 95>
+
+<item 96>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Because they haven’t, he insisted. If anything, search results have gotten a lot better over time. Anyone who thought search quality was worse needed to take a
+hard look in the mirror.
+
+“We have an entire generation that grew up expecting the search box to do the work for them,” he said. “We might do a better job of matching for a bulk of
+people, but for people who are super sensitive, when they have that fail moment, now it becomes, ‘All my searches aren’t good.’”
+
+The problem was not Google. The problem was not SEOs. The problem was kids these days.
+
+Of course Sullivan would say this, though. He works for Google. I felt like I began to understand why many SEOs had told me that Cutts’ departure had marked a
+major turning point in the history of the internet, emblematic of Google’s transition from idealistic startup to one of the most valuable and powerful companies
+to ever exist.
+</item 96>
+
+<item 97>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Google’s software is constantly crawling the web and updating its central index, which itself is more than 100 million gigabytes in size. When you enter a
+query, Search uses a few quick processes to decide the meaning of your question, including what kind of information you might be after. Then, beyond just
+looking for sites with the words you typed in, the system uses machine learning to rank results according to what it thinks you’re looking for, prioritising
+high quality and easy to use sites. If you allow it, Google does bring in some information it knows about you to further refine results, including your location
+and web history. If you’re looking to turn this off, it’s in your Google account settings called “Web & App Activity”. Google says it does not infer personal
+information like race or religion to shape results. Loading Google works with independent “search quality raters” to gauge the effectiveness of its processes,
+and says it ran almost 900,000 quality tests in 2022.
+</item 97>
+
+<item 98>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+“This lawsuit simply ignores how intensely competitive and dynamic the technology industry is today.” Walker also points out that, when faced with a situation
+where Google is not the default, users tend to spend some effort putting Google back in charge. When Mozilla made Yahoo! the default on Firefox, most users
+changed it to Google. And when people set up a Windows device for the first time they frequently sidestep the Microsoft default — “Google” was the number one
+search query on Bing in 2021 — despite Microsoft making that very annoying to do. This is a compelling point, and many of us will be well accustomed to dodging
+all of Microsoft’s pleading while trying to get Chrome and Google set as defaults whenever we set up a new PC. But all of these arguments do ignore the fact
+that Google and its competitors are not on an even playing field. The question remains, why do users prefer Google?
+</item 98>
+
+<item 99>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Looking at this from a less academic perspective, it’s worth noting that Google charges up to ten times more per transaction than you pay with PayPal or a
+credit card, which does seem like a lot! And though Epic can’t argue it in court, I’ll point out that Apple wasn’t able to explicitly justify a 30 percent fee
+to that case’s judge.
+
+On the other hand, it does kinda seem like Epic wants something for nothing! As far as I can tell, Epic hasn’t stated what kind of fee would actually be
+reasonable for Google to charge in exchange for placement in Google’s store — instead, Epic CEO Tim Sweeney seemingly suggests there shouldn’t be a Google fee
+at all if a developer wants to use its own payment system.
+
+How did Epic’s argument fare against Apple?
+
+Well… both sides lost! But Epic arguably lost more.
+</item 99>
+
+<item 100>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+the list of blue links in search results that are not sponsored. “Ad keyword matching is a long-standing and well-known process that is designed to connect
+people to relevant ads. A separate process, which has nothing to do with ads, is used to match organic results to a query,” he said. “It’s no secret that Google
+Search looks beyond the specific words in a query to better understand their meaning ... If you make a spelling mistake, or search for a term that’s not on a
+page but where the page has a close synonym, or if you aren’t even sure exactly how to search for something, our meaning matching systems help.” It is true that
+some search queries result in more ads than others, and what ads you get can vary wildly depending on your request, which is the result of the keyword matching
+Google uses to sell ads. But Google denies pushing users towards the most monetisable subjects.
+</item 100>
+=== END ITEM id=d23734969de83be0 ===
+
+=== ITEM id=390dbf3973650207 ===
+Gold sentences and facts:
+Sentence 0: On Oct. 12, 2023, Israel warned 1.1 million Gaza residents in the northern section of the enclave to leave for the southern region, in advance of a potential ground invasion.
+  Fact 0.0: On Oct. 12, 2023, Israel warned Gaza residents.
+  Fact 0.1: The warning was given to 1.1 million Gaza residents.
+  Fact 0.2: The warned residents were in the northern section of the enclave.
+  Fact 0.3: The warning told the residents to leave for the southern region.
+  Fact 0.4: The warning was given in advance of a potential ground invasion.
+Sentence 1: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+  Fact 1.0: Another user said that no one can carry out such a major attack against Israel without intelligence support.
+
+Retrieved items:
+<item 1>
+Seahawks vs. Giants live score, updates, highlights from NFL 'Monday Night Football' game (Sporting News, 2023-10-02T22:00:04+00:00)
+It was all Seahawks on “Monday Night Football” as the team turned in a dominant defensive effort en route to a 24-3 win over the Giants to wrap up Week 4 of the
+NFL season.
+
+In addition to sacking Daniel Jones 11 times, Seattle’s defense forced New York’s QB to commit three turnovers — a fumble and two interceptions, none more
+notable than rookie Devon Witherspoon's 97-yard pick-6 that turned the game on its ear.
+
+With the win, the Seahawks move to 3-1 on the season, including a perfect 2-0 record away from home. The Giants drop to 1-3 on the season and have been
+outscored 64-3 in two primetime home losses.
+
+The Sporting News tracked score updates and highlights from throughout Monday night's meeting between New York and Seattle.
+
+Seahawks vs.
+</item 1>
+
+<item 2>
+Prisco's Week 12 NFL picks: Jaguars beat Texans in AFC South battle, Saints get key divisional win vs. Falcons (CBSSports.com, 2023-11-23T21:30:38+00:00)
+Thursday, 12:30 p.m. ET (Fox, fubo)
+
+This is a big game in the division for both teams, a survival test for Green Bay and a big one for the Lions if they want to try and get home-field advantage in
+the conference. The Lions have had defensive issues as of late and Jordan Love has played well the past two weeks. That will keep the Packers in this game, but
+the Lions win it.
+
+Pick: Lions 31, Packers 27 (Result: Packers 29, Lions 22)
+
+Thursday, 4:30 p.m. ET (CBS, Paramount+)
+
+The Commanders are coming off a dud last week against the Giants, while Dallas is flying high. The Cowboys are playing as well as any team in the league.
+Washington's offensive line is an issue, which will lead to the Cowboys having a field day with their defensive front. Dak Prescott plays well again. Cowboys
+roll.
+</item 2>
+
+<item 3>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The 49ers knocked the Cowboys out of the playoffs in both of the last two seasons, so a win for Dallas on Sunday could be helpful just from a psychological
+standpoint.
+</item 3>
+
+<item 4>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+Jerry Jones said earlier in the week that Sunday night's game would show him how the Cowboys stack up against the NFL's best.
+
+The answer? Not very well.
+
+Everything that could go wrong for Dallas on Sunday did go wrong, in a game that confirmed a 49ers team that ended the Cowboys' season in each of the last two
+years remains a level above its NFC counterpart.
+
+The 49ers carved up Dallas' defense on the opening drive, and that was a sign of what was to come. Brock Purdy threw four touchdowns in the 42-10 rout,
+including three to George Kittle. Christian McCaffrey scored a touchdown for a 14th consecutive game as all of San Francisco's offensive weapons got involved.
+
+MORE: Comparing stats for NFC stars Nick Bosa, Micah Parsons
+
+Defensively, the 49ers were relentless. Nobody had a larger impact than Fred Warner, who finished the night with an interception, sack and forced fumble in a
+swarming performance.
+</item 4>
+
+<item 5>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+Their playoff hopes look much better after their stunning comeback vs. the Ravens.
+
+9. Jacksonville Jaguars 6-3 (4)
+
+The Jaguars got an NFC wake-up call against the 49ers, who were much more prepared after a Week 9 bye than they were. Jacksonville needs to forget that debacle
+and get back on track, stat. The team gets a division double vs. Tennessee and Houston before facing Cincinnati.
+
+10. Dallas Cowboys 6-3 (11)
+
+The Cowboys took advantage of their "no contest" vs. the Giants at home with Dak Prescott continuing to ball as a passer and runner. They need to keep the
+defense and running game success, too, in bigger games going forward.
+
+MORE: Inside the Cowboys historic offensive explosion vs. Giants
+
+11.
+</item 5>
+
+<item 6>
+Prisco's Week 12 NFL picks: Jaguars beat Texans in AFC South battle, Saints get key divisional win vs. Falcons (CBSSports.com, 2023-11-23T21:30:38+00:00)
+Dak Prescott plays well again. Cowboys roll.
+
+Pick: Cowboys 32, Commanders 16 (Result: Cowboys 45-10)
+
+Thursday, 8:20 p.m. ET (NBC, fubo)
+
+This is a huge division game for two teams that have had a good rivalry over the past decade. The Seahawks are coming off a bad loss to the Rams, while the
+49ers are coming off two dominant victories. Geno Smith is banged up, so his health is key. The 49ers have the look of a Super team again. They show it here.
+
+Pick: 49ers 28, Seahawks 19 (Result: 49ers 31-13)
+
+Friday, 3 p.m. ET (Amazon Prime Video)
+
+This Friday game the day after Thanksgiving isn't what it was expected to be with the Jets being an offensive disaster.
+</item 6>
+
+<item 7>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+But they also haven’t really beaten anyone. They were down 14 points to Carolina. Do you think they are coming back from 13 down against Philly? In my opinion,
+no.”
+
+Advertisement
+
+• Dallas Cowboys: Is this team any better than previous Dallas teams that fell short?
+
+What I think: It’s a tough time to evaluate the Cowboys fairly because they were so bad against San Francisco on a big stage in their most recent game. I just
+don’t see where Dallas is better or going to get considerably better, especially on offense. And every time they enjoy success, they seem to enjoy it a little
+too much. That is a reflection of their owner.
+
+Exec comment: “Run defense and consistency on defense, and then offensively, what is their identity? They just are not very good. Their best games are when they
+play great defense and get turnovers, but that is not going to happen enough, especially against the good teams.”
+
+• Detroit Lions: Have they fixed their defense?
+</item 7>
+
+<item 8>
+NFL power rankings: Lions, 49ers level up; Texans jump Bengals, Bills; Jets, Patriots sink to bottom for Week 11 (Sporting News, 2023-11-13T21:54:00+00:00)
+Week 10 in the NFL had some of the league's best teams not playing. But that didn't stop the excitement, with five teams winning on walk-off field goals and
+more games coming right down to the wire.
+
+With that, there were some surprising results and expected domination. Some favorites dug deep to win. Some underdogs turned in shocking upsets.
+
+Putting the latest wins and losses into a blender, here's Sporting News' updated look at how all teams stack up against each other, 1-32 going into Week 11:
+
+NFL WEEK 11 PICKS: Straight up | Against the spread
+
+NFL power rankings Week 11
+
+1. Philadelphia Eagles 8-1 (previous week: 1)
+
+The Eagles enjoyed a bye trying to get a little healthier for the more difficult stretch run in a top-heavy NFC as they have tough games at the Chiefs (the
+Super Bowl 57 rematch), vs. the Bills, vs.
+</item 8>
+
+<item 9>
+Cowboys vs. 49ers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-10-08T22:47:03+00:00)
+The Cowboys' offense looked very much like it did in last season's playoff exit -- uncomfortable and out of sorts. Dallas was sluggish through the first half of
+the game, and the night unraveled quickly when Dak Prescott threw three interceptions in the second half. It got out of hand so quickly that Sam Darnold entered
+the game for the 49ers with more than 12 minutes remaining.
+
+For Prescott and the Cowboys, questions about whether they can get over the hump against the class of the NFC will persist. While their wins have been dominant,
+Dallas already sits two games behind the Eagles in the NFC East.
+
+The 49ers are rolling right along, with all of their major offensive weapons now healthy and the defense living up to its billing as well. San Francisco, now
+5-0, doesn't face a team with a winning record until Week 10, though the Browns, Vikings and Bengals are far from automatic wins for Kyle Shanahan's team.
+</item 9>
+
+<item 10>
+Lions vs. Packers live score, updates, highlights from NFL 'Thursday Night Football' game (Sporting News, 2023-09-28T23:54:07+00:00)
+NFL WEEK 4 PICKS: Straight up | Against the spread | Projection model
+
+The Sporting News tracked live updates from Thursday's clash between the Lions and the Packers. Scroll below to check out highlights and live results as two of
+the NFC's oldest sides faced off for NFC North glory.
+
+Lions vs. Packers score
+
+1 2 3 4 F Lions 14 13 0 7 34 Packers 3 0 8 9 20
+
+Lions vs. Packers live updates, highlights from Thursday Night Football
+
+(All times Eastern)
+
+End of fourth quarter: Lions 34, Packers 20
+
+11:19 p.m.: Lions complete yet another fourth down, officially putting the game on ice.
+
+11:12 p.m.: Onside kick spills out of bounds, and it's looking like that might be that. Packers have one timeout remaining but Montgomery's fiery run through
+the tackles should make that obsolete.
+
+11:11 p.m.: FIELD GOAL!
+</item 10>
+=== END ITEM id=390dbf3973650207 ===

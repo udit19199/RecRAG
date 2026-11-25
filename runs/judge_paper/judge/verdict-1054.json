@@ -1,0 +1,17 @@
+[
+{"id": "696fbacdcfc71735", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 91, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 91, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 40, "quote": "Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 40, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 91, "quote": "how Google tried to take it further and have Chrome preinstalled on iPhones and more"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 91, "quote": "Monday’s trial hearing revealed plenty of juicy tidbits, including"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 40, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 40, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 49, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 49, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 49, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 49, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 49, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means"}]}
+]}
+]

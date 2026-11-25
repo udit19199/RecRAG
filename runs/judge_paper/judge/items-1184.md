@@ -1,0 +1,2144 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 7 items.
+
+=== ITEM id=47f86560ec7f8866 ===
+Gold sentences and facts:
+Sentence 0: Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio headsets on Delta flights.
+  Fact 0.0: Cardholders can get 20% back as a statement credit.
+  Fact 0.1: Cardholders can get 20% back when they purchase eligible pre-purchased meals on Delta flights.
+  Fact 0.2: Cardholders can get 20% back when they purchase eligible in-flight food purchases on Delta flights.
+  Fact 0.3: Cardholders can get 20% back when they purchase eligible alcoholic beverages on Delta flights.
+  Fact 0.4: Cardholders can get 20% back when they purchase eligible audio headsets on Delta flights.
+Sentence 1: And for Black Friday, it's on sale for over $400 off, knocking the price down to a super impressive $297.
+  Fact 1.0: The product is on sale for Black Friday.
+  Fact 1.1: The product is on sale for over $400 off.
+  Fact 1.2: The product's sale price is $297.
+  Fact 1.3: The $297 price is described as super impressive.
+
+Retrieved items:
+<item 1>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+Retailer memberships will pay for themselves (eventually)
+
+To get early access to Black Friday and Cyber Monday deals — or to get access at all — some retailers offer memberships. Most are familiar with Amazon Prime,
+which offers a free 30-day trial and unlocks special prices on top of free shipping and other perks, but there are others. Costco is another popular example
+that’s been around for a while. Its $60 membership pays for itself quickly with holiday purchases, especially if you buy food products in bulk (this is outside
+of Polygon’s purview, but you cannot beat its deal on Kerrygold butter).
+
+Walmart Plus costs $99 per year ($50 for a limited time), and serves as a ticket to get in on deals before other Walmart shoppers, plus other perks. Note: You
+won’t get early access to deals with its free 30-day trial; you must be a paid member to earn access, so hit “Skip trial for Early Access” when signing up.
+</item 1>
+
+<item 2>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+I’ve had my Slice Micro for a few months, so I’m not worried about it dulling yet, but it is unclear if the blade is replaceable.
+
+Headphone hanger
+
+Kaitlin Hatton, audience manager
+
+Anchor Pro under-desk headphone hanger $ 12 $ 15 20 % off $ 12 $ 12 $ 15 20 % off An under-desk dual headphone hanger that uses 3M adhesive for mounting and an
+included Velcro strap to anchor a headphone cable. $12 at Amazon
+
+I gave this a try for one of our TikTok videos, and it has not disappointed me yet. I use it to hold my Razer Kraken headset and some extra cords. It’s small
+enough to remain out of the way but large enough to hold more than the headset itself. It has a pretty strong hold and doesn’t give, even as I raise my standing
+desk up and down several times a day.
+</item 2>
+
+<item 3>
+The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more (Engadget, 2023-11-27T10:00:30+00:00)
+It dropped to an all-time low of $750 for October’s Prime Day at Amazon and now Amazon and Best Buy are selling it for the same price. It’s the budget pick in
+our guide to MacBooks and the top pick in our guide to budget laptops. Check out our review from when it first came out in which we praised its quick speeds,
+excellent screen and good battery life.
+
+Cyber Monday deals on Apple accessories
+
+$100 Apple Gift Card + $15 Amazon credit
+
+If you purchase an Apple gift card totaling $100 or more from the retailer, you can get $15 in Amazon store credit for no extra cost. Just use the code
+APPLET5USA at checkout to see the offer.
+</item 3>
+
+<item 4>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+However, it likely won’t be the last opportunity for you to save. As someone who’s been covering deals for The Verge and Polygon for years, I’m shocked by how
+often I see these low prices, often spoken of as if they’re a flash in the pan, extending through much of December. That said, it’s more likely that price cuts
+on products you want can go by unnoticed unless you’re tracking deals yourself.
+
+Track deals yourself
+
+We love to tell you about great deals. But there’s a limit to the kind of products that we write about, and the ones that we see. If you’re not comfortable
+leaving it up to the chance that we’re going to tell you about price cuts on the products you really want, you have the power to track deals with relative ease.
+
+If you only shop on Amazon, CamelCamelCamel remains one of the best tools for tracking price changes and history for products.
+</item 4>
+
+<item 5>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+Black Friday and Cyber Monday may be in the past, but some sales are still hanging around (although maybe not for long). For more leftover deals we recommend
+across all categories, be sure to check out the rest of the Cyber Monday still available here.
+
+Every month or so, we like to ask our staff about their favorite stuff — whether it’s pet toys, travel aids, kitchen gadgets, or straightforward tech. And the
+results are usually very different, very interesting, and a lot of fun.
+
+In celebration of the annual post-Thanksgiving sales, we looked through some of our recent “favorites” articles and found deals on a lot of the tech, kitchen
+tools, travel aids, and pet toys we like. We thought we’d list a few in case you’ve read about them in the past and thought, “Well, that sort of sounds good,
+but it’s a bit pricey.”
+</item 5>
+
+<item 6>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+The only transactions you won’t earn rewards on are the following:
+
+Balance transfers
+
+Cash advances
+
+Purchases of traveler’s checks
+
+Purchases of prepaid cards or reloading card balances
+
+Person-to-person transfers, such as Venmo transactions
+
+One important thing to note: American Express doesn’t allow cardholders to earn rewards during a billing period if the cardmember hasn’t paid the minimum
+payment due by the due date.
+
+Does American Express Cash Magnet® Card offer a new customer bonus?
+
+If you are a new customer, you can qualify for a $200 statement credit if you spend $2,000 in the first 6 months of card ownership. Once you’ve reached the
+spending threshold, American Express will credit the $200 to your account as a statement credit. However, it can take eight to 12 weeks after reaching the
+spending requirement to receive the credit.
+
+The bonus on the American Express Cash Magnet® card is relatively low—it’s possible to find cards without annual fees that offer higher bonus amounts—but the
+bonus offer gives customers more time to reach the spending threshold.
+</item 6>
+
+<item 7>
+The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more (Engadget, 2023-11-24T09:30:32+00:00)
+Now it’s back down to that low at Amazon, Target and Best Buy. The smaller iPad got a refresh last year, adding a new Liquid Retina screen, a Touch-ID top
+button instead of a Home button, and a USB-C charging. The performance is snappy and the integration with the second-generation Apple Pencil makes it excel as a
+digital notebook. As we said in our review, with the mini, Apple “quashes notion that ‘smaller’ means ‘lesser.’”
+
+Apple accessories Black Friday deals
+
+$100 Apple Gift Card + $15 Amazon credit
+
+If you purchase an Apple gift card totaling $100 or more from the retailer, you can get $15 in Amazon store credit for no extra cost. Just use the code
+APPLET5USA at checkout to see the offer.
+</item 7>
+
+<item 8>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+Many cards require cardmembers to reach the spending threshold within three months, so unless you spend a significant amount of money each month with your card,
+you’re unlikely to reach the spending requirement.
+
+With the American Express Cash Magnet® card, you have six months to reach the spending threshold. Even if you only use the card for routine expenses, such as
+utility bills, streaming services, gas for your car or groceries, you could likely reach the spending requirement within six months and earn the $200 cash back
+bonus.
+
+How to redeem American Express Cash Magnet® Card cash back rewards
+
+If you have the American Express Cash Magnet® card, you can redeem your cash back rewards for statement credits to your account.
+
+There is no minimum required to redeem rewards. Rewards will be in the form of a statement credit of $1 for every reward dollar you redeem. For example, if you
+have 50.50 reward dollars, you can redeem those rewards for a $50.50 statement credit.
+</item 8>
+
+<item 9>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Salesforce’s calculations of average order value were equally modest. Globally, average orders were up just 2% to $103 per “basket” while in the U.S. they were
+up a paltry 1% to $119.
+
+Mobile devices had a standout year: Adobe said that some $3.3 billion was spent over mobile devices on Thanksgiving, up 14% and an all-time record for the day.
+
+Salesforce added that online traffic in general to e-commerce sites, which includes browsing, was up too, but again only in single digits of 4% globally and 6%
+in the U.S.
+
+The two are actively tracking sales for today, Black Friday, and for the whole of the “Cyber Weekend” — which not only kicks off holiday shopping but has a
+particularly strong showing in online sales due to people traveling to be with family.
+</item 9>
+
+<item 10>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+The the magnetic clip mount and long-lasting, fast-charging battery are also reasons to buy.
+
+Masterclass Black Friday deal
+
+Masterclass’ Black Friday deal gives you two memberships for the price of one, starting at $120 per year. That provides two individual memberships, while you
+can pay a total of $180 for access for two devices simultaneously, content downloads and a Family membership that covers six devices. Masterclass could be a
+good gift option for people who love to learn or collect hobbies as it provides access to hundreds of hours of video of masters of their craft explaining how
+they do their work. Some classes have exercises you can complete as well, making it feel more like a real class. This deal will be available until the end of
+the day on Black Friday proper.
+
+Headspace Black Friday deal
+
+Headspace Headspace $35 $70 Save $35 Headspace has knocked 50 percent off its memberships for Black Friday, so you can pay only $35 to get one year of access.
+</item 10>
+
+<item 11>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Ultimately, whether it's worth getting a Nest Hub or Echo Show depends on what services you use: If you own a bunch of Nest devices and depend on apps like
+Gmail, Google Calendar and Google Photos, Google's display will make sense. If you want a larger model with a webcam and stronger speakers, the 10-inch Nest Hub
+Max is also on sale for $129.
+
+Samsung T9 SSD
+
+The latest Samsung T9 portable SSD is on sale for $110 right now for a 1TB drive, which is the best price it’s been since it came out last month. You can snag
+this Black Friday deal from Amazon or Samsung directly. The T9 is the newest iteration of Samsung’s popular portable drive that we’ve long been fans of, and it
+supports read and write speeds of up to 2,000 MB/s. It also has dynamic thermal guard to prevent overheating, plus it comes with a USB-C to C and USB-C to A
+cords so you can use it with a variety of devices.
+</item 11>
+
+<item 12>
+The 26 best Amazon Prime Day deals you can still shop for today (Engadget, 2023-10-12T15:44:16+00:00)
+For six months of stored footage, you'll need a Nest Aware membership.
+
+Google Nest Thermostat
+
+Google Google Nest Thermostat $90 $130 Save $40 The Google Nest Thermostat lets you control your heating and cooling from anywhere and suggests tweaks to help
+you save money. This Black Friday deal takes $40 off the list price. $90 at Amazon
+
+In other Google deals, the Nest Thermostat is on sale for just $90, which is only about $10 more than the lowest price we've tracked and $40 off Google's MSRP.
+This is Google's entry-level smart thermostat, but it still lets you control your heating and cooling from anywhere, suggests tweaks to help you save money, and
+in some cases, can entitle you to rebates from your utility provider. It's all relatively easy to program, and it works with Google's Nest Hub and other smart
+displays like the Echo Show.
+
+Beats Studio Pro
+
+The Beats Studio Pro headphones are on sale for $180 right now.
+</item 12>
+
+<item 13>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+One of the company's 67W USB-C chargers is 37 percent off, bringing it to $38 and matching its all-time low. Our top 65W fast wall charger, Anker's 735
+GaNPrime, is down to a new low price after a 38 percent discount. And the Anker Nano Power Bank is seeing one of its first discounts since coming on the market
+a couple months ago.
+
+Meta Quest 2 VR headset
+
+The Meta Quest 2 VR headset is $50 off and down to $249 at several retailers. That matches the best price we’ve seen. At GameStop and Target, you can get the
+device with a $50 gift card. Despite the launch of the impressive Quest 3, we still consider the Quest 2 to be one of the best VR headsets available right now —
+precisely because of its more affordable price.
+</item 13>
+
+<item 14>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+TP-Link Deco EX75 Wi-Fi 6E mesh router
+
+TP-Link’s Deco EX75 mesh router system with two beacons is $100 off and down to a record low of $200. This is our top pick for a Wi-Fi 6 mesh router system, and
+the two-pack should cover up to 5,500 square feet with stable connectivity. When we tested the three-pack, we were impressed by how well the system balances
+power with user friendliness. Its network is reliable and fast, and its companion app is easy to use and clearly shows you things like all of the devices
+connected to your network, current speeds and more.
+
+Xbox Series X
+
+The Xbox Series X bundled with Diablo IV is down to $439 from Walmart. The console itself has a list price of $500 and the game is typically listed between $40
+and $70, so this is like getting a $60 discount on the console plus a free copy of the huge action-RPG.
+</item 14>
+
+<item 15>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+A standout is the Ranger Backyard Bundle 2, which is $145 off and down to $320. It includes the company’s most compact fire pit along with its accompanying
+shield, stand, lid and shelter. Everything you’d need for an easy setup right out of the box is included in this bundle, and the 2.0-version of the Ranger
+includes a removable base plate and ash pan, both of which make the fire pit much easier to clean.
+
+ProtonVPN Black Friday deal
+
+Our favorite VPN service, ProtonVPN, is having a rare sale for Black Friday that brings a monthly subscription down to only $4 for a total of 30 months. That
+means you’ll pay $120 for two and a half years of access, which is a pretty good deal. ProtonVPN passed our tests with high marks, but what made it stand out
+among other VPN security services was its independently audited no-logs policy, and the fact that the company has proven they don't comply with law enforcement
+requests to reveal data.
+</item 15>
+
+<item 16>
+The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more (Engadget, 2023-11-27T10:00:30+00:00)
+Just use the code APPLET5USA at checkout to see the offer. The deal applies to the digital version of the card; as of this writing, you can get the credit with
+a physical Apple gift card as well by using the code APPLET5USAP, though you may not want to clip the coupon on those cards' product page, as Amazon's listing
+says that will only give you a $10 credit. As a reminder, you can use an Apple gift card for App Store credit, subscription services like Apple Music or iCloud,
+and/or purchases made at a physical Apple store.
+
+Apple AirTags
+
+A four-pack of Apple AirTags is $80 right now at Amazon, thanks to a 19 percent discount. They go for $29 each at full price, so the deal will save you $9 a
+pop. AirTags are our top picks for Bluetooth trackers for iPhone users as they tap into Apple’s disturbingly vast FindMy network, using other Apple mobiles to
+find your lost stuff.
+</item 16>
+
+<item 17>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Samsung microSD card sale
+
+If you need a new microSD card for your Nintendo Switch, Steam Deck or GoPro, a trio of Samsung microSD cards we recommend are also down their lowest prices to
+date. The 128GB version of the Samsung Pro Plus is down to $11 at Amazon, B&H, Best Buy and others, while the 256GB and 512GB models are down to $18 and $32,
+respectively. Beyond that, the 256GB Samsung Evo Select is on sale for a new low of $15 and the 256GB Samsung Pro Ultimate is available for $25.
+
+The Pro Plus is the top overall pick in our microSD card buying guide, as it consistently ranked among the fastest cards we tested despite its relatively
+affordable price tag. The Pro Ultimate offers faster read speeds, so it could be worth the step up if you often move files between your card and a computer.
+</item 17>
+
+<item 18>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Is the Delta SkyMiles Gold Business Card right for you?
+
+The Delta SkyMiles® Gold Business American Express Card is best for business owners who plan to fly with Delta frequently. Many of the card’s perks can be used
+specifically on Delta flights. It’s a good card to hold on to long-term for the perks and discounts even if your spending is best put on another business card.
+
+Frequently asked questions
+
+Is the Delta SkyMiles Gold Business American Express card worth it?
+
+The $99 annual fee on the Delta SkyMiles Gold Business American Express card may be worth it for business owners who frequently travel with Delta. The card
+offers perks like a free checked bag that could easily cover the annual fee.
+
+How much is the Delta Gold Business Card annual fee?
+
+The Delta Gold Business card has a $99 annual fee, but there’s a $0 intro fee for the first year.
+
+Is Delta SkyMiles Gold Card hard to get?
+</item 18>
+
+<item 19>
+The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more (Engadget, 2023-11-27T10:00:30+00:00)
+They carry a list price of $169 but often sell for closer to $150, so this is $10 off the usual. These non-Pro AirPods came out in 2021 and got a review score
+of 88 from us. They pair quickly with iPhones and are a good complement to Siri’s helpfulness. They don’t have ANC however — you’ll need to go for the AirPods
+Pro for that feature — but they do have Adaptive EQ which monitors and adapts sound in real time. The fit is comfortable and they’re water-resistant so they can
+handle workouts or the weather.
+
+Apple Watch Cyber Monday deals
+
+Apple Watch Ultra 2
+
+The Apple Watch Ultra 2 is now $739, which is $60 off. It sold for $9 less during Black Friday and is one of the few Apple products to not maintain its pricing
+for Cyber Monday. Both Amazon and Best Buy are selling it for $739.
+</item 19>
+
+<item 20>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+$21 at The Verge Store
+
+Verge Deals / Sign up for Verge Deals to get deals on products we've tested sent to your inbox daily. Email (required) Sign up By submitting your email, you
+agree to our Terms and Privacy Notice . This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+</item 20>
+
+<item 21>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+Table of Contents Table of Contents Echo, Fire TV, and Kindle deals Apple deals TV deals Laptop deals Headphone and earbud deals Tablet deals Gaming deals
+Speaker deals Vacuum deals Kitchen deals Smart home deals Fitness deals Beauty tech deals Drone deals Camera deals Lego deals Gift card deals
+
+UPDATE: Nov. 27, 2023, 5:00 a.m. EST This post has been updated with all of the latest Cyber Monday deals available at Amazon.
+
+Amazon is dragging out the year's biggest shopping holiday(s) into 11 days of deals.
+
+The retail giant began its Black Friday sale in the early morning of Friday, Nov. 17 (a week ahead of schedule) and was on top of making the switch to Cyber
+Monday language in the wee hours of Saturday, Nov. 25. Official Cyber Monday mode, which is currently on through Monday, Nov. 27, includes both a ton of deals
+carried over from Black Friday plus some new ones.
+</item 21>
+
+<item 22>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+$1000 at Best Buy
+
+Roku Streambar $ 100 $ 130 23 % off $ 100 $ 100 $ 130 23 % off The Roku Streambar is a 14-inch soundbar that has a 4K / HDR streaming device inside of it, so
+you don’t need to purchase a separate set-top box. This provides audio as well as the content that you might want to watch via HDMI to your TV. $100 at
+Amazon$100 at Best Buy$100 at Target
+
+The best smartwatch and fitness tracker deals
+
+Samsung’s Galaxy Watch 4 is on sale at Best Buy starting at $149.99 ($50 off) in the Bluetooth-enabled, 40mm configuration. The older smartwatch includes health
+features like EKG, built-in GPS, and body composition measurements. Just note that its battery life isn’t great, and it lacks features Samsung’s newer Galaxy
+watches offer, like a body temperature sensor. Read our review.
+</item 22>
+
+<item 23>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+However, card users reported limits as low as $1,000. Others reported significantly higher limits, with some receiving limits over $10,000.
+
+Is Amex Cash Magnet a metal card?
+
+Unlike the American Express Platinum Card, which is a metal card with a heavier weight than most cards, the American Express Cash Magnet® is a standard plastic
+credit card.
+
+Please note that card details are accurate as of the publish date, but are subject to change at any time at the discretion of the issuer. Please contact the
+card issuer to verify rates, fees, and benefits before applying.
+
+Fortune Recommends™ credit ranges are a variation of FICO® Score 8, one of many types of credit scores lenders may use when considering your credit card
+application.
+
+Terms apply to American Express benefits and offers. Enrollment may be required for select American Express benefits and offers. Visit americanexpress.com to
+learn more.
+
+Eligibility and Benefit level varies by Card. Terms, Conditions, and Limitations Apply.
+</item 23>
+
+<item 24>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+Terms, Conditions, and Limitations Apply. Please visit americanexpress.com/benefitsguide for more details. Underwritten by Amex Assurance Company.
+</item 24>
+
+<item 25>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+The Cyber Monday sale promises deals on top gifts with savings of up to 80% on apparel, beauty, tech, toys, and more. Stay tuned for the best deals from the
+sale in the coming days.
+
+Note: All newly added deals are marked with a ✨. Deals with a strikeout were either sold out or expired at the time of writing.
+
+TV deals
+
+Why we like it
+
+The best Walmart Black Friday deals typically include giant rollbacks on TVs, and that tradition continues in 2023. Unfortunately, many popular 4K TVs sold out
+way before Black Friday officially began, but there are still solid cheap 4K TVs lingering. This 55-inch QLED TV was already affordable at full price and is now
+seeing an extra $50 discount, pushing it below $350. Thanks to its extra layer of quantum dots, you'll be able to appreciate rich colors and deep blacks even
+during the day.
+</item 25>
+
+<item 26>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+(Or, “That’s pretty cheap, but maybe I’ll wait until the price goes down some more...”)
+
+So here are some of our staff’s most-liked gear and gadgets, much of which is still discounted from Cyber Monday.
+
+Tech tools
+
+Electronics repair kit
+
+Alex Cranz, managing editor
+
+Tekton Everybit Tech Rescue Kit $ 22 $ 29 24 % off $ 22 $ 22 $ 29 24 % off A 46-piece screwdriver kit that can help you repair practically any tech device out
+there. $22 at Amazon
+
+I own at least two of these little Tekton Everybit Tech Rescue Kits, and I frequently buy them for friends and family, too. For an average price of $35, you get
+a screwdriver with nearly every bit you’d need for most gadgets (including the weird ones for Apple products), a plastic and a metal spudger, tweezers, and a
+suction cup. I’ve replaced batteries in iPhones with this kit.
+</item 26>
+
+<item 27>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Plugs like these are a simple way to add some smart capabilities to any home, letting you turn on lights with just your voice, set automated schedules and
+routines that are triggered by other activities. These would make a great stocking stuffer for anyone you know who's curious about smart home connectivity but
+hasn't yet taken the plunge.
+
+Xbox gift card
+
+You can pick up a $50 Xbox gift card for $45 right now at Amazon and Target, a digital item that would make a good gift for a gamer who’s otherwise hard to shop
+for. This card can be used on a number of things, including game downloads, in-game purchases, membership costs like Xbox Game Pass and more. If you or a loved
+one is loyal to a different console, there are other digital gift cards on sale, too. A $70 PlayStation Plus gift card is going for $63 right now, while a
+12-month Nintendo Switch Family plan is slightly discounted from $35 to $32.
+</item 27>
+
+<item 28>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+It’s a good option if you’re looking to extend network coverage in your home or add ethernet connectivity to another room.
+
+Streaming device and service deals
+
+Amazon Fire TV Stick 4K (2023) $ 25 $ 50 50 % off $ 25 $ 25 $ 50 50 % off The new Fire TV Stick 4K streams in 4K resolution, as its name suggests, and features
+mostly standard specs these days like Wi-Fi 6, Dolby Atmos / Vision, HDR10 Plus, and a 1.7GHz processor. $25 at Amazon
+
+Max (six-month subscription, with ads) $ 18 $ 60 70 % off $ 18 $ 18 $ 60 70 % off Max is offering new and returning customers a six-month subscription to its
+ad-supported plan for $2.99 a month instead of $9.99 a month until November 27th.
+</item 28>
+
+<item 29>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Apple MacBook Pro M3
+
+Apple released its its new M3-powered MacBook Pros just before Halloween, but the new notebooks are already on sale at Amazon, B&H and Best Buy. The entry-level
+14-inch variant with the base M3 chip, 8GB of memory and 512GB of storage is $1,449, or $150 off Apple's list price. We note in our review that the M3 chip may
+quickly begin to push the limits of what 8GB of RAM can handle, though. If you can afford to step up to a model with more memory, note that a version with
+Apple's M3 Pro chip and 18GB of RAM is also $200 off at $1,799. An M3 Pro version of the larger 16-inch Pro, meanwhile, is $200 off at $2,299.
+
+Hulu Black Friday deal
+
+Hulu’s Black Friday deal is a great one for anyone who has not subscribed to the ad-supported tier yet.
+</item 29>
+
+<item 30>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+With a $0 annual fee, it offers a flat cash back rate on all purchases, and there’s no limit on how much you can earn in rewards.
+
+Plus, it offers new cardmembers 15 months at 0% APR on purchases and balance transfers completed within the first 60 days of opening an account, giving you more
+than a year to make payments without interest.
+
+However, the card isn’t particularly useful if you travel often. It charges foreign transaction fees, and it lacks the travel benefits that other cards offer.
+
+American Express Cash Magnet® Card: Rewards
+
+Using the Cash Magnet Card to earn rewards is simple: you’ll earn an unlimited 1.5% cash back on every purchase you make.
+</item 30>
+
+<item 31>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+Read our review.
+
+Verge Deals on X (formerly known as Twitter) / Join more than 51,000 followers and keep up with the best daily tech deals with @vergedeals Follow us!
+
+The best video doorbell deals
+
+Blink’s Video Doorbell is half off at Best Buy right now, where you can grab it for just $29.99. The budget-friendly doorbell only features 1080p video, but it
+offers all the basics, including motion-activated recording and alerts, night vision, and two-way audio.
+
+The best smart security camera deals
+
+Ring Floodlight Cam Wired Pro $ 200 $ 250 20 % off $ 200 $ 200 $ 250 20 % off The Ring Floodlight Cam Wired Pro delivers high-quality video with adjustable,
+accurate motion detection, 2,000 lumens of light, and a good digital zoom. It offers smart alerts for people or motion and works with Ring or Alexa apps but not
+any other smart home platform.
+</item 31>
+
+<item 32>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Tile Slim (2022 version) $ 20 $ 35 43 % off $ 20 $ 20 $ 35 43 % off The Tile Slim is as thin as two credit cards, allowing you to stash the simple Bluetooth
+tracker in your wallet, passport holder, or luggage. It also features a 250-foot range and, more importantly, compatibility with both Android and iOS devices.
+$20 at Amazon$25 at Best Buy
+
+Smart home tech
+
+Meross Smart Wi-Fi Plug Mini (MSS110) $ 18 $ 23 22 % off $ 18 $ 18 $ 23 22 % off With solid performance and support for all of the major smart home platforms,
+this affordable Wi-Fi smart plug gives you the basics you need to control non-smart devices for less. It doesn’t have Matter or energy monitoring, but that’s
+alright at this price.
+</item 32>
+
+<item 33>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+It's lighter and 20 percent faster than the original Apple Watch SE from 2020, and it features most of the same health tools as the new flagship Apple Watch
+Series 9 — that includes heart rate notifications, Emergency SOS, Cycle Tracking, and Fall and Crash Detection. It also offers a comparable 18-hour battery life
+and water resistance.
+
+More smartwatch deals
+
+Gaming deals
+
+Why we like it
+
+With $439 as the new all-time low price for this Xbox bundle, you're basically getting a free copy of Diablo IV on top of a $60 discount on the Series X (which
+typically sells for $499.99 on its own). The only other retailer that was matching it at the time of writing was the Microsoft Store itself, and its markdown
+seems to have popped up recently in response to Walmart's doorbuster: A post on the Xbox Wire had previously pegged its Black Friday price there at $509.99.
+</item 33>
+
+<item 34>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+Then you have Best Buy’s My Best Buy Plus and Total memberships, costing $49.99 and $179.99, respectively. As for what each offers, check out Best Buy’s page
+that spells it all out. This page details all of the exclusive deals, which can help you quickly recoup the cost of the membership.
+
+Amazon Prime members get free games and DLC all year
+
+Amazon offers freebies for Prime members ’round the calendar year, not just during the holiday months. Those offerings expire over time and new ones are added,
+and Amazon’s suite of giveaways has improved over time.
+
+We collect all of the latest free games and DLC that Amazon is giving away right here. To give you a taste, Rage 2, Star Wars: Knights of the Old Republic, and
+Doom 3 are some of what’s up for grabs right now.
+
+You’ll get price matching if you shop at the right time
+
+Some major retailers are ensuring price protection on purchases right now.
+</item 34>
+
+<item 35>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+In the consumer electronics space, we expect most companies to have some sort of Black Friday promotion, so that means you will likely be able to get big-ticket
+items from brands like Apple, Samsung, Google, Sony, LG, Sonos and others for much cheaper prices.
+
+Your Black Friday Shopping Guide: See all of Yahoo’s Black Friday coverage, here. Follow Engadget for Black Friday tech deals. Learn about Black Friday trends
+on In The Know. Hear from Autoblog’s experts on the best Black Friday deals for your car, garage, and home, and find Black Friday sales to shop on AOL,
+handpicked just for you.
+</item 35>
+
+<item 36>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“Below is a list of product(s) in your catalog that are not currently eligible to be the Featured Offer because they are not priced competitively compared to
+prices for those products from retailers outside Amazon,” according to the email, which was viewed by CNBC. Unbeknownst to him, Chewy was running a discount
+promotion, and dropped the price of his product by a few dollars to $39.99 – less than the $43 offer on Amazon. The algorithm had flagged it as a lower offer,
+even though the item on Chewy cost $48.54 after shipping and taxes. Ruckel had to make a choice: Lower the price on Amazon or ask Chewy to raise the price of
+his product. He opted for the latter.
+
+Fred Ruckel's company Snuggly Cat makes Ripple Rug, an interactive play mat for cats.
+</item 36>
+
+<item 37>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+Fire TV streaming devices
+
+eero
+
+Kindles
+
+Miscellaneous Amazon devices
+
+Apple deals
+
+Why we like it
+
+Now that the 64GB 9th generation iPad has been going in and out of stock (you might be able to find it on sale for $229.99), our new favorite iPad deal at
+Amazon is the 10th generation 64GB model for $349. Compared to the 9th gen, the 10th gen classic iPad has a slightly bigger screen that's now also a Liquid
+Retina display (10.9 inches versus 10.2 inches), a faster A14 Bionic chip for smoother multitasking, and USB-C charging.
+
+More Apple deals
+
+AirPods
+
+MacBook
+
+Mac
+
+iPad
+
+Apple Watch
+
+TV deals
+
+Why we like it
+
+This 65-inch Fire TV from Amazon hit its lowest ever price this month, and we're not mad about it.
+</item 37>
+
+<item 38>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+Amazon-branded products range from home essentials like paper towels and batteries to snacks, office supplies, over-the-counter medicines, and more. This deal
+is an easy way to stock up on frequently-used items for cheap.
+
+Gift card deals are only worthwhile if you'd be spending the money anyway. With brands like Doordash, Instacart, Fandango, and more featured in this sale,
+chances are you can find a worthy discount. Each card has a unique coupon code listed on the product page. Enter it during checkout to save.
+
+Photograph: Amazon
+
+Amazon devices are almost always going on sale, but this is an especially nice deal since it comes with a free smart plug that typically sells for about $20. It
+isn't the same exact model, but a similar Kasa plug is the top pick in our Best Smart Plugs guide. The Echo Dot (5th Gen) is one of our favorite Alexa speakers.
+You can use the included smart plug to do things like ask Alexa to turn off your box fan or turn on a lamp.
+</item 38>
+
+<item 39>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+— More on mobile: Salesforce said that for the day, mobile accounted for 79% of all online traffic globally and 82% in the U.S., and that mobile wallets were
+really making a mark for reducing some of the buying friction on the smaller devices. Apple Pay saw transactions up by 47% compared to 44% up for all mobile
+wallets overall. Social on mobile — think Instagram links, TikTok and Snapchat — has become an influencer in itself. These collectively accounted for 13% of all
+traffic referrals to sites. Notably, they are not where the purchases are being made for the most part, though.
+
+“Mobile traffic and sales are soaring as people are on the go once again this holiday weekend,” said Salesforce VP and GM, Retail, Rob Garf, in a statement.
+“Consumers are embracing mobile wallets to break down friction between discovering on social and purchasing on mobile.”
+</item 39>
+
+<item 40>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Every Black Friday and Cyber Monday, there’s always a ton of hype about the discounts on big-ticket items — you know, the deals on the OLED TVs, game consoles,
+and tablets of the world. But it never fails that many of the ultra-cheap items make for some of the most clutch deals, namely because spending very little on a
+small accessory you end up using all the time can be the most gratifying.
+
+This year, throughout the annual shopping weekend, we’re once again keeping an eye out for the best tech deals on those little gadgets and gizmos under $25.
+We’ve also got roundups for those working with $50 or $100 budgets, but the items below are pretty much as cheap as you can get in the tech world without simply
+buying absolute crap that’s destined to end up as e-waste.
+
+Some of these helpful budget deals include gems like fully compatible MagSafe chargers for the latest iPhones, a colorful smart speaker, Apple’s handy AirTag
+trackers, and some staff favorites.
+</item 40>
+
+<item 41>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+Speaking of which, the app gives you access to 40+ daily live and 15,000+ on-demand connected fitness classes. The $297 Black Friday cost even includes a 30-day
+free trial of Echelon Premier membership to get you started.
+
+More fitness deals
+
+Toys and gift deals
+
+Why we like it
+
+In days gone by, Walmart's Black Friday sale was full of 40% or higher discounts, but the era of the doorbuster deal is ending. And that's why it's so
+refreshing to see a full 50% discount on a popular item like this. The LEGO Star Wars line includes tons of great gift ideas for fans of all ages, from Jedis to
+Padawans. This building kit of The Child, aka Baby Yoda, is just begging to live on your office desk.
+
+More deals on toys and gifts
+</item 41>
+
+<item 42>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+This Breville machine is much more than an air fryer, though — it has 13 cooking functions and a capacity that can handle a full turkey, so it’s more like a
+mini convection oven that sits on your countertop. It’s best for people who love to cook and have big families, or those who maybe don’t have a traditional oven
+and want a versatile (and relatively small) appliance for their kitchen.
+
+Fitbit Charge 6
+
+Fitbit’s newest fitness tracker, the Charge 6, is $60 off right now and down to a record low of $100. It’s the follow-up to one of our favorite fitness
+trackers, the Fitbit Charge 5, and it brings back the physical side button that previous generations had and integrates even more with Google services. It has
+an AMOLED touchscreen that displays all of your activity stats and smart notifications, a built-in GPS for mapping outdoor workouts, a week-long battery life
+and the ability to display turn-by-turn directions on its screen from Google Maps.
+</item 42>
+
+<item 43>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+AirTags connect to Apple’s Find My network, so you can see where your stuff is in that app and even force the gadgets to ring so you can more easily find your
+belongings (if you’re within close proximity).
+
+Apple Watch Series 9
+
+The new Apple Watch Series 9 has dropped to $329 at Amazon, Walmart and Target in a Black Friday deal. That’s $70 off its usual price and the lowest we’ve seen
+since it debuted in September. That’s the price you’ll pay for the 41mm model, but the 45mm models are now down to $359 with the same $70 discount. The Series 9
+took the crown of the best smartwatch you can get right now in our guide thanks to its new S9 SiP that brings slightly speedier performance and on-device Siri
+processing, the new Double Tap feature and other improvements.
+
+Apple Watch SE
+
+The Apple Watch SE has dropped to a record low of $179 for Black Friday, which is $70 off its usual price.
+</item 43>
+
+<item 44>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+After that, your APR for those transactions and any other balance transfer requests, will be 19.24%–29.99% variable Cash advance: 29.99% Cash advance fee:
+Either $10 or 5% of the amount of each cash advance, whichever is greater
+
+29.99% Penalty: 29.99% variable, this APR may be applied to new transactions on your account if you make one or more late payments; or your payment is returned
+by your bank
+
+Annual fee: $0
+
+Foreign transaction fee: 2.7% of each transaction after conversion to US dollars
+
+Late payment fee: up to $40
+
+Returned payment fee: up to $40
+
+Whether you’re looking for a basic rewards credit card or want to take advantage of a low APR for a major purchase or balance transfer, the American Express
+Cash Magnet® Card could be a worthwhile option for you.
+</item 44>
+
+<item 45>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Delta has more than 20 airline partners, so cardholders can book through airlines like Air France and Virgin Atlantic—though the 15% discount only applies to
+Delta and Delta Connection® flights.
+
+This discount is a reason to hold onto the card long-term as you could save thousands of miles over the course of a year if you are a heavy Delta user. The best
+bargains on award flights are found through Delta SkyMiles Award Deals. Recent deals from Seattle (SEA) have included Chicago (ORD) for 8,000 miles or Auckland,
+New Zealand (AKL) for 64,000 one way in economy plus taxes and fees. Flash sales come and go so it’s a good idea to keep an eye on the site.
+
+Other options include booking travel through Delta Vacations, using miles for upgrades or even buying champagne at the Delta Sky Club. That said, your best
+value will most likely be on award tickets.
+</item 45>
+
+<item 46>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Today’s 5.5% rate is definitely an improvement on last year’s 2.9%. But it’s nothing compared to the years preceding COVID-19, such as 2017, where we were
+seeing growth of 18% or more.
+
+Inflation is making an impact but not as much as the worry around consumer spending, said Adobe, which said that spending is being led actually by more
+discounts to encourage buying, rather than less buying of more expensive products. That leads one to wonder what kind of impact that’s having on retailers’
+margins.
+
+“Cyber Week is off to a strong start with Thanksgiving driving a record $5.6 billion in online spend as consumers took advantage of strong discounts and
+continued their shopping plans, virtually,” said Vivek Pandya, lead analyst, Adobe Digital Insights, in a statement. “Mobile shopping hit an all-time high, as
+shoppers took to their smartphones to get the best deals during holiday gatherings, further solidifying mobile’s growing importance in e-commerce.”
+</item 46>
+
+<item 47>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+That said, your best value will most likely be on award tickets.
+
+Rates and fees
+
+Annual fee: $0 intro annual fee for the first year (then $99)
+
+$0 intro annual fee for the first year (then $99) Foreign transaction fee: None
+
+None Purchase APR: 20.99%–29.99% variable
+
+Additional benefits
+
+Free first checked bag. Cardholders (and up to nine of their guests) can get the first checked bag for free. The standard bag fee is $30, so if you use this
+perk more than three times, you’ll save more in bag fees than the annual fee costs you.
+
+Cardholders (and up to nine of their guests) can get the first checked bag for free. The standard bag fee is $30, so if you use this perk more than three times,
+you’ll save more in bag fees than the annual fee costs you. Main Cabin 1 Priority boarding.
+</item 47>
+
+<item 48>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+We found this pair to offer exceptional ANC, a comfortable fit and sound quality that has more bass plus "increased clarity and enhanced warmth" compared to
+previous generations of the QC cans.
+
+Anker Soundcore Space A40
+
+The Anker Soundcore Space A40 is down to $54 for Black Friday, matching the lowest price we’ve seen. This is the top pick in our guide to the best budget
+wireless earbuds: It’s comfortable, it supports wireless charging and multi-device pairing, it can last up to 10 hours a charge and its ANC is remarkably
+effective for a sub-$100 pair. Its bassy sound should please most by default, but it can also be customized through a clean companion app. The only big
+negatives are its middling call quality and lack of wear detection.
+
+Dyson Black Friday deals
+
+Dyson Black Friday deals include a $200 discount on the Dyson V15 Detect Absolute, bringing the cordless vacuum down to $550.
+</item 48>
+
+<item 49>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+When you use the Amex Cash Magnet Card to pay for your entire car rental cost and decline the rental company’s collision damage waiver, you automatically
+receive secondary coverage against damage or theft of the rental vehicle. Global assist hotline: If you are traveling 100 miles or more from home, you can use
+the Global Assist Hotline to get emergency assistance, including medical referrals, emergency cash wires and missing luggage services. However, you are
+responsible for paying for the charges of any third-party service provided.
+
+If you are traveling 100 miles or more from home, you can use the Global Assist Hotline to get emergency assistance, including medical referrals, emergency cash
+wires and missing luggage services. However, you are responsible for paying for the charges of any third-party service provided. Plan It: On purchases of $100
+or more, you can take advantage of Amex’s Plan It feature. It allows you to split purchases into equal monthly payments at a fixed fee—similar to how buy now,
+pay later apps work.
+</item 49>
+
+<item 50>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Smash Bros. Ultimate was released way back in 2018, so it's hard to call this an amazing deal, but the game remains one of the console's best and still
+typically retails between $50 and $60 on its own. The Switch Online sub, meanwhile, goes for $8. If you're late to the Switch bandwagon, you could do much worse
+for a free pack-in game — but keep in mind that Nintendo is expected to unveil its next console at some point in 2024.
+
+Backbone One
+
+Photo by Mat Smith / Engadget Backbone One $70 $100 Save $30 Both the USB-C and Lightning versions of this recommended mobile game controller are 30 percent off
+for Black Friday. For the former, that's an all-time low. $70 at Amazon
+
+The Backbone One mobile game controller is down to $70 at Amazon, Target, Backbone's online store and other retailers. That's a $30 discount.
+</item 50>
+
+<item 51>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+For a carry-on, the two-wheel rollaboard is my preference, since it offers more interior space than a four-wheel spinner.
+
+Hydro Flask routinely make some of our favorite insulated water bottles. Most insulated travel mugs these days can keep ice water cold and hot coffee warm. What
+makes Hydro Flask stand out is the durability of their powder coating. I've (Matt Jancer) knocked several around for years in gyms, at the base of rock climbing
+walls outdoors, and rolling around the floorboards of my old car and have never managed to scratch or dent one yet.
+
+This electric bike has good looks, strong acceleration, and a better price point than the competition, especially right now with the major sale Wing is having.
+It's got a built-in headlight and taillight, comfortable hand grips, and a nicer seat than you'd expect. It checks a lot of boxes at its higher price point, so
+this is a great time to jump on this deal.
+
+When Is Amazon Prime Big Deal Days?
+</item 51>
+
+<item 52>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Credit cards similar to Delta SkyMiles Gold Business Card
+
+Cardholders who aren’t loyal to Delta and want more flexible options for redeeming their rewards should consider the Chase Ink Business Preferred® Credit Card,
+which has a similar annual fee but a more generous welcome bonus and rewards structure.
+
+Ink Business Preferred credit card vs. Delta SkyMiles Gold Business Card
+
+The Chase Ink Business Preferred® Credit Card has an annual fee of $95 and a large welcome bonus of 100,000 points after spending $8,000 in the first three
+months of card opening.
+
+With the Ink Business Preferred Card, customers receive 3x points per $1 (up to $150,000 combined) spent on shipping purchases, internet, cable, phone, and
+advertising with social media sites and search engines. Ultimate Rewards points can be transferred 1:1 to Virgin Atlantic or Flying Blue to book flights on
+Delta.
+
+Is the Delta SkyMiles Gold Business Card right for you?
+</item 52>
+
+<item 53>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+It also allows you to set up a virtual fence and notifies you when your pet steps out of (or enters) the safe area. It's not perfect — the battery is just so-so
+and the live tracking can be a bit glitchy — but for the price, it's hard to beat. Save $20 for Black Friday at Walmart and snag it for only $29.99.
+
+More pet deals
+
+Fitness deals
+
+Why we like it
+
+The Walmart-exclusive Echelon Connect Sport is a solid Peloton alternative for a retail price that won't make you cringe. And for Black Friday, it's on sale for
+over $400 off, knocking the price down to a super impressive $297. But just because it's wallet-friendly doesn't mean its specs don't impress. The Connect Sport
+features 32 levels of silent magnetic resistance, aero handlebars and adjustable pedals, and Bluetooth technology that lets you connect any smart device to the
+Echelon Fit app.
+</item 53>
+
+<item 54>
+The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more (Engadget, 2023-11-24T09:30:32+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+There are still tons of Apple Black Friday deals you can shop for online; these are our favorites.
+
+Most of Apple’s current-generation devices went on sale for Black Friday — and most of those deals look like they’ll carry over through the weekend and into
+Cyber Monday. That means if you were otherwise occupied on Friday, you can still save on iPads, Apple Watches, MacBooks, AirPods and more. Some of the prices
+are new lows and many others match the record prices we’ve seen previously. We’ve tested and reviewed nearly every device below, so check out the links to our
+full reviews and guides if you need help deciding which deals to snag. These are the best Apple Black Friday deals you can still get today from retailers like
+Amazon, Target, Best Buy and B&H Photo.
+</item 54>
+
+<item 55>
+The 26 best Amazon Prime Day deals you can still shop for today (Engadget, 2023-10-12T15:44:16+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Amazon's October Prime Day sale officially ended on Wednesday, but a few of the deals are still live as we head into the weekend. If you were hoping to check
+off a few more names from your holiday gift list or buy something for yourself at a discount, see what remains on sale below. We combed through our coverage
+over the past few days to find the best of what's left. While Amazon has returned most of their own devices, like Echos and Kindles, back to their full prices,
+a handful of products from other brands like Google, Samsung and Anker, have maintained the lows they hit on Prime Day. Here are the best deals from Prime Big
+Deal Days that you can still get right now.
+</item 55>
+
+<item 56>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+It streams in 4K, supports HDR color, and is compatible with Alexa.
+
+Games and gaming accessories
+
+Mass Effect Legendary Edition $ 12 $ 60 80 % off $ 12 $ 12 $ 60 80 % off A compilation of the first three Mass Effect games repackaged and optimized for 4K with
+reduced load times, improved performance, and various gameplay tweaks. $12 at Amazon (Steam code)
+
+Samsung Evo Select microSD card (512GB) $ 25 $ 35 29 % off $ 25 $ 25 $ 35 29 % off This Samsung Evo Select microSD card offers 512GB of extra storage for a
+Nintendo Switch, Steam Deck, or Asus ROG Ally at a good price point. $25 at Amazon
+
+Staff favorites and miscellaneous tech
+
+ChomChom pet hair remover $ 20 $ 32 38 % off $ 20 $ 20 $ 32 38 % off The ChomChom is a reusable cat and dog hair remover that works great for furniture.
+</item 56>
+
+<item 57>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Adobe Analytics’ figures are based, it says, on 1 trillion visits to U.S. retail sites, 100 million SKUs and 18 product categories. Salesforce says it taps data
+from 1.5 billion consumers in its research. (Both companies work with a number of giant and smaller retailers, so they have the infrastructure to provide this
+kind of intel to these customers on an ongoing basis.)
+
+Breaking out some of the trends in how people are shopping:
+
+— Overall, desktop sales are still exceeding other kinds of screens when it comes to conversions and number of items purchased, but mobile is the standout
+device in the evening hours, when it accounted for a whopping 59% of all online sales (likely because people were using that time to socialize and buy on the
+sly).
+</item 57>
+
+<item 58>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+They also have a smaller, more comfortable fit than the previous generation and offer good audio quality.
+
+Samsung The Frame QLED TV
+
+The 55-inch Samsung The Frame smart TV is 35 percent off and down to a new record low of $978 at Amazon. Samsung itself has it for a couple bucks more. Other
+size options are also discounted. The Frame has been super popular thanks to its design, which mimics framed artwork when not in use. It has a matte,
+anti-reflective display and an included slim wall mount so you can get the true “artwork” effect when you hang it on the wall. As an actual TV, it supports 4K
+content and Quantum Dot technology, plus it runs on Samsung’s Tizen TV operating system.
+
+Solo Stove Black Friday deal
+
+Solo Stove’s Black Friday deals have knocked up to $245 off fire pit bundles, up to $100 off fire pits by themselves and even more.
+</item 58>
+
+<item 59>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+Amazon has a bunch of private-label clearance on sale for up to 55 percent off. Want D-cell batteries for $5? Here you go. How about compostable plates for $8?
+Giant crayons for $9? A truly hideous fanny pack for $12? The point is, there are 10 pages full of random items to choose from, and all of them are cheap. Go
+wild.
+
+Photograph: Amazon
+
+Other Echo Show devices are also on sale, but the Echo Show 8 is our favorite. This product comes with a free trial of Alexa Together, an Amazon service that
+aims to replicate the tasks of a caregiver. It usually costs $20 per month. Set a reminder to cancel it if you aren't interested in subsequent charges.
+
+The Echo Studio is the best-sounding Alexa speaker, but it's also pretty expensive. This price matches a low we've seen just once before. It has more powerful
+sound in general, but the changes are especially noticeable on the low end.
+</item 59>
+
+<item 60>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Here’s a pack of four AirTag keychain holders for $8.91. They’re silicone, but it’s way more affordable than Apple’s official AirTag accessories. Just one of
+those will set you back $35.
+
+Tile Pro $ 25 $ 35 29 % off $ 25 $ 25 $ 35 29 % off The Tile Pro is the company’s loudest Bluetooth tracker and has the widest range at 400 feet. It also has a
+user-replaceable battery, unlike other Tiles. $25 at Amazon$25 at Best Buy
+
+Chipolo’s Card Spot is down to $20.94 ($14 off) at Best Buy, one of its best prices to date. The Card Spot is another slim Bluetooth tracker you can fit into
+your wallet, with an IPX5 water resistance that can tap into Apple’s extensive Find My network.
+</item 60>
+
+<item 61>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+As a bellwether for the rest of the holiday period — traditionally the biggest period for retail sales in the year — the flat sales speak to another tough year
+for online retailers.
+
+Adobe Analytics is predicting $37.2 billion in online spend for the full five days, up just 5.4% year on year and accounting for 16.8% of all holiday spend. And
+Black Friday will see $9.6 billion in sales, up roughly the same, 5.7%, versus figures last year. (The published figures in 2022 were $9.13 billion.) Salesforce
+has not provided forecasts.
+
+For some context on today’s Thanksgiving figures, last year’s published figures from Adobe were $5.29 billion, which actually represents an increase of just
+under 4%. (It’s likely Adobe Analytics readjusted its final figures for last year, which is why we see a higher percentage of growth.)
+</item 61>
+
+<item 62>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+More headphone and earbud deals
+
+Headphones
+
+Earbuds
+
+Tablet deals
+
+Gaming deals
+
+Gaming headsets
+
+Mashable Deals Want more hand-picked deals in your inbox? Sign up for Mashable's daily Deals newsletter. Loading... Sign Me Up By signing up you agree to our
+Terms of Use and Privacy Policy Thanks for signing up!
+
+Gaming mice
+
+Gaming keyboards
+
+VR headsets
+
+Meta Quest 2 — $249 $299.99 (save $50.99) + free $50 Amazon credit with code META50 🔥
+
+Speaker deals
+
+Vacuum deals
+
+Cordless vacuums
+
+Robot vacuums and vacuum/mop hybrids
+
+Kitchen deals
+
+Pizza ovens
+
+Sparkling water makers
+
+Toaster ovens
+
+Smart home deals
+
+Note: Echo devices are listed above under "Amazon device and service deals."
+
+Blink
+
+Chromecast
+
+Google Nest
+
+Fitness deals
+
+Smartwatches and fitness trackers
+
+Note: Apple Watches are listed above under "Apple deals."
+</item 62>
+
+<item 63>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+Beauty tech deals
+
+Drone deals
+
+Camera deals
+
+GoPro
+
+Lego deals
+
+Gift card deals
+</item 63>
+
+<item 64>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+The smart screen responds to Alexa commands that are particularly handy when your hands are full, like asking for measurement conversions mid-cooking, checking
+the weather mid-rushing out the door, or turning off your smart lights with a sleeping kid in hand. Plus, it's got a 5.5-inch screen and better sound than its
+predecessor, making it perfect for watching videos or video calling friends and family.
+
+More Amazon device and service deals
+
+Amazon services
+
+Audible Premium Plus — $5.95/month $14.95/month for four months (save $9/month; new customers only; get an additional $20 Audible credit)
+
+Echo Buds
+
+Echo smart displays
+
+Echo smart speakers
+
+Fire tablets
+
+Fire TVs
+
+Note: All Fire TVs come with a free 6-month subscription to MGM+ (a $35.94 value).
+</item 64>
+
+<item 65>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+Thanksgiving Thursday, when stores in the U.S. are closed and many are spending time off work, has become the de facto start of the holiday shopping season both
+for those looking to get bargains online and for online retailers to kick off holiday sales deals to meet that demand. But if there is a message from this
+year’s Thanksgiving sales, it is that consumers are holding steady, but don’t hold your breath for a growth boom.
+
+Adobe Analytics said that people in the U.S. on Thursday spent $5.6 billion online, which it calculates at an increase of just 5.5% on last year.
+
+Salesforce, which also calculates sales based on data collected by its Commerce Cloud division, noted that globally, online sales reached $31.7 billion with its
+U.S. tally at $7.5 billion — both up only 1%. Salesforce’s calculations of average order value were equally modest.
+</item 65>
+
+<item 66>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+$22 at Amazon
+
+Logitech C270 HD $ 19 $ 40 53 % off $ 19 $ 19 $ 40 53 % off The C270 HD shoots in 720p resolution at 30 frames per second. It features a 55-degree field of
+view, and it has a mono microphone. It’s nothing fancy, but it gets the job done. $19 at Amazon$22 at Target
+
+LifeStraw personal water filter $ 10 $ 20 50 % off $ 10 $ 10 $ 20 50 % off LifeStraw’s basic filter removes unwanted viruses, bacteria, and microplastics as you
+drink, giving you a safe way to hydrate no matter where you are. $10 at Amazon
+
+The COSRX Snail Mucin Essence is viral all over skincare TikTok and discounted to a mere $13.99. Is it a lil’ icky? Yes, but its hydrating powers are well
+known.
+</item 66>
+
+<item 67>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Our take: If you’re a small business owner who flies with Delta regularly and wants to score a solid welcome bonus, consider the Delta SkyMiles® Gold Business
+American Express Card. This card has a welcome bonus of up to 75,000 miles and perks like free checked bags and priority boarding with a $0 intro annual fee for
+the first year (then $99).
+
+Pros Free checked bag free on Delta flights
+
+Generous welcome bonus of 75,000 miles
+
+No foreign transaction fees Cons No lounge access
+
+$99 annual fee ($0 intro fee for the first year)
+
+To view rates and fees of the Delta SkyMiles® Gold Business American Express Card, see this page.
+</item 67>
+
+<item 68>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+27, includes both a ton of deals carried over from Black Friday plus some new ones.
+
+We're curating a running list of Amazon's best Cyber Weekend deals, spotlighting some of our favorites and noting when good deals inevitably sell out. Read on
+for the full rundown, and check back often: We're going to be updating this story incessantly as the sale continues, as well as our even bigger (if you can
+imagine) list of Cyber Monday deals across more retailers.
+
+Note: All newly added deals are marked with a ✨, while deals with a 🔥 have dropped to an all-time low price. Amazon's invite-only deals for Prime members are
+marked with a 📨. Deals with a strikeout were either sold out or expired at the time of writing.
+
+Echo, Fire TV, and Kindle deals
+
+Why we like it
+
+An Echo Show is a subtle yet game-changing addition to any room — and for less than $40 with this rollover Black Friday to Cyber Monday deal, there's little
+reason to not make your life easier.
+</item 68>
+
+<item 69>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Love Letter is on sale at Amazon for $6.29 (around $9 off). The fairly simple card game for two to six players is easy to get into and acts as a great intro to
+more elaborate tabletop games.
+
+Govee 100ft Smart LED Strip Lights $ 15 $ 25 40 % off $ 15 $ 15 $ 25 40 % off Govee’s basic 100ft LED smart light strip comes with 64 preset scenes so you can
+create different vibes based on your emotions, holidays, nature, and more. It also offers various music modes and connects to your phone via Bluetooth or the
+Govee Home app. $15 at Amazon
+
+Tekton Everybit Tech Rescue Kit $ 22 $ 29 24 % off $ 22 $ 22 $ 29 24 % off A 46-piece screwdriver kit that can help you repair practically any tech device out
+there.
+</item 69>
+
+<item 70>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+On the outside, the Go 3 is definitely giving MacBook Air — the main difference being that the Go 3's screen is a touchscreen.
+
+More laptop deals
+
+Traditional laptops
+
+2-in-1 laptops
+
+Chromebooks
+
+Gaming laptops
+
+Headphone and earbud deals
+
+Why we like it
+
+Narrowing down a headphones upgrade from so many on-sale options is less overwhelming when you've confirmed that you want to stick with a super premium, super
+reputable brand like Bose — but also that you want to stick to a budget. There's only one pair of Bose over-ear headphones you can grab for just under $200, and
+that's the QuietComfort 45s at a record-low price of $199. This classic pair secures top-of-the-line ANC, 20 hours of battery life, and all-day comfort for less
+than half of the AirPods Max's sale price.
+</item 70>
+
+<item 71>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+We believe the mid-tier plan, Surfshark One, will be the best for most people and a two-year plan is down to $2.69 per month, with an additional four months of
+services thrown in for free.
+
+Samsung M80C Smart Monitor
+
+Samsung’s Smart Monitor M80C is $300 off and down to $400 right now. The selling point for this display, and really any Samsung Smart Monitor, is that it pulls
+triple duty as an external display, a smart TV and an IoT hub. In addition to connecting it to your computer, you can use it standalone as a TV thanks to the
+built-in TV operating system and included remote, and the embedded SmartThings hub lets you directly connect things like smart lights and other gear to the
+display.
+
+Motorola razr+
+
+The Moto razr+ is 30 percent off and down to a record low of $700.
+</item 71>
+
+<item 72>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+The offers include the Echo Dot back at an all-time low of $23, the Echo Dot with Clock for $35 (a $25 discount), the standard Echo within $5 of its all-time
+low at $55, the larger Echo Studio for $155 and the entry-level Echo Pop back at its Prime Day price of $18.
+
+Of those, the Echo Dot and base Echo are likely your best bets — the former is the "best under $50" recommendation in our smart speaker buying guide, while the
+latter is our "best under $100" pick. The Echo Studio is still decent if you want better audio quality, though it's harder to recommend when the Sonos Era 100
+is also on sale, while the Echo Pop is essentially a weaker-sounding Echo Dot for only a few bucks less. But if you're building a smart home around Alexa, each
+device offers similar functionality.
+
+Amazon Echo Show Black Friday sale
+
+Along those lines, most of Amazon's Echo Show smart displays are also discounted.
+</item 72>
+
+<item 73>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Black Friday is almost here, but we wouldn't blame you if you've felt like it's been here for a while. What was once a one-day event filled with limited-time
+deals has grown into a month-long event with a plethora of sales to sift through each day. This year, Amazon, Target, Best Buy and Walmart and several other
+retailers kicked off their Black Friday deals early, with some starting as soon as late October. If you're overwhelmed by the amount of discounts showing up in
+your feeds, you're not alone.
+
+
+
+To help, we at Engadget have collected all of the best Black Friday deals you can shop right now, primarily on tech we've tested and reviewed. These are the
+best tech deals you can get this year, on the gadgets we know to be worth your money.
+</item 73>
+
+<item 74>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+For $99 a year, cardholders receive benefits like priority boarding, the first checked bag benefit (and for guests), discounts on in-flight purchases, and
+baggage insurance. The card, however, doesn’t provide access to Delta Sky Club or Delta’s airport lounges.
+
+The rewards structure on this card is decent, but it’s nothing to write home about—the card offers 2x miles on just a handful of categories like advertising,
+shipping, and dining.
+
+A big benefit of the Delta SkyMiles Gold Business Card is the welcome bonus: 75,000 Bonus Miles after you spend $6,000 in purchases on your new Card in your
+first 6 months of card opening. And cardholders who use their miles to purchase flights get even more benefits—customers receive a 15% discount when they use
+miles to buy Delta flights on the Fly Delta app or the Delta website.
+</item 74>
+
+<item 75>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+With this card, you’ll earn:
+
+3% cash back on up to $6,000 spent on groceries per year
+
+3% cash back on up to $6,000 spent on U.S. online retail purchases per year
+
+3% cash back on up to $6,000 spent at gas stations per year
+
+1% cash back on all other purchases
+
+If you tend to spend more money in select categories, such as groceries or online retail purchases, the Blue Cash Everyday® Card from American Express may be a
+better fit.
+
+Discover it® Cash Back Credit Card vs. ​​American Express Cash Magnet® Card
+
+Like the American Express Cash Magnet®, the Discover it® Cash Back Card doesn’t have an annual fee. But it has a very different rewards system than the Amex
+card; rather than earning a flat cash back rate, you can earn 5% cash back on up to $1,500 in combined quarterly purchases in various categories throughout the
+year (then 1%).
+</item 75>
+
+<item 76>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Sonos Black Friday sale
+
+Photo by Devindra Hardawar / Engadget Sonos Beam (Gen 2) $399 $499 Save $100 While not an all-time low, this is a rare discount on the top midrange pick in our
+soundbar buying guide. Several other Sonos speakers and home theater devices are also on sale. $399 at Sonos
+
+Sonos has kicked off its Black Friday sale for the year, bringing a range of discounts on smart speakers and home theater gear. The deals include the flagship
+Sonos Arc soundbar down to $719, which is a $180 discount. The mid-range Sonos Beam (Gen 2) and the more basic Sonos Ray are also on sale for $399 and $223,
+respectively; that's a $100 drop for the former and a $56 drop for the latter. All three devices are recommendations in our guide to the best soundbars.
+</item 76>
+
+<item 77>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+This deal applies to the base model with 128GB of storage, but the 256GB version is also $100 off at $499.
+
+iRobot Roomba Combo j5+
+
+You can save $300 on the Roomba Combo j5+ robot vacuum and mop at Amazon, spending $500 for the machine and its self-emptying base. The more affordable Roomba
+694 is $115 off as well. The Combo machine lets you vacuum and mop with one machine and it comes with a base into which the vacuum dustbin will empty its
+contents after every job. The cheaper Roomba 694 is one of the best robovacs for people on a budget thanks to its slim design, strong suction power and
+easy-to-use mobile app.
+
+Breville Smart Oven Air Fryer Pro
+
+Breville’s Smart Oven Air Fryer Pro is 29 percent off and down to $320 for Black Friday. That’s the best price we’ve seen since the start of this year on one of
+our favorite air fryers.
+</item 77>
+
+<item 78>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+Read Mashable's review of the Xbox Series X.
+
+More gaming deals
+
+Nintendo Switch
+
+PlayStation
+
+Xbox
+
+PC gaming
+
+VR gaming
+
+Meta Quest 2 (128GB) — $249 $299.99 (save $50.99) + free $50 Meta Quest Store credit
+
+Other gaming deals
+
+Speaker and soundbar deals
+
+Why we like it
+
+The older version of our favorite portable Bluetooth speaker is decently loud for its compact size, IPX7-rated for waterproofing, and capable of charging other
+devices via USB (hence its name) — it's ideal for traveling. It usually retails for $179.95 on the JBL website, meaning Walmart's $89 Black Friday price is an
+even better deal than advertised.
+</item 78>
+
+<item 79>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+It doesn’t have Matter or energy monitoring, but that’s alright at this price. $18 at Amazon (two-pack, with on-page coupon)
+
+Amazon Smart Plug $ 15 $ 25 40 % off $ 15 $ 15 $ 25 40 % off Amazon’s apt-titled Smart Plug doesn’t require a hub and lets you add Alexa functionality to any
+outlet, allowing you to control a range of devices with just your voice. $15 at Amazon$15 at Best Buy
+
+Amazon Echo Glow $ 17 $ 30 43 % off $ 17 $ 17 $ 30 43 % off The Amazon Echo Glow is a multicolored smart lamp for children, one that can cycle through colors
+and function as an Alexa-enabled sleep timer if needed. $17 at Amazon
+
+TP-Link’s RE315 Wi-Fi extender is on sale for just $24.99 ($25 off), matching its best price to date.
+</item 79>
+
+<item 80>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases, alcoholic beverages, and audio
+headsets on Delta flights. Baggage insurance. Cardholders who purchase plane, train, ship or bus ride tickets with their card are eligible for baggage insurance
+coverage—which kicks in if your baggage is stolen, lost, or damaged.
+
+Cardholders who purchase plane, train, ship or bus ride tickets with their card are eligible for baggage insurance coverage—which kicks in if your baggage is
+stolen, lost, or damaged. Car Rental Loss and Damage Insurance. A cardholder can get damage and theft insurance on their car rental. Cardholders must use their
+card to book the rental and decline the collision damage waiver at the agency to receive it.
+</item 80>
+
+<item 81>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Main Cabin 1 Priority boarding. Cardholders (and up to nine guests on the reservation) can get priority boarding if they use their SkyMiles number when booking
+their Delta flights.
+
+Cardholders (and up to nine guests on the reservation) can get priority boarding if they use their SkyMiles number when booking their Delta flights. Flight
+credit. If cardholders make eligible purchases totaling $10,000 or more in a year, they will receive a $100 Delta eCredit that can be used to purchase Delta
+flights.
+
+If cardholders make eligible purchases totaling $10,000 or more in a year, they will receive a $100 Delta eCredit that can be used to purchase Delta flights.
+20% back on in-flight purchases. Cardholders can get 20% back as a statement credit when they purchase eligible pre-purchased meals, in-flight food purchases,
+alcoholic beverages, and audio headsets on Delta flights.
+</item 81>
+
+<item 82>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+$245 at Amazon$250 at Best Buy
+
+Seagate Storage Expansion Card (1TB) $ 130 $ 220 41 % off $ 130 $ 130 $ 220 41 % off Proprietary SSD expansion for the Xbox Series X / S consoles. The
+plug-and-play drives are designed to be as fast as the Xbox internal SSD and are sold in 512GB, 1TB, and 2TB configurations. $130 at Best Buy
+
+The best TV and streaming device deals
+
+2022 Samsung The Frame TV (55-inch) $ 1000 $ 1500 33 % off $ 1000 $ 1000 $ 1500 33 % off Samsung’s art-inspired 4K TV features a QLED display and an anti-glare
+matte display, which provides artwork and photos with qualities that resemble an actual canvas.
+</item 82>
+
+<item 83>
+Here’s how Rainforest, a budding Stripe rival, aims to win over software companies (TechCrunch, 2023-10-08T14:16:01+00:00)
+account-to-account payment grows
+
+Recapitalization, $60M Series D support growth of e-commerce financier Clearco
+
+Stitch raises $25M Series A extension led by Ribbit Capital, increasing the round’s total to $46M
+
+Resy and Eater co-founder raises $24M for Blackbird, a restaurant loyalty platform
+
+Sparx wants to do for enterprise what Truebill did for consumer recurring bills
+
+Ten Key Labs wants to simplify managing equity for startups
+
+Seen elsewhere
+
+Logistics company Loop raises $35M to modernize the supply chain (Also, check out TechCrunch’s previous story on Loop.)
+
+Shift4 acquires SpotOn unit for $100M (TechCrunch previously covered SpotOn here.)
+
+Reserv raises $20M for AI-driven insurtech software
+
+Vyzer raises $6.3M seed round for AI-powered wealth management platform
+
+Kafene adds another $12.6M to its Series B round (TechCrunch previously covered Kafene here.)
+</item 83>
+
+<item 84>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Delta SkyMiles Gold Business Card Highlights
+
+Card Type: Airline
+
+Welcome bonus: 75,000 Bonus Miles after you spend $6,000 in purchases on your new Card in your first 6 months
+
+75,000 Bonus Miles after you spend $6,000 in purchases on your new Card in your first 6 months Annual fee: $0 intro annual fee for the first year (then $99)
+
+$0 intro annual fee for the first year (then $99) Rewards: 2x miles on purchases made directly with Delta, 2x miles on U.S. purchases for advertising in select
+media, 2x miles on U.S. shipping purchases, 2x miles on dining at restaurants, 1x mile on every eligible dollar spent on other purchases
+
+With the Delta SkyMiles® Gold Business American Express Card, cardholders who frequently fly with Delta can reduce travel costs and upgrade their travel
+experience.
+</item 84>
+
+<item 85>
+54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods (Wired, 2023-11-25T00:00:29+00:00)
+This helps support our journalism. Learn more.
+
+Apple's Cyber Monday Promotion
+
+Apple notoriously doesn't run sales on its own storefront. However, it does usually throw in a gift card for Apple Store credit if you purchase select items.
+This year, now through November 27, you can get up to $200 in Apple Store credit to use later if you purchase certain items. For example, if you buy an iPhone
+14 or iPhone SE, you can get up to $75 in store credit. Buy a MacBook Air and you'll get up to $200. You can find the full list here.
+
+Separately, there's also a sale on Apple gift cards on Amazon. Each one has a unique corresponding coupon code that you can see on this page. For example, you
+can get a $100 Apple Gift Card and a free $15 Amazon credit with code APPLET5USAP. There are tons of cards to choose from. You can browse them all here.
+</item 85>
+
+<item 86>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Delta SkyMiles Gold Business Card: Rewards
+
+The Delta SkyMiles® Gold Business American Express Card provides higher rewards rates on select purchases that might be helpful to small business owners:
+
+2x miles on purchases made directly with Delta
+
+2x miles on U.S. purchases for advertising in select media
+
+2x miles on U.S. shipping purchases
+
+2x miles on dining at restaurants
+
+1x mile on every eligible dollar spent on other purchases
+
+New cardholders can receive a welcome bonus of 75,000 Bonus Miles after you spend $6,000 in purchases on your new Card in your first 6 months of card opening.
+
+How to redeem Delta SkyMiles Gold Business Card miles
+
+Purchase flights
+
+Cardholders can use their miles (and their cash) to buy flights. When cardholders book flights through the Fly Delta app or Delta SkyMiles account with their
+cards, they can get a 15% discount called Takeoff15.
+</item 86>
+
+<item 87>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+With a 66 percent five-star review rating, it's got much to love: Including stunning 4K QLED resolution, adaptive brightness that adjusts to the lighting of
+your room, the ability to project famous art or personal pics on it when not streaming anything, and, of course, that quintessential Alexa voice control.
+
+More TV deals
+
+43 to 55 inches
+
+65 inches
+
+75 to 85 inches
+
+Laptop deals
+
+Why we like it
+
+MacBooks aside (which are all listed above in the Apple section), another stellar Cyber Monday laptop deal at Amazon is the lightweight Microsoft Surface Laptop
+Go 3 for $599.99. This 25% discount drops the 2023 version to the regular asking price of our favorite budget laptop, the older Surface Go 2. Compared to the Go
+2, the Go 3's Intel Core i5 processor is 12th gen versus the Go 2's 11th gen, harnessing better speeds and solid power for most everyday work or school tasks.
+</item 87>
+
+<item 88>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+Is the American Express Cash Magnet® Card right for you?
+
+The American Express Cash Magnet® Card is best for those who are looking for a simple and easy-to-use card they can use for all of their purchases. With no
+annual fee and 1.5% cash back on every purchase, it’s a no-frills, no-hassle addition to your wallet.
+
+But if you love to travel, you’ll likely need another credit card. Other options offer more comprehensive travel benefits, such as reimbursing you for TSA
+PreCheck fees or travel interruption/cancellation insurance, and you can find other cards that don’t charge foreign transaction fees.
+
+Credit cards similar to American Express Cash Magnet® Card
+
+If the American Express Cash Magnet® Card isn’t the best choice for you, consider these alternatives:
+
+Amex Blue Cash Everyday vs. ​​American Express Cash Magnet® Card
+
+The Blue Cash Everyday® Card from American Express is similar to the American Express Cash Magnet® Card in its fees and APR offers, but it has a different
+rewards structure.
+</item 88>
+
+<item 89>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+It’s hard to tell if this is a record-low price, but considering the standard V15 Detect is going for between $650 and $750 across the internet, we consider
+this to be a good deal. In addition to its strong cleaning power, the V15 Detect has a laser-powered optic cleaner head that illuminates the floor before you as
+you’re cleaning so you can see dust and grime more clearly. It also has a piezo sensor, which sizes and counts dust particles as you clean and shows you that
+information on its LCD display.
+
+Amazon Echo Black Friday sale
+
+Almost the entirety of Amazon's Echo speaker lineup is on sale for Black Friday, with most bundled alongside a TP-Link Kasa smart bulb for no extra cost.
+</item 89>
+
+<item 90>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+If you're a frequent Target shopper, note that the retailer is selling this same bundle with a $75 store gift card for $450.
+
+Xbox Series S
+
+A starter bundle that includes a 512GB capacity Xbox Series S and a three-month subscription to Game Pass Ultimate is currently $240 at Microsoft. The console
+by itself has a list price of $300 and three months of access to Xbox's service will set you back $51 after this year's price hike (though the first month is
+often just $1 for new members).
+
+Anker accessories sale
+
+A slew of Anker chargers, cables, power adapters and other accessories are on sale for Black Friday at Amazon, with discounts ranging up to 37 percent. The
+deals extend to our favorite premium power bank, Anker's Prime 20,000 mAH battery with charging base, which is $130 for the set and its lowest price ever.
+</item 90>
+
+<item 91>
+Fly with Delta frequently? Small business owners can score a solid welcome bonus and other perks with the Delta SkyMiles Gold Business Card (Fortune,
+2023-12-12T21:01:43+00:00)
+Is Delta SkyMiles Gold Card hard to get?
+
+Cardholders should aim for a ‘good’ FICO credit score of 690 or better to qualify for the Delta SkyMiles Gold Card, though card issuers look at other factors
+like income, too.
+
+Please note that card details are accurate as of the publish date, but are subject to change at any time at the discretion of the issuer. Please contact the
+card issuer to verify rates, fees, and benefits before applying.
+
+Terms apply to American Express benefits and offers. Enrollment may be required for select American Express benefits and offers. Visit americanexpress.com to
+learn more.
+
+Eligibility and Benefit level varies by Card. Terms, Conditions, and Limitations Apply. Please visit americanexpress.com/benefitsguide for more details.
+Underwritten by Amex Assurance Company.
+</item 91>
+
+<item 92>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+While you don’t need an account to see pricing information available through the app, making a profile will allow you to set up watchlists and get email price
+alerts for your favorite products. You’re welcome to manually populate your own watchlist, but the app also allows you to import any existing Amazon wishlist
+into your CamelCamelCamel profile. Make sure to grab its Camelizer browser extension, too.
+
+Honey and its accompanying extension allow you to track pricing history changes on specific products, but across a number of retailers, not just Amazon. Also,
+as an added bonus, Honey will also automatically search for promo codes when you check out at a supported retailer.
+</item 92>
+
+<item 93>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+(For its part, Amazon has never put them on sale for less than $189.) These wireless earbuds from fall 2022 "sound wonderful and have almost uncanny active
+noise cancelation," said Mashable senior editor Stan Schroeder, and they last for up to six hours on a single charge.
+
+Read Mashable's review of the Apple AirPods Pro (2nd Generation).
+
+More headphone/earbud deals
+
+Tablet deals
+
+Why we like it
+
+Best tablets under $100? Try best tablets under $30. Sure, this onn. tablet may not have all the functionality of an iPad, but if you're looking for a super
+basic tablet to watch videos or read on, you'll be hard-pressed to find anything in the $20 range. Even Fire tablets have only dropped down to $40 this Cyber
+Monday.
+
+More tablet deals
+
+Smartwatch deals
+
+Why we like it
+
+Apple's latest entry-level wearable also has a new record-low price at Walmart for Black Friday (which works out to a 28% savings).
+</item 93>
+
+<item 94>
+Some of our favorite devices are on sale for Black Friday. (The Verge, 2023-11-24T15:42:21+00:00)
+And while I’ve long been a proponent of MPOWERD’s solar-powered Luci lanterns, I recently picked up the company’s like-minded string lights for car camping and
+overnight jaunts in the backcountry when I don’t mind toting a little extra weight with me.
+
+The 18-foot string is certainly not the brightest you can buy — it packs a series of 100-lumen LEDs, whereas your average headlamp might offer 400 — but it can
+swap between six different colors and features a 2,000mAh battery for when your phone needs some emergency juice. Best of all, you can charge the lights via USB
+or solar, meaning you can spend less time worrying about how to keep them going and more time taking in the vibes.
+
+Memory card holder and reader
+
+Becca Farsace, senior producer
+
+As a video person who is constantly on the move, there is nothing better than the consolidation of gear — especially when it pertains to dongles.
+</item 94>
+
+<item 95>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Come on in and peruse these affordable wares.
+
+Phone accessories and smart trackers
+
+Apple AirTag $ 24 $ 29 17 % off $ 24 $ 24 $ 29 17 % off Apple’s AirTag can help you find your lost items with its ultra wideband technology. You’ll get the best
+compatibility with an iPhone, though Apple released an Android app that can detect an AirTag’s location and notify you if one seems to be following you. Read
+our review. $24 at Amazon$80 at Amazon (four-pack)
+
+Anker 511 Charger (30W) $ 16 $ 23 30 % off $ 16 $ 16 $ 23 30 % off Anker’s 30W 511 Charger juices phones quickly and is small enough to carry around in a purse.
+</item 95>
+
+<item 96>
+Adobe: Thanksgiving US online sales nudge up to $5.6B; Salesforce: $31.7B spent globally (TechCrunch, 2023-11-24T15:43:51+00:00)
+“Consumers are embracing mobile wallets to break down friction between discovering on social and purchasing on mobile.”
+
+— Retailers are really pushing out discounts to get people more willing to spend money this year. Both Adobe and Salesforce said in the U.S. discounts were up
+by about 28%. Categories that saw dramatic markdowns included toys, electronics and computers, per Adobe’s figures; respectively these saw sales up by 182% and
+113% over last month.
+
+— Buy Now Pay Later (BNPL) remains a popular option for paying upfront. BNPL drove $390 million in online spend, Adobe said, up 7.5% on last year.
+
+We’ll update with more data later, and with Black Friday figures as they start to emerge.
+</item 96>
+
+<item 97>
+American Express Cash Magnet® Card review: a simple, no-nonsense cash back card (Fortune, 2023-11-03T20:07:05+00:00)
+Statement credits will be applied to your account within three days, but statement credits cannot be used toward the minimum amount due. Unless the statement
+credit reduces your balance to $0, you’re still required to make the minimum payment.
+
+Additional benefits
+
+Compared to the benefits of other credit cards, the American Express Cash Magnet® Card is more limited. However, it does offer the following perks:
+
+American Express Experiences: With American Express Experiences, you get access to exclusive ticket pre-sales and cardmember-only events. Events include major
+Broadway shows, concerts, and sport competitions.
+
+With American Express Experiences, you get access to exclusive ticket pre-sales and cardmember-only events. Events include major Broadway shows, concerts, and
+sport competitions. Car rental loss and damage insurance: When you use the Amex Cash Magnet Card to pay for your entire car rental cost and decline the rental
+company’s collision damage waiver, you automatically receive secondary coverage against damage or theft of the rental vehicle.
+</item 97>
+
+<item 98>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Walmart will match its online Black Friday deals in stores starting November 10.
+
+Will Amazon have a Black Friday sale in 2023?
+
+Amazon will likely have a Black Friday sale in 2023. While the online retailer hasn’t made its deals known yet like Walmart has, Amazon will almost certainly
+have deals across all of the types of products it sells, including electronics. We anticipate seeing record-low prices on Amazon devices in particular, like
+Echo speakers, Fire TVs, Kindles and more. In years past, Amazon Black Friday deals have brought some of the best prices of the year on our favorite gadgets and
+gear, including headphones, tablets, smartwatches, robot vacuums and more.
+
+What other retailers have Black Friday sales in 2023?
+
+Most retailers have Black Friday sales, so you can expect to see Target, Best Buy, and others join Walmart and Amazon in discounting inventory to capitalize on
+holiday shopping interest.
+</item 98>
+
+<item 99>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+$35 at Headspace
+
+Headspace’s Black Friday deal is back for 2023, knocking half off subscriptions for new and returning subscribers. You’ll spend $35 if you pay for one year
+upfront, or $6.50 per month if you choose the more frequent payment method. Headspace is a solid meditation and mindfulness app that packs a lot of value,
+including dozens of guided meditation sessions to choose from at various durations, “sleepcasts” and soothing audio to help you get better shut eye and curated
+yoga and fitness videos that can help you stick to your physical health goals.
+
+Surfshark VPN
+
+Surfshark’s Black Friday deal knocks up to 86 percent off two-year plans, and you’ll get a few extra months of service for free depending on the plan you
+select. We consider Surfshark to be one of the best VPN services available right now, particularly if you want a solid VPN at an affordable price.
+</item 99>
+
+<item 100>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+Read Mashable's review of the Solo Stove Bonfire 2.0.
+
+More outdoor deals
+
+Apple deals
+
+Why we like it
+
+The Apple Watch Series 9 is "a robust and elite wearable device – the best Apple has ever made," according to Mashable Senior Editor Stan Schroeder. While it
+looks almost identical to its predecessor, it's equipped with a new s9 chip, which makes it about 30 percent snappier than before. It also boasts double the
+storage and has double the peak brightness and a fun new Double Tap feature. It's not an essential upgrade if you already have a Series 7 or 8, but it's
+certainly a step in the right direction for those with older watches. At $359 for the 45mm GPS version, it's currently sitting at an all-time low cost at
+Walmart.
+
+More Apple deals
+
+Pet deals
+
+Why we like it
+
+A solid dog tracking device for pet parents on a budget, Tractive gives you the ability to track your dog's live location within the companion app.
+</item 100>
+=== END ITEM id=47f86560ec7f8866 ===
+
+=== ITEM id=cf9ba68fb682fbcc ===
+Gold sentences and facts:
+Sentence 0: Argentina, Japan, Chile, Samoa and Fiji have all provided highlights — Los Pumas are also in the semi-finals — and England have beaten all of them.
+  Fact 0.0: Argentina has provided highlights.
+  Fact 0.1: Japan has provided highlights.
+  Fact 0.2: Chile has provided highlights.
+  Fact 0.3: Samoa has provided highlights.
+  Fact 0.4: Fiji has provided highlights.
+  Fact 0.5: Los Pumas are also in the semi-finals.
+  Fact 0.6: England have beaten Argentina.
+  Fact 0.7: England have beaten Japan.
+  Fact 0.8: England have beaten Chile.
+  Fact 0.9: England have beaten Samoa.
+  Fact 0.10: England have beaten Fiji.
+Sentence 1: S﻿AINT-ETIENNE: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com as their Rugby World Cup fate is decided by Fiji and Portugal in Toulouse.
+  Fact 1.0: This report is datelined Saint-Etienne.
+  Fact 1.1: The Wallabies will have to endure a more tortuous Sunday night watch than even the worst rom com.
+  Fact 1.2: The Wallabies' Rugby World Cup fate is decided by Fiji and Portugal.
+  Fact 1.3: The Fiji and Portugal match is played in Toulouse.
+  Fact 1.4: The Wallabies' Rugby World Cup fate is decided in Toulouse.
+
+Retrieved items:
+
+=== END ITEM id=cf9ba68fb682fbcc ===
+
+=== ITEM id=7682c0ae0c8e9ec6 ===
+Gold sentences and facts:
+Sentence 0: “Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said.
+  Fact 0.0: Zapolsky said that even with those tools, some businesses selling on Amazon might still choose to set prices that are not competitive.
+Sentence 1: That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference.
+  Fact 1.0: eBay will give the buyer an eBay coupon for the difference in price between what the buyer paid for an item and what a competitor is selling it for.
+  Fact 1.1: The eBay coupon also includes an additional 10 percent of that price difference.
+
+Retrieved items:
+
+=== END ITEM id=7682c0ae0c8e9ec6 ===
+
+=== ITEM id=630ee8ad0e3a0b47 ===
+Gold sentences and facts:
+Sentence 0: India were playing against Australia in the second semi-final of the 2015 World Cup in Sydney on March 26.
+  Fact 0.0: India played against Australia in the second semi-final of the 2015 World Cup.
+  Fact 0.1: The India versus Australia match was held in Sydney.
+  Fact 0.2: The India versus Australia match was played on March 26.
+Sentence 1: It's crunch time for England in the World Cups as they face South Africa in the semi-final of the Rugby World Cup and in the ODI Cricket World Cup.
+  Fact 1.0: It is crunch time for England in the World Cups.
+  Fact 1.1: England faces South Africa in the semi-final of the Rugby World Cup.
+  Fact 1.2: England faces South Africa in the semi-final of the ODI Cricket World Cup.
+
+Retrieved items:
+
+=== END ITEM id=630ee8ad0e3a0b47 ===
+
+=== ITEM id=2f61b0a2009e9fd4 ===
+Gold sentences and facts:
+Sentence 0: The company did accomplish that goal, but in doing so, it inadvertently and profoundly changed how the internet looked.
+  Fact 0.0: The company accomplished that goal.
+  Fact 0.1: In doing so, the company inadvertently changed how the internet looked.
+  Fact 0.2: In doing so, the company profoundly changed how the internet looked.
+Sentence 1: This whole line of argument is called “market definition.” If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google’s on the road to victory.
+  Fact 1.0: This whole line of argument is called “market definition.”
+  Fact 1.1: If the court decides the relevant market is phones and app stores, not specifically Android ones, then Google’s on the road to victory.
+Sentence 2: The case, filed by Arkansas-based publisher Helena World Chronicle, argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means.
+  Fact 2.0: The case was filed by Arkansas-based publisher Helena World Chronicle.
+  Fact 2.1: The case argues that Google “siphons off” news publishers’ content through anticompetitive means.
+  Fact 2.2: The case argues that Google “siphons off” news publishers’ readers through anticompetitive means.
+  Fact 2.3: The case argues that Google “siphons off” news publishers’ ad revenue through anticompetitive means.
+
+Retrieved items:
+
+=== END ITEM id=2f61b0a2009e9fd4 ===
+
+=== ITEM id=d8bf2fa9726e6fc4 ===
+Gold sentences and facts:
+Sentence 0: 9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.
+  Fact 0.0: At 9:47 p.m., the Bears answered right back.
+  Fact 0.1: At 9:47 p.m., the Bears sacked Dobbs.
+  Fact 0.2: Sweat and Brisker were in on the sack to take Dobbs down.
+Sentence 1: The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game).
+  Fact 1.0: The Ravens defense has allowed the fewest points per game this season, 16.1.
+  Fact 1.1: The Ravens defense has allowed the second-fewest total yards this season, 4,030.
+  Fact 1.2: San Francisco's defense ranks second in points, at 16.7.
+  Fact 1.3: San Francisco's defense ranks 10th in yardage, at 310 yards per game.
+
+Retrieved items:
+<item 1>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+But we held on.”
+
+NBA and NBL champion Ian Clark top-scored with 19 points, with rookie Kyle Bowen adding a career-best 17 as did Jo Lual-Acuil along with 10 rebounds.
+
+Advertisement
+
+Jack McVeigh led the way for Tasmania with 20 points and seven rebounds, with Jordon Crawford contributing 16 points and four assists, and Milton Doyle 12
+points and five assists.
+
+Tasmania coach Scott Roth was philosophical afterwards, having given up 18 offensive rebounds and lost the battle on the glass by 16.
+
+“We got a little uncharacteristic with our shot selection, which was a credit to them,” he said.
+
+“Then they beat us up on the glass. It’s just little things when you get in those kind of games that are going to make the separation points.”
+</item 1>
+
+<item 2>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+A third straight defeat for the Wildcats has them struggling at 2-4 this season.
+
+Coach John Rillie is focused know they aren’t playing well and the improvement needs to start offensively.
+
+“We’re not playing good basketball at this point in time,” Rillie said.
+
+“An area we need to improve on is our offence. That’s where we have to find some type of rhythm and we’ve yet to do that in these last couple of games.
+
+Advertisement
+
+“The game’s played at both ends and you need to find a rhythm to generate some natural enthusiasm, and we haven’t been able to do that for good stretches.”
+
+Brisbane coach Justin Schueller always knew losing his superstar centre Baynes with a five-game suspension was going to be challenging, but that was magnified
+on Saturday night.
+</item 2>
+
+<item 3>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+“When you’re missing a ton of shots you’ve got to win the offensive rebounding battle and they beat us on that.”
+
+Tasmania burst out to a double-figure lead when they piled on 36 points during the opening period, and the margin blew out to 18 before halftime.
+
+Doyle (12 points), Deng and Jack McVeigh (both 10) all did plenty of damage on the scoreboard in the first half for the visitors, who never trailed. Galloway’s
+huge dunk sparked Sydney early in the third period and they cut the margin to three.
+
+Advertisement
+
+But he and Bolden soon exited and Crawford’s scintillating run gave the JackJumpers the upper hand. The Kings are hopeful Galloway will be fit for Saturday’s
+trip to take on the Cairns Taipans.
+
+“The doctors may have other plans, but he’s doing alright,” Abdelfattah said.
+</item 3>
+
+<item 4>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Despite being without star big Aron Baynes (suspended) and import guard Shannon Scott (hamstring), the Bullets soared to a second straight victory on Sunday and
+snapped a quirky streak in the process.
+
+It was their first win after seven straight losses in Sunday fixtures, in a run that dates back to last season.
+
+Far more importantly, the result levelled Brisbane’s current season record at 4-4 after five rounds.
+
+But it didn’t come easily as fourth-quarter specialists Tasmania trimmed a seven-point deficit back to a single point when Majok Deng drove to the rack with 34
+seconds remaining.
+
+Advertisement
+
+The two sides traded blows in the dying stages and the JackJumpers almost sent the game to overtime when they pinched Sam McDaniel’s inbounds pass on the final
+play.
+
+Jack McVeigh got a hand in to force the turnover and Tasmania found Jordon Crawford, but his decent look at an attempted game-leveller rimmed out.
+</item 4>
+
+<item 5>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The guys are going in the right direction. “I’m not disappointed, I’m stoked.”
+
+Bullets shoot down weakened Wildcats
+
+Advertisement
+
+The Brisbane Bullets have shrugged off the absence of two important players to outwork the Wildcats at their home RAC Arena in Perth and produce a performance
+full of heart for their 84-79 NBL win.
+
+Both teams were 2-4 coming into Friday’s match and on losing slides, but it was the Wildcats who had the pressure building, even with the Bullets being without
+key pair, the suspended Aron Baynes and injured Shannon Scott.
+
+Brisbane scored the first seven points before opening up a 20-point lead in the third quarter and going on to win by five after holding out against a furious
+late charge from the home team.
+
+The team effort of the Bullets was outstanding as they got another 17 points from captain Nathan Sobey.
+</item 5>
+
+<item 6>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Williams produced 21 points and six rebounds for South East Melbourne but Brisbane will still be without Baynes for next weekend’s double-header away to Perth
+and at home to Tasmania, and he needs to find some answers.
+
+“We’ve got to have solutions right now for two more games without Banger (Baynes) and that’s the thing that’s sitting right in the front of my head, but scoring
+73 points isn’t enough to get it done in this league,” Schueller said.
+
+“Then giving them 96 is way too many as well so we have a lot of stuff that we still have to work on.”
+
+JLA return lifts United to win in Wollongong
+
+Advertisement
+
+Melbourne United have celebrated the long-awaited return of Jo Lual-Acuil but it was fellow centre Ariel Hukporti who starred in a 101-91 defeat of the
+lllawarra Hawks.
+</item 6>
+
+<item 7>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+Sobey and Smith then knocked down shots as the Bullets lead ballooned to 20.
+
+The Wildcats did make a charge with a Pinder-inspired 11-0 run in the fourth to cut the deficit to three, but the Bullets answered with strong inside finishes
+from Harrison and Bannan to secure the win.
+
+United flex muscles in road win over JackJumpers
+
+Melbourne United have had to withstand a hot start and finish from the Tasmania JackJumpers but in between were outstanding on the way to a 90-82 victory in the
+NBL.
+
+Advertisement
+
+The league’s top two teams locked horns at a sold out MyState Bank Arena on Friday night and it was the JackJumpers who raced out of the blocks with a 17-4
+start, but United took control from there.
+</item 7>
+
+<item 8>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The JackJumpers opened up on fire, racing to a 17-4 lead inside the opening five minutes including three balls to Crawford and McVeigh, but United soon steadied
+and it was the introduction of Lual-Acuil that inspired it.
+
+Melbourne would close the quarter outscoring Tasmania 17 points to four before three-pointers midway through the second stanza from Bowen and Clark put them up
+five.
+
+Advertisement
+
+United were still leading 43-42 at halftime, on the back of 11 extra rebounds and 10 second-chance points, before captain Chris Goulding opened his account at
+the start of the second half from downtown.
+
+Clark hit his second long ball of the game soon after to push Melbourne’s lead out to nine, his third stretched it to double-figures and Bowen landed two
+surprise ones of his own.
+</item 8>
+
+<item 9>
+NBL Round 5: Harvey hits Hail Mary for Hawks to topple Taipans at the buzzer, Cheatham injured as Sixers upset Breakers (The Roar | Sports Writers Blog,
+2023-10-26T21:11:37+00:00)
+The JackJumpers, who trailed by seven at three-quarter time, kept alive their record of winning every fourth term this season, but it wasn’t enough.
+
+Brisbane captain Sobey led from the front as defensive specialist Mitch Norton kept Tasmania’s import Crawford (16 points) relatively quiet until the final
+period.
+
+Tyrrell Harrison and Josh Bannan (10 points each) were important for the Bullets, while Chris Smith (11) and Isaac White (10) gave solid contributions off the
+bench.
+
+The gut-wrenching loss ended a horror round five for the JackJumpers, who lost at home to Melbourne United before going down to the Bullets.
+
+Advertisement
+
+It left them with a 4-4 record after a strong 4-2 start to the season.
+</item 9>
+
+<item 10>
+NBL Round 4: Creek pours in points as Phoenix swamp Sixers, CJ claims Kings didn’t look after DJ (The Roar | Sports Writers Blog, 2023-10-19T21:03:08+00:00)
+Gun import Jordon Crawford has exploded late to lead the Tasmania JackJumpers to a club-record score in a 105-95 NBL road win over the defending champion Sydney
+Kings.
+
+The American guard opened the final period at Qudos Bank Arena on Sunday with four consecutive three-pointers and scored all of his team’s points on a stunning
+14-2 run.
+
+It gave the JackJumpers a game-high 19-point lead and just about put the result to bed after Sydney had lost Jaylin Galloway (shoulder) and Jonah Bolden (fouled
+out).
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+The Kings never gave up but could not close the gap as Crawford finished with a game-high 32 points.
+
+Fellow import Milton Doyle and Majok Deng each scored 17 for Tasmania, who recorded their second win over Sydney in as many attempts this season.
+
+“I had a couple of opportunities where I’m open and I shot the ball,” Crawford said.
+</item 10>
+=== END ITEM id=d8bf2fa9726e6fc4 ===
+
+=== ITEM id=15ca57dd0bb3ddb7 ===
+Gold sentences and facts:
+Sentence 0: In July, speaking on the podcast he shares with his brother, New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City.
+  Fact 0.0: In July, Kelce spoke on the podcast he shares with his brother, New Heights.
+  Fact 0.1: Kelce said he intended to give Swift a friendship bracelet with his number on it.
+  Fact 0.2: Kelce said he intended to give the bracelet during Swift's Eras Tour concert in Kansas City.
+Sentence 1: On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24 September.
+  Fact 1.0: On his podcast, Kelce later invited the 'Anti-Hero' singer to one of his games at Arrowhead Stadium.
+  Fact 1.1: The 'Anti-Hero' singer famously accepted the invitation on 24 September.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Recalling their discussion to the Queen, Blair says that Diana feels she “still has a lot to offer the country as a public servant”. He says that she had asked
+if there was a way to work with the government on “a more formal basis” and that any “official role” would be appreciated.
+
+Bertie Carvel as Blair (Netflix)
+
+Following Diana’s death, Downing Street confirmed that Diana had visited Blair at Chequers with her son a few weeks before, where they discussed a special role
+for her as an overseas “ambassador” for Britain. Diana told a journalist at the time that the prime minister had recognised her skills and asked her to
+undertake “missions” abroad for Britain.
+
+Queen Elizabeth’s reluctance to accept Camilla
+
+As The Crown season six begins, Charles is frustrated at the public for demonising Camilla long after his split from Diana.
+</item 1>
+
+<item 2>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+The season begins with Princess Diana (played by Elizabeth Debicki) whisking her sons - Prince William (played by Rufus Kampa) and Prince Harry (played by Fflyn
+Edwards) - away on summer holiday to Saint-Tropez, France. After staying several days on Mohamed Al Fayed’s yacht, the boys return home to London where their
+father, the then-Prince of Wales, accompanies them to Balmoral Castle to vacation with the rest of the royal family in Scotland.
+
+In episode three, Diana’s partner Dodi Fayed (played by Khalid Abdalla) surprises her with a quick trip to Paris, France. However, the princess is keen to
+return home to the United Kingdom, and is eager to speak to her sons over the phone. A mob of paparazzi following the couple delays Diana’s scheduled phone call
+with William and Harry, until she’s able to catch them again later that evening.
+
+It is in this scene that The Crown depicts the doting mother’s final conversation with her sons.
+</item 2>
+
+<item 3>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Dodi’s proposal to Diana on the night they died
+
+After bursting into tears going for dinner at the Ritz, move upstairs, he proposes to her with a ring she had previously pointed out when they sheltered from
+crowds in a Monte Carlo jewellery shop. She tells him to get up off his knee “I know the whole world is wondering if we’re going to get married, but that’s not
+a reason to actually do it.” However, they share a drink and bittersweet conversation about how they need to live their lives going forward - advice
+
+Dodi is shown proposing to Diana before they died (Daniel Escale/Netflix)
+
+In real life, Dodi did not propose to Diana on that fateful evening in Paris. However, at the inquest into the death in 2007, the jury were shown CCTV footage
+of him purchasing an engagement ring worth £11,600 in a jewellers across the square from the Ritz on the afternoon of the crash.
+</item 3>
+
+<item 4>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+It is in this scene that The Crown depicts the doting mother’s final conversation with her sons.
+
+William, then 15, and Harry, then 12, inquire over the phone when their mother will be coming back home from Paris. “I’m coming home tomorrow, and I’m seeing
+you both tomorrow night,” Diana replies in the episode, which also takes place on the same day as her fatal car crash later that evening. The boys then ask
+Diana whether she plans on marrying Dodi, considering their relationship has been plastered all over the tabloids.
+
+Diana’s poignant last words to William and Harry shown in The Crown scene
+
+“Well, you know better than to believe the papers,” she tells William, before adding: “I’m emphatically not going to marry Dodi. To be honest, I can’t wait to
+come home.”
+
+When William sweetly asks his mother if she’s doing “okay”, Diana candidly tells her eldest son: “I’m okay. It’s just a bit mad here.
+</item 4>
+
+<item 5>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+Through tears, she claimed that he had proposed to her (something his family denied) and promised to buy her a house in Malibu. However, she dropped the lawsuit
+following Dodi’s death.
+
+Diana’s close relationship with paparazzi on France yacht trip
+
+When Dodi and Diana first spend time together on his father’s yacht in France, the paparazzi are never far away. However, when William refuses to go outside
+until the photographers leave them alone, she takes a boat out to visit them. Wearing a swimming costume, she asks them: “We’re having a lovely time, apart from
+one little thing: you lot.” “Don’t be like that, you love us really,” they reply. Diana asks them to leave her alone as they’re “freaking out” her sons, before
+telling one photographer – who she knows by name – that if they go away, “you’re going to get a big surprise with the next thing I do”.
+</item 5>
+
+<item 6>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+With the show heading into the late Nineties and early Noughties in its final season, which arrived on Netflix on Thursday (16 November), events are being
+depicted on screen that many of the public will remember well.
+
+The first part of season six takes place in the summer of 1997, and sees Prince Charles (Dominic West) building on his relationship with Camilla Parker Bowles
+(Olivia Williams), while Princess Diana (Elizabeth Debicki) sparks up a romance with film producer Dodi Fayed (Khalid Abdalla). The show also features the
+pair’s death in a car crash in Paris.
+
+As the new season arrives, and fans wonder what in The Crown is based in reality, here’s everything you need to know.
+
+Diana’s role with Tony Blair’s government
+
+Episode one sees Diana visiting Tony (Bertie Carvel) and Cherie Blair (Lydia Leonard) with William after asking for a meeting with him.
+</item 6>
+
+<item 7>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+It was later believed to have been delivered to their room before they went to Dodi’s flat, where a ring bearing the words “Dis-moi Oui” (“Tell me Yes”) – also
+the name of episode three – was later recovered, alongside a receipt for a “bague de fiançaille” (engagement ring). Speaking at the inquest, his father Mohamed
+claimed that the pair had met the jeweller in Monte Carlo during the holiday on the yacht, and that he believed Dodi planned to propose that night.
+
+Prince William goes missing in Balmoral after Diana’s death
+
+After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry
+at his family’s response to it. At one point, Charles is informed that the prince is not in his room and that “no one can find him”, prompting Charles and
+Prince Harry to look for him and a subsequent hunt across the grounds for the young royal.
+</item 7>
+
+<item 8>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+“The last call between Harry, William and Diana is heartbreaking,” a third user commented.
+
+In both the series and in real-life, Diana and Dodi - along with their chauffeur, Henri Paul - were killed on 31 August 1997 when their Mercedes-Benz was
+pursued by paparazzi and crashed in the Pont de l’Alma tunnel in Paris. The mother of two was 36 years old.
+
+The fatal car crash was recreated in the very first scene of season six. While the incident is not shown on-screen, a car carrying Diana and Dodi is seen
+speeding past a man walking his dog, before entering the tunnel. As the vehicle’s horn blares, he calls emergency services on his cell phone.
+
+Australian actor Elizabeth Debicki, who took over the role of Diana from Emma Corrin in season five, admitted it was “difficult to recreate” the scene -
+especially with her character being hounded by the paparazzi. “It was heavy and very manic, and incredibly invasive.
+</item 8>
+
+<item 9>
+The Crown: What is fact and what is fiction on season 6? (The Independent - Life and Style, 2023-11-17T19:32:16+00:00)
+He is not located, but later walks back to the house on his own accord, drenched in rain. “14 hours, that poor boy was gone,” the Queen later says.
+
+William (Kampa) goes missing after his mother’s death (Keith Bernstein)
+
+It’s true that William and Harry initially stayed in Balmoral with their grandmother following the death of Diana. While it’s not known whether he went missing,
+during a visit to Scotland in 2021, William recalled how that experience was one of the “saddest” moments of his life. “I was in Balmoral when I was told that
+my mother had died. Still in shock, I found sanctuary in the service at Crathie Kirk that very morning,” he recalled. “And in the dark days of grief that
+followed, I found comfort and solace in the Scottish outdoors. As a result, the connection I feel to Scotland will forever run deep.”
+
+The Crown season six part one is on Netflix now, with part two arriving on 14 December.
+</item 9>
+
+<item 10>
+Fans react to most ‘heartbreaking’ scene in The Crown (The Independent - Life and Style, 2023-11-17T09:35:32+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+The first four episodes of The Crown season six are officially here, but many viewers believe one scene has depicted the most devastating moment throughout the
+entire series.
+
+On 16 November, Netflix dropped the first four episodes of The Crown’s final season, followed by the last six episodes on 14 December. The latest installment
+takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997.
+</item 10>
+=== END ITEM id=15ca57dd0bb3ddb7 ===

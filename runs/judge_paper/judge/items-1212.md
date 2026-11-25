@@ -1,0 +1,1707 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 2 items.
+
+=== ITEM id=8f23dbaf761e9ab7 ===
+Gold sentences and facts:
+Sentence 0: This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+  Fact 0.0: It allows the collection of data from complex equipment.
+  Fact 0.1: It enables operators to track equipment performance.
+  Fact 0.2: It enables operators to predict maintenance.
+  Fact 0.3: It enables operators to predict downtimes.
+Sentence 1: If a track isn’t used or taken care of for an extended period of time, it will start to wear out and eventually become completely unsuitable for any kind of racing unless it is taken apart and rebuilt.
+  Fact 1.0: A track that is not used or taken care of for an extended period of time will start to wear out.
+  Fact 1.1: A worn-out track will eventually become completely unsuitable for any kind of racing.
+  Fact 1.2: A track becomes unsuitable for racing unless it is taken apart and rebuilt.
+
+Retrieved items:
+<item 1>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+This definition captures a macro concept of digital twins, but our report and previous article present a three-dimensional, cuboid model to help classify
+digital twins so apple-to-apple comparisons can be made. Each axis of the cuboid represents one dimension of a digital twin:
+
+1. Life cycle phase: The X-axis represents the six life cycle phases a digital twin is used for, from design to decommissioning.
+
+2. Hierarchical levels: The Y-axis represents a digital twin’s five hierarchical levels, from information to multi-system.
+
+3. Use/purpose of implementation: The Z-axis represents the seven most common uses for digital twins, such as simulation and prediction.
+
+Based on this model, there are 210 potential combinations (5 x 6 x 7 = 210); however, our research indicates that many digital twin initiatives are tailored to
+multiple combinations.
+</item 1>
+
+<item 2>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+You cannot escape conversations about AI no matter how far or fast you run. Hyperbole abounds around what current AI tech will be able to do (revolutionize
+every industry!) and what current AI tech will be able to do (take over the world!). Closer to the ground, TechCrunch+ is working to understand where startups
+might find footholds in the market by levering large language models (LLMs), a recent and impactful new method of creating artificially intelligent software.
+
+How AI will play in startup land is not a new topic of conversation. A few years back, one venture firm asked how AI-focused startups would monetize and whether
+they would suffer from impaired margins due to costs relating to running models on behalf of customers. That conversation died down, only to come roaring back
+in recent quarters as it became clear that while LLM technology is quickly advancing, it’s hardly cheap to run in its present form.
+
+But costs are only one area where we have unanswered questions.
+</item 2>
+
+<item 3>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+The first is the company’s pilots with Agility’s Digit systems. I wrote about this a couple of times last week, including a piece titled “Humanoid robots face a
+major test with Amazon’s Digit pilots” that went up over the weekend.
+
+I do genuinely believe there are going to be a lot of eyes on this thing. It’s not that I think it’s the end of Agility if Amazon opts not to extend a contract.
+It’s more that if Amazon decides to pursue it further, it’s going to cause a lot more companies to take bipedal/humanoid robots a lot more seriously. I’ve been
+saying the whole time that I’m holding off on judging the efficacy of humanoids until we see more in the field, and Amazon clearly feels the same way.
+
+The company operates at such an unfathomable scale (have you visited a regional fulfillment center lately?), that it truly needs to feel absolutely confident
+before it begins implementing new technologies into its workflows.
+</item 3>
+
+<item 4>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+Three years later, Pratt was named TRI’s CEO. Raibert continued as Boston Dynamics’ CEO until 2019, handing the reins over to longtime employee Rob Playter, who
+managed the company’s shift to more commercial pursuits. Last year, Raibert (who still serves as BD’s chairman) founded the Boston Dynamics AI Institute. The
+organization has a lot in common with TRI. Both are dedicated to pure research, with the backing of two major automakers (Toyota and Hyundai).
+
+I recognize that “pure research” is a bit of a loaded term. The concept is certainly a hopeful one: finding a method that can sustain research outside of the
+pressures of academia and corporate R&D.
+
+Asked whether there is pressure from Toyota to productize, Pratt says, “There actually is not, and I’m not saying that just to be nice. I think one of the great
+things about companies that have existed for long times is that this isn’t the first time that they’ve done R&D.
+</item 4>
+
+<item 5>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+First, the application must address a real enterprise pain point prioritized by executives. Second, to provide tangible benefits and long-term differentiation,
+the application should be composed of cutting-edge models that fit the specific and unique needs of the software. It’s not enough to simply plug into OpenAI;
+rather, applications should choose their models intentionally while balancing cost, compute, and performance.
+
+Third, the application is only as sophisticated as the data that it is fed. Proprietary data is necessary for specific and relevant insights and to ensure
+others cannot replicate the final product. To this end, in-house middle-layer capabilities provide a competitive edge while harnessing the power of foundational
+models. Finally, due to the inevitable margin of error of generative AI, the niche market must tolerate imprecision, which is inherently found in subjective and
+ambiguous content, like sales or marketing.
+
+How much technical competence can startups presume that their future enterprise AI customers will have in-house, and how much does that presumed expertise guide
+startup product selection and go-to-market motion?
+</item 5>
+
+<item 6>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+The Eagles come to mind after falling 20-14 to the Jets.
+
+Most would agree teams have gotten smarter in their handling of fourth-down situations, going for it when it makes sense, instead of punting almost out of
+habit. Making the aggressive play to win can absolutely be the smart play, regardless of results. It’s progress when teams seriously wrestle with these
+questions, not just on fourth down, but in all aspects of their strategy.
+
+But when the Eagles tossed a killer interception on third-and-9 from their own 46-yard line while protecting a 14-12 lead against the Jets with two minutes left
+in the fourth quarter, a longtime NFL exec reached out with a question: “Have we come too far with coaches wanting to ‘win’ the game instead of sometimes being
+more traditional?”
+
+His point: Philadelphia could have run the ball on third-and-9, then punted from around midfield.
+</item 6>
+
+<item 7>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+In terms of the digital twin market, our market model only considers software spending for digital twins, which we break into two scopes:
+
+Broad digital twin market – includes the revenue for all software solutions that provide capabilities that are used for digital twins, such as solutions that
+integrate data sources into a digital twin and are capable of simulation, visualization, and predictions
+
+– includes the revenue for all software solutions that provide capabilities that are used for digital twins, such as solutions that integrate data sources into
+a digital twin and are capable of simulation, visualization, and predictions Narrow digital twin market – only considers spending for digital twin-specific
+software, such as software intended to model the digital twin data
+
+Though hardware and services related to digital twins can bolster the capabilities of digital twin software, we only view them as supporting services for the
+software, and we do not consider them in our digital twin market model. That said, this ability to bolster capabilities means they can aid digital twin market
+growth, as shown in some of the trends below.
+</item 7>
+
+<item 8>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+While Indian interest rates were always higher, investors in equities benefited from the global investors’ hunger for yields. That advantage is diminishing
+today. This is not a recommendation on the stocks, but pointers on factors to consider to make your relative valuation process more foolproof.
+
+With discipline and experience, the process will keep getting better.
+</item 8>
+
+<item 9>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+It relies on modern composites instead of air pressure to provide the right mix of stiffness and flex with significantly more durability. Michelin says it could
+reduce tire replacements by 20 percent. Variations of this theme have been in development for decades, but models are in testing now for consumer and industrial
+use.
+
+Goodyear gave us a more radical vision of a more distant future tire with 2020’s ReCharge concept, which proposed that a biodegradable tread could be recharged
+simply by inserting refillable capsules with seasonal compounds. As a concept, it’s pretty far out there. Goodyear’s Helsel confesses as much, calling them
+“purely conceptual designs” that “might never be produced as such.” However, he says that the non-pneumatic nature of those concepts, and the advanced sensors
+embedded within, are indicative of ongoing research into future tires.
+
+Another concept, though, is less about increasing the sustainability of tires and more about increasing the viability of EVs.
+</item 9>
+
+<item 10>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+I think the leadership at Hyundai — the chairman visited me last week, and we’re in close touch with him and the people who work with him — think that getting
+into the 22nd century is an important thing to do and we’re getting started on it now.”
+
+Pratt adds, “There’s actually this alignment that’s happening between cars and robotics, as well. Rod Brooks was the one who a few years ago said that modern
+cars are eldercare robots. I think that’s really true. You think about the amount of computers in them, the amount of software that’s in them. TRI has different
+divisions inside of it, one of which works on very advanced things in cars that is completely overlapping with some of the software and some of the concepts
+that we’re using in the robotics space.”
+
+For its part, the Boston Dynamics AI Institute lists three key pillars of its research: intelligence, dexterity and mobility. That’s effectively making robots
+that are smarter, better at mobile manipulation and move more dynamically.
+</item 10>
+
+<item 11>
+Robotics Q&A with Boston Dynamics’ Aaron Saunders (TechCrunch, 2023-12-09T16:05:51+00:00)
+Following manufacturing and warehouses, what is the next major category for robotics?
+
+Those two industries still stand out when you look at matching up customer needs with the state of art in technology. As we fan out, I think we will move slowly
+from environments that have determinism to those with higher levels of uncertainty. Once we see broad adoption in automation-friendly industries like
+manufacturing and logistics, the next wave probably happens in areas like construction and healthcare. Sectors like these are compelling opportunities because
+they have large workforces and high demand for skilled labor, but the supply is not meeting the need. Combine that with the work environments, which sit between
+the highly structured industrial setting and the totally unstructured consumer market, and it could represent a natural next step along the path to general
+purpose.
+
+How far out are true general-purpose robots?
+
+There are many hard problems standing between today and truly general-purpose robots. Purpose-built robots have become a commodity in the industrial automation
+world, but we are just now seeing the emergence of multi-purpose robots.
+</item 11>
+
+<item 12>
+Robotics Q&A with Boston Dynamics’ Aaron Saunders (TechCrunch, 2023-12-09T16:05:51+00:00)
+For the next few weeks, TechCrunch’s robotics newsletter Actuator will be running Q&As with some of the top minds in robotics. Subscribe here for future
+updates.
+
+Part 1: CMU’s Matthew Johnson-Roberson
+
+Part 2: Toyota Research Institute’s Max Bajracharya and Russ Tedrake
+
+Part 3: Meta’s Dhruv Batra
+
+This time it’s Boston Dynamics CTO, Aaron Saunders. He has been with the company for more than 20 years, most recently serving as its vice president of
+Engineering.
+
+What role(s) will generative AI play in the future of robotics?
+
+The current rate of change makes it hard to predict very far into the future. Foundation models represent a major shift in how the best machine learning models
+are created, and we are already seeing some impressive near-term accelerations in natural language interfaces. They offer opportunities to create conversational
+interfaces to our robots, improve the quality of existing computer vision functions and potentially enable new customer-facing capabilities such as visual
+question answering.
+</item 12>
+
+<item 13>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Within the enterprise sector, there’s a clear recognition of the value of AI. However, many lack the internal capabilities to develop AI solutions. This gap
+presents a significant opportunity for startups specializing in AI to engage with enterprise clients. As the business landscape matures, proficiency in
+leveraging AI is becoming a strategic imperative.
+
+McKinsey reports that generative AI alone can add up to $4.4 trillion in value across industries through writing code, analyzing consumer trends, personalizing
+customer service, improving operating efficiencies, and more. Ninety-four percent of business leaders agree AI will be critical to all businesses’ success over
+the next five years, and total global spending on AI is expected to reach $154 billion by the end of this year, a 27% increase from 2022. The next three years
+are also expected to see a compound annual growth rate of 27% — the annual AI spending in 2026 will be over $300 billion.
+</item 13>
+
+<item 14>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 3: Partnerships forged in the clouds: Hyperscalers team up with OT and simulation specialists
+
+In the last few years, cloud hyperscalers like AWS and Microsoft Azure have introduced digital twin platforms, e.g., AWS IoT TwinMaker and Azure Digital Twins,
+that allow for interconnecting various data sources and building digital twin topology. However, these companies realize they cannot deliver end-to-end digital
+twin solutions by themselves and are thus partnering with OT and simulation companies to add capabilities to their networks.
+
+Hyperscalers and OT companies
+
+OT companies provide industrial data management capabilities and connections to millions of local physical assets. By partnering with hyperscalers, OT companies
+can reach broader audiences looking for digital transformation solutions by offering typical cloud benefits like storage and computation power.
+
+Example: In 2021, Siemens and AWS announced an expansion of their partnership, with digital twin technology being an area of focus.
+</item 14>
+
+<item 15>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+), that it truly needs to feel absolutely confident before it begins implementing new technologies into its workflows.
+
+Another noteworthy piece of news is an Amazon, MIT/Ipsos partnership designed to gauge what both workers and consumers think about industrial robots.
+
+“The key to effective teamwork is building a shared understanding of what our partners will do and what they will need to be successful,” says MIT’s Julie Shah.
+“Our research shows that the best way to optimize human-robot team performance is to develop robots that are active collaborators in helping a human to learn
+about their capabilities, limitations and behaviors.”
+
+I do think human perception of robots is a question worth asking, but I would love to see a study with such financial and academic resources digging more deeply
+into questions around short- and long-term displacements.
+
+During his presentation, Brady addressed the jobs question accordingly:
+
+We have more than 750,000 mobile robots in our operations and thousands of other robotic systems that help move, sort, identify and package customer orders.
+It’s taken us more than 10 years to reach this scale.
+</item 15>
+
+<item 16>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+This part of the stack includes cutting-edge capabilities, encompassing model fine-tuning, prompt engineering and agile model orchestration. It’s here that we
+anticipate the rise of entities akin to Databricks. Yet, the competitive dynamics of this layer present a unique challenge. Primarily, the emergence of
+foundation model providers expanding into middle-layer tools heightens commoditization risks. Additionally, established market leaders venturing into this space
+further intensify the competition. Consequently, despite a surge in startups within this domain, clear winners still need to be discovered.
+
+Companies like Datadog are building products to support the expanding AI market, including releasing an LLM observability tool. Will efforts like what Datadog
+has built (and similar output from large/incumbent tech powers) curtail the market area where startups can build and compete?
+
+LLM observability falls within the “middle layer” category, acting as a catalyst for specialized business applications to use foundational models.
+</item 16>
+
+<item 17>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+Truly sustainable tires are becoming a reality, but will it be enough?
+
+Renewable rubber
+
+Bridgestone’s “Wireless-In-Wheel” technology.
+
+If you watched any IndyCar road course race this year, basically any of the half-dozen events where the drivers had to turn right as well as left, you might
+have noticed some green flashes on those cars’ tires. It wasn’t just a visual flair to an otherwise visually dull part of the equation.
+
+Those tires contained guayule, part of an agrarian prototype effort from Bridgestone, the supplier of spec tires for that series. It’s a high-profile
+demonstration of a new domestically sourced, renewable source of rubber that augments other natural sources like that from the hevea tree and even the Russian
+dandelion.
+
+Truly sustainable tires are becoming a reality, but will it be enough?
+
+Bridgestone’s Bill Niaura, executive director of sustainable innovation and circular economy, says guayule is a drop-in replacement with many potential
+advantages. Chief among them?
+</item 17>
+
+<item 18>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Product design is in a moment of profound change and redefinition as technologies like artificial intelligence (AI) and spatial computing dramatically affect
+computing experiences. AI, especially, may have only minor impacts on interface design but will significantly impact the holistic product or ecosystem
+experience. Spatial computing, on the other hand, will change human-computer interactions and unmoor our understanding of what a computer is.
+
+In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for
+technologists and designers to be in the process together.
+
+For successful products and businesses, innovation is perpetual. There is a never-ending search to find the next new thing that enhances the user experience,
+extends product reach, expands revenue, or all three simultaneously. Product design makes innovation less daunting and increases chances for success because it
+is a multidisciplinary process with structures and frameworks to catalyze innovation. Technologists have a role in the process that expands beyond simply
+validating the technology or concept, which is their customary responsibility.
+</item 18>
+
+<item 19>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+The bad news is that we’re still going through more tires than ever. Harrigle says we scrap 250 million tires every year in North America. Again, about half are
+burned for fuel.
+
+But there are other solutions. Recycling is one, but reuse is better, a process called retreading. Retreading itself is nothing new, but while it’s generally
+fallen out of favor for consumer tires, on the industrial side of things, it can be a huge cost-saver — and environment-saver, too.
+
+Jason Roanhouse, VP of North American Bandag operations at Bridgestone Mobility Solutions, says that the company’s retread business has saved 300 million tires
+from being thrown out, worth roughly 4 billion gallons of oil.
+
+Future tires
+
+While efforts to find sustainable replacements for tire manufacturing compounds continue, as does research into what today’s compounds do to our health, many
+manufacturers are trying to change the equation altogether.
+
+A near-future example is the Michelin Uptis, a non-pneumatic tire.
+</item 19>
+
+<item 20>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+A comprehensive study conducted on intelligence failures in the national arena, from the fall of the Iron Curtain in 1989 to 2010, showed no improvement in
+providing or thwarting warnings about strategic surprises, even if the means of gathering information had improved. Four years after signing the study, former
+US President Barack Obama admitted that US intelligence had not correctly assessed the severity of the threat of large parts of Iraq and Syria being occupied by
+ISIS.
+
+"No matter how technologically advanced your army or how effective your intelligence gathering system, identifying strategic surprises is a human process that
+depends on analyzing what is called, in the intelligence community, 'weak signals,'" Barnea says. "These are pieces of relevant information that have been
+conveyed to the organization, but because they are low-key, or because of the information overload around them, the organization fails to identify and interpret
+them correctly."
+</item 20>
+
+<item 21>
+The Apple Watch’s double tap gesture points at a new way to use wearables (The Verge, 2023-10-25T17:04:01+00:00)
+“Reliability also means that when you’re doing things that are almost like a tap, or a double tap, that we’re not erroneously triggering the gesture.”
+
+“Reliability means that when you do the gesture, we’re able to detect it,” Clark says. “Reliability also means that when you’re doing things that are almost
+like a tap, or a double tap, that we’re not erroneously triggering the gesture. We got to make sure we’re able to detect the right thing through by tuning these
+things with the right scenarios.”
+
+Meaning, the algorithm also has to be able to differentiate when someone is in motion, the type of activities they’re doing, and what other features they may be
+using on the watch at a given point in time. Streaming music or taking calls might seem unrelated to double tap, but the algorithm must be able to account for
+the noise introduced by subsystems like LTE and Bluetooth. That’s harder to do well when everything is done on the main CPU.
+</item 21>
+
+<item 22>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+That’s effectively making robots that are smarter, better at mobile manipulation and move more dynamically. Raibert admits that “Boston Dynamics AI Institute”
+might not be the most instructive name, both with regard to confusion between itself and Boston Dynamics the company, as well as a seeming focus on AI over
+robotics. A name change is apparently coming, but nothing has been decided just yet.
+</item 22>
+
+<item 23>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+But they also haven’t really beaten anyone. They were down 14 points to Carolina. Do you think they are coming back from 13 down against Philly? In my opinion,
+no.”
+
+Advertisement
+
+• Dallas Cowboys: Is this team any better than previous Dallas teams that fell short?
+
+What I think: It’s a tough time to evaluate the Cowboys fairly because they were so bad against San Francisco on a big stage in their most recent game. I just
+don’t see where Dallas is better or going to get considerably better, especially on offense. And every time they enjoy success, they seem to enjoy it a little
+too much. That is a reflection of their owner.
+
+Exec comment: “Run defense and consistency on defense, and then offensively, what is their identity? They just are not very good. Their best games are when they
+play great defense and get turnovers, but that is not going to happen enough, especially against the good teams.”
+
+• Detroit Lions: Have they fixed their defense?
+</item 23>
+
+<item 24>
+Rollback Policy, a Boon or a Curse? The Controversial System That Might Redefine the Golfing World by the End of 2030 (Essentially Sports,
+2023-12-03T23:45:00+00:00)
+The distance golf balls travel has increased multifold. So a change is necessary to address the issue. Otherwise, the golf courses need to be perpetually
+extended. Not us. This is the opinion of both Royal & Ancient (R&A) and United States Golf Association (USGA) officials who decided it’s time to bring in the
+golf ball rollback policy. According to them, with new technologies, golf balls are covering far more distance, resulting in lengthening the courses and
+incurring a greater financial burden on the golf clubs. Moreover, there are a growing number of voices who feel golf has become way less competitive nowadays.
+
+America’s Favorite Video Today
+
+On the other hand, there is a chance this might create bifurcation, which no one likes. The rules are non-binding in nature. So, tours and regional governing
+bodies can decide for themselves whether to implement them or not.
+</item 24>
+
+<item 25>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+In other words: less harmful rubber, more grip, better wear, and better range or fuel economy.
+
+The molecular menace
+
+Firestone’s IndyCar tires.
+
+Drive long enough, and the well-defined tread patterns of even the most efficient tires will fade, slowly balding like a stressed-out environmental scientist’s
+pate. It’s easy to imagine that the lost rubber simply disappears, but the truth is more terrifying.
+
+Tires break down into tire and road wear particles, or TRWP. This black dust accumulates on roads mostly — but not permanently. When it rains, it is carried
+away.
+
+A recent Pew Charitable Trusts report found that 78 percent of ocean microplastics are synthetic tire rubber, which makes efforts to cut down on microfiber
+pollution from our laundry seem a bit quaint.
+</item 25>
+
+<item 26>
+NASCAR Might Have Just Saved Themselves With the $7.7 Billion Media Rights Deal (Essentially Sports, 2023-12-01T20:55:57+00:00)
+Stern then pointed out how the media rights revenue plays a key role in sports as he used the MLS as an example.
+
+He said, “You look at MLS. MLS takes a big deal with Apple, almost all of their games behind the Apple TV’s paywall. That was the money they could get and they
+had to deliver for their industry. Their industry is expected to be a growing business and one of the most sporting ways to be a growing business in sports is
+to have growing media rights revenue.”
+
+While he explained that it was a similar case with NASCAR, he added one more angle because of which this deal possibly materialized. It is no secret that the
+cable universe has been declining. As Stern discussed, every quarter, there is a drop in a couple of percentages of subscribers, which is very concerning.
+
+This is one of the reasons why NASCAR did not want to gamble solely on cable users.
+</item 26>
+
+<item 27>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market trends
+
+We will now look at four trends helping digital twin market growth.
+
+Trend 1: Digital twins deployed to meet sustainability goals
+
+Sustainability was discussed in approximately 21% of recent CEO earnings calls and has remained a consistent topic throughout 2023. This pairs with our report’s
+analysis that the pursuit of sustainability goals is a tailwind macro factor for the digital twin market.
+
+To achieve their sustainability goals, many companies are exploring digital twins. Due to their ability to simulate real-world conditions and deliver real-time
+information, organizations can optimize resource usage, reducing carbon emissions and improving supply and transportation networks.
+
+According to Capgemini Research Institute’s 2022 digital twins report, 57% of organizations agreed that one of the key drivers for their digital twin
+investments was improving their sustainability, and 51% agreed that digital twins would help achieve their organization’s environmental sustainability goals.
+
+In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the
+challenges inherent in sustainability goals.
+</item 27>
+
+<item 28>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Authoritarians know this, and this is why they have troll farms that can manipulate the range of solutions and the sentiments about them.
+
+The Internet as we experience it represents a central obstacle to climate action, through several mechanisms. Promotion of false information about climate
+change is only one of them. There’s general political polarization, which inhibits the coalitions we need to build to realize clean energy, as well as creates
+paralyzing infighting within the climate movement about strategies, which the platforms benefit from. There’s networked opposition to the infrastructure we need
+for the energy transition. There’s the constant distraction from the climate crisis, in the form of the churning scandals of the day, in an attention economy
+where all topics compete for mental energy. And there’s the drain of time and attention spent on these platforms rather than in real-world actions.
+
+Any of these areas are worth spending time on, but this essay focuses on how the contemporary media ecology interferes with climate strategy and infrastructure
+in particular.
+</item 28>
+
+<item 29>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 4: Initiatives promoting interoperability of digital twins across systems from different vendors
+
+Agreement on integration standards among the various digital twin technology providers is crucial for building cross-system digital twins. With standards,
+manufacturers can offer services that can be applied to unique situations with other digital twin technology and software.
+
+Recognizing this, countries and industry organizations have taken several steps to address this need:
+
+Plattform Industrie 4.0 and CESMII
+
+Plattform Industrie 4.0 and the Clean Energy Smart Manufacturing Innovation Institute (CESMII) partnered to establish standards for manufacturers in Germany and
+the United States to better enable smart, sustainable competition. The partnership addressed similar challenges related to Industry 4.0 and Smart Manufacturing.
+</item 29>
+
+<item 30>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+The partnership addressed similar challenges related to Industry 4.0 and Smart Manufacturing.
+
+DTC digital twin interoperability framework
+
+The Digital Twin Consortium (DTC), a collaborative partnership of industry, academia, and government experts, released the Digital Twin System Interoperability
+Framework to “unify a nascent ecosystem of high-value, multi-vendor services that can seamlessly ‘plug into’ a multi-dimensional, interoperable system of
+systems.”
+
+DTC and IDTA collaboration
+
+DTC and the Industrial Digital Twin Association (IDTA) announced a liaison agreement to collaborate on standardization requirements, enabling interoperability
+through discussions, aligning work in horizontal domains, and collaborating on open-source projects, contributions, and reference implementations.
+
+DTC and OPC Foundation collaboration
+
+DTC and the OPC Foundation announced a liaison agreement to “accelerate the development and adoption of digital twin-enabling technologies,” promoting
+interoperability standards and processes to advance the use of digital twins in manufacturing across multiple industries.
+</item 30>
+
+<item 31>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+The stock would have been easily missed if PE was the metric used to spot the performers.
+
+Hence EV-based metrics are options to consider as well when equity-based valuation multiples do not give a clear picture. Where even EBITDA multiples are not
+clear, as was the case with many new-age company IPOs that were reporting losses even at the EBITDA level, investors have no option but to go further up the P&L
+to metrics like EV/revenue, or even outside of P&L to use metrics like EV/subscriber.
+
+As we mentioned earlier, relative valuation represents a number backed by a credible and well-validated story. Hence, you can use non-P&L multiples. So when you
+compare companies and invest in one based on EV/Subscriber, there must be a credible story backing future monetisation of the subscriber in a profitable manner.
+But do bear in mind, the risks are higher and so may be the rewards or pain as the case may be. When the risks are higher, you must apply a higher margin of
+safety before choosing the stock.
+</item 31>
+
+<item 32>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 32>
+
+<item 33>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Even worse, the system is addictive, with notifications delivering hits of dopamine in a part of what historian and addiction expert David Courtwright calls
+“limbic capitalism.” Society has more or less sleepwalked into this outrage-industrial complex without having a real analytic framework for understanding it.
+The tech platforms and some research groups or think tanks offer up “misinformation” or “disinformation” as the framework, which present the problem as if the
+problem is bad content poisoning the well, rather than the structure itself being rotten. As Evgeny Morozov has quipped, “Post-truth is to digital capitalism
+what pollution is to fossil capitalism — a by-product of operations.”
+</item 33>
+
+<item 34>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+Track tires are pushed to their limits, resulting in better products for the road. In time, at least.
+
+Many manufacturers have a self-imposed deadline for a shift to renewable sourcing for materials. Dunlop is promising 40 percent of its tires will be renewable
+by the end of this decade and 100 percent by 2050. Bridgestone’s goal is also 2050 but is introducing models now with an increased focus on sustainability, like
+the Turanza EV, made of 50 percent renewable and recycled materials.
+
+How all of this factors into each manufacturer’s specialty blends is complicated, but generally, it breaks down like this:
+
+“Natural rubber and synthetic rubber each represent about 25 percent of materials used in tire manufacturing. Fillers, primarily carbon black and silica,
+represent an additional 25 percent,” Bridgestone’s Niaura says. “The remaining percentage consists of steel, textiles, oils, resins, and other ingredients used
+to cure the tire or serve as anti-degradants.”
+</item 34>
+
+<item 35>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+It won’t always be right, though. But it becomes the epicenter of where the conversation is. And then I’ll think what percentage of our population really wants
+to earnestly take the breath and say, let me stop doomscrolling, and let me just wait until people can do the work, synthesize it and then help me react?” he
+continued.
+
+“We are also so plugged into all these storylines, whether it’s from traditional media, whether it’s from user-generated — someone on their phone, you know,
+posting to a Telegram group. We are overwhelmed and overloaded, and it’s unfortunately appealing to the worst parts of a lot of our instincts,” Ohanian added.
+
+In part, some of the issues around how social media platforms developed had to do with how the companies were originally developed. Ohanian, for example, shared
+that Reddit grew out of his running of a forum site in college, when he believed that online community felt as real as offline.
+</item 35>
+
+<item 36>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+Chief among them? Location: “Hevea trees are primarily grown in Southeast Asia,” he says, “while guayule is grown in the Southwestern US.”
+
+This is also a climate resiliency play. Guayule provides an alternate drought-resistant source for natural rubber at a time when global temperature patterns are
+behaving like the stock market: highly unpredictable but trending upward.
+
+Virtually every tire manufacturer is making at least token efforts to increase the usage of sustainable materials like guayule. Yokohama is using motorsports to
+develop its Advan A005 tire, which debuted at last year’s Pikes Peak International Hill Climb and contains 33 percent sustainable materials, including
+biomass-derived rubber. Michelin, meanwhile, shod Porsche’s prototype electric GT4 e-Performance racer with tires said to be 53 percent renewable, like strap
+steel and lemon peels.
+
+That all may sound like marketing plays — and it partly is — but motorsports have historically proven an ideal development opportunity in the automotive
+industry.
+</item 36>
+
+<item 37>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+(Spoiler alert: Yes.)
+
+Rumors are swilling that OpenAI may be considering developing its own AI chips. That’s going to get interesting, especially if you’ll recall that Nvidia’s
+ongoing stock market rally is likely driven by the current boom in AI. The company’s ChatGPT’s mobile app hit a record $4.6 million in revenue last month, but
+growth is slowing. Oh, and there’s no need to shed tears for Nvidia quite yet; Brian’s piece breaking down how Nvidia became a major player in robotics is super
+interesting.
+
+Adobe has doubled down on its Firefly generative AI models. This week, Frederic covered how the software can now generate more realistic images and can help
+artists create vector graphics in Illustrator. Neato.
+
+More on the AI front
+
+If AI can’t go to the mountain, the mountain will come to AI: Dutch startup Tidalflow exits stealth with backing from Google’s Gradient Ventures. It is aiming
+to help any software play nice with ChatGPT and other LLM ecosystems.
+</item 37>
+
+<item 38>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+This means we can list items for sale on Amazon.com more quickly, benefiting both sellers and customers. When orders are placed, Sequoia also reduces the time
+it takes to process an order through a fulfillment center by up to 25%, which improves our shipping predictability and increases the number of goods we can
+offer for Same-Day or Next-Day shipping. Obviously this is all a matter of reducing delivery times — also the driving factor in the company’s Prime Air
+investments. The company has already set next- and same-day delivery expectations in many areas, so one wonders when we arrive at the point where any additional
+time savings becomes effectively negligible. I suspect if you were to put the question to Amazon, they would say “never.”
+
+I didn’t get to that specific question during my time with Amazon Robotics chief technologist, Tye Brady. Instead, our conversation primarily focused on three
+important (I think) topics. The first is the company’s pilots with Agility’s Digit systems.
+</item 38>
+
+<item 39>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+The article is well worth a read, to figure out in which circumstances you can expect a decent return on investment on your event-going antics.
+
+Today’s newsletter is going to be a bit more to the point than usual: I’m laid up at home with pneumonia (yes, I really am an 86-year-old grandmother.
+Surprise!), so forgive the antibiotics-addled ramblings this week. I hope I’ll be back with non-pharmaceutically-enhanced ramblings next week.
+
+Artificial intelligence: Y’all just can’t get enough
+
+Our most-read stories consistently continue to be about AI. No big surprise, perhaps, the AI hype cycle continues apace. This week there’s been a bunch of
+stories about the seedy underbelly of AI, including how humans are part of the problem, continuing to trick AI systems into generating boobs and 9/11 memes. Oh,
+humans. We spoke with investors to figure out whether the future of AI has hope for us beyond daft memes. (Spoiler alert: Yes.)
+</item 39>
+
+<item 40>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+The thing we’re jacked into and collectively creating seems more like a global endocrine system than anything we might have visualized in the years while
+“cyber” was a prefix. This may seem a banal observation, given that Marshall McLuhan was talking about the global nervous system more than fifty years ago. We
+had enthusiasm about cybernetics and global connectivity over the decades and, more recently, a revitalization of theory about networks and kinship and rhizomes
+and all the rest. (The irony is that with fifty years of talk on “systems thinking,” we still have responses to things like COVID-19 or climate that are almost
+antithetical to considering interconnected systems — dominated by one set of expertise and failing to incorporate the social sciences and humanities). So —
+globally connected, yet divided into silos, camps, echo-chambers, and so on. Social media platforms are acting as agents, structuring our interactions and our
+spaces for dialogue and solution-building.
+</item 40>
+
+<item 41>
+The small and affordable EVs we lost in 2023 (TechCrunch, 2023-12-19T15:08:55+00:00)
+Several would-be antidotes to the supersized and high-priced EV trend kicked the bucket this year. That’s bad news for everyone, even if you’d pick a beefy
+Cybertruck over something resembling a teeny Kei car.
+
+Cars in general are no substitute for more efficient modes of transportation, including trains and bikes. But the last thing the climate and most budgets need
+is another tank-like truck or SUV. Large, heavy electric vehicles demand more materials and energy than smaller EVs; that means more avoidable greenhouse gas
+emissions during and after production. Despite these downsides, automakers build big because big sells.
+
+Numerous vehicles from startups and some legacy automakers challenge the “bigger is better” notion via compact designs and smaller price tags. Yet, little
+typically comes of their resistance. We observed as much with several ill-fated EVs this year, including the ElectraMeccanica Solo, Sono Sion and Mazda MX-30.
+</item 41>
+
+<item 42>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+So the jobs changed. The jobs exist, but it’s a big sweeping change.
+
+If I visit the labs, I’ll see these sorts of experiments in action.
+
+Yeah. If you were to go to outside of Nashville today, you would see Proteus working with our Cardinal arm. You’d get to see the interoperability. We have the
+Proteus drives moving carts to the outbound docks. If you were to go down to Hou 6 just outside of Houston, you would see Sequoia fulfilling orders today, right
+in time for holiday shopping.
+
+What role do people play in that picture?
+
+People will always be at the center of a robotics universe. We know more robots, more jobs that we see through the productivity increases that we have.
+
+[The MIT study] sounds like it’s largely about perception and what people think of robots, rather than job numbers specifically.
+
+I’m not sure. It’s wherever [MIT professor Julie Shah] wants to take it.
+</item 42>
+
+<item 43>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+A digital twin strategy as part of an overall digitalization plan can be a crucial capability for asset-intensive industries and needs to encompass the entire
+asset lifecycle, process, and value chain from design and operations through maintenance and strategic business planning.”
+
+Example: Aden, a Chinese integrated facility service provider, created a digital twin for one of its commercial centers in Chengdu, China. The digital twin was
+designed to help facility managers inspect, maintain, and repair building assets. 3D simulations assist facility managers in visualizing, predicting, and
+optimizing energy consumption, and the expected benefits include lower annual energy consumption, water usage, and waste.
+
+Trend 2: Digital twins employed as virtual sensors in complex conditions
+
+Virtual sensors approximate data that otherwise cannot be obtained via physical sensors, often due to physical sensors being impractical, costly, or hazardous
+to employ. Companies are now building digital twins to model hardware and calculate data based on other conditions. This not only allows the collection of data
+from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes.
+</item 43>
+
+<item 44>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Considerations for digital twin vendors
+
+3 questions digital twin vendors should ask themselves based on research findings discussed in this article:
+
+1. Sustainability goals: Given the emphasis on sustainability and the role of digital twins in achieving it, is my company’s digital twin solution well-equipped
+to support sustainability objectives? Are there new features we need to develop?
+
+2. Interoperability: Is our digital twin solution currently designed to be interoperable with other systems and technologies, especially those from different
+vendors?
+
+3. Product development: How aligned is our product development roadmap with the emerging trends highlighted in the report, especially around end-user and
+technological advancements?
+
+Considerations for adopters
+
+3 questions adopters should ask themselves based on research findings discussed in this article:
+
+1. Infrastructure readiness: Do we have the necessary infrastructure and resources in place to support the deployment and effective use of digital twins? If
+not, what investments are required?
+
+2.
+</item 44>
+
+<item 45>
+Reliance Industries: With the stock having underperformed Nifty 50 in last three years, is it time to buy? (Business Line, 2023-12-09T13:15:42+00:00)
+O2C & E&P
+
+RIL’s traditional businesses — O2C and exploration (E&P) — still account for 45-50 per cent of RIL’s consolidated EBITDA.
+
+Spanning expansive refining and petrochemicals business, the O2C business performance can be volatile depending on trends in crude oil prices and refining
+margins. In times of high crude oil prices, higher refining and petchem margins have helped the overall profitability. Similarly, there have been times when,
+due to falling crude prices, refining and petchem cracker have been on a falling spree, thereby adding to the pressure on the overall profit performance.
+Reliance’s O2C business has best-in-class margins and may not be comparable to Indian refiners, given the scale of operations, efficiencies and export focus.
+
+Overall, while it remains a significant part of the company’s business, it will not get the same high valuation like RIL’s consumer facing businesses.
+</item 45>
+
+<item 46>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Despite cloud computing remaining critical, AI budgets are now more than double that of cloud computing. Eighty-two percent of business leaders believe the
+integration of AI solutions will increase their employee performance and job satisfaction, and startups should expect a high level of desire for and experience
+with AI solutions in their future customers.
+
+Finally, we’ve seen consumption, or usage-based priced tech products’ growth slow in recent quarters. Will that fact lead startups building modern AI tools to
+pursue more traditional SaaS pricing? (The OpenAI pricing schema based on tokens and usage led us to this question.)
+
+The trajectory of usage-based pricing has organically aligned with the needs of large language models, given that there is significant variation in
+prompt/output sizes and resource utilization per user. OpenAI itself racks upward of $700,000 per day on compute, so to achieve profitability, these operation
+costs need to be allocated effectively.
+
+Nevertheless, we’ve seen the sentiment that tying all costs to volume is generally unpopular with end users, who prefer predictable systems that allow them to
+budget more effectively.
+</item 46>
+
+<item 47>
+When it comes to generative AI in the enterprise, CIOs are taking it slow (TechCrunch, 2023-12-15T18:45:09+00:00)
+To hear the hype from vendors, you would think that enterprise buyers are all in when it comes to generative AI. But like any newer technology, large companies
+tend to move cautiously. Throughout this year, as vendors feverishly announced new generative AI-fueled products, CIOs took note.
+
+Some companies have actually been looking to cut back on spending, or at least stay even, not necessarily looking for new ways to spend money. The big exception
+is when technology enables companies to operate more efficiently, and do more with less.
+
+Generative AI certainly has the potential to do that, but it also has its own costs associated with it, whether it’s a higher cost for these features in a SaaS
+product or the price for hitting a large language model API if you’re building your own software internally.
+
+Either way, it’s important for the folks implementing the technology to understand if they are getting a return on their investment.
+</item 47>
+
+<item 48>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Do you expect startups to build striated solutions for individual layers of the LLM stack, or pursue a more vertical approach?
+
+While there are startups specializing in parts of the stack (like Pinecone), Valor’s focus is on applied AI, which we define as AI that is solving a customer
+problem. Saile.ai is a good example — it uses AI to generate closeable leads for the Fortune 500. Or Funding U using its own trained dataset to create a more
+useful credit risk score. Or Allelica, using AI on treatment solutions applied to individual DNA to find the best medical treatment for you personally in a
+given situation.
+
+Companies like Datadog are building products to support the expanding AI market, including releasing an LLM observability tool. Will efforts like what Datadog
+has built (and similar output from large/incumbent tech powers) curtail the market area where startups can build and compete?
+
+Tools like Datadog can only help the acceptance of AI tools if they succeed in monitoring AI performance bottlenecks.
+</item 48>
+
+<item 49>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 49>
+
+<item 50>
+Israel's defense undone by reliance on technology (Globes English | Israel Business Arena, 2023-11-05T13:35:33+00:00)
+Therefore, such systems always need what’s known as 'redundancy', i.e. backup systems, to make sure there isn’t a single point of vulnerability through which
+everything could collapse. The Air Force, for example, has several different models of aircraft just for this. Every plane also has several systems to back it
+up."
+
+The Iron Dome paradox
+
+Perhaps more than anything else, the Iron Dome system is representative as the technological response to the threat from Gaza. Matania explains, "The Iron Dome
+was built with the strategic vision of giving decision-makers breathing room, to allow them not to react immediately to the rockets, but to have the flexibility
+to react at the right time, and in the right place, in a range of ways. But some say its success was paradoxical. Iron Dome was so successful it not only
+supported the decision-making process but fundamentally changed it.
+</item 50>
+
+<item 51>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+GO DEEPER Behind the AI magic that lets Amazon's Prime Vision show the NFL like never before
+
+• Buffalo Bills: Are the defensive injuries too much to overcome?
+
+What I think: The rest of the conference is the key variable. The Bills are diminished. They have imperfections. But Buffalo already defeated the Dolphins. The
+other AFC teams aren’t exactly peaking. Kansas City and Cincinnati appear easier to defend this season than in the recent past. We’ll see how well the Dolphins
+hold up. This can still be Buffalo’s season.
+
+Exec comment: “Matt Milano and Tre’Davious White, those are huge injuries for that football team. The Bills are not as dominant as they felt going into it with
+so many injuries on defense. But the division they are in, they will still be able to slug it out and get to where they need to go. Nobody has really emerged in
+the AFC to unseat these teams at the top.”
+</item 51>
+
+<item 52>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+The Boston Dynamics AI Institute is still in its infancy, and therefore doesn’t have much in the way of public facing research to show just yet. It is, however,
+doing a lot of hiring. This week it announced that MIT’s Kate Darling will lead research around “ethics and societal impact of robotics and AI.” From the
+institute:
+
+Darling’s team will explore immediate as well as long term questions on the implementation and use of robotics, impact on the workplace, infrastructure and
+other topics. The team will perform studies and experiments designed to generate data needed for others to make informed ethics and policy decisions, and will
+also develop a series of talks and workshops at the intersection of ethics, law, economics and robotics that will offer a platform for broad discussion.
+
+“I’ve heard Gill say that making a car is taking small bits of metal and banging them up, welding them together and attaching them,” Raibert says. “That’s a
+little on the primitive side. Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that.
+</item 52>
+
+<item 53>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+“For the next five years, if you want to sell tires in California, you need to go through the process of either eliminating 6PPD, or at least properly
+researching the alternatives,” Molden says.
+
+“We are collaborating with researchers and other scientists to better understand this transformation product, fill knowledge gaps, and determine next steps,”
+says Helsel.
+
+Other initiatives are coming to limit overall tire emissions, including the upcoming Euro 7 regulations, which put caps on tire wear particles as well as other
+emissions.
+
+That seems like progress, but Emissions Analytics’ Molden isn’t so sure: “The reason I’m worried about that is I’m sure you can reduce that wear mass, but if
+you do that by making the compound more toxic, you could actually make the environmental impact worse.”
+
+“You could actually make the environmental impact worse.”
+
+That could be akin to increasing a car’s fuel efficiency by switching to leaded fuel.
+
+Molden believes that what’s needed is better understanding.
+</item 53>
+
+<item 54>
+Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle (TechCrunch, 2023-10-22T19:15:29+00:00)
+The former Amazon and Google executive, who has a background in strategy and management consulting, told TechCrunch that when he was struck by the urge to start
+a company, he researched the money-attracting industries of the world, and then, using AngelList, saw how many companies were trying to disrupt those
+industries.
+
+Here’s the nugget:
+
+His search yielded thousands of companies that were working on industries ranging from telecommunications and fashion to video games and food. Billions of
+dollars were going into trucking each year but fewer than 30 startups showed an interest in the field.
+
+“I saw a massive opportunity and few people going after it,” Lewis told TechCrunch.
+
+And then later, when asked if his method of deciding on a direction for a startup is still a good method, Lewis said, in short, yes. Read the whole interview
+from May 2022 here.
+
+Other deals that got our attention . . .
+</item 54>
+
+<item 55>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+A number of works outline the contours and dynamics of the current media ecology and what it does — Siva Vaidhyanathan’s Antisocial Media, Safiya U. Noble’s
+Algorithms of Oppression, Geert Lovink’s Sad by Design, Shoshana Zuboff’s Surveillance Capitalism, Richard Seymour’s The Twittering Machine, Tim Hwang’s
+Subprime Attention Crisis, Tressie McMillan Cottom’s writing on how to understand the social relations of Internet technologies through racial capitalism, and
+many more. At the same time, there’s reasonable counter-discussion about how many of our problems can really be laid at the feet of social media. The research
+on the impacts of social media on political dysfunction, mental health, and society writ large does not paint a neat portrait.
+</item 55>
+
+<item 56>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+If giants like Ford are feeling the frustration, imagine the mood at a small green tech startup.
+
+So what’s the play? How can the government support those striving against an increasingly insecure (and insincere) backdrop?
+
+The response of any tech company impacted by last week’s news surely has to be this.
+
+First, we need a consistent macroeconomic policy. This has a major impact on startups raising and deploying capital into climate R&D. The global economic
+contraction has made it difficult for these businesses to raise any money. Overall approaches to the economy have trickle-down effects on how we, as businesses,
+make money and run our operations. Right down to salaries, which alone are hard to keep up with inflation-based pay rises.
+
+The second is a consistent tax policy. One of the most critical things for startups is research and development (R&D) tax credits.
+</item 56>
+
+<item 57>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+“It’s a bit like going to a flight in restaurants, and each course has a wine match to the food,” he says. Perfectly paired tires may cost more than whatever
+you can get at a local discounter, but they’ll provide better wear and, ultimately, less pollution.
+
+End of the road
+
+Michelin’s Uptis.
+
+Even the best tires will need to be replaced, either thanks to wear or the kind of roadside debris that can not only ruin a tire but also your entire day. The
+good news is that modern tires last a lot longer than they did before. “In the early 1970s, the typical wear life for a set of tires was approximately 20,000
+miles in average driving conditions,” Harrigle says. “Fast forward to today, and 80,000-mile wear warranties are relatively common.”
+
+The bad news is that we’re still going through more tires than ever.
+
+The bad news is that we’re still going through more tires than ever.
+</item 57>
+
+<item 58>
+When it comes to generative AI in the enterprise, CIOs are taking it slow (TechCrunch, 2023-12-15T18:45:09+00:00)
+And so CIOs are under pressure to deliver that level,” Turow told TechCrunch.
+
+It has created a tension between this desire to please the internal customers, especially when some of that pressure could be coming from the CEO, and a CIO’s
+natural tendency to move cautiously, even with something as potentially transformative as generative AI. That’s going to take setting up some structure and
+organization around how this gets implemented over time, says Jim Rowan, principal at Deloitte, who is working with clients around how to build generative AI
+across companies in an organized fashion.
+
+“A lot of the way we’re working with companies is thinking about what is the infrastructure that they need to be successful. By infrastructure, I don’t
+necessarily mean technology, but who are the people, what are the processes and the governance…and giving them the capabilities to set that up,” Rowan said. A
+big part of that is talking about use cases and how to use the technology to address a given problem.
+</item 58>
+
+<item 59>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+Portfolio podcast: The art of valuing stocks Portfolio podcast: The art of valuing stocks
+
+Let there be no doubt, valuation experts like Aswath Damodaran and many successful hedge fund managers believe that absolute valuation (which we discussed in
+the Big Story in bl.portfolio edition dated October 8) is the better way to arrive at the value of a stock.
+
+However, due to a combination of complexities involved in building appropriate models, insufficient information, time constraints and also the fact that there
+are hundreds of stocks you want to consider, it is just not possible to do a DCF ( discounted cash flow model) for all your stock investments, and hence
+relative valuation as an approach to picking stocks too is well accepted and widely prevalent.
+
+When you decide to buy or sell a stock based on its PE or P/B or EV/EBITDA or EV/Revenue or even EV/subscriber ratios, you are engaging in the art of relative
+valuation.
+</item 59>
+
+<item 60>
+Robotics Q&A with Boston Dynamics’ Aaron Saunders (TechCrunch, 2023-12-09T16:05:51+00:00)
+When would you pay as much for a robot as you would a car? When it achieves the same level of dependability and value you have come to take for granted in the
+amazing machines we use to transport us around the world.
+
+What important robotics story/trend isn’t getting enough coverage?
+
+There is a lot of enthusiasm around AI and its potential to change all industries, including robotics. Although it has a clear role and may unlock domains that
+have been relatively static for decades, there is a lot more to a good robotic product than 1’s and 0’s. For AI to achieve the physical embodiment we need to
+interact with the world around us, we need to track progress in key technologies like computers, perception sensors, power sources and all the other bits that
+make up a full robotic system. The recent pivot in automotive towards electrification and Advanced Driver Assistance Systems (ADAS) is quickly transforming a
+massive supply chain. Progress in graphics cards, computers and increasingly sophisticated AI-enabled consumer electronics continues to drive value into
+adjacent supply chains.
+</item 60>
+
+<item 61>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+We need robust tools and platforms to enable broader utilization among businesses and individuals. Startups have the opportunity here to act quickly, find novel
+solutions to emerging problems, and define new categories.
+
+Interestingly, even large tech companies recognize the gaps in their services and have begun investing heavily in startups alongside VCs. These companies apply
+AI to their internal processes and thus see the value startups bring to LLM deployment and integration. Consider the recent investments from Microsoft, Nvidia,
+and Salesforce into companies like Inflection AI and Cohere.
+
+What can be done to ensure industry-specific startups that tune generative AI models for a specific niche will prove defensible?
+
+To ensure industry-specific startups will prove defensible in the rising climate of AI integration, startups must prioritize collecting proprietary data,
+integrating a sophisticated application layer and assuring output accuracy.
+
+We have established a framework to assess the defensibility of application layers of AI companies. First, the application must address a real enterprise pain
+point prioritized by executives.
+</item 61>
+
+<item 62>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Welcome to Startups Weekly. Sign up here to get it in your inbox every Friday.
+
+A few months ago, Alexis Ohanian, the co-founder of Reddit, tweeted that if he could go back in time and do one thing differently when he was building Reddit,
+he would have spent significantly less time attending events. Personally I have a different experience — I always regret getting on a plane (or in an Uber, for
+that matter) to go to an event. However, as I’m traveling back, I’ve never regretted it: There’s always something magical that comes out of going to an event,
+in my experience.
+
+Our TC+ team is not interested in anecdotes, however: neither mine nor Alexis’. So, like the data-driven journalists they are, they surveyed more than 50
+founders, trying to figure out whether attending events still makes sense in 2023.
+
+Spoiler alert: There isn’t a real consensus, but there are some really good pros and cons.
+</item 62>
+
+<item 63>
+Reliance Industries: With the stock having underperformed Nifty 50 in last three years, is it time to buy? (Business Line, 2023-12-09T13:15:42+00:00)
+With the stock still leaving some money on the table at current levels, long-term investors can accumulate it on dips for four reasons — one, reasonable
+valuations; two, being at pole position in India’s high-growth digital and retail business; three, potential for large-scale value creation, similar to its
+digital and retail forays, in the renewable energy space (not reflected in current valuations); four, stable O2C business.
+
+Growth engines
+
+The launch of Jio’s data services in 2016, maturation of the retail business and subsequent stake sales in FY21 were the key catalysts that drove the stock’s
+outperformance in the last six years. Although there has already been a significant re-rating in valuation the markets have assigned to both businesses, scope
+for further outperformance from these businesses remains, given the opportunity ahead.
+</item 63>
+
+<item 64>
+Reliance Industries: With the stock having underperformed Nifty 50 in last three years, is it time to buy? (Business Line, 2023-12-09T13:15:42+00:00)
+Reliance Jio: For one, with Reliance Jio emerging as the largest telecom services company in what is largely a duopolistic market (given survival issues at
+Vodafone Idea) in India, the growth potential remains strong as 5G will drive advances over the next few years and new 5G enabled use cases will create guzzling
+growth in data consumption, providing scope for higher ARPUs. Reliance Jio has offerings across the spectrum of wireless, wireline/broadband, enterprise/cloud
+services and allied retail/enterprise digital offerings that make its services sticky for customers.
+
+In such a scenario, its dominant position in telecom along with second player Bharti Airtel is likely well entrenched for the foreseeable future in India’s
+digital ecosystem. These factors position it advantageously to sustain or increase its operating margins in a growing industry.
+</item 64>
+
+<item 65>
+When it comes to generative AI in the enterprise, CIOs are taking it slow (TechCrunch, 2023-12-15T18:45:09+00:00)
+Sharon Mandell, CIO at Juniper Networks, says that her company is participating in an initial pilot with Microsoft around Copilot for Office 365, and
+anecdotally, she has heard a range of feedback from people who love it to those who are less impressed, but she says trying to measure increased productivity
+remains a challenge, even with Microsoft beginning to provide dashboards that at least show the level of adoption and usage.
+
+“The hard thing about this is you don’t have data on people’s level of productivity. So no matter what, you’re using somewhat anecdotal information until you
+get really good at understanding these dashboards from Microsoft showing you how people are using it,” she said.
+</item 65>
+
+<item 66>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+The humanoid form is really interesting. I don’t know if it’s a good thing or a bad thing. We’re experimentalists at heart. We’re gonna figure that out. We’re
+going to do a pilot and see how that works out. We’re happy that they’re a part of our fund, but we also have other companies in the fund where we learned from,
+and if we want, we can make a larger investment in it. I’m not necessary saying that if we fund something, it’s going to be inside our processes. It’s very
+early stages.
+
+What does “very early stage” mean here?
+
+We’re learning about the function and utility. What’s possible here? What’s hype? What’s reality? Would this possibly scale? I think a lot of folks have
+difficulty understaning the scale in which we operate. It can’t work 99% of the time, because a 1% defect rate is a huge number inside any of our buildings.
+</item 66>
+
+<item 67>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+For most technical leads and software developers, this is a mode inversion from our traditional tactical and direct interaction with technology. The context
+switch from daily build-and-operate is challenging but is paramount to developing successful and innovative products. We are uniquely positioned to generate
+strategic insights translated from dense technical minutiae that drive innovative business cases and product experiences.
+
+A technology innovation must solve a business problem, such as improving operational efficiency, growing existing revenue streams, or generating new ones. The
+problem space may be customer-facing (e.g., how can we deliver a new feature?) or internal-facing (e.g., how can we make a process more efficient?). The problem
+is the paramount concern. The specific technologies or innovations used to solve the problem are often less critical. We cannot lose perspective of the business
+needs; otherwise, the activities become too academic or a paid hobby.
+
+An ordinary domestic analogy is hanging a picture. The hole size, bracket, or tools used to hang the picture are immaterial as long as the picture is on the
+wall and straight.
+</item 67>
+
+<item 68>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+That’s at the root of the research we shared from the institute last week. Noted senior research scientist Benjamin Burchfiel:
+
+We’ve seen some big progress with the advent of [large language models], using them to impart this high level of cognitive intelligence into robots. If you have
+a robot that picks up a thing, now instead of having to specify an object, you can tell it to pick up the can of Coke. Or you can tell it to pick up the shiny
+object, or you can do the same thing and do it in French. That’s really great, but if you want a robot to plug in a USB device or pick up a tissue, those models
+just don’t work. They’re really useful, but they don’t solve that part of the problem. We’re focused on filling in that missing piece, and the thing we’re
+really excited about now is that we actually have a system and that the fundamentals are correct.
+</item 68>
+
+<item 69>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+By the IoT Analytics team.
+
+A new report from IoT Analytics highlights eight notable trends helping to advance and promote digital twins.
+
+Four of these trends are discussed in detail in this article. These trends are shaping the future of the digital twin market and influencing investment
+priorities for companies across various industries.
+
+Key insights:
+
+According to our Digital Twin Market Report 2023–2027, the digital twin market is expanding, with a projected CAGR of 30% between 2023 and 2027.
+
+29% of global manufacturing companies have either fully or partially implemented their digital twin strategies. Further, job posts related to digital twins have
+increased by 11% compared to October 2021, while openings for other tech topics have declined in the same timeframe.
+
+The report notes eight notable trends helping to advance and promote digital twins, four of which are discussed in this article.
+</item 69>
+
+<item 70>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+That in and of itself is probably still largely unexplored territory that will see a lot of change and maturing in the next few years. One key aspect there
+might be cost monitoring as well since companies like OpenAI charge largely “by the token,” which is a very different metric than most cloud computing.
+
+What can be done to ensure industry-specific startups that tune generative AI models for a specific niche will prove defensible?
+</item 70>
+
+<item 71>
+Rollback Policy, a Boon or a Curse? The Controversial System That Might Redefine the Golfing World by the End of 2030 (Essentially Sports,
+2023-12-03T23:45:00+00:00)
+Secondly, a league that thrives on thrills and excitement will lose its USP if the ball suddenly doesn’t travel 300 yards on most occasions. As of this year, 28
+of 48 LIV golfers average over 300 yards driving distance. Dustin Johnson and DeChambeau are both in the top five.
+
+ADVERTISEMENT Article continues below this ad
+
+But one crucial thing to remember here is that the golf ball rollback policy will render most balls totally ‘unplayable’. Moreover, the PGA Tour has
+contradicted itself several times in the past few years. It won’t be surprising if Monahan & Co. eventually decides to agree with the policy change sometime
+later. So, the question remains: how viable would it be for manufacturers to produce two types of balls, one for Majors and the other for LIV Golf? This just
+throws the world of golf into uncharted territory.
+</item 71>
+
+<item 72>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+if you want a sustainable career, with repeatability and success.”
+
+Here are three other things we learned from Kyncl’s talk at the Code Conference…
+
+Credit: Tatiana Shepeleva / Shutterstock 1) Music will feel the impact of AI before other industries do – ‘within the next year’
+
+Kyncl predicted that the music business will be out ahead of other industries when it comes to exploiting the potential of AI, and it will also – out of
+necessity– be ahead on the issue of how to regulate and monetize the use of AI by non-rights-holders.
+
+“Music – because it’s so broadly distributed and it’s so well aligned with the internet, because it’s short format, it lends itself to recommendations, it’s on
+all platforms – is generally first in most transformations and most innovations. So it digitizes first,” he said.
+
+“Whatever happened to the music industry 20 years ago is starting to happen in the movies and TV shows now.
+</item 72>
+
+<item 73>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+In addition to academic partners such as the University of Tokyo, UC Berkeley, the University of Illinois, Cornell and the aforementioned Imperial College
+London and Yale, Sony, ServiceNow, the National Science Foundation, NASA, Oracle, the Cleveland Clinic and Dell have pledged their participation in some form.
+
+MLCommons, the engineering consortium behind MLPerf, the benchmarking suite used by major chip manufacturers to evaluate their hardware’s AI performance, is
+also a founding AI Alliance member. So are LangChain and LlamaIndex, two creators behind some of the more widely used tools and frameworks for building apps
+powered by text-generating AI models.
+
+But without the participation of so many major AI industry players — and lacking deadlines or even concrete objectives — can the AI Alliance succeed? What would
+success look like, even?
+
+Beats me.
+
+The vast number of competing interests — from healthcare networks (Cleveland Clinic) to insurance providers (Roadzen) — won’t make it easy for the Alliance’s
+members to coalesce around a single, united front.
+</item 73>
+
+<item 74>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+• Detroit Lions: Have they fixed their defense?
+
+What I think: The Lions are 11.3 EPA per game better on defense from last season to this season, the second-largest gain for any team since last season. The
+schedule has something to do with that, but the 2022 defense was so bad, it couldn’t stop Carolina. Detroit will win the NFC North and return to the playoffs,
+which will make this season successful no matter what happens from there. But we won’t find out until the postseason just how much better the defense might be,
+because the remaining schedule features so many weak offenses. That includes Chicago twice, Green Bay, Denver and Las Vegas.
+
+Exec comment: “Yes, I do buy them. This is a league full of teams who do not really know who they are week to week. Detroit knows who they are, and they play to
+their identity. Anytime you know who you are and play to that style, you have a chance to be dangerous.”
+</item 74>
+
+<item 75>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+And all the effort is showing.
+
+According to Joe Pompliano, “The NFL will bring in $20 billion in revenue this year, more than the Premier League, La Liga, Bundesliga, Serie A, and Ligue 1
+combined.” Coming to the strategy part, a curious mind would perhaps think can they take a leaf out of the NBA’s playbook and reinvigorate its appeal as it aims
+to conquer international audiences?
+
+Can the NFL take a leaf out of the NBA’s grisly past and glorious recovery?
+
+The NFL is already the world’s richest league. Calling it an incredible feat would be a gross understatement. Consider this: the English Premier League, which
+is broadcast in over 212 territories, has a revenue of just $6 billion, while football games are primarily viewed in America only. However, the NFL does not
+just want to stop at $18 billion.
+</item 75>
+
+<item 76>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Despite the problems with social media and the urgency, in terms of its impact on society, Ohanian believes there’s still some hope. He noted, for example, that
+the founders his fund 776 invests in are much smarter and more aware of the issues than he ever was at their age. Perhaps the next platforms will still be
+addictive, but in a way that doesn’t “further disrupt democracy,” he mused.
+
+He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not. “I think we’ll
+see a rebirth of live gatherings and in-person experiences…the bright side of this is that I hope it then gets us back in touch with our humanity, and the
+things that no amount of AI can replace.”
+
+“I want to be an optimist about it,” Ohanian added. “And I think there’s still a path forward but we’re fighting against very, very strong human things.
+</item 76>
+
+<item 77>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Example: In large motor applications, such as room-sized motors that pump high volumes of gas, oil, or other chemicals, operators need to monitor the motors’
+temperatures—especially if the motors are high-powered and repeatedly started. If a motor is too hot during a restart, the components could cause serious
+damage. Unfortunately, using a direct, physical sensor within a motor is often impractical, and operators must work from an assumptive time it takes for the
+motor to cool (with an additional safety buffer time). This means motors can be down longer than necessary, impacting efficiency and revenue.
+
+To address this issue, Siemens developed a prototype virtual sensor based on a digital twin. It offers a simulation of how a physical sensor would operate if it
+were possible to install it within a motor. Using AR headsets, operators can see a simulation of the motor and its interior with a demonstrator superimposed
+over it, and they can see the motor’s temperature.
+</item 77>
+
+<item 78>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+Solve something that could at first seem impossible, and you may be on the right path. If there isn’t a very real chance of failure, you’re doing it wrong.
+
+On that lighthearted rant, here’s what’s been cookin’ in the world of startups at TechCrunch this week!
+
+Someone call security
+
+If you haven’t been paying attention to what our cybersecurity team has been covering, you have been missing out. Zack, Lorenzo, and Carly are absolutely
+crushing it. Allow me to make an impassioned plea for not missing their work.
+
+When you think “essential services,” you might think water, electricity, and hospitals — but internet connectivity is increasingly important as the
+infrastructure that ties together the fabric of society. As the conflict between Israel and Hamas continues, internet connectivity in Gaza took a severe hit.
+Palestinian internet service provider NetStream reportedly collapsed due to a severe shortage of fuel supplies, while other providers such as Paltel and Mada Al
+Arab are also facing serious connectivity issues.
+</item 78>
+
+<item 79>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+And it’s totally fine to be an investor relying on relative valuation to make your savings work for you, provided you approach it the right way and ensure
+adequate risk management. In relative valuation, the broader you assess the valuation, ie assess valuation multiple against more parameters, the better the
+perspective you get.
+
+In simple words, one way to understand the difference between absolute valuation (explained in last week’s edition) and relative valuation is this – absolute
+valuation is made up of an interesting story that is backed by credible and validated numbers, while relative valuation is made up of an interesting number
+backed by a credible and validated story.
+
+What are those numbers in relative valuation? Every number in relative valuation is the result of a number A divided by a number B. For example, PE is price of
+the stock divided by its earnings. These are all numbers that are used to compare against similar metrics of other stocks and assess the merits of the stock.
+
+Before we proceed on using relative valuation to pick stocks, it is important to understand that you can do relative valuation using equity multiples or
+firm/enterprise multiples.
+</item 79>
+
+<item 80>
+NASCAR Might Have Just Saved Themselves With the $7.7 Billion Media Rights Deal (Essentially Sports, 2023-12-01T20:55:57+00:00)
+He said, “NASCAR is in a tough situation because they had to deliver more money as well and clearly if they went this route, that’s a good indication that’s
+because they had to go this route to deliver more money for the industry.”
+
+While NASCAR secured an impressive deal, there could be downsides to it and Stern explained it beautifully.
+
+Adam Stern points out a key potential drawback with NASCAR’s new media rights deal
+
+Safe to say, NASCAR has been struggling to keep their teams happy in terms of profitability. Since the introduction of the Next Gen cars, it has only become
+more difficult for the Cup Series teams and teams in other competitions. While they have taken a commercial hit, they have piled up pressure on NASCAR to help
+out in this case.
+
+ADVERTISEMENT Article continues below this ad
+
+In addition to that, Sports Business Journalist Adam Stern detailed one important issue with the new media rights deal. Speaking on the same podcast, he said,
+“When you look at the deal with Warner Bros.
+</item 80>
+
+<item 81>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+2. Do they disagree on long-term strategy?
+
+Despite being the hottest tech company in the world right now and everyone talking about ChatGPT, OpenAI isn’t exactly a sound business. It’s shoveling money
+into the furnace as fast as it can by serving, by all accounts, a fantastically expensive product at bargain-bin prices.
+
+That’s all well and good for a year or two, but at some point that strategy changes from a growth hack to an existential liability. Could Altman and the board
+have had irreconcilable differences on where that point lies?
+
+This doesn’t seem so likely. The company has been very deliberately pursuing this very publicly, confidently and on a long-term basis. Altman and the board seem
+to be in sync on this, at least for the present.
+
+3. Do the numbers not add up?
+
+On the other hand, could OpenAI be losing even more money than Altman admitted or projected? It seems impossible, but the costs of running this operation have
+no precedent, nor really does the operation itself.
+</item 81>
+
+<item 82>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+If not, what investments are required?
+
+2. Data integration: How compatible are our current data sources and systems with digital twin technologies, especially in terms of sensor data (both physical
+and virtual/soft)?
+
+3. Interoperability concerns: As we use multiple software solutions across our operations, how important is interoperability between digital twin technologies
+and our existing systems?
+</item 82>
+
+<item 83>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+So that’s why we have interest in Agility. But absolutely, if we can combine that with identification systems with manipulation systems, sortation system,
+storage systems have anything and everything that we will do to innovate for our customer, right anything and everything will do to improve the safety for our
+employees.
+
+It’s a hard problem.
+
+It’s a very, very hard problem, when you’re talking about millions and millions of different objects. Of all different sizes, and scales and weights in
+dimensionality, the ability to not only grasp the item, but also identify the item, the ability to also look for damage on the item is pretty incredible. I want
+to eliminate every menial, mundane, repetitive job out there. So, if I can automate that, and allow our employees to focus more on what matters, on higher level
+tasking, that’s a total win. This ties into the MIT thing, too. The way it’s played out is, you replace a certain thing. So the jobs changed.
+</item 83>
+
+<item 84>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+Certainly most of the R&D budget inside of Toyota is spent figuring out how to make the next car or maybe the car five years from now. But there’s this notion —
+and I’m sure Hyundai shares this — that we’re at the once-in-a-century time for transformation in the car industry. Battery electric vehicles are much simpler
+to make than cars have been in the past — no engine, no transmission, etc. So, we’re going to have to compete in a much fiercer way in cars. But also, can we
+use the skills, the dreams and the hopes of the company to go beyond cars? TRI’s job is to actually think about [what’s] next. What’s next after cars, as well
+as some fancy stuff on cars.”
+
+For TRI, much of the “what’s next” focuses on supporting aging populations. The organization invests a good portion of its resources to building out technology
+designed to help older people live more independently. That’s at the root of the research we shared from the institute last week.
+</item 84>
+
+<item 85>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+Any other metric could be wrong and misleading.
+
+For example, price by revenue or price by EBITDA is incorrect. Why? How do you differentiate between two companies A and B — both having same market cap of ₹100
+and similar in all means except for debt levels — same revenue (₹100) and same gross margin and same EBITDA margins of 20 per cent and thus same EBITDA of ₹20.
+But A has zero debt, while B has debt of ₹10. Since revenue or sales and EBITDA are same, if you do a market cap/revenue or Price /Sales, or marketcap/EBITDA,
+both companies will have the same valuation.
+
+However, let’s assume depreciation is ₹10, interest cost is 10 per cent and taxes are zero. This means the net profit of A is ₹10, while that of B is ₹9.
+</item 85>
+
+<item 86>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+The companies aimed to accelerate Siemens Xcelerator adoption and democratize new digital twin solutions using AWS IoT TwinMaker, a service intended to make
+creating digital twins that incorporate multiple data sources faster and easier.
+
+Hyperscalers and simulation companies
+
+Simulation companies bring specialized expertise in creating accurate, high-fidelity models of physical entities, be it machinery, buildings, or entire
+ecosystems. By partnering with a hyperscaler, simulation companies can harness these cloud services’ data storage and computational power to create more robust,
+responsive, and accurate data twins that can be scaled and integrated seamlessly into broader IT ecosystems.
+
+Example: In 2023, Ansys and Microsoft announced a partnership to help customers envision digital twins on a large scale. In cooperation with Tata Consultancy
+Services, Ansys and Microsoft integrated Ansys’s Twin Builder’s physics-based simulation capabilities with Azure Digital Twin and IoT data to allow Twin Builder
+users to run scenarios and obtain predictions on how their systems will behave.
+</item 86>
+
+<item 87>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+because it offers the best possible place to make their vision happen.” Unless his long-term vision was only meant to last until the end of the summer, for
+entrepreneurs, innovators and businesses to thrive and unlock the economic potential that comes from creating new industries, we need a consistent approach from
+the government.
+
+We have enormous fiscal potential. Within the U.K. climate tech community, we are working to create high-paying jobs and value for investors across just about
+every asset class. And collectively — hell, individually — our solutions could genuinely change the world.
+
+Of course, this is the common cause we should be united around. Our company is trying to move industry away from a reliance on fossil fuels to make chemicals,
+among other things. But the impact of these political spasms and contradictions in our climate commitments has on, say, an EV battery business — which has just
+seen the market demand for its output slide down the road by five years — isn’t hard to appreciate.
+</item 87>
+
+<item 88>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Based on these observations and additional insights from our report, our current projection estimates that the global digital twin market could grow at a CAGR
+of approximately 30% between 2023 and 2027.
+
+Against the backdrop of this growing market, the report notes eight trends that help promote the advancement and adoption of digital twins. Here, we will focus
+on four:
+
+1. Digital twins deployed to meet sustainability goals
+
+2. Digital twins employed as virtual sensors in complex conditions
+
+3. Partnerships between cloud hyperscalers and OT and simulation specialists
+
+4. Initiatives promoting interoperability of digital twins across multifaceted systems
+
+Before we dive into these trends, and to provide context, it is helpful to understand how IoT Analytics defines digital twins and the digital twin market.
+
+Defining digital twins and the digital twin market
+
+In our March 2023 Decoding Digital Twins article, we define digital twins as a virtual model replicating the behavior of an existing or a potential real-world
+asset, system, or multiple systems.
+</item 88>
+
+<item 89>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+Enterprise value multiples
+
+Enterprise value refers to total value of a company/business. This total value as perceived by the market is represented by the sum of its market cap + net debt
+(includes minority interest). What works in the case of EV is that it helps in doing a capital-agnostic analysis of a company. Whether a company is funded only
+with equity, or a combination of equity and debt, the total value of the business is the same. Sources of funding don’t matter.
+
+Using EV, the value of equity (share price) is derived from the value of the business. Since the capital structure of companies varies significantly, an EV
+approach enables valuing them on similar terms. One can arrive at the value of the business first and then subtract net debt, to arrive at the equity value. The
+advantage with EV-based metrics is that you have more options to value a company.
+
+Bear in mind, valuation accuracy is better the lower down the P&L and cash flow statement one can get to.
+</item 89>
+
+<item 90>
+Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling (TechCrunch, 2023-10-30T10:15:24+00:00)
+Notable reads and other tidbits
+
+Autonomous vehicles
+
+Waymo driverless vehicles are now available through the Uber app, starting with Phoenix. The launch comes five months since the two companies announced a
+multi-year agreement for the autonomous vehicle service to be accessed via the Uber app.
+
+Electric vehicles, batteries & charging
+
+Ford is delaying about $12 billion in planned investments on EVs, including construction of a second battery plant with joint venture partner SK On due to
+softening demand for higher-priced premium electric vehicles. While EV sales have grown, consumers aren’t willing to pay a premium for an EV over a gas or
+hybrid vehicle. That price pressure has squeezed profits, and in the case of Ford’s EV business caused losses to grow.
+
+General Motors and long-time partner Honda have ended plans to build millions of affordable and smaller electric vehicles as the automakers come to terms with
+high interest rates and battery costs coupled with softening EV demand. Anyone spotting a trend here?
+</item 90>
+
+<item 91>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+Depending on specific cases, you can use further variations to pick stocks. For example, during the 2003-2007 bull market, many textile stocks, for instance,
+Bombay Dyeing, turned out to be multibaggers. Was their textile business booming? Not really. But the stocks were zooming because there was real estate boom and
+many textile mills had manufacturing facilities in prime real estate locations. So the markets started to factor value of the company based on market value of
+their land. In such a case you can deviate from Price/Book multiple to price/market value of net assets (assets – net debt).
+
+Similar is the case with holding companies. If you think there is a reasonable case for underlying value of assets to be unlocked and Holdco discount to shrink,
+like it has happened in bank holding companies in the last 2-3 years, then there is a case to move beyond book value to market value.
+
+Enterprise value multiples
+
+Enterprise value refers to total value of a company/business.
+</item 91>
+
+<item 92>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+Here are a few pointers.
+
+One, after comparing stocks based on relative valuation, you can do more layers of comparison by assessing how their valuation fares relative to growth
+prospects. This apart, many other factors can justify different valuations. For example, TCS has always commanded a valuation premium to peer stocks like
+Infosys, Wipro and HCLTech because of its superior margins and much more consistent growth. So just because the other stocks are cheaper on PE basis does not
+mean they are cheap compared to TCS. So you can also do one more layer of comparison by assessing each company’s valuation against its long-term (5-10 years)
+mean and median valuations and assess how they fare relative to their own history.
+
+Two, equity valuations do not function in a silo. Investors have many options — fixed deposits, bonds, real estate, etc. When other assets get more attractive
+one must assess scope for valuation change in equities as well.
+</item 92>
+
+<item 93>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Digital twin market snapshot
+
+Data from our Digital Twin Market Report 2023–2027 indicates that 29% of global manufacturing companies have either fully or partially implemented their digital
+twin strategies, marking a noticeable increase from 20% in 2020. Moreover, the proportion of these companies not contemplating the implementation of digital
+twins appears to have reduced to 9% in 2023, down from 33.6% in 2020.
+
+Supporting this trend, an analysis of job postings on SimplyHired suggests a growing demand for digital twin expertise. Postings mentioning “digital twin”
+increased by 11% in October 2023 compared to just two years prior, while openings for most other tech topics declined in the same timeframe. Notably, among the
+60 tech-related skill sets we tracked, digital twin-related skills experienced one of the most significant growths.
+</item 93>
+
+<item 94>
+Tires are saving us — and killing us, too (The Verge, 2023-11-17T13:45:00+00:00)
+Part of / We only get one planet
+
+Tires are the most important safety component on a car, yet there’s increasing research that they’re doing a good deal of harm, too. Slowly, surely, one mote of
+black dust at a time, tires are leaving their mark on the environment.
+
+According to researchers at Imperial College London, our cars and trucks emit 6 million tons of tire wear particles every year, transportation detritus that
+goes into the air, the land, and the water. That’s a massive figure that ignores the nearly 250 million tires that are disposed of annually in North America,
+roughly half of which are burned.
+
+It’s a depressing state of affairs, but there is room for optimism. Every major tire manufacturer globally is raising its game — not only in terms of
+performance in the face of bigger, heavier electric cars but also in terms of environmental impact. Renewable materials are finding their way into modern tires,
+and there’s even greener rubber on the horizon, too.
+</item 94>
+
+<item 95>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+If you’re not, consider signing up. Here are a few highlights from this week:
+
+Bitcoin surge: Jacquelyn writes about Bitcoin’s rapid-fire ascent to $44,000, which came on the back of roughly 25% gains in the last week. Her piece for TC+
+explores what’s driving Bitcoin’s price ascent and similar value gains among other tokens — and whether the good vibes continue into the new year.
+
+To swap, or not to swap: Tim reports on how consumer EV battery swapping could usher in freedom for a wide range of people, allowing them to participate in the
+EV transition in ways that traditional built-in batteries don’t. The challenge is making the unit economics work.
+
+Coinbase and Robin and the future of fintech: Investors are betting that consumer trading of equity and crypto is rebounding and are consequently pushing the
+value of some former startups higher, Alex writes. That could spell good news for startups offering consumer trading services directly — or indirectly, for that
+matter.
+</item 95>
+
+<item 96>
+Fundamental Investing: The Art of Relative Valuation (Business Line, 2023-10-14T15:38:28+00:00)
+Equity multiples
+
+If you check the balance sheet of any company, the liabilities side is primarily made up of two line items — shareholder funds and borrowings. To the contrary,
+a Profit and Loss statement has many line items — starting with revenue, followed by variable costs and then fixed costs and taxes. The only claim that equity
+shareholders have for distribution or for appropriation amongst themselves is what is left after paying the taxes — net profit.
+
+So, if you are doing relative valuation based on equity multiples, it is important to ensure you divide the equity – ie price per share or market cap of the
+company by line items that apply to equity shareholders.
+
+Based on this, there are only 3 items that can be attributed to equity shareholders — net profit from P&L statement, book value or shareholder funds from the
+Balance Sheet, and the free cash flows to equity (FCFE) from the cash flow statement. Any relative valuation multiples will be linked to these three items one
+way or the other. Any other metric could be wrong and misleading.
+</item 96>
+
+<item 97>
+Rollback Policy, a Boon or a Curse? The Controversial System That Might Redefine the Golfing World by the End of 2030 (Essentially Sports,
+2023-12-03T23:45:00+00:00)
+This just throws the world of golf into uncharted territory.
+
+Watch This Story: Is Tiger Woods Making Use Of Any Medical Aid After His Subtalar Fusion?
+</item 97>
+
+<item 98>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+It’s clear looking at your progress on projects like Proteus that the goal is to move automation outside the cage.
+
+We’re moving outside the cage. What we can see with those investments is in 2022, as compared to manual buildings, we’ve reduced the recordable injury rate by
+15%.
+
+With these sorts of deals like Agility, do you buy a number of robots outright for the testing? Are you leasing them?
+
+There’s no one-size-fits-all. We do a case-by-case basis. [Amazon declined to comment further on the arrangement.]
+
+One of the big appeals of bipedal robots is their ability to operate in brownfield settings, but Amazon doesn’t really have that problem.
+
+Our interest in systems like Agility is in the bipedal nature. The walking nature of that. Whether it’s two legs, four legs, or it’s rolling on wheels. If it
+performs that mobility function, we have interest, because we know that we need to move goods.
+</item 98>
+
+<item 99>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Incumbents like Datadog, New Relic and Splunk have all produced LLM observability tools and do appear to be putting a lot of R&D dollars behind this, which may
+curtail the market area in the short-term.
+
+However, as we have seen before with the inceptions of the internet and cloud computing, incumbents tend to innovate until innovation becomes stagnant. With AI
+becoming a household name that finds use cases in every vertical, startups have the chance to come in with innovative solutions that disrupt and reimagine the
+work of incumbents. It’s still too early to say with certainty who the winners will be, as every day reveals new gaps in existing AI frameworks. Therein lie
+major opportunities for startups.
+
+How much room in the market do the largest tech companies’ services leave for smaller companies and startups tooling for LLM deployment?
+</item 99>
+
+<item 100>
+Walks, tech and protein: how to parent your own parents (The Guardian, 2023-10-10T09:00:35+00:00)
+In the last few years I’ve witnessed friends and family dashing to help parents with poorly designed online banking systems, unruly fridge alarms, “upgraded”
+software that has changed beyond recognition, apps and phones that don’t function as expected, and numerous other technical challenges.
+
+Frankly, technology is often baffling to me, too. Luckily I have kids who delight in parenting me – advising, explaining and guiding me on all things digital.
+But studies suggest that this helpfulness might not be as beneficial as we think. Grappling with new and baffling things forces the ageing brain to work in
+novel ways. A recent study from the University of Texas involving more than 200 elderly adults found that those who engaged with technology had better cognition
+and memory than their non-engaging peers.
+
+Digital engagement – whatever the device – protects the brain
+
+Even the stress we experience while battling with our computer can be helpful, sharpening our mental acuity. The study authors concluded that digital engagement
+– whatever the device – protects the brain.
+</item 100>
+=== END ITEM id=8f23dbaf761e9ab7 ===
+
+=== ITEM id=d72f4ed7da3ff838 ===
+Gold sentences and facts:
+Sentence 0: “She’s got the Eras Tour booked all through next year, and she’d rather die than cancel a show.
+  Fact 0.0: The person quoted has the Eras Tour booked all through next year.
+  Fact 0.1: The person quoted would rather die than cancel a show.
+Sentence 1: "It was almost like this very strange, subtle clue to the media that they don't know everything that happened in that relationship, and I can have something really major and traumatic happen to me and they don't know about it," she told NPR.
+  Fact 1.0: The speaker said it was almost like a very strange, subtle clue to the media that they don't know everything that happened in that relationship.
+  Fact 1.1: The speaker said she can have something really major and traumatic happen to her and they don't know about it.
+  Fact 1.2: The speaker told NPR this.
+Sentence 2: Now, Swift has shared that she has nothing to hide in her new relationship with Kelce.
+  Fact 2.0: Taylor Swift has shared that she has nothing to hide in her new relationship with Kelce.
+
+Retrieved items:
+<item 1>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The example given was replacing a search for “children’s clothing” with “NIKOLAI-brand kidswear”. Loading Google rejected this in very strong terms, saying the
+piece was misleading and inaccurate while denying ever altering search terms. Wired removed the article for not meeting its standards, but the degree to which
+it was shared on social media and boosted in write-ups at other outlets shows just how willing people are to accept foul play on Google’s part. A suspicion of
+privacy invasion and inappropriate data handling follows the company at all times.
+
+Grey herself is a former vice-president at DuckDuckGo, a privacy-focused company founded explicitly to counter giants such as Google. She admits that she may
+have misinterpreted the evidence, but maintains that Google manipulates Search to maximise ad revenue. So what does Google say? In a post on X, Google’s
+official search liaison, Danny Sullivan, said ad systems do not affect the organic results, i.e. the list of blue links in search results that are not
+sponsored.
+</item 1>
+
+<item 2>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 2>
+
+<item 3>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless. People have many ways to access information and news content today
+– through publishers’ websites, dedicated apps, social media platforms, print papers and more. Google links people to publishers’ websites more than 24 billion
+times each month – at no cost to them.”
+
+The complaint is available below.
+
+Helena World Chronicle, LLC v. Google LLC and Alphabet Inc by TechCrunch on Scribd
+
+Editor’s note: This post was updated after publication with a statement provided by Google on Friday evening.
+</item 3>
+
+<item 4>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+In addition to damages, the suit is asking for an injunction that would require Google to obtain consent from publishers to use their website data to train its
+general artificial intelligence products including Google’s own and those of rivals. It also asks Google to allow publishers who opt out of SGE to still show up
+in Google search results, among other things.
+
+The U.S. lawsuit follows an agreement Google reached last month with the Canadian government which would see the search giant paying Canadian media for use of
+their content. Under the terms of the deal, Google will provide $73.5 million (100 million Canadian dollars) every year to news organizations in the country,
+with funds distributed based on the news outlets’ headcount. Negotiations with Meta are still unresolved, though Meta began blocking news in Canada in August,
+in light of the pressure to pay for the content under the new Canadian law.
+
+The case also arrives alongside the filing of the U.S.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+When online magazine The Atlantic modeled what would happen if Google integrated AI into search, it found that 75% of the time the AI would answer the user’s
+query without requiring a click-through to its website, losing it traffic. This could have a major impact on publishers’ traffic going forward, as Google today
+drives nearly 40% of their traffic, according to data from Similarweb.
+
+Some publishers are now trying to get ahead of the problem. For example, Axel Springer just this week inked a deal with OpenAI to license its news for AI model
+training. But overall, publishers believe they’ll lose somewhere between 20-40% of their website traffic when Google’s AI products fully roll out, The WSJ’s
+report noted.
+
+The lawsuit reiterates this concern, claiming that Google’s recent advances in AI-based search were implemented with “the goal of discouraging end-users from
+visiting the websites of Class members who are part of the digital news and publishing line of commerce.”
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 6>
+
+<item 7>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+The case also arrives alongside the filing of the U.S. Justice Department’s lawsuit against Google for monopolizing digital ad technologies, and references the
+2020 Justice Department’s civil antitrust suit over search and search advertising (which are different markets from digital ad technologies in the more recent
+suit).
+
+“The anticompetitive effects of Google’s scheme cause profound harm to competition, to consumers, to labor, and to a democratic free press,” reads an
+announcement posted to the website of the law firm handling the case, Hausfeld.
+
+“Plaintiff Helena World Chronicle, LLC invokes the Sherman Act and Clayton Act to seek class-wide monetary and injunctive relief to restore and ensure
+competition for digital news and reference publishing and set up guardrails to preserve a free marketplace of ideas in the new era of artificial intelligence,”
+it states.
+
+A Google spokesperson offered a statement on the lawsuit, saying “This lawsuit is meritless.
+</item 8>
+
+<item 9>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 9>
+
+<item 10>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+A new class action lawsuit filed this week in the U.S. District Court in D.C. accuses Google and parent company Alphabet of anticompetitive behavior in
+violation of U.S. antitrust law, the Sherman Act, and others, on behalf of news publishers. The case, filed by Arkansas-based publisher Helena World Chronicle,
+argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means. It also specifically cites new AI
+technologies like Google’s Search Generative Experience (SGE) and Bard AI chatbot as worsening the problem.
+
+In the complaint, Helena World Chronicle, which owns and publishes two weekly newspapers in Arkansas, argues that Google is “starving the free press” by sharing
+publishers’ content on Google, losing them “billions of dollars.”
+
+In addition to new AI technologies, the suit points to Google’s older question-and-answer technologies, like the “Knowledge Graph” launched in May 2012, as part
+of the problem.
+</item 10>
+=== END ITEM id=d72f4ed7da3ff838 ===

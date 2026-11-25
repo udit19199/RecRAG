@@ -1,0 +1,49 @@
+[
+  {
+    "id": "6242b4219ed15cbb",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 99, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 99, "quote": "Canelo has inched closer to Floyd’s billionaire status over the years."}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 99, "quote": "However, despite Floyd’s massive net worth, Canelo has inched closer to Floyd’s billionaire status over the years."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "Now he had $22.5 billion. He was the richest person in the world under 30 [and] he was going to spend it to save humanity from extinction,” he said."}
+        ]
+      }
+    ]
+  }
+]

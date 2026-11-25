@@ -1,0 +1,117 @@
+[
+  {
+    "id": "da2efefb47fe1b1d",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 10,
+            "quote": "Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 48,
+            "quote": "we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 48,
+            "quote": "we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 91,
+            "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle,"
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 91,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 91,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      },
+      {
+        "fact": "2.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 91,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      },
+      {
+        "fact": "2.4",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 91,
+            "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."
+          }
+        ]
+      }
+    ]
+  }
+]

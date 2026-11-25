@@ -1,0 +1,41 @@
+[
+  {"id": "228339cade3e8938", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 44, "quote": "free agent Shohei Ohtani’s decision."}]},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 43, "quote": "As the player, I explore a system of the Imperium with a loyal crew of companions, making impactful choices and determining the fate of those around me."}]}
+  ]},
+  {"id": "ed5ba813aea5a181", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "6c6064806569f93f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f34f07d0d669bf29", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]}
+]

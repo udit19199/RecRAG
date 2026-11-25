@@ -1,0 +1,45 @@
+[
+{"id": "408bc05db9e55781", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 81, "quote": "Unfortunately, she did say that she had conversations with investors as part of their due diligence"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 81, "quote": "Alameda was taking on losses from FTX"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 81, "quote": "Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 62, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 62, "quote": "Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 62, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]}
+]},
+{"id": "1af813b29031fbf6", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "7888ade612626514", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "contradicted", "evidence": [{"item": 2, "quote": "Michigan has been found in violation of the Big Ten Sportsmanship Policy for conducting an impermissible, in-person scouting operation over multiple years"}]},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "c8f8dbf3b419d820", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]}
+]

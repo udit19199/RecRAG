@@ -1,0 +1,13 @@
+[
+  {"id": "1b7ea50b2f32c0bb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 47, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 47, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 47, "quote": "SBF, as he’s known, has pleaded not-guilty to some seven charges of fraud and conspiracy."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 36, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 36, "quote": "Because FTX had grown so much, he could no longer run both companies, he said."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 71, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 71, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 71, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 71, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]}
+]

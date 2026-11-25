@@ -1,0 +1,19 @@
+[
+  {"id": "93d1357061d09353", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 8, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 8, "quote": "and is reportedly preparing for a ground invasion."}]}
+  ]},
+  {"id": "2e3a6807151b89c6", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

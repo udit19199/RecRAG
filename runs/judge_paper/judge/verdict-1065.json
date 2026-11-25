@@ -1,0 +1,19 @@
+[
+  {"id": "a9387d0071a6b18a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 35, "quote": "It would be Harbaugh's second suspension of the season"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 35, "quote": "the Wolverines self-imposed a three-game ban on Harbaugh to start the season"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 35, "quote": "self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 35, "quote": "amid an NCAA investigation that found Harbaugh lied to investigators."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 68, "quote": "Harbaugh reportedly watched the game from the team hotel"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 68, "quote": "now the leading piece of drama returns"}]}
+  ]},
+  {"id": "2efa38e591288d41", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

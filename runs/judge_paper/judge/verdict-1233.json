@@ -1,0 +1,19 @@
+[
+  {"id": "c0545e81d5b4dcf6", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 56, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 56, "quote": "For now, Griffais explained, it's important to Valve that developers don't need to \"split their attention\" between different performance targets."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 26, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 26, "quote": "The Steam Deck OLED will go on sale on November 16th at 1pm ET, and Valve has units ready to ship that same day."}]}
+  ]},
+  {"id": "9b5f88cbf6c0b25f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,7 @@
+[
+  {"id": "764d3db8e29693bd", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 93, "quote": "Users’ natural behavior for search is to follow the path of least resistance"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 59, "quote": "We make Google be the default search engine,” he said"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 59, "quote": "because we’ve always thought it was the best."}]}
+  ]}
+]

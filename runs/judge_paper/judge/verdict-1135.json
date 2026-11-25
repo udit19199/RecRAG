@@ -1,0 +1,21 @@
+[
+{"id": "382a7034e84591d5", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 35, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 35, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 35, "quote": "the generation of players and leaders that will call time on their international careers at week’s end"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 7, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 7, "quote": "The All Blacks had their chances, but their usual safe handling, a feature throughout the World Cup"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 7, "quote": "a feature throughout the World Cup after their first-up loss to France"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 7, "quote": "their usual safe handling, a feature throughout the World Cup after their first-up loss to France, evaded them against the"}, {"item": 7, "quote": "Springboks’ blitz defence in the wet conditions"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 7, "quote": "in the wet conditions"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 81, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 81, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 81, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]}
+]},
+{"id": "73dca12cccf5480a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

@@ -1,0 +1,17 @@
+[
+{"id": "4b12342eee9a4e37", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "9cdcc419bd9094d2", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 24, "quote": "6PPD-quinone, which was identified in late 2020"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 24, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 24, "quote": "Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 24, "quote": "The product 6PPD-quinone, which was identified in late 2020, requires more research to understand what impact, if any, it may have on aquatic life or the environment,” Goodyear SVP of global operations and CTO Chris Helsel says"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 89, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 89, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 89, "quote": "In our report, a former VP at an industrial automation vendor shared, “Digital solutions provide the visibility, analysis, and insight needed to address the challenges inherent in sustainability goals."}]}
+]}
+]

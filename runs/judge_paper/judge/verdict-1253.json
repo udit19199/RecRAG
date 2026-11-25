@@ -1,0 +1,8 @@
+[
+  {"id": "0ca0d352aec23cd9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 49, "quote": "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 49, "quote": "Because GPT-4 is more likely to follow the instructions of “jailbreaking” prompts, the co-authors claim that GPT-4 can be more easily prompted than other LLMs to spout toxic, biased text."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 57, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 57, "quote": "Its earlier actions were focused on concerns about the spread of illegal content and disinformation related to the Israel-Hamas war."}]}
+  ]}
+]

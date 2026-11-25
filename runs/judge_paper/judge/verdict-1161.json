@@ -1,0 +1,11 @@
+[
+  {
+    "id": "67fab54fdd370962",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 51, "quote": "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 51, "quote": "The Commanders are coming off a dud last week against the Giants, while Dallas is flying high."}]}
+    ]
+  }
+]

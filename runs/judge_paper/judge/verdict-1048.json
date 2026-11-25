@@ -1,0 +1,57 @@
+[
+  {
+    "id": "0b5aabe789f9ac00",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 96, "quote": "If the debt continues to rise more than the economy, risks will increase"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 96, "quote": "If the debt continues to rise more than the economy, risks will increase, and the government may “crowd out” private investment"}
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 96, "quote": "the government may “crowd out” private investment as it competes with the private sector for funds to service its debt"}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 49, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 49, "quote": "We worry about our debt-to-GDP ratio in the Philippines, as it stands at about 63% and that’s a little high for us and it is not ideal,” President Ferdinand Marcos, Jr."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 49, "quote": "President Ferdinand Marcos, Jr."},
+          {"item": 23, "quote": "told members of the US-ASEAN Business Council who visited Malacañang"}
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {"item": 23, "quote": "(ABS-CBN, Aug. 9, 2023)"}
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "id": "ade3a4a151ba9570",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "0.1", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 56, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 56, "quote": "His 31-yard field goal is good, and the Buffs take the first lead of the game on their first drive."}]}
+    ]
+  }
+]

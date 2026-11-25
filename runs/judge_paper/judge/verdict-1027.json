@@ -1,0 +1,19 @@
+[
+  {"id": "c2bef936c71d456e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 22, "quote": "NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 22, "quote": "NFL Network's Ian Rapoport reported Sunday morning that Hockenson is expected to play against New Orleans."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 77, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 77, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 77, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 77, "quote": "Head coach Dennis Allen told reporters Friday that despite Olave being a full participant in Friday's practice he is still in concussion protocol though has a chance to play."}]}
+  ]},
+  {"id": "6f717c941f585c54", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

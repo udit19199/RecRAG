@@ -1,0 +1,22 @@
+[
+  {"id": "93de1ef10981136e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d23734969de83be0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 93, "quote": "Users’ natural behavior for search is to follow the path of least resistance"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 59, "quote": "We make Google be the default search engine,"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 59, "quote": "because we’ve always thought it was the best."}]}
+  ]},
+  {"id": "390dbf3973650207", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []}
+  ]}
+]

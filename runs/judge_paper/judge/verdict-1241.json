@@ -1,0 +1,11 @@
+[
+  {"id": "416d944f126566af", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 97, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 97, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 97, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 3, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 3, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 3, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 3, "quote": "These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]}
+  ]}
+]

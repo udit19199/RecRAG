@@ -1,0 +1,1403 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=249e185e91a7d138 ===
+Gold sentences and facts:
+Sentence 0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for technologists and designers to be in the process together.
+  Fact 0.0: In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies.
+  Fact 0.1: In this innovation cycle, there is a strong need for technologists and designers to be in the process together.
+Sentence 1: Stufish partner Ric Lipson (along with artist Es Devlin and producer Brian Eno) collaborated on the U2 project for Sphere.
+  Fact 1.0: Ric Lipson is a partner at Stufish.
+  Fact 1.1: Ric Lipson collaborated on the U2 project for Sphere.
+  Fact 1.2: Es Devlin, an artist, collaborated with Ric Lipson on the U2 project for Sphere.
+  Fact 1.3: Brian Eno, a producer, collaborated with Ric Lipson on the U2 project for Sphere.
+
+Retrieved items:
+<item 1>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+The Boston Dynamics AI Institute is still in its infancy, and therefore doesn’t have much in the way of public facing research to show just yet. It is, however,
+doing a lot of hiring. This week it announced that MIT’s Kate Darling will lead research around “ethics and societal impact of robotics and AI.” From the
+institute:
+
+Darling’s team will explore immediate as well as long term questions on the implementation and use of robotics, impact on the workplace, infrastructure and
+other topics. The team will perform studies and experiments designed to generate data needed for others to make informed ethics and policy decisions, and will
+also develop a series of talks and workshops at the intersection of ethics, law, economics and robotics that will offer a platform for broad discussion.
+
+“I’ve heard Gill say that making a car is taking small bits of metal and banging them up, welding them together and attaching them,” Raibert says. “That’s a
+little on the primitive side. Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that.
+</item 1>
+
+<item 2>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+In perhaps the most unexpected tech news of the year, billionaire and AI evangelist Sam Altman has been ejected from his CEO role at OpenAI by the company’s
+board after an apparent vote of no confidence. Its exact wording in a release issued this afternoon: Altman’s “departure follows a deliberative review process
+by the board, which concluded that he was not consistently candid in his communications with the board, hindering its ability to exercise its responsibilities.”
+
+What the hell is happening at the most hyped company in the world?! Here are some totally speculative theories that occurred to us and others around the web.
+
+1. Did Altman circumvent the board in a major deal?
+
+Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now. “Not consistently candid” is
+a very diplomatic way of saying Altman lied.
+</item 2>
+
+<item 3>
+Robotics Q&A with Boston Dynamics’ Aaron Saunders (TechCrunch, 2023-12-09T16:05:51+00:00)
+When would you pay as much for a robot as you would a car? When it achieves the same level of dependability and value you have come to take for granted in the
+amazing machines we use to transport us around the world.
+
+What important robotics story/trend isn’t getting enough coverage?
+
+There is a lot of enthusiasm around AI and its potential to change all industries, including robotics. Although it has a clear role and may unlock domains that
+have been relatively static for decades, there is a lot more to a good robotic product than 1’s and 0’s. For AI to achieve the physical embodiment we need to
+interact with the world around us, we need to track progress in key technologies like computers, perception sensors, power sources and all the other bits that
+make up a full robotic system. The recent pivot in automotive towards electrification and Advanced Driver Assistance Systems (ADAS) is quickly transforming a
+massive supply chain. Progress in graphics cards, computers and increasingly sophisticated AI-enabled consumer electronics continues to drive value into
+adjacent supply chains.
+</item 3>
+
+<item 4>
+8 authors and their 8 gift book picks for this holiday season (TechCrunch, 2023-12-01T16:05:15+00:00)
+Though I think what I appreciate the most about this book is that when it comes to marketing and driving product adoption, even though she introduces four
+fundamentals of product marketing, the first and most critical to get right is customer insight. This is almost unheard of given the target market for this book
+is an industry where engineering and scale reign supreme.
+
+Scott Hurff
+
+As a writer, Scott Hurff doesn’t always write about product design; but when he does he is able to share his perspective as someone who’s also a product maker
+and designer. It is also this intersection that nurtured his book, “Designing Products People Love: How Great Designers Create Successful Products.”
+
+Book recommendation: “Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application,” by Jason Fried, David Heinemeier Hansson and Matthew
+Linderman
+
+“Getting Real” is an absolute treasure from 2006 and it’s still teaching me things.
+</item 4>
+
+<item 5>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+(Spoiler alert: Yes.)
+
+Rumors are swilling that OpenAI may be considering developing its own AI chips. That’s going to get interesting, especially if you’ll recall that Nvidia’s
+ongoing stock market rally is likely driven by the current boom in AI. The company’s ChatGPT’s mobile app hit a record $4.6 million in revenue last month, but
+growth is slowing. Oh, and there’s no need to shed tears for Nvidia quite yet; Brian’s piece breaking down how Nvidia became a major player in robotics is super
+interesting.
+
+Adobe has doubled down on its Firefly generative AI models. This week, Frederic covered how the software can now generate more realistic images and can help
+artists create vector graphics in Illustrator. Neato.
+
+More on the AI front
+
+If AI can’t go to the mountain, the mountain will come to AI: Dutch startup Tidalflow exits stealth with backing from Google’s Gradient Ventures. It is aiming
+to help any software play nice with ChatGPT and other LLM ecosystems.
+</item 5>
+
+<item 6>
+8 predictions for AI in 2024 (TechCrunch, 2023-12-19T16:19:34+00:00)
+Marketing claims made for machine learning systems that companies adopted in order to not fall behind will receive their quarterly and yearly reviews… and it’s
+very likely they will be found wanting.
+
+Expect a considerable customer withdrawal from AI tools as the benefits fail to justify the costs and risks. On the far end of this spectrum, we are likely to
+see lawsuits and regulatory action with AI service providers that failed to back up their claims.
+
+While capabilities will continue to grow and advance, 2023’s products will not all survive by a long shot, and there will be a round of consolidation as the
+wobblier riders of the wave fall and are consumed.
+
+Apple jumps in
+
+Apple has an established pattern of waiting, watching and learning from other companies’ failures, then blowing in with a refined and polished take that puts
+others to shame. The timing is right for Apple to do this in AI, not just because if it waits too long its competition may eat up the market, but because the
+tech is ripe for their kind of improvement.
+</item 6>
+
+<item 7>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 7>
+
+<item 8>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+So far, its plan to forgo the gigafactory for local microfactories has proved anything but, writes Harri — thanks to missed production targets, low cash
+reserves, layoffs and a pivot.
+
+Audio
+
+It’s winter, it ain’t getting warmer (at least here in NYC), and I’d argue that there’s no better place to be than snuggled up indoors with a podcast for
+company. If you’re in need of material, TechCrunch has a few that should definitely be on your radar.
+
+This week on Equity, the crew dove deep into the encouraging signs from the fintech startup market, starting with Klarna’s Q3 results. From there, they looked
+at buy now, pay later consumer behavior and fintech fundraising results with a 2021 flavor.
+
+Meanwhile, Found featured Nasrat Khalid of Aseel, which started as an e-commerce company making it possible for local artisans in Afghanistan to sell to
+customers across the world.
+</item 8>
+
+<item 9>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+As experts on a technology or technology stack, we can communicate abstract insights or contribute in more conceptual contexts. Technologists add value to the
+product design process by sharing their expertise on a technology’s characteristics. Designers use this information to shape and exploit technologies in the
+visual and interaction design process. In this way, technologists inform new interaction models, interface metaphors, and product channels. This involvement
+gives confidence and conviction to the promises of design.
+
+Think of digital technologies as a material like paint, stone, or wood. For artisans to create with materials, they must understand the material’s ontology and
+phenomenology. An artist must know the differences between oil, acrylic, or watercolor paints because each material has different properties that affect how and
+what can be created. Technologists must “find the grain” of a technology.
+</item 9>
+
+<item 10>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+The article is well worth a read, to figure out in which circumstances you can expect a decent return on investment on your event-going antics.
+
+Today’s newsletter is going to be a bit more to the point than usual: I’m laid up at home with pneumonia (yes, I really am an 86-year-old grandmother.
+Surprise!), so forgive the antibiotics-addled ramblings this week. I hope I’ll be back with non-pharmaceutically-enhanced ramblings next week.
+
+Artificial intelligence: Y’all just can’t get enough
+
+Our most-read stories consistently continue to be about AI. No big surprise, perhaps, the AI hype cycle continues apace. This week there’s been a bunch of
+stories about the seedy underbelly of AI, including how humans are part of the problem, continuing to trick AI systems into generating boobs and 9/11 memes. Oh,
+humans. We spoke with investors to figure out whether the future of AI has hope for us beyond daft memes. (Spoiler alert: Yes.)
+</item 10>
+
+<item 11>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+I think the leadership at Hyundai — the chairman visited me last week, and we’re in close touch with him and the people who work with him — think that getting
+into the 22nd century is an important thing to do and we’re getting started on it now.”
+
+Pratt adds, “There’s actually this alignment that’s happening between cars and robotics, as well. Rod Brooks was the one who a few years ago said that modern
+cars are eldercare robots. I think that’s really true. You think about the amount of computers in them, the amount of software that’s in them. TRI has different
+divisions inside of it, one of which works on very advanced things in cars that is completely overlapping with some of the software and some of the concepts
+that we’re using in the robotics space.”
+
+For its part, the Boston Dynamics AI Institute lists three key pillars of its research: intelligence, dexterity and mobility. That’s effectively making robots
+that are smarter, better at mobile manipulation and move more dynamically.
+</item 11>
+
+<item 12>
+How OpenAI's ChatGPT has changed the world in just a year (Engadget, 2023-11-30T14:00:50+00:00)
+At the start of the year, ChatGPT was regularly derided as a fad, a gimmick, some shiny bauble that would quickly be cast aside by a fickle public like so many
+NFTs. Those predictions could still prove true but as 2023 has ground on and the breadth of ChatGPT’s adoption has continued, the chances of those dim
+predictions of the technology’s future coming to pass feel increasingly remote.
+
+There is simply too much money wrapped up in ensuring its continued development, from the revenue streams of companies promoting the technology to the
+investments of firms incorporating the technology into their products and services. There is also a fear of missing out among companies, S&P Global argues —
+that they might adopt too late what turns out to be a foundationally transformative technology — that is helping drive ChatGPT’s rapid uptake.
+
+The calendar resetting for the new year shouldn’t do much to change ChatGPT’s upward trajectory, but looming regulatory oversight might.
+</item 12>
+
+<item 13>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+Three years later, Pratt was named TRI’s CEO. Raibert continued as Boston Dynamics’ CEO until 2019, handing the reins over to longtime employee Rob Playter, who
+managed the company’s shift to more commercial pursuits. Last year, Raibert (who still serves as BD’s chairman) founded the Boston Dynamics AI Institute. The
+organization has a lot in common with TRI. Both are dedicated to pure research, with the backing of two major automakers (Toyota and Hyundai).
+
+I recognize that “pure research” is a bit of a loaded term. The concept is certainly a hopeful one: finding a method that can sustain research outside of the
+pressures of academia and corporate R&D.
+
+Asked whether there is pressure from Toyota to productize, Pratt says, “There actually is not, and I’m not saying that just to be nice. I think one of the great
+things about companies that have existed for long times is that this isn’t the first time that they’ve done R&D.
+</item 13>
+
+<item 14>
+Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle (TechCrunch, 2023-10-22T19:15:29+00:00)
+Tesla also gave some updates about its long-delayed Cybertruck. Initial deliveries are set for an event at Giga Texas on November 30. Elon Musk noted that
+scaling the Cybertruck will be hard and it will take 18 months before the pickup is profitable.
+
+“I mean, we dug our own grave with Cybertruck,” said Musk.
+
+The billionaire executive also said Giga Texas will be able to produce about 250,000 Cybertrucks a year starting in 2025. But let’s remember that Musk isn’t
+great at making predictions. After all, he initially said the Cybertruck would be on the market by 2021. Expect some of these numbers to be pushed out, too.
+
+Want to reach out with a tip, comment or complaint? Email Kirsten at kirsten.korosec@techcrunch.com or Rebecca at rebecca.techcrunch@gmail.com.
+
+Reminder that you can drop us a note at tips@techcrunch.com.
+</item 14>
+
+<item 15>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 15>
+
+<item 16>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+It has evolved into working in humanitarian aid, delivering emergency food supplies to people in need in Afghanistan and Turkey.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Another superconductor disappointment: Tim writes that a new, supposedly room-temperature superconducting material isn’t what the scientific community hoped it
+would be. With the Nature-published paper detailing the material facing retraction, the odds of researchers discovering a room-temperature superconductor are
+looking even longer.
+
+Klarna inches toward an IPO: Mary Ann and Alex write that Swedish fintech Klarna is taking steps toward an eventual IPO. The company has initiated a process for
+a legal entity restructuring to set up a holding company in the U.K.
+</item 16>
+
+<item 17>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+They believed that AI could find a cure for cancer or solve climate change, but they worried that AI bots might do things their creators had not intended. If
+the machines became more intelligent than humans, the Rationalists argued, the machines could turn on their creators. Thiel had become enormously wealthy
+through an early investment in Facebook and through his work with Musk in the early days of PayPal. He had developed a fascination with the singularity, a trope
+of science fiction that describes the moment when intelligent technology can no longer be controlled by humanity.
+
+With funding from Thiel, Yudkowsky had expanded his AI lab and created an annual conference on the singularity. Years before, one of Hassabis’ two colleagues
+had met Yudkowsky, and he snagged them speaking spots at the conference, ensuring they’d be invited to Thiel’s party. Yudkowsky introduced Hassabis to Thiel.
+Hassabis assumed that lots of people at the party would be trying to squeeze their host for money.
+</item 17>
+
+<item 18>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+Why don’t we stitch those together in a meaningful way?
+
+To help determine the best method for picking.
+
+Exactly. That ultimately helps our designers determine and algorithmically prove that was the best method. The theme here is that generative AI has a lot of
+promise, particularly in influencing our designers to make a better system.
+
+I was recently speaking with Daniela Rus, and she was excited by the concept of using generative AI to literally design robots.
+
+The dynamics of the robots, to literally move the robots — path planning to actually figure out how to get the right angles — generative AI is incredible at
+that. We’re seeing a lot of promise with that today.
+
+What about real-world problem-solving?
+
+It’s another good example. I want to be careful on generative AI versus the machine learning systems that we have. We have what we call “flow” inside the
+building. We have machine learning systems that understand what line needs what at what time and can help divert the right material flow to the right stations,
+for example.
+</item 18>
+
+<item 19>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Does Reddit co-founder Alexis Ohanian have regrets over his creation? The entrepreneur and founder of venture fund Seven Seven Six, speaking at an event at the
+University of Virginia, espoused a fairly negative view of the current social media landscape and the creator economy — an environment where he says, everyone
+has “been so trained and conditioned now to just get the likes and retweets, get the upvotes…I wish I could be more optimistic about it, but we’re seeing it
+play out before our eyes.” Still, he ultimately described himself as a “techno-optimist” — an apparent nod to a16z General Partner Marc Andreessen’s recent
+diatribe where he claimed technology could solve all our problems.
+
+“Guilty as charged,” Ohanian said, during his interview with Kara Swisher. “I do think that pendulum will swing back. I think even swifter than we realize.”
+</item 19>
+
+<item 20>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+“Marc was an incredibly generous professor,” Pratt says of their early days. “One of the wonderful things about MIT at the time and Marc in particular is that I
+was this young kid, and both as a graduate student and then a young professor, he welcomed me. For a while, both of us were working in the Leg Lab at the same
+time, and Marc had done this extraordinary work on robots that run. I decided that maybe I would work on robots that walk. That’s how we intersected then, and
+then when he went off to form Boston Dynamics, he was very kind and basically gave me the lab and all the stuff that was there.”
+
+Pratt remained in academia for the next two decades, transferring from MIT to Olin in 2001. Nine years later, he became a program manager at DARPA. It was there
+the two crossed paths yet again. Boston Dynamics designed Atlas for DARPA. The humanoid robot made its debut in 2013 and has since become a mainstay in robotics
+challenges.
+</item 20>
+
+<item 21>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+And if we can solve it, it will do so much good. It really, really will because we will find out we have more in common than not,” he said.
+</item 21>
+
+<item 22>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+It’s wherever [MIT professor Julie Shah] wants to take it. We have a lot of interest in how people perceive robotics, because people will be using our robotics.
+And if it is intimidating, or there’s friction there, and you don’t want to use it, then we’re failing in our design.
+</item 22>
+
+<item 23>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+Not enough conversation.”
+
+There were other things that may have hurt Pebble’s traction, too, including its lack of a native mobile app. As T2, the startup prioritized building for the
+web to be agile and more flexible, but lost out on the opportunities for discovery driven by the app stores. Notes Greer, “that might have been a mistake.”
+
+In retrospect, Cselle also questions if the rebranding from T2 to Pebble may have been an issue.
+
+“I’m wondering if the Pebble rebrand had actually softened the value prop[position] because T2 just encapsulated it so much — that it was really duplicative [of
+Twitter],” he says.
+
+Like most startup shutdowns, the answer as to “why” is not any one thing but a combination of factors. For Pebble, that’s certainly true.
+</item 23>
+
+<item 24>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Even worse, the system is addictive, with notifications delivering hits of dopamine in a part of what historian and addiction expert David Courtwright calls
+“limbic capitalism.” Society has more or less sleepwalked into this outrage-industrial complex without having a real analytic framework for understanding it.
+The tech platforms and some research groups or think tanks offer up “misinformation” or “disinformation” as the framework, which present the problem as if the
+problem is bad content poisoning the well, rather than the structure itself being rotten. As Evgeny Morozov has quipped, “Post-truth is to digital capitalism
+what pollution is to fossil capitalism — a by-product of operations.”
+</item 24>
+
+<item 25>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Technologists must “find the grain” of a technology. In this way, they become an intermediary between the abstract nature of design and the pedantic nature of
+technology. This philosophical perspective is especially important when a product is in a growth stage or when using emerging technologies.
+
+Regardless of whether your product is growing or in a stable stage or employs established or emerging technologies, integrating technologists into the product
+strategy and design process enriches the final outcome. There is a technology perspective extending beyond the operations and mechanics of the code “factory
+floor,” which provokes innovation. Sometimes this leads to small, impactful moments of innovation — and sometimes it is a brilliant revolution.
+</item 25>
+
+<item 26>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+If giants like Ford are feeling the frustration, imagine the mood at a small green tech startup.
+
+So what’s the play? How can the government support those striving against an increasingly insecure (and insincere) backdrop?
+
+The response of any tech company impacted by last week’s news surely has to be this.
+
+First, we need a consistent macroeconomic policy. This has a major impact on startups raising and deploying capital into climate R&D. The global economic
+contraction has made it difficult for these businesses to raise any money. Overall approaches to the economy have trickle-down effects on how we, as businesses,
+make money and run our operations. Right down to salaries, which alone are hard to keep up with inflation-based pay rises.
+
+The second is a consistent tax policy. One of the most critical things for startups is research and development (R&D) tax credits.
+</item 26>
+
+<item 27>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+The idea, O’Hara said, is to rethink social networking from the ground up.
+
+Ford shutters SaaS app for field work: Ford has shut down VIIZR, a software-as-a-service company that, along with Salesforce, built an app to help tradespeople
+like plumbers, locksmiths and electricians to schedule field appointments, send invoices and manage customers, Kirsten reports. VIIZR, which was announced in
+December 2021, was a separate company majority owned by Ford, with Salesforce as a minority investor.
+
+Apple bets on generative AI: Apple CEO Tim Cook pushed back against the notion that the company was behind in AI on Apple’s Q4 earnings call with investors, as
+he highlighted technology developments that Apple had made recently that “would not be possible without AI.” Cook also said that Apple was working on generative
+AI technologies, lending credence to reports suggesting the company is on track to spend $1 billion per year on developing generative AI products.
+</item 27>
+
+<item 28>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Were all of us wrong? Or engulfed in some kind of Baader–Meinhof frequency bias delusion? Had I been researching a nonexistent problem? Were Google results
+actually amazing? Truly, I had lost the plot. Was the premise of this piece completely off? Was I the asshole who deserved to be attacked by an alligator?
+
+I began to worry all the people who were mad about search results were upset about something that had nothing to do with metrics and everything to do with
+feelings and ~vibes~ and a universal, non-Google-specific resentment and rage about how the internet has made our lives so much worse in so many ways, dividing
+us and deceiving us and provoking us and making us sadder and lonelier. Decades of American optimism about the wonderful potential of technology, from the Moon
+landing to personal computers to the iPhone, had finally, in the last few years, broken down into comprehensive chagrin at the petty, pathetic, and violent
+world enabled by our devices. Was all that really Google’s fault?
+</item 28>
+
+<item 29>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+The thing we’re jacked into and collectively creating seems more like a global endocrine system than anything we might have visualized in the years while
+“cyber” was a prefix. This may seem a banal observation, given that Marshall McLuhan was talking about the global nervous system more than fifty years ago. We
+had enthusiasm about cybernetics and global connectivity over the decades and, more recently, a revitalization of theory about networks and kinship and rhizomes
+and all the rest. (The irony is that with fifty years of talk on “systems thinking,” we still have responses to things like COVID-19 or climate that are almost
+antithetical to considering interconnected systems — dominated by one set of expertise and failing to incorporate the social sciences and humanities). So —
+globally connected, yet divided into silos, camps, echo-chambers, and so on. Social media platforms are acting as agents, structuring our interactions and our
+spaces for dialogue and solution-building.
+</item 29>
+
+<item 30>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Product design is in a moment of profound change and redefinition as technologies like artificial intelligence (AI) and spatial computing dramatically affect
+computing experiences. AI, especially, may have only minor impacts on interface design but will significantly impact the holistic product or ecosystem
+experience. Spatial computing, on the other hand, will change human-computer interactions and unmoor our understanding of what a computer is.
+
+In this innovation cycle, product design requires a wider perspective of platforms and interconnections between technologies, creating a strong need for
+technologists and designers to be in the process together.
+
+For successful products and businesses, innovation is perpetual. There is a never-ending search to find the next new thing that enhances the user experience,
+extends product reach, expands revenue, or all three simultaneously. Product design makes innovation less daunting and increases chances for success because it
+is a multidisciplinary process with structures and frameworks to catalyze innovation. Technologists have a role in the process that expands beyond simply
+validating the technology or concept, which is their customary responsibility.
+</item 30>
+
+<item 31>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+For entrepreneurs, innovators and businesses to thrive and unlock the economic potential that comes from creating new industries, we need a consistent approach
+from the government.
+
+I care about this because, as Americans who chose to build a biocatalyst engineering company here in the U.K., we’re acutely aware of the impact such a reversal
+of policy has on every stage of our sector’s existence. All major technological innovation ultimately comes from government support at the very beginning. We
+wouldn’t have affordable solar panels, microchips, mobile phones or the internet without government funding, government subsidies, government encouragement and
+government infrastructure. You can’t scale technology that is going to make a considerable impact without upfront capital to match.
+
+In January of this year, Chancellor Jeremy Hunt unveiled a long-term vision to grow the economy, saying, “I want the world’s tech entrepreneurs, life science
+innovators and clean energy companies to come to the U.K. because it offers the best possible place to make their vision happen.”
+</item 31>
+
+<item 32>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Google is now making it the default sign-in method for all users.
+
+2 sec, let me text you some cash: When questioned about Mastercard’s prospects in emerging markets such as India, Mastercard’s CFO Sachin Mehra praised UPI for
+helping with digitization but voiced reservations about its commercial sustainability, saying it is an “incredibly painful experience” for ecosystem
+participants.
+
+Bravely browsing — or searching — for a new job . . . : Brave Software, the maker of Brave Browser and Search, confirmed that it has laid off 9% of its
+workforce across departments.
+</item 32>
+
+<item 33>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+I think even swifter than we realize.” The war in the Middle East may even be the tipping point, he theorized, as it’s now “abundantly clear” that we need
+something better to figure out the world than the platforms we have today.
+
+The founder, as you may recall, notably resigned from Reddit’s board in 2020 over differences of opinion on moderation and wanting to crack down on communities
+about violence and hate. It was a moment where he seemed to be reckoning with what his platform had wrought. At the time, he asked for his board seat to be
+replaced by a Black board member. The company agreed, appointing its first Black board member with Y Combinator partner Michael Seibel.
+
+Reddit also later banned several toxic communities, including r/donaldtrup following violence at the U.S. Capitol, and Ohanian says that the site has “gotten
+demonstrably better,” since, as well as better as a business.
+</item 33>
+
+<item 34>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+It’s just that in a fediverse-dominated world, the way to win is not to achieve excellent lock-in and network effects. The only way to win is to build the best
+product.
+
+This is really not a particularly hot take, by the way. Even the most successful centralized platforms have long understood that a protocol-driven social web is
+a good idea. Jack Dorsey used to say that Twitter was better as a protocol than a platform, and started the project that became Bluesky before also helping get
+Nostr going. (We really don’t need to get into the whole story of what happened to Twitter since then, except to say that the speed with which that platform
+changed made a lot of people acutely aware that we need a social ecosystem that can resist the whims of a single company or CEO.)
+
+Meanwhile, Meta CEO Mark Zuckerberg seems to earnestly believe that bringing Threads to the fediverse is a good idea, both for its product and for its business.
+</item 34>
+
+<item 35>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+But tracking these layoffs helps us to understand the impact on innovation, which companies are facing tough pressures and who is available to hire for the
+businesses lucky to be growing right now. Unfortunately, it also serves as a reminder of the deeply human impact of layoffs and how risk profiles could evolve
+from here.
+
+Below you’ll find a comprehensive list of all the known layoffs in tech that have occurred in 2023, to be updated monthly. If you have a tip on a layoff,
+contact us here. If you prefer to remain anonymous, you can contact us here.
+
+The running total of layoffs for 2023 based on full months to date is 224,503, according to Layoffs.fyi. Tech layoffs conducted to date this year currently
+exceed the total number of tech layoffs in 2022, according to the data in the tracker.
+
+Data visualization by Miranda Halpern, created with Flourish
+
+December 2023
+
+ShareChat
+
+Is cutting 15% of its workforce in a “strategic restructuring” effort for 2024.
+</item 35>
+
+<item 36>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+But one can never be sure.
+
+4. Could it be a major security or privacy incident?
+
+The idea that the company has experienced a major, perhaps pervasive, security issue is bolstered by the fact that Microsoft reportedly suspended use of ChatGPT
+internally a few days ago. OpenAI subsequently stopped allowing new signups. If there was a serious security problem in its biggest product and Altman
+downplayed it, that would obviously create distrust with the board.
+
+There is also the potential for misuse at scale with the enormous amount of personal data that travels through OpenAI’s APIs and services.
+
+Working against this theory is the fact that CTO Mira Murati was just elevated to interim CEO in Altman’s place. It seems unlikely that anything
+security-related would go through the CEO and not the CTO, or that the two would be at odds to the point where one could be fired like this and the other
+swapped in to clean up the mess. As the board’s statement notes, Murati is in charge of product and safety, among other things.
+</item 36>
+
+<item 37>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+If you’re lucky, once a year you get to put together a panel built on pure kismet. Pairing Gill Pratt with Marc Raibert was exactly that for me. The two go back
+several decades, to the salad days of MIT’s Leg Lab.
+
+[A version of this story originally appeared in TechCrunch’s robotics newsletter, Actuator. Subscribe for free here.]
+
+Raibert founded the lab at Carnegie Mellon University (CMU) in 1980, before moving operations to MIT. The team was focused on robot locomotion research that
+would pave the way for Boston Dynamics’ work.
+
+“When we first got started, all robots that had legs were very slow moving, crab-like things that would hug the ground and then tentatively take a step and hope
+that things didn’t topple over and then move like a slow-moving spider,” says Raibert. “I was interested in how animals work, and I looked at that and said,
+‘Wow, this is about as far from right as you can get.’
+</item 37>
+
+<item 38>
+Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling (TechCrunch, 2023-10-30T10:15:24+00:00)
+Either way, Cruise said it’s now going to examine “processes, systems, and tools and reflect on how we can better operate in a way that will earn public trust.”
+
+That might be a hefty challenge, especially in California. As the Cruise drama unfolded, opposition against robotaxis grew in cities like Los Angeles. And two
+of the biggest groups to oppose robotaxi expansion in California are now formally working together.
+
+Want to reach out with a tip, comment or complaint? Email Kirsten at kirsten.korosec@techcrunch.com or Rebecca at rebecca.techcrunch@gmail.com.
+
+Reminder that you can drop us a note at tips@techcrunch.com. If you prefer to remain anonymous, click here to contact us, which includes SecureDrop
+(instructions here) and various encrypted messaging apps.
+
+Micromobbin’
+
+Taiwanese battery swapping giant Gogoro came to play at the Japan Mobility Show 2023, showing off how its scooter batteries can also be used to power a tiny
+car.
+</item 38>
+
+<item 39>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+By the spring of 2010, they were building their dream machine. They wholeheartedly believed that because they understood the risks, they were uniquely
+positioned to protect the world. “I don’t see this as a contradictory position,” said Mustafa Suleyman, one of the three DeepMind founders. “There are huge
+benefits to come from these technologies. The goal is not to eliminate them or pause their development. The goal is to mitigate the downsides.” Loading Having
+won over Thiel, Hassabis worked his way into Musk’s orbit. About two years later, they met at a conference organised by Thiel’s investment fund, which had also
+put money into Musk’s company SpaceX. Hassabis secured a tour of SpaceX headquarters. Afterward, with rocket hulls hanging from the ceiling, the two men lunched
+in the cafeteria and talked. Musk explained that his plan was to colonise Mars to escape overpopulation and other dangers on Earth.
+</item 39>
+
+<item 40>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+Solve something that could at first seem impossible, and you may be on the right path. If there isn’t a very real chance of failure, you’re doing it wrong.
+
+On that lighthearted rant, here’s what’s been cookin’ in the world of startups at TechCrunch this week!
+
+Someone call security
+
+If you haven’t been paying attention to what our cybersecurity team has been covering, you have been missing out. Zack, Lorenzo, and Carly are absolutely
+crushing it. Allow me to make an impassioned plea for not missing their work.
+
+When you think “essential services,” you might think water, electricity, and hospitals — but internet connectivity is increasingly important as the
+infrastructure that ties together the fabric of society. As the conflict between Israel and Hamas continues, internet connectivity in Gaza took a severe hit.
+Palestinian internet service provider NetStream reportedly collapsed due to a severe shortage of fuel supplies, while other providers such as Paltel and Mada Al
+Arab are also facing serious connectivity issues.
+</item 40>
+
+<item 41>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+The first is the company’s pilots with Agility’s Digit systems. I wrote about this a couple of times last week, including a piece titled “Humanoid robots face a
+major test with Amazon’s Digit pilots” that went up over the weekend.
+
+I do genuinely believe there are going to be a lot of eyes on this thing. It’s not that I think it’s the end of Agility if Amazon opts not to extend a contract.
+It’s more that if Amazon decides to pursue it further, it’s going to cause a lot more companies to take bipedal/humanoid robots a lot more seriously. I’ve been
+saying the whole time that I’m holding off on judging the efficacy of humanoids until we see more in the field, and Amazon clearly feels the same way.
+
+The company operates at such an unfathomable scale (have you visited a regional fulfillment center lately?), that it truly needs to feel absolutely confident
+before it begins implementing new technologies into its workflows.
+</item 41>
+
+<item 42>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+It’s a lot to get through, as always — so we won’t delay. But first, a reminder to sign up here to receive WiR in your inbox every Saturday if you haven’t
+already done so.
+
+Most read
+
+OpenAI throws a dev day: OpenAI hosted its first-ever developer conference on Monday, and the company had a lot to talk about. Some of the more notable items
+announced were tools to create custom “GPTs” (i.e., domain-specific chatbots), new text-to-speech models, an API for the text-to-image model DALL-E 3, and an
+improved version of OpenAI’s flagship model, GPT-4, called GPT-4 Turbo.
+
+Mac attack: Brian reviewed Apple’s new 16-inch M3 Max MacBook Pro and the M3 iMac 24-inch.
+</item 42>
+
+<item 43>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+But eight years later, the argument between the two men seems prescient. The question of whether AI will elevate the world or destroy it – or at least inflict
+grave damage – has framed an ongoing debate among Silicon Valley founders, chatbot users, academics, legislators and regulators about whether the technology
+should be controlled or set free. Loading That debate has pitted some of the world’s richest men against one another: Musk, Page, Mark Zuckerberg of Meta, tech
+investor Peter Thiel, Satya Nadella of Microsoft and Sam Altman of OpenAI. All have fought for a piece of the business – which one day could be worth trillions
+of dollars – and the power to shape it. At the heart of this competition is a brain-stretching paradox. The people who say they are most worried about AI are
+among the most determined to create it and enjoy its riches. They have justified their ambition with their strong belief that they alone can keep AI from
+endangering Earth. Musk and Page stopped speaking soon after the party that summer.
+</item 43>
+
+<item 44>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+Then came the nadir of the last few weeks.
+
+Last week, with the government’s already infamous U-turn on its green pledges, the nation joined in a consternated chorus with global leaders to lament the
+prime minister’s short-sighted choice. Sunak has pushed back the British net-zero transition timeline by at least five years.
+
+The first and most galling concern is, obviously, the consequences for the future of our species on this planet. The next biggest issue, currently being voiced
+by leaders across industries and especially within the climate tech and climate finance sectors, is the message it sends out to those of us in the trenches
+actually trying to build technology to change the world and enable a sustainable future.
+
+That message is loud and clear: The U.K. government isn’t willing to be consistent when it comes to climate crisis response policy, which, aside from capital
+and the support of nascent tech markets, is one of the most critical things anyone in our sector can hope for.
+</item 44>
+
+<item 45>
+8 predictions for AI in 2024 (TechCrunch, 2023-12-19T16:19:34+00:00)
+But 2024 will be the year something gives. Where exactly it is impossible to predict, as research is active at the frontiers of this field.
+
+The seemingly magical “emergent” capabilities of LLMs will be better studied and understood in 2024, and things like their inability to multiply large numbers
+will make more sense.
+
+In parallel, we will begin to see diminishing returns on parameter counts, to the point where training a 500-billion-parameter model may technically produce
+better results, but the compute required to do so could provably be deployed more effectively. A single monolithic model is unwieldy and expensive, while a
+mixture of experts — a collection of smaller, more specific models and likely multimodal ones — may prove almost as effective while being much easier to update
+piecemeal.
+
+Marketing meets reality
+
+The simple fact is that the hype built up in 2023 is going to be very hard for companies to follow through on.
+</item 45>
+
+<item 46>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+This means we can list items for sale on Amazon.com more quickly, benefiting both sellers and customers. When orders are placed, Sequoia also reduces the time
+it takes to process an order through a fulfillment center by up to 25%, which improves our shipping predictability and increases the number of goods we can
+offer for Same-Day or Next-Day shipping. Obviously this is all a matter of reducing delivery times — also the driving factor in the company’s Prime Air
+investments. The company has already set next- and same-day delivery expectations in many areas, so one wonders when we arrive at the point where any additional
+time savings becomes effectively negligible. I suspect if you were to put the question to Amazon, they would say “never.”
+
+I didn’t get to that specific question during my time with Amazon Robotics chief technologist, Tye Brady. Instead, our conversation primarily focused on three
+important (I think) topics. The first is the company’s pilots with Agility’s Digit systems.
+</item 46>
+
+<item 47>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+I went the other way to see if we can do something where the dynamics and the energy in the machine [were] part of the story, and springs and bouncing were part
+of the story. My lab worked on that. We built pogo stick robots.”
+
+Raibert ran the lab for 15 years. A number of future robotics luminaries would make their way through the program over the course of its existence, including AI
+ethics professor Joanna Bryson, research scientist Jerry Pratt, Wobbleworks co-founder Peter Dilworth, artist Daniel Paluska, CSAIL professor/Toyota Research
+Institute (TRI) VP Russ Tedrake, UC Berkeley professor Ken Goldberg, Boston Dynamics CEO Rob Playter and Agility Robotics co-founder Jonathan Hurst, who was a
+visiting student from CMU one summer.
+
+Raibert and Pratt first crossed paths when the latter was a student at MIT. Raibert would found Boston Dynamics in 1992, handing the Leg Lab keys over to Pratt
+three years later.
+
+“Marc was an incredibly generous professor,” Pratt says of their early days.
+</item 47>
+
+<item 48>
+Inside the $US2.3b venue that will transform the concert industry (The Sydney Morning Herald, 2023-10-19T18:00:00+00:00)
+Sphere, in contrast, more wholly and subtly envelops you. “They are both legacy projects made by artists who have the career and track record to be able to look
+at these things objectively in a way that a younger performer perhaps wouldn’t because it takes an entire lifetime of experience to make those kinds of choices
+and make it work,” Williams says. The two shows also share British music stage architecture firm Stufish whose work ranges from the Queen’s Platinum Jubilee,
+tours for Beyoncé and Jay-Z, Michael Bublé, Elton John and Madonna as well as the ABBA Arena in London. Stufish partner Ric Lipson (along with artist Es Devlin
+and producer Brian Eno) collaborated on the U2 project for Sphere. “With the ABBA Arena, it’s absolutely designed for that show, but you could also imagine that
+building having another avatar show in there, or indeed a live performance where people would use the technology that’s in the building as an immersive
+environment,” Lipson says.
+</item 48>
+
+<item 49>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+Certainly most of the R&D budget inside of Toyota is spent figuring out how to make the next car or maybe the car five years from now. But there’s this notion —
+and I’m sure Hyundai shares this — that we’re at the once-in-a-century time for transformation in the car industry. Battery electric vehicles are much simpler
+to make than cars have been in the past — no engine, no transmission, etc. So, we’re going to have to compete in a much fiercer way in cars. But also, can we
+use the skills, the dreams and the hopes of the company to go beyond cars? TRI’s job is to actually think about [what’s] next. What’s next after cars, as well
+as some fancy stuff on cars.”
+
+For TRI, much of the “what’s next” focuses on supporting aging populations. The organization invests a good portion of its resources to building out technology
+designed to help older people live more independently. That’s at the root of the research we shared from the institute last week.
+</item 49>
+
+<item 50>
+Creatives across industries are strategizing together around AI concerns (TechCrunch, 2023-10-06T23:04:57+00:00)
+The goal is that AI tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+“It’s really interesting from a music perspective, specifically, because . . . musicians are perhaps more familiar with the idea of AI,” Holland said.
+“Musicians in general are more familiar with things like music production software, and AI tools like MIDI drum loops . . . so I think that there is a certain
+amount of more progressive learning from them, when it comes to technology, and its ability to make their music better.”
+
+When it comes to art and AI, the conversation is complicated, to say the least. Musicians are nervous about industry giants copyrighting AI music and cutting
+them out of the process. Major record labels are worried about AI models training on their catalogues and stealing a slice of their considerable pie.
+</item 50>
+
+<item 51>
+Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle (TechCrunch, 2023-10-22T19:15:29+00:00)
+The former Amazon and Google executive, who has a background in strategy and management consulting, told TechCrunch that when he was struck by the urge to start
+a company, he researched the money-attracting industries of the world, and then, using AngelList, saw how many companies were trying to disrupt those
+industries.
+
+Here’s the nugget:
+
+His search yielded thousands of companies that were working on industries ranging from telecommunications and fashion to video games and food. Billions of
+dollars were going into trucking each year but fewer than 30 startups showed an interest in the field.
+
+“I saw a massive opportunity and few people going after it,” Lewis told TechCrunch.
+
+And then later, when asked if his method of deciding on a direction for a startup is still a good method, Lewis said, in short, yes. Read the whole interview
+from May 2022 here.
+
+Other deals that got our attention . . .
+</item 51>
+
+<item 52>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Third-party Reddit app Narwhal says it hopes to survive Reddit’s app purge with a subscription plan.
+
+Apropos “getting together,” Amanda reports that VidCon is still kickin’. For the first time, the conference hosted an industry leadership summit, where creator
+economy experts and creators could hash out their grievances with the state of the business and share ideas to make the job of a creator more sustainable. That
+makes sense, unlike creators raising venture capital: It’s so eye-wateringly hard to make money as a creator, I’d love to see the pitch that convinces a VC to
+cut a check to a creator, with a realistic expectation of a venture-scale return.
+
+Maybe they were hiding behind the sofa?: Sarah reports that Mastodon actually has 407K+ more monthly users than it thought — and it seems like Twitter has a lot
+more traffic than Musk said. Still, the peak now is about the same as it was a decade ago, and it’s unclear what the social platform can do to encourage more
+growth.
+</item 52>
+
+<item 53>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+When British prime minister Rishi Sunak appeared in front of the hastily assembled press on September 20, the letter-crammed slogan on his lectern caused the
+country to squint: “Long-term decisions for a brighter future,” it read.
+
+We now know, of course, there was little in the speech that followed that brought hope. Certainly not concerning the technological fight for our future climate.
+
+Not that long ago, the UK seemed a rather brighter beacon in the industrial transition toward reversing the global climate breakdown. The countrywide goals were
+laid out. COP26 at least offered a forum and a spotlight. London has made strides in establishing itself as a hub for green tech startups. On the narrow but
+viable path toward net zero, leaders were at least taking the right steps.
+
+Then came the nadir of the last few weeks.
+</item 53>
+
+<item 54>
+Creatives across industries are strategizing together around AI concerns (TechCrunch, 2023-10-06T23:04:57+00:00)
+Whether Congress mobilizes in time to address mounting concerns around AI and creative industries or not, for its part the FTC does appear to be very tuned into
+the technology’s risks — and the power of bringing voices together across industries.
+
+“Art is fundamentally human,” FTC commissioner Rebecca Slaughter said.
+
+“Humans may use technology to assist in creating art, but something cannot be art without human input. Technology is, by definition, not human . . . humans may
+endeavor to make generative AI that is ever more intelligent, [but] it cannot and will not replace human creativity.”
+</item 54>
+
+<item 55>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Media theorist Geert Lovink reflects on a 1996 interview with John Perry Barlow, Electronic Frontier Foundation cofounder and Grateful Dead lyricist, in which
+Barlow was describing how cyberspace was connecting each and every synapse of all citizens on the planet. As Lovink writes, “Apart from the so-called last
+billion we’re there now. This is what we can all agree on. The corona crisis is the first Event in World History where the internet doesn’t merely play ‘a role’
+— the Event coincides with the Net. There’s a deep irony to this. The virus and the network ... sigh, that’s an old trope, right?” Indeed, read through one
+cultural history, it seems obvious that we would reach this point of being globally networked, and that the Internet would not just “play a role” in global
+events like COVID-19 or climate change, but shape them.
+</item 55>
+
+<item 56>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+That’s effectively making robots that are smarter, better at mobile manipulation and move more dynamically. Raibert admits that “Boston Dynamics AI Institute”
+might not be the most instructive name, both with regard to confusion between itself and Boston Dynamics the company, as well as a seeming focus on AI over
+robotics. A name change is apparently coming, but nothing has been decided just yet.
+</item 56>
+
+<item 57>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 57>
+
+<item 58>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The focus of the M3 chips is enhanced graphical capabilities. Compared to the previous M1 chip, Apple asserts that the M3 renders at 2.5 times the speed and has
+a CPU that is 30% faster. The event’s videos looked great (of course they did — they were produced by Apple), but one delightful quirk was that they were all
+shot on iPhones, showing off that the phones are becoming more and more capable, even for professional work.
+
+Magic Leap, an augmented reality hardware company, has replaced its CEO Peggy Johnson with Ross Rosenberg, marking the completion of its enterprise pivot.
+Johnson joined Magic Leap in August 2020 and led the shift in business strategy. Her successor previously served as executive at Belden and First Solar, and
+will now guide the company through its next period, as the company faces the daunting challenge of achieving profitability.
+
+More from hardware land:
+
+Is it a bird? Is it a plane?: Shield AI, a startup specializing in autonomous flying systems for the U.S.
+</item 58>
+
+<item 59>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+He found the iMac to be lacking and not necessarily worth the upgrade from the 2021 model, excepting the M3 chip, which brings “impressive” performance gains
+over the already-powerful M1. As for the M3 Max MacBook Pro, Brian reports that, at $2,500 (plus some pricey add-ons), it successfully splits the difference
+between the Mac Studio and MacBook Air.
+
+Mozilla bets on a decentralized future: Sarah spoke with Mozilla senior director of content Carolyn O’Hara, who outlined Mozilla’s strategy where it concerns
+the “fediverse” — a collection of decentralized social networking applications, like Mastodon, that communicate with one another over the ActivityPub protocol.
+The idea, O’Hara said, is to rethink social networking from the ground up.
+</item 59>
+
+<item 60>
+Israel’s startup ecosystem: down but not out (TechCrunch, 2023-10-13T19:10:07+00:00)
+Mike Butcher, Frederic Lardinois, Anna Heim and Kyle Wiggers also contributed to this report.
+</item 60>
+
+<item 61>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Despite the problems with social media and the urgency, in terms of its impact on society, Ohanian believes there’s still some hope. He noted, for example, that
+the founders his fund 776 invests in are much smarter and more aware of the issues than he ever was at their age. Perhaps the next platforms will still be
+addictive, but in a way that doesn’t “further disrupt democracy,” he mused.
+
+He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not. “I think we’ll
+see a rebirth of live gatherings and in-person experiences…the bright side of this is that I hope it then gets us back in touch with our humanity, and the
+things that no amount of AI can replace.”
+
+“I want to be an optimist about it,” Ohanian added. “And I think there’s still a path forward but we’re fighting against very, very strong human things.
+</item 61>
+
+<item 62>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+WeWork goes bust: As predicted, flexible office-space firm WeWork has filed for Chapter 11 bankruptcy protection, listing over $18.6 billion of debt in a
+remarkable collapse for the once high-flying startup co-founded by Adam Neumann and bankrolled by SoftBank, BlackRock and Goldman Sachs.
+
+Slack’s loss, Bumble’s gain: Dating app Bumble announced a doozy this week: It’s replacing founder CEO Whitney Wolfe Herd with Slack CEO Lidiane Jones. Jones
+only started as CEO at Slack last year, stepping in for another founder CEO, Stewart Butterfield. Ron and Sarah write that — while Bumble now has a clear line
+of succession — the move leaves Slack in a bit of a pickle.
+
+Arrival fails to deliver: Arrival set out eight years ago to make electric vehicle production “radically more efficient.”
+</item 62>
+
+<item 63>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+That’s at the root of the research we shared from the institute last week. Noted senior research scientist Benjamin Burchfiel:
+
+We’ve seen some big progress with the advent of [large language models], using them to impart this high level of cognitive intelligence into robots. If you have
+a robot that picks up a thing, now instead of having to specify an object, you can tell it to pick up the can of Coke. Or you can tell it to pick up the shiny
+object, or you can do the same thing and do it in French. That’s really great, but if you want a robot to plug in a USB device or pick up a tissue, those models
+just don’t work. They’re really useful, but they don’t solve that part of the problem. We’re focused on filling in that missing piece, and the thing we’re
+really excited about now is that we actually have a system and that the fundamentals are correct.
+</item 63>
+
+<item 64>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+Hey, folks, and welcome to Week in Review (WiR), TechCrunch’s newsletter covering the past week (or so) in tech industry happenings. This week marked OpenAI’s
+first-ever dev conference, where the Microsoft-backed AI startup announced a host of new products. But that was far from the only item of note.
+
+In this edition of WiR, we spotlight Brian’s review of the 16-inch M3 Max MacBook Air and M3 iMac 24-inch; Mozilla betting on a decentralized social networking
+future; Ford shuttering a company that was building an app for plumbers, electricians and other trades; and Tim Cook’s thoughts on generative AI. Also on the
+agenda is WeWork officially filing for bankruptcy, Bumble getting a new CEO, and the spectacular failure of EV startup Arrival.
+
+It’s a lot to get through, as always — so we won’t delay.
+</item 64>
+
+<item 65>
+Meta and IBM form an AI Alliance, but to what end? (TechCrunch, 2023-12-05T13:58:12+00:00)
+And for all their talk of openness, IBM and Meta aren’t exactly the poster children for the future that the Alliance’s release depicts — casting doubt on their
+sincerity.
+
+Perhaps I’m wrong and the AI Alliance will be a smash success. Or perhaps it’ll crumble under mistrust and its own bureaucracy. We’ll see; time will tell.
+</item 65>
+
+<item 66>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+He said he never conceived of the influence the site would one day hold — when Reddit became a multibillion-dollar business with hundreds of millions of users.
+That thought would have been “ludicrous,” he said. And he certainly never could have imagined his startup could have become so successful that it could affect
+elections and democracies.
+
+“To… think Oh my god, I’m gonna be so successful, it could have a tremendous impact on democracy would take a level of delusion that even I, as a first-time
+CEO, just couldn’t have,” he noted. “Was that a blind spot? Absolutely,” he admitted.
+
+Ohanian identified that another part of the problem is that there are more people online today than early tech founders may have imagined. Though he’s glad that
+access to the technology has broadened, that has come with many complications.
+</item 66>
+
+<item 67>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+The humanoid form is really interesting. I don’t know if it’s a good thing or a bad thing. We’re experimentalists at heart. We’re gonna figure that out. We’re
+going to do a pilot and see how that works out. We’re happy that they’re a part of our fund, but we also have other companies in the fund where we learned from,
+and if we want, we can make a larger investment in it. I’m not necessary saying that if we fund something, it’s going to be inside our processes. It’s very
+early stages.
+
+What does “very early stage” mean here?
+
+We’re learning about the function and utility. What’s possible here? What’s hype? What’s reality? Would this possibly scale? I think a lot of folks have
+difficulty understaning the scale in which we operate. It can’t work 99% of the time, because a 1% defect rate is a huge number inside any of our buildings.
+</item 67>
+
+<item 68>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Too often, design is minimized to only the act of making user interfaces pretty. Product design is much deeper and broader in scope than visual design assets.
+For example, product design can give direction and focus to a business strategy, user experience strategy, or technology explorations.
+
+The process establishes a guide rail throughout any innovation initiative. The core of product design is decision-making with an astute instinct for making the
+best decisions at the most opportune time. Product design helps reduce risk and leads to more effective innovation through quality decision-making.
+
+A progressive role for technologists
+
+Technologists play a strategic role in product innovation and should bring a metaphysical perspective in addition to being punctilious. Our job is to
+communicate the essence of a technology and think strategically about the application of technologies to problem spaces. We are most constructive when we
+translate the technicals of “how to make X do Y” to “these are the types of products and services realizable with technology X.”
+</item 68>
+
+<item 69>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+2. Do they disagree on long-term strategy?
+
+Despite being the hottest tech company in the world right now and everyone talking about ChatGPT, OpenAI isn’t exactly a sound business. It’s shoveling money
+into the furnace as fast as it can by serving, by all accounts, a fantastically expensive product at bargain-bin prices.
+
+That’s all well and good for a year or two, but at some point that strategy changes from a growth hack to an existential liability. Could Altman and the board
+have had irreconcilable differences on where that point lies?
+
+This doesn’t seem so likely. The company has been very deliberately pursuing this very publicly, confidently and on a long-term basis. Altman and the board seem
+to be in sync on this, at least for the present.
+
+3. Do the numbers not add up?
+
+On the other hand, could OpenAI be losing even more money than Altman admitted or projected? It seems impossible, but the costs of running this operation have
+no precedent, nor really does the operation itself.
+</item 69>
+
+<item 70>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+because it offers the best possible place to make their vision happen.” Unless his long-term vision was only meant to last until the end of the summer, for
+entrepreneurs, innovators and businesses to thrive and unlock the economic potential that comes from creating new industries, we need a consistent approach from
+the government.
+
+We have enormous fiscal potential. Within the U.K. climate tech community, we are working to create high-paying jobs and value for investors across just about
+every asset class. And collectively — hell, individually — our solutions could genuinely change the world.
+
+Of course, this is the common cause we should be united around. Our company is trying to move industry away from a reliance on fossil fuels to make chemicals,
+among other things. But the impact of these political spasms and contradictions in our climate commitments has on, say, an EV battery business — which has just
+seen the market demand for its output slide down the road by five years — isn’t hard to appreciate.
+</item 70>
+
+<item 71>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+So the jobs changed. The jobs exist, but it’s a big sweeping change.
+
+If I visit the labs, I’ll see these sorts of experiments in action.
+
+Yeah. If you were to go to outside of Nashville today, you would see Proteus working with our Cardinal arm. You’d get to see the interoperability. We have the
+Proteus drives moving carts to the outbound docks. If you were to go down to Hou 6 just outside of Houston, you would see Sequoia fulfilling orders today, right
+in time for holiday shopping.
+
+What role do people play in that picture?
+
+People will always be at the center of a robotics universe. We know more robots, more jobs that we see through the productivity increases that we have.
+
+[The MIT study] sounds like it’s largely about perception and what people think of robots, rather than job numbers specifically.
+
+I’m not sure. It’s wherever [MIT professor Julie Shah] wants to take it.
+</item 71>
+
+<item 72>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+If anything, Ohanian credits Twitter (now called X) with coming up with the best system for moderation so far.
+
+“Community Notes, I personally think is a good — it’s the best measure I’ve seen yet. And frankly, I wish we had thought of it first,” he said.
+
+Still, he called out the notion that a platform, like X, can be a town square.
+
+“The public square [analogy]…falls flat. Because if that then implies that it’s a public square, which means like, what? a town or a city? If you’re the person
+in charge of it, you’re the mayor. But there’s no democratic election,” Ohanian pointed out. “You’re a CEO. So then you’re like the king? If you want to lean
+into the town square thing, fine. Just own it and say, yeah, it’s a town square and I am the infinite dictator, tyrant of it.”
+</item 72>
+
+<item 73>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 73>
+
+<item 74>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 74>
+
+<item 75>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Not Sonos fast there: Audio company Sonos scored a big $32.5 million win against Google a while back. Now it transpires that the company’s patents were deemed
+unenforceable and invalid. Whoops. A federal judge threw out the $32.5 million win this week.
+
+When it clicks, it really clicks: We took a deep look at Pixel 8, and our team discovered that it delivers solid performance and design upgrades. The camera got
+a particularly enthusiastic shout-out, with Darrell declaring that Google’s Pixel 8 Pro camera is the new mobile photography champ, and Brian waxing lyrical
+about the phone’s picture-snapper in “The camera’s still the thing.”
+
+Who needs computers anyway?: It seems like all our mobile devices may be starting to cannibalize sales of personal computers — Ron reports that PC shipments
+decline slows in Q3 2023 and that Apple’s sales plunge over 23%.
+
+Let’s get together
+
+Reddit’s API-powered chaos continues, but it appears that things are starting to resolve a little.
+</item 75>
+
+<item 76>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Right now, the current plot is about the centralization of discourse on a few corporate platforms. The rise of the platforms brings potential to network
+democratic uprisings, as well as buoy authoritarian leaders through post-truth memes and algorithms optimized to dish out anger and hatred. This is a more
+challenging story to narrate, because the setting is everywhere. The story unfolds in our bedrooms while we should be sleeping or waking up, filling the most
+quotidian moments of waiting in line in the grocery store or while in transit. The characters are us, even more intimately than with climate change. It makes it
+hard to see the shape and meaning of this story. And while we are increasingly aware of the influence that shifting our media and social lives onto big tech
+platforms has on our democracy, less attention is devoted to the influence this has on our ability to respond to climate change.
+
+Think about these three forces meeting — climate change, authoritarianism, the Internet. What comes to mind?
+</item 76>
+
+<item 77>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Before discussing the nontraditional ways technologists participate in product innovation, let’s conceptually examine innovation and product design.
+
+The word innovation has a simple meaning — to introduce something new or a novel method of doing something — yet we frequently inflate it to mean something
+magical, grandiose, and world-changing. Innovation can just as easily be mundane and straightforward. The key to innovation is being “new.” The “new” can be
+localized to a team, product, process, or business unit. The “novel” can be well-known and established practices not incorporated into your workflow or product.
+Sometimes, innovation comes from closing small gaps and isn’t always a grand eureka moment.
+
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+Product design is a process and not a discipline or deliverable. It is (understandably) easy to limit the scope of product design to color choices, content
+layout, and aesthetics.
+</item 77>
+
+<item 78>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Ray seemed like the most reasonable person I had spoken to so far. Sure, she called herself a “thought leader,” and yes, sure, she had changed her last name to
+improve her personal branding by more closely associating herself with her grandmother’s uncle, the artist Man Ray. Maybe some people would say that’s the kind
+of absurd behavior that merits being attacked by an alligator, but I was beginning to come down on the side of the SEOs, who seemed to have a lot less agency
+than I’d first imagined.
+
+Google had started with a noble cause: trying to make the internet easier to navigate at scale. The company did accomplish that goal, but in doing so, it
+inadvertently and profoundly changed how the internet looked. The problem lay in Google trying to be an objective and neutral arbiter of an information
+landscape that was meant to pretend it did not exist. You cannot design a free, automated system to help people find information without some people trying to
+game that system.
+</item 78>
+
+<item 79>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+The founders don’t regret their experience building Pebble, even though it didn’t turn out as they hoped, they said.
+
+Says Cselle, “One thing that I learned is that there’s absolutely an audience that wants to see a new kind of Twitter-like platform built and will ask for the
+features that Twitter has.” He suspects the team might stay together to work on something new after Pebble wraps, taking the learnings from Pebble with them.
+That includes better communicating to users what great content should look like on a platform, and how they can win.
+
+“We’re at an inflection point in social media,” says Oh. “We had one hypothesis with T2 and Pebble. It obviously didn’t pan out the way that we wanted it to.
+But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds.
+</item 79>
+
+<item 80>
+Creatives across industries are strategizing together around AI concerns (TechCrunch, 2023-10-06T23:04:57+00:00)
+“It’s funny because if you’ve talked to musicians who have these concerns, they say, ‘Well, authors have been very quiet.’ If you talk to others about these
+concerns, they say, ‘Well, musicians and photographers don’t seem to care at all,’” Fight for the Future Campaigns and Communications director Lia Holland told
+TechCrunch. “So part of it also is that the different creative fields, when it comes to this sort of work, are a little bit siloed.”
+
+“That was another intent with our launching this effort with the day of action, to try to illustrate how these are common concerns that are shared across
+artistic mediums. And to create an organizing point . . . because when artists of different mediums move together they have a lot more power.”
+
+The campaign targets potential corporate abuse of AI technology, but it’s realistic about the ways that musicians and some other creatives could benefit on an
+individual level from automating parts of their work.
+</item 80>
+
+<item 81>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+It won’t always be right, though. But it becomes the epicenter of where the conversation is. And then I’ll think what percentage of our population really wants
+to earnestly take the breath and say, let me stop doomscrolling, and let me just wait until people can do the work, synthesize it and then help me react?” he
+continued.
+
+“We are also so plugged into all these storylines, whether it’s from traditional media, whether it’s from user-generated — someone on their phone, you know,
+posting to a Telegram group. We are overwhelmed and overloaded, and it’s unfortunately appealing to the worst parts of a lot of our instincts,” Ohanian added.
+
+In part, some of the issues around how social media platforms developed had to do with how the companies were originally developed. Ohanian, for example, shared
+that Reddit grew out of his running of a forum site in college, when he believed that online community felt as real as offline.
+</item 81>
+
+<item 82>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+Forget the hand-wavy protocol stuff for a second — one of the best things about embracing ActivityPub is that it sticks a crowbar into a single Voltron-ic
+product like Facebook or Twitter or Snapchat and pries it apart into its component pieces, each one ripe for innovation and new ideas.
+
+We’re still in the very early days of the fediverse, and it’s going to be messy for a while. It might feel like you’re seeing the same posts too many times, and
+like you see some posts that obviously weren’t meant to be seen in the app or feed you’re using. Some particularly thirsty influencers are going to go hard on
+cross-posting tools that threaten to clutter up all your feeds everywhere and become totally unavoidable. This is not a problem with the protocols; it’s an
+opportunity for better products. There’s plenty of money to be made in the fediverse, and plenty of space for new products to take off.
+</item 82>
+
+<item 83>
+If your startup doesn’t seem impossible at first, it’s not hard enough (TechCrunch, 2023-11-03T19:05:30+00:00)
+The latest funding round brings QI Tech’s total capital raised to $262 million.
+
+New Web Summit CEO appointed: Former Wikimedia Foundation CEO Katherine Maher has been appointed as the new CEO of Web Summit, following the controversial
+departure of its previous leader, Paddy Cosgrave. Maher’s appointment comes as the tech conference faces a challenge to rebuild relationships and trust within
+the tech community.
+
+Top reads on TechCrunch this week
+
+Shinier, smarter maps: Google is rolling out a variety of updates for Maps, incorporating AI technology to enhance user experience. The feature is currently
+available in France, Germany, Japan, the U.K. and the U.S., with plans for further expansion.
+
+From stop-and-start to charging ahead: Over on TC+, Tim has had it with U.S. automakers hesitating on EVs, as Ford and GM are showing signs of backing away from
+their commitment to electric vehicles. Cowards.
+</item 83>
+
+<item 84>
+Amazon’s Tye Brady discusses generative AI, humanoid robots and mobile manipulation (TechCrunch, 2023-10-28T13:04:25+00:00)
+), that it truly needs to feel absolutely confident before it begins implementing new technologies into its workflows.
+
+Another noteworthy piece of news is an Amazon, MIT/Ipsos partnership designed to gauge what both workers and consumers think about industrial robots.
+
+“The key to effective teamwork is building a shared understanding of what our partners will do and what they will need to be successful,” says MIT’s Julie Shah.
+“Our research shows that the best way to optimize human-robot team performance is to develop robots that are active collaborators in helping a human to learn
+about their capabilities, limitations and behaviors.”
+
+I do think human perception of robots is a question worth asking, but I would love to see a study with such financial and academic resources digging more deeply
+into questions around short- and long-term displacements.
+
+During his presentation, Brady addressed the jobs question accordingly:
+
+We have more than 750,000 mobile robots in our operations and thousands of other robotic systems that help move, sort, identify and package customer orders.
+It’s taken us more than 10 years to reach this scale.
+</item 84>
+
+<item 85>
+OpenAI hosts a dev day, TechCrunch reviews the M3 iMac and MacBook Pro, and Bumble gets a new CEO (TechCrunch, 2023-11-11T21:15:53+00:00)
+as an important early step in its plans for an initial public offering, a Klarna spokesperson tells TechCrunch+.
+
+The unicorn’s legacy isn’t over: It’s been 10 years since Cowboy Ventures’ founder Aileen Lee coined an incredibly catchy nickname for what were very rare
+startups at the time: Unicorns. TechCrunch+ spoke with Lee about how she feels about the term 10 years later, now that her venture firm is also a decade old.
+</item 85>
+
+<item 86>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Battery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software that can be slipped into just about any
+lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.
+
+What lies beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched
+on where startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.
+</item 86>
+
+<item 87>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+For most technical leads and software developers, this is a mode inversion from our traditional tactical and direct interaction with technology. The context
+switch from daily build-and-operate is challenging but is paramount to developing successful and innovative products. We are uniquely positioned to generate
+strategic insights translated from dense technical minutiae that drive innovative business cases and product experiences.
+
+A technology innovation must solve a business problem, such as improving operational efficiency, growing existing revenue streams, or generating new ones. The
+problem space may be customer-facing (e.g., how can we deliver a new feature?) or internal-facing (e.g., how can we make a process more efficient?). The problem
+is the paramount concern. The specific technologies or innovations used to solve the problem are often less critical. We cannot lose perspective of the business
+needs; otherwise, the activities become too academic or a paid hobby.
+
+An ordinary domestic analogy is hanging a picture. The hole size, bracket, or tools used to hang the picture are immaterial as long as the picture is on the
+wall and straight.
+</item 87>
+
+<item 88>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 88>
+
+<item 89>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+His strategy was to arrange another meeting. There was a deep tension between the bishop and the knight, he told Thiel. The two pieces carried the same value,
+but the best players understood that their strengths were vastly different. It worked. Charmed, Thiel invited the group back the next day, where they gathered
+in the kitchen. Their host had just finished his morning workout and was still sweating in a shiny tracksuit. A butler handed him a Diet Coke. The three made
+their pitch, and soon Thiel and his venture capital firm agreed to put £1.4 million ($A2.7 million) into their startup. He was their first major investor.
+
+They named their company DeepMind, a nod to “deep learning,” a way for AI systems to learn skills by analysing large amounts of data; to neuroscience; and to
+the Deep Thought supercomputer from the sci-fi novel The Hitchhiker’s Guide to the Galaxy. By the spring of 2010, they were building their dream machine.
+</item 89>
+
+<item 90>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 90>
+
+<item 91>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+In the beginning, the internet was seen as an improvement on the spirit of the public library. Here was an opportunity to transcend the gatekeepers controlling
+who could publish a book, allowing mankind to fully connect and share knowledge. Instead, we have ended up in a situation arguably worse than before, where
+nearly all online information runs through a single company, which assumes a veneer of civic utility, of impassive authority, when it is very much not a neutral
+entity.
+
+“There were so many true believers at Google in the early days,” Cutts told me. “As companies get big, it gets harder to get things done. Inevitably, people
+start to think about profit or quarterly numbers.” He claimed that, at least while he was there, search quality always came before financial goals, but he
+believes that the public underestimates how Google is shaping what they see, saying, “I deeply, deeply, deeply believe search engines are newspaper-like
+entities, making editorial decisions.”
+</item 91>
+
+<item 92>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 92>
+
+<item 93>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 93>
+
+<item 94>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+But as for social media as a whole, of which Reddit would presumably play a part, Ohanian said it brings out the “worst parts of our nature in many ways.”
+What’s more, he expressed worries about the desire for people to be first and win on whatever leaderboard a platform features, which then leads to a situation
+where misinformation is able to spread.
+
+Humans evolved trusting the faces & voices we knew around the campfire. The idea of believing something bc of experts/institutions you've never met is actually
+new to our species. I visited @UVADemocracy + chatted with @karaswisher + @dkroy about what's next for social media. pic.twitter.com/PMBXi7T3vv — Alexis Ohanian
+🇦🇲 (@alexisohanian) October 31, 2023
+
+“Now, there’s so much pressure to be first, and UGC — user-generated content — will always win. It won’t always be right, though.
+</item 94>
+
+<item 95>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Forrester has a holistic understanding of the delicate push and pull between the SEOs desperate for clues on how to do their jobs better and the search engine
+trying to keep its secret-sauce algorithm proprietary. He also knows a huge range of people in the industry. Like Schwartz, he wanted to emphasize how hard
+everyone works. “I’ve lost track of how many people I know who built companies and sold them and have just, like, made wealth,” he told me. “That is not a
+40-hour commitment in the week. That is a 400-hour commitment.” (For the record, there are 168 hours in a week.)
+
+These days, Forrester lives in Los Angeles, and he asked me to meet him at one of his favorite restaurants, which felt like a British pub operated by Disney
+World, tucked away in a desert strip mall. Inside, every inch was covered in Anglophile paraphernalia, including Union Jack flags, a mural of Big Ben, and a red
+phone booth.
+</item 95>
+
+<item 96>
+How ego and fear fuelled the rise of artificial intelligence (The Age, 2023-12-09T18:30:00+00:00)
+When Google bought DeepMind, it bought the whole thing. Musk was out. Financially, he had come out ahead, but he was unhappy. Three Google executives now firmly
+in control of DeepMind were there: Page; Sergey Brin, a Google co-founder and Tesla investor; and Eric Schmidt, Google’s chair. Among the other attendees were
+Reid Hoffman, another PayPal founder; and Toby Ord, an Australian philosopher studying “existential risk”.
+
+The DeepMind founders reported that they were pushing ahead with their work but that they were aware the technology carried serious risks. Suleyman, the
+DeepMind co-founder, gave a presentation called “The Pitchforkers Are Coming.” AI could lead to an explosion in disinformation, he told the board. He fretted
+that as the technology replaced countless jobs in the coming years, the public would accuse Google of stealing their livelihoods. Google would need to share its
+wealth with the millions who could no longer find work and provide a “universal basic income,” he argued. Musk agreed.
+</item 96>
+
+<item 97>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+Scholars have argued that putting too much emphasis on the platforms can be too simplistic and reeks of technological determinism; they have also pointed out
+that cultures like the United States’ and the legacy media have a long history with post-truth. That said, there are certainly dynamics going on that we did not
+anticipate, and we don’t seem quite sure what to do with them, even with multiple areas of scholarship in communication, disinformation, and social media and
+democracy working on these inquiries for years.
+
+What seems clear is that the Internet is not the connectedness we imagined. The ecology and spirituality of the 1960s, which shaped and structured much of what
+we see as energy democracy and the good future today, told us we were all connected. Globally networked — it sounds familiar, like a fevered dream from the
+1980s or 1990s, a dream that in turn had its roots in the 1960s and before.
+</item 97>
+
+<item 98>
+Digital twin market: Analyzing growth and 4 emerging trends (Iot Business News, 2023-11-18T16:01:30+00:00)
+Trend 3: Partnerships forged in the clouds: Hyperscalers team up with OT and simulation specialists
+
+In the last few years, cloud hyperscalers like AWS and Microsoft Azure have introduced digital twin platforms, e.g., AWS IoT TwinMaker and Azure Digital Twins,
+that allow for interconnecting various data sources and building digital twin topology. However, these companies realize they cannot deliver end-to-end digital
+twin solutions by themselves and are thus partnering with OT and simulation companies to add capabilities to their networks.
+
+Hyperscalers and OT companies
+
+OT companies provide industrial data management capabilities and connections to millions of local physical assets. By partnering with hyperscalers, OT companies
+can reach broader audiences looking for digital transformation solutions by offering typical cloud benefits like storage and computation power.
+
+Example: In 2021, Siemens and AWS announced an expansion of their partnership, with digital twin technology being an area of focus.
+</item 98>
+
+<item 99>
+Consistent policy is key to unlocking the climate tech boom, but the UK’s U-turn isn’t helping (TechCrunch, 2023-10-13T17:00:20+00:00)
+One of the most critical things for startups is research and development (R&D) tax credits. This was a lifeline that gave small, research-intensive companies
+months of budget runway every year, as it effectively saw them get a third of the money spent in R&D back. The government announced it would be scrapping that
+last year, and it is only thanks to a lobbying effort spearheaded by the Startup Coalition that, at the last minute, a portion of that tax credit was able to be
+preserved.
+
+Which leads to the third and most important point: A consistent climate policy. The impact of not having one is playing out in real time, right now. Sunak’s
+public U-turn doesn’t just undermine science and play into the hands of the climate skeptics. It also plows headlong into the future of any climate tech company
+whose launch plans have to be aligned around decarbonization timelines. This will damage economic confidence. People will lose jobs. And action, alas, will be
+further delayed.
+</item 99>
+
+<item 100>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Welcome to Startups Weekly. Sign up here to get it in your inbox every Friday.
+
+A few months ago, Alexis Ohanian, the co-founder of Reddit, tweeted that if he could go back in time and do one thing differently when he was building Reddit,
+he would have spent significantly less time attending events. Personally I have a different experience — I always regret getting on a plane (or in an Uber, for
+that matter) to go to an event. However, as I’m traveling back, I’ve never regretted it: There’s always something magical that comes out of going to an event,
+in my experience.
+
+Our TC+ team is not interested in anecdotes, however: neither mine nor Alexis’. So, like the data-driven journalists they are, they surveyed more than 50
+founders, trying to figure out whether attending events still makes sense in 2023.
+
+Spoiler alert: There isn’t a real consensus, but there are some really good pros and cons.
+</item 100>
+=== END ITEM id=249e185e91a7d138 ===

@@ -1,0 +1,37 @@
+[
+  {"id": "87cb212979025d62", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 37, "quote": "Bankman-Fried was even compared to Warren Buffet"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 37, "quote": "Bankman-Fried was even compared to Warren Buffet and many called him the white horse of crypto"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 37, "quote": "many called him the white horse of crypto (TechCrunch never did, for what it’s worth)"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 36, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 36, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 36, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 23, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 23, "quote": "while the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 23, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 23, "quote": "while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]},
+  {"id": "42090a6d21010ee8", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "a7c41a4c1175a9b6", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e985c4e1be20314a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

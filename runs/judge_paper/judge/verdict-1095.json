@@ -1,0 +1,57 @@
+[
+  {
+    "id": "74f979125c99ed96",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 86,
+            "quote": "Postponements of such reports could complicate things for the Fed"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 86,
+            "quote": "which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 46,
+            "quote": "With inflation down from its peak two summers ago"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 46,
+            "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 46,
+            "quote": "Wall Street is hopeful that the Federal Reserve may finally be done with its market-shaking hikes to interest rates and could soon turn to cutting them."
+          }
+        ]
+      }
+    ]
+  }
+]

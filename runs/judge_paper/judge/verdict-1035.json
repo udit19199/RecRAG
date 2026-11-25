@@ -1,0 +1,21 @@
+[
+  {"id": "6eadf819523cd788", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 31, "quote": "In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 31, "quote": "how Google tried to have Chrome preinstalled on iPhones"}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 17, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 17, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 17, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 17, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 17, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "9f004685f5c29b00", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,10 @@
+[
+  {"id": "419e9ca3fa8f01f0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 81, "quote": "Unfortunately, she did say that she had conversations with investors as part of their due diligence"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 81, "quote": "Alameda was taking on losses from FTX"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 81, "quote": "Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 62, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 62, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 62, "quote": "During cross-examination, Huang said Paradigm pressed Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts"}]}
+  ]}
+]

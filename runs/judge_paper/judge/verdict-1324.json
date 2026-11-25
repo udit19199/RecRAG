@@ -1,0 +1,97 @@
+[
+  {
+    "id": "2b723fa4758f3bec",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 23,
+            "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 23,
+            "quote": "But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.2",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  },
+  {
+    "id": "a267980c042fd01b",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.2",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.3",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.4",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.5",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.6",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.7",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

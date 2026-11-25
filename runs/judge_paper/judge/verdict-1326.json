@@ -1,0 +1,12 @@
+[
+  {"id": "1c9b45b76634937d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 93, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 93, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 93, "quote": "While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 52, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 52, "quote": "Altman has been telling investors that he’s planning to launch a new venture, according to The Information."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 53, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 53, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 53, "quote": "Based on the board’s language and the way these giant tech companies work, this is the prevailing theory floating around right now."}]}
+  ]}
+]

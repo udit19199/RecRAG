@@ -1,0 +1,21 @@
+[
+  {"id": "565e9e83158c2085", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 89, "quote": "Ketamine is primarily used as an anesthetic during surgical procedures — but in recent years it's been used as a remedy for treatment-resistant depression"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 89, "quote": "Ketamine is primarily used as an anesthetic during surgical procedures — but in recent years it's been used as a remedy for treatment-resistant depression"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 82, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 82, "quote": "If it worked with the fish, they might then be able to figure out how the diet effects behavior and improve the effectiveness of the treatment for humans."}]}
+  ]},
+  {"id": "89402724fcd73d2d", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []}
+  ]},
+  {"id": "7cc454c8d0642412", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

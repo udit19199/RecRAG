@@ -1,0 +1,16 @@
+[
+  {"id": "3fbe8c4c655b74bb", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "He also believes that after everything on social media becomes so perfectly curated for us"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 21, "quote": "What we have done since then, all the success and failures [matters in our preparation]."}]}
+  ]},
+  {"id": "65c2a56ebbfa66d7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

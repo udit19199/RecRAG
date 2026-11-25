@@ -1,0 +1,1484 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=6f4b67929e6380b2 ===
+Gold sentences and facts:
+Sentence 0: The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd.
+  Fact 0.0: The present Board of Trustees of the Fund consists of the Secretary of Education as Chairman.
+  Fact 0.1: The present Board of Trustees of the Fund includes the Director-General of the National Economic and Development Authority.
+  Fact 0.2: The present Board of Trustees of the Fund includes three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of the Philippines (CEAP), and the Philippine Association of Colleges and Universities (PACU).
+  Fact 0.3: The present Board of Trustees of the Fund shall also constitute the proposed Board of Trustees of the PhilEd.
+Sentence 1: In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five directors.
+  Fact 1.0: Andrew Wilkinson is 72 years old.
+  Fact 1.1: Andrew Wilkinson has informed the HSF board of his intention to retire as a board director.
+  Fact 1.2: Andrew Wilkinson's retirement will reduce the company's board to five directors.
+
+Retrieved items:
+<item 1>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Being involved in this has been a real career highlight for me, without a doubt.
+
+If I could give you our patented MBW magic wand to change something about today’s business right here and now, what would it be and why?
+
+We could be talking for hours about this, Tim, and there are a few things out there I’d like to change with that wand! But I’ll spare you an exhaustive rant and
+focus on one issue.
+
+We need more diversity at all levels and within all facets of the music industry, particularly on the label side.
+
+“along with doing what I can to increase the number of women at our company. There just aren’t enough of us, particularly within the most senior ranks at the
+labels.”
+
+Diversity is a superpower.
+</item 1>
+
+<item 2>
+NMPA: Generative AI is ‘the greatest risk to the human creative class that has ever existed’ (Music Business Worldwide, 2023-11-30T21:28:50+00:00)
+That argument could yet come into play in Anthropic’s legal battle with Universal.
+
+And given the high stakes involved – for the music industry, for the tech industry and for the shape of culture going forward – that case, along with the US
+Copyright Office’s study of AI and copyright, are worth keeping a close eye on.
+
+JKBX (pronounced "Jukebox") unlocks shared value from things people love by offering consumers access to music as an asset class — it calls them Royalty Shares.
+In short: JKBX makes it possible for you to invest in music the same way you invest in stocks and other securities.Music Business Worldwide
+</item 2>
+
+<item 3>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+More broadly, you might ponder a bigger question.
+
+When the day comes that YouTube asks the world’s biggest superstars to wholeheartedly embrace ‘Dream Track’, will Google’s recent US Copyright Office filing
+give said superstars – and their record companies – pause for thought?
+
+JKBX (pronounced "Jukebox") unlocks shared value from things people love by offering consumers access to music as an asset class — it calls them Royalty Shares.
+In short: JKBX makes it possible for you to invest in music the same way you invest in stocks and other securities.Music Business Worldwide
+</item 3>
+
+<item 4>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Not to mention this line in various HSF company reports to date: “The [HSF] Board is ultimately and solely responsible for overseeing the valuation of the
+Company’s investments in music catalogues and has appointed [Citrin Cooperman] to perform this specialist work.”
+
+WHAT’S really going on?
+
+It’s a fair bet that Hipgnosis Songs Fund’s board – which last week appointed activist investor Christopher Mills as a non-exec Director – is making something
+of a ‘hidden’ statement to shareholders with today’s announcement.
+
+It may be a coded attempt by HSF’s board to gnash teeth towards HSM/Mercuriadis’ ‘call option’ – which, as MBW has pointed out before, leaves the exec with the
+exclusive power to sweep in and acquire HSF’s portfolio under several different circumstances.
+</item 4>
+
+<item 5>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+At the same time, we must help artists achieve their greatest creative and commercial potential…” Sir Lucian Grainge on UMG’s decision to license YouTube’s
+‘Dream Track’ experiment
+
+Robert Kyncl, CEO of Warner Music Group – and an ex-high flyer at YouTube – commented: “With each major leap in technology, the music industry navigates a fresh
+set of challenges and opportunities.
+
+“It’s not always the case that, from the outset, tech platforms partner with artists, songwriters, labels, and publishers to experiment, iterate, and find
+possible solutions.
+
+“YouTube is taking a collaborative approach with this Beta. These artists are being offered the choice to lean in, and we’re pleased to experiment and find out
+what the creators come up with.”
+
+Why, then, did Sony Music not join its rivals in granting YouTube and ‘Dream Track’ access to any of its active artists’ licensed voices?
+</item 5>
+
+<item 6>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+HSF’s investments in seasonal Christmas ‘evergreens’ continue to pay off too, with cuts on Michael Buble’s Christmas album and – most famously – a share of
+Mariah Carey’s perennial megahit, All I Want For Christmas Is You.
+
+JKBX (pronounced "Jukebox") unlocks shared value from things people love by offering consumers access to music as an asset class — it calls them Royalty Shares.
+In short: JKBX makes it possible for you to invest in music the same way you invest in stocks and other securities.Music Business Worldwide
+</item 6>
+
+<item 7>
+Psagot worth 80% less since Rani Zim bought it (Globes English | Israel Business Arena, 2023-11-05T13:10:32+00:00)
+Immediately after acquiring Psagot’s business (which mainly consisted of management of mutual funds and customer portfolios) Zim told "Globes": "Our headline at
+Psagot is to restore its former glory. We haven’t come to make a killing in one or two years, and I don’t want to start selling the business on to other
+entities… we’ll invest in the people, in the activity, in the organization, in the market, and we’ll form collaborations with many entities in the economy. We
+want to bring new activities and a different aroma to the market."
+
+But, as reported six months ago, Zim has started to look for someone to buy his entire stake in the investment house, or at least part of it. One of the names
+mentioned in the press is that of Group Psagot CEO Yaniv Bender, who currently holds 7.4% of the company, as someone who could participate in such an
+acquisition.
+</item 7>
+
+<item 8>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+He said OpenAI still has a “deep bench of technical leaders” but its next executives will have to steer it through the challenges of scaling the business and
+meeting the expectations of regulators and society.
+
+Forrester analyst Rowan Curran speculated that Altman’s departure, “while sudden,” did not likely reflect deeper business problems.
+
+“This seems to be a case of an executive transition that was about issues with the individual in question, and not with the underlying technology or business,”
+Curran said.
+
+Altman has a number of possible next steps. Even while running OpenAI, he placed large bets on several other ambitious projects.
+
+Among them are Helion Energy, for developing fusion reactors that could produce prodigious amounts of energy from the hydrogen in seawater, and Retro
+Biosciences, which aims to add 10 years to the human lifespan using biotechnology.
+</item 8>
+
+<item 9>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+We are in a world where music discovery and consumption are now primarily digital, and artists have now understood that. They look for partners who get it too
+and whose expertise will allow them to leverage digital platforms to reach new and existing audiences wherever they are.
+
+“Artists today are also much more conscious of their career trajectory and look for better deals, with more freedom, more transparency, and more options.”
+
+This is especially the case in Spanish-speaking markets, where music fans are amongst the most engaged audiences in the world, whether on digital platforms or
+on social media. Music content is consumed with more frequency, in different formats, across multiple platforms and through different aspects related to the
+track.
+
+Beyond that, artists today are also much more conscious of their career trajectory and look for better deals, with more freedom, more transparency, and more
+options. They want to keep ownership of their masters, and get better economics.
+</item 9>
+
+<item 10>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+Even so: one wonders if some new changes at HSF, announced today, are related to this ‘continuation vote’ – and whether or not they amount to concessions to
+help keep HSF investors happy and confident in the firm’s long-term prospects… and voting ‘yes, let’s keep going’.
+
+The shareholder frustration: NAV vs. public market
+
+First, a bit of important context.
+
+The fundamental revenue performance of HSF doesn’t seem to be under scrutiny from shareholders: the company posted its best-ever revenues in the 12 months to
+end of March, while streaming ‘pro-forma’ revenue was up 14.8% YoY in calendar 2022.
+
+Where HSF shareholders – as well as its management – are finding frustration is in the current gulf between the firm’s ‘operative Net Asset Value’ (‘operative
+NAV’) and its value on the public market (i.e. its share price).
+</item 10>
+
+<item 11>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+You had to right some turbulence…
+
+Be careful what you wish for, right [laughs]?
+
+As you well know, [before Jubelirer was named CEO/Chair] CMG had undergone a few leadership changes within a short period of time, and that turmoil was
+compounded by the economic volatility of the pandemic. As a result, the company faced eroding market share, low morale, and a stagnant artist roster.
+
+Because I had spent almost a decade here, I was uniquely situated to bring both a fresh perspective to the job and build a modern culture within the company,
+while still honoring Capitol’s legacy in profound ways. Meaning, we could be a company that excels at launching and developing Ice Spice, and, at the same time,
+bring real innovation and full-throttle commitment to the release of a new single from The Beatles. And everything in between!
+</item 11>
+
+<item 12>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+MBW Reacts is a series of analytical commentaries from Music Business Worldwide written in response to major recent entertainment events or news stories. MBW
+Reacts is supported by JKBX , a technology platform that offers consumers access to music royalties as an asset class.
+
+In recent months, Warner Music Group CEO Robert Kyncl has been keeping a close eye on AI in the music industry – not surprising, given that he came to the music
+biz from ‘Big Tech’, namely YouTube, where he was Chief Business Officer.
+
+Nor is it surprising, given his current role, that he has been pushing for price hikes at music streaming services.
+
+Both of these topics came up during Kyncl’s Q&A session at the Code Conference in Laguna Niguel, California, on Tuesday (September 26).
+</item 12>
+
+<item 13>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+They’re stars, for sure. But in both the case of Universal Music Group and Warner Music Group, they’re – currently anyway – not the biggest megastars on either
+company’s books.
+
+You might not expect, at this early stage, for the likes of UMG to put forward Drake, Taylor Swift, or The Beatles – or for WMG to put forward Ed Sheeran or Dua
+Lipa – to be guinea pigs in any early AI music experiments, even if they’re run by ‘friends’ of the music industry like YouTube.
+
+You might, then, also understandably wonder if there have been significant licensing payments made by YouTube to UMG and WMG for the right to play with the AI
+vocals of artists who have signed off on ‘Dream Track’ thus far. And, if so, if these payments are being placed against any as-yet-unrecouped advances that some
+of these artists may have on their label accounts.
+</item 13>
+
+<item 14>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+In Fiscal Year 2022, this amounted to P74 billion.
+
+Moreover, under the Universal Health Care Law, PhilHealth receives 50% of the government share from the income of the Philippine Amusement Gaming Corp. (PAGCOR)
+as well as 40% of the Charity Fund of the Philippine Charity Sweepstakes Office (PCSO). In 2022, this amounted to P188 billion.
+
+In like manner, in addition to the school vouchers funded under the Expanded Government Assistance to Students and Teachers in Private Education Act, we suggest
+that PhilEd be allocated a share of the taxes imposed on our extractive industries. This is based on the argument that the depletion of our natural resources
+can only be justified if the taxes collected will enhance our human resources.
+
+Like PhilHealth, PhilEd could also be mandated to receive a percentage from the collection of documentary stamps which have recently been raised.
+
+Finally, PhilEd can be given access to the Special Education Funds of the local school boards of the Local Government.
+</item 14>
+
+<item 15>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Brown noted that a 0.5% rise in Citrin Cooperman’s discount rate (i.e. raising it from 8.5% to 9.0%) would “reduce the fair value of the [HSF] portfolio by
+7.9%, which on a leveraged basis is [approximately a] 10% reduction in NAV [Net Asset Value]”.
+
+Should HSF’s board go down this route, he noted, he expected “the [HSF] shares to weaken… given that this represents another ‘unforced error’”.
+
+“This is an early blow to the credibility of the new [Hipgnosis Songs Fund] Board, and casts further doubt over the credibility of the independent valuer,
+Citrin Cooperman.”
+</item 15>
+
+<item 16>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Mid-pandemic, Vaughn entered CMG with bold ideas, but it didn’t take a genius to figure out there was a culture clash: Within a startlingly short 12 months,
+Vaughn was gone from CMG. (He has since launched his label JV, Signal Records, with Sony‘s Columbia).
+
+In the wake of this corporate untidiness, Jubelirer was (some may suggest was overdue-ly) named Chair & CEO of Capitol Music Group. Her most pressing brief?
+Calm everything the hell down, and get the Good Ship Capitol out of the eye of the hurricane.
+
+So, the mood at that Chinese dinner? Understandable.
+
+Yet if some nervous energy was detected that night, so was a healthy confidence. Jubelirer and co. have been putting both to good use ever since.
+</item 16>
+
+<item 17>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+Likewise the role of PhilEd would be to fund the education dreams of all Filipinos especially the neediest and most deserving.
+
+Filipinos have three dreams in education. The first is to enroll in a chosen course in the school of their choice. This dream will be funded by the School
+Vouchers Program which will now be transferred from DepEd to PhilEd.
+
+The second dream, especially for Filipino parents, is to save enough money to fund the college education of their children, hence the prevalence of pre-need
+Educational Plans. Unfortunately, most of the pre-need companies went into bankruptcies causing financial ruin and emotional distress to their plan holders.
+There has been a massive market failure and so government must intervene. But intervention should not involve the government offering educational plans but
+rather in insuring these plans. Just as the Philippine Deposit Insurance Corp. (PDIC) insures the bank deposits of Filipinos, so will the PhilEd insure their
+educational plans.
+</item 17>
+
+<item 18>
+A deficit budget for 2024 (Business World, 2023-10-08T16:02:10+00:00)
+But traditional politicians (called “trapo” in the Philippines) might have it in their hearts to think about the country and the welfare of future generations.
+
+How many generations will pay for the monstrous debt incurred for the dubious objectives and vanities of some today?
+
+Amelia H. C. Ylagan is a doctor of Business Administration from the University of the Philippines.
+
+ahcylagan@yahoo.com
+</item 18>
+
+<item 19>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+Rogers’ corporate governance committee is conducting an investigation of the events that took place in 2021, documents show. The committee has asked for copies
+of “all correspondence” between Rogers-Hixon and former CEO Natale, three other former executives, the five ousted directors, Martha Rogers, journalists and
+others, according to a letter to Rogers-Hixon that’s included with the court filing.
+
+“The investigation is intended to inform decisions that may be made about your status as a director of RCI,” says the letter signed by Robert Gemmell, a former
+Citigroup Inc. banker who is Rogers’ lead director.
+
+Although the company is controlled by a family trust, it’s structured in a way that gives significant power to the trust’s chair, in this case Edward Rogers,
+the only son of late founder Ted Rogers. That’s what allowed him to reshape the board in 2021 over the opposition of family members.
+
+The family dynamics have grown even more complicated in recent months because of the deaths of three key insiders.
+</item 19>
+
+<item 20>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+There are a few clues in HSF’s latest public statement to this end, perhaps including its rare – not to mention conspicuous – mention of HSM being
+“majority-owned by funds managed and/or advised by Blackstone“.
+
+In addition, today’s statement is also a clear signal from the HSF board that it has understandable concerns over the now-infamous ‘discount rate’ used by
+Citrin Cooperman to value HSF’s portfolio (as MBW covered in depth through here).
+
+Citrin Cooperman continues to stick to an 8.5% discount rate in its valuations, despite interest rate rises over the past 12-18 months – and has long refused to
+move this 8.5% figure upwards to, say, 9% or 9.5%.
+
+If Citrin Cooperman ever did raise this discount rate, the independent valuation of Hipgnosis Songs Fund’s portfolio would, in turn, instantly fall.
+</item 20>
+
+<item 21>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+Public policies attempt to fulfill one or more of the following objectives: efficiency, equity, and stability. Efficiency and stability are necessary conditions
+for sustainable growth while equity helps make development inclusive.
+
+This is the second article in our series following the 2nd SGV Tax Symposium, which focused on how a sustainable and effective tax ecosystem can advance the
+sustainability agenda for both the public and private sectors.
+
+In this article, we will discuss the Philippine strategy for sustainable development.
+
+GROWTH THROUGH TRADE AND INVESTMENT
+
+The Philippine Development Plan (PDP) 2023-2028 aims for a deep economic and social transformation to reinvigorate job creation and accelerate poverty reduction
+by steering the economy back to a high-growth path. In this regard, two main performance indicators are identified and will be monitored by the National
+Government.
+
+The first is for the country to graduate into upper middle-income class status within the term of the current administration.
+</item 21>
+
+<item 22>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Worth remembering: The HSF board has known about Citrin Cooperman’s latest valuation (as of September 30) for at least the past eight days.
+
+We know this because, as mentioned, on December 11, HSF announced that the $23.1 million price of an agreed HSF ‘non-core’ asset sale represented a 14.2%
+discount vs. Citrin Cooperman’s latest valuation of the portfolio (i.e. the HSF board had seen this latest valuation).
+
+Yet it took until today (December 19) for HSF to alert its investors to its dissatisfaction with this valuation.
+
+WHAT does JP Morgan make of it all?
+
+One of the closest watchers of Hipgnosis Songs Fund in recent years has been JP Morgan and its analyst Christopher Brown.
+</item 22>
+
+<item 23>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+One factor potentially making the future termination of HSM as HSF’s investment advisor less likely? MBW understands that, in such a scenario, HSM would have a
+first-refusal option to acquire HSF’s copyright portfolio – and could potentially turn to Blackstone (i.e. the backers of Hipgnosis Songs Capital) to find the
+money to pull off such an acquisition.
+
+Why the $440 million offer is connected to the date of HSF’s ‘continuation vote’
+
+While HSF shareholders are considering the $440 million offer from HSC to buy the 29 catalogs, other non-Hipgnosis companies are also being invited to make bids
+for the same portfolio.
+
+Those bids are enabled by a ‘go-shop’ clause in the HSF/HSC proposal that allows the HSF board to consider these non-Hipgnosis approaches for a limited period
+(until 11.59pm on October 23, to be precise).
+</item 23>
+
+<item 24>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+But what was maybe more surprising – for a techie like Kyncl, anyway – was his rational, level-headed explanation for why traditional music labels continue to
+be relevant, and continue to thrive, in the current music ecosystem.
+
+With the arrival of digital platforms, including open ones like YouTube and SoundCloud – and with the proliferation of indie music distribution platforms like
+DistroKid and TikTok’s SoundOn – it’s inevitable that music biz observers from the world of tech like to speculating about the possibility that music labels
+could, in the long-term, be headed for irrelevance.
+
+In a world where anyone can record music using a desktop audio workstation (DAW) and upload it direct to YouTube, or to Spotify via a distribution platform,
+labels have little left to do, the argument goes.
+
+Kyncl offered strong a counterpoint to this argument at Code Media, drawing a parallel between music labels today and the advertising industry a decade or two
+ago.
+</item 24>
+
+<item 25>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Some CEOs get a pass on things like having kids with direct reports, but not all.
+
+Altman also has three siblings, and his younger sister Annie has publicly accused him of abuse. We have no way of evaluating these allegations, which involve
+private matters.
+
+Our read on the board’s language in dismissing Altman, however, is that it was not a legal or personal problem that provoked the action, but a professional or
+business one.
+
+We probably won’t know the full truth on this for a long time, as the characters in the drama are likely to be NDA’ed up. Per various whispers and leaks, an
+all-hands meeting about the situation this afternoon didn’t produce any revelations beyond banal reassurances that the company is fine and they’ll get a fresh
+CEO soon. Expect to hear a lot of rumors before we hear the real thing.
+</item 25>
+
+<item 26>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Partners of CMG have made their own headlines in the past 12 months, too: Quality Control – which inked that JV with Motown back in 2015 – was sold to the
+Scooter Braun-led HYBE America for $300 million in February; Elliot Grainge’s 10K Projects – with whom CMG partners for Ice Spice – was 51%-acquired by Warner
+Music Group in September.
+
+(CMG continues to work exclusively with Quality Control on acts such as Quavo, Lil Yachty and Lil Baby, while Ice Spice was ‘carved out’ of 10K’s Warner deal
+and remains signed in partnership with CMG on an ongoing basis.)
+</item 26>
+
+<item 27>
+Japan’s prime minister Kishida says: ‘reassess our economy’ (Financial Times, 2023-10-01T23:01:09+00:00)
+“Deployment of capital to China has been a bit more risky in terms of eventual outcome of investment decisions, given that lack of clarity.” But interest in
+Japan has not only come about because of the push away from China, he adds.
+
+Japanese companies are increasingly aligning themselves with the interests of shareholders in a way that once seemed unlikely. Part of that, he says, is
+generational. Companies that replace their chief executive on five or seven year cycles now have leaders that reached their positions after the establishment of
+Japan’s stewardship code (in 2014) and corporate governance code (2015). Many have a very different view of the role of a chief executive than their
+predecessors did.
+
+“I think that Japan, in terms of the unifying message that companies and the Tokyo Stock Exchange are sending out, now gives a lot more confidence about where
+they are deploying capital,” says Neureiter. “So people looking at the region are finding Japan incrementally more attractive.
+</item 27>
+
+<item 28>
+OpenAI buffs safety team and gives board veto power on risky AI (TechCrunch, 2023-12-18T20:12:25+00:00)
+Of course, the result of said drama was the sidelining of two of the more critical voices and the appointment of some money-minded guys (Bret Taylor and Larry
+Summers), who are sharp but not AI experts by a long shot.
+
+If a panel of experts makes a recommendation, and the CEO makes decisions based on that information, will this friendly board really feel empowered to
+contradict them and hit the brakes? And if they do, will we hear about it? Transparency is not really addressed outside a promise that OpenAI will solicit
+audits from independent third parties.
+
+Say a model is developed that warrants a “critical” risk category. OpenAI hasn’t been shy about tooting its horn about this kind of thing in the past — talking
+about how wildly powerful their models are, to the point where they decline to release them, is great advertising. But do we have any kind of guarantee this
+will happen, if the risks are so real and OpenAI is so concerned about them? Maybe it’s a bad idea. But either way it isn’t really mentioned.
+</item 28>
+
+<item 29>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+“No. Music is much more resilient. So first, I think what happened in the last 15 years is incredible. They had literally zero people in the subscription model
+and now we have 700 million people in the world in the premium experience… which is incredible.
+
+“And I think really credit goes to Daniel Ek for forging the path for everybody. And then companies like Apple and YouTube and Amazon following and building up
+the [music] business. It’s pretty incredible what has happened.”
+
+“You have to embrace technology, because it’s not like you can put technology in a bottle. The genie is not going back.” Robert Kyncl, Warner Music Group
+
+Kyncl added: “I think the opportunity ahead of us is twofold. One, the continued growth in emerging markets, and also the GDPs of those countries will be rising
+at the same time. So there’s lots of growth there.
+</item 29>
+
+<item 30>
+The inside story of Dave Clark's tumultuous last days at Flexport (Cnbc | World Business News Leader, 2023-10-02T17:46:00+00:00)
+For example, politics. Days after Clark was ousted, Petersen sent him a message — seen by CNBC — blasting one of his key female executives for wasting her days
+at the company on "far left-wing political activism." The executive is a registered Republican. Stephens, the Founders Fund partner, also shared his contempt
+for that executive weeks before Clark's departure, a person familiar with the board told CNBC. Stephens did not respond to CNBC's request for comment. Petersen
+is also a venture partner at Founders Fund, the firm started by Peter Thiel, who was a prominent supporter of President Trump's 2016 campaign and more recently
+bankrolled Senate candidates in Ohio and Arizona. Many of Thiel's closest confidantes at Founders Fund and elsewhere in the venture industry are outspoken
+conservatives. Petersen's sole public political contribution in 2023 was to a Democratic political action committee associated with Sen. Joe Manchin of West
+Virginia.
+</item 30>
+
+<item 31>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+Today (September 28), HSF informed its investors that “credible third parties are already engaged in this go-shop process” following its announcement on
+September 14.
+
+As we’ve previously reported, there are potential obstacles in the way of these third parties’ bids. These include the fact that HSM (on behalf of HSC) has a
+‘matching right’, meaning that if HSC decides to match the higher bid of a rival, HSF has to sell the catalogs to it – rather than the rival.
+
+In addition, any ‘superior’ offer would have to exceed the aggregate cash net proceeds that would ultimately reach HSF’s coffers should HSC’s $440 million offer
+be executed. (Read more about this condition through here.)
+
+Still, it’s a theoretical possibility that a non-Hipgnosis company swoops for the 29 catalogs from HSF, and gazumps HSC in the bidding process.
+</item 31>
+
+<item 32>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+Altman also co-founded Worldcoin, a biometric and cryptocurrency project that’s been scanning people’s eyeballs with the goal of creating a vast digital
+identity and financial network.
+
+___
+
+Associated Press business writers Haleluya Hadero in New York, Kelvin Chan in London and Michael Liedtke and David Hamilton in San Francisco contributed to this
+report.
+</item 32>
+
+<item 33>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+But last month something else happened that, we hear, effectively scuppered any chance that Sony Music would get involved with ‘Dream Track’ at this juncture.
+
+On October 30, Google – the parent of YouTube within Alphabet Inc. – issued a filing with the US Copyright Office that outlined its core position on ‘Artificial
+Intelligence and Copyright’.
+
+The contents of this document have caused some alarm at Sony Music HQ.
+
+What was in the Google document?
+
+You may have read on MBW last week that Ed Newton-Rex – a generative AI pioneer, but also a published composer – decided to quit his role at Stability AI over
+concerns over the company’s position on “fair use” within its own recent US Copyright Office filing.
+
+‘Fair use’ is, as it sounds, the argument that there are cases where copyrighted material can be used and even replicated that are, well, fair enough.
+</item 33>
+
+<item 34>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+HSF also confirmed a number of other new measures in a ‘circular’ to its shareholders today.
+
+These measures included the fact that, if Hipgnosis Songs Fund shareholders vote to remain a publicly-traded fund (via that 2023 ‘continuation vote’) at the
+firm’s next AGM, then another ‘continuation vote’ will be put in front of HSF shareholders at an Extraordinary General Meeting in January 2026.
+
+(The ‘continuation vote’ that will take place in Q4 2023 has been scheduled ever since HSF went public in 2018 – i.e. five years after it floated. The 2026
+‘Continuation Vote’, as newly-agreed, means another one is now being scheduled for around two years’ time.)
+
+In addition, HSF today confirmed some new amendments to its ‘Investment Advisory Agreement’ (IAA) with HSM.
+</item 34>
+
+<item 35>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+The reason for the delay? According to UK-listed HSF, it’s all to do with a recently-updated company valuation from HSF’s official independent valuer,
+US-headquartered Citrin Cooperman (CC).
+
+The HSF board says this valuation from CC was “materially higher than the valuation implied by proposed and recent transactions in the sector”.
+
+HSF’s board particularly points to two transactions/would-be transactions as evidence:
+
+The proposed sale earlier this year of assets to Blackstone-backed Hipgnosis Songs Capital for USD $440 million (pre-costs) – or $417.5 million (post-costs) – a
+proposal that was ultimately rejected by HSF shareholders; The sale of 20,000 “non-core” songs from HSF’s portfolio to an unnamed buyer (possibly Kobalt Music
+Group) for $23.1 million, as announced on December 11.
+</item 35>
+
+<item 36>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+At that time, he said, many predicted ad agencies were headed for the scrap-heap thanks to the arrival of Google’s AdWords, which allowed any business to set up
+a customized ad campaign on Google services.
+
+Yet ad agencies didn’t go extinct. Today, “they’re the largest customers of companies like Google,” Kyncl told the audience at the Code Conference.
+
+“In the year 2000, when AdWords came out, everybody was predicting their deaths because all the brands [could] just go direct to AdWords and buy ads… However,
+what happened was lots of different platforms emerged. Lots of ad tech emerged, complexity increased exponentially, and brands needed help with that, and the
+agencies provided that value.
+
+“And I see a very close analogy [between that and] our business. Music is incredibly broadly distributed. Everybody on earth listens to music. We’re on every
+platform. And the complexity is high.
+</item 36>
+
+<item 37>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+the multiples that Merck Mercuriadis paid to acquire it?
+
+Such questions will only be answered when Hipgnosis Songs Fund’s board elects to release the company’s six-monthly financial results to end of September 30.
+
+The most important KPI within those results, in MBW’s view: the company’s Pro-Forma Revenue, and how it compares, like-for-like, vs. the previous year’s
+equivalent period.
+
+In the meantime, back in the ‘real world’ of the music biz, HSF is actually enjoying quite a fanciable Q4.
+
+The company is benefitting from its cuts on hit albums including Taylor Swift’s 1989 (Taylor’s Version), via its acquired Jack Antonoff catalog, as well as
+Swift’s Lover (via its acquired Joel Little catalog).
+</item 37>
+
+<item 38>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Diversity is a superpower. It’s an ongoing process that I’ve put a lot of focus on, along with doing what I can to increase the number of women at our company.
+There just aren’t enough of us, particularly within the most senior ranks at the labels.
+
+UMG has [Nashville Chair & CEO] Cindy Mabe and me running standalone label groups, and I know that Lucian agrees with me that there needs to be more.
+
+I will continue to do what I can to increase representation at Capitol Music Group and within the music business at large.Music Business Worldwide
+</item 38>
+
+<item 39>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Two years ago, this writer sat down for a Chinese meal on a chilly winter’s night in London with Michelle Jubelirer and some of her closest allies at Capitol
+Music Group.
+
+Jubelirer had just been promoted to Chair and CEO of the Los Angeles-based label group – a key pillar of Universal Music Group. The mood that night was suitably
+celebratory… but it was also, it’s fair to say, imbued with knowledge of a tough road ahead.
+
+Jubelirer was widely tipped as the natural successor to Steve Barnett when the British exec stood down as head of CMG in 2020.
+</item 39>
+
+<item 40>
+Investment options for high networth investors (Business Line, 2023-10-28T14:42:28+00:00)
+Portfolio Management Services (PMS)
+
+PMS guidelines in India date back to 1993, but this investment avenue has grown in popularity with HNIs recently. The growing financialisation of savings, the
+formalisation of the economy, and the growing prosperity of tier 2 and 3 cities have resulted in an increase in AUM (excluding EPFO/PF), which stood at ₹5.28
+lakh crore as of July 2023. Because the minimum investment is ₹50 lakh, this option is also only available to HNIs. Both PMS and mutual funds provide expert
+guidance in navigating volatile markets and seizing investment opportunities that help create wealth. Because mutual funds cater to retail investors, their
+guidelines are relatively stringent, and compliance is rigorous.
+
+Regarding PMS, the investment guidelines are somewhat more flexible, allowing portfolio managers to outperform mutual funds. Another feature that appeals to
+HNIs is that the beneficial ownership of securities is that of the investors, as opposed to mutual funds, where the ownership is that of the fund.
+</item 40>
+
+<item 41>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+To progress this ‘incubator’, YouTube said it was working behind the scenes with a number of UMG-affiliated artists;
+
+and jointly announced that the video platform was launching an – a program by which new tools and innovations will be developed at YouTube in close conjunction
+with artists and the music biz. To progress this ‘incubator’, YouTube said it was working behind the scenes with a number of UMG-affiliated artists; Also in
+August, YouTube publicly committed to three principles/pledges behind its development of music-based generative AI tools . These pledges promised “appropriate
+protections… for music partners who decide to participate” in said tools. They promised “invest[ment] in the AI-powered technology” that, amongst other things,
+would help YouTube “protect our community of viewers, creators, artists and songwriters… [from] trademark and copyright abuse” .
+</item 41>
+
+<item 42>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+To be fair to Google, its submission does make note of the importance of US copyright law, including when applied to generative AI, striking “the right balance
+between the legitimate interests of rightsholders and the equally legitimate interests of the public and succeeding generations of creators”.
+
+Yet it could clearly be argued that Google’s take on copyright “harvesting” by generative AI models sits in odd contrast to the copyright-related reassurances
+that YouTube has been careful to make to the music industry during the pre-development, development, and trial launch of ‘Dream Track’.
+
+A final thought…
+
+MBW’s sources close to Sony Music were keen to point out that the company’s general ongoing relationship with YouTube and YouTube Music is a harmonious one.
+
+(YouTube is, after all, now the second largest commercial partner of the major record companies – with a stated ambition to catch up with Spotify in the years
+ahead.
+</item 42>
+
+<item 43>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+which they were not open to before. And they just created this incredible tidal wave. And these things happen in waves, ebb and flow.
+
+“So I think it likely is slowing down a little bit, but that’s okay. Because it makes the multiples come down a little bit more.”
+
+“I think what happened in the last 15 years is incredible. They had literally zero people in the subscription model and now we have 700 million people in the
+world in the premium experience.” Robert Kyncl, Warner Music Group
+
+In other words, Warner Music can go out and buy more if the multiples are low enough?
+
+“Of course. We are in the business of buying catalogs, obviously. We have the publishing catalog of David Bowie, for instance, which we bought a few years ago.
+So yeah, we are in that business.
+</item 43>
+
+<item 44>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+We worked with them on a bold and innovative Lil Yachty alternative album, and we’re all looking forward to new music from Lil Baby next year. Offset not only
+made a great album – I expect Grammy nominations for him next year – he really puts the work in, day-in, day-out.
+
+“Music is music, and genres shouldn’t be defined by color. In fact, this business really needs to change its definition of “pop” music. There seems to be real
+confusion there; we should be calling any music that streams in volume, “pop” music.”
+
+I knew that if we were going to make significant inroads with hip-hop and R&B company-wide, we needed experts in those areas and fresh perspective on our
+executive team.
+</item 44>
+
+<item 45>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+Just like PDIC which is funded from the premiums paid by the banks, PhilEd will fund this program from the premiums by the educational plan companies. PhilEd
+will be ideally suited to do this as it could swap the failed educational plans with school vouchers from its repository of school vouchers.
+
+The third dream is based on the realization of Filipino school graduates that their learning must continue even as they leave their alma maters. For in this
+modern age, the fount of personal knowledge must continuously be replenished. In healthcare, we have the Health Maintenance Organizations (HMOs) which
+continuously monitor and minister to our health. We need Lifelong Learning Organizations (LLOs) to continuously monitor and minister to our learning. HMOs exist
+in the Philippines. LLOs do not. In partnership with the international development agencies and the private sector, PhilEd will create this industry. The
+international development agencies will provide the technical assistance grants that will create the developmental and regulatory framework for the industry
+while the private sector will organize the LLOs.
+</item 45>
+
+<item 46>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Jubelirer and co. have been putting both to good use ever since.
+
+Two years on, Jubelirer’s CMG hasn’t only returned to calmer waters – with US market share YTD in the high-5% region – it’s also achieved some glittering
+successes while priming a promising array of new talent.
+
+A key example: CMG, along with its colleagues at Capitol UK and the artist’s team, has been behind the Grammy-winning global smash that is Sam Smith’s Unholy
+(an unapologetically ribald banger from a singer who refuses to be pigeonholed as a sweet balladeer).
+
+CMG has also been a crucial partner, alongside Elliot Grainge‘s 10K Projects, in the rise of Ice Spice.
+</item 46>
+
+<item 47>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+MBW’s World Leaders is a regular series in which we turn the spotlight toward some of the most influential industry figures overseeing key international
+markets. In this feature, we speak to Alejandra Olea, Managing Director, Americas at Believe. World Leaders is supported by PPL.
+
+There is no mistaking the global music biz’s biggest breakthrough independent hit of the past few months.
+
+Spanish artist Iñigo Quintero’s Si No Estás rose to the top of Spotify‘s Global Top 50 in late October – and has stubbornly refused to leave the upper reaches
+of digital charts ever since. (Even amongst the early December onslaught of Christmas standards in Spotify’s flagship global chart, the Spanish-language track
+currently remains comfily snuggled in at No.7.)
+
+To date, having only been released on September 23, Si No Estás has racked up over 330 million plays on Spotify, and over 100 million on YouTube.
+</item 47>
+
+<item 48>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+They want to keep ownership of their masters, and get better economics.
+
+This level of agility is at the very core of Believe’s structuring: from self-releasing services with TuneCore, to more premium services with Believe Label and
+Artist Solutions or Artist Services Solutions, we pride ourselves for being able to accompany talents like Iñigo at all stages of their development, from being
+emerging acts, all the way to becoming top charting artists.
+
+Can we read anything into the fact that Inigo is Spanish, and how the trend identified above (i.e. Latin American artists having hits without being on major
+record company deals) is starting to spread to different corners of the world and different genres? We just had RAYE enjoying gobal success independently with
+Escapism, and in the US earlier this year there was of course Oliver Anthony going to No.1 on the Billboard Hot 100…
+
+For many years now, Latin artists have been paving the way for deals that bring them more control, transparency, and better economics.
+</item 48>
+
+<item 49>
+Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from Dennis Kooker’s speech about AI (Music Business Worldwide,
+2023-11-30T21:28:03+00:00)
+As reported by MBW last week, Universal Music Group submitted its response to the USCO. Unsurprisingly, amongst the highlights of UMG’s submission was the
+rejection of the notion that using copyrighted material to train LLMs is “fair use”.
+
+In his speech on Wednesday, Kooker commented directly on the flurry of submissions to the USCO from the tech industry at the end of October.
+
+In what may have been a nod to Google’s filing and “fair use” position, Kooker told Senators that “based on recent Copyright Office filings it is clear that the
+technology industry and speculative financial investors would like governments to believe in a very distorted view of copyright”.
+
+He added: “[That view is] one in which music is considered fair use for training purposes and in which certain companies are permitted to appropriate the entire
+value produced by the creative sector without permission, and to build huge businesses based on it without paying anything to the creators concerned.”
+</item 49>
+
+<item 50>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+And everything in between!
+
+“CMG had undergone a few leadership changes within a short period of time, and that turmoil was compounded by the economic volatility of the pandemic. As a
+result, the company faced eroding market share, low morale, and a stagnant artist roster. Because I had spent almost a decade here, I was uniquely situated to
+bring both a fresh perspective to the job and build a modern culture within the company.”
+
+Major kudos go to [President of Capitol Music Group] Arjun [Pulijal], my partner in all of this, who is a brilliant creative marketer and equally adept at
+strategizing innovative paths for artists that range from Ice Spice and Offset to Troye Sivan and Paul McCartney. He’s a great motivator and I’m proud of how
+he’s stepped into this leadership role and excelled over the past two years.
+</item 50>
+
+<item 51>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+So yeah, we are in that business.
+
+“We are in the business of administering [rights], which means collecting revenue from thousands of platforms around the world; very complicated matters. But
+we’re also in the business of ownership.”Music Business Worldwide
+</item 51>
+
+<item 52>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+For the energy sector in particular, amendments to the PSA are envisioned to help raise the capital needed to speed up the energy transition of the country to
+renewables.
+
+In addition, the Regional Comprehensive Economic Partnership (RCEP), a trading bloc that encompasses the ten members of the Association of Southeast Asian
+Nations (ASEAN) and the ASEAN Plus One Free Trade Agreement (FTA) partners Japan, China, South Korea, Australia, and New Zealand, is already in force for the
+Philippines, helping ease market access through trade and investment rules and supporting global and regional supply chains. The Philippines can potentially
+position itself as a regional manufacturing hub if the right incentives and policy measures are put in place to encourage local and foreign investors to
+participate. Together, trade and investment are expected to play an important role in attaining economic transformation, the second goal of the PDP.
+
+HUMAN CAPITAL AND INFRASTRUCTURE
+
+The ability of people to take advantage of market opportunities arising from investment rests on human capital.
+</item 52>
+
+<item 53>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+That price, according to HSF’s board, represented a 14.2% discount on Citrin Cooperman’s valuation of this portfolio as of September 30 (something we’ll come
+back to).
+
+As part of its announcement this morning, the HSF board took something of a swipe at its investment adviser, Merck Mercuriadis‘ Hipgnosis Song Management.
+
+After seeing Citrin Cooperman’s latest valuation and believing it to be too high, said HSF, it then “sought advice from Hipgnosis Song Management… which is
+majority owned by funds managed and/or advised by Blackstone, on their opinion on the independent valuer’s valuation.”
+
+HSF’s board added: “Hipgnosis Song Management… eventually provided an opinion, which was heavily caveated, such that the Board has concerns as to the valuation
+of the Company’s assets in its interim results.”
+</item 53>
+
+<item 54>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+This has been evidenced by the 44% total return, including right to income, transaction fees and expected taxes, realised since acquisition on the [$440
+million] Transaction.
+
+“Furthermore, the Board and the Investment Adviser are committed to ensuring that this value is achieved for shareholders by a re-rating of the share price and
+are determined to deliver on the ongoing opportunity of the Company.”Music Business Worldwide
+</item 54>
+
+<item 55>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+In a rather damning note issued today covering the delay in the publication of HSF’s results, Brown wrote: “This is an early blow to the credibility of the new
+[Hipgnosis Songs Fund] Board, and casts further doubt over the credibility of the independent valuer, Citrin Cooperman.”
+
+Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results,
+especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023).
+
+Added Brown: “We think the easiest solution now for the [HSF] Board is to apply an additional discount rate to the [Citrin Cooperman] valuation to reflect
+current market uncertainty, on the basis that it is probably too late to employ another valuer.”
+</item 55>
+
+<item 56>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+Noel P. Rabaja the strategy and transactions (SaT) service leader of SGV & Co.
+</item 56>
+
+<item 57>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+Congress enacted Republic Act 7875, known as “The National Health Insurance Act of 1995,” which created PhilHealth. We are hoping some members of Congress would
+file a Universal Education Financing Law which would create PhilEd.
+
+Dr. Victor S. Limlingan is a retired professor of AIM and a fellow of the Foundation for Economic Freedom. He is presently chairman of Cristina Research
+Foundation, a public policy adviser and Regina Capital Development Corp., a member of the Philippine Stock Exchange.
+</item 57>
+
+<item 58>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+How did it end up distributed by Believe via Acqustic?
+
+Believe’s strength is our presence across 50 countries around the world. By deploying local teams on the ground, we are fully part of the local music scenes,
+and are able to identify the labels and artists with the most potential. So locally, our team’s role is to select local artists and labels to partner with and
+accompany them in their development.
+
+We are very selective on our approach as our goal is to provide them, regardless of their level of development, with the highest level of quality of service in
+the market. In the case of Iñigo, we identified Acqustic as a promising new label in 2020, with a great team, a strong A&R vision and great track record. In
+March 2023, they signed Iñigo and now Si No Estás is the smashing success we know.
+</item 58>
+
+<item 59>
+WTF is going on at OpenAI? We have theories (TechCrunch, 2023-11-18T00:09:53+00:00)
+Could Altman have been working with — or against — OpenAI’s patron in secret? If Altman wanted to kill the golden goose by going independent, that might have
+activated the board’s fiduciary or otherwise statutory duty. On the other hand, if he was negotiating some other deal, like an acquisition or deeper and more
+exclusive integration, it could also have caused the board to bristle, either at the idea itself or at being excluded.
+
+But if Microsoft was as shocked as the rest of us, as one report has it, it could hardly be the kind of high-stakes conspiracy some seem to be hoping for. But
+one must assume that Microsoft would say that either way. Even if they’d been working with Altman on some kind of secret plan, they can truthfully say they were
+surprised by his firing. (And they “remain committed to our partnership.”)
+
+2. Do they disagree on long-term strategy?
+</item 59>
+
+<item 60>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+(Example from UMG’s filing: “The wholesale appropriation of UMG’s enormous catalog of copyright-protected sound recordings and musical compositions to build
+multibillion commercial enterprises [in AI] is anything but fair use.”)
+
+As well as part-explaining Sony Music’s refusal to be included in ‘Dream Track’ thus far, Google’s USCO filing also perhaps explains the careful words selected
+by Robert Kyncl and especially Sir Lucian Grainge in their respective comments endorsing YouTube’s AI experiment.
+
+(Grainge’s statement, remember, began: “We have a fundamental responsibility to our artists to ensure the digital ecosystem evolves to protect them and their
+work against unauthorized exploitation, including by generative AI platforms…”)
+
+One interesting final observation on the clutch of artists who agreed, with their record companies, to enter the YouTube ‘Dream Track’ trial?
+
+They’re stars, for sure.
+</item 60>
+
+<item 61>
+Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from Dennis Kooker’s speech about AI (Music Business Worldwide,
+2023-11-30T21:28:03+00:00)
+“If established early on, they will result in an even playing field for all participants so there will not be an unfair competitive advantage for a few at the
+expense of future innovators.
+
+“The principles will ensure that intellectual property businesses can succeed in this new world alongside tech partners, further advancing investment and
+expanding economic opportunities. “Music Business Worldwide
+</item 61>
+
+<item 62>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+The $440 million price also reflects a +51% premium on the value of the 29 catalogs implied by Hipgnosis Songs Fund’s public market cap for the 30 days ending
+September 13.
+
+What happened today?
+
+Amongst the news confirmed by HSF today (September 28) is that the firm’s Chair of its board since 2018, Andrew Sutch, 73, is stepping down, both as HSF board
+Chair and as a director of the company.
+
+HSF says it’s begun a process to recruit a new Chair; Sutch (pictured inset) will leave his post as and when this person is hired, or in any case before HSF’s
+AGM next year (in Q4 2024).
+
+In addition, Andrew Wilkinson, 72, has informed the HSF board of his intention to retire as a board director, which will reduce the company’s board to five
+directors.
+</item 62>
+
+<item 63>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+The genie is not going back.”
+
+But he cautioned that the technology to develop a Content ID-style system for is “not yet developed, but… people are working on that.”
+
+{Believe CEO Denis Ladegallerie might disagree. In comments earlier this year, Ladegallerie said that the tools to recognize and flag AI-generated content are
+just about ready to go, and he expects to see them implemented in the coming few quarters.)
+
+2) The streaming audio business won’t experience the same problems currently hitting streaming video
+
+The streaming video business is going through tough times.
+
+Netflix experienced its first-ever decline in subscriptions last year (though it has since roared back to health); the subscriber count of Disney+ appears to be
+in freefall; and talk is growing about ongoing consolidation of the many streaming video services that have come online over the past several years.
+
+Asked if the audio streaming business is likely to go through something similar, Kyncl’s answer was unequivocal.
+
+“No.
+</item 63>
+
+<item 64>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+Folding FAPE/PEAC into PhilEd would mean the transfer of the funds of FAPE amounting to P277 million as of May 31, 2022 as well as the assets and liabilities of
+PEAC amounting to P567 million as of May 31, 2022.
+
+The DepEd programs presently being managed by PEAC and lodged in the DepEd budget such as the Educational Service Contracting (ESC) of P9.3 billion in School
+Year 2021-2022, the Senior High School Voucher Program of P20.3 billion in School Year 2021-2022, and the Teachers Salaries’ Subsidy of P793 million in School
+Year 2021-2022 will now be lodged in PhilEd.
+</item 64>
+
+<item 65>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+We were so fortunate to have the talent, and friendship, of [now-Virgin Music Group President] Jacqueline [Saturn] and her team as part of our company for many
+years.
+
+“We were so successful in building [Caroline/Virgin Music], that it really was only a matter of time before the other labels within UMG would want to grow a
+similar business within their groups.”
+
+We were so successful in building that end of the business, that it really was only a matter of time before the other labels within UMG would want to grow a
+similar business within their groups. It wouldn’t have made sense to have multiple indie label/artist services divisions within UMG, so the plan to globalize
+Virgin and scale it to work with all the labels made so much sense.
+
+Do I miss having Jacqueline and her team only a few steps away? Of course.
+</item 65>
+
+<item 66>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+Over the years, PEAC has evolved into co-implementing externally funded programs, namely the DepEd’s Education Service Contracting (ESC), Teachers’ Salary
+Subsidy (TSS), the SHS Voucher Program (SHS VP), the In-Service Training (INSET), and the Bayanihan for Basic Education (BBE) as well as implementing internally
+funded programs of assistance for private education in the areas of training, school quality assurance, school improvement programs, and grants programs.
+
+In sum, the PEAC has been an effective instrument to operationalize “complementarity” between private and public schools as provided in the Philippine
+Constitution. It has also been an incorruptible partner of the education agencies in efficiently co-implementing national subsidy programs for students and
+teachers in private schools.
+
+We propose that FAPE/PEAC structure and organization be moved to PhilEd. Operationally this would mean folding into PhilEd, the roles and responsibilities of
+FAPE and PEAC as well as their financial resources.
+</item 66>
+
+<item 67>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+The present Board of Trustees of the Fund which consists of the Secretary of Education as Chairman with the Director-General of the National Economic and
+Development Authority, the three Presidents of the Association of Christian Schools, Colleges and Universities (ACSCU), the Catholic Educational Association of
+the Philippines (CEAP) and the Philippine Association of Colleges and Universities (PACU) shall also constitute the proposed Board of Trustees of the PhilEd.
+
+The management team of PEAC will be the incoming management team of PhilEd.
+
+Interestingly, PhilHealth, in addition to premiums collected from members as well as subsidies from local governments who have enrolled indigents in the
+program, receives a share of the “sin taxes” collected from Tobacco and Sugar Sweetened Beverage. The justification for this is that tobacco smokers and sugar
+sweetened beverage drinkers impose an additional burden on the healthcare system of the Filipinos and so must contribute to their health services. In Fiscal
+Year 2022, this amounted to P74 billion.
+</item 67>
+
+<item 68>
+Sex, Signal messages, and sabotaging FTX's code: SBF execs and Bahamas roommates tell all in court (Cnbc | World Business News Leader,
+2023-10-06T20:17:00+00:00)
+Additionally, he was promised that Alameda had no preferential treatment on the FTX platform, even though the hedge fund was one of its top traders. Huang said
+he was concerned about FTX's lack of a board of directors, but he eventually invested anyway. During cross-examination, Huang said Paradigm pressed
+Bankman-Fried on the board issue and was told he didn't want investors as directors but he did plan on having a board with experts. — CNBC's Dawn Giel
+contributed to this report.
+</item 68>
+
+<item 69>
+Power struggle in one of Canada’s wealthiest clans has sister accusing chairman brother of ‘vendetta’ (Fortune, 2023-10-12T22:22:46+00:00)
+Still Excluded
+
+Both Rogers-Hixon and Martha Rogers said in documents that they’re still being excluded from some parts of board and committee meetings and are being given
+redacted board documents.
+
+“I cannot properly perform my duties as a director if information that is provided to the rest of the directors is being withheld from me,” Rogers-Hixon said in
+her affidavit. The two sisters are seeking a judge’s order to force the company to share information with them and allow them to attend, in full, all meetings
+of the board, as well as board committees they belong to.
+
+Rogers took “reasonable steps” to protect company information from a competitor, Schmidt said. Rogers-Hixon and Martha Rogers could have resolved the matter by
+choosing a different lawyer, “and they chose not to do so,” she added.
+
+The court filing also suggests that Rogers-Hixon was forced out of her role as a director of Maple Leaf Sports & Entertainment, the company that owns Toronto’s
+professional hockey and basketball teams and in which Rogers Communications is a large minority investor.
+</item 69>
+
+<item 70>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+A Final thought…
+
+As mentioned in the opening sentence of this article, there is plenty of drama surrounding HSF right now – from the ‘discontinuation vote’ we saw at the company
+in October, through to a recent lawsuit launched against Hipgnosis Songs Fund by a former business partner of Merck Mercuriadis.
+
+Yet, amongst all of the noise, what will likely most interest HSF’s investors (including the likes of Investec Wealth & Investment, Aviva Investors, and
+BlackRock) is the ongoing underlying commercial performance of the firm’s copyrights.
+
+How are Hipgnosis Songs Fund’s assets performing vs. the market? How is the company’s ‘premium-only’ acquisition strategy holding up against its promise of
+growth “uncorrelated” to other industries? And what does all of this suggest about the ongoing growth potential of the HSF portfolio vs. the multiples that
+Merck Mercuriadis paid to acquire it?
+</item 70>
+
+<item 71>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+Yet something conspicuous is not on there: any endorsement whatsoever from the world’s second-biggest recording company, Sony Music Entertainment, or its
+artists.
+
+Why is Sony missing?
+
+MBW understands that Sony Music (the recorded music arm of Sony Music Group) has, like Universal and Warner, been in discussions for months with YouTube over
+potentially licensing the ‘Dream Track’ experiment.
+
+During this period of discussion, YouTube has made a number of positive announcements regarding the biggest issue for any rightsholder regarding AI-driven voice
+replication of artists: their ability to police it.
+
+In August, YouTube and Universal Music Group jointly announced that the video platform was launching an ‘AI Music Incubator’ – a program by which new tools and
+innovations will be developed at YouTube in close conjunction with artists and the music biz.
+</item 71>
+
+<item 72>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+She had been by Barnett’s side throughout a run of success at CMG over multiple years – via artists like Sam Smith, Halsey, Paul McCartney, and Lewis Capaldi,
+as well as transformative deals like a JV between Motown (then part of CMG) and Quality Control.
+
+In actuality, Jubelirer’s immediate ascension to running CMG was not forthcoming. Instead, Barnett was succeeded in December 2020 as Chairman/CEO of the label
+group by Jeff Vaughn, a fast-rising exec who’d previously impressed as a data-and-socials-savvy A&R at Mike Caren’s Artist Partner Group (APG).
+</item 72>
+
+<item 73>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Prioritization. I think companies often use that word to mean, “we’re going to focus on one group of artists and ignore all the others.” For CMG, it means
+defining what success can uniquely mean for each artist, and then delivering for them.
+
+We identify which artists will benefit from, say, the close attention of a small group of people who will bring passion and nuance to marketing and development.
+Others will clearly need the full power of our organization firing on all cylinders from the get-go.
+
+What’s particularly changed in how you approach artist campaigns both domestically and internationally?
+
+We engage directly with international partners earlier than ever before, and don’t unfairly rely on our ex-US affiliates within UMG to do the heavy lifting
+early on. They have their own local repertoire to work on.
+</item 73>
+
+<item 74>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+These amendments would give HSM a 12-month notice period as HSF’s investment advisor should the IAA be terminated at any point following the upcoming 2023
+‘continuation vote’.
+
+Another clause in the new IAA: If HSF’s share price stands at an average discount to ‘operative NAV’ of 10% or more across the month of January 2025 (with that
+NAV determined at the time of publication of HSF’s interim report for the period to September 30, 2024), the HSF board says it intends to serve notice to
+terminate the IAA with HSM.
+
+However, HSF’s board has also given itself the freedom to un-terminate the IAA during the entire notice period that would follow (e.g. if HSF’s board serves
+12-month notice on HSM at the end of January 2025, it would have until the end of January 2026 to withdraw its termination decision).
+</item 74>
+
+<item 75>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+And I’m really glad you mentioned the TikTok-in-2023 wrap-up. Overall, Capitol was the top-performing label across the global and US lists, which tells yet
+another facet of our success story.
+
+What were your biggest priorities for change on day one as Chair of Capitol Music Group – and what do they tell us more generally about modernized major label
+groups in 2023?
+
+First, signing a truly diverse array of new artists, with specific attention on building a strong presence in hip-hop and R&B. Our President of A&R, Jeremy
+Vuernick, has been crucial to working with me in this regard, as well as overseeing the making of our records. The company hadn’t been consistently competitive
+in these areas for a very long time, and, remember: Motown had been spun off on its own long before I took the reins of the company.
+</item 75>
+
+<item 76>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+Hipgnosis Songs Fund (HSF), the UK-listed music rights fund, looks likely to hold its all-important 2023 ‘continuation vote’ on Thursday, October 26, according
+to an announcement from the firm today.
+
+Why’s that ‘likely’ rather than ‘definitely’? Because there’s still a possibility it might get bumped into November – the reasons for which we’ll get into later
+in this article.
+
+The ‘continuation vote’ will take place at HSF’s Annual General Meeting (AGM), and will see the firm’s shareholders vote on whether to keep the entity going as
+a closed-ended investment entity i.e. a publicly-traded bundle of music rights.
+
+How will that vote go? Obviously we don’t know yet – and there’s the small matter of a $440 million transaction looming that could potentially influence things.
+</item 76>
+
+<item 77>
+Sam Altman ousted as OpenAI’s CEO (TechCrunch, 2023-11-17T20:41:13+00:00)
+Couldn't be a prouder brother. — Jack Altman (@jaltma) November 17, 2023
+
+It’s unclear what missteps Altman might’ve made helming OpenAI… at present. But they evidently relate to his relationship with OpenAI’s rather unusual board
+makeup and corporate governance structure — and perhaps OpenAI’s active talks to raise substantial new capital.
+
+As a recent piece in VentureBeat explored, OpenAI’s for-profit subsidiary, OpenAI Global, LLC, is fully controlled by OpenAI’s nonprofit. While the for-profit
+subsidiary is permitted to commercialize its tech, it’s subject to the nonprofit’s mission: attaining artificial general intelligence (AGI), or AI that can — as
+OpenAI defines it — “outperform humans at most economically valuable work.”
+
+The nonprofit OpenAI’s board has the power to both determine when the company has achieved AGI and exclude this AGI from IP licenses and other commercial terms,
+including with Microsoft, one of OpenAI’s biggest investors and a steadfast integrator of OpenAI’s various technologies.
+</item 77>
+
+<item 78>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+We recently presented a paper at the 5th Paderanga-Varela Memorial Lecture entitled “Alternate Service Delivery Systems: Health and Education.” In that lecture,
+we looked at the Department of Health (DoH) and the Department of Education (DepEd) as service delivery systems, delivering healthcare and education
+respectively.
+
+We concluded that the service delivery system of the DoH is far superior to the DepEd for two main reasons. The first is that the DoH has devolved its hospitals
+to the local government units while the DepEd has not. Secondly, the DoH has spun off its health financing into the Philippine Health Insurance Corp.
+(PhilHealth) while the DepEd has not. In this article we argue for the creation of the Philippine Education Development Fund (PhilEd).
+
+When Isidro Consunji, President of DMCI Holdings, Inc. was asked by his officers what the role of his Chief Financial Officer (CFO) would be, he gave a
+three-word answer, “Fund my dreams.”
+</item 78>
+
+<item 79>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+[EVP of Capitol Music Group] Orlando Wharton relaunched Priority Records and signed Kodak Black; [Motown SVP of A&R] Kenoe Jordan has been working closely with
+YoungBoy NBA; and Gordan Dillard brought management and artist development experience from his role at SALXCO.
+
+We also promoted Black executives from within, particularly in the areas of A&R and marketing. We’re still searching for the right leader for Motown, and won’t
+stop until we find one befitting the stature and legacy of such an important label.
+
+Ultimately, we don’t separate music based on genre at CMG, but we do have a number of labels – Blue Note, Motown, Priority, Astralwerks, Capitol Christian and
+Tamla – so artists have real options here.
+
+Music is music, and genres shouldn’t be defined by color.
+</item 79>
+
+<item 80>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+if you want a sustainable career, with repeatability and success.”
+
+Here are three other things we learned from Kyncl’s talk at the Code Conference…
+
+Credit: Tatiana Shepeleva / Shutterstock 1) Music will feel the impact of AI before other industries do – ‘within the next year’
+
+Kyncl predicted that the music business will be out ahead of other industries when it comes to exploiting the potential of AI, and it will also – out of
+necessity– be ahead on the issue of how to regulate and monetize the use of AI by non-rights-holders.
+
+“Music – because it’s so broadly distributed and it’s so well aligned with the internet, because it’s short format, it lends itself to recommendations, it’s on
+all platforms – is generally first in most transformations and most innovations. So it digitizes first,” he said.
+
+“Whatever happened to the music industry 20 years ago is starting to happen in the movies and TV shows now.
+</item 80>
+
+<item 81>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+its share price).
+
+For example: On September 14, HSF’s market cap stood at approximately GBP £1.125 billion, which represented a 40% discount on the firm’s operative NAV of USD
+$2.316 billion as of the end of March this year.
+
+(Said ‘operative NAV’ was calculated by an independent valuer – Citrin Cooperman – using a discount rate of 8.5%.)
+
+This is where the importance of that potential $440 million transaction comes in.
+
+As MBW reported earlier this month, Hipgnosis Songs Fund’s shareholders are currently considering a proposal to sell 29 of the company’s catalogs to another
+Hipgnosis company – the Blackstone-backed Hipgnosis Songs Capital (HSC) – for USD $440 million.
+</item 81>
+
+<item 82>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+Especially when SME has shown its own willingness to experiment with generative AI music platforms this week via this announcement about a project with David
+Gilmour, The Orb, and AI company Vermillio?
+
+Sources close to Sony Music’s HQ in New York have suggested to MBW that the company is taking an “artist-led” approach to its experiments with any AI platform
+that can manipulate the work (or voice) of its roster.
+
+In the case of YouTube’s ‘Dream Track‘, MBW understands, SME first offered the opportunity to participate to a number of its artists, but this group of acts did
+not show enthusiasm about participating.
+
+(If one of these artists was Bad Bunny, signed to Sony’s The Orchard, you can see why: The Puerto Rican superstar expressed fury the other week about a popular
+track on TikTok that had cloned his vocal stylings via AI.)
+</item 82>
+
+<item 83>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+It’s now all about building upon that success and accompanying the artist and the labels we service in their next phase of growth. This is made possible thanks
+to Believe’s unique ability to adapt the level of service to the needs of the artist and label: the more successful they become, the more their needs evolve,
+and the more we are able to provide the best support to supercharge that growth.
+
+I know Inigo is Spanish, but what would you say is driving the ability of Latin artists (particularly Latin American artists) to date to have global hits on
+distribution agreements – without signing (even licensing) deals with major record labels?
+
+Spanish-speaking music, from Spain and Latin America, just keeps getting bigger. Spanish and Latin artists have much more options to develop their audiences and
+monetize their music at each stage of their career.
+
+Artists like Iñigo Quintero and labels like Acqustic are prime examples of this profound shift within the Latin and wider music industry.
+</item 83>
+
+<item 84>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+[Motown was spun out in early 2021, then returned to CMG in early 2023].
+
+Second, we took a hard look at every aspect of our business. We revamped our entire organizational structure, reset our value system, and even replaced certain
+terminology that was outdated. All to meet the needs of the modern music business. Arjun was key to this process; his expertise really drove a new dynamic in
+how marketing, creative, international, digital and commerce now interact.
+
+“Today, literally every plan is tailored for a specific artist or project — not pulled from a well-worn playbook — and our focus is on finding and creating
+opportunities that will have an impact, no matter where an artist is in their development.”
+</item 84>
+
+<item 85>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+In response, Hipgnosis Song Management issued its own statement today: “Hipgnosis Song Management has fulfilled its duties to [HSF] with respect to both the
+independent valuation and preparation of the interim results in a timely and efficient manner.
+
+“Notwithstanding the Board’s decision to delay publication of the interim financial statements, [we] will continue to work in a constructive manner to support
+the interests of the Company and its shareholders.”
+
+The oddest thing about all of this? Citrin Cooperman’s valuation of Hipgnosis Songs Fund is, according to HSF’s own company documentation, appointed and
+overseen… by the HSF board.
+
+See this line, in every annual and interim report from HSF so far (bolding MBW’s own): “Portfolio Independent Valuer… Citrin Cooperman Advisors LLC, formerly
+Massarsky Consulting, Inc., [is] appointed by the Board to independently value the Company’s Catalogues within the Portfolio.”
+</item 85>
+
+<item 86>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Christopher Brown, JP Morgan, on the HSF board statement today (December 19)
+
+In addition, Brown expressed his surprise that HSF asked HSM to “opine on the valuation given [HSM’s] conflict of interest”.
+
+His point: If HSM turned around and said, “yep, HSF’s valuation is 25% too high, better bring it down”, then it would produce a new valuation for HSF that may
+allow Blackstone (or the Blackstone-controlled Hipgnosis Song Capital) to launch an acquisition bid for the HSF portfolio. (Or, at least, a part of that
+portfolio.)
+
+The likely price for this hypothetical Blackstone bid would be smaller than the failed $440 million ($418.5 million post-costs) bid that HSC (via HSM) made for
+a chunk of the HSF portfolio earlier this year.
+</item 86>
+
+<item 87>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+From a music industry perspective, Si No Estás is especially interesting because it provided Believe, the Paris-headquartered indie biz giant, with its
+first-ever chart-topper on Spotify’s Global Top 50.
+
+Iñigo Quintero – who last week released his follow-up track. Lo Que Queda de Mí – was signed to Believe in March via indie label/aggregator Acqustic.
+
+The act’s worldwide success is just part of the story of Believe’s steady growth in Latin music in the past few years, which has been led by Alejandra Olea, the
+company’s Managing Director, Americas.
+
+Here, as part of our World Leaders series, Olea discusses the Iñigo Quintero story – including TikTok’s vital role in the explosion of Si No Estás.
+</item 87>
+
+<item 88>
+Strategizing for sustainable development (Business World, 2023-11-05T11:26:10+00:00)
+It will also promote a green and blue economy coupled with improved governance to guarantee long-term climate and disaster resilience.
+
+BUILDING RESILIENCE THROUGH SUSTAINABLE DEVELOPMENT
+
+Coming off from the pandemic and with the current global economic climate, it is opportune for the government to proactively drive for actionable policies and
+programs that focus on building the resiliency of the economy through sustainable development with greater emphasis given to addressing climate change.
+
+Navigating external and domestic economic headwinds will not be an easy feat for the administration, but the private sector will be an important catalyst for
+sustainable development. With the private sector sharing industry knowledge, resources and potentially even leading certain socio-economic programs and projects
+of the National Government, it is to be hoped that AmBisyon Natin 2040 of long and healthy lives for Filipinos that are strongly rooted, comfortable, and secure
+will be achieved.
+
+This article is for general information only and is not a substitute for professional advice where the facts and circumstances warrant. The views and opinions
+expressed above are those of the author and do not necessarily represent the views of SGV & Co.
+</item 88>
+
+<item 89>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+WHAT’S HAPPENED?
+
+MBW Explains is a series of analytical features in which we explore the context behind major music industry talking points – and suggest what might happen next.
+MBW Explains is supported by JKBX , a technology platform that offers consumers access to music royalties as an asset class.
+
+The drama at Hipgnosis Songs Fund isn’t letting up for the Holidays, it seems.
+
+This morning (December 19), the company’s board – now led by Chairman, Rob Naylor – issued a statement announcing that HSF would no longer, as previously
+expected, be issuing its latest financial results today.
+
+Instead, the results (covering the six months to end of September 2023) are now expected to be published sometime before the close of December 31.
+
+The reason for the delay?
+</item 89>
+
+<item 90>
+SBF Trial: The latest updates from the FTX collapse’s courtroom drama (TechCrunch, 2023-10-06T17:22:02+00:00)
+He, like many of SBF’s former colleagues, opted to cooperate with authorities and testified that SBF asked him to create a theoretical “legal justification” for
+the use of billions in consumer funds just days before FTX filed for bankruptcy.
+
+Robert Boroujerdi, managing director of the hedge fund Third Point, testified about his experience working with SBF and FTX, in a partnership that ultimately
+resulted in a $60 million investment and a lack of awareness about the special relationship between Alameda Research and FTX. Had he known of such a
+relationship, he testified that Third Point would not have invested in FTX in the first place.
+
+And earlier in the week, a University of Notre Dame professor who helped the government prosecution of Enron and WorldCom, Peter Easton, testified about what he
+uncovered after tracing the flow of billions of dollars between Alameda Research and FTX.
+</item 90>
+
+<item 91>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Here, MBW gets into it with Jubelirer regarding her first two years in charge at CMG – and, particularly, how she’s overcome the challenge of quelling, and then
+re-energizing, one of the most iconic label brands in existence…
+
+Capitol Music Group is in significantly stronger shape than it’s been for a while. It also feels meaningfully influential in pop culture – with several tracks
+in TikTok’s end-of-year / most popular playlists. It’s fair to say things looked less steady when you took over as CEO & Chair in 2021. You had to right some
+turbulence…
+
+Be careful what you wish for, right [laughs]?
+</item 91>
+
+<item 92>
+Michelle Jubelirer on Ice Spice, The Beatles, and reinventing Capitol Music Group: ‘I don’t think any label group has been able to turn things around as quickly
+as my team and I have done in less than two years.’ (Music Business Worldwide, 2023-12-07T20:57:51+00:00)
+Stay tuned.
+
+It’s kind of weird how The Beatles Now And Then has somehow slipped into the band’s canon – while enjoying modern chart success at the same time. How involved
+were you in that project and what was your experience of it?
+
+Never in a million years would I have thought I’d be involved in releasing a brand-new single from The Beatles. Arjun and I got a preview of the song from Jeff
+Jones at Apple Corp earlier this year, and began planning and strategizing on a global level with him, along with UMG UK and [Universal Music Enterprises
+President and CEO] Bruce Resnikoff and his team.
+
+The whole experience has been a “pinch me” moment. The Beatles mean the world to me — I’m a massive lifelong fan and they are such an important part of our
+company’s DNA.
+</item 92>
+
+<item 93>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+If a ‘superior proposal’ (versus the $440 million offer from HSC) is received during the ‘go-shop’ period, said HSF today – whether or not HSC uses its
+‘matching right’ to beat it – it may be necessary to adjourn the HSF AGM (and therefore the 2023 ‘continuation vote’) into November.
+
+In its note to shareholders today, the HSF board reiterated its belief – and Hipgnosis Song Management’s belief – that HSF owns “a unique portfolio of iconic,
+culturally significant songs that will deliver strong long-term value as they benefit from the structural tailwinds in the music industry”.
+
+The note added: “Furthermore, the [HSF] Board believes that the Investment Adviser’s approach to Song Management should enable the Company to outperform the
+wider music market.
+</item 93>
+
+<item 94>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+So there’s lots of growth there. And then there is the price elasticity optimization in mature markets.”
+
+That last point is a reference to the price hikes seen among all the major music streaming services over the past year or so, and the growing belief within the
+music industry that streaming price hikes will be sustained – as evidenced recently by Deezer’s second price hike in a year.
+
+Credit: QuiteSimplyStock/Shutterstock 3) The hot music rights acquisitions space is ‘likely slowing down a bit’
+
+The second half of 2022 saw a notable slowdown in music rights acquisitions, a phenomenon that some blamed on higher interest rates and the reduced liquidity
+that came with them.
+
+Although there has been something of a rebound this year, in Kyncl’s view, there is still a slowdown in this space – though that might be good for Warner Music
+Group.
+
+“I think what happened was there was an opening where artists and songwriters were suddenly open to selling catalogs.
+</item 94>
+
+<item 95>
+Sony Music has issued nearly 10,000 deepfake takedowns… and other things we learned from Dennis Kooker’s speech about AI (Music Business Worldwide,
+2023-11-30T21:28:03+00:00)
+(In our report, MBW suggested that YouTube parent Google‘s recent submission to The United States Copyright Office (USCO) – in response to a request for written
+submissions as part of a study around copyright law and policy issues raised by AI systems – may have influenced Sony’s absence from Dream Track.)
+
+Google was just one of various tech giants and AI companies that submitted responses to the USCO, amongst them, Anthropic and Stability AI.
+
+Anthropic, in its submission to the USCO, also argued that training (large language models) LLM’s on copyrighted material is fair use.
+
+Stability AI made a similar argument. Its position on the issue of “Fair Use” concerning AI and copyrighted content resulted in the resignation of prominent
+generative AI executive Ed Newton-Rex from the company.
+
+As reported by MBW last week, Universal Music Group submitted its response to the USCO.
+</item 95>
+
+<item 96>
+From FAPE/PEAC to PhilEd (Business World, 2023-11-12T16:04:21+00:00)
+PhilEd will be the “bastonero” or project manager, managing the project as well as mobilizing government support and assistance.
+
+FAPE or the Fund for Assistance to Private Education was a part of the Special Fund for Education set aside by the American government in 1963 from the surplus
+funds authorized by the War Damage Act of 1962 and organized under Executive Order 156 issued by President Ferdinand Marcos on Nov. 5, 1968.
+
+From the initial seed money of $6,154,000 or P215 million (based on the 1968 peso to dollar exchange rate), the FAPE fund in 55 years had barely grown to P277
+million. In contrast the trustees managing the fund have expanded their services, basically as service provider to the DepEd. As a consequence, it has been spun
+off as a separate organization, the Private Education Assistance Committee (PEAC).
+</item 96>
+
+<item 97>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+“[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try and pin the
+blame on [Hipgnosis Songs Management].” Christopher Brown, JP Morgan
+
+Concluded Brown: “[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try
+and pin the blame on [Hipgnosis Songs Management].
+
+“Our view is that a breakdown in the relationship between Board and manager would not be optimal for maximising shareholder value.”
+
+Brown further noted that JP Morgan would “not be surprised to see Citrin Cooperman resign, having been very publicly undermined by the [HSF] Board today”.
+
+JP Morgan retained its ‘overweight’ rating against HSF’s share price “in spite of yet another [HSF] own goal”.
+</item 97>
+
+<item 98>
+Hipgnosis Songs Fund Chair, Andrew Sutch, to step down; all-important ‘continuation vote’ likely to take place on October 26 (Music Business Worldwide,
+2023-09-28T23:36:54+00:00)
+That potential transaction is being managed for both HSF and HSC by two separate teams within their mutual investment advisor, Hipgnosis Song Management (HSM),
+which is run and part-owned by Merck Mercuriadis.
+
+When it announced its intention to explore the $440 million catalog sale to HSC two weeks ago, Hipgnosis Songs Fund confirmed that one of its motivating factors
+was that the transaction could potentially act “as a catalyst for a re-rating of [HSF’s] share price”.
+
+Aka: Increasing that share price to bring it up closer to the current operative NAV of the company.
+
+HSC’s $440 million offer to acquire the 29 catalogs, HSF confirmed earlier this month, equates to a 26% increase on the amount HSF paid for those catalogs to
+acquire them in the past.
+</item 98>
+
+<item 99>
+OpenAI's ex-chairman accuses board of going rogue in firing Altman: 'Sam and I are shocked and saddened by what the board did' (Fortune,
+2023-11-18T15:33:09+00:00)
+The company said its board consists of OpenAI’s chief scientist, Ilya Sutskever, and three non-employees: Quora CEO Adam D’Angelo, tech entrepreneur Tasha
+McCauley, and Helen Toner of the Georgetown Center for Security and Emerging Technology.
+
+OpenAI’s key business partner, Microsoft, which has invested billions of dollars into the startup and helped provide the computing power to run its AI systems,
+said that the transition won’t affect its relationship.
+
+“We have a long-term partnership with OpenAI and Microsoft remains committed to Mira and their team as we bring this next era of AI to our customers,” said an
+emailed Microsoft statement.
+
+While not trained as an AI engineer, Altman, now 38, has been seen as a Silicon Valley wunderkind since his early 20s. He was recruited in 2014 to take lead of
+the startup incubator YCombinator.
+</item 99>
+
+<item 100>
+Investment options for high networth investors (Business Line, 2023-10-28T14:42:28+00:00)
+It’s important to consider the past track record and management team before making investment decisions. Consultation with investment advisors who are
+knowledgeable in this area can undoubtedly be beneficial.
+
+The author is President & Head, Nuvama Wealth
+</item 100>
+=== END ITEM id=6f4b67929e6380b2 ===

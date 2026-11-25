@@ -1,0 +1,23 @@
+[
+  {"id": "243ba2af0600dcab", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "If a significant amount of money is being placed on one team or participant, sportsbooks might adjust the odds to balance their liability."}]}
+  ]},
+  {"id": "d1df3bc2e5e9be17", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 32, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 32, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 32, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "Bowl game props: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "Bowl game props: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 16, "quote": "Bowl game props: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 16, "quote": "Bowl game props: These can be team or individual player prop bets, such as which team is winning at halftime or the total number of receptions a player collects."}]}
+  ]},
+  {"id": "68af73ad3bf56673", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

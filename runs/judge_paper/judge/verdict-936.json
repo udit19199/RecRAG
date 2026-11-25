@@ -1,0 +1,29 @@
+[
+  {"id": "d2d0c6756a312437", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 19, "quote": "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 19, "quote": "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 19, "quote": "While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 69, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 69, "quote": "Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist."}]}
+  ]},
+  {"id": "70fd68e996f89ab2", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "cd763f958e639d2b", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "0.6", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]

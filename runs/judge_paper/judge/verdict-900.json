@@ -1,0 +1,17 @@
+[
+  {
+    "id": "526ff867ba66f2a3",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 58, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 58, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 58, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+      {"fact": "0.3", "status": "stated", "evidence": [{"item": 58, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 89, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 89, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 89, "quote": "Caroline Ellison, who claimed she took $14 billion from customers to"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 89, "quote": "claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 89, "quote": "claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 89, "quote": "claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF."}]}
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {"id": "aa5c6e7ab6d2494b", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 94, "quote": "Prince William (played by Rufus Kampa)"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "The latest installment takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+  ]},
+  {"id": "fe0a49b3b09d48f5", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]}
+]

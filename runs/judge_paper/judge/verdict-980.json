@@ -1,0 +1,9 @@
+[
+  {"id": "8bbab6ab236bd55a", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "a friendship bracelet, a fan tradition at her concerts"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "with his number on it to give to her, seemingly expressing his interest in Swift."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 56, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+  ]}
+]

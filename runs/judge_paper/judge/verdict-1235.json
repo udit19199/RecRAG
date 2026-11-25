@@ -1,0 +1,122 @@
+[
+  {
+    "id": "9e2c3f8346f73528",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 100,
+            "quote": "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 100,
+            "quote": "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 100,
+            "quote": "When Changpeng Zhao, the CEO of Binance, announced on Twitter that he intended to acquire FTX, Ellison confessed the theft of customer funds to him and a few other employees, Drappi said."
+          }
+        ]
+      },
+      {
+        "fact": "0.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 100,
+            "quote": "to him and a few other employees, Drappi said."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 33,
+            "quote": "Alameda Research’s former CEO Caroline Ellison"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 59,
+            "quote": "Ellison’s tenure as CEO of Alameda Research was an exercise in optics, she testified."
+          }
+        ]
+      },
+      {
+        "fact": "2.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 92,
+            "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."
+          }
+        ]
+      },
+      {
+        "fact": "2.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 92,
+            "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."
+          }
+        ]
+      },
+      {
+        "fact": "2.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 92,
+            "quote": "In fact, he specifically pointed the finger at Ellison, the former CEO of Alameda, who, he said, did not adequately protect her hedge fund from the inherent risk of the crypto markets."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b2de53c42cd13bed",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

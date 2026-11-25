@@ -1,0 +1,15 @@
+[
+  {"id": "77ad2154c3f851b9", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 36, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 36, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 36, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 36, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 36, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 17, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 17, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 6, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 6, "quote": "never meant to commit fraud or steal"}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 6, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+  ]}
+]

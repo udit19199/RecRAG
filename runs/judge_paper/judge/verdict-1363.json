@@ -1,0 +1,52 @@
+[
+{"id": "829000fb93198852", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 26, "quote": "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 26, "quote": "Unfortunately, she did say that she had conversations with investors as part of their due diligence — and, of course, Alameda was taking on losses from FTX to keep FTX’s balance sheet pristine."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 48, "quote": "Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation — something he alleged other accounts at FTX didn’t get."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 48, "quote": "Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation — something he alleged other accounts at FTX didn’t get."}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 48, "quote": "Last week, Wang testified that Alameda got access to a special credit line and an option to take its balance into the negative without triggering liquidation — something he alleged other accounts at FTX didn’t get."}]},
+{"fact": "2.0", "status": "contradicted", "evidence": [{"item": 63, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.”"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 63, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 63, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 63, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 63, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]},
+{"fact": "2.5", "status": "stated", "evidence": [{"item": 63, "quote": "FTX was no Ponzi scheme. It was a “very innovative, successful company.” And the business practices between the two were reasonable, he argued, claiming that Alameda acted legally as an FTX customer, payment processor, and market maker, or financial entity that acts as a trading partner for customers looking to buy and sell cryptocurrencies."}]}
+]},
+{"id": "c2ae14f2242ec4bf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "10b892ce02027237", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "78d5834f3a3886b2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "1.4", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]}
+]

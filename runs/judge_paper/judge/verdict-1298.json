@@ -1,0 +1,14 @@
+[
+  {"id": "7551dcd976d9dc0f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 46, "quote": "While its usual hours of operation are from 6am to 9pm"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 46, "quote": "opening and closing times on the holiday vary based on location"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 11, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 11, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 19, "quote": "This year, Thanksgiving falls on 23 November."}]}
+  ]},
+  {"id": "0cc85c1cc7d4c051", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []}
+  ]}
+]

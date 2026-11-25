@@ -1,0 +1,16 @@
+[
+{"id": "4e711baa6aa5594c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 76, "quote": "Wang testified that he heard Bankman-Fried tell another trader that it was okay to continue withdrawing money from the account"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 39, "quote": "Bankman-Fried said it was okay as long as it was lower than FTX’s total trading revenue."}, {"item": 76, "quote": "it was okay to continue withdrawing money from the account as long as the amount was less than FTX’s total trading revenue"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "his on-again off-again girlfriend and the CEO of Alameda"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front,"}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 14, "quote": "Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money"}]},
+{"fact": "1.4", "status": "stated", "evidence": [{"item": 14, "quote": "to customer money—both cash and crypto—the government claimed"}]},
+{"fact": "1.5", "status": "stated", "evidence": [{"item": 14, "quote": "Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 100, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 100, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 100, "quote": "never meant to commit fraud or steal and basically got in over his head"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 100, "quote": "never meant to commit fraud or steal and basically got in over his head"}]}
+]}
+]

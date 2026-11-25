@@ -1,0 +1,48 @@
+[
+  {"id": "99c62fb98b649851", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 2, "quote": "One of the major sources of Gen Z’s distress, of course, is climate change."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 69, "quote": "we need to improve our understanding of drivers of sea surface temperature patterns"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 69, "quote": "In other words, first, we need to improve our understanding of drivers of sea surface temperature patterns"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 69, "quote": "drivers of sea surface temperature patterns—decadal coupled variability"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 69, "quote": "the pace and spatial structure of ocean heat uptake"}]},
+    {"fact": "1.4", "status": "stated", "evidence": [{"item": 69, "quote": "the pace and spatial structure of ocean heat uptake"}]},
+    {"fact": "1.5", "status": "stated", "evidence": [{"item": 69, "quote": "forcing by aerosols, greenhouse gases, and volcanoes"}]},
+    {"fact": "1.6", "status": "stated", "evidence": [{"item": 69, "quote": "forcing by aerosols, greenhouse gases, and volcanoes"}]},
+    {"fact": "1.7", "status": "stated", "evidence": [{"item": 69, "quote": "forcing by aerosols, greenhouse gases, and volcanoes"}]},
+    {"fact": "1.8", "status": "stated", "evidence": [{"item": 69, "quote": "we need to improve our understanding of drivers of sea surface temperature patterns—decadal coupled variability; the pace and spatial structure of ocean heat uptake; and forcing by aerosols, greenhouse gases, and volcanoes—as well as the relative timing of these drivers"}]}
+  ]},
+  {"id": "60a3faa163914f07", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0e902137adfa1b64", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "57718ef02311380e", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

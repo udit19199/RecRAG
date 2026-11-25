@@ -1,0 +1,42 @@
+[
+  {
+    "id": "021b3f932357fcc3",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 48, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 48, "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 33, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 33, "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."}
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {"item": 38, "quote": "This year, Thanksgiving falls on 23 November."}
+        ]
+      }
+    ]
+  }
+]

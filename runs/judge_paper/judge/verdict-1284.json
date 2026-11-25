@@ -1,0 +1,23 @@
+[
+  {"id": "66ed2ddd906609f1", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 20, "quote": "It will attempt to argue that Google restrains competition within two separate markets"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 20, "quote": "distribution of apps to Android users and the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 20, "quote": "the market for payment processing solutions for content inside Android apps."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 26, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.3", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+    {"fact": "2.4", "status": "stated", "evidence": [{"item": 26, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+  ]},
+  {"id": "7dcf2bbdf2237f04", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

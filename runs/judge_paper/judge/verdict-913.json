@@ -1,0 +1,15 @@
+[
+  {
+    "id": "8b7e6c6509f688ef",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 31, "quote": "As an added bonus, Harris is also the preferred goal-line back, scoring in three of those games."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 31, "quote": "Harris is also the preferred goal-line back, scoring in three of those games."}]},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 66, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive, thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 66, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive"}]},
+      {"fact": "1.2", "status": "stated", "evidence": [{"item": 66, "quote": "The Wildcats on their first drive put a touchdown on the board a seven play, 61 yard drive"}]},
+      {"fact": "1.3", "status": "stated", "evidence": [{"item": 66, "quote": "thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+      {"fact": "1.4", "status": "stated", "evidence": [{"item": 66, "quote": "thanks to a 25-yard dash before diving into the end zone by running back Jonah Coleman."}]},
+      {"fact": "1.5", "status": "stated", "evidence": [{"item": 66, "quote": "before diving into the end zone by running back Jonah Coleman."}]}
+    ]
+  }
+]

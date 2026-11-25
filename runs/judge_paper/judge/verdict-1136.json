@@ -1,0 +1,65 @@
+[
+{"id": "3759ca0f2fa3d90c", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 13, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 13, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 91, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 91, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 91, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+{"fact": "1.3", "status": "stated", "evidence": [{"item": 91, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+]},
+{"id": "80ef03d06ffa2ea1", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "0e5e6ea6d36e00bf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "4dd9d3fc35aaa497", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []},
+{"fact": "2.4", "status": "missing", "evidence": []}
+]},
+{"id": "92fa904a0af90fab", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []},
+{"fact": "2.2", "status": "missing", "evidence": []},
+{"fact": "2.3", "status": "missing", "evidence": []}
+]},
+{"id": "ce416b35cd3fae12", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]},
+{"id": "c71da5ba63ec1533", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

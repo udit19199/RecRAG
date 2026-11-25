@@ -1,0 +1,28 @@
+[
+  {"id": "b2e9aec725244504", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Love Story This finally brings us to the"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "This finally brings us to the fated sighting of Swift at Arrowhead Stadium on Monday"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 3, "quote": "fated sighting of Swift at Arrowhead Stadium on Monday, cheering on No. 87 with gusto."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 14, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 14, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 14, "quote": "The game is taking place at Arrowhead Stadium, where Swift has performed herself and attended a game before."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 73, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 73, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 73, "quote": "Now, Swift has shared that she has nothing to hide in her new relationship with Kelce."}]}
+  ]},
+  {"id": "6238a090d437c94a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []},
+    {"fact": "1.5", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

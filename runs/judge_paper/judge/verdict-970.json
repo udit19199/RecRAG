@@ -1,0 +1,19 @@
+[
+  {"id": "23d75f0b6255310d", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 99, "quote": "Israel stopped allowing deliveries of food, fuel and other supplies to Gaza’s 2.3 million residents on Oct. 10, 2023"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 99, "quote": "is reportedly preparing for a ground invasion."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 34, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 34, "quote": "The understandings that Israel reached with Hamas in 2012 were made \"to stop the fighting\", Ortal says, and to get life back to normal as quickly as possible."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 2, "quote": "Another user said that no one can carry out such a major attack against Israel without intelligence support."}]}
+  ]},
+  {"id": "ea3c4c034034dfdb", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]}
+]

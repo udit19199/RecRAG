@@ -1,0 +1,19 @@
+[
+  {"id": "cbe8f30848d8eea3", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 90, "quote": "It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 90, "quote": "It would seem that, as the Springboks play for their country"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 90, "quote": "the generation of players and leaders that will call time on their international careers at week’s end"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 84, "quote": "The Springboks took a 12-3 lead after 34 minutes"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 84, "quote": "The Springboks took a 12-3 lead after 34 minutes"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 84, "quote": "The Springboks took a 12-3 lead after 34 minutes when the All Blacks once again failed to release on their goal line."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 29, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch"}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 29, "quote": "It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney."}]},
+    {"fact": "2.2", "status": "stated", "evidence": [{"item": 29, "quote": "as well as a maiden defeat in 2020 in Sydney."}]}
+  ]},
+  {"id": "67efd6d564a9df54", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]}
+]

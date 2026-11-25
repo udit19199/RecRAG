@@ -1,0 +1,15 @@
+[
+{"id": "2a51d07c1519d4d4", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 51, "quote": "For investors around the world, the “Fed matters more than other central banks,”"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 51, "quote": "weak US data is “the only game-changer for markets”, foreign-exchange strategists at Bank of America wrote"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 51, "quote": "foreign-exchange strategists at Bank of America wrote in a BofA Global Research report."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 99, "quote": "Postponements of such reports could complicate things for the Fed"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 99, "quote": "which has insisted it will make upcoming decisions on interest rates based on what incoming data say about the economy."}]}
+]},
+{"id": "b56c9c5c83147dbf", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

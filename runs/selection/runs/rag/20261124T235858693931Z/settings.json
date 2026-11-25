@@ -1,0 +1,51 @@
+{
+  "llm": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "medium",
+    "timeout": 120.0
+  },
+  "embedding": {
+    "model": "text-embedding-3-small",
+    "dimensions": 1536,
+    "timeout": 120.0
+  },
+  "hipporag": {
+    "max_output_tokens": 16384,
+    "construction_model": null
+  },
+  "graphrag": {
+    "namespace": "graphrag",
+    "timeout": 30,
+    "index_timeout": 600,
+    "extraction_concurrency": 20,
+    "ontology": "dataset",
+    "graph": {
+      "uri": "neo4j://localhost:7687"
+    },
+    "retrieval": {
+      "timeout": 10
+    }
+  },
+  "pricing": {
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "verified_date": "2026-10-04",
+    "llm_model": "gpt-6-luna",
+    "input_per_million": 0.1,
+    "cached_input_per_million": 0.01,
+    "cache_write_per_million": 0.125,
+    "output_per_million": 0.5,
+    "embedding_model": "text-embedding-3-small",
+    "embedding_per_million": 0.02
+  },
+  "retrieval": {
+    "top_k": 200,
+    "rerank": false,
+    "rerank_candidate_k": 20,
+    "rerank_top_k": 10,
+    "ircot": false,
+    "max_steps": 2
+  },
+  "input_source": "official",
+  "paper_data": null,
+  "upstream_commit": "d2a0c0c0deb0903d60338d3c416ccd6f9544267c"
+}

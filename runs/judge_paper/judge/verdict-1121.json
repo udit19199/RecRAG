@@ -1,0 +1,29 @@
+[
+  {"id": "b678336559d6b665", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "These delays may lead to bets being refunded depending on the circumstances and the specific rules of your sportsbook."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 72, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 72, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 72, "quote": "Every sportsbook jumps on board when a line moves or odds change for a legitimate reason, like an injury or roster move."}]},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "f9ffaf4b85319afc", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]},
+  {"id": "ad708d13378872a4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

@@ -1,0 +1,19 @@
+[
+  {"id": "8f23dbaf761e9ab7", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 43, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 43, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 43, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 43, "quote": "This not only allows the collection of data from complex equipment but also enables operators to track equipment performance and predict maintenance and downtimes."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "d72f4ed7da3ff838", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]}
+]

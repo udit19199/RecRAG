@@ -43,7 +43,7 @@ REG = {"rag": final["rag"], "graphrag": final["graphrag"],
 REG.update(json.load(open("runs/judge_paper/runs.json")))
 p = Path("runs/selection/paired/next_registry.json")
 if p.exists():
-    REG.update(json.load(p))
+    REG.update(json.load(open(p)))
 REG = {k: v for k, v in REG.items() if not k.endswith("_infnull")}
 for name in ("B1",):  # added once their runs exist
     reg = json.load(open("runs/selection/run_registry.json"))

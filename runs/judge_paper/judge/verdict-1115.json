@@ -1,0 +1,77 @@
+[
+  {
+    "id": "d7efe95e9029a669",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 57,
+            "quote": "The Fed’s main interest rate is at its highest level since 2001, and the central bank indicated last week it may cut interest rates next year by less than it earlier expected."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 57,
+            "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected."
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 57,
+            "quote": "the central bank indicated last week it may cut interest rates next year by less than it earlier expected."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 75,
+            "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 75,
+            "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 75,
+            "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control."
+          }
+        ]
+      },
+      {
+        "fact": "1.3",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 75,
+            "quote": "Stocks surged through the week on rising hopes that the Federal Reserve is finally done with its market-crunching hikes to interest rates, in order to get inflation under control."
+          }
+        ]
+      }
+    ]
+  }
+]

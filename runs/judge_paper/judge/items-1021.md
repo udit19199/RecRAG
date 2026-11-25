@@ -1,0 +1,1508 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=baea6b7160599319 ===
+Gold sentences and facts:
+Sentence 0: Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and could potentially snap his four-game scoring drought.
+  Fact 0.0: Kelce averages 81.3 receiving yards per game against the Raiders since 2019.
+  Fact 0.1: Kelce is an All-Pro tight end.
+  Fact 0.2: Kelce's average receiving yards against the Raiders suggest he is in line for a productive outing.
+  Fact 0.3: Kelce could potentially snap his four-game scoring drought.
+Sentence 1: The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the classic game “Kiss, Marry, Kill”.
+  Fact 1.0: The first link between Swift and Kelce was established in 2016.
+  Fact 1.1: In 2016, Kelce played the classic game "Kiss, Marry, Kill" and that is when the first link between Swift and Kelce was established.
+  Fact 1.2: Kelce helped bring his team to Super Bowl victory in 2020.
+  Fact 1.3: Kelce helped bring his team to Super Bowl victory in 2023.
+
+Retrieved items:
+<item 1>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But at the same time, they're overdoing it a little bit."
+
+Jason also chimed in on the matter, saying, "I just think the NFL is not used to celebrities coming to the games. Like basketball has it all figured out.
+They're all courtside, they're sitting there. They show 'em once or twice, but then they get back to the game."
+
+Oct. 12: Swift attends Chiefs-Broncos
+
+"Now it's too late for you and your white horse *Bronco, to come around" - White Horse
+
+One day after her movie premiere, Swift is in the house for the Chiefs' "Thursday Night Football" divisional matchup against the Broncos. The game is taking
+place at Arrowhead Stadium, where Swift has performed herself and attended a game before. According to Al Michaels, the game will have minimal Swift coverage,
+though so far there has already been a mention of the superstar.
+
+Oct.
+</item 1>
+
+<item 2>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce believes the National Football League’s coverage of his rumoured girlfriend Taylor Swift is a bit too much.
+
+Following his game against the New York Jets on 1 October, the 33-year-old Kansas City Chiefs tight end opened up about the NFL broadcast on the most recent
+episode of his podcast, New Heights with Jason and Travis Kelce.
+</item 2>
+
+<item 3>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+McCaffrey, who seems poised to win the Offensive Player of the Year Award, leads the NFL in rushing (1,292 yards) and total yards per game (128.6) this season
+and is tied for first in touchdowns (20).
+
+Ravens TE Isaiah Likely thriving in the starting role: The Ravens offense hasn't lost a step since losing one of the team's top weapons in tight end Mark
+Andrews (ankle) in Week 11, largely due to Likely's emergence.
+
+The second-year tight end has averaged 64.3 yards over his last three games, which is particularly noteworthy since Andrews averaged 54.4 yards per game before
+sustaining his injury.
+
+Should we expect a defensive battle?: While both teams boast offenses that rank in the top five in yardage and scoring, this may not turn into a shootout.
+</item 3>
+
+<item 4>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Swift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?
+
+In August, the brothers discussed Kelce’s moustache, which he grows every year in honour of the Chief’s head coach, Andy Reid. When asked if he knew what Swift
+thought of the ’stache, he remained cheekily confident. “We’re not going to bring up Taylor Swift in this episode,” he says, “But something tells me she’s going
+to like it.” There was a clear suggestion Kelce had made contact with Swift, and was even going to meet her. Shortly after that remark, Kelce took a week off
+training to visit New York City, according to Vulture. Coincidentally, this happened to be while Swift was re-recording her 1989 tracks in the city. Welcome to
+New York
+
+The suspicion the two were actually spending time together in New York was seemingly confirmed in September when it was reported they had been “quietly hanging
+out” for months.
+</item 4>
+
+<item 5>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+He is regulated to pass from the pocket, but you are taking away the biggest weapon the offense had when you do that. Odell (Beckham) is not that guy anymore.
+Who are you truly afraid of on that offense? Nobody but Lamar, and if you are not using Lamar in a certain capacity, he becomes just like the rest of these
+quarterbacks around the league — hit or miss.”
+
+• Jacksonville Jaguars: Are they ready for prime time?
+
+What I think: Trevor Lawrence’s knee injury was the big concern coming out of Sunday. If he’s out, expectations shift dramatically. More than the other AFC
+contenders, the Jaguars seem early in their life cycle, still finding their way. That makes them a little harder to trust in big spots but also leaves greater
+space for growth. Let’s hope those test results on Lawrence’s knee come back clear.
+
+Exec comment: “I like Jacksonville. Doug (Pederson) has a championship pedigree. This team is relatively young. They are scrappy.
+</item 5>
+
+<item 6>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+“This all started when Travis very adorably put me on blast on his podcast, which I thought was metal as hell,” she explained. “We started hanging out right
+after that. So we actually had a significant amount of time that no one knew, which I’m grateful for, because we got to get to know each other.”
+
+Swift also confirmed that when she famously first attended Kelce’s game at Arrowhead Stadium in September, she was already dating the NFL star.
+
+“By the time I went to that first game, we were a couple. I think some people think that they saw our first date at that game? We would never be psychotic
+enough to hard launch a first date,” she said.
+
+The “Blank Space” singer also acknowledged that although her love life continues to make headlines with every Kansas City Chiefs game she attends, she’s focused
+on being there for her partner. She specified that she isn’t trying to hide her relationship from the public eye.
+</item 6>
+
+<item 7>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Travis Kelce has been catching a lot more than footballs lately, and fans everywhere have been swift to hop on the Taylor Swift bandwagon. The celebrity couple
+has been in the news for well over a week now, and despite the fatigue from many -- Chris 'Mad Dog' Russo's rant being among the most vocal -- companies like
+FanDuel just can't help but lean into a profitable storyline. Are they for real or is this "Love Story" just some extravagant publicity stunt?
+
+Time will tell, but one thing's for certain when it comes to the media, social media, newspapers, football fans, Swifties, and just about everyone else within
+the 50 states and U.S. territories, including Puerto Rico and Guam: "You need to calm down." Regardless, Kelce and Swift take their tour on the road to
+Broadway, a place that puts on all the great shows.
+</item 7>
+
+<item 8>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+“Well I know for DAMN SURE that s*** about ‘having kids within the next year’ is NOT coming from Taylor’s side,” one claimed. “She’s got the Eras Tour booked
+all through next year, and she’d rather die than cancel a show. But we do know who’s been public about looking for a ‘BREEDER.’”
+
+The comments about Travis and Swift’s romance came days after they seemingly confirmed their relationship. On 22 October, Swift made her return to Arrowhead
+Stadium to watch as the Kansas City Chiefs won their game against the Los Angeles Chargers. The occasion marked Swift’s fourth time attending one of Kelce’s
+games, amid ongoing reports that they are dating.
+
+Following the event, Chariah Gordon, the partner of Kelce’s teammate Mecole Hardman Jr, took to Instagram to share a snap of the singer and NFL player’s sweet
+PDA moment. In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+</item 8>
+
+<item 9>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“I appreciate you always trying to make it to both of our games.”
+
+“She also told me thank you because she was in an alternate universe, she was sitting there with Deadpooland Wolverine,” Kelce added, referencing Reynolds’ and
+Jackman’s respective superhero movie characters. “It was a hot ticket, man, you know what I’m saying? That suite was rockin’.
+
+“They were enjoying themselves. Somebody told me that everybody was enjoying themselves in that suite,” Kelce said.
+
+Not only has NFL viewership increased since Swift began attending her rumoured boyfriend’s games, but jersey sales for the Chiefs tight end have reportedly
+spiked by 400 per cent, according to a report from the NFL’s e-commerce partner, Fanatics.
+
+Following critcism the league is focusing too much on Swift, the NFL responded with an official statement handed to People on 4 October.
+
+“We frequently change our bios and profile imagery based on what’s happening in and around our games, as well as culturally,” the message read.
+</item 9>
+
+<item 10>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+• Detroit Lions: Have they fixed their defense?
+
+What I think: The Lions are 11.3 EPA per game better on defense from last season to this season, the second-largest gain for any team since last season. The
+schedule has something to do with that, but the 2022 defense was so bad, it couldn’t stop Carolina. Detroit will win the NFC North and return to the playoffs,
+which will make this season successful no matter what happens from there. But we won’t find out until the postseason just how much better the defense might be,
+because the remaining schedule features so many weak offenses. That includes Chicago twice, Green Bay, Denver and Las Vegas.
+
+Exec comment: “Yes, I do buy them. This is a league full of teams who do not really know who they are week to week. Detroit knows who they are, and they play to
+their identity. Anytime you know who you are and play to that style, you have a chance to be dangerous.”
+</item 10>
+
+<item 11>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+And please, have fun and bet responsibly.
+
+Our pick: Bet on it (with a small wager)
+
+Exes & 0s: NY Jets to Score 0 Total Points (+3400)
+
+The Jets are currently back in a familiar place as the laughingstock of the NFL. Swift, like many celebrities, has plenty of exes, but she always scores again.
+Maybe the haters are right. Maybe Kelce will be the subject of the next big hit. Maybe the publicists are cashing checks with this brilliant idea. Maybe it's
+real. Time will tell, but when the relationship inevitably falls apart like most dream celebrity couples do, there is always another someone. Point is, the Jets
+are without the quarterback they married, and now they're back together with Wilson. It's not glamorous, but they'll score again.
+</item 11>
+
+<item 12>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Can QB Jalen Hurts and the Eagles offense finally bounce back?: Philadelphia's defense isn't the only unit that needs to rebound, as the offense has struggled
+mightily over the last three games, with Hurts' ineffectiveness playing a significant role. After averaging the third-most points in the NFL over the first 11
+games (28.2), the Eagles have scored four offensive touchdowns during their current skid, three of which came via the "tush push."
+
+The Eagles may have difficulty throwing against a solid Giants pass defense, though they could alleviate some of their offensive woes by running the ball
+efficiently. New York gives up 131.6 rushing yards per game, the fourth-most in the league.
+
+Does Giants QB Tommy DeVito have any magic left?: The Giants may have a terrible offense, but this unit has operated at its best under DeVito, an undrafted
+rookie and native of Cedar Grove, New Jersey.
+</item 12>
+
+<item 13>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Who do you want lining up the potential winning kick in a Super Bowl? It’s an interesting question in a season that has seen Moody and Saints rookie Blake Grupe
+miss game-winning tries, but the data could be on the 49ers’ side.
+
+FGA Dist Rookies Veterans <33 Yds 97% [31-32] 94% [330-351] 34-44 Yds 75% [21-28] 82% [230-279] 45-50 Yds 78% [7-9] 73% [121-165] 51-55 Yds 100% [8-8] 59%
+[33-56] 56+ Yds 0% [0-1] 55% [6-11] Totals 86% [67-78] 84% [720-862]
+
+The table above shows field-goal make rates in the postseason since 2000 for rookie kickers vs. veterans.
+</item 13>
+
+<item 14>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+That figure was 7.8 in Mahomes’ first year as the starter and has climbed every season since. It’s a testament to the Chiefs’ adaptability, but also a
+reflection of plummeting explosive play rates.
+
+Exec comment: “Yeah, it looks harder for them on offense until Mahomes finds (Travis) Kelce on every major third down, every major two-minute play, every major
+touchdown. Kansas City has the luxury of their best players being their toughest players. Chris Jones is a very tough player. Kelce is a very tough player.
+Mahomes is a very tough player. You wonder why they win the games? Because the games are won by the toughest teams most of the time.”
+
+• Philadelphia Eagles: Has Jalen Hurts regressed? Where are the explosive pass plays?
+
+What I think: Explosive passing is down through most of the league, including for the Eagles.
+</item 14>
+
+<item 15>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+The “All Too Well” singer’s interview with Time marks her first time publicly speaking out about Kelce, who she’s been romantically linked to since this summer,
+when the football tight end first confessed to attempting to give her his number.
+
+While Swift has attended a few of Kelce’s games since their relationship started, he’s also gone on to support her career. In November, he made his way to
+Buenos Aires, Argentina, to attend one of her Eras Tour shows. During the concert, Swift gave a shout-out to the Chiefs player when she changed her “Karma”
+lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang, letting out a laugh as fans in the audience
+screamed in response.
+
+After the show, the “Style” singer was seen running into Kelce’s arms and kissing him, before he whisked her away backstage.
+</item 15>
+
+<item 16>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+GO DEEPER Behind the AI magic that lets Amazon's Prime Vision show the NFL like never before
+
+• Buffalo Bills: Are the defensive injuries too much to overcome?
+
+What I think: The rest of the conference is the key variable. The Bills are diminished. They have imperfections. But Buffalo already defeated the Dolphins. The
+other AFC teams aren’t exactly peaking. Kansas City and Cincinnati appear easier to defend this season than in the recent past. We’ll see how well the Dolphins
+hold up. This can still be Buffalo’s season.
+
+Exec comment: “Matt Milano and Tre’Davious White, those are huge injuries for that football team. The Bills are not as dominant as they felt going into it with
+so many injuries on defense. But the division they are in, they will still be able to slug it out and get to where they need to go. Nobody has really emerged in
+the AFC to unseat these teams at the top.”
+</item 16>
+
+<item 17>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+In conversation with his brother Jason, 35, the two addressed concerns from longtime football enthusiasts who were frustrated by the constant Swift references
+throughout Sunday’s game at MetLife Stadium.
+
+Not only did the football league promote last Sunday’s game by speculating whether the Grammy winner will attend the Chiefs-Jets match, but cameras were
+constantly panning to the star-studded suite. During the game, Swift was joined an A-list group of guests, including her best friends Blake Lively and Ryan
+Reynolds, Game of Thrones star Sophie Turner, and actor Hugh Jackman.
+
+The NFL also introduced a special segment with Carson Daly and The Voice, where the famed host attempted to explain the specifics of football to “Swifties.”
+
+In the New Heights podcase episode, titled “The NFL Needs to Calm Down”, Jason asked his brother plainly whether he thought the football was “overdoing it” with
+the coverage of Swift during the game.
+
+“I think everybody is just, like, overwhelmed,” the Chiefs tight end replied.
+</item 17>
+
+<item 18>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+“Forever grateful that Joe Alwyn kept to himself and is private,” one wrote, referring to Swift’s ex-boyfriend of six years.“It’s what makes Travis Kelce’s
+statements from earlier this year about ‘finding a breeder’ cringe. You are free to say what you want but are not free from the consequences of doing so. Women
+are not objects.”
+
+“‘Start breeding,’ oh this is just f***ing disgusting and it’s setting us back so much,” another added. “Women aren’t baby-making machines, women are more than
+the man they’re dating, we are more than marriage.”
+
+“Ain’t a Swiftie but don’t have to be one to be weirded out about Travis Kelce calling women ‘breeders,’” someone else wrote. “That ain’t it dude.”
+
+Many other people went on to criticise claims about Swift and Travis having children soon, since the singer is about to return to her Eras Tour until November
+2024.
+</item 18>
+
+<item 19>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Elsewhere in the podcast, the brothers revealed the one person who was most delighted to see famous musicians, actors, and professional athletes all coming
+together for Sunday’s game was none other than “Mama Kelce,” aka Donna Kelce. On 1 October, the NFL players’ mother travelled from Philadelphia to New Jersey to
+watch both her sons play football on the same day.
+
+“She’s been on top of the f***ing world, man,” Kelce told his older brother. He also acknowledged how his mother seemed to be loving the new guests in her
+family suite, watching her son play along with her. “I know mom enjoyed it,” Kelce confessed.
+
+“I shot her a text. I didn’t get a chance to see her, so I shot her a text right after the game on the bus ride to the airport and was like: ‘Hey, mom, sorry I
+didn’t get to catch you before I left but I hope you enjoyed the game,’” he continued.
+</item 19>
+
+<item 20>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Six of the 17 won anyway. The Dolphins were the only one of those 223 teams to win and cover the spread, which was 13.5 for this game.
+
+• Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games. That ranks second in NFL
+history to Hall of Famer Don Hutson, who had 819 yards through six with Green Bay in 1942.
+</item 20>
+
+<item 21>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+ADVERTISEMENT Article continues below this ad
+
+How can you not love Taylor Swift? Most of the 12 Grammy Awardee’s songs are about that warm fuzzy feeling and chemical reaction that we call love. And her
+songs have earned the support of 103.7992 million Swifties in the world. Yeah, we don’t have a round figure for that. We have the exact figure up to four
+decimals. That’s how much data we have on her. Football has 184 million fans. The league is able to generate a revenue of $18 billion from 184 million. If it
+adds 104 (after rounding 103.7992) million to that number, guess how much revenue it will generate? $28 billion. And just like that, their target will be met.
+</item 21>
+
+<item 22>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in." - Gold Rush
+
+While on the Pat McAfee show, Kelce discussed the rumors and sounded somehow surprised people are talking about it.
+
+"It is hilarious how much traction this has actually got," he said of all the talk. "It's like that old game in school called telephone where everybody is just
+whispering in each others ear, just hearing some random stuff. Especially when you got Jason Kelce on live television telling people just both sides."
+
+He then admitted that he invited Swift to one of his games, joking that they would compete to see who put on the bigger show at Arrowhead Stadium, home of the
+Chiefs.
+
+"I threw it out there, I threw the ball in her court and I told her you know, I've seen you rock the stage in Arrowhead you might have to come see me rock the
+stage in Arrowhead and see which one is a little more lit. We will see what happens in the near future."
+</item 22>
+
+<item 23>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+“OF ALL 230 SONGS IN THE DISCOGRAPHY I’M SICK,” one fan commented, while another person wrote: “It’s unbelievable how invested I am in this.”
+
+“I’m gonna need to go back and see all photos of him from the last three months and dissect if he’s wearing friendship bracelets,” a third wrote.
+
+In other photos from the charity event - which were shared to Instagram by Jordan’s KC photography - Kelce wasn’t seen wearing the friendship bracelet, leading
+many people to believe that he received the bracelet from a fan that day.
+
+Two days after his charity event, the “All Too Well” singer was spotted cheering for the Kansas City Chiefs tight end from the box seats at Arrowhead Stadium in
+Kansas City, Missouri. Not only was she seen sitting next to Kelce’s mother, Donna, but she also appeared to yell “let’s f***ing go” in response to Kelce’s
+third-quarter touchdown reception.
+</item 23>
+
+<item 24>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Christmas Day isn't just for the NBA, as the NFL is set to air an exciting triple-header featuring fierce division clashes and a highly anticipated matchup we
+could see again on Super Bowl Sunday. Here are the top players and storylines to monitor for Monday's slate.
+
+Las Vegas Raiders (6-8) at Kansas City Chiefs (9-5) | 1 p.m. ET
+
+New chapter in Patrick Mahomes-Maxx Crosby rivalry: This hasn't been as much of a rivalry between the teams as of late, with Kansas City holding a 10-1 record
+over the Raiders since Mahomes became its starting quarterback. Yet it has sparked an exciting feud between the two-time Super Bowl MVP and the two-time Pro
+Bowler Crosby, who has five sacks in nine career games against the Chiefs.
+
+Mahomes and Crosby might not like facing one another, though it's clear there's mutual respect between the two, which only makes their rivalry more intriguing
+to watch.
+
+Can Raiders QB Aidan O’Connell earn next season’s starting job?
+</item 24>
+
+<item 25>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Some found issue with these changes, but the NFL said this is a "pop cultural moment" and they are acting as such.
+
+"We frequently change our bios and profile imagery based on what's happening in and around our games, as well as culturally," the NFL wrote in a statement. "The
+Taylor Swift and Travis Kelce news has been a pop cultural moment we've leaned into in real time, as it's an intersection of sport and entertainment, and we've
+seen an incredible amount of positivity around the sport."
+
+Oct. 6: Travis and Jason think the NFL is doing too much
+
+The NFL is really digging into the Swift-Kelce coverage, and not everyone is a fan, including the people involved.
+
+"I think it's fun when they show who's at the game," Travis said. "I think it brings a little bit more to the atmosphere, brings a little bit more to what
+you're watching. But at the same time, they're overdoing it a little bit."
+</item 25>
+
+<item 26>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+The first link between Swift and Kelce was established in 2016, when Kelce – who helped bring his team to Super Bowl victory in both 2020 and 2023 – played the
+classic game “Kiss, Marry, Kill”. Speaking with AfterBuzz TV, Kelce was given the options of Swift, Katy Perry and Ariana Grande. He said he’d ultimately kill
+Grande, marry Perry and kiss Swift. That was about six years ago, but it has more recently set tongues wagging as fans wondered how long the plan for them to
+meet has been in the works. Cruel Summer Fast-forward seven years, and things started to heat up. In July, speaking on the podcast he shares with his brother,
+New Heights, Kelce said he intended to give Swift a friendship bracelet with his number on it during her Eras Tour concert in Kansas City. Unfortunately, the
+bracelet never made it to her wrist or his digits to her phone.
+</item 26>
+
+<item 27>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"'Taylor wants a guy that's into his career, does his own thing, but is also supportive and understands her,' the source added, "and Travis fits those
+qualities.'"
+
+Sept. 25: Kelce jersey sales skyrocket
+
+Call it what you want; I'll call it the Taylor Swift effect. Since Swift attended the Chiefs game, there was a 400% increase in Kelce jersey sales, his podcast
+is No. 1 overall on Apple, he gained over 380,000 Instagram followers, and 24.3 million people watched the game, making it the No. 1 game last week, according
+to Front Office Sports.
+
+There has also been triple the "Chiefs" searches on web and triple the Chiefs ticket sales on Stubhub.
+
+Sept. 25: Belichick weighs in on the matter
+
+
+
+New England Patriots head coach does not always comment on situations that take place in the game, but he was fully ready with a sound bite on the Kelce-Swift
+situation.
+</item 27>
+
+<item 28>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+87. This is a New York defense that's been very good, although not quite great, over the last year and continues to improve. Robert Saleh's troops have held
+opponents in check, giving their anemic offense a fighting chance most weeks, but if there's one thing that Gang Green struggles to defend against, it's the
+tight end. They're giving up the fifth-most receiving yards to the position this season (56.3) and just allowed Pharoah Brown to beat them for a long 58-yard
+touchdown last Sunday. Getting +140 is a nice price for the best pass-catcher in this game, but there's too much blowout potential to warrant taking a flier
+here.
+
+Our pick: Pass
+
+Seeing Red: Chiefs to Win by 22+ (+380)
+
+If this bet ends up cashing, the "Seeing Red" tagline would apply to a lot more than just Chiefs fans.
+</item 28>
+
+<item 29>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+Per a Deadline report, NBC accumulated an average of 27m viewers, with a total of 29m tuning in during the second quarter.
+
+“That’s gotta be an NFL record right there,” Jason told his younger brother, as he noted that about two million viewers were estimated to be female. “I think a
+few of them might have been there for Deadpool and, uh, Taylor.”
+
+In the YouTube comments under the New Heights video podcast, fellow fans shared their opinions on the NFL’s coverage. “I agree the NFL needs to calm down.
+Pissing off football fans is not how you repay your boi [sic] for all he’s done for the sport,” one person wrote.
+
+Another remarked: “Pity Taylor. All she ever wanted was to watch the football game. Now she’s being blamed and hated left and right.”
+
+“The NFL needs to seriously tone it down and let Trav and Tay explore this beautiful thing they have going on in peace,” someone else said.
+</item 29>
+
+<item 30>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+The 23-year-old ranks first in the NFL in QBR (76) and touchdown passes (29) while ranking third in passing yards (3,795), all of which are especially
+impressive considering he's coming off offseason elbow surgery.
+
+Jackson might not be posting the ridiculous numbers he did during his 2019 MVP campaign, but the adjustment in his play style in his first season under OC Todd
+Monken has led to sustainable, winning football. Nevertheless, Baltimore needs an upset win for Jackson to capture another MVP Award, as he has thrown for 3,105
+yards and 17 touchdowns while adding 741 yards on the ground with five scores this season.
+
+49ers RB Christian McCaffrey: If Purdy wasn't playing at such a high level — and the MVP wasn't a quarterback-driven award — it'd be difficult to argue against
+McCaffrey taking home the honors.
+</item 30>
+
+<item 31>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+To Travis and Taylor, "Welcome to New York." It's been waiting for you. Well, actually, the swamps of northern New Jersey have. Enjoy the traffic and a look at
+the famous skyline.
+
+For bettors, where there is hype, there's also an opportunity to make some money. FanDuel has released a special prop bets menu, cleverly called "Prop Stars"
+for the Swift-inspired wagers. Here's a look at how you can catch some cash in prime time.
+
+MORE: Jets vs. Chiefs betting preview
+
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4
+
+Top of the Charts: Travis Kelce to have the Most Receiving Yards in the Game (+140)
+
+The Jets know that Kelce is trouble long before he even walks in. If they want any chance in this game, they'll have to slow down No. 87.
+</item 31>
+
+<item 32>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+When Jason quipped that everyone is “a big fan of college Travis on Twitter”, the Kansas City Chiefs star acknowledged that his posts weren’t really noticed
+back then. However, Kelce explained that he was trying to remove his tweets from social media even before they went viral.
+
+“What’s hilarious is that nobody followed me back then,” he said. “But I will say I have been trying to get all those tweets deleted. Like since I got into the
+league, I’m like: ‘Gosh, I just want all those things to get deleted.’”
+
+He poked fun at how his tweets are now being mocked, adding: “And sure enough, it came surface-level and everybody f***ing dove in, in 2011. What a f***ing year
+that was.”
+
+The Philadelphia Eagles star continued to discuss the viral responses to his brother’s tweets.
+</item 32>
+
+<item 33>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+These game plans were conservative enough to signal a potential in-season quarterback change. Denver faces Green Bay and Kansas City over the next two weeks
+before heading into its Week 9 bye.
+
+5. You play to win the game, but can you win too quickly? The Giants and Vikings are test cases.
+
+The New York Giants and Minnesota Vikings exceeded expectations under first-year head coaches in 2022. Both reached the playoffs. Both are struggling in their
+second seasons, facing difficult questions about the future. Would they have been better off enjoying only moderate success early? That could depend on how well
+the football leadership has communicated with ownership.
+
+Every head coach and general manager wants to win as much as possible, but the goal is to build for the long term, which can require time to do things with
+sustainability in mind. Bad teams that win right away can reset expectations for fans and ownership, making it less practical to take one step backward in the
+short term for a better shot at taking two steps forward down the line.
+</item 33>
+
+<item 34>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Here's a look at how it all started and where it has gone since:
+
+June 29: Kelce makes friendship bracelets for fellow TEs
+
+Is this where it all begin? Kelce made a friendship bracelet to give to the newcomers at a camp for NFL tight ends. He said he was "taking a page out of Taylor
+Swift's book."
+
+July 26: Kelce makes friendship bracelet for Swift
+
+"So make the friendship bracelets, take the moment and taste it." - You're On Your Own Kid
+
+Kelce announced that he went to Swift's highly anticipated concert, but said he did not have the chance to meet the 12-time Grammy winner.
+</item 34>
+
+<item 35>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+After the game, which saw the Chiefs beat the Chicago Bears 41-10, Kelce was seen leaving the stadium in a blue and white splatter-paint denim suit. Eagle-eyed
+fans were quick to believe that Kelce’s outfit paid homage to Swift’s forthcoming album, 1989 (Taylor’s Version), which is due for re-release on 27 October.
+
+After the two escaped the crowd at Arrowhead Stadium in Kelce’s convertible, according to photos and videos posted online, the football star reportedly rented
+out Prime Social Rooftop in Kansas City for a post-game celebration with his family, his teammates, and Swift.
+
+“Travis bought out the restaurant for his family and team. Taylor arrived, wearing a denim dress, and was seen snacking, having some cocktails and dancing
+alongside Travis,” the witness told Entertainment Tonight. “The two were very affectionate with one another but kept things fun and lighthearted.
+</item 35>
+
+<item 36>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+But Wilson doesn't have time to be the anti-hero, or villain, as traditionalists would say. He needs to flip the script and shake it off. The Jets need to let
+him sling the ball around the field instead of worrying about the bad turnovers. They aren't winning this game 14-10, and they aren't winning anything if they
+can't let their quarterback be who he is. Are we betting this? Absolutely not, but that would be one heck of a plot twist, right? Perhaps the script writers are
+working overtime.
+
+Our pick: Pass
+
+Platinum Performance: Travis Kelce to Score 3+ TDs (+2500)
+
+When it comes to Kelce's greatest hits, he prefers to save them for division rivals like the Raiders and Chargers. In your wildest dreams this bet might hit,
+and it might happen in reality too.
+</item 36>
+
+<item 37>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“The Taylor Swift and Travis Kelce news has been a pop cultural moment we’ve leaned into in real time, as it’s an intersection of sport and entertainment, and
+we’ve seen an incredible amount of positivity around the sport.”
+
+“The vast majority of our content has remained focused on the game, our players and variety of other initiatives, including our Toy Story Funday Football
+alt-cast, the international games and more,” they continued.
+</item 37>
+
+<item 38>
+49ers cap space 2024: Why Chase Young trade may not be a pure rental for San Francisco (Sporting News, 2023-10-31T22:22:43+00:00)
+9 million Charvarius Ward $17.9 million $12.6 million $17.2 million Javon Hargrave $15.5 million $8.9 million $33.4 million Nick Bosa $14.6 million $1.1 million
+$76.5 million Brandon Aiyuk $14.1 million $14.1 million $14.1 million Christian McCaffrey $14.1 million $11.8 million $8.6 million
+
+So, if any of Williams, Armstead, Samuel, Kittle or Warner were to restructure their contracts or if a player like Aiyuk got an extension, that would push some
+of the 49ers' cap hits into future years. That could prove a worthwhile move if it allows for the team to keep Young and keep its Super Bowl window open with
+the ultra-cheap Brock Purdy at quarterback.
+
+Of course, the team could also release some of its players, like Gregory, to open up space.
+</item 38>
+
+<item 39>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Especially when you face a defensive coordinator who says, ‘You show me you can beat me throwing the ball outside the numbers — best of luck, and to do that,
+you are going to have to take a five-step drop and I’m going to have Myles Garrett chasing you every play.'”
+
+Advertisement
+
+• Kansas City Chiefs: Is the explosive passing game gone for good?
+
+What I think: The Chiefs have never scored less per game on offense through six games or a full season since Patrick Mahomes became their quarterback. They have
+also never enjoyed larger average point differentials (9.8 per game), because their defense is so much better. I think the pass offense will become slightly
+more explosive as Mahomes gets reps with his receivers, but I’m not expecting a huge shift.
+
+The Chiefs are averaging 9.5 plays per touchdown drive when starting at least 70 yards from the opponent’s goal line, per TruMedia.
+</item 39>
+
+<item 40>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Oct. 15: Kelce, Swift make 'SNL' cameos
+
+The two were spotted out in NYC together and then had a surprise appearance on "Saturday Night Live." Kelce had a cameo in a skit about how much coverage Swift
+was getting during games, while the singer introduced the musical act of the night, Ice Spice.
+
+Oct. 22: Swift attends fifth Chiefs game
+
+Swift has now attended games broadcast across all five networks (CBS, NBC, Fox, ESPN and Amazon). This week, she is watching the Chiefs face the Chargers and
+will be shown on CBS. She is sporting a Chiefs sweatshirt and is seated next to Kansas City quarterback Patrick Mahomes' wife, Brittany.
+</item 40>
+
+<item 41>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+In your wildest dreams this bet might hit, and it might happen in reality too. Kelce could be schmoozing in the suite when the second half begins rather than
+throwing blocks and catching footballs on the field. But if the Jets keep it close, they are prone to being exploited by players like Kelce. With receivers
+lacking on the Chiefs sideline, the tight end might put on a show that is typically only found in show business. Considering he hosted “Saturday Night Live”
+back in March, Kelce is familiar with how to tell a story. We have him scoring once, so what’s another two times to cash a monster long shot? Don't count on it,
+but don't rule it out either. And please, have fun and bet responsibly.
+</item 41>
+
+<item 42>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She specified that she isn’t trying to hide her relationship from the public eye.
+
+“When you say a relationship is public, that means I’m going to see him do what he loves, we’re showing up for each other, other people are there and we don’t
+care,” she said. “The opposite of that is you have to go to an extreme amount of effort to make sure no one knows that you’re seeing someone. And we’re just
+proud of each other.”
+
+During the interview with Time, the Grammy winner addressed how her appearances at Kelce’s games are heavily publicised. So far, she’s attended five of Kelce’s
+games, including one on 3 December, and she’s often seated in the Kelce family suite during the events.
+
+“There’s a camera, like, a half-mile away, and you don’t know where it is, and you have no idea when the camera is putting you in the broadcast, so I don’t know
+if I’m being shown 17 times or once,” she said.
+</item 42>
+
+<item 43>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team." - Mean
+
+Swift already seems to be making friends with the family. Swift was sitting next to Donna in the box and the two were seen talking and laughing as the game went
+along.
+
+Sept. 24: Postgame interviews turn into Swiftie talk
+
+The postgame press conference seemed more about Swift and Kelce than it did about the actual game. The media wanted any insight it could get into the
+relationship and how Swift ended up at Arrowhead.
+
+"He told me at the last minute," Mahomes said when asked if he knew Swift was coming. "There's some things with Trav where he kind of just says it and you don't
+know if it's true or not. He says it so calmly. ... Friday he was like, 'Yeah, I think she's coming to the game this weekend,' and then moved about his
+business."
+</item 43>
+
+<item 44>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+In an interview withWSJ Magazine, published on 20 November, he described how much he admires her skills as a musician. “I’ve never been a man of words. Being
+around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+However, he also acknowledged the heavy public attention around his private life as a result of his relationship, noting he’s “never dated anyone with that kind
+of aura around them”. But, according to Kelce, he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life. When she acts like
+that I better not be the one acting all strange.”
+</item 44>
+
+<item 45>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+We’ve seen the Buffalo Bills incur devastating injuries. Here we’ll address 10 teams with the shortest Super Bowl odds, running through what I think and what
+NFL insiders have to say.
+
+The full Pick Six menu this week:
+
+• Unanswered questions for contenders
+
+• When “playing to win” goes too far
+
+• Championship roster, rookie kicker
+
+• Do they make wristbands for coaches?
+
+• Giants, Vikings and winning too soon
+
+• Two-minute drill: Wackiest win in a while
+
+GO DEEPER The Eagles' 'tush push' play is taking over the NFL. But is it working?
+
+1. Where do the top 10 current Super Bowl contenders stand one-third of the way through the season? Let’s hit key questions facing the Chiefs, Eagles, 49ers,
+Bills, Bengals, Cowboys, Ravens, Lions, Dolphins and Jaguars.
+
+You can scroll through the latest Super Bowl future odds from BetMGM below.
+
+• San Francisco 49ers: What do they have in Purdy?
+</item 45>
+
+<item 46>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"Well I would say that Travis Kelce's had a lot of big catches in his career. This would be the biggest."
+
+Sept. 26: Chiefs games get even more popular
+
+"Welcome to New York (*New Jersey), it's been waiting for you." - Welcome to New York
+
+The defending Super Bowl champions are already one of the more popular teams in the league, but it is becoming the hottest ticket in town, no matter what town
+that is.
+
+"Since Swift's appearance at the Chiefs game on Sunday, the Jets have sold more tickets for their game against the Chiefs in a single day than since the season
+started -- by more than double," a representatives at StubHub told to Town & Country magazine.
+
+Sept. 27: Mahomes confirms he met Swift
+
+"It was enchanting to meet you, all I can say is I was enchanted to meet you."
+</item 46>
+
+<item 47>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Head coach Andy Reid was also asked about his star tight end's supposed relationship, to which he quipped, "I set them up."
+
+Sept. 24: Kelce and Swift leave stadium together
+
+"You know when it's time to go." - It's Time To Go
+
+This was the first time the two were photographed together. They walked side by side, Kelce fittingly wearing an outfit with "1989" in the title and Swift
+wearing a Chiefs zip-up.
+
+Sept. 24: The two leave in a convertible
+
+"Nothing good starts in the getaway car." - Getaway Car
+
+Swift and Swift were spotted in a convertible, with the tight end driving, after the Chiefs' win. Kelce reportedly rented out a restaurant for a private party
+with Swift and his teammates.
+
+"Taylor Swift likes that Travis Kelce 'pursued her' and the two are having a 'great time getting to know each other,'" a source told Entertainment Tonight.
+</item 47>
+
+<item 48>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+In an interview withWSJ Magazine published on 20 November, Kelce described how much he admires Swift’s skills as a musician. “I’ve never been a man of words.
+Being around her, seeing how smart Taylor is, has been f***ing mind-blowing. I’m learning every day,” he explained.
+
+Although he acknowledged the public attention his personal life has received because he’s “never dated anyone with that kind of aura around them,” Kelce
+specified that he’s not letting the media affect his relationship.
+
+“But at the same time, I’m not running away from any of it,” he said. “The scrutiny she gets, how much she has a magnifying glass on her, every single day,
+paparazzi outside her house, outside every restaurant she goes to, after every flight she gets off, and she’s just living, enjoying life.
+
+“When she acts like that I better not be the one acting all strange.”
+</item 48>
+
+<item 49>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+From Colin Kaepernick taking a knee during the national anthem to protest against racism, to domestic violence by players, to the Deflategate and Bountygate
+scandals. But there have been bigger crises as well. The Union of Concerned Scientists accused the NFL of trying to intimidate scientists studying the link
+between CTE and pro football. The NFL is already way past other leagues in terms of revenue, and now with the pivotal shift in its strategy, “America’s favorite
+pastime” is on its way to world domination.
+
+ADVERTISEMENT Article continues below this ad
+
+Editorial Disclaimer: The views expressed are those of the author and do not necessarily reflect the views of EssentiallySports.
+
+Watch This Story: Will Patrick Mahomes Eclipse Tom Brady as the NFL Goat? Travis Kelce Responds
+</item 49>
+
+<item 50>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Receiving Yards Through Six NFL Games Rk Player Season Yds 1 Don Hutson 1942 819 2 Tyreek Hill 2023 812 3 Wes Welker 2011 785 4 Elroy Hirsch 1951 766 5 Santana
+Moss 2005 743 6 DeAndre Hopkins 2015 726 7 Raymond Berry 1960 725 8 Jerry Rice 1986 723 9 Bob Boyd 1954 718 10 Bobby Mitchell 1962 714
+
+• Jared Goff is enjoying the second-best start to a season for his career from a statistical standpoint, behind only his 2018 Super Bowl season with the Rams.
+With the Lions at 5-1 and Goff heading toward a likely contract extension, could another team come after his injured backup, former University of Tennessee
+quarterback Hendon Hooker?
+</item 50>
+
+<item 51>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Cover 7 | Monday A daily NFL destination that provides in-depth analysis of football’s biggest stories. Each Monday, Mike Sando breaks down the six most
+impactful takeaways from the week.
+
+The San Francisco 49ers entered Week 6 riding a 15-game winning streak and looking unstoppable with a young quarterback, Brock Purdy, who was making the game
+look easy. They exited with a 19-17 defeat at Cleveland, injuries to key players and, for the first time this season, a question mark or two.
+
+Advertisement
+
+With the previously unbeaten Philadelphia Eagles also losing ugly Sunday, this edition of the Pick Six column addresses key questions facing Super Bowl
+favorites with one-third of the 18-week regular season nearly complete.
+
+So far this season, we’ve seen the Miami Dolphins set NFL records for offense, only to lose by four touchdowns in their lone game against a true contender.
+We’ve seen the Kansas City Chiefs win with defense, sometimes in spite of their offense. We’ve seen the Buffalo Bills incur devastating injuries.
+</item 51>
+
+<item 52>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce’s previous comments about having children have sparked controversy amid his ongoing romance with Taylor Swift.
+
+The Kansas City Chiefs player, 34, first made the remarks about starting his own family during a February 2023 episode of his and his brother Jason Kelce’s
+podcast, New Heights. The episode resurfaced after a source claimed to Yahoo Entertainment that Swift and Travis Kelce “have talked about kids” within the next
+year.
+</item 52>
+
+<item 53>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+Billionaire entrepreneur Mark Cuban, who paid $1.8 million (approx.) in penalties on behalf of his team, the Dallas Mavericks, fondly remembered the former NBA
+commissioner David Stern, on his death in January 2020. Stern came and instituted an anti-drug agreement and even banned All-Star player Michal Richardson for
+life for drug abuse. The revitalized image of the NBA helped rake in the moolah from sponsors and made it more appealing to fans. He even went against the tide
+to open up the Olympic basketball competition to NBA players resulting in the famous “Dream Team” of 1992. America has never failed to win a medal in the 19
+Olympic basketball games that it has played since then.
+
+ADVERTISEMENT Article continues below this ad
+
+The NFL has had its fair share of, um, let’s say, “bumps” down the road as well.
+</item 53>
+
+<item 54>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+“I placed my hand on the gentleman’s back to let him know I was behind him. If I would have pushed him, he probably would have turned around and tased me,” he
+said.
+
+The Independent has contacted representatives for Taylor Swift and Travis Kelce for contact.
+</item 54>
+
+<item 55>
+Taylor Swift is Time’s Person of the Year (The Independent - Life and Style, 2023-12-06T13:55:17+00:00)
+Not to mention her rumoured relationship with Kansas City Chiefs tight end Travis Kelce caused a 400 per cent spike in NFL jersey sales.
+
+Since her first NFL appearance in September, Swift’s occasional attendance at Kelce’s games has received pushback from NFL fans who believe her presence is
+distracting from the game itself. “I’m just there to support Travis,” Swift admitted. “I have no awareness of if I’m being shown too much and pissing off a few
+dads, Brads, and Chads.”
+
+She playfully added: “Football is awesome, it turns out. I’ve been missing out my whole life.”
+
+The “Bad Blood” singer revealed that their romance began when Kelce gave her shoutout on his podcast, admitting he attempted to give Swift his phone number
+after one of her Eras Tour shows. The pair immediately began “hanging out” and by the time she attended her first Chiefs game in September, they were already a
+couple. “I think some people think that they saw our first date at that game?
+</item 55>
+
+<item 56>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+$28 billion. And just like that, their target will be met.
+
+USA Today via Reuters NFL, American Football – Taylor Swift reacts while sitting next to Donna Kelce watching the Kansas City Chiefs vs Chicago Bears game
+during the first half at GEHA Field at Arrowhead Stadium, Kansas City, Missouri, USA | Image Credits: Denny Medley-USA TODAY Sports/Reuters
+
+And while analysts like Stephen A. Smith may go around telling people they should be embarrassed of themselves for getting so invested in someone else’s
+relationship, it is good business for the NFL. TMZ reported that #87’s jersey sales skyrocketed 400% and his Instagram followers by 276%. Yahoo Finance reported
+a 53% rise in viewership among teen girls. Who would have thought in their wildest dreams that the NFL would manage to rope in this part of the population? The
+October 1 matchup between the Chiefs and the Jets drew 27 million viewers.
+</item 56>
+
+<item 57>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“I think everybody is just, like, overwhelmed,” the Chiefs tight end replied.
+
+“Take away your feelings for Taylor,” Jason added. “What is your honest opinion on how the NFL is treating celebrities at the games?”
+
+Seemingly beating around the bush, Kelce remarked: “I think it brings a little more to the atmosphere, it brings a little bit more to what you’re watching. But
+at the same time, I think...”
+
+Before his younger brother could continue his thought, the Philadelphia Eagles player chimed in: “They’re overdoing it.”
+
+“They’re overdoing it a little bit, for sure,” Kelce agreed. “Especially my situation. I think they’re just trying to have fun with it.”
+
+While sports lovers may not be too pleased with the NFL’s focus on Swift, the football league’s supposed obsession with ongoing Swift and Kelce dating rumours
+has paid off in terms of ratings.
+</item 57>
+
+<item 58>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+This team is relatively young. They are scrappy. The fact that they have been there before gives them a chance. I think the quarterback is growing.”
+
+• Cincinnati Bengals: Can Joe Burrow hold up for a full season?
+
+What I think: Burrow is looking healthier over the past two weeks. The bye week comes at a great time for Burrow to get even healthier, but check out the
+schedule on the other side: San Francisco, Buffalo, Houston, Baltimore, Pittsburgh and Jacksonville. Cincy still has a second game with the Steelers, plus games
+against Kansas City and Cleveland. I’m worried Burrow will wear down against these defenses.
+
+Exec comment: “You cannot always expect Joe Burrow to create magic with a bottom-half offensive line. The line is my concern all the way.”
+
+Advertisement
+
+2. Are teams sometimes going too far playing to win? The Eagles come to mind after falling 20-14 to the Jets.
+</item 58>
+
+<item 59>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Could they have been driving off into the sunset? Of course, none of this actually confirms Swift and Kelce are actually dating. But regardless of whether it’s
+a friendship or a romantic relationship, it has sent shockwaves through two massive cultural franchises, expanding the NFL’s audience into uncharted territory.
+It’s a cultural pairing on par with – and perhaps even bigger than – Kim Kardashian and Kanye West.
+</item 59>
+
+<item 60>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+Revisiting the NBA caricature back in time, the New York Knicks became the first all-Black team in 1979. But their fans made their disapproval very apparent.
+“It wasn’t so much New York attitudes, but fans around the league let you know how they felt about you as an opponent and as a Black man as well,” Knicks star
+Earl Monroe told Newsday.
+
+USA Today via Reuters May 15, 2021; San Antonio, Texas, USA; Phoenix Suns forward Torrey Craig (12) and San Antonio Spurs forward Keldon Johnson (3) fight for
+loose ball as Suns guards Devin Booker (1) and Chris Paul (3) look on in the third quarterat AT&T Center. Mandatory Credit: Scott Wachter-USA TODAY Sports
+
+We could list out all the scandals, fights, and controversies here, but you get the idea.
+</item 60>
+
+<item 61>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Three of the seven teams passed, resulting in one first down, one sack and Hurts’ interception. Of these three teams, only the Eagles lost the game.
+
+3. The 49ers lost Sunday when their rookie kicker missed from 41 yards. Is San Francisco wise trusting a championship roster to a rookie’s foot come playoff
+time?
+
+The 49ers raised eyebrows among some when they used their second-highest pick in the 2023 draft — a third-round choice, 99th overall — for a kicker. The
+selection of Michigan’s Jake Moody gave the 49ers a cost-effective successor to veteran Robbie Gould. General manager John Lynch called Moody a potentially
+“foundational” player whose stock in the draft was so high, other teams were trying to trade ahead of San Francisco for a shot at him.
+
+Who do you want lining up the potential winning kick in a Super Bowl?
+</item 61>
+
+<item 62>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+However, the NFL does not just want to stop at $18 billion. It wants to become a $27 billion league in 4 years. But it must address a few skeletons in its
+closet before reaching that goal.
+
+If you were around in the 1970s (that would make you at least 50 years old today), you would know that the NBA did not have the mass appeal that it enjoys now.
+With average game attendance hovering around 8,000 a game, it was one of the darkest periods of the basketball league. Drug abuse, brawls on the hardwood court
+that sometimes spilled over onto coaches and players – it wasn’t a pretty sight. As reported in the Washington Post, even though there are no reliable figures
+on cocaine use by players, “estimates by people in the game range from 40 percent to 75 percent.”
+</item 62>
+
+<item 63>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+Singer Taylor Swift has a blank space, and she's writing Travis Kelce's name. There were rumors the two were dating for weeks, and those talks only intensified
+with swift attending five Chiefs games so far this season, including Sunday's game agains the Chargers.
+
+The Era's Tour singer was seen chatting with the tight end's mom, Donna Kelce, and cheering emphatically when No. 87 scored a touchdown in the first game she
+attended last month. Last week, she was in attendance to watch the Chiefs as they defeated the Denver Broncos in Week 6 on "Thursday Night Football."
+
+She is once again at Arrowhead Stadium, this time to watch the Chiefs take on another AFC West opponent, the Los Angeles Chargers.
+
+For those wondering how this apparent relationship came to be, wonder no longer. We have created an extensive timeline of the high-profile couple that is
+currently the talk of the league, and even added some Swift lyrics to go along with some of the highlights.
+</item 63>
+
+<item 64>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Can Raiders QB Aidan O’Connell earn next season’s starting job?: After leading the offense on seven touchdown scoring drives in last week's 63-21 win over the
+Chargers, the rookie fourth-rounder aims to further establish himself as a serious contender for Las Vegas' starting job next season. Despite the encouraging
+performance, O'Connell has been inconsistent across six games as the full-time starter, throwing for 1,300 yards, seven touchdowns, and five interceptions.
+
+However, a stellar showing against the NFL's fifth-ranked pass defense (202.5 yards per game allowed) would benefit his bid to be the starter in 2024.
+
+Chiefs TE Travis Kelce: Yes, his girlfriend will be in town for the holiday. Kelce is averaging 89.6 yards per game with global popstar Taylor Swift in
+attendance this season but is coming off his worst outing in her presence, catching five passes for 28 yards.
+</item 64>
+
+<item 65>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+The traditional circus hasn't been in town for a few years now, but that's simply because the New York Jets exist and there was only room for one. It seems like
+ages since Aaron Rodgers marched out of the MetLife Stadium tunnel holding an American flag, but this is Zach Wilson's team now, whether you like it or not.
+
+One of the most hyped "Sunday Night Football" games of the year was expected to feature Rodgers against Patrick Mahomes for the first time. Instead, we're more
+likely to be treated to non-stop split screens involving Swift and Rodgers, two people who won't be on the field. There will be some actual football, though,
+even if it is just a sideshow to the event everyone can't stop talking about. So, buckle up and enjoy whatever this is, and for all the fans paying ridiculous
+prices for a glimpse of Ms. Swift — make sure your phone is charged.
+
+To Travis and Taylor, "Welcome to New York."
+</item 65>
+
+<item 66>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+Elsewhere in the conversation with Time, the “Anti-Hero” singer said that she tries not to let the paparazzi get to her, even though so many of her outings with
+pals go on to make headlines. “Over the years, I’ve learned I don’t have the time or bandwidth to get pressed about things that don’t matter. Yes, if I go out
+to dinner, there’s going to be a whole chaotic situation outside the restaurant. But I still want to go to dinner with my friends,” she said.
+
+She emphasised how her perspective about the media has changed over the years, adding: “Life is short. Have adventures. Me locking myself away in my house for a
+lot of years - I’ll never get that time back. I’m more trusting now than I was six years ago.”
+
+With his love life in the public eye, Kelce has also opened up about his relationship with Swift.
+</item 66>
+
+<item 67>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+87 with gusto.
+
+The 12-time Grammy winner appeared to shout “let’s f—ing go” after Kelce scored a touchdown before chest-bumping other Chiefs fans. Considering Swift is known
+for being an Eagles fan – she’s originally from Pennsylvania and even references the team in Gold Rush – her outward support for the Kelce’s team seemed extra
+telling. Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together. If that wasn’t enough, extra observant fans
+were able to note that Kelce’s blue and white post-game outfit was supposedly labelled the “1989 bedroom painting set”, perhaps an intentional reference to
+Swift’s 2014 album, which she will be re-releasing in October. Swift’s penchant for Easter eggs must be rubbing off on the tight end player. As if this weren’t
+enough subtle references already, they were also spotted in a “getaway car” together outside the stadium – potentially a nod towards her 2017 track.
+</item 67>
+
+<item 68>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+We will see what happens in the near future."
+
+Sept. 22: Another bracelet
+
+"Lately [he's] been dressing for revenge." - Vigilante Sh--
+
+Kelce was spotted at his nonprofit charity event wearing a bracelet that says "Vigilante Sh--," the name of one of Swift's songs.
+
+Sept. 24: Swift attends Chiefs game
+
+"Dating the boy on the football team." - Fifteen
+
+Swift took Kelce up on his offer and attended the Chiefs' Week 3 game against the Chicago Bears. Swift was dressed on theme and was watching intently, cheering
+and even chest bumping someone during big plays. She was especially thrilled to see Kelce get in the end zone, a three-yard catch that put the Chiefs up 41-0.
+Kansas City went on to win 41-10 to improve to 2-1.
+
+Sept. 24: Swift mingles with Donna Kelce
+
+
+
+"Talkin' over a football team."
+</item 68>
+
+<item 69>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+In the episode of his podcast, the Philadelphia Eagles star asked his mother, Donna, which of her two sons she was “rooting for,” as the Eagles and Chiefs were
+preparing to play against each other in the Super Bowl at the time.
+
+“You’ve said in the past to both of us that you root for me because I’ve given you grandkids,” Jason, who shares three children – Wyatt, four, Elliotte, two,
+and Bennett, seven months – with wife Kylie Kelce, said. “I’ve always known that you root for Travis. So who do you actually root for?”
+
+After Jason asked his mother again who she was rooting for, “if in a battle to the death,” Donna responded by asking who he’d pick to save if she and her
+husband, Ed Kelce, were stranded in the middle of the ocean.
+</item 69>
+
+<item 70>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+But they also haven’t really beaten anyone. They were down 14 points to Carolina. Do you think they are coming back from 13 down against Philly? In my opinion,
+no.”
+
+Advertisement
+
+• Dallas Cowboys: Is this team any better than previous Dallas teams that fell short?
+
+What I think: It’s a tough time to evaluate the Cowboys fairly because they were so bad against San Francisco on a big stage in their most recent game. I just
+don’t see where Dallas is better or going to get considerably better, especially on offense. And every time they enjoy success, they seem to enjoy it a little
+too much. That is a reflection of their owner.
+
+Exec comment: “Run defense and consistency on defense, and then offensively, what is their identity? They just are not very good. Their best games are when they
+play great defense and get turnovers, but that is not going to happen enough, especially against the good teams.”
+
+• Detroit Lions: Have they fixed their defense?
+</item 70>
+
+<item 71>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+What do the Giants’ and Vikings’ ownerships think?
+
+“The best first year can be that 7-10 season where you show some promise,” a veteran coach with experience on a half-dozen teams said. “The Giants won a bunch
+of games early, people were heaping praise on the head coach, people get the expectation of what the quarterback can be. But oftentimes, you know different
+internally because you know the house you are living in. You are inside the walls every single day and you know where the roof leaks, where the foundation is
+cracked.”
+
+Buffalo managed such a situation well. The Bills surprisingly reached the playoffs in their first season under Sean McDermott, a euphoric moment after a 17-year
+playoff drought. They went 6-10 the next year, then began a steady rise behind Josh Allen and a top defense. There isn’t a Josh Allen on the Giants or Vikings.
+</item 71>
+
+<item 72>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+Randy Mueller raised the thought last week, recalling examples from his career as a GM when offering a pick one round higher than a prospect’s actual draft
+round proved alluring. Detroit used a third-round choice for Hooker, who is recovering from ACL surgery. Hooker would have been valued higher if healthy. Could
+that be true again at some point in the future?
+
+• News that Indianapolis Colts rookie quarterback Anthony Richardson might undergo season-ending shoulder surgery could carry a silver lining. Richardson got to
+play enough for the Colts to evaluate where he stands, but if he shuts it down for the season, neither he nor the team would have to suffer through a full
+season of growing pains. Gardner Minshew’s three-pick game against Jacksonville on Sunday works against the idea Indy is better positioned to compete with the
+journeyman in the lineup, but most coaches and execs I’ve spoken with believe that to be the case in the short term.
+</item 72>
+
+<item 73>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+But before he could even answer, the answer was given for him.
+
+Sept. 14: Rumors aren't denied
+
+"The rumors are terrible and cruel, but honey, most of them are true." - New Romantics
+
+Of course people were going to ask Jason, who is very close with his brother, whether rumors of the two hanging out were true. He did not confirm them, but he
+also did not deny them.
+
+Sept. 17: The references begin
+
+"I watched it begin again." - Begin Again
+
+The rumors began to pick up, and now there were a lot of people, commentators included, making Swift references around Kelce.
+
+When the tight end caught a touchdown pass from Patrick Mahomes, CBS Sports' Ian Eagle said, "Kelce finds a blank space for the score."
+
+This was only the start to many, many, Swift lyrics being referenced during NFL games.
+
+Sept. 21: Kelce sends Swift an invite
+
+"So inviting, I almost jump in."
+</item 73>
+
+<item 74>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+And all the effort is showing.
+
+According to Joe Pompliano, “The NFL will bring in $20 billion in revenue this year, more than the Premier League, La Liga, Bundesliga, Serie A, and Ligue 1
+combined.” Coming to the strategy part, a curious mind would perhaps think can they take a leaf out of the NBA’s playbook and reinvigorate its appeal as it aims
+to conquer international audiences?
+
+Can the NFL take a leaf out of the NBA’s grisly past and glorious recovery?
+
+The NFL is already the world’s richest league. Calling it an incredible feat would be a gross understatement. Consider this: the English Premier League, which
+is broadcast in over 212 territories, has a revenue of just $6 billion, while football games are primarily viewed in America only. However, the NFL does not
+just want to stop at $18 billion.
+</item 74>
+
+<item 75>
+Taylor Swift reveals secret start to her relationship with Travis Kelce (The Independent - Life and Style, 2023-12-06T14:23:01+00:00)
+She explained that she doesn’t necessarily pay attention to the cameras and fans around her in those stadiums because she is watching her boyfriend play.
+
+(Denver Post via Getty Images)
+
+“I’m just there to support Travis,” she said. “I have no awareness of if I’m being shown too much and pissing off a few dads, Brads, and Chads.”
+
+When discussing how many Swifties have now started watching NFL games since she started dating Kelce, she quipped about how much she likes the sport. “Football
+is awesome, it turns out,” she joked. “I’ve been missing out my whole life.”
+
+Swift’s effect on the NFL didn’t go unnoticed in October, as one game between the Chiefs and New York Jets - which she attended with some of her famous friends
+- became the most-watched Sunday NFL show since the Super Bowl LVII in February 2023.
+</item 75>
+
+<item 76>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"Yeah, my personal life -- that's not so personal. I did this to myself Jason, I know this. What's real is that you know it is my personal life. ... She's not
+in the media as much as I am doing this show every single week."
+
+Sept. 27: Jerry Jones comments on the Swift effect
+
+Swift is getting the owners talking, too.
+
+"It is hard to move that needle dramatically on a great feeling, a great attraction in the NFL," Jones said Wednesday on 105.3FM The Fan in Dallas. "We get a
+lot of eye balls. She blew it off the charts. It is amazing. It makes you smile. But it just shows the depth of her following, especially with her core
+constituency. We all, I think, felt the same way when she's sitting up there with [Travis Kelce's] mom and she's going nuts when he's playing and those hearts
+are popping out everywhere.
+</item 76>
+
+<item 77>
+Travis Kelce faces backlash after comments about ‘finding a breeder’ resurface amid Taylor Swift romance (The Independent - Life and Style,
+2023-10-30T20:56:51+00:00)
+In the picture, Swift could be seen standing next to Kelce, reaching to kiss his cheek.
+
+In addition to the kiss, the football star also had the perfect reaction to a fan calling him Swift’s boyfriend. After a fan shouted: “Let’s go Taylor’s
+boyfriend” while Kelce was waiting for an elevator, he responded with a small smile on his face and by pumping his fist into the air.
+
+Aside from their appearances at sports events, Swift and Kelce have also been photographed together on other occasions, including a date earlier this month in
+New York City after their surprise appearances on the season 49 premiere of Saturday Night Live. At the time, sources alleged to Entertainment Tonight that,
+during the date, Kelce got a little too close to Swift’s security personnel and allegedly told her bodyguard to step aside.
+
+However, during an episode of his podcast, Kelce explained what he said to the security, and clarified that he didn’t push the bodyguard.
+</item 77>
+
+<item 78>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+The Jets would have taken possession with barely more than a minute remaining, no timeouts and Zach Wilson behind center facing a ferocious Eagles pass rush.
+Was having Hurts pass in a situation when gaining a first down is unlikely the smart play under the circumstances?
+
+“Are coaches not willing to go against the slight statistical benefit that WPA (win probability added) provides?” the exec asked. “Is it no longer OK to let
+your defense win the game when it clearly has a huge talent/performance advantage? This Eagles game was 14-12, not 37-35.”
+
+Critics attuned to the trend toward aggressiveness pounce when teams pass up chances to go for the kill. Coaches know team owners tend to be fans, not football
+strategists. They know owners listen to these criticisms. That can provide an incentive to make the aggressive play, to go down swinging.
+
+“Everybody thinks they are playing Brady, Manning or Rodgers in two-minute,” a veteran coach said.
+</item 78>
+
+<item 79>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+veterans. The numbers stack up pretty evenly across various distance cutoffs. Based on these numbers, there’s no statistical indication rookies are less
+effective in the postseason.
+
+“Playoff teams have a different aura, different feel in the locker room,” a veteran evaluator said. “Percentages are one thing, but who is the guy who trots out
+there to try the game-winner? It’s a different pressure shooting free throws up by 20, down by 20, than in that type of situation.”
+
+Advertisement
+
+Fans might recall rookie kickers missing playoff kicks: Rodrigo Blankenship with the Colts in 2020, Harrison Butker with the Chiefs in 2017, Nate Kaeding with
+the Chargers in 2005. But the NFL has seen plenty of rookies kick effectively in the postseason as well. Evan McPherson made all 14 postseason tries with the
+2021 Super Bowl Bengals. The 2017 Eagles won a Super Bowl with rookie Jake Elliott performing well.
+</item 79>
+
+<item 80>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+The Eagles come to mind after falling 20-14 to the Jets.
+
+Most would agree teams have gotten smarter in their handling of fourth-down situations, going for it when it makes sense, instead of punting almost out of
+habit. Making the aggressive play to win can absolutely be the smart play, regardless of results. It’s progress when teams seriously wrestle with these
+questions, not just on fourth down, but in all aspects of their strategy.
+
+But when the Eagles tossed a killer interception on third-and-9 from their own 46-yard line while protecting a 14-12 lead against the Jets with two minutes left
+in the fourth quarter, a longtime NFL exec reached out with a question: “Have we come too far with coaches wanting to ‘win’ the game instead of sometimes being
+more traditional?”
+
+His point: Philadelphia could have run the ball on third-and-9, then punted from around midfield.
+</item 80>
+
+<item 81>
+Fans spot Travis Kelce wearing Taylor Swift-themed friendship bracelet before she attended his game (The Independent - Life and Style,
+2023-09-26T22:05:34+00:00)
+Travis’ teammates also showed up to the after-party, as well as his mom, Donna Kelce. The party lasted until 2 am.”
+
+The late-night outing came days after the NFL star officially addressed ongoing dating rumours about him and the “Anti-Hero” singer. During an episode of The
+Pat McAfee Show on 21 September, he mocked his brother Jason Kelce for joking that he “100 per cent” believed his younger sibling was dating Swift.
+
+“It’s hilarious how much traction this has actually gotten, right now it’s like a game of telephone,” Kelce said. “Where everybody’s whispering in each other’s
+ears and hearing random stuff. No one actually knows what’s going on, especially when you got Jason Kelce on live television telling people just both sides - he
+doesn’t know, it’s true, this and that.”
+
+He also noted that he was still open to pursuing a relationship with Swift, revealing that he subtly asked if she’d want to attend one of his football games.
+</item 81>
+
+<item 82>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+The Philadelphia Eagles star continued to discuss the viral responses to his brother’s tweets. He even referenced how Jimmy Fallon and his band performed a
+song, titled “The Ballad of Travis Kelce”, on The Tonight Show - in which the late-night host recited Kelce’s old tweets. The two brothers highlighted the now
+fan-favourite post, which reads: “I just gave a squirle a piece of bread and it straight smashed all of it!!!! I had no idea they ate bread like that!! Haha
+#crazy.”
+
+Kelce later revealed the meanings behind some of his viral tweets, noting that he would simply share the remarks for fun. “I was just using Twitter like a
+diary. I’m just out here saying nonsense - ‘I just gave a squirrel a piece of bread’ - and spelled squirrel like a jacka**,” Kelce said.
+</item 82>
+
+<item 83>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Wilson has turned into "Checkdown Charlie" as a result of conservative coaching, and we don't expect that to change in the early going. Lean into the narrative
+and sprinkle a little cash on Kelce to break the plane first.
+
+Our pick: Bet on it
+
+FriENDZONE: Travis Kelce to NOT score a TD (+120)
+
+Obviously, based on our last recommendation, we're friendzoning this bet and not laying down any action on it.
+
+Our pick: Pass
+
+Running Away Together: Chiefs to have 150+ Total Rushing Yards (+420)
+
+The strength of the Jets roster is along the defensive line, and the Chiefs are a pass-first team that loves to light it up through the air. This is the first
+time that Patrick Mahomes is playing in the New York area. He'll want to put on a show, and Andy Reid certainly isn't going to hold him back.
+</item 83>
+
+<item 84>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+• Baltimore Ravens: Are the Ravens better off shifting to more of a pass-oriented offense?
+
+What I think: Baltimore has never scored fewer points or amassed less offensive EPA through the first six games of a season with Lamar Jackson in the lineup.
+The schedule and injuries have played roles, but with the Ravens shifting toward a more conventional pass offense, are the explosive quarterback runs mostly in
+the past? Jackson has one rush longer than 20 yards (he’s had four or five by now previously). He’s gaining at least eight yards on 15 percent of carries, half
+his previous rate. I’m not expecting a consistent precision passing game to suddenly materialize. Will this new offense be tougher to defend?
+
+Advertisement
+
+Exec comment: “The defense keeps them in it, but I don’t necessarily think this offensive change is going to make them any better when it counts. Lamar Jackson
+does not appear as dynamic as a runner, but in this offense, he does not need to be.
+</item 84>
+
+<item 85>
+Chiefs vs. Packers live score, updates, highlights from NFL 'Sunday Night Football' game (Sporting News, 2023-12-03T23:00:04+00:00)
+(Via: @Chiefs)
+
+
+
+📺: NBC & Peacock pic.twitter.com/baSjmT7IR5 — Sunday Night Football on NBC (@SNFonNBC) December 4, 2023
+
+Travis Kelce takes the field for another prime time game with Taylor Swift.
+
+(Via: @Chiefs)
+</item 85>
+
+<item 86>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Don't expect the Chiefs to start running until it's time to chew the clock.
+
+Our pick: Pass
+
+Seemingly Ranch: Travis Kelce Last TD Scorer (+550)
+
+Ranch is a fine condiment and beloved by many, which makes this wager something that should be seen as an insult to ranch fans everywhere. Unless the Jets make
+this a close game or send it to overtime, we have a hard time believing that Kelce will even be on the field to score the last touchdown. Avoid this one like
+people with taste buds avoid bleu cheese and treat your nuggets with respect.
+
+Our pick: Pass
+
+Plot Twist: Zach Wilson to have 300+ Passing Yards (+1800)
+
+If you asked the average Jets' fan what is holding this roster back, the overwhelming results would be Wilson. "I'm the problem, it's me," would probably
+qualify as the lyrics played in his walk-up song if fans had anything to say about it.
+</item 86>
+
+<item 87>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+Unfortunately, the bracelet never made it to her wrist or his digits to her phone.
+
+“I was disappointed that she doesn’t talk before or after her shows because she has to save her voice for the 44 songs she sings,” he said. “She doesn’t meet
+anybody, or at least she didn’t want to meet me, so I took it personal[sic].” At this point, it seems like any attraction between the two was one-sided. Kelce’s
+attempts to make proper contact with Swift at the show ultimately failed. Was she just not that into him? But Kelce, exhibiting the tenacity typical of a
+professional sportsman, remained determined to get her attention. Wildest Beards The Kelce brothers couldn’t stop talking about Swift, even though she’d left
+Travis hanging at the concert. Swift’s name began popping up everywhere on the podcast, including during conversations about... facial hair?
+</item 87>
+
+<item 88>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+They are gaining more than 15 yards on just 11 percent of pass plays, down from 21 percent through six games last season and 19 percent for 2022 overall. Jalen
+Hurts, A.J. Brown, DeVonta Smith and Dallas Goedert are still on the team, so I’m inclined to trust the production will return. But there’s also a lingering
+fear defenses have caught up to aspects of the Eagles’ scheme. Does Philly have a counterpunch?
+
+Advertisement
+
+Exec comment: “People are going to crush Hurts and the offense. They are just churning the clock so much. It just feels like they are imposing their will on
+teams through the run game and through their short passing and it just hasn’t taken off from an explosive passing standpoint, so when they play a team that can
+move the ball on them through the air, it presents some challenges.”
+</item 88>
+
+<item 89>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+Jason mocked his brother for his spelling of “squirrel” in the tweet, before claiming that’s the reason why the post went viral in the first place. “I’m only
+spelling squirrel like that from now on, I don’t know why it’s spelled the other way,” he joked. “This one gets crushed, but I think the only reason it’s
+getting crushed is because of the spelling. Outside of that, if I’m throwing bread around and a squirrel is eating it I’d be pretty pumped up.”
+
+Earlier this month, fans of the A-list couple took to X to share screenshots of some of Kelce’s old tweets - including one post from 2010 that reads: “#Chipotle
+will always be a great choice!!!!”
+
+The NFL player’s tweets have unsurprisingly resurfaced amid his relationship with Swift, who he’s been romantically linked to since the summer.
+</item 89>
+
+<item 90>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+It's not glamorous, but they'll score again. Shutting out NFL teams is no easy task, but the Chiefs defense is much improved and the Jets look like a team that
+doesn’t have a quarterback. Don’t consider it likely to hit, but +3400 wagers hardly ever are. Consider this a fun bet, unless you’re a Jets fan, and see how
+long K.C. can keep NYC off the scoreboard. They might just do it for the entire game.
+
+Our pick: Bet on it (with a small wager)
+</item 90>
+
+<item 91>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+- Enchanted
+
+Mahomes said he had not met Swift when asked in the postgame press conference, but he did meet her at the afterparty.
+
+"Yea I met her. She's really cool. Good people," Mahomes said, via KSHB 41 in Kansas City. "But like Trav said, imma let them have their privacy and just keep
+it moving."
+
+Sept. 27: Kelce breaks his silence
+
+"And they said speak now." -Speak Now
+
+Kelce addressed Swift's attendance on his podcast, saying, "To see the slow-motion chest bumps, to see the high-fives with Mom, to see how Chiefs Kingdom was
+all excited that she was there -- that s--- was absolutely hysterical. It's definitely a game I'll remember, that's for damn sure."
+
+He is not going to speak too much more about the relationship, noting that he wants "to respect both of our lives."
+
+"Yeah, my personal life -- that's not so personal.
+</item 91>
+
+<item 92>
+Christmas Day preview: 49ers, Ravens square off in potential Super Bowl sneak peek (Yardbarker, 2023-12-24T23:34:39+00:00)
+Even so, Kelce's 81.3 average receiving yards per game against the Raiders since 2019 suggests the All-Pro tight end is in line for a productive outing and
+could potentially snap his four-game scoring drought.
+
+New York Giants (5-9) at Philadelphia Eagles (10-4) | 4:30 p.m. ET
+
+Will the Eagles defense shake off the rust?: Appointing Matt Patricia as defensive play-caller didn't change much for the Eagles, whose defense has given up the
+third-most points in the NFL over their current three-game losing streak (95). Although the unit has reached its lowest point, there are reasons to be
+optimistic about Monday's matchup.
+
+New York ranks 31st among teams in points and yards per game this season and has surrendered a staggering 76 sacks, the third-most in a single season in NFL
+history. Not to mention, the annual trip to Philadelphia has essentially been a scheduled loss for the Giants, with their last win at Lincoln Financial Field
+coming in 2013.
+</item 92>
+
+<item 93>
+N.F.L. Executives on the Biggest Questions Facing Super Bowl Contenders (The New York Times, 2023-10-16T23:58:53+00:00)
+(Top photo: Dustin Satloff / Getty Images)
+
+The Football 100, the definitive ranking of the NFL’s best 100 players of all time, goes on sale this fall. Pre-order it here.
+</item 93>
+
+<item 94>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The October 1 matchup between the Chiefs and the Jets drew 27 million viewers. And became the most-watched Sunday TV show since the last Super Bowl! And the
+last Super Bowl had an actual concert by Rihanna.
+
+Revealed: The Dark Side Of Pat McAfee & Why Rob Gronkowski Is In The Firing Line
+
+Kaepernick, who? Deflategate, what? In the media frenzy surrounding the two lovebirds, other issues get thrown out of the window. How can fans forget that the
+NFL is also organizing games outside the American borders with a view to garnering international appeal? The NFL has scheduled 5 games abroad this season. It is
+also addressing the concussion controversies. It recently added both new concussion rules and a new $100 million initiative called “Play Smart, Play Safe,” to
+make the sport safer for players. And all the effort is showing.
+</item 94>
+
+<item 95>
+Taylor Swift-Travis Kelce timeline: Everything to know about rumored romance between pop star, Chiefs TE (CBSSports.com, 2023-10-12T23:21:52+00:00)
+"I was disappointed that she doesn't talk before or after her shows because she has to save her voice for the 44 songs she sings ... She doesn't meet anybody,
+or at least she didn't want to meet me, so I took it personal," Kelce said on an episode of the "New Heights" podcast he does with his brother, Philadelphia
+Eagles center Jason Kelce.
+
+He revealed that he made a friendship bracelet, a fan tradition at her concerts, with his number on it to give to her, seemingly expressing his interest in
+Swift. When his brother asked if it was his jersey number or his phone number, Kelce replied, "you know which one."
+
+"If you're up on Taylor Swift concerts, there are friendship bracelets and I had received a bunch of them, but I wanted to give Taylor Swift one with my number
+on it."
+
+Aug. 5: Kelce names his celebrity crush
+
+Well before the two were rumored to be dating, Kelce was asked his crush.
+</item 95>
+
+<item 96>
+FanDuel 'Prop Stars' Picks: Best bets for Travis Kelce & Taylor Swift-inspired props for Chiefs-Jets Week 4 (Sporting News, 2023-09-28T21:41:00+00:00)
+Bettors would be in the green, and those wearing green would be the ones with red-ish, cartoon-like faces. Odds are, Wilson would have to be atrocious again
+considering New York's defense isn't a pushover. The Jets often like to make games close, even when they seemingly have no business in doing so. Even if they
+are steamrolled, a garbage time score is more than enough to ruin this wager.
+
+Our pick: Pass
+
+Opening Act: Travis Kelce First TD Scorer (+400)
+
+Out of all the specials, this one is our favorite. The Chiefs will likely score first whether they get the opening kickoff or not. When we look at the Jets, we
+see an offensive coordinator that somehow underrated Micah Parsons and a team that refuses to take the training wheels off their former gunslinging quarterback.
+</item 96>
+
+<item 97>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The hardcore football fans are pretty much done with the NFL harping about Travis Kelce and Taylor Swift. Reality TV star Rachel Lindsay, a longtime NFL fan,
+recently slammed the “obnoxious” coverage, highlighting the “exhausting” uptick in Swifties obsessing over football. But that’s just one example of how fans are
+finding this fixation a little too disrespectful towards the sport.
+
+America’s Favorite Video Today
+
+From the league’s humble beginnings in 1920 to the $18 billion juggernaut that it is today, the ride has been rocky with more than just a few small bumps along
+the road. But with the ambitious target that NFL Commissioner, Roger Goodell, has set for 2027, is there a new strategy in the 104-year-old league’s master plan
+to dominate the world sporting scene?
+
+Why the ‘Traylor’ saga will be the key to Roger Goodell’s $27 billion target?
+</item 97>
+
+<item 98>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+The dating speculation first began in July, when Kelce confessed that he tried and failed to give Swift a friendship bracelet with his number on it during her
+Eras Tour show. On his podcast, he later invited the “Anti-Hero” singer to one of his games at Arrowhead Stadium - an invitation she famously accepted on 24
+September. Since then, Swift has attended three more of Kelce’s games.
+
+Kelce showed his support for Swift when he attended her Eras Tour show in Buenos Aires, Argentina, on 11 November. During the concert, Swift gave a shout-out to
+the Chiefs player when she changed her “Karma” lyrics to reflect their relationship. “Karma is the guy on the Chiefs, coming straight home to me,” she sang,
+letting out a laugh as fans in the audience screamed in response. The “All Too Well” singer was later seen running into his arms and kissing the NFL player
+following the concert, as he whisked her away backstage.
+</item 98>
+
+<item 99>
+Travis Kelce says he tried to delete his ‘nonsense’ tweets before they went viral (The Independent - Life and Style, 2023-11-25T14:50:53+00:00)
+Stay ahead of the trend in fashion and beyond with our free weekly Lifestyle Edit newsletter Stay ahead of the trend in fashion and beyond with our free weekly
+Lifestyle Edit newsletter Please enter a valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and
+updates from The Independent. Read our privacy notice Thanks for signing up to the
+
+Lifestyle Edit email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Travis Kelce has hilariously confessed that he attempted to delete some of his tweets before they went viral.
+
+The 34-year-old football star spoke candidly about his previous posts on X - formerly known as Twitter - during an episode of his New Heights podcast with
+brother Jason Kelce, which aired on 22 November. The comments came after some of Kelce’s funny tweets from 2010 and 2011 resurfaced amid his rumoured
+relationship with Taylor Swift.
+</item 99>
+
+<item 100>
+When pop culture and sport collide: A timeline of Taylor Swift’s NFL takeover (The Age, 2023-09-26T05:26:05+00:00)
+This was the first, albeit tentative, confirmation from the media rather than from amateur Swiftie sleuths on social media. So, it was only a matter of time
+before it entered the cultural zeitgeist. Blank Space Which it did, very quickly. On September 17, Kelce scored a touchdown against the Jaguars, triggering CBS
+announcer Ian Eagle to reference Swift’s 2014 hit, Blank Space.
+
+“Kelce finds a blank space for the score,” Eagle said, poking fun at Kelce’s newfound Swiftie status. And Eagle wasn’t the only one, with NFL Network’s Rich
+Eisen including a slew of lyric references during a preshow, including “shake it off”, “anti-hero” and “all too well”. Kelce even acknowledged the
+tongue-in-cheek banter, commenting on a montage video of the preshow that Eisen posted to Instagram. “Well played Rich … Well played,” he wrote. Suddenly,
+football fans and Swifties were living through this surprising collision.
+</item 100>
+=== END ITEM id=baea6b7160599319 ===

@@ -1,0 +1,1525 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=4617002dc901bc0f ===
+Gold sentences and facts:
+Sentence 0: With this sale, they offer some of the best value in their class from one of the top names in the business.
+  Fact 0.0: With this sale, they offer some of the best value in their class.
+  Fact 0.1: They are from one of the top names in the business.
+Sentence 1: “Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low,” CMA CGM Chief Financial Officer Ramon Fernandez told reporters Friday.
+  Fact 1.0: Each actor will have to be responsible to ensure that the market remains reasonable amid rates that are relatively low.
+  Fact 1.1: Ramon Fernandez is the Chief Financial Officer of CMA CGM.
+  Fact 1.2: Ramon Fernandez told reporters on Friday that each actor will have to be responsible to ensure the market remains reasonable amid relatively low rates.
+
+Retrieved items:
+<item 1>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+When you're not using them, the TV transforms into one of a myriad of famous art pieces, virtually disappearing into the decor. This is an especially large one,
+but it's perfect for a fancy living room where you don't want the TV to always be the center of attention. The 55-inch model is also on sale.
+
+At its full retail price, the XR A90J faces stiff competition from the likes of LG and Samsung, but at this shockingly discounted price, you're arguably getting
+the best deal in premium-yet-affordable TVs, at least for the next few days while it's on sale. It features Sony's 4K upscaling to make HD shows and films
+appear as if they're in 4K resolution plus built-in Google TV.
+
+Bose’s Smart Soundbar 600 is a Mighty Mouse Dolby Atmos soundbar that offers clear and expansive sound from a strikingly small frame.
+</item 1>
+
+<item 2>
+The 30 best Amazon Prime Day deals for October 2023 (Engadget, 2023-10-10T17:41:37+00:00)
+Bose Quiet Comfort
+
+The Bose QuietComfort Earbuds II have dropped to $199 for October Prime Day, which is the best price we've ever seen, though you'll need to be a Prime member to
+get the deal. They're currently the best wireless earbuds you can get if you want as much noise cancelation as possible. On top of that, these buds have a
+smaller, more comfortable fit and good audio quality.
+
+Sony SRS-XB13 Extra Bass
+
+The four-inch tall SRS-XB13 is back to $35 for October Prime, which matches its sale price for July’s Prime sale. You'll need a Prime membership to get the
+deal, however. This is an older model of the tiny portable. Sony replaced it with the SRS-XB100 earlier this year, which is currently seeing a 20 percent
+discount. They're both rated for water and dust resistance and you can pair two for stereo sound.
+</item 2>
+
+<item 3>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Samsung's Galaxy Buds2 Pro (9/10, WIRED Recommends) are some of our favorite wireless earbuds, particularly for Android users. They work best with Samsung
+phones, but they pair easily with any Android phone. They have solid noise canceling, up to 7.5 hours of battery life, and a wireless charging case to keep them
+topped off.
+
+Bose's QuietComfort Ultra improve on the brand's top earbuds with a minor boost in noise canceling and new spatial audio skills, designed to expand the sound
+for everything you play. These buds were just released late this year and this is the first solid discount we've seen.
+
+Photograph: JBL
+
+JBL's Endurance Peak 3 are that rare pair of earbuds you can feel comfortable wearing at the gym, on the trail, or even in the hot tub thanks to their hearty
+water resistance and sport-ready fit. They're light on extras like noise canceling but at this price, they're a great investment as your go-to workout
+companions.
+</item 3>
+
+<item 4>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+Amazon does not price match, which is annoying, but it’s tolerable since it often has the lowest prices of all retailers anyway. Amazon only protects the price
+on pre-orders that have its “Pre-order Price Guarantee,” which ensures that you’ll pay the lowest amount a product sells for before it’s launched.
+
+Not only does Best Buy match prices from “qualified competitors,” but its site says that most products bought between now and Dec. 30 can be price-matched
+through Jan. 13, 2024.
+
+Walmart’s policy says it won’t price match with competitors, nor does it price match for products purchased online that later decrease in price.
+
+Target says that purchases made between Oct. 22 and Dec. 24 can be price-adjusted if the cost lowers in the span of time, and if you show proof of purchase. You
+may be eligible for a price match on a purchase, but the rules for submitting documentation vary depending on whether you’re shopping online or in store. It’s
+all explained here.
+</item 4>
+
+<item 5>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+For surround sound, you can also pair it with other Sonos speakers.
+
+Bose has updated its Smart 900 soundbar to include better bass extension, helping fortify an already great sound profile. With true up-firing drivers, the
+system also provides expansive Dolby Atmos and virtual surround sound for a cinematic performance from a single unit, and this is the first time we've seen its
+price drop.
+
+Believe it or not, this is the lowest price we've seen on this luxury Sennheiser model that's as much trapeze artist as soundbar thanks to its high-flying
+virtual surround sound and Dolby Atmos tricks. It's a hefty unit and doesn't include a separate subwoofer, but still manages to serve up punchy grooves, sweet
+and smooth musicality, and great convenience features like Wi-Fi streaming and an analog input at a price that's finally swung below the stratosphere.
+
+Samsung’s HW-Q800C offers a lot from a two-piece system.
+</item 5>
+
+<item 6>
+The 30 best Amazon Prime Day deals for October 2023 (Engadget, 2023-10-10T17:41:37+00:00)
+Sony WF-1000XM5
+
+Sony's WF-1000XM5 wireless earbuds are on sale for $278 for Prime Day, which is their best price yet. These are the best wireless earbuds on the market right
+now, and Sony improved upon it's already remarkable buds with a more comfortable fit, better sound quality and features likes adaptive sound and Speak-to-Chat.
+
+Anker Soundcore Space A40
+
+The Anker Soundcore Space A40 is on sale for $54, which matches its all-time low and comes in $25 less than usual. The Space A40 is the top pick in our guide to
+the best budget wireless earbuds, as it includes a host of features that belie its price: adaptive ANC, multi-device pairing, wireless charging, a transparency
+mode and up to 10 hours of battery life. Its audio quality and ANC aren’t quite as powerful as more expensive pairs, but both are more than effective enough for
+the money.
+</item 6>
+
+<item 7>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+We note this as an honorable mention in our guide: It’s been around for a few years now, but it’s comfortable, and its detachable mic is solid. It’s better
+built than the Cloud Stinger 2 as well. At this price, they don’t sound bad either, though an underemphasized treble means they aren’t especially detailed.
+
+Logitech G535
+
+Logitech G535 $80 $130 Save $50 See at Amazon
+
+If you’re looking for a wireless headset, the Logitech G535 is back down to $80, which is about $25 below its average street price. This is an honorable mention
+in our gaming headsets guide, as we like its lightweight design, Bluetooth support and agreeable, relatively well-balanced sound. It forces you to crank the
+volume to reach a listenable level though, and its mic makes voices sound a little too thin. It also doesn't work with Xbox consoles. But if you really want a
+wireless gaming headset for less than $100, it’s well worth a look.
+</item 7>
+
+<item 8>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+While not as nice as most of the pricier models in this roundup, the Space Q45 is a fine value if you can’t spend more than $100. Its adaptive ANC is
+better-than-average and can be set to a manual mode if needed, it supports multi-device pairing and its design is comfortable to wear for hours at a time. Sound
+quality is where the price is most evident, as it’s a little too uneven in the treble, but its bass-heavy profile should work for fans of hip-hop and EDM. You
+can tweak the sound somewhat through the EQ tools in Anker’s Soundcore app.
+
+Anker Soundcore Life Q30
+
+Anker Soundcore Life Q30 $56 $80 Save $24 See at Amazon
+
+If you want a decent set of noise-canceling over-ears for as little as possible, the Anker Soundcore Life Q30 is also worth considering. It’s now down to $56,
+which is $24 less than usual.
+</item 8>
+
+<item 9>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Sony WH-1000XM5
+
+Photo by Billy Steele / Engadget Sony WH-1000XM5 $328 $400 Save $72 Black Friday has brought the top pick in our guide to the best wireless headphones back down
+to its all-time lowest price. $328 at Amazon
+
+The Sony WH-1000XM5 is down to $328 at Amazon, B&H and other retailers, which is a $72 drop and ties the lowest price we’ve seen. This is the top pick in our
+guide to the best wireless headphones, and we gave it a review score of 95 last year. Its active noise cancellation (ANC) is among the better options we’ve
+tested, its design is comfortable to wear over extended periods and its battery lasts a solid 30 or so hours per charge. The sound goes heavy on the bass by
+default, which should please fans of hip-hop and pop music, but you can customize the EQ curve through Sony’s app.
+</item 9>
+
+<item 10>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+But at this price, the Studio Pro could make sense if you really dig the Beats aesthetic.
+
+Beats Fit Pro
+
+Beats Fit Pro $160 $200 Save $40 See at Amazon
+
+The Beats Fit Pro is down to $160, which is a price we’ve seen multiple times in recent months but still takes $40 off the pair’s MSRP. The Fit Pro is the “best
+for workouts” pick in our wireless earbuds guide, as it offers most of the Apple-friendly perks you’d get from a set of AirPods — Beats is a subsidiary of Apple
+— in a sportier, more stable design. Its punchy yet refined sound is a plus, and it uses physical control buttons instead of touch panels. However, it lacks
+multi-device pairing and wireless charging, and its ANC is a step down from the AirPods Pro. We gave the Fit Pro a review score of 87 in 2021.
+</item 10>
+
+<item 11>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+We gave the QC 45 a review score of 86 in 2021, and we still like its lightweight design, upper-tier ANC and easygoing sound. You can’t manually adjust the
+intensity of the ANC, unlike the newer model, and Sony’s XM5 and XM4 provide longer battery life and a more versatile feature set for those willing to pay up.
+But if that’s not you, the QC 45 is a fine alternative at this price.
+
+Sennheiser Prime Day headphone deals
+
+Sennheiser Momentum True Wireless 3
+
+Sennheiser Momentum True Wireless 3 $142 $280 Save $138 See at Amazon
+
+The Sennheiser Momentum True Wireless 3 is available for $142, which is a new low. This pair has normally retailed around $180 in recent months. This is the
+runner-up pick in our wireless earbuds guide, as Engadget’s resident audio expert Billy Steele considers it the best-sounding true wireless pair he’s tested.
+</item 11>
+
+<item 12>
+The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more (Engadget, 2023-11-27T10:00:30+00:00)
+They carry a list price of $169 but often sell for closer to $150, so this is $10 off the usual. These non-Pro AirPods came out in 2021 and got a review score
+of 88 from us. They pair quickly with iPhones and are a good complement to Siri’s helpfulness. They don’t have ANC however — you’ll need to go for the AirPods
+Pro for that feature — but they do have Adaptive EQ which monitors and adapts sound in real time. The fit is comfortable and they’re water-resistant so they can
+handle workouts or the weather.
+
+Apple Watch Cyber Monday deals
+
+Apple Watch Ultra 2
+
+The Apple Watch Ultra 2 is now $739, which is $60 off. It sold for $9 less during Black Friday and is one of the few Apple products to not maintain its pricing
+for Cyber Monday. Both Amazon and Best Buy are selling it for $739.
+</item 12>
+
+<item 13>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+The best headphone and earbud deals
+
+Sony WH-1000XM4 $ 250 $ 350 29 % off $ 250 $ 250 $ 350 29 % off Sony’s over-ear XM4s can last up to 30 hours on a single charge and provide a comfortable
+listening experience thanks to their plush ear pads. Read our review. $250 at Best Buy
+
+Sony WF-1000XM5 $ 280 $ 300 7 % off $ 280 $ 280 $ 300 7 % off Sony’s flagship WF-1000XM5 earbuds improve upon the previous model with richer sound quality,
+slightly more powerful ANC, and vastly improved comfort thanks to their reduced size and weight. Read our review. $280 at Best Buy
+
+Sony’s LinkBuds normally retail for $179.99, but you can snag a pair for $129.99 at Best Buy right now.
+</item 13>
+
+<item 14>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+These headphones are capable of lasting up to 60 hours on a single charge. They also sound terrific, offer multipoint Bluetooth connectivity, and match the Sony
+WH-1000XM5 — our favorite noise-canceling headphones — in terms of comfort. They may not boast physical controls or the stylish, retro-inspired design their
+predecessor had, but they do offer improved noise cancellation (even if it isn’t quite on par with that of Sony or Bose’s offerings).
+
+The Momentum Wireless 4 typically sell for $379.95, but right now you can buy them for $269.89 at Amazon and for $30 more at Best Buy.
+
+Best UE deals
+
+UE Fits deals
+
+After testing a pair for ourselves, we remarked in our review that the UE Fits were the most comfortable consumer earbuds on the market.
+</item 14>
+
+<item 15>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+Anker's Liberty 4 NC earbuds (8/10, WIRED Recommends) are another feature-packed pair of buds with great noise canceling, and are on sale for $80 ($20 off).
+
+The Beats Studio Pro (7/10, WIRED Review) were released just a couple of months ago. We wish the battery life was longer and that the controls and EQ options
+were more robust. But this price makes them more worthwhile, and they do have excellent noise canceling.
+
+Photograph: Bose
+
+These noise-cancelling headphones are our favorite for the office. With advanced signal processing and four microphones built in, these will limit any sound
+around you, making them great for focusing on work in a busy environment and for Zoom calls. These often fluctuate in price, but we think it's a great deal.
+
+We like Sony's standard LinkBuds (8/10, WIRED Recommends) for the open-ear design that allows you to hear what's going on around you.
+</item 15>
+
+<item 16>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Like many Sony headphones, it also comes with a number of useful bonus features; “Speak-to-Chat,” for instance, automatically pauses your music when you start
+speaking.
+
+Sony WF-1000XM5
+
+For an in-ear pair, the Sony WF-1000XM5 is also on sale for $248 at Amazon, B&H and others. (Yes, Sony’s headphone naming scheme is bad.) That matches the
+lowest price we’ve seen and comes in $52 below Sony’s usual list price. This set tops our list of the best wireless earbuds and earned a score of 87 in our
+review this past July. Like the over-ear XM5 above, it offers a host of useful features, a warm yet customizable sound, powerful ANC and a comfortably snug fit
+that naturally isolates a good chunk of outside noise on its own. Battery life should sit around seven to eight hours with average use.
+</item 16>
+
+<item 17>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+The earpieces are comfortable and fully waterproof, the battery lasts around seven hours, and the suite of touch controls work reliably, which isn’t a given in
+this price range. There’s no ANC, multi-device connectivity or wear detection, however, and the built-in mic will pick up wind noise if you’re on a call
+outside.
+
+Samsung Galaxy Buds 2 Pro + $10 Amazon gift card
+
+The Samsung Galaxy Buds 2 Pro are on sale for $160 for Black Friday, and you can get them with a $10 Amazon gift card for no extra cost. That’s a good way from
+their all-time low — they very briefly fell to $105 last year — but it’s still $30 or so less than their average selling price in recent months.
+</item 17>
+
+<item 18>
+The 26 best Amazon Prime Day deals you can still shop for today (Engadget, 2023-10-12T15:44:16+00:00)
+In general, you wouldn’t buy the Air for things like high-res media editing, though its M2 chip is still plenty powerful for everyday tasks.
+
+If you do need more storage space, the 512GB model with 8GB of RAM is on sale for a low of $1,249. Variants with double the RAM are up to $250 off as well.
+Meanwhile, the 13.6-inch MacBook Air isn’t discounted on Amazon, but it’s down to $899 at Best Buy. That’s $200 off the notebook’s list price.
+
+Sony WF-1000XM5
+
+Sony's WF-1000XM5 wireless earbuds went down to $278 for Prime Day and are still going for that price today. That's a $22 discount and their best price yet. We
+think these are the best wireless earbuds on the market right now. Sony improved upon it's already remarkable buds with a more comfortable fit, better sound
+quality and features likes adaptive sound and Speak-to-Chat.
+</item 18>
+
+<item 19>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Even without the accessory, we like the open-back A40 for providing a wider soundstage than most gaming headsets. It’s not as open or detailed as the
+Beyerdynamic DT 900 Pro X or Sennheiser HD 560S, and it misses more detail in the treble range, but it’s immersive, with a slight bass boost gives in-game
+effects a little extra boom. The headset as a whole looks “gamer-y,” but it’s comfortable. And while its built-in mic isn’t the clearest we’ve tested, it’s at
+least serviceable for basic chat.
+
+HyperX Cloud Stinger 2
+
+If all you want is a decent gaming headset for as little as possible, the HyperX Cloud Stinger 2 is worth considering at $35. That’s only $5 below its usual
+going rate, but it matches the lowest price we’ve seen.
+</item 19>
+
+<item 20>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+At the same time, they retain the essentials, like support for multipoint and wireless charging.
+
+Normally $199.99, they’re currently on sale for $149.99 from Amazon, Best Buy, and Jabra.
+
+Jabra Elite 4 Active deals
+
+If you prefer a more affordable pair of earbuds that are geared toward working out, there’s also Jabra’s Elite 4 Active. They come with IP57 water resistance
+and active noise cancellation (though you can’t adjust it) but lack wireless charging. However, if you’re fine without the extra bells and whistles, you can buy
+them for $69.99 ($50 off) at Amazon and Walmart.
+
+Best Sennheiser deals
+
+Sennheiser Momentum Wireless 4 deals
+
+If you’re looking for a pair of noise-canceling headphones with superb battery life, Sennheiser’s Momentum Wireless 4 are your best option. These headphones are
+capable of lasting up to 60 hours on a single charge.
+</item 20>
+
+<item 21>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+Best Sony deals
+
+Sony WH-1000XM5
+
+They aren’t a huge departure from the previous model, but the Sony WH-1000XM5 are still our favorite pair of noise-canceling headphones. The XM5s improve on all
+of the features that made the XM4s so awesome by providing better active noise cancellation, improving the voice call quality, and boosting the overall sound of
+the already excellent headphones. While the lack of new features is a bit disappointing, the Sony XM5s remain one of our top recommendations for anyone looking
+for a premium pair of noise-canceling headphones.
+
+Right now you can buy the headphones for around $328 ($70 off) from B&H Photo, Best Buy, and Target.
+
+Sony WH-1000XM4 deals
+
+The WH-1000XM5’s predecessor, Sony’s WH-1000XM4, are still a terrific pair of headphones even if they’re older. They offer excellent noise cancellation, good
+sound, and the ability to pair to two devices simultaneously.
+</item 21>
+
+<item 22>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+We gave the XM4 a review score of 94 back in 2020.
+
+Sony WF-1000XM5
+
+Sony WF-1000XM5 $278 $300 Save $22 See at Amazon
+
+The in-ear Sony WF-1000XM5, meanwhile, are on sale for $278. That’s only $20 off, but it marks the first discount we’ve seen for the top pick in our wireless
+earbuds buying guide. We gave this true wireless pair a score of 87 earlier this year: Like Sony’s over-ear models, it comes with a range of useful features,
+powerful noise cancellation and a warm yet detailed default sound. The design here is also much more agreeable than previous Sony earphones.
+
+Sony LinkBuds S
+
+Sony LinkBuds S $128 $200 Save $72 See at Amazon
+
+The Sony LinkBuds S are on sale for $128, which is a price we’ve seen in the past but still takes about $30 off the pair’s average street price.
+</item 22>
+
+<item 23>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+We found this pair to offer exceptional ANC, a comfortable fit and sound quality that has more bass plus "increased clarity and enhanced warmth" compared to
+previous generations of the QC cans.
+
+Anker Soundcore Space A40
+
+The Anker Soundcore Space A40 is down to $54 for Black Friday, matching the lowest price we’ve seen. This is the top pick in our guide to the best budget
+wireless earbuds: It’s comfortable, it supports wireless charging and multi-device pairing, it can last up to 10 hours a charge and its ANC is remarkably
+effective for a sub-$100 pair. Its bassy sound should please most by default, but it can also be customized through a clean companion app. The only big
+negatives are its middling call quality and lack of wear detection.
+
+Dyson Black Friday deals
+
+Dyson Black Friday deals include a $200 discount on the Dyson V15 Detect Absolute, bringing the cordless vacuum down to $550.
+</item 23>
+
+<item 24>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Black Friday is often a boon for deals on headphones and earbuds, and this year is no different. The shopping holiday has brought a plethora of deals on all
+kinds of headphones, include several top picks from our guides to the best wireless headphones, wireless earbuds, budget wireless earbuds and gaming headsets.
+Other popular models from the likes of Sony, Beats, Bose and Apple are discounted as well. All of this means it's an ideal time to pick up a new set, whether
+it's to give as a gift to someone on your holiday shopping list or just to replace your own aging cans. To help you get a good bargain, we've rounded up the
+best Black Friday deals on headphones and earbuds we could find for 2023.
+</item 24>
+
+<item 25>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+We gave it a 94 in our review back in 2020.
+
+Apple AirPods Pro
+
+Apple’s AirPods Pro are on sale for $190 at Amazon, Walmart, Target and Best Buy. That's $60 less than buying from Apple directly and ties an all-time low. This
+is the “best for iOS” pick in our wireless earbuds guide thanks to its suite of helpful Apple-specific features, including hands-free access to Siri, quick
+pairing with iPhones and device tracking through Apple’s Find My network. Effective (if not class-leading) ANC, a superb transparency mode and a pleasantly warm
+sound also stand out. That said, the Pro’s six-hour battery life is just average and, as with any set of AirPods, you pretty much have to be a dedicated Apple
+fan to get the most out of it.
+
+This deal applies to the latest iteration of the earphones, which come with a USB-C charging case.
+</item 25>
+
+<item 26>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Klipsch has a talent for crafting soundbars that put the sound first, often without a lot of frills, and the Cinema 600 is an excellent example. Built from a
+speaker-like MDF cabinet and paired with a massive 10-inch subwoofer driver, this system has a penchant for clear and powerful sound that’s as good for music as
+it is for cinematic punch.
+
+Photograph: Polk Audio
+
+Polk’s Audio Signa 4 (7/10, WIRED Recommends) was already one of the most affordable Dolby Atmos soundbars of its kind, offering true up-firing drivers, a
+wireless subwoofer for beefy bass, and generally pleasing performance. It’s all the tougher to pass up at this price, perfect for those seeking a no-nonsense
+system that easily upgrades your sound in a simple package.
+
+Sony’s HT-A5000 is a pricey proposition at full cost, but it’s a killer deal at this price thanks to engulfing surround sound expansion and just about all the
+features you can pack into a bar this size.
+</item 26>
+
+<item 27>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+We highlight the LinkBuds S as an honorable mention in our wireless earbuds guide, as we like its compact design, decent noise cancellation, handy bonus
+features and warm sound. It can’t match the ANC strength or battery life of the WF-1000XM5, but it also costs a fair bit less, which helps.
+
+Apple Prime Day headphone deals
+
+AirPods Pro
+
+Apple AirPods Pro (USB-C) $189 $239 Save $50 See at Amazon
+
+The USB-C version of Apple’s AirPods Pro is down to $189, which is $60 off Apple’s list price and a new low. The Lightning version is available for the same
+price. This is the “best for iOS” pick in our buying guide. Both models still deliver strong ANC, a superb transparency mode and a pleasingly warm sound. They
+also come with a variety of Apple-specific features, including hands-free Siri access, Find My tracking and fast pairing with other Apple devices.
+</item 27>
+
+<item 28>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+It's great for large spaces, where the extra bass response helps things feel more cinematic. This is also the lowest price we've tracked, so far.
+
+For the luxury-minded, this extravagant soundbar from Sennheiser is our top pick. It has massive speakers with some of the best audio quality we've seen (or
+heard, I suppose) of any soundbar we've tested. It's also one of the most expensive we recommend, but its price very rarely dips this low, so if you've been
+waiting for the perfect sale to grab one, now's the time.
+
+If you're the type to set up smart speakers and gadgets throughout your home, this soundbar from Yamaha lets you cut down on some of that work. It comes with
+Amazon Alexa built in, and can control a host of other smart home gadgets. We've actually seen this soundbar's price fluctuate a fair amount recently, sometimes
+as low as $180, but this is still nearly the cheapest we've ever seen it, so it's a good time to grab one.
+</item 28>
+
+<item 29>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+That's another $50 discount and an all-time low. We gave these in-ears a review score of 88 in September and recently named them the “best for noise
+cancellation” pick in our wireless earbuds buying guide. As that title suggests, the main reason to consider this pair over the Sony WF-1000XM5 is its ANC
+performance, which is the strongest we’ve tested from a true wireless model. We also enjoy Bose’s spatial audio tech. But the earpieces are on the larger side,
+the call quality and battery life (at six-ish hours) are just OK and there’s no support for multi-device pairing.
+
+Beats Fit Pro
+
+The Beats Fit Pro is back down to $159, which isn’t an all-time low but is still roughly $20 below its average street price. This is the “best for workouts”
+pick in our wireless earbuds buying guide, as it packs many of the iOS-friendly conveniences of Apple’s AirPods in a sportier and more stable design.
+</item 29>
+
+<item 30>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Sony's WF-1000XM5 (7/10, WIRED Review) source multiple generations of great sound, top features, and excellent noise canceling, all wrapped into their most
+compact presentation yet. They're not cheap, so this discount is key if you're looking to be an earlier adopter of Sony's latest flagship buds.
+
+The only issues we had with Sennheiser's HD 660S2 (7/10, WIRED Review) bass-enriched audiophile beauties were their high price and stiff clamping force. At this
+price, we can live with a tighter fit, especially since the payoff is gloriously clear and richly detailed sound.
+
+Sony's working-class noise cancelers offer solid performance. clear sound, and impressive battery life at a much more reasonable price than the brand's top
+offerings. With this sale, they offer some of the best value in their class from one of the top names in the business.
+</item 30>
+
+<item 31>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+The XM5 is the top recommendation in our guide to the best wireless headphones, as it offers a comfortable design, powerful ANC, crisp call quality and 30 or so
+hours of battery life. It also comes with a number of useful bonus features such as "Speak to Chat," which automatically pauses your music when you start
+talking to somebody else. By default, its bass-heavy sound plays well with hip-hop and EDM, though you can easily customize the EQ curve through Sony's app. We
+gave the XM5 a score of 95 in our review last year.
+
+Sony WF-1000XM5
+
+Sony's WF-1000XM5, meanwhile, is the top choice in our guide to the best wireless earbuds, and it's now down to a new low of $248 at Amazon, B&H and other
+retailers. Several other retailers have it for $2 more. Normally, these noise-canceling earphones go for $300.
+</item 31>
+
+<item 32>
+The best Apple Cyber Monday deals of 2023: Save on AirPods, iPads, Apple Watches and more (Engadget, 2023-11-27T10:00:30+00:00)
+Your Cyber Monday Shopping Guide: See all of Yahoo’s Cyber Monday coverage, here. Follow Engadget for Cyber Monday tech deals. Learn about Cyber Monday trends
+on In The Know. Hear from Autoblog’s experts on the best Cyber Monday deals for your car, garage, and home, and find Cyber Monday sales to shop on AOL,
+handpicked just for you.
+</item 32>
+
+<item 33>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Sennheiser HD 560S
+
+The Sennheiser HD 560S is another open-back pair of wired headphones we highlight in our gaming headset guide. It’s down to $150 at Amazon, B&H, Sennheiser’s
+online store and other retailers — that’s not an incredible deal, as the pair often sold for the same rate earlier in the year, but it’s about $30 less than the
+street price we’ve seen since the summer. Regardless, the HD 560S offers a pleasingly balanced, spacious and detailed sound profile and a frame that’s
+comfortable to wear for extended periods. It can sometimes sound a little piercing in the treble, it’s not as sturdily built as the DT 900 Pro X and, again,
+it’ll leak and let in lots of noise. But if you want audio-centric headphones for less than $200, this is one of the better options in the price range.
+</item 33>
+
+<item 34>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+We gave the Fit Pro a review score of 87 in 2021.
+
+Anker Prime Day headphone deals
+
+Soundcore Space A40
+
+Anker Soundcore Space A40 $54 $100 Save $46 See at Amazon
+
+The Anker Soundcore Space A40 is on sale for $54, which matches its all-time low and comes in $25 less than usual. The Space A40 is the top pick in our guide to
+the best budget wireless earbuds, as it includes a host of features that belie its price: adaptive ANC, multi-device pairing, wireless charging, a transparency
+mode and up to 10 hours of battery life. Its audio quality and ANC aren’t quite as powerful as more expensive pairs, but both are more than effective enough for
+the money. Unlike many budget wireless headphones, its default sound doesn’t completely blow out the bass. Just note that its call quality is mediocre, and it
+lacks wear detection, so it won’t auto-pause when you remove an earbud.
+</item 34>
+
+<item 35>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+A recent update added an “Adaptive Audio” mode that dynamically blends its ANC and transparency modes based on your surroundings, while the new USB-C model
+comes with improved dust resistance alongside the new charging port. That said, you really need to be committed to the Apple ecosystem to get the most out of
+this, and the six-hour battery life is just OK. We gave the AirPods Pro a score of 88 last year.
+
+Apple AirPods (2nd Gen)
+
+Apple AirPods (2nd Gen) $89 $129 Save $40 See at Amazon
+
+Apple’s second-gen AirPods, meanwhile, are back down to $89. That’s $10 off their usual street price. We can’t broadly recommend the base AirPods to most people
+these days, as their one-size-fits-all design won’t work for everyone and there are better-sounding options for the money.
+</item 35>
+
+<item 36>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+We gave this pair a score of 87 in our review last year.
+
+Beyerdynamic DT 900 Pro X
+
+Beyerdynamic's DT 900 Pro X headphones are down to $249 at Amazon and Target from a trusted third-party seller. That’s only $20 off their usual going rate, but
+we haven’t seen many larger discounts over the past few months. The DT 900 Pro X is a wired pair of open-back headphones designed for critical listening at
+home. It’s currently the top pick in our guide to the best headphones for gaming, as its wonderfully spacious sound does well to envelop you in the fine details
+of any given game. Like most open-back cans, it can’t produce truly deep sub-bass, but it delivers enough low-end to give in-game explosions a powerful sense of
+impact. A set of soft velour earpads keep the whole thing comfortable, though it can’t fold up, and the open design means it won’t block much external noise
+when you’re outside of the house.
+</item 36>
+
+<item 37>
+200+ of the best deals from Amazon's Cyber Monday sale (Mashable, 2023-11-27T08:45:59+00:00)
+On the outside, the Go 3 is definitely giving MacBook Air — the main difference being that the Go 3's screen is a touchscreen.
+
+More laptop deals
+
+Traditional laptops
+
+2-in-1 laptops
+
+Chromebooks
+
+Gaming laptops
+
+Headphone and earbud deals
+
+Why we like it
+
+Narrowing down a headphones upgrade from so many on-sale options is less overwhelming when you've confirmed that you want to stick with a super premium, super
+reputable brand like Bose — but also that you want to stick to a budget. There's only one pair of Bose over-ear headphones you can grab for just under $200, and
+that's the QuietComfort 45s at a record-low price of $199. This classic pair secures top-of-the-line ANC, 20 hours of battery life, and all-day comfort for less
+than half of the AirPods Max's sale price.
+</item 37>
+
+<item 38>
+54 Best Apple Black Friday Deals (2023): iPad, Apple Watch, AirPods (Wired, 2023-11-25T00:00:29+00:00)
+Many of the features won't work with an Android phone, but the core features will.
+
+The Beats Studio Pro Wireless Headphones (7/10, WIRED Review) pack excellent noise canceling, good sound quality, and great wireless range. They also offer a
+stable fit and compact design. They are missing a few key features though, including multi-band EQ and sensors for auto-pause. But improved sound quality and
+active noise canceling, as well as a few neat features for both Apple and Android devices, make these a good option—especially on sale. They're $10 cheaper than
+they were on Prime Day, making this the lowest price we've tracked.
+
+The Beats Fit Pro (9/10, WIRED Recommends) deliver great sound and a comfortable fit. With Apple's proprietary H1 chip, they work like AirPods when used with an
+iPhone. But they also work great with Android, complete with an app that allows you to customize the controls and perform a fit test.
+</item 38>
+
+<item 39>
+41 Best Prime Day Apple Deals (2023) (Wired, 2023-10-10T22:58:00+00:00)
+It's pretty minimalist and only comes in black, but at this sale price that's all we need.
+
+Earbud and Headphone Deals
+
+Read our Best Wireless Earbuds guide for more.
+
+AirPods Pro Photograph: Apple
+
+The latest version of the AirPods Pro (9/10, WIRED Recommends) was just announced last month at Apple's hardware event and they're already on sale. These buds
+are identical to the old pair on the outside, but they pack some changes internally. In addition to slightly improved sound, there are also new Adaptive Audio
+features and a new Conversation Awareness mode (that turns audio down and lowers the sound of the background so you can hear someone talking to you). The
+version with the Lightning port is currently out of stock, but who wants those anyway?
+
+The Beats Studio Pro Wireless Headphones (7/10, WIRED Review) pack excellent calling and noise canceling, good sound quality, and fantastic wireless range. They
+also offer a stable fit and compact design.
+</item 39>
+
+<item 40>
+14 Best Deals: TVs, Keyboards, Mice, Chargers, and Earbuds (Wired, 2023-10-19T15:56:15+00:00)
+With the latest Amazon-created Prime-themed sale day behind us and Black Friday slowly approaching, the deals world feels a bit like Pippin waiting on the edge
+of battle. But that doesn't mean there aren't sales you can score while you wait for winter to come. We've rounded up some of the best deals right now on TVs,
+gaming gear, and other electronics.
+
+Special offer for Gear readers: Get WIRED for just $5 ($25 off). This includes unlimited access to WIRED.com, full Gear coverage, and subscriber-only
+newsletters. Subscriptions help fund the work we do every day.
+
+If you buy something using links in our stories, we may earn a commission. This helps support our journalism. Learn more.
+
+TV and Soundbar Deals
+
+Samsung S95C Photograph: Samsung
+
+The Samsung S95C (8/10, WIRED Recommends) is one of our favorite TVs, thanks to its quantum dot OLED panel, which gives it perfect black levels and a
+ridiculously bright image.
+</item 40>
+
+<item 41>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+When it comes to headphones and true wireless earbuds, there are a ton of brands and products to choose from. However, the sheer range of available models can
+also make them difficult to shop for, especially since many of them cater to different lifestyles, budgets, and priorities. Some are better suited for long-haul
+flights and vigorous workouts, for instance, while others let you tune out noise so you can focus better.
+
+That’s why we’ve curated a list of the best headphone and earbud deals available. Here, you’ll find sales on all kinds of earbuds and over-ear headphones, all
+of which come with their own strengths and weaknesses. And if you want to do even more research before making a buying decision, we’ve put together guides to
+the best wireless earbuds and best noise-canceling headphones, which can help you determine which pair is right for you.
+</item 41>
+
+<item 42>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+Sony Prime Day headphone deals
+
+Sony WH-1000XM4
+
+Sony WH-1000XM4 $248 $348 Save $100 See at Amazon
+
+The Sony WH-1000XM4 is back down to $248, which is $20 more than its all-time low but roughly $80 below its average street price. This is Sony’s last-gen pair
+of wireless noise-cancelers, but it still delivers powerful ANC, 30-ish hours of battery life and a similarly rich feature set as the newer WH-1000XM5 (which
+isn't on sale as of this writing). Unlike its successor, it can also fold up for easier storage. It doesn’t have the XM5’s adaptive ANC system, however, and its
+mic quality isn’t as clear. It’s slightly heavier too, plus it sounds a bit boomier out of the box. But for less than $250, it remains a great value. We gave
+the XM4 a review score of 94 back in 2020.
+</item 42>
+
+<item 43>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+Prime Day gaming headset deals
+
+HyperX Cloud Stinger 2
+
+HyperX Cloud Stinger 2 $35 $50 Save $15 See at Amazon
+
+The top budget pick in our gaming headphones buying guide, the HyperX Cloud Stinger 2, is on sale for $35. That’s just a modest $5 discount but matches the
+lowest price we’ve seen. The Cloud Stinger 2 doesn’t have the most balanced or detailed sound, but its V-shaped signature gives action scenes a nice level of
+impact, and its mic quality belies the dirt-cheap price. The design is comfortable too, though it’s made from cheap-feeling plastic.
+
+HyperX Cloud Alpha
+
+HyperX Cloud Alpha $60 $100 Save $40 See at Amazon
+
+If you’re willing to pay a little more, the HyperX Cloud Alpha is another decent value at $60, which is $15 or so lower than its typical street price.
+</item 43>
+
+<item 44>
+Shop 200+ Walmart doorbuster deals for Black Friday (Mashable, 2023-11-25T01:13:44+00:00)
+(For its part, Amazon has never put them on sale for less than $189.) These wireless earbuds from fall 2022 "sound wonderful and have almost uncanny active
+noise cancelation," said Mashable senior editor Stan Schroeder, and they last for up to six hours on a single charge.
+
+Read Mashable's review of the Apple AirPods Pro (2nd Generation).
+
+More headphone/earbud deals
+
+Tablet deals
+
+Why we like it
+
+Best tablets under $100? Try best tablets under $30. Sure, this onn. tablet may not have all the functionality of an iPad, but if you're looking for a super
+basic tablet to watch videos or read on, you'll be hard-pressed to find anything in the $20 range. Even Fire tablets have only dropped down to $40 this Cyber
+Monday.
+
+More tablet deals
+
+Smartwatch deals
+
+Why we like it
+
+Apple's latest entry-level wearable also has a new record-low price at Walmart for Black Friday (which works out to a 28% savings).
+</item 44>
+
+<item 45>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Normally, these noise-canceling earphones go for $300. Like the over-ear XM5, this in-ear model delivers excellent ANC (with strong passive isolation), loads of
+helpful features and a warm sound that's fun out of the box but can be customized if needed. Battery life is decent at seven or eight hours per charge and,
+notably, the design is lighter, smaller and altogether more comfortable than past Sony earbuds. The WF-1000XM5 earned a score of 87 in our review this past
+July.
+
+Bose QuietComfort Ultra
+
+The latest flagship noise-cancelling headphones from Bose, the QuietComfort Ultra is seeing a $50 discount at Amazon, Walmart and Bose direct, among others.
+These headphones debuted last month and retail for $429 at full price. One of our concerns in our review was that higher MSRP, so this deal takes some of the
+sting out of the purchase.
+</item 45>
+
+<item 46>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+It’s a relatively basic set, though, as it lacks ANC, multi-device pairing, wireless charging and wear detection. But those omissions are easier to accept for
+$40. We gave the Elite 3 a score of 88 in our review from September 2021.
+
+JLab Go Air Pop
+
+The JLab Go Air Pop is available for $17 at Amazon, which isn't an all-time low — the pair was briefly down to just $10 at Walmart earlier this week — but still
+takes about $6 off their usual going rate. We highlight the Go Air Pop as an honorable mention in our budget wireless earbuds guide. Its IPX4-rated design is
+light and generally comfortable, its battery lasts around eight or nine hours per charge and, unlike many cheap earphones, its touch controls actually work. Its
+boomy sound profile won’t win any awards, predictably, but it’s well beyond serviceable for less than $20. JLab even bakes three different EQ presets directly
+into the earphones.
+</item 46>
+
+<item 47>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+They also have Alexa baked in, natch. Their IPX2 sweat-resistance rating isn’t enough for workouts, and their five-ish hours of battery life is just average,
+but they’re worth a look if you’re on a tight budget and hate the feel of traditional in-ear headphones. We gave them a score of 77 earlier this year.
+
+Shokz OpenRun Pro
+
+Shokz OpenRun Pro $125 $180 Save $55 See at Amazon
+
+The Shokz OpenRun Pro is down to $125 for Prime Big Deal Days, which is $25 more than the lowest price we’ve tracked but still $55 below its usual going rate.
+This is a recommended pair of bone conduction headphones, which means it hugs the side of your head and delivers sound by passing vibrations through your skull.
+(It’s not as uncomfortable as it sounds.) The main benefit is that this leaves your ear canals completely open, so you can enjoy a playlist or podcast without
+being shut out from the outside world.
+</item 47>
+
+<item 48>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Normally sitting well above $300, this is the best time to grab this powerful portable.
+
+JBL's Flip speakers offer excellent bang for your buck, including great sound that's more detailed, powerful, and poised than you'd expect in a portable (and
+waterproof) design. The newest model also offers a separate tweeter for better detail. While this is a modest sale, given that you'll almost always pay around
+$100 or more, this is a great time to grab it.
+
+Jump to a Topic: PC and Gaming Deals, Home and Kitchen Deals, TV Deals, Watch and Fitness Tracker Deals, Headphone and Earbud Deals, Smart Home Deals, Speaker
+Deals
+</item 48>
+
+<item 49>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+We saw this pair fall to $55 during Amazon’s Prime Day sale in July, but this is about as low as it’s been outside of that. The M20 is the budget pick in our
+wireless headphones guide thanks to its comfortable fit, 60-hour battery life, multi-device connectivity and relatively detailed audio quality. It lacks ANC and
+doesn’t have the sturdiest design, but it should do the job if you just need a no-frills wireless headphone for cheap.
+
+EarFun Free 2S
+
+The EarFun Free 2S is down to $24.59 at Amazon with a Prime-only discount and the checkout code FREE2SPD1. That’s an all-time low. The Free 2S is the “best
+under $50” pick in our budget wireless earbuds guide. It has a hugely bass-forward sound out of the box, but some may enjoy that with hip-hop or EDM and the
+profile is customizable through the EarFun app.
+</item 49>
+
+<item 50>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Nothing is more frustrating than buying a new pair of headphones, an OLED TV, or a backpack just to find out that you could have gotten it for a lot cheaper
+somewhere else. In order to keep customers happy — and prevent them from going elsewhere — many retailers offer price-matching policies where they promise to
+match a lower price you’ve found elsewhere. That’s information that could come in handy now that Black Friday and Cyber Monday are just around the corner.
+
+What follows are the price-matching policies for a variety of major retailers. There are a few things to make note of here. First, all price-matching policies
+have a number of rules attached to them. We’ve summarized some of the rules here, but you’d be advised to go to the links that we’ve provided and read the
+policy carefully. Second, and logically enough, retailers that serve as marketplaces for other sellers, such as Costco, don’t have price-matching policies.
+
+Lastly, there are always exceptions to the rules.
+</item 50>
+
+<item 51>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Its battery life clocks in at 30 to 35 hours per charge, which is decent but not great.
+
+Shokz OpenRun Pro
+
+Photo by Jon Turi / Engadget Shokz OpenRun Pro $125 $180 Save $55 If you want a pair of headphones that don't totally shut you out from the outside world, the
+bone-conducting Shokz OpenRun Pro are worth a look. $125 at Amazon
+
+The Shokz OpenRun Pro is back down to $125 for Black Friday, which is $25 more than its all-time low but $55 less than its usual street price. These are bone
+conduction headphones, which means they go around the side of your head and deliver sound via vibrations to your skull. If you want to listen to music and
+podcasts without totally blocking the outside world, they might make sense. The flipsides are that they’re harder to use in noisier areas and, generally
+speaking, not as full-sounding as traditional in-ear headphones.
+</item 51>
+
+<item 52>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+The Evo Select is our "best value" pick: It's slower than the other two, but it's cheaper, and its losses won't be hugely noticeable in devices that can't take
+advantage of the extra performance such as the Switch. Each card comes with a 10-year warranty.
+
+PlayStation DualSense Wireless Controller
+
+Amazon, Walmart, PlayStation Direct and several other retailers have discounted a bunch of PlayStation DualSense controllers ahead of Black Friday, including
+many of the colorways that typically go for $75. You can pick up Cosmic Red, Starlight Blue, Nova Pink and other models for $50 each, which is just about a
+record-low price. These controllers work with the PS5 as well as PC, and they sport adaptive L2 and R2 triggers, haptic feedback and a built-in mic array.
+
+Xbox Wireless Controller
+
+If you need a spare gamepad for your Xbox, meanwhile, official Xbox Series X/S Wireless Controllers are as low as $40 at Microsoft and Best Buy.
+</item 52>
+
+<item 53>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Not everyone will find the wider earpieces comfortable either.
+
+Apple AirPods (2nd Gen)
+
+The second-gen AirPods are down to $80 at Amazon and Target, which isn’t an all-time low but comes in roughly $20 below the pair’s usual street price in recent
+months. These are Apple’s entry-level wireless earbuds, having launched way back in 2019. They’re a bit tougher to recommend these days, as their
+one-size-fits-all design won’t fit everyone and you can get better sound quality even at this discounted rate. But if you prefer an open design that doesn’t
+completely seal off your ear canal or just want the typical AirPods conveniences for as cheap as possible, this is at least a more acceptable price.
+
+Apple AirPods Max
+
+Apple’s top-of-the-line headphones, the AirPods Max, are discounted to $450 at Amazon and Best Buy. That’s $20 more than the lowest price we’ve seen but about
+$30 below the pair’s usual street price.
+</item 53>
+
+<item 54>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Extras include next-gen HDMI with VRR support for PS5 or Xbox Series X consoles, multiple ways to stream over Wi-Fi, support for both Dolby Atmos and DTS:X,
+hi-res audio, and more.
+
+Photograph: Sonos
+
+The Arc (9/10, WIRED Recommends) is our favorite soundbar for big home theaters. It comes equipped with three tweeters and eight mid-woofers to deliver deep
+bass, along with full Dolby Atmos support that can bounce sound off walls and ceilings in a way that mimics a surround sound setup. It was on sale for the same
+price during holiday sales last year, but it's the lowest we've tracked.
+
+The Beam (Gen 2) offers enhanced sound with support for Dolby Atmos (with compatible TVs and streaming apps), a fast processor, and an HDMI eARC port for
+high-definition audio. There's support for Alexa, Google Assistant, and AirPlay 2 as well. For surround sound, you can also pair it with other Sonos speakers.
+</item 54>
+
+<item 55>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+The budget-friendly headphones come with adjustable noise cancellation and are exceptionally light, which allows for a more comfortable fit. They also feature
+Bluetooth support and offer up to 35 hours of continuous playback on a single charge, though they lack support for Sony’s higher-quality LDAC codec.
+
+The headphones typically retail for $149, but right now, you can buy them in various colors for around $98 from Amazon, B&H Photo, and Best Buy.
+
+Sony WH-CH720N $ 98 $ 150 35 % off $ 98 $ 98 $ 150 35 % off Sony’s wireless headphones offer noise cancellation and up to 35 hours of battery life on a single
+charge. They also come in blue, white, and black. $98 at Amazon$100 at Best Buy
+
+Sony WF-C700N deals
+
+The WF-C700N are another pair of noise-canceling earbuds from Sony and are currently available for $89.99 from Amazon and Best Buy.
+</item 55>
+
+<item 56>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Sonos Black Friday sale
+
+Photo by Devindra Hardawar / Engadget Sonos Beam (Gen 2) $399 $499 Save $100 While not an all-time low, this is a rare discount on the top midrange pick in our
+soundbar buying guide. Several other Sonos speakers and home theater devices are also on sale. $399 at Sonos
+
+Sonos has kicked off its Black Friday sale for the year, bringing a range of discounts on smart speakers and home theater gear. The deals include the flagship
+Sonos Arc soundbar down to $719, which is a $180 discount. The mid-range Sonos Beam (Gen 2) and the more basic Sonos Ray are also on sale for $399 and $223,
+respectively; that's a $100 drop for the former and a $56 drop for the latter. All three devices are recommendations in our guide to the best soundbars.
+</item 56>
+
+<item 57>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+We're into day two of Amazon's latest storewide sale for Amazon Prime members, Prime Big Deal Days, and there are still plenty of hefty discounts on headphones,
+earbuds and gaming headsets we recommend. We’ve sorted through the best headphone deals of the October Prime Day event below, which include new lows on the
+AirPods Pro, Sony WF-1000XM5, Beats Studio Pro, Amazon Echo Buds and more. Just note that some, but not all, of the offers are only accessible if you subscribe
+to Prime.
+</item 57>
+
+<item 58>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+Anker Soundcore Liberty 4 NC
+
+Anker Soundcore Liberty 4 NC $80 $100 Save $20 See at Amazon
+
+The Anker Soundcore Liberty 4 NC carry most of the same benefits as the Space A40 but use a “stem” design reminiscent of Apple’s AirPods. They put a little more
+emphasis on the bass by default, but you can change that sound profile up with a few EQ tools in Anker’s app. They also support wear detection. If you prefer
+this sort of form factor, the Liberty 4 NC is down to $80, which is a $20 discount and matches its lowest price to date.
+
+Anker Soundcore Space Q45
+
+Anker Soundcore Space Q45 $100 $150 Save $50 See at Amazon
+
+The Anker Soundcore Space Q45 is on sale for $100, which is a $50 discount and an all-time low.
+</item 58>
+
+<item 59>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+The vibrant, 1.5-inch AMOLED touchscreen is easy and snappy to use, and there's plenty of Google apps, such as Maps to round out the rich features list.
+
+Jump to a Topic: PC and Gaming Deals, Home and Kitchen Deals, TV Deals, Watch and Fitness Tracker Deals, Headphone and Earbud Deals, Smart Home Deals, Speaker
+Deals
+
+Headphone and Earbud Deals
+
+Have a look through our Best Wireless Earbuds, Best Wireless Headphones, and Best Workout Headphones guides for some help making the right purchase.
+
+Powerbeats Pro Wireless Earbuds Photograph: Beats
+
+The Powerbeats Pro (8/10, WIRED Recommends) came out in 2019, but these are still our top recommendation for earbuds with the most secure fit—making them an
+excellent option for the most intensive workouts. With an IPX4 water-resistance rating, they'll also stay protected from sweat and they have excellent sound
+quality.
+</item 59>
+
+<item 60>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+We have seen this dip a little lower, but this is still a solid deal.
+
+The unusual design of Satechi's fold-up wireless charging stand allows it to charge both phones and a wireless earbuds case (if it supports Qi wireless
+charging), plus a USB-C port to plug in a third device—not bad for a device that fits in your bag. It has a 10,000-mAh capacity with LEDs to show how much juice
+is left. The downside is that it is slow, offering up to 10 watts of wireless charging power for phones (7.5 watts for iPhones), 5 watts for earbuds, and 10
+watts from the USB-C port.
+
+Best Prime Day Headphone Deals
+
+Photograph: Sony
+
+While its predecessor was one of the best pairs of wireless earbuds around, the WF-1000XM5 (7/10, WIRED Recommends) is still no slouch. They produce balanced
+sound, are comfortable to wear, and have active noise cancellation.
+</item 60>
+
+<item 61>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+If you prefer this kind of bulkier but easier-to-remove shape, this is an excellent value.
+
+Anker Soundcore Space Q45
+
+If you’re after a wallet-friendly pair of noise-canceling over-ear headphones, Anker’s Soundcore Space Q45 is worth a look at its Black Friday price of $100.
+For that amount, this pair’s better-than-average ANC, softly padded design and multi-device pairing make for a strong value. Its V-shaped sound profile isn’t
+especially detailed, but it can work well enough for pop music and it’s customizable through Anker’s app. Call quality is mediocre, however. This $50 discount
+matches the lowest price we’ve tracked, and it's available at both Amazon and Anker's online store; just use the on-page coupon for the latter.
+
+Audio-Technica ATH-M20xBT
+
+The Audio-Technica ATH-M20xBT is a modest $10 off for Black Friday, bringing the wireless headphones down to $69.
+</item 61>
+
+<item 62>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+They offer excellent noise cancellation, good sound, and the ability to pair to two devices simultaneously. You can wear them for long periods as well, as their
+plush ear pads make them comfortable to wear for as long as you need. Frequent travelers will appreciate their ability to fold up much more compactly than
+Sony’s newer model. They even last up to 30 hours on a single charge and charge via USB-C.
+
+Sony LinkBuds deals
+
+The Sony LinkBuds are a clear departure from conventional earbuds, one that uses an “open-style” donut-shaped design instead of the more typical silicone ear
+tips. This allows for better spatial awareness and, for some, a more comfortable fit. The LinkBuds also provide crisp sound quality and excellent voice call
+performance. (Though, as a result of their design, they aren’t very practical in louder environments.) Possibly the coolest feature, though, are the controls,
+which allow you to tap the side of your head to control them instead of the earbud itself.
+</item 62>
+
+<item 63>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+We still recommend the Sony XM5 to most, as that pair offers a wider feature set and the ability to be used passively (i.e., without being turned on), but the
+QuietComfort Ultra may still be worth a look if you must have especially powerful noise cancellation.
+
+We’ll also note that the new, non-Ultra QuietComfort Headphones are $100 off, bringing them down to a new low of $249. We haven’t reviewed this model yet, but
+it’s the follow-up to 2021’s QuietComfort 45, which we generally liked. Other reviews suggest it has a more bass-heavy sound, though, and we’d expect it to be a
+slight step down from the Ultra across the board.
+
+Bose QuietComfort Ultra Earbuds
+
+The new Bose QuietComfort Ultra Earbuds, meanwhile, are down to $249 at several stores. That's another $50 discount and an all-time low.
+</item 63>
+
+<item 64>
+The 26 best Amazon Prime Day deals you can still shop for today (Engadget, 2023-10-12T15:44:16+00:00)
+That's a 30 percent discount and an all-time low. It has a bright and bassy output and offers EQ customization in the app. Plus it’s water-resistant, so you can
+take it to the park or on a hike and share your good taste in music with whoever is nearby.
+
+HyperX Cloud Stinger 2
+
+The top budget pick in our gaming headphones buying guide, the HyperX Cloud Stinger 2, is on sale for $36. That’s a dollar more than it went for on Prime Day
+and only a modest $4 discount over its street price recently, but it's still close to lowest price we’ve seen. The Cloud Stinger 2 doesn’t have the most
+balanced or detailed sound, but its V-shaped signature gives action scenes a nice level of impact, and its mic quality belies the dirt-cheap price. The design
+is comfortable too, though it’s made from cheap-feeling plastic.
+</item 64>
+
+<item 65>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+In the consumer electronics space, we expect most companies to have some sort of Black Friday promotion, so that means you will likely be able to get big-ticket
+items from brands like Apple, Samsung, Google, Sony, LG, Sonos and others for much cheaper prices.
+
+Your Black Friday Shopping Guide: See all of Yahoo’s Black Friday coverage, here. Follow Engadget for Black Friday tech deals. Learn about Black Friday trends
+on In The Know. Hear from Autoblog’s experts on the best Black Friday deals for your car, garage, and home, and find Black Friday sales to shop on AOL,
+handpicked just for you.
+</item 65>
+
+<item 66>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+That warm yet customizable sound is joined by a solid adaptive ANC system, though Sennheiser’s pair isn’t as effective as the Sony WF-1000XM5 in that regard,
+nor does it have the same deep feature set.
+
+Sennheiser HD560S
+
+Sennheiser HD 560S $150 $229 Save $79 See at Amazon
+
+We’re mostly sticking to wireless headphones here since that’s just the way the market has moved, but if you want a quality wired model, the Sennheiser HD 560S
+is worth a look at $150. While not an all-time low, that’s about $35 below the pair’s typical street price. We recommend the HD 560S in our guide to the best
+gaming headphones. Its open-back design lets in and leaks a ton of noise, but it sounds spacious, detailed and well-balanced, which makes it a treat for
+critical listening. It’s comfortable to wear for extended periods as well. Just don’t expect much in the way of deep sub-bass response.
+</item 66>
+
+<item 67>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+The Amp also connects via the Sonos app and comes with support for AirPlay 2. It doesn't come with built-in mics, but you'll have voice control if you pair it
+with another Sonos voice-enabled speaker like the Sonos One or Sonos Move.
+
+While the Amp powers speakers, the Port streams to an amp that then sends a signal to the speakers. Unlike the Amp, it doesn't come with a control panel, but
+you can use the Sonos app to adjust treble, bass, and volume. It also has support for AirPlay 2. As with the Amp, you can also pair it with other Sonos speakers
+for voice control.
+
+Photograph: Bose
+
+Bose's Soundlink Revolve+ offers excellent sound in a neat and water-resistant design with up to 17 hours of battery on hand. Normally sitting well above $300,
+this is the best time to grab this powerful portable.
+</item 67>
+
+<item 68>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Unlike a lot of soundbars at this price, Bose’s model includes real up-firing drivers for immersive overhead effects, alongside good musicality, relatively
+punchy bass, and great network streaming features in a sleek and compact design.
+
+Sony is best known these days for its OLED screens, but its LED TVs like the X90L still pack a punch with a mix of excellent picture processing, good
+brightness, and great local dimming for rich contrast. Like a lot of TVs this time of year, this 65-inch set is at the lowest price we've seen it all year.
+
+Photograph: JBL
+
+This versatile multi-piece soundbar system from JBL (8/10 Wired Recommends) not only offers some of the best Dolby Atmos immersion you can buy but it’s also got
+a cool trick: fully wireless surround sound speakers. You can set them up behind you or even use them as Bluetooth speakers, then connect back to the main bar
+for charging and playback.
+</item 68>
+
+<item 69>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+The wireless earbuds work great for making calls and offer a unique “open-style” donut-shaped design that keeps you aware of your environment. Read our review.
+
+normally retail for $179.99, but you can snag a pair for $129.99 at Best Buy right now. The wireless earbuds work great for making calls and offer a unique
+“open-style” donut-shaped design that keeps you aware of your environment. Read our review. The Sony LinkBuds S are also on sale for $129.99 ($70 off) at Best
+Buy. Unlike the aforementioned LinkBuds, these offer active noise cancellation, support for the LDAC lossless audio codec, and a slightly more conventional
+design. Read our review.
+
+Sony’s WH-CH720N are down to $99.99 ($50 off) at Best Buy.
+</item 69>
+
+<item 70>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+While the Galaxy Buds 2 Pro aren’t a top pick in any of our guides, they’re worth a look if you use a Galaxy phone, as they can quickly pair with and swap
+between other Samsung devices (including TVs) and support a higher-quality audio codec on the company’s handsets. More generally, this is one of the better
+sounding pairs of wireless earphones we’ve tested, with impressive clarity and well-controlled bass, and the buds themselves are both comfortable and
+waterproof. You can’t connect to two devices at once, however, and the five-hour battery life is poor. We gave the Galaxy Buds 2 Pro a review score of 86 last
+year.
+
+Jabra Elite 3
+
+Another pick from our budget wireless earbuds guide, the Jabra Elite 3, is down to $40 at Best Buy. That matches the best price we’ve tracked. This pair’s
+mildly bass-boosted sound is great for the money, and its snug, IP55-rated design is well-suited for workouts.
+</item 70>
+
+<item 71>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+How to find the best Prime Big Deal Days deals?
+
+WIRED is the only publication posting about Amazon Prime Day. Wait, sorry, looks a handful of other sites are, too. But you should only read WIRED, because we
+actually vet every deal and compare it to the actual street price instead of an absurd MSRP that you will never observe in the wild. Also, we review the
+products we recommend and don't just send you Prime Day deals on junk that will break. It's only a deal if you need it and it's good!
+
+Are other retailers running sales?
+
+Amazon Prime Day has inspired many imitators and you'll find sales from competitors like Best Buy, Target, and the like. Some of these sales are great, and
+we'll flag when they are, but others are worth holding off on until Black Friday and Cyber Monday, when WIRED will again be the Internet's only website with
+deals posts.
+
+Retailer Sale Pages
+</item 71>
+
+<item 72>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+As Sony’s priciest wireless headphones, the WH-1000XM5 had a lot to live up to following the remarkably popular WH-1000XM4. Luckily they deliver the goods with
+upgraded noise canceling, a posh new design, and a more refined sound signature that adds up to a great package – especially on sale.
+
+Bose’s aptly named QuietComfort Ultra (9/10, WIRED Recommends) arrived in October with only one notable problem: they’re very pricey. Luckily they’ve already
+gotten a discount, which makes it easier to land their class-leading noise canceling, great sound, and luxuriously comfy design that’s loaded with modern
+features.
+
+Photograph: Sony
+
+Sony's WH-1000XM4 headphones (9/10, WIRED Recommends) have been a stalwart pair of wireless headphones for years now, and there's no secret to their success.
+Offering excellent noise canceling, warm and detailed sound, and a ton of modern features in a comfy design, they're among the best travel headphones you can
+buy.
+</item 72>
+
+<item 73>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Its warm sound will be pleasing enough for most by default, but it can also be customized through a clean companion app. The only major downsides are middling
+mic quality and a lack of auto-pausing when you remove an earbud.
+
+Anker Soundcore Liberty 4 NC
+
+The Anker Soundcore Liberty 4 NC is the runner up in our budget wireless earbuds guide, as it offers a highly similar feature set as the Space A40 but comes in
+a larger “stem” design reminiscent of Apple’s AirPods. It has a more bass-forward sound by default, which some may find fatiguing, but it also has slightly more
+extensive touch controls and technically supports wear detection. Right now the Liberty 4 NC is down to $70 at Amazon, B&H and Best Buy, which beats its
+previous low by $10 and falls $30 below Anker’s list price. If you prefer this kind of bulkier but easier-to-remove shape, this is an excellent value.
+</item 73>
+
+<item 74>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Engadget Editor Jon Turi found this pair to deliver more low-end depth than most of its peers, however. It can also last up to 10 hours per charge.
+
+Your Black Friday Shopping Guide: See all of Yahoo’s Black Friday coverage, here. Follow Engadget for Black Friday tech deals. Learn about Black Friday trends
+on In The Know. Hear from Autoblog’s experts on the best Black Friday deals for your car, garage, and home, and find Black Friday sales to shop on AOL,
+handpicked just for you.
+</item 74>
+
+<item 75>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+Your October Prime Day Shopping Guide: See all of our Prime Day coverage. Shop the best Prime Day deals on Yahoo Life. Follow Engadget for Prime Day tech deals.
+Learn about Prime Day trends on In The Know. Hear from Autoblog’s experts on the best Fall Prime Day deals for your car, garage, and home, and find Prime Day
+sales to shop on AOL, handpicked just for you.
+</item 75>
+
+<item 76>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+It also uses physical control buttons instead of touch panels, and its punchy sound plays well with most popular music. But it can’t connect to multiple devices
+at once, it doesn’t support wireless charging and its ANC, while fine, isn’t as capable as the AirPods Pro’s. The Fit Pro earned a score of 87 in our review
+from 2021.
+
+Beats Studio Pro
+
+The Beats Studio Pro is down to $170 for Black Friday at Amazon, Target and Best Buy. That tops the pair’s previous low by $10 and falls about $130 below its
+average street price in recent months. The Studio Pro isn’t a top pick in any of our guides, but we gave it a solid review score of 81 in July. Its sound is
+largely pleasant and even-handed, its ANC is strong enough to be useful and it can stream higher-quality audio if you connect over a USB-C cable. It works well
+with both iOS and Android, too, though it doesn’t support multi-device pairing on the former.
+</item 76>
+
+<item 77>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+However, there’s no wireless charging, the battery life (five or so hours per charge) is mediocre and the IPX2 sweat-resistance rating is too weak for the gym.
+Amazon’s companion app is rather bloated too. But those shouldn’t be deal-breakers for $35. We gave the Echo Buds a review score of 77 in July.
+
+Anker Soundcore Space A40
+
+The Anker Soundcore Space A40 is one of the best values in wireless earphones at its normal price of $79, but now it’s down to $54 for Black Friday. That ties
+the lowest price we’ve tracked. The Space A40 tops our guide to the best budget wireless earbuds because it delivers most of the features we expect from
+headphones that cost twice as much. It’s comfortable, its ANC is genuinely capable, its battery lasts up to 10 hours per charge, its tiny case supports wireless
+charging and it can pair with two devices at once.
+</item 77>
+
+<item 78>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+There’s no auto-pausing when you remove the headphones, either, and the design is mostly made of plastic. But if you like the Beats style, those flaws should be
+a little easier to accept at this price.
+
+Amazon Echo Buds (2023)
+
+We recommend the Amazon Echo Buds in our budget wireless earbuds guide to those who hate the feeling of traditional in-ear headphones. They’re now down to $35
+for Black Friday, a $15 drop that matches an all-time low. The Echo Buds have a semi-open design, so they let in a good amount of outside noise and can’t
+produce deep bass, but some will find the shape preferable to a pair that sticks in their ear canals. They can sound perfectly decent with a bit of EQ tweaking,
+while features like multi-device pairing, wear detection and hands-free Alexa are all nice to have.
+</item 78>
+
+<item 79>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+If you don’t mind using a Lightning charging case, Walmart has the previous version on sale for a new low of $169. Either way, we gave the AirPods Pro a review
+score of 88 last year.
+
+Apple AirPods (3rd-gen)
+
+The third-gen AirPods are available for $140 at Amazon, Target, Best Buy and others. Typically, these wireless earbuds have retailed between $10 and $20 higher
+in recent months, but steeper discounts have been uncommon. We gave this pair a review score of 88 back in 2021: There are certainly better-sounding options for
+the money, but the third-gen AirPods sound noticeably richer than their predecessor, and their haptic touch controls are altogether more convenient. This is
+another open design, though, so there still isn’t much in the way of deep bass or noise cancellation. Not everyone will find the wider earpieces comfortable
+either.
+</item 79>
+
+<item 80>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+However, if you’re all-in on Apple devices and just want the usual AirPods perks in an unsealed design, this deal makes the pair a little more palatable.
+
+Beats Prime Day headphone deals
+
+Beats Studio Pro
+
+Beats Studio Pro $180 $350 Save $170 See at Amazon
+
+The Beats Studio Pro is on sale for $180, which is a new low and a sizable $170 discount. We gave these wireless over-ears a review score of 81 in July: We
+can’t recommend them over the top picks in our guide, but they offer a pleasant, even-handed sound, helpful ANC and the ability to stream higher-quality audio
+over a USB-C connection. Like most Beats headphones, they also play nice with Android. That said, multi-device pairing doesn’t work with iOS, there’s no wear
+detection and the mostly plastic design isn’t super premium. But at this price, the Studio Pro could make sense if you really dig the Beats aesthetic.
+</item 80>
+
+<item 81>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+In other Sennheiser deals, the Drop X Sennheiser HD 6XX is on sale for $169 at Drop, a $50 discount that’s only $10 more than the lowest price we’ve tracked. We
+haven’t formally reviewed this pair, but Engadget’s audio expert Billy Steele gave some positive impressions in a hands-on way back in 2016, and the pair upon
+which it’s based (the Sennheiser HD 650) has long been a favorite among audiophiles. If you’d prefer an open-back pair with a little more bass warmth, it might
+be worth a look.
+
+Astro A40 TR
+
+Our favorite dedicated gaming headset for most people, the Astro A40 TR, is down to $100 at Amazon. That’s a $30 discount. This deal bundles the headset with
+Astro’s MixAmp M80, an optional amp that connects to Xbox controllers and provides various audio controls.
+</item 81>
+
+<item 82>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+They’re certainly very Sony.
+
+Normally $179.99, you can currently get a pair of the LinkBuds for around $138 from Amazon, Walmart, Best Buy, and direct from Sony.
+
+Sony LinkBuds S deals
+
+One more intriguing pair of earbuds from Sony are the LinkBuds S, which don’t look as peculiar as the regular LinkBuds but are some of the comfiest earbuds
+around. A big part of this is due to their lightweight build, which amounts to just 4.8 grams per bud. They also offer active noise cancellation and support for
+Sony’s LDAC Bluetooth codec, which allows for higher-quality audio streaming. Normally $199.99, the LinkBuds S are on sale for around $148 at Amazon and Target.
+
+Sony WH-CH720N deals
+
+If you’re looking for noise-canceling headphones for under $150, Sony’s WH-CH720N might be worth a look.
+</item 82>
+
+<item 83>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Amazon Fire TV Stick Lite
+
+Amazon’s most affordable Fire TV Stick is down to $16 for Black Friday, which is only $1 more than its record-low price. You’ll find decent discounts across
+most of the Fire TV lineup right now — including a $20 discount on the new Fire TV Stick 4K Max — and this model is the cheapest of the bunch. It supports HD
+video as well as most major streaming services, plus it comes with a pared-down version of the Alexa voice remote. If you want the most powerful dongle that
+Amazon makes with support for 4K HDR content and Wi-Fi 6, you’ll have to spend $40 for the new Fire TV 4K Max.
+
+Sony WH-1000XM5
+
+The Sony WH-1000XM5 is down to $328 at Amazon, B&H and others. Though this isn't an all-time low, it's about $70 off Sony's list price and $20 lower than the
+headphones' usual recurring sale price.
+</item 83>
+
+<item 84>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+The Ultrahuman Ring Air (7/10, WIRED Recommends) is a fitness and sleep-tracking ring that doesn't require a subscription. Made from titanium, it comes in a few
+different colors and tracks your movements through the day and night to give you a huge data dump in the companion app. The fitness tracking is flaky and the
+black version scuffs easily, but the four-day battery life is good.
+
+The Whoop 4 is our pick for the most unobtrusive wearable. There's no screen, but it offloads data to the companion app, which tries to guide you toward a
+healthier lifestyle and boost your fitness levels. The subscription is pricey at $30 per month, but you get a year included with this deal.
+
+We make no bones about it. The Versa 4 is the best Fitbit smartwatch available. In our testing it lived up to its claim of six-day battery life (provided you
+don't leave the display on the entire time).
+</item 84>
+
+<item 85>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+JLab even bakes three different EQ presets directly into the earphones. If you’re looking for a cheap backup to your main wireless earphones, this is a great
+value.
+
+Google Pixel Buds Pro
+
+The Google Pixel Buds Pro are available for a new low of $115 at Wellbots, which is about $50 off their average street price. Other retailers like Amazon and
+Best Buy have them for $5 more. We call the Pixel Buds Pro the best option for Android users in our wireless earbuds buying guide due to their tight integration
+with the OS (and Google’s Pixel phones in particular). Their ANC and V-shaped sound are solid (if not superlative) as well, and they can last between up to 11
+hours depending on how often you use the former. The fit may be tricky for those with smaller ear canals, though. We gave this pair a score of 87 in our review
+last year.
+</item 85>
+
+<item 86>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Battery life should sit around seven to eight hours with average use.
+
+Sony WH-1000XM4
+
+If you don’t want to pay up for Sony’s highest-end noise-canceling headphones, Amazon, Adorama and B&H have the older Sony WH-1000XM4 down to $248 as well.
+While that isn’t an all-time low, it’s $100 off Sony’s list price and a little lower than the usual sale price we’ve seen over the course of the year. The XM4
+delivers similar ANC and battery performance as its successor and has nearly the same feature set. Unlike the XM5, it can also fold up for easier storage.
+However, its mics aren’t as clear for calls, it’s a little bulkier (though it’s still comfy) and it sounds a bit boomier out of the box. But at this price, it’s
+still a strong value. We gave it a 94 in our review back in 2020.
+</item 86>
+
+<item 87>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+It’s now down to $56, which is $24 less than usual. This pair isn’t built as well as the Space Q45, nor does it sound as nice out of the box, as it massively
+inflates the bass and degrades when ANC is active. Call quality is worse too. That said, it’s comfortable, its battery can last more than 40 hours and the ANC
+itself is excellent for less than $60. You still get multi-device pairing and a customizable EQ as well.
+
+Bose Prime Day headphone deals
+
+Bose QuietComfort Earbuds II
+
+Bose QuietComfort Earbuds II $199 $279 Save $80 See at Amazon
+
+The Bose QuietComfort Earbuds II are available for $199, which is an all-time low and roughly $75 off their average street price. This pair has technically been
+replaced by Bose’s new QuietComfort Ultra Earbuds, which add a new spatial audio mode. That model isn’t discounted as of this writing, however, and the two
+pairs are largely similar otherwise.
+</item 87>
+
+<item 88>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Photograph: Technics
+
+The Technics EAH-AZ80 (9/10, WIRED Recommends) are some of our favorite top-shelf earbuds thanks to their fantastic sound alongside great features and noise
+canceling, and their ability to connect to up to three devices at once. This is one of the few sales we've seen all year, which makes their very high asking
+price a lot more palatable.
+
+Soundcore's Life Q30 are already impressive at full price thanks to noise canceling that punches well above its class, so this deal makes them something of a
+steal. They add to the package with accessible and adjustable sound quality, good features, and great battery life.
+
+Jump to a Topic: PC and Gaming Deals, Home and Kitchen Deals, TV Deals, Watch and Fitness Tracker Deals, Headphone and Earbud Deals, Smart Home Deals, Speaker
+Deals
+
+Smart Home Deals
+
+Want to smarten up your home? See our guides to setting up your smart home, the best smart lighting, and the best mesh routers to get started.
+</item 88>
+
+<item 89>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+The best deals of the year were once known to occur during Black Friday and Cyber Monday, which in 2023 take place on Friday, Nov. 24, and Monday, Nov. 27,
+respectively. Not anymore!
+
+In 2023, the best Black Friday deals kicked off on Nov. 17 at Amazon, Best Buy, Walmart, and other retailers. Instead of hosting all of the doorbuster deals on
+one day right after Thanksgiving, retailers see the value in maximizing the amount of time you have to shop for products before Black Friday. And I’ve gotta
+say, it’s quite nice to not feel rushed while shopping.
+
+In addition to presenting you with the best board game deals and price drops on gaming monitors, plus deals on SSDs and microSD cards, there are some bits of
+info and wisdom I’ve organized into sections below that might help you feel more informed as you begin to shop for the holidays.
+</item 89>
+
+<item 90>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Samsung’s HW-Q800C offers a lot from a two-piece system. Its mix of upfiring Dolby Atmos speakers and side-firing drivers provides an engaging cinematic
+experience while its wireless subwoofer adds a hefty punch to effects and streaming music that many competitors can’t match.
+
+Jump to a Topic: PC and Gaming Deals, Home and Kitchen Deals, TV Deals, Watch and Fitness Tracker Deals, Headphone and Earbud Deals, Smart Home Deals, Speaker
+Deals
+
+Watch and Fitness Tracker Deals
+
+Not sure which is for you? We can help with guides to the best fitness trackers, best Apple Watch, and best Garmin watch.
+
+Apple Watch Series 9 Photograph: Apple
+
+The Series 9 (7/10, WIRED Recommends) isn't enough of a leap forward to justify replacing your Apple Watch Series 8 (or even your Series 7), but if you're
+buying into the Apple Watch ecosystem for the first time or replacing your even-older smartwatch, you'll find a host of spiffy, new features, such as daylight
+tracking and haptic gesture control.
+</item 90>
+
+<item 91>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+Apple itself sells the headphones for $550. The AirPods Max are still overpriced for most even with this discount, but they remain undeniably premium, with
+top-tier ANC, a superbly balanced sound profile, a high-quality aluminum design, reliable controls and all the usual AirPods features. They’re hefty, though,
+and their included “case” is bafflingly flimsy. We gave the AirPods Max a review score of 84 in late 2020.
+
+Bose QuietComfort Ultra Headphones
+
+Bose’s new QuietComfort Ultra Headphones are $50 off at multiple retailers, bringing the over-ear cans down to $379. Outside of a very brief drop a few weeks
+back that may have been a pricing error, this is the first significant discount we’ve seen. Bose only released the QuietComfort Ultra last month. We gave it a
+score of 86 in our review, praising its predictably comfy design, outstanding ANC, above-average call quality and bassy default sound.
+</item 91>
+
+<item 92>
+The best Black Friday headphone deals from Sony, Apple, Bose, Beats and more (Engadget, 2023-11-24T14:30:56+00:00)
+The Cloud Stinger 2 is the budget pick in our gaming headset guide: It sounds narrower and less balanced than the Astro A40, but its built-in mic is great for
+the money and its bass-heavy profile at least makes action scenes feel a little more exciting. It’s all comfy, too, though it’s largely made of plastic.
+
+Logitech G535
+
+The Logitech G535 is another honorable mention in our gaming headsets guide, one that should specifically appeal to those who want a wireless option for less
+than $100. If that’s you, good news: It’s available for just under $80 at Amazon, B&H and Best Buy, which is about $25 off its usual street price. The G535’s
+noticeably light frame, relatively balanced sound and Bluetooth support all impress for the price; just note that it doesn’t work with Xbox, and that its mic
+sounds a bit thinner than the wired headsets highlighted above.
+</item 92>
+
+<item 93>
+The 30 best Amazon Prime Day deals for October 2023 (Engadget, 2023-10-10T17:41:37+00:00)
+Unlike many budget wireless headphones, its default sound doesn’t completely blow out the bass. Just note that its call quality is mediocre, and it lacks wear
+detection, so it won’t auto-pause when you remove an earbud.
+
+Bose QuietComfort 45
+
+The Bose QuietComfort 45 headphones have dropped to $230 for October Prime Day, which is about $80 cheaper than their usual selling price. These cans earned a
+spot in our best wireless headphone guide thanks to their comfortable, if a little dated, design, excellent ANC and balanced audio.
+
+Google Pixel Buds Pro
+
+The Google Pixel Buds Pro have dropped to $120 for Prime Day. The company got a lot of things right after years of making pretty standard earbuds; the Pixel
+Buds Pro are Google's best wireless earbuds yet. These will be great for Android users who want buds with punchy bass, good ANC, reliable touch controls and
+wireless charging.
+
+Amazon Echo Dot
+
+Amazon has knocked the price of the latest Echo Dot down to $23 right now.
+</item 93>
+
+<item 94>
+Here are the best deals on headphones and wireless earbuds we could find (The Verge, 2023-12-07T22:32:23+00:00)
+Unfortunately, they don’t support lossless audio, but they do tout the best transparency mode of all the headphones on our list. They also boast incredible
+build quality thanks to a luxe design that opts for aluminum, steel, and fabric over plastic.
+
+With an MSRP of $549, the AirPods Max are expensive, but they’re often on sale for far less. Right now, for instance, the headphones are down to $479.99 ($70
+off) at Amazon, albeit in select colors, as well as Best Buy.
+
+Best Beats deals
+
+Beats Studio Pro
+
+After six years, Apple-owned Beats replaced the Beats Studio 3 with the Beats Studio Pro earlier this year. The over-ears offer much better sound quality thanks
+to new features like support for lossless audio over USB-C. They also cancel noise out much better, while you can take advantage of iOS and Android features
+like Fast Pair and Google’s Find My Device platform.
+</item 94>
+
+<item 95>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Remember when people would break down the doors to get inside Walmart to score the best deals? Isn't civilization nice? Fill up your digital shopping cart
+instead with these Walmart Cyber Monday deals on some of the best devices we've tested this year—no door-breaking necessary.
+
+We test products year-round and handpicked these deals. The discounts we show are based on actual street prices at retailers in the past few months. Products
+that are sold out or no longer discounted as of publishing will be crossed out. We'll update this guide periodically.
+
+If you buy something using links in our stories, we may earn a commission. This helps support our journalism. Learn more.
+
+Top Deals
+
+Jump to a Topic: PC and Gaming Deals, Home and Kitchen Deals, TV Deals, Watch and Fitness Tracker Deals, Headphone and Earbud Deals, Smart Home Deals, Speaker
+Deals
+
+PC and Gaming Deals
+
+Need a new laptop? We test dozens throughout the year.
+</item 95>
+
+<item 96>
+These Are Our Favorite Walmart Cyber Monday Deals (Wired, 2023-11-27T14:22:26+00:00)
+Have a read through our guides to the best speakers, best bluetooth speaker, and the best gear for audiophiles.
+
+Sonos sub speaker gen 3 Photograph: Sonos
+
+We recommend the Sonos Sub (Gen 3) if your giftee wants to upgrade their bass. The third-gen model packs better processing power and more memory. It's also
+meant to be paired with Sonos' non-portable options—like soundbars, speakers, and amplifiers (it won't pair with the Move, Roam, Port, or Connect). It's
+expensive, but top-notch. This is also the lowest price we've tracked, so far.
+
+The Amp is a great option for those looking for an amplifier to power their turntable, TV, outdoor speakers, and more at higher volumes. The front control panel
+is touch-sensitive, so you can either tap or swipe for things like pausing music and adjusting the volume. The Amp also connects via the Sonos app and comes
+with support for AirPlay 2.
+</item 96>
+
+<item 97>
+The best Apple Black Friday deals on iPads, AirPods, Apple Watches and more (Engadget, 2023-11-24T09:30:32+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+There are still tons of Apple Black Friday deals you can shop for online; these are our favorites.
+
+Most of Apple’s current-generation devices went on sale for Black Friday — and most of those deals look like they’ll carry over through the weekend and into
+Cyber Monday. That means if you were otherwise occupied on Friday, you can still save on iPads, Apple Watches, MacBooks, AirPods and more. Some of the prices
+are new lows and many others match the record prices we’ve seen previously. We’ve tested and reviewed nearly every device below, so check out the links to our
+full reviews and guides if you need help deciding which deals to snag. These are the best Apple Black Friday deals you can still get today from retailers like
+Amazon, Target, Best Buy and B&H Photo.
+</item 97>
+
+<item 98>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+However, it likely won’t be the last opportunity for you to save. As someone who’s been covering deals for The Verge and Polygon for years, I’m shocked by how
+often I see these low prices, often spoken of as if they’re a flash in the pan, extending through much of December. That said, it’s more likely that price cuts
+on products you want can go by unnoticed unless you’re tracking deals yourself.
+
+Track deals yourself
+
+We love to tell you about great deals. But there’s a limit to the kind of products that we write about, and the ones that we see. If you’re not comfortable
+leaving it up to the chance that we’re going to tell you about price cuts on the products you really want, you have the power to track deals with relative ease.
+
+If you only shop on Amazon, CamelCamelCamel remains one of the best tools for tracking price changes and history for products.
+</item 98>
+
+<item 99>
+The best Prime Day deals on headphones for October 2023 (Engadget, 2023-10-10T20:47:12+00:00)
+Just don’t expect much in the way of deep sub-bass response.
+
+Other Prime Day wireless headphone deals
+
+Amazon Echo Buds (2023)
+
+Amazon Echo Buds (2023) $35 $50 Save $15 See at Amazon
+
+Prime members can get the latest Amazon Echo Buds for $35, which is $15 off and an all-time low. This is another pick in our guide to the best budget wireless
+earbuds. Specifically, the Echo Buds should appeal to those who prefer a more open design, one that lets in outside noise but doesn’t insert directly into your
+ear canal. They can sound solid for the price with a bit of EQ tweaking, and they support features we don’t often see for less than $50, such as wear detection
+and multipoint connectivity. They also have Alexa baked in, natch.
+</item 99>
+
+<item 100>
+The best Black Friday deals you can get for under $25 (The Verge, 2023-11-23T17:58:09+00:00)
+Every Black Friday and Cyber Monday, there’s always a ton of hype about the discounts on big-ticket items — you know, the deals on the OLED TVs, game consoles,
+and tablets of the world. But it never fails that many of the ultra-cheap items make for some of the most clutch deals, namely because spending very little on a
+small accessory you end up using all the time can be the most gratifying.
+
+This year, throughout the annual shopping weekend, we’re once again keeping an eye out for the best tech deals on those little gadgets and gizmos under $25.
+We’ve also got roundups for those working with $50 or $100 budgets, but the items below are pretty much as cheap as you can get in the tech world without simply
+buying absolute crap that’s destined to end up as e-waste.
+
+Some of these helpful budget deals include gems like fully compatible MagSafe chargers for the latest iPhones, a colorful smart speaker, Apple’s handy AirTag
+trackers, and some staff favorites.
+</item 100>
+=== END ITEM id=4617002dc901bc0f ===

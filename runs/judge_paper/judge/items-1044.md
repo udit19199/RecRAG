@@ -1,0 +1,1923 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 5 items.
+
+=== ITEM id=ce5006dc42a45567 ===
+Gold sentences and facts:
+Sentence 0: Also included is defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury.
+  Fact 0.0: Cameron Carter-Vickers is also included.
+  Fact 0.1: Cameron Carter-Vickers is a defender.
+  Fact 0.2: Cameron Carter-Vickers only just made his debut for Celtic this season.
+  Fact 0.3: Cameron Carter-Vickers's Celtic debut came thanks to a hamstring injury.
+Sentence 1: 30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss.
+  Fact 1.0: The match kickoff is 30 minutes away.
+  Fact 1.1: Paraguay have a new manager.
+  Fact 1.2: Daniel Garnero makes his debut as Paraguay's new permanent boss.
+
+Retrieved items:
+<item 1>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+German national team squad for USA, Mexico friendlies
+
+Pos Player Club Caps Goals GK Oliver Baumann Hoffenheim 0 0 GK Bernd Leno Fulham (ENG) 9 0 GK Marc-Andre ter Stegen Barcelona (SPA) 36 0 GK Kevin Trapp
+Eintracht Frankfurt 7 0 DEF Robin Gosens Union Berlin 18 2 DEF Mats Hummels Borussia Dortmund 76 5 DEF David Raum RB Leipzig 18 0 DEF Antonio Rudiger Real
+Madrid 62 2 DEF Niklas Sule Borussia Dortmund 47 1 DEF Jonathan Tah Bayer Leverkusen 17 0 DEF Malick Thiaw AC Milan (ITA) 2 0 MID Robert Andrich Bayer
+Leverkusen 0 0 MID Julian Brandt Borussia Dortmund 44 3 MID Chris Fuhrich VfB Stuttgart 0 0 MID Leon Goretzka Bayern Munich 53 14 MID Pascal Gross Brighton
+(ENG) 2 0 MID Ilkay Gundogan Barcelona
+</item 1>
+
+<item 2>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+Chelsea have a THIRD goal disallowed as Sterling is offside 🤯 pic.twitter.com/brMes6qQQ7 — Mail Sport (@MailSport) November 6, 2023
+
+Reece James avoids red card despite elbow to Destiny Udogie
+
+While two Tottenham defenders escaped an early shower earlier in the match for incidents that could have potentially seen them off, Chelsea also had a player
+avoid further punishment just before halftime.
+
+Reece James caught Destiny Udogie in the face with a trailing elbow while challenging for a bouncing ball in the air. Referees have been strict with incidents
+such as these, and it was surprising to see James get away with just a yellow card.
+
+The incident was indeed reviewed, but the VAR official did not ultimately advise a check for Michael Oliver.
+</item 2>
+
+<item 3>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+There are no natural right-backs on the roster, meaning he will either have to pidgeonhole a center-back (Antonio Rudiger or Niklas Sule) out wide, sacrifice
+Josh Kimmich's presence in midfield to move him back, or move Pascal Gross back. None of those are ideal options.
+
+Whether Nagelsmann deploys a 4-2-3-1 or a 3-2-4-1, the tactical approach will likely remain the same.
+
+Getting the best out of young superstar Jamal Musiala will be one of the most important aspects of Nagelsmann's tenure, as Musiala has blossomed into a
+world-class talent at Bayern Munich, but the 20-year-old has just one goal in 23 international caps to this point.
+
+Nagelsmann will also look to introduce a few overlooked players, starting with Robert Andrich who could factor into the midfield setup as a traditional No. 6,
+especially as Ilkay Gundogan enters the twilight of his career.
+</item 3>
+
+<item 4>
+USA vs Germany player ratings: USMNT defensive errors blight positive performance by Pulisic, Weah (Sporting News, 2023-10-14T22:46:31+00:00)
+The Celtic defender had 22 touches and gave away possession just two times, completing two dribbles and making two clearances. Carter-Vickers was not a target
+for Germany to attack nearly as much as the other three defenders on the pitch, a strong nod to his abilities.
+
+65th min: Brenden Aaronson — 7
+
+Probably the the U.S. substitute to make the biggest impact, Brenden Aaronson was bright in the attack, dazzling with his dribbling skills and helping usher the
+U.S. forward amidst a second-half onslaught from Germany. A good showing from the Union Berlin winger who needs confidence at the moment.
+
+65th min: Ricardo Pepi — 5
+
+It wasn't an ideal situation for Ricardo Pepi to enter in, coming on with the U.S. shell-shocked from the quickfire Germany double. Still, he provided very
+little up front, with just eight touches in 24 minutes of action.
+</item 4>
+
+<item 5>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Gregg Berhalter and the U.S. men's national team continue their preparations for the 2024 Copa America and 2026 FIFA World Cup with friendlies against Germany
+and Ghana this month.
+
+First, the U.S. will take on Germany in Hartford, Connecticut on October 14. The 15th-ranked Germans are under new management, so the USMNT will serve as the
+debut match for new head coach Julian Nagelsmann, the 36-year-old who has been out of a job since departing Bayern Munich back in March.
+
+Most European countries are busy with Euro 2024 qualifying, but the Germans are hosting the tournament and therefore qualify automatically, opening up their
+schedule for this friendly match.
+
+Then, on October 17, the U.S. will travel to GEODIS Park in Nashville, Tennessee for a friendly against Ghana. The two nations have a deep history of
+contentious matchups, including in three consecutive World Cup tournaments in 2006, 2010, and 2014.
+</item 5>
+
+<item 6>
+USA vs Germany player ratings: USMNT defensive errors blight positive performance by Pulisic, Weah (Sporting News, 2023-10-14T22:46:31+00:00)
+Christian Pulisic with an absolute banger 🚀
+
+
+
+Watch USA vs. Germany live on TNT or Max 📺 pic.twitter.com/G7t6KxLjFO — B/R Football (@brfootball) October 14, 2023
+
+Player ratings for USMNT substitutes vs Germany
+
+45th min: Luca de la Torre — 5
+
+Brought on to replace Gio Reyna at halftime, Luca de la Torre was unable to stem the German tide, despite being a more defensive-minded option than Reyna in
+what should have been a swap to shore up the midfield.
+
+65th min: Cameron Carter-Vickers — 7
+
+With Tim Ream and even Chris Richards struggling at various stages in this match, Cameron Carter-Vickers remains a top-tier center-back in this U.S. player pool
+and a clear starter when healthy. He came off the bench due to his recent hamstring troubles, but was stout in his 25 minutes of action.
+</item 6>
+
+<item 7>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+It was one of many decisions the Seagulls were not happy about.
+
+Mitoma penalty... ❓
+
+Dunk penalty... ❓
+
+Mitoma handball... ❓
+
+Mac Allister handball... ❓
+
+
+
+Dermot Gallagher dissects Spurs vs Brighton 🔍 pic.twitter.com/hw86oA4frs — Sky Sports Premier League (@SkySportsPL) April 10, 2023
+
+Arsenal 1-1 Brentford: February 11, 2023
+
+Arsenal were denied two points in their race for the title after VAR's Lee Mason did not use the right player when checking for an offside in Brentford's goal.
+
+Mikel Arteta was not happy after the game. He said: "That wasn't a human error. That was a big, big, big not conceiving and understanding your job."
+
+Crystal Palace 1-1 Brighton: February 11, 2023
+
+Incredibly, the referees made another wrong offside decision on the same day.
+</item 7>
+
+<item 8>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Messi missed the last match against Bolivia, and missed four Inter Miami games after, but he returned for a half-hour of action in their final fixture before
+the international break. However, he doesn't start, but is reportedly fit enough to come off the bench for most or all of the second half.
+
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+</item 8>
+
+<item 9>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+💙Mirá Argentina vs Paraguay en https://t.co/GYiXqQWnBq #SomosMundiales #Eliminatorias pic.twitter.com/jHgvF4Nbhu — Televisión Pública (@TV_Publica) October 12,
+2023
+
+Kickoff: The match is under way from Buenos Aires! Lionel Messi starts on the bench for Argentina, but should come into the match early in the second half.
+We'll see what Lautaro Martinez and Julian Alvarez can do together up front against Paraguay under new management.
+
+Argentina vs Paraguay: Pre-match commentary, analysis, stats, and more
+
+15 mins to kickoff: Darwin Nunez deposited a late penalty for Uruguay to share the points with Colombia in a 2-2 draw.
+</item 9>
+
+<item 10>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+By rule, any contact by the ball with the arm or hand of an attacking player is an automatic foul, regardless of arm position, intent, or any other factor.
+Thus, the goal was disallowed.
+
+Correct decision to rule out Sterling's goal? pic.twitter.com/VKnrNC0Y0K — Football Tweet ⚽ (@Football__Tweet) November 6, 2023
+
+Cristian Romero sent off on VAR review, Chelsea awarded penalty
+
+In what was easily the defining moment of the match, Chelsea were ultimately awarded a penalty after a wild passage of play in the 31st minute where they
+initially put the ball in the back of the net. The goal was ruled out, but a penalty was eventually given along with the first red card.
+
+The ball pinged around the Tottenham penalty area wildly with Spurs unable to clear after blocking multiple efforts, until Moises Caicedo finally buried a
+long-distance effort with a low finish inside the left post.
+</item 10>
+
+<item 11>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+It's far too early to be watching outside results too intently, but regardless, that's a great result for Paraguay, who will want every CONMEBOL nation outside
+the top two to drop as many points as possible.
+
+The messier it gets around Paraguay, the better a chance they have of securing a qualifying spot in the expanded World Cup field.
+
+💥 ¡Qué cierre! Penal, expulsado el portero y Uruguay lo empata con Darwin Núñez pic.twitter.com/csgmJt6yJz — Tigo Sports Costa Rica (@tigosports_cr) October 12,
+2023
+
+30 mins to kickoff: Paraguay have a new manager, as Daniel Garnero makes his debut as the new permanent boss. He spent the last two years in charge of
+Paraguayan giants Libertad, taking over for Guillermo Barros Schelotto who was let go after the September qualifiers just three days shy of his two-year hire
+anniversary.
+</item 11>
+
+<item 12>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+Bayern Munich have their first game back against Mainz on Saturday, as does much of the Bundesliga.
+
+"I don't know if I'd be interested in playing against Mexico in America before [the Euros hosted] in Germany," said Bayern Munich manager Thomas Tuchel prior to
+the international break. "I don't know if anyone can explain this in a way that I can understand. I don't know who decided it, but it has been decided.
+
+"There is a difference between a busy schedule and everything away from home and in different time zones. This is at the end of the endurance. No coach in the
+world at this level will say otherwise."
+
+"I don't understand the trip to the USA — for a variety of reasons," said former Germany international Lothar Matthaus to German outlet Bild back in the summer.
+"I would have tried to create a good atmosphere in Germany before the Euros.
+</item 12>
+
+<item 13>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+6, especially as Ilkay Gundogan enters the twilight of his career. The new boss will also want to raise Kimmich's level of play back to old heights, as the
+ever-present Bayern star has seen his level drop in recent years for both club and country but remains a special talent.
+
+Germany criticized for travel schedule vs USA, Mexico
+
+The DFB has taken significant flak from the German press for their travel to North America to play the United States and Mexico.
+
+There's likely some form of superiority complex involved, with those following the German national team surely miffed that a European giant is traveling across
+the globe to meet CONCACAF sides with far thinner World Cup resumes. However, a closer look at their travel schedule does invite some questions as to how
+they've made use of the international break.
+
+Most notably, the Germany squad will return to Europe just a single day prior to Borussia Dortmund's first match out of the break, which sees BVB play Werder
+Bremen on Friday, October 20.
+</item 13>
+
+<item 14>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+Soon after Jones was sent off in the first half, Luis Diaz scored to put Liverpool 1-0 up despite their disadvantage, but the flag went up for offside. Replay
+seemed to show that Diaz was onside, but VAR Darren England ended his check without even drawing lines, and the decision stood.
+
+The PGMOL issued a statement after the match stating the goal should have stood.
+
+Manchester United 1-0 Wolves: August 14, 2023
+
+After Onana clattered into Kalajdzic in the box, O'Neil thought a penalty would certainly be awarded. Instead, the Wolves manager received a yellow card on the
+sidelines for his protests.
+
+PGMOL's Jonathan Moss did apologise for the mistake after the match, which O'Neil said he appreciated.
+
+Tottenham 2-1 Brighton: April 8, 2023
+
+Chief Refereeing Officer Howard Webb had to give to Brighton an apology after they were denied a penalty in their away trip to Tottenham.
+</item 14>
+
+<item 15>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+Ultimately, the Tottenham defender would escape without further punishment for one reason: he missed. Just like Kai Havertz of Arsenal earlier this weekend, who
+also remained on the pitch against Newcastle for a similar incident, Udogie's tackle would not reach the necessary threshold for a straight red as he did not
+make full contact with Sterling.
+
+NBC commentator Jon Champion, who has real-time access to the VAR communication, said that the review ultimately determined the tackle was an "upper-level
+yellow card" that didn't quite meet the qualifications for a red.
+
+Cristian Romero next to avoid straight red card despite review
+
+Just four minutes later, another Tottenham defender would again get away with just a booking despite a VAR review for a possible red card.
+
+Cristian Romero, often criticised for his reckless nature, had a kick-out at Levi Colwill in the 22nd minute behind the play while laying on the ground. He
+kicked Colwill right in the calf, but no action was taken.
+
+This passage of play was not reviewed by VAR.
+</item 15>
+
+<item 16>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+The striker can only poke a low shot gently towards goalkeeper Andre Blake, who gathers.
+
+7 mins: Jamaica 0-0 Canada
+
+There isn't a great deal of action to report in the sunshine. Here's how Canada looked before kickoff.
+
+4 mins: Jamaica 0-0 Canada
+
+Jamaica should have scored! Leon Bailey is through on goal from a long ball but produces a tame, rushed finish that drops comfortably wide of Milan Borjan's
+goal with the goalkeeper well off his line.
+
+Manager Heimir Hallgrimsson turns and shows his frustration on the sideline, while Bailey - justifiably - looks sheepish. That was well short of the quality
+he's capable of.
+
+2 mins: Jamaica 0-0 Canada
+
+Leon Bailey canters along the left flank and sends in a dangerous low cross which Canada do well to clear. Bailey is adjudged to have been offside.
+</item 16>
+
+<item 17>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+MORE: All players in U.S. national team pool currently playing for a European club
+
+Gio Reyna to make USMNT return under Gregg Berhalter
+
+The ability of Berhalter and Reyna to work together moving forward has been a major talking point since the fallout of their saga after the 2022 World Cup.
+
+Reyna's lack of playing time at the World Cup was exacerbated by the actions of his parents in the weeks that followed, which sparked a domestic violence
+investigation of Berhalter before his eventual re-hire as national team head coach.
+
+Now, having recovered from a leg fracture suffered in summer Nations League duty under an interim USMNT head coach, the 20-year-old Borussia Dortmund playmaker
+returns to the international fold under Berhalter for the first time.
+
+The USMNT head coach has been forthcoming about the situation, admitting upon his re-hire that the two have a "lot of work to do" but insisting time was needed
+to broach the situation.
+</item 17>
+
+<item 18>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Alonso is strapped to a stretcher and continues to grimace in lots of pain. On comes Mathias Villasanti, signaling a potential change of formation.
+
+70th min: Junior Alonso has got to be careful. Already on a yellow card, he fouls Lautaro Martinez hard and gets a talking too from the referee.
+
+Paraguay make their second change of the match, a double swap as Antonio Sanabria and Braian Ojeda come on, replacing Antonio Bareiro and Alvaro Campuzano.
+
+68th min: Rodrigo de Paul forces a save from Carlos Coronel! It's from an extremely tight angle on the right, almost on top of the end line, so Coronel has his
+post covered well, but it wins a corner. The set-piece is wasted by being played short.
+
+63rd min: It has to be said...Argentina have dropped their level since Lionel Messi has come on.
+</item 18>
+
+<item 19>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Also missing is Antonee Robinson, who Gregg Berhalter said is dealing with a sports hernia, and while he played through it last camp and recently for his club,
+it's affecting him and therefore rest is the best option here.
+
+Johnny Cardoso had to pull out of the September camp due to an ankle injury, but he has returned to action with Brazilian club Internacional, indicating a
+return to fitness, and has been included on the squad.
+
+With Adams injured, there has been some noise on social media calling for Heidenheim midfielder Lennard Maloney to be brought into the squad in October, and he
+was given the call-up here. The 23-year-old was born in Berlin to an American father, appearing for the U.S. at the U-20 level in the past and stating his
+desire to reach the USMNT senior squad.
+
+MORE: All players in U.S.
+</item 19>
+
+<item 20>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman PSV Eindhoven (NED) 6 0 FWD Brenden Aaronson Union Berlin (GER) 34 8 FWD Folarin Balogun Arsenal
+(ENG) 4 2 FWD Ricardo Pepi PSV Eindhoven (NED) 18 9 FWD Christian Pulisic AC Milan (ITA) 62 26 FWD Tim Weah Juventus (ITA) 33 5 FWD Alex Zendejas Club America
+(MEX) 7 1
+
+Tyler Adams, Antonee Robinson injured for October camp
+
+Gregg Berhalter largely has the entire first-choice player pool available for selection, with only a few injuries to work around.
+
+There is one notable absence, as captain Tyler Adams remains sidelined with a frustrating long-term hamstring injury.
+</item 20>
+
+<item 21>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+Andy Madley awarded Palace a penalty following a check on the VAR monitor.
+
+The decision, which went against Digne, was the wrong call.
+
+Everton 0-1 Manchester City: February 26, 2022
+
+Man City were given a helping hand in their title race against Liverpool after Everton were denied a penalty in the second half.
+
+Rodri misjudged the flight of the ball and it ricocheted off his arm. VAR official Chris Kavanagh stuck with the on-field decision, which later forced referees
+chief Mike Riley to apologise to Everton.
+</item 21>
+
+<item 22>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+With Berhalter having since confirmed the two have broken the ice and talked over the phone, they will now look to move forward without any more personal
+conflict.
+
+After the October roster release, Berhalter confirmed that the two spoke "weeks ago" on Zoom, with the U.S. head coach appreciative of Reyna's willingness to
+move forward. He spoke that because Reyna has not yet played for his club this season, their goal will be to "get him minutes" so he can build his fitness and
+return to Dortmund in the best position possible to begin his club campaign.
+
+Berhalter stated that they see Reyna being able to play three different positions: central midfielder, attacking midfielder, and winger, with further
+clarification being his skill-set fitting a "between the lines" style of wide play if he were deployed on the wing, as opposed to one glued to the touchline.
+</item 22>
+
+<item 23>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+Reaction from Steven Vitoria:
+
+
+
+"It feels great to get our first win here in 35 years. It wasn't easy, far from it. Still a lot to be done but we're one step closer to where we want to
+go."#CANMNT pic.twitter.com/3YYwSNCgFm — Canada Soccer (@CanadaSoccerEN) November 18, 2023
+
+Lille striker David had two promising early opportunities, poking a shot into Milan Borjan's arms under pressure from two markers and applying a looping header
+to an Alphonso Davies cross, forcing the goalkeeper to backpedal and claim.
+
+Even if they are knocked out on Wednesday, there will be another chance for the losers of the tie to reach the Copa America.
+</item 23>
+
+<item 24>
+Ten Hag responds to Carra: Man Utd have actually improved (Sky Sports, 2023-10-28T21:30:00+00:00)
+Erik ten Hag has disagreed with Jamie Carragher's comments that Manchester United are going backwards this season - by saying the statistics show that his team
+has actually improved.
+
+United host local rivals Manchester City in a Super Sunday derby this weekend, live on Sky Sports with kick-off at 3.30pm, in the latest acid test to see how
+far Ten Hag's side have improved from last season.
+
+In his column in The Daily Telegraph, Carragher said United's summer signings have led to the club becoming "stale" - and that Ten Hag should now be questioned
+about whether he can get the best out of his squad.
+
+But in his pre-match press conference for the City game, Ten Hag hit back at those claims.
+
+"In possession we have to do better, but there are reasons and I don't go into them, but everyone is seeing why. But there are also facts so I disagree [with
+Carragher], we are much better," said Ten Hag.
+
+"In high ball regains, we are a top of the Premier League.
+</item 24>
+
+<item 25>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Y Julián es muy molesto. Corre y marca. Son dos grandes 9".
+
+
+
+🗣️ Mario Kempes, en @TyCSports. pic.twitter.com/SIFzdIfrM9 — TR SPORTS ®️ (@trsports_) October 11, 2023
+
+Argentina vs Paraguay starting lineups & team news
+
+Argentina head coach Lionel Scaloni named a bloated 36-man squad for the matches against Paraguay and Peru this month, but Angel Di Maria, Paulo Dybala, and
+Juan Foyth were forced to withdraw due to injury. Lisandro Martinez is also unavailable after having to undergo another foot operation.
+
+Now that Inter Miami's playoff run is officially over, Argentina can feel a little better about deploying Lionel Messi at full 90-minute use despite his recent
+fitness issues, knowing his club season is nearly over and he'll have months of rest upcoming.
+</item 25>
+
+<item 26>
+European roundup: Bellingham helps Real Madrid go top while Bayern draw (The Guardian, 2023-09-30T21:17:47+00:00)
+If you already have the Guardian app, make sure you’re on the most recent version.
+
+In the Guardian app, tap the Menu button at the bottom right, then go to Settings (the gear icon), then Notifications.
+
+Turn on sport notifications. Was this helpful? Thank you for your feedback.
+
+“After the break, we were more compact and certainly more energetic, hungrier and more determined,” Milan’s coach, Stefano Pioli, told DAZN. “That is a great
+sign when playing every three days and it was a fully deserved victory.”
+
+Milan suffered a potential injury blow as the midfielder Ruben Loftus-Cheek limped off in the first half. “It would be a shame if we lost Ruben, he felt a
+twinge near the groin area,” Pioli said. “Unfortunately, injuries tend to come when players are in good shape.”
+</item 26>
+
+<item 27>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Argentina subs (12): Armani (GK), Musso (GK), Quarta, Montiel, Acuna, Ocampos, Paredes, Lo Celso, Pezzella, G. Rodriguez, Garnacho, Messi.
+
+Paraguay head coach Daniel Garnero has rung the changes after falling to Venezuela last time out, making five alterations to that starting lineup. The entire
+midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+
+Forward Miguel Almiron is Paraguay's most prominent goalscoring threat and is in good form, with three goals in his past five matches for Newcastle United.
+
+Paraguay have questions at goalkeeper, as mainstay Antony Silva has been phased out, leaving three inexperienced internationals currently on the roster. New
+York Red Bulls starter Carlos Coronel earned his first two caps in the September matches and he remains in net here.
+</item 27>
+
+<item 28>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+John Brooks was taken off VAR duty for two games after he drew the offside line in the wrong place, denying Brighton's Pervis Estupinan a goal.
+
+Aston Villa 3-1 Manchester United: November 6, 2022
+
+Lucas Digne's free-kick was one of the highlights in Aston Villa's victory over Man United, but a post-match review showed he received additional help following
+a mistake from the referee.
+
+The Red Devils' wall was set more than 10 yards behind the ball, allowing Digne more room to find the back of the net.
+
+Nottingham Forest 2-2 Brentford: November 5, 2022
+
+Brentford were awarded a penalty after a collision between Dean Henderson and Yoane Wissa. Replays showed that Wissa initiated the contact, but Brentford were
+still given the spot-kick.
+
+This forced Webb to apologise to Forest after the match.
+</item 28>
+
+<item 29>
+The Soccer Star on the Verge of Breaking an 89-Year-Old Record (The New York Times, 2023-11-17T21:47:19+00:00)
+They are, at least, likely to qualify for the play-offs, and therefore will have two must-win games in March to secure their first major tournament appearance
+since 2000 — the summer when Haaland was born. But there’s been little in recent performances to think Norway will breeze through those play-offs.
+
+Juve’s individual record will soon be surpassed, but captaining his side to a bronze medal at the Olympics may stand as his nation’s greatest achievement for
+much longer.
+
+GO DEEPER Erling Haaland is phenomenal - so why hasn’t he made Manchester City better?
+
+(Top photo: Sebastian Widmann – UEFA/UEFA via Getty Images)
+</item 29>
+
+<item 30>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+🎥: @onesoccer pic.twitter.com/XzBldBSXfX — Canada Soccer (@CanadaSoccerEN) November 17, 2023
+
+2 hours to kickoff: While the Canadian federation is reeling from the departure of John Herdman, one player is happy to see change happen at the top. Central
+midfielder Mark-Anthony Kaye had been left out of multiple squads towards the end of Herdman's tenure, and he believes his relationship with the former Canada
+head coach was the reason.
+
+Me and John had some really tough conversations where he blatantly told me I wasn’t good enough to be part of the team. That was hard for me to accept,” Kaye
+said to Sportsnet, after also posting to social media an honest self-reflection following his New England Revolution's elimination from the MLS playoffs a week
+ago.
+
+Heartfelt post by Mark-Anthony Kaye.
+</item 30>
+
+<item 31>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+Argentina continue their start to CONMEBOL 2026 World Cup qualifying with a home date against Paraguay, the first of two qualifiers for the world champions in
+this international break.
+
+Lionel Messi has been dealing with fitness concerns the past few weeks, missing significant time for his club Inter Miami, but he is on the roster and expected
+to play a part for the national team. According to a report from Argentina, Messi will not start tonight's match, but he is likely to play much or all of the
+second half.
+
+He is helping to usher in a youth movement up front for Argentina, with Julian Alvarez and Alejandro Garnacho considered the future of the forward line. With
+Angel Di Maria not fit for duty this month, that will be even more in the spotlight here and in the follow-up in Peru.
+
+Paraguay were not close to qualifying for the last World Cup, unable to reach a FIFA tournament since 2010.
+</item 31>
+
+<item 32>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+Revisiting the NBA caricature back in time, the New York Knicks became the first all-Black team in 1979. But their fans made their disapproval very apparent.
+“It wasn’t so much New York attitudes, but fans around the league let you know how they felt about you as an opponent and as a Black man as well,” Knicks star
+Earl Monroe told Newsday.
+
+USA Today via Reuters May 15, 2021; San Antonio, Texas, USA; Phoenix Suns forward Torrey Craig (12) and San Antonio Spurs forward Keldon Johnson (3) fight for
+loose ball as Suns guards Devin Booker (1) and Chris Paul (3) look on in the third quarterat AT&T Center. Mandatory Credit: Scott Wachter-USA TODAY Sports
+
+We could list out all the scandals, fights, and controversies here, but you get the idea.
+</item 32>
+
+<item 33>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+“I think that it is important sometimes that you have to go through those moments to realise what it takes. There are elements that happen in a football match
+and elements that happen in the buildup to a football match, so you have to experience all those things if you want to be successful.”
+
+The win against Everton on Sunday was defined by two teenagers, Alejandro Garnacho and Kobbie Mainoo.
+</item 33>
+
+<item 34>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+MORE: Breaking down Germany squad, tactics as Julian Nagelsmann debuts as manager
+
+USA roster for October friendlies vs Germany, Ghana
+
+The USMNT squad for the October friendlies was announced on Thursday, October 5. Gregg Berhalter has called in 23 players, which is one fewer than were brought
+in for the friendlies against Uzbekistan and Oman last month.
+
+Below is the official 23-man roster for the upcoming October friendlies against Germany and Ghana.
+
+PSV midfielder Malik Tillman was forced to withdraw from the squad due to injury, with Alex Zendejas of Club America named to the roster in his place.
+
+MORE: Tracking every goal scored by Christian Pulisic at new club AC Milan
+
+Pos Name Club Caps Goals GK Ethan Horvath Nott. Forest (ENG) 9 0 GK Matt Turner Nott. Forest (ENG) 33 0 DEF Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino
+Dest PSV Eindhoven
+</item 34>
+
+<item 35>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Gomez does well to dispossess Messi, but the Argentine is first back on the loose ball, expertly shielding the ball with his body, and Gomez obliges by barging
+in from behind.
+
+With the set-piece, Messi hits the woodwork! Carlos Coronel is helpless to do anything but watch, rooted to the spot, and he sees it sail by him and strike the
+outside of the left post!
+
+Gio Lo Celso comes on for Argentina to replace Rodrigo de Paul, who had a very good match.
+
+89th min: As this game sputters towards a conclusion, Emiliano Martinez has set a new national team record for a shutout streak, crossing 609 minutes of play
+without conceding a goal. It's an impressive mark nonetheless, but in fairness, he's had almost nothing to do tonight, making just one (admittedly impressive)
+save.
+
+Argentina have not conceded a single goal since the 2022 World Cup final. Four minutes of stoppage time are shown.
+</item 35>
+
+<item 36>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+In either setup, the forward line will shift horizontally to allow a midfield player to drive into space, and given options once halted to either play into the
+crowded forward line or release a bombing full-back to the off side, both of which can stretch or confuse an opponent's defensive unit.
+
+Having spent time in the Red Bull system, Nagelsmann also deploys a complicated press that, like Gregg Berhalter, starts with the lone central striker. The goal
+is to force the opponent to play the ball into overload traps out wide, or if the opponent plays centrally, a defensive midfielder would step up at the base of
+a diamond (with two midfielders on the sides and the striker at the top) which would overwhelm an opposition midfield trio.
+
+How will Germany play under Julian Nagelsmann?
+
+The question, now, is how all this will translate to the German national team.
+
+Looking at Julian Nagelsmann's first squad of 26 players, the biggest question is which formation he will play.
+</item 36>
+
+<item 37>
+USA vs Germany player ratings: USMNT defensive errors blight positive performance by Pulisic, Weah (Sporting News, 2023-10-14T22:46:31+00:00)
+He featured his usual pressing, and came close to scoring once on a messy chance that Germany just barely managed to clear, but otherwise he didn't quite cause
+the opposing back line problems to open spaces up for teammates.
+
+75th min: Johnny Cardoso — 6
+
+Johnny Cardoso only had 15 minutes at the end to showcase his abilities, but it begged the question why he or Lennard Maloney weren't the ones introduced at
+halftime instead of Luca de la Torre. Cardoso lost possession just once in his 10 touches and completed a tackle, although he was also dribbled past a few times
+as well.
+
+75th min: Kevin Paredes — 5
+
+With 10 touches in his 15 minutes of action towards the end of a mucked up game of numerous substitutions, Kevin Paredes didn't stand out, losing possession
+four times and completing four passes. Tough to evaluate his time on the field, but he didn't stand out.
+</item 37>
+
+<item 38>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+🔚 pic.twitter.com/jSis5C72tj — Concacaf Nations League (@CNationsLeague) November 18, 2023
+
+How can Canada qualify for the Copa America 2024?
+
+The Rouges' task is now ostensibly straightforward: avoid defeat against Jamaica and they will be competing alongside the likes of reigning champions Argentina
+at the Copa America in the US when it starts in June.
+
+Jamaica have never won in Canada, although they showed enough here — in sunshine, mercifully, following the postponement of the game in torrential conditions
+the previous night — to suggest they could spring an upset.
+
+Their task will be made harder by the probable absence of Michail Antonio, while Bailey could not match speed and timing with accurate finishes when presented
+with good early chances.
+
+West Ham United forward Antonio immediately signalled for treatment before limping down the tunnel with a possible hamstring injury during the first half.
+
+Reaction from Steven Vitoria:
+</item 38>
+
+<item 39>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Tonight's opponents, Argentina and Paraguay, represent two of the three teams he still has yet to score against, with Brazil the other. Uruguay had briefly
+leveled the match early in the second half, but Colombia restored its advantage minutes later.
+
+Watch the James Rodriguez goal vs Uruguay
+
+6/9 - James Rodríguez 🇨🇴 le marcó por primera vez a Uruguay por Eliminatorias Sudamericanas. El mediocampista convirtió contra seis de los nueve rivales de
+Colombia en la clasificatoria: solo no pudo contra Argentina, Brasil y Paraguay. Álbum. pic.twitter.com/Q6yBhoW6mv — OptaJavier (@OptaJavier) October 12, 2023
+
+1 hour 30 mins to kick: With the understanding that Lionel Messi will start tonight's match on the bench, reports indicate that Nicolas Otamendi will wear the
+captain's armband until Messi enters the pitch.
+
+¡El Comandante!
+</item 39>
+
+<item 40>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Had Inter Miami been still in the playoff hunt, with a potential postseason run on the horizon, Argentina might have played it a bit safer with Messi in this
+international window. Yet now that his long offseason break is confirmed, Messi may be more aggressive with his minutes here knowing that, after Inter Miami's
+final two meaningless regular-season matches, he will only have international breaks to keep him sharp until February.
+
+According to a report earlier today, Messi will not start tonight, but is likely to play much or all of the second half, while Lautaro Martinez and Julian
+Alvarez both start a national team match for the first time. World Cup hero Mario Kempes is a big fan of that.
+
+"No deberíamos entrar en la polémica, como pasó con Batistuta y Crespo. Lautaro tuvo un bajón en el Mundial, entró Julián y cambió muchos las cosas, pero ahora
+volvió a hacer goles. Y Julián es muy molesto.
+</item 40>
+
+<item 41>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+41st min: Paraguay are getting extremely frustrated with their lack of attacking possession. They get into the final third for the first time in ages, but with
+no support, Antonio Bareiro blasts a hopeless effort from a long way out, the shot blocked by his defender who's all over the lone Paraguay striker like white
+on rice.
+
+38th min: Chance, Argentina! A deep delivery from way out on the right touchline meets the head of a leaping Nico Gonzalez at the far post, but it's saved well
+by Carlos Coronel! The header was from a very tight angle, but the Red Bulls goalkeeper still had work to do as he reacted quickly to stick out his left foot
+and make the reflex stop.
+
+36th min: Chance, Argentina! The referee very dramatically waves away a penalty shout from Alexis Mac Allister! A corner is cleared to the Liverpool midfielder
+at the top of the penalty area, and he does brilliantly to dribble through multiple defenders.
+</item 41>
+
+<item 42>
+‘Bleeds green and gold’: Ballsy career-saving call that’s delivered Arnie a record-breaking moment (The Roar | Sports Writers Blog, 2023-11-13T23:01:20+00:00)
+“I was able to put lessons from that time into practice, develop and eventually return to the Socceroos much more prepared for the role. It’s been a privilege
+to be part of the national team again with the benefit of that experience, and I’m immensely proud of what this group has been able to achieve in the last four
+years.
+
+“In my opinion, there’s no greater honour than representing your nation on the international stage. I look at the young players coming through the Socceroos
+system now full of pride in the work they’ve put in to get where they are, and the journey that’s ahead of them.
+
+“I’ve always loved being a part of the Socceroos culture and my desire to see Australia fulfil its footballing potential is still driving me to take this group
+to further success.”
+
+Australia starts the road to north America in Melbourne at AAMI Park on Thursday night, before travelling to the Middle East to play Palestine next Wednesday
+(1.00am AEDT).
+</item 42>
+
+<item 43>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+"I would have tried to create a good atmosphere in Germany before the Euros. That's why I would be in all 10 European Championship stadiums for the friendly
+matches and would have shown myself there once as a DFB selection. That can create a mood. But what do we want in the US at this point?"
+</item 43>
+
+<item 44>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+London derbies are always full of venom and vigor, but the opening 45 minutes of Tottenham vs. Chelsea on Monday produced one of the greatest train wrecks in
+the history of the English top flight.
+
+With repeated refereeing blunders one of the main talking points of the season thus far, a half full of VAR checks and highly scrutinized decisions caused
+absolute chaos on the Tottenham Hotspur Stadium pitch.
+
+All told, one red card and four yellow cards were produced by Michael Oliver with help from VAR official John Brooks, while Chelsea saw goals ruled out on an
+incredible four separate occasions. It resulted in an incredible 12 minutes of stoppage time, and while many of the decisions were widely analysed as correct,
+the lengthy review processes were criticised just as much as the eventual results.
+
+The first half would end level at 1-1, with Tottenham reduced to 10 men, and Premier League fans had plenty to talk about with friends, fans, and coworkers.
+</item 44>
+
+<item 45>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+He was initially injured while playing for Leeds United back in March, and while he had finally recovered to make his Bournemouth debut in the EFL Cup in late
+September, he played just 20 minutes off the bench before suffering a setback, sidelined again for the foreseeable future.
+
+Gio Reyna has returned from his leg fracture and is called in for the first time under Berhalter since their falling out at the 2022 World Cup. Also included is
+defender Cameron Carter-Vickers who only just made his debut for Celtic this season thanks to a hamstring injury. On the heels of that return just before the
+international break, he is called in.
+
+Goalkeepers Zack Steffen and Sean Johnson remain out of action due to injuries. Additionally, Josh Sargent is sidelined with a long-term ankle injury, while
+Daryl Dike is also out after tearing his Achilles.
+</item 45>
+
+<item 46>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+That looked painful for the Red Bulls goalie, but he's ok to continue.
+
+It's a bit surprising that Lautaro got away with no booking from that really dangerous decision.
+
+13th min: Chance, Argentina! Oh no, it's a terribly bad miss from Nico Gonzalez. The Argentine winger breaks down the left, and with the Paraguay defense
+lagging behind, he's got plenty of room to shoot across the face of goal from a somewhat tight angle.
+
+The "shot" is so bad it's hard to tell if he was trying to put it on frame or square it for a teammate at the back post, but it's a tragic attempt either way,
+as there was nobody anywhere close at the far stick to meet it.
+
+9th min: Paraguay get their first attacking move playing long to the striker, but after a few nervy moments the Argentina defense recovers and gets back on the
+ball.
+
+4th min: GOAL! ARGENTINA!
+</item 46>
+
+<item 47>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Bareiro fouls Romero and gets away with it, and Romero reacts later off the ball by bumping the Paraguay forward, who throws himself dramatically to the turf.
+It's the reaction which earns the booking, while Romero is lucky to get away with his brainless moment.
+
+Kickoff: They've begun the second half, and while Lionel Messi has not entered the pitch yet, he's warming up on the touchline and likely to come on soon.
+Alexis Mac Allister is fouled from behind just seconds after the restart.
+
+Robert Rojas has come on for Paraguay in the first substitution of the match, entering at right-back for Ivan Ramirez.
+
+HALFTIME: Argentina 1-0 Paraguay
+
+Somehow, some way, Nicolas Otamendi's fourth-minute goal remains the only successful strike of this game so far. Argentina completely and utterly dominated the
+first 45 minutes, but have precious little to show for it.
+</item 47>
+
+<item 48>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+📸 - The official VAR image, offside! No 2-0! pic.twitter.com/Md6DIzmAVe — 𝐀𝐅𝐂 𝐀𝐉𝐀𝐗 💎 (@TheEuropeanLad) November 6, 2023
+
+Destiny Udogie escapes red card for bad tackle
+
+Tottenham were lucky to remain with 11 players in the 18th minute, as Destiny Udogie went in with a horrible two-footed tackle on Raheem Sterling out wide.
+
+Udogie would see yellow initially from Michael Oliver, but there was a subsequent VAR check to review for a possible red card, and for good reason. Udogie's
+tackle was extremely dangerous, as he lunged in with a leg-breaker.
+
+Ultimately, the Tottenham defender would escape without further punishment for one reason: he missed.
+</item 48>
+
+<item 49>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+This forced Webb to apologise to Forest after the match.
+
+Fulham 3-0 Aston Villa: October 20, 2022
+
+Douglas Luiz was wrongly sent off for Aston Villa just after the hour mark. He was thought to have instigated a bust-up, when the real perpetrator was in fact
+Aleksandar Mitrovic.
+
+Manchester United 3-1 Arsenal: September 4, 2022
+
+Arsenal's first defeat of the season came at Old Trafford, but a refereeing decision impacted the match early on.
+
+Gabriel Martinelli was denied a goal after a VAR check decided Martin Odegaard had fouled Christian Eriksen. PGMOL later revealed that the goal should have
+stood.
+</item 49>
+
+<item 50>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+PGMOL later revealed that the goal should have stood.
+
+MORE: Mason Greenwood to leave Man United: What will happen next
+
+Newcastle 0-0 Crystal Palace: September 3, 2022
+
+Crystal Palace were let off the hook when Tyrick Mitchell's own goal was ruled out after Joe Willock was thought to have impeded Vicente Guaita between the
+sticks.
+
+It turned out to be the wrong decision, despite a lengthy check in the VAR hub.
+
+Chelsea 2-1 West Ham: September 3, 2022
+
+Maxwell Cornet thought he scored late on against Chelsea to make it 2-2, but the referee disallowed the goal due to a foul on Edouard Mendy by Jarrod Bowen in
+the build-up.
+
+Webb apologised to David Moyes after the incident.
+
+Crystal Palace 3-1 Aston Villa: August 20, 2022
+
+Webb's first apology in his new role came during Villa's defeat at Selhurst Park.
+</item 50>
+
+<item 51>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Lionel Messi's Inter Miami teammate Diego Gomez was named to the Paraguay roster but was forced to withdraw due to injury.
+
+Paraguay starting lineup (5-4-1): C. Coronel (GK) — I. Ramirez, G. Gomez, Balbuena, Alonso, Espinoza — R Sanchez, Campuzano, Almiron, Bareiro — Sosa.
+
+Paraguay subs (12): Rojas (GK), Espinola (GK), R. Rojas, Alderete, Avalos, Sanabria, Villaba, Galarza, M. Rojas, A. Romero, Gimenez, Ojeda.
+
+How to watch Argentina vs Paraguay
+
+Following an agreement at the 11th hour of the September international break, broadcast rights for Argentina's home World Cup qualifiers in the United States
+have been secured by Telemundo and Univision.
+</item 51>
+
+<item 52>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+54-year-old Garnero is an Argentine who made one appearance for the national team as a player, and spent most of his career with Argentine club Independiente.
+He's managed at the club level in Paraguay since 2015 with Sol de America, Guarani, and Olimpia before his spell at Libertad.
+
+It's quite the test for Garnero in his debut match, taking on Lionel Messi and the defending World Cup champions Argentina, his home nation. My intention is
+always to play with the ball. We must be smart and aggressive in recoveries." A bold claim by the Paraguay boss.
+
+"Vamos a jugar contra una selección que es la mejor del mundo. No solamente por logros, sino por idea colectiva y rendimientos individuales. Mi intención
+siempre es jugar con la pelota. Debemos ser inteligentes y agresivos en las recuperaciones".
+
+
+
+🗣️ Daniel Garnero.
+</item 52>
+
+<item 53>
+European roundup: Bellingham helps Real Madrid go top while Bayern draw (The Guardian, 2023-09-30T21:17:47+00:00)
+But Martínez opened the scoring in the 62nd minute when he collected Marcus Thuram’s low cross and chipped a finish over Guillermo Ochoa.
+
+skip past newsletter promotion Sign up to Soccer with Jonathan Wilson Free weekly newsletter Jonathan Wilson brings expert analysis on the biggest stories from
+European soccer Privacy Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our
+Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google
+reCaptcha to protect our website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+The substitute Lautaro Martínez converts a penalty against Salernitana. Photograph: Massimo Pica/EPA
+
+Three minutes later Mateusz Legowski’s apparent equaliser was disallowed due to an offside.
+</item 53>
+
+<item 54>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“The Taylor Swift and Travis Kelce news has been a pop cultural moment we’ve leaned into in real time, as it’s an intersection of sport and entertainment, and
+we’ve seen an incredible amount of positivity around the sport.”
+
+“The vast majority of our content has remained focused on the game, our players and variety of other initiatives, including our Toy Story Funday Football
+alt-cast, the international games and more,” they continued.
+</item 54>
+
+<item 55>
+Canada vs Jamaica live score, updates, highlights, result from CONCACAF Nations League quarterfinal second leg (Sporting News, 2023-11-21T22:35:30+00:00)
+That would allow them to rotate Kamal Miller out, who picked up a yellow card in the first leg, keeping him safe for the semifinals.
+
+In would step Alistair Johnston and Derek Cornelius, with Steven Vitoria retained alongside them.
+
+The only injury absence for Canada at the moment is striker Lucas Cavallini, who withdrew from the squad prior to the two matches, replaced by Jacen
+Russell-Rowe.
+
+Canada projected starting lineup (3-5-2): Borjan (GK) — Cornelius, Vitoria, Johnston — Laryea, Eustaquio, Kone, Kaye, Davies — David, Larin.
+
+Jamaica saw star striker Michail Antonio go down with a gutting ACL injury in the first leg, and he now begins a lengthy rehab process. West Ham are reportedly
+furious about how it was handled, angered by both the conditions of the pitch in Jamaica and the fact he played another 10 minutes after sustaining the injury.
+</item 55>
+
+<item 56>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+With the United States set to test themselves against one of Europe's most powerful sides, the opponents are entering a transitional phase as well.
+
+Germany are considered one of the preeminent national team programs in the world, but recent years have humbled Die Mannschaft. They have been eliminated in the
+group stage of two straight World Cup tournaments, an unthinkable slip in stature given they had never been bounced from any World Cup that early in history
+prior to 2018.
+
+With Hansi Flick unable to steer the team to safer waters in Qatar, Julian Nagelsmann has taken over as new Germany head coach.
+
+At just 36 years old, Nagelsmann is a rising star, having spent three successful seasons at Hoffenheim followed by two years at RB Leipzig, which catapulted him
+to the managerial post at Bayern Munich in 2021. He steered the Bavarian giants to the Bundesliga title in his first season, but he was sacked by the club in
+March of 2023 amidst a furious league title fight.
+</item 56>
+
+<item 57>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+Chelsea were given a penalty and Tottenham went down to 10 men. #TOTCHE pic.twitter.com/sOzTrxgBzm — NBC Sports Soccer (@NBCSportsSoccer) November 6, 2023
+
+Watch in UK:
+
+"AMID FRENZY AND FURY!" 🤯
+
+
+
+Cole Palmer levels for Chelsea as Cristian Romero sees red! 🟥 pic.twitter.com/1oULwk1uOP — Sky Sports Premier League (@SkySportsPL) November 6, 2023
+
+Nicolas Jackson goal disallowed for offside
+
+Chelsea would see a third goal of the half disallowed as Nicolas Jackson put the ball in the net on 37 minutes but Raheem Sterling was offside in the buildup
+just past the midfield stripe. There's very little argument to be had here, and the game played on.
+
+While it was a decision that featured little, if any, controversy, it added to the mayhem of the half and contributed to the game's overall narrative.
+</item 57>
+
+<item 58>
+Chelsea and England star Cole Palmer: ‘The most annoying thing about moving down south? The traffic’ (The Independent - Sports, 2023-11-15T22:32:05+00:00)
+Sign up to Miguel Delaney’s Reading the Game newsletter sent straight to your inbox for free Sign up to Miguel’s Delaney’s free weekly newsletter Please enter a
+valid email address Please enter a valid email address SIGN UP I would like to be emailed about offers, events and updates from The Independent. Read our
+privacy notice Thanks for signing up to the
+
+Football email {{ #verifyErrors }} {{ message }} {{ /verifyErrors }} {{ ^verifyErrors }} Something went wrong. Please try again later {{ /verifyErrors }}
+
+Cole Palmer is a man on the move, from Manchester City to Chelsea, from perennial substitute to pivotal starter, from England Under-21 player to, perhaps, a
+senior international. It has been a few months of swift change. He is trying to get used to new surroundings, having swapped south Manchester – in his native
+Wythenshawe – for the South.
+
+“The most annoying thing? The traffic, that’s the biggest thing for me. Everything else I am enjoying.
+</item 58>
+
+<item 59>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Before he can get a shot off, he's bumped to the ground, and replay shows he has a clear grievance with the no-call! VAR does not intervene.
+
+ALEXIS MAC ALLISTER, STOP THAT.pic.twitter.com/wlShqa6mqR — Roy Nemer (@RoyNemer) October 12, 2023
+
+34th min: Alvaro Campuzano is whistled for a foul after hip checking Nicolas Tagliafico to the ground, handing Argentina a dangerous free-kick just inside the
+attacking third. The call by the official sends both Campuzano and Paraguay manager Daniel Garnero into a frenzy, as neither agree with the decision, but it's
+the right call for overly aggressive body positioning.
+
+The chance is wasted, however, as it is easily cleared and Argentina must reset.
+
+30th min: Chance, Argentina! Lautaro Martinez has a vicious shot agonizingly deflected wide!
+</item 59>
+
+<item 60>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+When you realize that the 𝑴𝒖𝒄𝒉𝒂𝒄𝒉𝒐𝒔 are playing football today 😄#ArgentinaNT pic.twitter.com/2QOvI8z9YU — Selección Argentina in English (@AFASeleccionEN)
+October 12, 2023
+
+1 hour to kickoff: Lineups are in, and it's exactly as we thought for Argentina, with Lionel Messi on the bench while the duo of Lautaro Martinez and Julian
+Alvarez start together for the first time ever. Nicolas Tagliafico retains his left-back spot despite the return of Marcos Acuna.
+
+For Paraguay, however, there's a host of changes. Ivan Ramirez comes in to play right-back for Robert Rojas for just his fourth international cap. The entire
+midfield three is swapped out as well, with Mattias Espinoza, Alvaro Campuzano, and Richard Sanchez entering the fray.
+</item 60>
+
+<item 61>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Meanwhile, Fabrizio Romano also shot it down from a journalistic standpoint.
+
+There isn't enough of a break for him to reasonably integrate with Barcelona, and at 36 years old he's sure to welcome the extended time off.
+
+Tata Martino on rumors of Messi playing on loan with Barcelona this winter:
+
+
+
+"Is he going for fun? Maybe he's going to visit Barcelona. Other than that, I don't know anything else about it." pic.twitter.com/qJwoJOwkC6 — Felipe Cárdenas
+(@FelipeCar) October 8, 2023
+
+2 hours to kickoff: Lionel Messi's club Inter Miami were eliminated from MLS playoff contention after their latest defeat, a 1-0 loss to FC Cincinnati last
+weekend. Messi had missed the previous four matches but returned to the field for the final 30 minutes. He was powerless to turn the tide of the game, after
+Inter Miami had missed so many gilt-edged chances in the first half.
+</item 61>
+
+<item 62>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Yet in the end, Emiliano Martinez had himself another clean sheet as Paraguay failed to produce more than a single quality attacking chance.
+
+The shutout gave Dibu an Argentine national team record, passing 609 minutes without conceding a goal, as Argentina have not been breached since Kylian Mbappe's
+dramatic 118th minute equalizer in the 2022 World Cup final. Additionally, Lionel Scaloni has still never been beaten in World Cup qualifying as Argentina head
+coach.
+
+The Sporting News followed the Argentina vs. Paraguay match live, providing score updates, commentary and highlights as they happened.
+
+MORE: Where to watch Argentina vs. Paraguay in World Cup qualifying
+
+Argentina vs Paraguay final score
+
+Score Goal scorers Argentina 1 Otamendi (4') Paraguay 0 —
+
+Kickoff: 8 p.m. local (7 p.m. ET / 4 p.m.
+</item 62>
+
+<item 63>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The October 1 matchup between the Chiefs and the Jets drew 27 million viewers. And became the most-watched Sunday TV show since the last Super Bowl! And the
+last Super Bowl had an actual concert by Rihanna.
+
+Revealed: The Dark Side Of Pat McAfee & Why Rob Gronkowski Is In The Firing Line
+
+Kaepernick, who? Deflategate, what? In the media frenzy surrounding the two lovebirds, other issues get thrown out of the window. How can fans forget that the
+NFL is also organizing games outside the American borders with a view to garnering international appeal? The NFL has scheduled 5 games abroad this season. It is
+also addressing the concussion controversies. It recently added both new concussion rules and a new $100 million initiative called “Play Smart, Play Safe,” to
+make the sport safer for players. And all the effort is showing.
+</item 63>
+
+<item 64>
+Another cruel comeback sees Newcastle perish in group of death (The Independent - Sports, 2023-12-13T22:16:07+00:00)
+Newcastle failed to clear as the ball ricocheted around their box before Olivier Giroud found Pulisic to poke in a shot. The American had been a target for
+Newcastle last January; how they must now regret the fact he joined Milan in the summer.
+
+Then, with 11 minutes remaining, Rafael Leao sprinted clear and shot against the post. If this had threatened to be the derby of the depleted, Milan had Leao
+back for the first time in a month. Newcastle had Callum Wilson able to start, but their goal came from a less regular source, with a thunderbolt from
+Joelinton.
+
+Joelinton thumped home Newcastle’s goal (Reuters)
+
+One of the great success stories of Howe’s reign, the misfit forward who was reinvented as a talismanic midfielder gave Newcastle a deserved lead. Joelinton’s
+rasping, rising shot from the edge of the box flew past Mike Maignan. He had taken Miguel Almiron’s pass and teed himself up.
+</item 64>
+
+<item 65>
+Jamaica vs Canada live score, result, updates, highlights from CONCACAF Nations League quarterfinal first leg (Sporting News, 2023-11-17T21:48:03+00:00)
+“I will commit to being the catalyst that will set the tone for our group for every game, to help restore our club to where it deserves to be, I am confident of
+that. We will be back and better.”#NERevs pic.twitter.com/A0mVyGdaAZ — Seth (@SethMan31) November 10, 2023
+
+Jamaica vs Canada lineups & team news
+
+Jamaica manager Hallgrimsson also described his side as being on a mission, but they faced it without New York Red Bulls forward Cory Burke because of a groin
+problem.
+
+Karoy Anderson, who plays for English club Charlton Athletic, was called up for the first time. "I was just shocked," the midfielder told the Addicks' website.
+"I was looking at it for a long time just taking it in and I told my mum and she started crying."
+</item 65>
+
+<item 66>
+The Soccer Star on the Verge of Breaking an 89-Year-Old Record (The New York Times, 2023-11-17T21:47:19+00:00)
+Advertisement
+
+Sixty-four of the 211 nations’ record goalscorers have appeared for them in 2023, and in terms of time since they were set, the median goalscoring mark has
+stood for just seven years, which includes the likes of the Republic of Ireland’s Robbie Keane and Paraguay’s Roque Santa Cruz. Increased longevity due to
+superior fitness levels in the modern game is clearly a major factor, as is the number of relatively new nations on the FIFA list.
+
+Perhaps the most surprising international goalscoring record is that of Italy.
+
+Giga Riva’s relatively insubstantial haul of 35 goals has been the mark to beat since World Cup 1974. Not only has it not been matched or eclipsed, but no one
+has ever got particularly near it — Roberto Baggio and Alessandro Del Piero both reached 27 and that’s as close as anyone has come.
+</item 66>
+
+<item 67>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+That's not to say its explicitly his fault, but the whole team has been sloppy since he entered the pitch. Paraguay have looked a bit more confident pressing
+the hosts, and it has caused some problems to them in possession.
+
+57th min: Uh, how has Ramon Sosa got away without a booking here? He barges into Rodrigo de Paul extremely late for no reason, as he arrived well after the ball
+and threw his body into the Argentine midfielder. The referee has a chat with Sosa, but decides not to book him, somehow.
+
+53rd min: Chance, Paraguay! The best attacking move of the match for the visitors nearly sees Ramon Sosa score a dramatic equalizer, but Emiliano Martinez makes
+a fingertips save to see the ball deflect just inches wide! It comes on a Route One move deep for Sosa who brings the ball down well and fires a vicious shot.
+</item 67>
+
+<item 68>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+🗣️ Daniel Garnero. pic.twitter.com/yj53M0oTWp — VarskySports (@VarskySports) October 11, 2023
+
+45 mins to kickoff: This is a really big match for Lautaro Martinez. He's had an outstanding start to the Serie A season with Inter, scoring 11 goals in 10
+matches, but since slumping in the World Cup, he's yet to recover his national team place.
+
+With Lionel Messi reportedly set to come off the bench at halftime, he will have a short leash tonight with which to break his 11-match scoreless streak at the
+international level. Time is running out for Lautaro to prove he is still a viable selection option for Lionel Scaloni.
+</item 68>
+
+<item 69>
+Pochettino looks past James mistake and stakes future on his ‘Chelsea DNA’ (The Guardian, 2023-10-20T21:30:28+00:00)
+That would have been too simple. Rather for their next game at Burnley on 7 October when, according to Pochettino, James was back in contention for selection.
+
+The 23-year-old was not called up by England for the internationals over this past window and the idea was that he would work to be ready for Saturday’s home
+derby against Arsenal. And yet there have been stories of an injury setback, even that he may need surgery to get to the root of his hamstring issues.
+
+Pochettino bustled his way through those questions on Friday and the best read on James’s status was that he would be back in the squad for Arsenal, most likely
+as a substitute. Gusto is available again after his own suspension. “It [James’s hamstring] is much better,” Pochettino said. “He is progressing well, still not
+at his best, 100%. But maybe to help the team at some point …. maybe, he is close to be there.”
+</item 69>
+
+<item 70>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+However, as the 2022/23 season progressed and results weren't as easy to come by, Nagelsmann switched to a 3-2-4-1 formation. This allowed him to deploy the
+likes of Alphonso Davies and Kingsley Coman very high up the pitch to provide width, while letting Jamal Musiala and Thomas Muller cook centrally behind a
+striker.
+
+That 3-2-4-1 formation is flexible horizontally, as it allows one full-back to push high up the pitch while the other slots in along the back line, and thus
+sees the two central No. 10 players alternate pushing wide or pinching in to compensate.
+
+This tactical setup is becoming popular with top-tier coaches across Europe, and has been used at various stages by the likes of Pep Guardiola, Stefano Pioli,
+Mikel Arteta, Edin Terzic, and many others.
+</item 70>
+
+<item 71>
+European roundup: Bellingham helps Real Madrid go top while Bayern draw (The Guardian, 2023-09-30T21:17:47+00:00)
+Photograph: David S.Bustamante/Soccrates Images/Getty Images
+
+In Spain Real Madrid outclassed Girona 3-0 to return to the top of LaLiga, thanks to goals from Joselu, Aurélien Tchouaméni and Jude Bellingham.
+
+Real moved on to 21 points from eight games, one ahead of Barcelona, who beat Sevilla 1-0 at home on Friday. Girona dropped to third.
+
+“I feel very good. I have freedom of movement and I’m enjoying football. Whenever I put on this shirt I always try to do my best,” said Bellingham.
+
+Real will also be buoyed up by the performance of Vinícius Jr, who looked lively in his first start since returning from a thigh muscle injury, before being
+taken off in the 68th minute. Real’s coach, Carlo Ancelotti, said: “It was a solid, convincing game.
+</item 71>
+
+<item 72>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Lionel Messi enters for Julian Alvarez, and takes the captain's armband from Nicolas Otamendi with a chuckle, as Otamendi puts it on Messi himself despite Messi
+telling him not to give it up.
+
+It's kind of odd that Lionel Scaloni would turn down the chance to bring Messi on at halftime without burning a substitution window, only to see him enter only
+eight minutes later, but here we are.
+
+EL REY A LA CANCHA 🔟✅
+
+
+
+Lionel Messi ingresó por Julián Álvarez a los 52 minutos en Argentina vs. Paraguay.
+
+
+
+¿Marcará algún gol? pic.twitter.com/Fj7Dqcsfps — TNT Sports Argentina (@TNTSportsAR) October 13, 2023
+
+50th min: Antonio Bareiro picks up a hilarious yellow card after a coming together with Cristiano Romero.
+</item 72>
+
+<item 73>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+Referees once again took the headlines on the opening matchday of the 2023/24 Premier League season following an incorrect VAR decision in Manchester United's
+fixture against Wolves.
+
+Gary O'Neil's side were denied a late penalty after a foul from Andre Onana on Sasa Kalajdzic. Despite a long VAR check, Wolves were not given the spot-kick in
+injury time and lost the match 1-0.
+
+Fans watching the game were in disbelief when the call was made, and similar incidents have happened since, including against United. Bruno Fernandes said he
+would wait for an apology — one that never arrived — after Cristian Romero was not punished for handball in the Red Devils' 2-0 loss to Tottenham, and plenty of
+onlookers debated the penalty won by Marcus Rashford in United's subsequent comeback win at home to Nottingham Forest.
+</item 73>
+
+<item 74>
+USA vs Germany player ratings: USMNT defensive errors blight positive performance by Pulisic, Weah (Sporting News, 2023-10-14T22:46:31+00:00)
+Matt Turner says no ❌
+
+
+
+Watch USA vs. Germany live on TNT or Max 📺 pic.twitter.com/x2HslCk3s2 — B/R Football (@brfootball) October 14, 2023
+
+RB: Joe Scally — 6
+
+Joe Scally was tidy in possession, and while he offered very little in the attack, that was largely by design as they didn't need him on that right side with
+Tim Weah cooking.
+
+Scally defended ok, and wasn't guilty of any big mistakes, which is more than most of the other U.S. defenders can say. It wasn't a standout performance by any
+means, and the whole back line has some soul searching to do, but others were far more culpable than the Borussia Monchengladbach man.
+</item 74>
+
+<item 75>
+From Ten Hag’s future to a leaking roof: Ratcliffe’s Manchester United in-tray (The Guardian, 2023-12-25T10:00:20+00:00)
+skip past newsletter promotion Sign up to Football Daily Free daily newsletter Kick off your evenings with the Guardian's take on the world of football Privacy
+Notice: Newsletters may contain info about charities, online ads, and content funded by outside parties. For more information see our Newsletters may contain
+info about charities, online ads, and content funded by outside parties. For more information see our Privacy Policy . We use Google reCaptcha to protect our
+website and the Google Privacy Policy and Terms of Service apply. after newsletter promotion
+
+Manchester United’s century old stadium needs an upgrade. Photograph: Greig Cowie/Shutterstock
+
+Communications
+
+The Glazers treat a microphone or TV camera as United fans do Liverpool or Manchester City: as a fierce enemy. No family member has given a press conference or
+interview during their 18-year tenure.
+</item 75>
+
+<item 76>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Argentina are playing champagne football. 🇦🇷 pic.twitter.com/y2u5IqqUPy — Roy Nemer (@RoyNemer) October 12, 2023
+
+25th min: Julian Alvarez has a shot saved from a very tight angle by Carlos Coronel, conceding a corner. The chance was threaded in beautifully by his strike
+partner Lautaro Martinez. The set-piece is looped well off target by the head of Cristian Romero.
+
+21st min: The first yellow card of the game is shown to Junior Alonso who comes flying into a challenge with Alexis Mac Allister and catches him high on the
+ankle. A very bad tackle — not quite worthy of a red, but it's not far off either.
+
+16th min: Ouch, Lautaro Martinez tries to latch onto a wonderful vertical flick from Enzo Fernandez up the gut, but he's just a split-second too late, and he
+goes sliding into the ribs of Paraguay goalkeeper Carlos Coronel.
+</item 76>
+
+<item 77>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+Nagelsmann's dismissal at Bayern Munich came as a shock to much of the European football landscape, as the club had performed exceptionally in the Champions
+League and was still very much in the title race, sitting just a point behind Dortmund. Now, with a chance for redemption at the helm of the national team,
+Nagelsmann will see his time begin with a friendly against the United States.
+
+MORE: A look at the 23-man squad for Gregg Berhalter as USMNT play Germany & Ghana
+
+Germany squad, players for USA friendly
+
+Julian Nagelsmann will be very familiar with much of the 26-man German national team squad, as five players hail from his former club Bayern Munich, including
+critical midfield duo Josh Kimmich and Leon Goretzka, who were instrumental in his setup at Allianz Arena.
+</item 77>
+
+<item 78>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+local (7 p.m. ET / 4 p.m. PT)
+
+Location: Estadio Monumental (Buenos Aires, Argentina)
+
+Referee: Raphael Claus (BRA)
+
+Starting lineups:
+
+Argentina (4-3-3, right to left): 23. E. Martinez (GK) — 21. Molina, 13. Romero, 19. Otamendi, 3. Tagliafico — 7. De Paul, 20. Mac Allister, 8. E. Fernandez
+(Paredes, 80') — 9. J. Alvarez (Messi, 53'), 22. L. Martinez, 15. N. Gonzalez.
+
+Paraguay (5-4-1, right to left): 1. C. Coronel (GK) — 14. I. Ramirez (R. Rojas, 46'), 15.
+</item 78>
+
+<item 79>
+Blackhawks vs. Penguins live score, updates, highlights from Connor Bedard's NHL debut (Sporting News, 2023-10-10T22:30:03+00:00)
+— If it feels like Sidney Crosby, Kris Letang and Evgeni Malkin have been in Pittsburgh forever, that's because it had. The trio are set to surpass Yankees
+legend Derek Jeter, Mariano Rivera and Jorge Posada as the longest-tenured trio of teammates in North American sports history.
+
+Ready for the Big Three to take the ice for their 18th season together.
+
+
+
+Sidney Crosby, Evgeni Malkin and Kris Letang are set to surpass the New York Yankees’ Derek Jeter, Mariano Rivera and Jorge Posada as the longest-tenured trio
+of teammates in NHL, MLB, NBA and NFL history. pic.twitter.com/bvcWZOw7kO — Pens Inside Scoop (@PensInsideScoop) October 10, 2023
+
+6:45 p.m. — All the buzz has been about Bedard leading up the matchup, but there's a new Penguin on the roster.
+</item 79>
+
+<item 80>
+Canada vs Jamaica live score, updates, highlights, result from CONCACAF Nations League quarterfinal second leg (Sporting News, 2023-11-21T22:35:30+00:00)
+Antonio was replaced by Salernitana striker Trivante Stewart, but he struggled and was himself withdrawn in the 81st minute. Demarai Gray could step in, but he
+himself is struggling for fitness, and while he remains with the team he was not part of the first leg matchday squad. Another option is Colorado Switchbacks
+forward Romario Williams, who scored 15 goals in 29 USL Championship matches this season.
+
+Other injuries for Jamaica to contend with include Cory Burke and Amari'i Bell, who both miss out on this international window.
+
+Jamaica projected starting lineup (4-3-3): Blake (GK) — Leigh, Bernard, Pinnock, Lembikisa — Latibeaudiere, D. Johnson, Bailey — Reid, Nicholson, R. Williams.
+</item 80>
+
+<item 81>
+USA squad for October friendlies 2023: USMNT roster for friendly matches vs Germany, Ghana (Sporting News, 2023-10-04T22:42:00+00:00)
+Cameron Carter-Vickers Celtic (SCO) 12 0 DEF Sergino Dest PSV Eindhoven (NED) 28 2 DEF DeJuan Jones New England Revolution (USA) 7 0 DEF Kristoffer Lund Palermo
+(ITA) 2 0 DEF Kevin Paredes Wolfsburg (GER) 1 0 DEF Tim Ream Fulham (ENG) 52 1 DEF Chris Richards Crystal Palace (ENG) 12 1 DEF Miles Robinson Atlanta United
+(USA) 27 3 DEF Joe Scally Gladbach (GER) 6 0 MID Johnny Cardoso Internacional (BRA) 7 0 MID Luca de la Torre Celta Vigo (SPA) 17 0 MID Lennard Maloney
+Heidenheim (GER) 0 0 MID Weston McKennie Juventus (ITA) 46 11 MID Yunus Musah AC Milan (ITA) 29 0 MID Gio Reyna Borussia Dortmund (GER) 20 4 MID Malik Tillman
+</item 81>
+
+<item 82>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+This passage of play was not reviewed by VAR. It's unclear exactly why, but an assumption can be made that the VAR official was likely not aware of the incident
+until play had already restarted, at which point he cannot intervene. Those incidents have to be caught before play restarts, which is extremely difficult to do
+as the game continues to flow.
+
+🚨| Romero intentionally kicks Colwill but VAR have not checked it. pic.twitter.com/VCfMjmYEWR — CentreGoals. (@centregoals) November 6, 2023
+
+Raheem Sterling goal disallowed
+
+Chelsea were the next to see a goal chalked off, as Raheem Sterling's 21st minute equaliser was nullified on review. The decision came as Sterling's initial
+effort, blocked by Pedro Porro, deflected straight back onto the arm of the Chelsea forward.
+</item 82>
+
+<item 83>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Argentina completely and utterly dominated the first 45 minutes, but have precious little to show for it.
+
+The hosts pummeled Carlos Coronel's net, and while the Red Bulls goalkeeper has made a few saves, it's mostly been Argentina's wastefulness that has seen them
+fail to follow up their early opener. Rodrigo de Paul hit the post, Alexis Mac Allister probably should have had a penalty, and Nico Gonzalez has missed a few
+great chances from the left.
+
+Overall, Lionel Scaloni will be pleased with his side's performance, but the match hangs in the balance on the scoresheet. In reality, thought, Paraguay need
+vast improvement if they are to snatch a result after being meticulously carved to pieces.
+</item 83>
+
+<item 84>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+Along the back, Nagelsmann has oddly selected five center-backs compared to just two natural full-backs in David Raum and Robin Gosens, both left-sided players,
+possibly indicating a desire to play a three-CB system, although it's hard to know for sure as Nagelsmann preferred a 4-2-3-1 for much of his club managerial
+career.
+
+One of the center-backs present in the squad is Mats Hummels, who has not been called in since 2021 and dropped for the entirety of Hansi Flick's time in
+charge. This came at the expense of Hummels' Borussia Dortmund teammate Nico Schlotterbeck.
+
+First national team call-ups were handed to Kevin Behrens of Union Berlin, Chris Fuhrich of Stuttgart, and Robert Andrich of Bayer Leverkusen.
+</item 84>
+
+<item 85>
+Manchester United face Galatasaray with high hopes but bad memories (The Guardian, 2023-11-27T22:30:42+00:00)
+Garnacho scored with an incredible overhead kick and Mainoo impressed on what was his full Premier League debut, which could earn him a start in Turkey and an
+education in European football.
+
+Around them are players who have succeeded on hostile nights. But if they thought Goodison Park was unwelcoming, they will be in for a surprise on Wednesday and
+will need to find communal coping mechanisms. Fail to do so and they will just have to live and learn for next time.
+</item 85>
+
+<item 86>
+VAR apology list in Premier League: Updated list of PGMOL apologies for referee mistakes in English football (Sporting News, 2023-09-30T21:27:02+00:00)
+The Professional Game Match Officials Limited (PGMOL), the body responsible for referees in English football, has apologised on multiple occasions for mistakes
+made during matches. Here is an updated list of the incidents.
+
+MORE: Kevin De Bruyne injury: How long Man City ace could be out
+
+Every PGMOL apology for referee mistakes
+
+Here are all the apologies carried out by the PGMOL for wrong decisions later accepted to have been wrong.
+
+Tottenham 2-1 Liverpool: September 30, 2023
+
+Liverpool had their hearts broken as Joel Matip's stoppage-time own-goal gave Tottenham a 2-1 victory. The Reds, down to nine men after a red card to Curtis
+Jones and two bookings for Diogo Jota, were looking to hang on at the death, and nearly did so until the cruel finish.
+
+However, the game could have turned out completely different had the VAR booth not committed a "serious human error" earlier in the match.
+</item 86>
+
+<item 87>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+Nicolas Tagliafico started both matches in September, and while Marcos Acuna is back with the team following an injury, the former retains his starting spot.
+Messi's club teammate Facundo Farias was also included on the roster but it'd be surprising if he saw the field.
+
+MORE: Preview the Argentina vs Paraguay match with picks, predictions, and odds
+
+Argentina starting lineup (4-3-3): E. Martinez (GK) — Molina, Romero, Otamendi, Tagliafico — De Paul, Mac Allister, E. Fernandez — J. Alvarez, L. Martinez, N.
+Gonzalez.
+
+New Paraguay head coach Daniel Garnero, making his debut, has rung the changes after falling to Venezuela last time out, making five alterations to that
+starting lineup. The entire midfield is swapped out, while Adam Bareiro takes over at striker, earning his debut international cap in place of Gabriel Avalos.
+</item 87>
+
+<item 88>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+Despite initially appearing to count, the offside flag was raised extremely late, with the assistant referee determining, after a moment to think, that Nicolas
+Jackson was interfering with play from an offside position.
+
+Yet that was just the beginning of the saga. With the goal disallowed, a VAR review began for a penalty as Cristian Romero swung wildly into the shins of Raheem
+Sterling. While he got the ball with his tackle, he followed through with extreme force straight onto both of Sterling's legs, and referee Michael Oliver was
+sent to the monitor.
+
+After a few looks, Oliver produced a straight red card for Romero's tackle and awarded Chelsea a penalty, which Cole Palmer dispatched to even the scoreline at
+1-1.
+
+Watch in USA:
+
+After Chelsea had a goal from Moises Caicedo disallowed due to offside, Cristian Romero was given a red card following a challenge on Enzo Fernandez.
+</item 88>
+
+<item 89>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+From Colin Kaepernick taking a knee during the national anthem to protest against racism, to domestic violence by players, to the Deflategate and Bountygate
+scandals. But there have been bigger crises as well. The Union of Concerned Scientists accused the NFL of trying to intimidate scientists studying the link
+between CTE and pro football. The NFL is already way past other leagues in terms of revenue, and now with the pivotal shift in its strategy, “America’s favorite
+pastime” is on its way to world domination.
+
+ADVERTISEMENT Article continues below this ad
+
+Editorial Disclaimer: The views expressed are those of the author and do not necessarily reflect the views of EssentiallySports.
+
+Watch This Story: Will Patrick Mahomes Eclipse Tom Brady as the NFL Goat? Travis Kelce Responds
+</item 89>
+
+<item 90>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+SGT New Zealand Fri, Oct. 13 11 a.m. NZST
+
+Argentina vs Paraguay starting lineups & team news
+
+Argentina head coach Lionel Scaloni named a bloated 36-man squad for the matches against Paraguay and Peru this month, but Angel Di Maria, Paulo Dybala, and
+Juan Foyth were forced to withdraw due to injury. Lisandro Martinez is also unavailable after having to undergo another foot operation.
+
+Now that Inter Miami's playoff run is officially over, Argentina can feel a little better about deploying Lionel Messi at full 90-minute use despite his recent
+fitness issues, knowing his club season is nearly over and he'll have months of rest upcoming. Messi missed the last match against Bolivia, and missed four
+Inter Miami games after, but he returned for a half-hour of action in their final fixture before the international break. However, he doesn't start, but is
+reportedly fit enough to come off the bench for most or all of the second half.
+</item 90>
+
+<item 91>
+The Soccer Star on the Verge of Breaking an 89-Year-Old Record (The New York Times, 2023-11-17T21:47:19+00:00)
+Kane and Ronaldo, two national-team record scorers still operating in 2023 (Burak Akbulut/Anadolu Agency/Getty Images)
+
+Considering how many hat-tricks Haaland scores for Manchester City, it’s not beyond the realms of possibility that he could score six goals during this
+international break to move level with Juve, particularly given Norway’s first fixture is a home friendly against the Faroe Islands today (Thursday), before a
+European Championship qualifier against Scotland in Glasgow on Sunday. That said, the Faroes’ defence is less leaky than you might expect — only twice in their
+last 22 outings have they conceded more than three times in a game.
+
+Advertisement
+
+The wider question is whether we will ever see Haaland at a major tournament.
+
+Despite the presence of him and Arsenal captain Martin Odegaard, Norway have failed to qualify from their Euro 2024 qualification group directly, with Spain and
+Scotland already securing the top two spots.
+</item 91>
+
+<item 92>
+Watch Argentina vs Paraguay live stream, TV channel, lineups, betting odds for World Cup qualifying match (Sporting News, 2023-10-12T21:11:00+00:00)
+Forward Miguel Almiron is Paraguay's most prominent goalscoring threat and is in good form, with three goals in his past five matches for Newcastle United.
+
+Paraguay have questions at goalkeeper, as mainstay Antony Silva has been phased out, leaving three inexperienced internationals currently on the roster. New
+York Red Bulls starter Carlos Coronel earned his first two caps in the September matches and he remains in net here. Lionel Messi's Inter Miami teammate Diego
+Gomez was named to the Paraguay roster but was forced to withdraw due to injury.
+
+Paraguay starting lineup (5-4-1): C. Coronel (GK) — I. Ramirez, G. Gomez, Balbuena, Alonso, Espinoza — R Sanchez, Campuzano, Almiron, Bareiro — Sosa.
+
+Argentina vs Paraguay betting odds & lines
+
+In Canada, bet CONMEBOL at Sports Interaction: See the latest odds for Argentina vs Paraguay here
+</item 92>
+
+<item 93>
+Breaking down each VAR intervention from wild first half of Tottenham vs Chelsea officiated by Michael Oliver (Sporting News, 2023-11-06T22:06:19+00:00)
+The Sporting News breaks down each memorable moment in what was an action-packed opening 45 minutes.
+
+MORE: Recap the Premier League match with commentary, highlights, & more from Tottenham vs Chelsea
+
+First half of Chelsea vs Tottenham features multiple VAR reviews
+
+The game got off to a flying start as Dejan Kulusevski opened the scoring for Spurs, benefitting from a large deflection off Chelsea defender Levi Colwill which
+left Roberto Sanchez with no chance to make a save.
+
+With both sides flying forward with electric attacking intent, the match got out of hand quickly.
+
+Heung-Min Son goal disallowed for offside
+
+The flood of VAR interventions came on a relatively innocuous decision where Heung-Min Son seemingly put Tottenham 2-0 up in the 14th minute, but on review the
+play appeared extremely tight. Ultimately, Son did look as if he was just an inch offside, and the goal was ruled out.
+
+📸 - The official VAR image, offside! No 2-0!
+</item 93>
+
+<item 94>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+Adam Bareiro takes over at striker for Gabriel Avalos, earning his debut international cap.
+
+Julián Álvarez 🕷️ y Lautaro Martínez 🐂 serán TITULARES en @Argentina 🇦🇷🌟
+
+
+
+¿Qué tal? 👀
+
+
+
+📸 IG/juliaanalvarez pic.twitter.com/c79hhyyhSp — 𝐓𝐡𝐞 𝐒𝐩𝐨𝐫𝐭𝐢𝐧𝐠 𝐍𝐞𝐰𝐬 Argentina 🇦🇷 (@sportingnewsar) October 12, 2023
+
+1 hour 15 mins to kick: James Rodriguez scored a golazo in the early match tonight to put Colombia in front of Uruguay 1-0 before halftime. It's his first-ever
+goal against Uruguay, giving him a goal against six of the nine CONMEBOL opponents.
+</item 94>
+
+<item 95>
+McRae reveals hidden message he carried under collar of his grand final shirt (The Sydney Morning Herald, 2023-09-30T22:45:39+00:00)
+The Magpies coach said on Saturday night he was yet to return to St Vincent’s Hospital where his wife Gabrielle gave birth to their daughter Maggie at 7.45am on
+grand final morning. Gabrielle went to the hospital with her sister at 10pm on Friday night after going into labour, before ringing McRae at 6am to join them at
+the hospital to be with them when the baby was born. Collingwood president Jeff Browne praised McRae and the players for their character and driving the change
+the club undertook when the new coach was appointed. He said the win was “the ultimate satisfaction” for him, and he was rapt to be there after a health scare
+put him in hospital briefly on the eve of the finals.
+
+“[It was] a bit of pit stop, a little bit of late pre-season training and got myself back into it,” Browne said.
+</item 95>
+
+<item 96>
+European roundup: Bellingham helps Real Madrid go top while Bayern draw (The Guardian, 2023-09-30T21:17:47+00:00)
+Martínez then got his second goal after 77 minutes when he confidently finished a pass from Nicolò Barella with a first-time strike.
+
+Martínez completed his hat-trick from the penalty spot with five minutes remaining after Matteo Lovato pulled Thuram’s shirt. He concluded the evening by
+converting Carlos Augusto’s cross from 10 yards out.
+
+Inter lead Serie A with 18 points, the same as their neighbours, Milan, who had briefly topped the table earlier in the day after beating Lazio 2-0 thanks to
+second-half goals from Christian Pulisic and Noah Okafor. Rafael Leão played a vital role in both goals, with the 24-year-old Portugal international providing
+two assists in a menacing display.
+
+Quick Guide How do I sign up for sport breaking news alerts? Show Download the Guardian app from the iOS App Store on iPhone or the Google Play store on Android
+by searching for 'The Guardian'.
+
+If you already have the Guardian app, make sure you’re on the most recent version.
+</item 96>
+
+<item 97>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+14 MID Pascal Gross Brighton (ENG) 2 0 MID Ilkay Gundogan Barcelona (SPA) 69 17 MID Jonas Hoffman Bayer Leverkusen 22 4 MID Joshua Kimmich Bayern Munich 80 6
+MID Jamal Musiala Bayern Munich 23 1 MID Leroy Sane Bayern Munich 55 13 MID Florian Wirtz Bayer Leverkusen 10 0 FWD Kevin Behrens Union Berlin 0 0 FWD Niklas
+Fullkrug Borussia Dortmund 9 7 FWD Kai Havertz Arsenal (ENG) 39 13 FWD Thomas Muller Bayern Munich 123 45
+
+Julian Nagelsmann tactics, style of play
+
+Through his time at Bayern Munich, Julian Nagelsmann preferred a 4-2-3-1 formation with Joshua Kimmich and Leon Goretzka holding down the lynchpin central
+midfield spots.
+</item 97>
+
+<item 98>
+Argentina vs Paraguay live score, result, updates, highlights from CONMEBOL World Cup qualifying (Sporting News, 2023-10-12T23:22:00+00:00)
+¡El Comandante! Ante la ausencia de Di María y de confirmarse la presencia de Messi en el banco de los suplentes, Nicolás Otamendi sería el capitán de
+#Argentina 🇦🇷 en el duelo de esta noche contra #Paraguay 🇵🇾. pic.twitter.com/eMwOg5agu2 — ESPN Fútbol Argentina (@ESPNFutbolArg) October 12, 2023
+
+1 hour 45 mins to kick: There was a rumor that Lionel Messi could be headed to Barcelona on loan to cover the gap left by Inter Miami's failure to qualify for
+the MLS playoffs, but the rumor never made much sense, and it's been squashed on numerous fronts.
+
+Inter Miami coach Gerardo Martino made light of the rumor in his post-match press conference over the weekend after defeat to FC Cincinnati left them
+mathematically eliminated, saying that he'd only go to Spain "for fun."
+</item 98>
+
+<item 99>
+What USMNT can expect from Julian Nagelsmann, Germany in first match for new manager (Sporting News, 2023-10-06T20:56:33+00:00)
+There's a choice for Nagelsmann to make up front, as Niklas Fullkrug has been prolific in his short national team stint, but Thomas Muller is an experienced
+veteran who is still performing at a high level.
+
+Injuries for Nagelsmann to work around include Serge Gnabry who is out with a broken arm, and Timo Werner who has been touch and go at RB Leipzig with a back
+problem.
+
+Germany predicted starting lineup vs. USA (4-2-3-1): ter Stegen (GK) — Kimmich, Rudiger, Sule, Raum — Gundogan, Goretzka — Sane, Musiala, Brandt — Fullkrug.
+
+Germany second-choice lineup (4-2-3-1): Leno (GK) — Gross, Tah, Thiaw, Gosens — Andrich, Kimmich — Hoffman, Wirtz, Fuhrich — Muller.
+
+German national team squad for USA, Mexico friendlies
+
+Pos Player Club Caps Goals GK
+</item 99>
+
+<item 100>
+Inter Miami vs FC Cincinnati live score, result, updates, highlights with Lionel Messi's MLS playoffs on line (Sporting News, 2023-10-07T21:30:00+00:00)
+Important midfielder Gregore, who has missed most of the season with a foot injury, is back in training and should return to the field at some point, although
+when is not known. Defender Tomas Aviles is back from suspension and starts in the three center-back system.
+
+Inter Miami starting lineup (5-3-2): Callender (GK) — Yedlin, Aviles, Kryvtsov, Miller, Allen — Ruiz, Busquets, Cremaschi — Farias, Martinez.
+
+Inter Miami subs (12): Dos Santos (GK), Sailor, Taylor, Mota, Arroyo, Ulloa, Robinson, Messi, Stefanelli.
+
+Defender Alvas Powell is suspended for the match after being sent off against the New York Red Bulls last time out, with Santiago Arias stepping in at
+right-back.
+</item 100>
+=== END ITEM id=ce5006dc42a45567 ===
+
+=== ITEM id=f497e413b9992980 ===
+Gold sentences and facts:
+Sentence 0: They’d all have significant value if president of baseball operations Jerry Dipoto decided to move one for a bat.
+  Fact 0.0: Jerry Dipoto is president of baseball operations.
+  Fact 0.1: Those referred to as 'they' would all have significant value if Jerry Dipoto decided to move one for a bat.
+Sentence 1: Aaron Judge, Justin Verlander, Trea Turner and Xander Bogaerts all came away with new contracts.
+  Fact 1.0: Aaron Judge came away with a new contract.
+  Fact 1.1: Justin Verlander came away with a new contract.
+  Fact 1.2: Trea Turner came away with a new contract.
+  Fact 1.3: Xander Bogaerts came away with a new contract.
+
+Retrieved items:
+<item 1>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google CEO Sundar Pichai testified Monday in the U.S. government’s antitrust trial against the company. The executive defended Google’s business tactics,
+including its deal with Apple and other partners to make Google the default search engine.
+
+The lawsuit stems from a 2020 antitrust claim over Google’s dominance in the online search market. The claim is separate from one filed in January by the
+Department of Justice, along with eight states including New York, California and Colorado, that aims to “halt Google’s anticompetitive scheme, unwind Google’s
+monopolistic grip on the market and restore competition to digital advertising.”
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products.
+
+Google argues that it’s just doing business. Everybody wants Google as the default engine because it’s the best. That doesn’t make its actions illegal, the
+company says.
+</item 1>
+
+<item 2>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+He said that the competition between Google and Apple is “as intense as it gets,” reports Bloomberg.
+
+Rosenberg explained how Google gets manufacturers to sign a mobile app distribution agreement (MADA) that requires Android smartphone makers (like Samsung or
+Oppo) to pre-load a bundle of 11 Google apps on the device, including Search, Chrome and Play. They don’t have to be the default choices, he said.
+
+Google also has revenue share agreements (RSAs) with smartphone makers and wireless carriers (like Verizon) that require them to set Google search and Chrome
+web browser as defaults. Rosenberg defended the move and said it was because Google apps [like Search] are “best in class.” The RSAs also motivate other
+companies to make or sell more Android devices, he said.
+</item 2>
+
+<item 3>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 3>
+
+<item 4>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+We’ve already established that Google and Apple have a long and mutually beneficial relationship, even while competing, so it’s not surprising to see three
+Apple search-related queries bringing in the big bucks — not least since September 22, 2017 was the official release date of the iPhone 8.
+
+Meanwhile, queries like “car insurance,” “cheap flights” and “credit report” are perennial favorites and they speak to how much Google dominates vertical search
+— that is, search in very specific market categories. As for LifeLock… the big Equifax data breach of 2017 was a hot topic in September 2017 and LifeLock was
+making a big push to win business with people who wanted to buy identity theft protection.
+
+Revenue-shares to pre-install Google apps on Androids
+
+Jamie Rosenberg, a Google employee who focuses on Android and Google Play, testified in Google’s defense on November 8. He said that the competition between
+Google and Apple is “as intense as it gets,” reports Bloomberg.
+</item 4>
+
+<item 5>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+SGE, it argues, offers web searchers a way to seek information in a conversational mode, but ultimately keeps users in Google’s “walled garden” as it
+“plagiarizes” their content. Publishers also can’t block SGE because it uses the same web crawler as Google’s general search service, GoogleBot.
+
+Plus, it says Google’s Bard AI was trained on a dataset that included “news, magazine and digital publications,” citing both a 2023 report from the News Media
+Alliance and a Washington Post article about AI training data for reference. (The Post, which worked with researchers at the Allen Institute for AI, had found
+that News and Media sites were the third largest category of AI training data.)
+
+The case points to other concerns, too, like changing AdSense rates and evidence of improper spoliation of evidence on Google’s part, by its destruction of chat
+messages — an issue raised in the recent Epic Games lawsuit against Google over app store antitrust issues, which Epic won.
+</item 5>
+
+<item 6>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 6>
+
+<item 7>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 7>
+
+<item 8>
+News publisher files class action antitrust suit against Google, citing AI’s harms to their bottom line (TechCrunch, 2023-12-15T17:56:02+00:00)
+“When a user searches for information on a topic, Google displays a ‘Knowledge Panel’ to the right of the search results. This panel contains a summary of
+content drawn from the Knowledge Graph database,” the complaint states. “Google compiled this massive database by extracting information from Publishers’
+websites — what Google calls ‘materials shared across the web’ —and from ‘open source and licensed databases,'” it says.
+
+By 2020, the Knowledge Graph had grown to 500 billion facts about 5 billion entities. But much of the “collective intelligence” that Google tapped into was
+content “misappropriated from Publishers,” the complaint alleges.
+
+Other Google technologies, like “Featured Snippets” where Google algorithmically extracts answers from webpages, were also cited as shifting traffic away from
+publishers’ websites.
+
+More importantly, perhaps, is the suit’s tackling of how AI will impact publishers’ businesses. The problem was recently detailed in a report on Thursday by The
+Wall Street Journal, which led with a shocking statistic.
+</item 8>
+
+<item 9>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+Google pays big bucks to be everywhere so that it can take in all the data and be the best search engine across different companies’ devices, said Pichai,
+according to The Verge.
+
+Google understood the value of defaults very early on. U.S. Justice Department lawyer Meagan Bellshaw showed Pichai a 2007 email from a Google product strategy
+meeting containing data showing that when people changed their browser homepage to Google, they did 15% more Google searches. When they switched away, their
+Google searches dropped 27%.
+
+“Nitin argues that focusing on homepage market share is one of the most effective things we can do to make gains in search market share,” read an email that
+summarized the meeting and was sent to Pichai, as well as other Google leaders, according to The Verge.
+
+The amount that Google spent on homepage market share has been a fixing point in the trial.
+</item 9>
+
+<item 10>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+Before we go into some of these tidbits…
+
+Why the Google vs. U.S. antitrust case matters
+
+The government has argued that Google uses its platforms and deals with partners to block out any competition in search or advertising, thus hindering
+competitors from accessing the data they’d need to improve their products. If Judge Amit Mehta rules against Google, the search giant may have to change its
+behavior and share its APIs with third-party developers. It may also be banned from making anticompetitive and exclusive deals with smartphone and computer
+manufacturers and wireless carriers. Google might end up having to turn over all or most of the data it has collected to other search engines so they can
+improve their products and attract more users. The DOJ has said that Google gets 16 times more data than Bing does everyday. Enforcers want to show that
+antitrust law remains relevant and that even though Google is basically the God of the internet, it’s still no match for the U.S. law.
+</item 10>
+=== END ITEM id=f497e413b9992980 ===
+
+=== ITEM id=c3fcd0f3d51d0a06 ===
+Gold sentences and facts:
+Sentence 0: The Justice Department is focused on the deals Google makes — with Apple but also with Samsung and Mozilla and many others — to ensure it is the default search engine on practically every platform.
+  Fact 0.0: The Justice Department is focused on the deals Google makes.
+  Fact 0.1: The deals Google makes include deals with Apple, Samsung, Mozilla, and many others.
+  Fact 0.2: The Justice Department is focused on these deals to ensure Google is the default search engine on practically every platform.
+Sentence 1: In our last roundup, we learned how Google spent $26.3 billion in 2021 making itself the default search engine across platforms and how Google tried to have Chrome preinstalled on iPhones.
+  Fact 1.0: The last roundup reported how Google spent $26.3 billion in 2021 making Google the default search engine across platforms.
+  Fact 1.1: The last roundup reported how Google tried to have Chrome preinstalled on iPhones.
+
+Retrieved items:
+
+=== END ITEM id=c3fcd0f3d51d0a06 ===
+
+=== ITEM id=8dc406d113048897 ===
+Gold sentences and facts:
+Sentence 0: 9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down.
+  Fact 0.0: At 9:47 p.m., the Bears answer right back and sack Dobbs.
+  Fact 0.1: Sweat and Brisker are in there to take Dobbs down.
+Sentence 1: The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030), while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game).
+  Fact 1.0: The Ravens defense has allowed the fewest points per game this season, 16.1.
+  Fact 1.1: The Ravens defense has allowed the second-fewest total yards this season, 4,030.
+  Fact 1.2: San Francisco's defense ranks second in points, at 16.7.
+  Fact 1.3: San Francisco's defense ranks 10th in yardage, at 310 yards per game.
+
+Retrieved items:
+<item 1>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+In a rather damning note issued today covering the delay in the publication of HSF’s results, Brown wrote: “This is an early blow to the credibility of the new
+[Hipgnosis Songs Fund] Board, and casts further doubt over the credibility of the independent valuer, Citrin Cooperman.”
+
+Brown added that he was “surprised” to see that a second valuation expert had not been drafted in to value the HSF portfolio for the latest interim results,
+especially as Kroll was appointed to consider the “reasonableness” of Citrin Cooperman’s assumptions for HSF’s previous set of results (to end of March 2023).
+
+Added Brown: “We think the easiest solution now for the [HSF] Board is to apply an additional discount rate to the [Citrin Cooperman] valuation to reflect
+current market uncertainty, on the basis that it is probably too late to employ another valuer.”
+</item 1>
+
+<item 2>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+A Final thought…
+
+As mentioned in the opening sentence of this article, there is plenty of drama surrounding HSF right now – from the ‘discontinuation vote’ we saw at the company
+in October, through to a recent lawsuit launched against Hipgnosis Songs Fund by a former business partner of Merck Mercuriadis.
+
+Yet, amongst all of the noise, what will likely most interest HSF’s investors (including the likes of Investec Wealth & Investment, Aviva Investors, and
+BlackRock) is the ongoing underlying commercial performance of the firm’s copyrights.
+
+How are Hipgnosis Songs Fund’s assets performing vs. the market? How is the company’s ‘premium-only’ acquisition strategy holding up against its promise of
+growth “uncorrelated” to other industries? And what does all of this suggest about the ongoing growth potential of the HSF portfolio vs. the multiples that
+Merck Mercuriadis paid to acquire it?
+</item 2>
+
+<item 3>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+“[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try and pin the
+blame on [Hipgnosis Songs Management].” Christopher Brown, JP Morgan
+
+Concluded Brown: “[It] is up to the [Hipgnosis Songs Fund] Board to satisfy itself that the independent valuer, whom it hires, is up to the job, rather than try
+and pin the blame on [Hipgnosis Songs Management].
+
+“Our view is that a breakdown in the relationship between Board and manager would not be optimal for maximising shareholder value.”
+
+Brown further noted that JP Morgan would “not be surprised to see Citrin Cooperman resign, having been very publicly undermined by the [HSF] Board today”.
+
+JP Morgan retained its ‘overweight’ rating against HSF’s share price “in spite of yet another [HSF] own goal”.
+</item 3>
+
+<item 4>
+Investment options for high networth investors (Business Line, 2023-10-28T14:42:28+00:00)
+Portfolio Management Services (PMS)
+
+PMS guidelines in India date back to 1993, but this investment avenue has grown in popularity with HNIs recently. The growing financialisation of savings, the
+formalisation of the economy, and the growing prosperity of tier 2 and 3 cities have resulted in an increase in AUM (excluding EPFO/PF), which stood at ₹5.28
+lakh crore as of July 2023. Because the minimum investment is ₹50 lakh, this option is also only available to HNIs. Both PMS and mutual funds provide expert
+guidance in navigating volatile markets and seizing investment opportunities that help create wealth. Because mutual funds cater to retail investors, their
+guidelines are relatively stringent, and compliance is rigorous.
+
+Regarding PMS, the investment guidelines are somewhat more flexible, allowing portfolio managers to outperform mutual funds. Another feature that appeals to
+HNIs is that the beneficial ownership of securities is that of the investors, as opposed to mutual funds, where the ownership is that of the fund.
+</item 4>
+
+<item 5>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Worth remembering: The HSF board has known about Citrin Cooperman’s latest valuation (as of September 30) for at least the past eight days.
+
+We know this because, as mentioned, on December 11, HSF announced that the $23.1 million price of an agreed HSF ‘non-core’ asset sale represented a 14.2%
+discount vs. Citrin Cooperman’s latest valuation of the portfolio (i.e. the HSF board had seen this latest valuation).
+
+Yet it took until today (December 19) for HSF to alert its investors to its dissatisfaction with this valuation.
+
+WHAT does JP Morgan make of it all?
+
+One of the closest watchers of Hipgnosis Songs Fund in recent years has been JP Morgan and its analyst Christopher Brown.
+</item 5>
+
+<item 6>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+WHAT’S HAPPENED?
+
+MBW Explains is a series of analytical features in which we explore the context behind major music industry talking points – and suggest what might happen next.
+MBW Explains is supported by JKBX , a technology platform that offers consumers access to music royalties as an asset class.
+
+The drama at Hipgnosis Songs Fund isn’t letting up for the Holidays, it seems.
+
+This morning (December 19), the company’s board – now led by Chairman, Rob Naylor – issued a statement announcing that HSF would no longer, as previously
+expected, be issuing its latest financial results today.
+
+Instead, the results (covering the six months to end of September 2023) are now expected to be published sometime before the close of December 31.
+
+The reason for the delay?
+</item 6>
+
+<item 7>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+Not to mention this line in various HSF company reports to date: “The [HSF] Board is ultimately and solely responsible for overseeing the valuation of the
+Company’s investments in music catalogues and has appointed [Citrin Cooperman] to perform this specialist work.”
+
+WHAT’S really going on?
+
+It’s a fair bet that Hipgnosis Songs Fund’s board – which last week appointed activist investor Christopher Mills as a non-exec Director – is making something
+of a ‘hidden’ statement to shareholders with today’s announcement.
+
+It may be a coded attempt by HSF’s board to gnash teeth towards HSM/Mercuriadis’ ‘call option’ – which, as MBW has pointed out before, leaves the exec with the
+exclusive power to sweep in and acquire HSF’s portfolio under several different circumstances.
+</item 7>
+
+<item 8>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+In response, Hipgnosis Song Management issued its own statement today: “Hipgnosis Song Management has fulfilled its duties to [HSF] with respect to both the
+independent valuation and preparation of the interim results in a timely and efficient manner.
+
+“Notwithstanding the Board’s decision to delay publication of the interim financial statements, [we] will continue to work in a constructive manner to support
+the interests of the Company and its shareholders.”
+
+The oddest thing about all of this? Citrin Cooperman’s valuation of Hipgnosis Songs Fund is, according to HSF’s own company documentation, appointed and
+overseen… by the HSF board.
+
+See this line, in every annual and interim report from HSF so far (bolding MBW’s own): “Portfolio Independent Valuer… Citrin Cooperman Advisors LLC, formerly
+Massarsky Consulting, Inc., [is] appointed by the Board to independently value the Company’s Catalogues within the Portfolio.”
+</item 8>
+
+<item 9>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+That price, according to HSF’s board, represented a 14.2% discount on Citrin Cooperman’s valuation of this portfolio as of September 30 (something we’ll come
+back to).
+
+As part of its announcement this morning, the HSF board took something of a swipe at its investment adviser, Merck Mercuriadis‘ Hipgnosis Song Management.
+
+After seeing Citrin Cooperman’s latest valuation and believing it to be too high, said HSF, it then “sought advice from Hipgnosis Song Management… which is
+majority owned by funds managed and/or advised by Blackstone, on their opinion on the independent valuer’s valuation.”
+
+HSF’s board added: “Hipgnosis Song Management… eventually provided an opinion, which was heavily caveated, such that the Board has concerns as to the valuation
+of the Company’s assets in its interim results.”
+</item 9>
+
+<item 10>
+Hipgnosis Songs Fund’s board is concerned over Citrin Cooperman’s latest valuation of the company. What’s it going to do about it? (Music Business Worldwide,
+2023-12-19T23:02:01+00:00)
+the multiples that Merck Mercuriadis paid to acquire it?
+
+Such questions will only be answered when Hipgnosis Songs Fund’s board elects to release the company’s six-monthly financial results to end of September 30.
+
+The most important KPI within those results, in MBW’s view: the company’s Pro-Forma Revenue, and how it compares, like-for-like, vs. the previous year’s
+equivalent period.
+
+In the meantime, back in the ‘real world’ of the music biz, HSF is actually enjoying quite a fanciable Q4.
+
+The company is benefitting from its cuts on hit albums including Taylor Swift’s 1989 (Taylor’s Version), via its acquired Jack Antonoff catalog, as well as
+Swift’s Lover (via its acquired Joel Little catalog).
+</item 10>
+=== END ITEM id=8dc406d113048897 ===
+
+=== ITEM id=11d831574f43c39a ===
+Gold sentences and facts:
+Sentence 0: The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison, who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF.
+  Fact 0.0: The second week of the trial's standout testimony came from Caroline Ellison.
+  Fact 0.1: Caroline Ellison is Alameda Research's former CEO.
+  Fact 0.2: Caroline Ellison claimed she took $14 billion from customers.
+  Fact 0.3: Caroline Ellison claimed the $14 billion was used to repay debts to lenders.
+  Fact 0.4: Caroline Ellison claimed she used customers as a line of credit.
+  Fact 0.5: Caroline Ellison claimed she did this under the instruction of SBF.
+Sentence 1: Using Caroline Ellison, his on-again off-again girlfriend and the CEO of Alameda, as a front, Bankman-Fried had “secret access” to customer money—both cash and crypto—the government claimed.
+  Fact 1.0: The government claimed that Bankman-Fried used Caroline Ellison as a front.
+  Fact 1.1: Caroline Ellison is Bankman-Fried's on-again off-again girlfriend.
+  Fact 1.2: Caroline Ellison is the CEO of Alameda.
+  Fact 1.3: The government claimed that Bankman-Fried had 'secret access' to customer money, both cash and crypto.
+Sentence 2: The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head.
+  Fact 2.0: The prosecution portrayed Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence.
+  Fact 2.1: The defense countered that the FTX founder acted in good faith.
+  Fact 2.2: The defense countered that the FTX founder never meant to commit fraud or steal.
+  Fact 2.3: The defense countered that the FTX founder basically got in over his head.
+
+Retrieved items:
+
+=== END ITEM id=11d831574f43c39a ===

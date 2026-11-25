@@ -1,0 +1,35 @@
+[
+  {
+    "id": "c34dfb53599680aa",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium"}
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 40, "quote": "The post came after Swift was seen enthusiastically cheering him on in the box seats at Arrowhead Stadium, fuelling speculation that she and the athlete are dating."}
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {"item": 63, "quote": "Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together."}
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {"item": 63, "quote": "Swifties were immediately on high alert, with some capturing Swift and Kelce leaving the stadium together."}
+        ]
+      }
+    ]
+  }
+]

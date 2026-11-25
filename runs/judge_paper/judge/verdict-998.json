@@ -1,0 +1,82 @@
+[
+  {
+    "id": "056b9066ffead1eb",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 46,
+            "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 46,
+            "quote": "While its usual hours of operation are from 6am to 9pm, stores’ opening and closing times on the holiday vary based on location."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 11,
+            "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 11,
+            "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."
+          }
+        ]
+      },
+      {
+        "fact": "1.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 11,
+            "quote": "Every year, Thanksgiving is celebrated on the fourth Thursday of the month, with the holiday falling on 23 November this year."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "560de40ade7b281d",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "0.1",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.0",
+        "status": "missing",
+        "evidence": []
+      },
+      {
+        "fact": "1.1",
+        "status": "missing",
+        "evidence": []
+      }
+    ]
+  }
+]

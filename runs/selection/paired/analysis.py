@@ -66,7 +66,7 @@ for name in ("B4_100", "WRONG10", "CLOSED"):
         REG[name] = json.load(open(p))[name]
 p = Path("runs/selection/paired/next_registry.json")
 if p.exists():
-    REG.update(json.load(p))
+    REG.update(json.load(open(p)))
 REG = {k: v for k, v in REG.items() if not k.endswith("_infnull")}
 
 run_rep = {str(loc(d)): (m, rep) for m, reps in REG.items() for rep, ds in reps.items() for d in ds}
@@ -365,7 +365,7 @@ ITYPES = ["inference_query", "null_query"]
 IREG = {"rag": final["rag"], "graphrag": final["graphrag"]}
 p = Path("runs/selection/paired/infnull_registry.json")
 if p.exists():
-    IREG.update(json.load(p))
+    IREG.update(json.load(open(p)))
 irows = {}
 for m, reps in IREG.items():
     for rep in "123":

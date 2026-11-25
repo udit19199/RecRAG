@@ -1,0 +1,32 @@
+[
+  {"id": "9872bf48f299386f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 79, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 79, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 79, "quote": "9:47 p.m. — The Bears answer right back and sack Dobbs, with Sweat and Brisker in there to take him down."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 21, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 21, "quote": "The Ravens defense has allowed the fewest points per game this season (16.1) and second-fewest total yards (4,030)"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 21, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 21, "quote": "while San Francisco's unit ranks second in points (16.7) and 10th in yardage (310 per game)."}]}
+  ]},
+  {"id": "e3df4723017dea7a", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "722c46e22f6107a4", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "0.5", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []}
+  ]}
+]

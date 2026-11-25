@@ -1,0 +1,20 @@
+[
+  {"id": "0ffcc71e3d445489", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 80, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 80, "quote": "But sportsbooks are also gathering this information, and they begin to tighten the NBA Rookie of the Year lines in response."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 27, "quote": "That allows sportsbooks to earn the profit built into the odds and lines without worrying about which side wins."}]}
+  ]},
+  {"id": "ee43c6b05d0d2f45", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

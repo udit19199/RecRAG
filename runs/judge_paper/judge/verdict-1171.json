@@ -1,0 +1,23 @@
+[
+{"id": "56b6a05b8758c908", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 4, "quote": "Epic will also suggest that Google hid items from discovery"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 4, "quote": "Epic will also suggest that Google hid items from discovery by allowing execs and employees to have “off the record” chats"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 4, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 4, "quote": "Google will counter this as well, saying it has provided the court with thousands of chat logs and millions of documents."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 16, "quote": "She admits that she may have misinterpreted the evidence"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 16, "quote": "maintains that Google manipulates Search to maximise ad revenue."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 24, "quote": "The case, filed by Arkansas-based publisher Helena World Chronicle"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 24, "quote": "argues that Google “siphons off” news publishers’ content"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 24, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 24, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 24, "quote": "argues that Google “siphons off” news publishers’ content, their readers and ad revenue through anticompetitive means."}]}
+]},
+{"id": "b2af3ca30e861dd0", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]}
+]

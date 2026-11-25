@@ -1,0 +1,1455 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 1 items.
+
+=== ITEM id=db2da0a070757df1 ===
+Gold sentences and facts:
+Sentence 0: He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not.
+  Fact 0.0: He also believes that after everything on social media becomes perfectly curated for us, our brains will start to crave things that are not.
+  Fact 0.1: He believes that social media becomes perfectly curated for us.
+Sentence 1: What we have done since then, all the success and failures [matters in our preparation].
+  Fact 1.0: What we have done since then, including all the success and failures, matters in our preparation.
+
+Retrieved items:
+<item 1>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+While the playing habits of a Twitch streamer don’t represent the average player by any means, content creators certainly shape public opinion about games.
+
+“Negative sentiment is very profitable,” says the AAA game developer, who noted that social media platforms are built to highlight popular — and sometimes
+caustic — content. This dynamic sets up an inherent tension between game developers and hardcore players like Twitch streamers, who are not the main audience of
+most games but are often some of the most visible players.
+
+“I don’t at all think that streamers are embodying some typical player behaviors, like ‘Brandon,’” the developer continues, posing a name for an imaginary
+everyday consumer. “There’s definitely a model of consumers nowadays who probably parrot those sentiments. They did not arrive at those conclusions themselves.”
+
+“There is inherently [a] vicious and negative cycle for everyone involved, for how live service interacts with Twitch as a medium”
+
+The misinformation will vary, but Twitch both shapes that discourse while also becoming the very metric that people use to make sense of a game’s situation.
+</item 1>
+
+<item 2>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Cutts, as an individual, seemed to be doing his best within an expanding corporate behemoth to remain approachable. “One thing I learned early on was that even
+when someone was shouting at you, there’s a kernel of something you needed to hear in the other person and listen to and respect and integrate and incorporate,”
+he told me. Most SEOs told me they appreciated his efforts. When Google released the 2011 Panda update that devastated a generation of SEO businesses, Cutts
+openly recognized the impossible task of achieving the kind of epistemological neutrality that Google’s founders had initially promised, telling Wired at the
+time, “[T]he only way to be neutral is either to randomize the links or to do it alphabetically.”
+
+Still, some blamed him personally for “killing” companies that had relied on the previous iteration of the algorithm. During his time at Google, Cutts regularly
+received death threats and hate mail.
+</item 2>
+
+<item 3>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+During his time at Google, Cutts regularly received death threats and hate mail. When SEOs would send, say, a fruit plate or a brownie cake addressed to him at
+Google’s offices, he told me, “We’d take it down to the kitchen with a note warning: possibly poisoned.”
+
+After Cutts left, Google replaced him with a handful of people, none of whom could quite fill his shoes: “Those personalities sometimes were standoffish,”
+Forrester told me. “Some of them were superior. Some of them were a bit too wallflower.”
+
+One of the people Google brought in was Danny Sullivan, a former journalist who started Search Engine Land, the industry publication where Schwartz works, back
+in the 2000s.
+</item 3>
+
+<item 4>
+Hitting the Books: We are the frogs in the boiling pot, it's time we started governing like it. (Engadget, 2023-10-01T14:30:34+00:00)
+A number of works outline the contours and dynamics of the current media ecology and what it does — Siva Vaidhyanathan’s Antisocial Media, Safiya U. Noble’s
+Algorithms of Oppression, Geert Lovink’s Sad by Design, Shoshana Zuboff’s Surveillance Capitalism, Richard Seymour’s The Twittering Machine, Tim Hwang’s
+Subprime Attention Crisis, Tressie McMillan Cottom’s writing on how to understand the social relations of Internet technologies through racial capitalism, and
+many more. At the same time, there’s reasonable counter-discussion about how many of our problems can really be laid at the feet of social media. The research
+on the impacts of social media on political dysfunction, mental health, and society writ large does not paint a neat portrait.
+</item 4>
+
+<item 5>
+A tale of two research institutes (TechCrunch, 2023-10-01T13:51:56+00:00)
+The Boston Dynamics AI Institute is still in its infancy, and therefore doesn’t have much in the way of public facing research to show just yet. It is, however,
+doing a lot of hiring. This week it announced that MIT’s Kate Darling will lead research around “ethics and societal impact of robotics and AI.” From the
+institute:
+
+Darling’s team will explore immediate as well as long term questions on the implementation and use of robotics, impact on the workplace, infrastructure and
+other topics. The team will perform studies and experiments designed to generate data needed for others to make informed ethics and policy decisions, and will
+also develop a series of talks and workshops at the intersection of ethics, law, economics and robotics that will offer a platform for broad discussion.
+
+“I’ve heard Gill say that making a car is taking small bits of metal and banging them up, welding them together and attaching them,” Raibert says. “That’s a
+little on the primitive side. Now we have software, robotics, AI and all that stuff, and the car companies need to embrace that.
+</item 5>
+
+<item 6>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+PARIS – The All Blacks have downplayed Rieko Ioane’s gestures towards Ireland fans and retiring great Johnny Sexton, as the three-time world champions said they
+have learned to “respect Argentina” ahead of their semi-final on Saturday (6am AEDT).
+
+It comes as Michael Cheika embraced the underdog status and said he was hoping Los Pumas “inspired” Argentina “not by our results but by our ambition”, as the
+former Wallabies coach readies for another clash against the All Blacks and a second semi-final.
+
+Facebook Twitter Whatsapp Reddit Email Share
+
+Ioane copped a spray from Sexton following their 28-24 nail-biting win over Ireland.
+
+It came after the lethal back cupped his ear at Irish supporters at the Stade de France after the final whistle, as well as putting his finger to his lips in a
+‘shush gesture’.
+</item 6>
+
+<item 7>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+What does this have to do with the First Amendment?
+
+The case revolves around First Amendment rights — but, counterintuitively, it’s the rights of social media companies that are in question, not the rights of
+their users.
+
+“The question here is: Do social media companies have a First Amendment protected right to exercise what you might call editorial judgment?”
+
+“These cases are about the First Amendment and how the First Amendment applies to social media companies. And then more specifically, what the First Amendment
+has to say about content moderation, which is obviously a subset, although a really big and important subset of what social media companies do,” Barrett said.
+
+“The question here is: Do social media companies have a First Amendment protected right to exercise what you might call editorial judgment — or what you also
+might call content moderation — in sorting out what expression does and does not appear on the platforms that they own? So it’s just not clear right now what
+precisely the First Amendment says about that question.”
+
+Are the Texas and Florida laws identical?
+</item 7>
+
+<item 8>
+‘Right people in right roles’: QRU breaks silence on RA’s reform hopes, backs review into Wallabies’ RWC flop (The Roar | Sports Writers Blog,
+2023-10-10T23:06:29+00:00)
+We need to maximize the development of the players. At the end of the day, that’s the key to success and alignment of your resources, for a small country.
+
+“Because Australia, if you look at the history of rugby, when we were amateur, we were probably ahead of the game because we had the influence of rugby league.
+We had the influence of AFL and our players were more professional than the rest of the world.”
+
+He added: “I know what’s going on and we need to get a better system of developing players. We need to develop better players and we need to develop a larger
+batch of better players and that only comes through changing the whole system.”
+
+While all five Australian Super Rugby sides fundamentally are on board with regards to moving to a centralised high-performance program, The Roar added that
+some states, including the ACT Brumbies as well as the QRU, don’t want to give up their commercial assets.
+</item 8>
+
+<item 9>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Not Sonos fast there: Audio company Sonos scored a big $32.5 million win against Google a while back. Now it transpires that the company’s patents were deemed
+unenforceable and invalid. Whoops. A federal judge threw out the $32.5 million win this week.
+
+When it clicks, it really clicks: We took a deep look at Pixel 8, and our team discovered that it delivers solid performance and design upgrades. The camera got
+a particularly enthusiastic shout-out, with Darrell declaring that Google’s Pixel 8 Pro camera is the new mobile photography champ, and Brian waxing lyrical
+about the phone’s picture-snapper in “The camera’s still the thing.”
+
+Who needs computers anyway?: It seems like all our mobile devices may be starting to cannibalize sales of personal computers — Ron reports that PC shipments
+decline slows in Q3 2023 and that Apple’s sales plunge over 23%.
+
+Let’s get together
+
+Reddit’s API-powered chaos continues, but it appears that things are starting to resolve a little.
+</item 9>
+
+<item 10>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+But as for social media as a whole, of which Reddit would presumably play a part, Ohanian said it brings out the “worst parts of our nature in many ways.”
+What’s more, he expressed worries about the desire for people to be first and win on whatever leaderboard a platform features, which then leads to a situation
+where misinformation is able to spread.
+
+Humans evolved trusting the faces & voices we knew around the campfire. The idea of believing something bc of experts/institutions you've never met is actually
+new to our species. I visited @UVADemocracy + chatted with @karaswisher + @dkroy about what's next for social media. pic.twitter.com/PMBXi7T3vv — Alexis Ohanian
+🇦🇲 (@alexisohanian) October 31, 2023
+
+“Now, there’s so much pressure to be first, and UGC — user-generated content — will always win. It won’t always be right, though.
+</item 10>
+
+<item 11>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+There’s this picture from more than a decade ago that still goes viral on the web every once in a while. You’ve probably seen it: it was created by the venture
+capitalist Andrew Parker, and it compares a few dozen startups with subsections of Craigslist. Back then, Craigslist was all things to all people online, and a
+generation of startups figured they could do part of the job a lot better.
+
+Some of those companies failed — sometimes because of Craigslist! — but some also became gigantically successful. Airbnb worked because it was more searchable,
+reliable, and trustworthy than a random Craigslist listing; StubHub sold you secondhand tickets without the 50 percent chance those tickets were fake; Etsy
+offered a much more fun shopping and discovery experience than a bunch of text listings and crappy photos.
+
+For a decade, startups tried to unbundle Craigslist. Now they can do the same for social networks.
+</item 11>
+
+<item 12>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+CEO Daniel Ek echoed that sentiment. “We’re constantly finding new ways to bring more efficiencies out of the business… We’ve seen some improvements, but you
+should expect us to continue to look for more improvements going forward because that’s just our modus operandi.”
+
+While Ek and Vogel really hammered that “efficiency” theme (according to my transcript, they said the word more than 30 times over the course of the 50-minute
+call), what was left unsaid about podcasting spoke louder. In the past, they would excitedly tout how many millions of podcasts were on the platform, the latest
+new celebrity show, and the area’s explosive growth. But as investors have run out of patience for the time and money such ambitions required, the company’s
+leadership changed its tune.
+
+Rather than emphasizing, say, its new revenue sharing deal with Trevor Noah or the reliability of The Ringer, Ek pointed to Spotify’s new AI-driven translation
+product.
+</item 12>
+
+<item 13>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+What’s at stake in the Supreme Court’s landmark social media case The court will wade into First Amendment questions with major implications for platforms
+
+The Supreme Court is poised to decide whether a pair of state laws are allowed to reshape the ability of social media companies to control what does — and
+doesn’t — appear on their platforms.
+
+Last week, the Supreme Court decided that it would hear the pair of cases, which revolve around Republicans crafting state-specific laws that order platforms to
+keep their hands off of some social media posts. Since the early days of the Trump administration, Republicans have accused social media companies of
+deliberately suppressing conservative viewpoints.
+
+While research has not supported these claims, researchers have demonstrated that conservative social media users are disproportionately exposed to political
+misinformation, a phenomenon that could explain anecdotal claims of ideologically lopsided enforcement on social platforms.
+
+Whether animated by those perceived differences or the political perks of accusing social platforms of anti-conservative bias, conservative lawmakers in Florida
+and Texas passed laws to restrict how those companies are allowed to moderate content.
+</item 13>
+
+<item 14>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 14>
+
+<item 15>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Google is now making it the default sign-in method for all users.
+
+2 sec, let me text you some cash: When questioned about Mastercard’s prospects in emerging markets such as India, Mastercard’s CFO Sachin Mehra praised UPI for
+helping with digitization but voiced reservations about its commercial sustainability, saying it is an “incredibly painful experience” for ecosystem
+participants.
+
+Bravely browsing — or searching — for a new job . . . : Brave Software, the maker of Brave Browser and Search, confirmed that it has laid off 9% of its
+workforce across departments.
+</item 15>
+
+<item 16>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“The amount of media and content that we consume, political and cultural, where people get their information … It’s getting more and more intertwined,” Henry
+said. “To be effective ideologically, when it comes to campaigns and these wins that we want, we have to understand how these ecosystems work, and be
+strategically using them or else we risk being left behind.”
+
+Engaging with voters online requires more than just working with popular creators. In Ramaswamy’s case, an endorsement from Jake Paul only drove animosity from
+TikTok viewers. While his older brother, Logan Paul, has made the occasional social commentary on his podcast, the younger Paul has rarely engaged with politics
+or social issues. Jake Paul is generally disliked online for the running list of allegations against him, including sexual assault accusations.
+
+The Paul brothers have a reputation of promoting anyone and anything for a paycheck, and when Jake Paul posted a political endorsement out of the blue, viewers
+immediately questioned how much Ramaswamy paid him.
+</item 16>
+
+<item 17>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+The hardcore football fans are pretty much done with the NFL harping about Travis Kelce and Taylor Swift. Reality TV star Rachel Lindsay, a longtime NFL fan,
+recently slammed the “obnoxious” coverage, highlighting the “exhausting” uptick in Swifties obsessing over football. But that’s just one example of how fans are
+finding this fixation a little too disrespectful towards the sport.
+
+America’s Favorite Video Today
+
+From the league’s humble beginnings in 1920 to the $18 billion juggernaut that it is today, the ride has been rocky with more than just a few small bumps along
+the road. But with the ambitious target that NFL Commissioner, Roger Goodell, has set for 2027, is there a new strategy in the 104-year-old league’s master plan
+to dominate the world sporting scene?
+
+Why the ‘Traylor’ saga will be the key to Roger Goodell’s $27 billion target?
+</item 17>
+
+<item 18>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+When I finally manage to jump through the flaming rings necessary to be allowed to speak on the phone with Sullivan, albeit with a communications chaperone also
+on the line, I find him angry and defensive. He’s annoyed that anyone would think his era at Google has been less transparent than Cutts’ was: “We have reams of
+help documents!” he told me. “We have more people assigned to work with SEOs than we did when Matt worked here!”
+
+Sullivan is mad that the public and the media don’t really understand what he considers to be basic precepts about how search works, leading him to adopt a
+rather scolding tone online. He’s frustrated that people want to know every last detail about Google’s algorithm because even “if we listed all one thousand of
+the ranking signals” and how much each was worth, he said, that wouldn’t actually help SEOs do their jobs better, anyway.
+
+And most of all, Sullivan is pissed that people think Google results have gone downhill. Because they haven’t, he insisted.
+</item 18>
+
+<item 19>
+Microsoft Activision: What does deal mean for gamers? (BBC News - Technology, 2023-10-13T23:01:24+00:00)
+Meanwhile Sophie, who was named Ubisoft's content creator of the year, told the BBC she "just wants the games to win".
+
+"We want everyone to be able to play video games that they want to play, we want them to be accessible for everyone," she said.
+
+"Obviously, we're going to have our opinions, but if the end result is good games, that's fine with us."
+
+This Instagram post cannot be displayed in your browser. Please enable Javascript or try a different browser. View original content on Instagram The BBC is not
+responsible for the content of external sites. Skip instagram post by cadaea Allow Instagram content? This article contains content provided by Instagram. We
+ask for your permission before anything is loaded, as they may be using cookies and other technologies. You may want to read Meta’s Instagram cookie policy,
+external and privacy policy, external before accepting. To view this content choose ‘accept and continue’. Accept and continue The BBC is not responsible for
+the content of external sites.
+</item 19>
+
+<item 20>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Despite the problems with social media and the urgency, in terms of its impact on society, Ohanian believes there’s still some hope. He noted, for example, that
+the founders his fund 776 invests in are much smarter and more aware of the issues than he ever was at their age. Perhaps the next platforms will still be
+addictive, but in a way that doesn’t “further disrupt democracy,” he mused.
+
+He also believes that after everything on social media becomes so perfectly curated for us, our brains will start to crave things that are not. “I think we’ll
+see a rebirth of live gatherings and in-person experiences…the bright side of this is that I hope it then gets us back in touch with our humanity, and the
+things that no amount of AI can replace.”
+
+“I want to be an optimist about it,” Ohanian added. “And I think there’s still a path forward but we’re fighting against very, very strong human things.
+</item 20>
+
+<item 21>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint. You can’t say that one game means we can do it as there are a lot of games where we haven’t.
+
+“That moment has to be just a part of it. What we have done since then, all the success and failures [matters in our preparation]. The other team are heavy
+favourites, everyone is expecting a New Zealand and South Africa final. We just have to focus on what is required.”
+
+Cheika has maintained that his Los Pumas side was too tight earlier in the tournament but has begun to free themselves up since qualifying for the knockout
+stages – and rewarding their fans by doing so.
+
+On inspiring the country?
+
+“It’s not easy,” he said.
+
+“We want to inspire not just by our results but by our ambition, by our ability to get back up and overcome obstacles.
+</item 21>
+
+<item 22>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Too often, design is minimized to only the act of making user interfaces pretty. Product design is much deeper and broader in scope than visual design assets.
+For example, product design can give direction and focus to a business strategy, user experience strategy, or technology explorations.
+
+The process establishes a guide rail throughout any innovation initiative. The core of product design is decision-making with an astute instinct for making the
+best decisions at the most opportune time. Product design helps reduce risk and leads to more effective innovation through quality decision-making.
+
+A progressive role for technologists
+
+Technologists play a strategic role in product innovation and should bring a metaphysical perspective in addition to being punctilious. Our job is to
+communicate the essence of a technology and think strategically about the application of technologies to problem spaces. We are most constructive when we
+translate the technicals of “how to make X do Y” to “these are the types of products and services realizable with technology X.”
+</item 22>
+
+<item 23>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+And if we can solve it, it will do so much good. It really, really will because we will find out we have more in common than not,” he said.
+</item 23>
+
+<item 24>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+Pressure? The South African laughs at the notion of what pressure is compared to the inequality and challenges the Rainbow Nation continues to experience.
+
+Advertisement
+
+The question is: how can New Zealand’s All Blacks withstand and overcome the hitherto unshakable wave of momentum and spirit the Springboks play with under
+Erasmus in this weekend’s World Cup final?
+
+It would seem that, as the Springboks play for their country, the All Blacks are playing for themselves as much as anyone – and the generation of players and
+leaders that will call time on their international careers at week’s end.
+
+The backlash and toxicity that followed their historic home series loss to Ireland was a humbling and public reminder of the expectation of being an All Black.
+
+It’s why Saturday’s World Cup final is personal for the men wearing black.
+
+All Blacks social media managers were forced to delete a thousand comments an hour following the humbling series loss in Wellington.
+</item 24>
+
+<item 25>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 25>
+
+<item 26>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Instead of forcing a technology onto a product, the design process flows to the technologies. In this way, the technology becomes a natural solution.
+
+As experts on a technology or technology stack, we can communicate abstract insights or contribute in more conceptual contexts. Technologists add value to the
+product design process by sharing their expertise on a technology’s characteristics. Designers use this information to shape and exploit technologies in the
+visual and interaction design process. In this way, technologists inform new interaction models, interface metaphors, and product channels. This involvement
+gives confidence and conviction to the promises of design.
+
+Think of digital technologies as a material like paint, stone, or wood. For artisans to create with materials, they must understand the material’s ontology and
+phenomenology. An artist must know the differences between oil, acrylic, or watercolor paints because each material has different properties that affect how and
+what can be created. Technologists must “find the grain” of a technology.
+</item 26>
+
+<item 27>
+8 authors and their 8 gift book picks for this holiday season (TechCrunch, 2023-12-01T16:05:15+00:00)
+To the extent that past is prologue, I found it very compelling for framing my expectations for what’s to come with the newest and most shocking forms of mass
+data collection and use.
+
+Jerry Neumann
+
+“Founder vs Investor,” a recently published non-fiction book, crosses two perspectives on venture-backed startups; entrepreneur Elizabeth Zalman is the founder,
+and veteran VC Jerry Neumann is the investor. Together, they share insights on how both sides can best work with one another.
+
+Book recommendation: “How Data Happened: A History from the Age of Reason to the Age of Algorithms,” by Chris Wiggins and Matthew L. Jones
+
+Ten years ago data was “the new oil”. Now it’s something more… read the tech news and you have to wonder if anything else even matters. As a humanist, I hope
+so, but I don’t think you can reason about that unless you know the history. “How Data Happened” is that history. Wiggins and Jones cover the idea of data from
+the advent of statistics through today.
+</item 27>
+
+<item 28>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+“They’re in the same ballpark, the sentiment is the same,” Barrett said. “Republican lawmakers in each state believe that — and said explicitly in the course of
+debating and passing these laws — that ‘Silicon Valley oligarchs’… are ideological liberals, and they are censoring people in our states who are conservative,
+and we are hereby ordering them to stop doing that.”
+
+How could the Supreme Court decision affect social media companies?
+
+If the court finds that social media companies don’t have a First Amendment right to curate the kinds of content that they allow, social platforms could look
+very different, at least in states that are trying to limit their moderation powers. After years of slow progress on misinformation — and worrisome backsliding
+on platforms like Elon Musk’s X — the Supreme Court’s decision could upend that process, sowing chaos online in the process.
+</item 28>
+
+<item 29>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+In 2009, Sullivan was described as “the closest approximation to an umpire in the search world,” so when he published “A deep look at Google’s biggest-ever
+search quality crisis” in 2017 and then took a job as Google’s public liaison for Search only a few months later, it felt to some SEOs as though a
+congressperson working on gun safety legislation had quit to become an NRA lobbyist.
+
+“There is a thread across the industry of people who believe that Google just made Danny an offer he couldn’t say no to, and it was designed essentially to take
+his voice out of the conversation,” Forrester told me. “I don’t believe that’s the case,” he went on, but compared to Cutts, “I think that Danny specifically
+stays out of a lot of public conversations because he is in those private conversations with businesses.”
+
+Was all that really Google’s fault? Or the SEOs? Or was this about something deeper and more human: the will to exploit something so much we destroy it.
+</item 29>
+
+<item 30>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+Pure fediverse, baby.
+
+I’m convinced we’ll be better off with a hundred different apps for Snapchat or Instagram or X instead of just one
+
+I’m convinced we’ll be better off with a hundred different apps for Snapchat or Instagram or X instead of just one, a dozen companies competing to build the
+best moderation tools, and an app store filled with different ways for me to follow and be followed by other people on the internet. It doesn’t make sense that
+we have a dozen usernames, a dozen profiles, a dozen sets of fans and friends. All that stuff should belong to me, and I should be able to access it and
+interact with it anywhere and everywhere.
+
+The infrastructure underlying all of this is typically ActivityPub, a decade-old protocol overseen by the World Wide Web Consortium (also known as the group
+more or less in charge of how the internet works). There are other similar protocols as well, like Bluesky’s AT Protocol and Nostr and Farcaster.
+</item 30>
+
+<item 31>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+“I think the competitive landscape evolved faster than we had thought,” he explains. “I didn’t think that quite as many people — established organizations and
+newcomers — would try to do the same thing that we were doing and in very similar ways.”
+
+Today, the market for Twitter alternatives is a crowded one, to say the least. There are numerous services for consumers to try, including the open source-based
+platform Mastodon, a soon-to-be decentralized system from Bluesky, plus smaller startups like Spill, Spoutible and Post, as well as a new app from Meta called
+Instagram Threads.
+
+Then, of course, there’s the X factor to consider. The default platform for short posts retains some pull, despite — or perhaps because of — new owner Elon
+Musk’s antics. Though the company may not have yet succeeded from a business and financial perspective, it’s been hard for others to duplicate its function as a
+breaking news platform and place for spirited debates.
+</item 31>
+
+<item 32>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+Forget the hand-wavy protocol stuff for a second — one of the best things about embracing ActivityPub is that it sticks a crowbar into a single Voltron-ic
+product like Facebook or Twitter or Snapchat and pries it apart into its component pieces, each one ripe for innovation and new ideas.
+
+We’re still in the very early days of the fediverse, and it’s going to be messy for a while. It might feel like you’re seeing the same posts too many times, and
+like you see some posts that obviously weren’t meant to be seen in the app or feed you’re using. Some particularly thirsty influencers are going to go hard on
+cross-posting tools that threaten to clutter up all your feeds everywhere and become totally unavoidable. This is not a problem with the protocols; it’s an
+opportunity for better products. There’s plenty of money to be made in the fediverse, and plenty of space for new products to take off.
+</item 32>
+
+<item 33>
+Dropout’s dropping CollegeHumor on its 5th anniversary — here’s why and what the future holds (Polygon, 2023-09-26T17:35:00+00:00)
+Like, Which of these sports am I most excited to play? Lately, TikTok has been prioritizing videos that are longer than a minute, because they’re trying to
+encourage watch time, while YouTube Shorts still doesn’t allow you to put up anything that’s longer than a minute. So, platforms compete with each other and
+themselves, and they yield these kind of Frankenstein products. And even in the midst of all of that I am regularly inspired by a lot of the stuff I see on
+there. I love hanging out on these platforms. I think some of these creators are getting really, really creative.
+
+But I think what the experience of doing Dropout has taught us — and what I would tell others — is for you to make this sustainable you need to have something
+to offer that’s off of those platforms. There’s lots of ways to do that. One of them is to create a subscription offering like on Patreon and try to drive
+people to it.
+</item 33>
+
+<item 34>
+Flipboard becomes a federated app with support for ActivityPub (TechCrunch, 2023-12-18T16:00:49+00:00)
+He sees Flipboard as a part of that opportunity. “There needs to be a way to do discovery and search and have it be beautiful and simple and easy to use. That
+is what we’re focused on,” McCue added.
+</item 34>
+
+<item 35>
+8 authors and their 8 gift book picks for this holiday season (TechCrunch, 2023-12-01T16:05:15+00:00)
+It was the first time anyone building in modern tech put together a practical, straightforward, all-encompassing guide for conceiving, building, shipping, and
+marketing web apps. Jason and David’s words are efficient when they need to be, detailed when it matters, and packed full of nuance that’s both unique and
+endearing. The book feels like it started as an internal series of posts or a handbook to help scale 37signals beyond the core team (from what I remember,
+Basecamp launched in 2004 and had quickly found success). Whatever the format, what lends “Getting Real” authenticity is the fact that 37signals used these
+exact techniques to ship Basecamp and find its customer base. To this day, I’ve never read anything like it. It’s one of those books that you can finish in an
+afternoon but stays with you for far longer, morphing into a reference book for the times when you need some extra perspective.
+</item 35>
+
+<item 36>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Are the Texas and Florida laws identical?
+
+The two laws — HB 20 in Texas and SB 7072 in Florida — are very similar in their origins and intentions, but diverge slightly in how they seek to restrict
+social media platforms.
+
+In both instances, a provision of the state law instructed social media companies to stop removing certain kinds of content. In Texas, the law told social media
+companies that they could no longer remove or demonetize content based on the “viewpoint represented in the user’s expression.” In Florida, the law would stop
+social media companies from banning political candidates or removing or restricting their content. The laws have a few other provisions, but the idea is that
+conservative politicians in those states want to regulate how tech companies interact with political content.
+
+“They’re in the same ballpark, the sentiment is the same,” Barrett said.
+</item 36>
+
+<item 37>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Anyone who thought the internet was already saturated with SEO-oriented content should buckle up.
+
+“All the assholes that are out there paying shitty link-building companies to build shitty articles,” he said, “now they can go and use the free version of
+GPT.” Soon, he said, Google results would be even worse, dominated entirely by AI-generated crap designed to please the algorithms, produced and published at
+volumes far beyond anything humans could create, far beyond anything we’d ever seen before.
+
+“They’re not gonna be able to stop the onslaught of it,” he said. Then he laughed and laughed, thinking about how puny and irrelevant Google seemed in
+comparison to the next generation of automated SEO. “You can’t stop it!”
+
+Once I was safe at home, my alligator attack bluster having deflated into an irrepressible affection for clever scoundrels, mixed with fear about the future
+promised by said scoundrels, I decided to seek a broader range of the people who do SEO for a living.
+</item 37>
+
+<item 38>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+There are already a few platforms built on ActivityPub and embracing the ideas of the fediverse. Apps like Mammoth and Ivory are showing the potential for
+different user experiences on top of the same data and infrastructure. But so far we’re mostly in the “popular app, but federated” phase of this transition.
+(Which is definitely better than “popular app, but blockchain” from a couple of years ago… but not by much.)
+
+So far we’re mostly in the “popular app, but federated” phase of this transition
+
+Mastodon deliberately looks and feels like Twitter. (So do Firefish and Pleroma and GoToSocial and others. The fediverse is super into replacing Twitter.)
+Pixelfed is Instagram through and through. Lemmy’s features are virtually all ripped straight from Reddit. Almost everything in the fediverse is a one-to-one
+competitor to an existing platform: PeerTube to YouTube; Friendica to Facebook; BookWyrm to Goodreads; on and on it goes.
+</item 38>
+
+<item 39>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Ray reassured me that I was not crazy. Google results today do feel different from how they felt just five or six years ago for two major reasons. The first was
+Google’s response to the disinformation panic around the 2016 election, which involved questioning the notion that the most reliable information could be chosen
+by a form of popularity, meaning how many links a site received from other sites. As a result, the algorithm seemed to change its approach to links, especially
+when it came to news and sites offering legal, financial, or health advice, and instead paid more attention to what Google came to call E-E-A-T: experience,
+expertise, authoritativeness, and trustworthiness.
+
+“E-E-A-T has had a pretty big impact on what types of results you see,” Ray told me. She’s done extensive (and fascinating) research around how certain sites
+have fared under these new guidelines: Urban Dictionary, down! Mayo Clinic, up! Some people consider EEAT part of what’s making results better than ever.
+</item 39>
+
+<item 40>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+The All Blacks are 18-point favourites for the opening semi-final.
+
+It comes despite Argentina knocking over the All Blacks last year in Christchurch, as well as a maiden defeat in 2020 in Sydney.
+
+“The past sets us up beautifully for both teams,” Foster said.
+
+“We do know each other but we don’t know each other terms of a Rugby World Cup, so at this stage in the tournament it’s new territory for us and as we’ve seen
+World Cups are very different.”
+
+“We have learnt to greatly respect Argentina. They have a rich history of overachieving at the World Cup and have done a fantastic job to get here at the same
+level we are, so it is going to be a heck of a game.”
+
+Advertisement
+
+Foster said the All Blacks, who suffered a shock semi-final loss to Eddie Jones’ England in 2019, never consider themselves favourites.
+
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+</item 40>
+
+<item 41>
+‘Is this worth it?’: The difficult questions the Shameless founders have had to ask each other (The Age, 2023-10-07T18:00:00+00:00)
+How worried are they about getting it wrong? Turns out, not very. Andrews and McDonald know what good advice looks like, and how to give it. “I think the best
+advice is often not a statement – it’s a question,” says Andrews. “It’s listening to what someone’s dilemma is, then posing a question that helps them
+re-frame.” As two women who are constantly being asked for advice, what are the questions they ask themselves? “What’s the next thing?” says Andrews, without
+hesitation. “I’m constantly wondering, what’s the next show that isn’t out there.”
+
+Advertisement
+</item 41>
+
+<item 42>
+When it comes to generative AI in the enterprise, CIOs are taking it slow (TechCrunch, 2023-12-15T18:45:09+00:00)
+A July Morgan Stanley survey of large company CIOs found that many were proceeding cautiously, with 56% of respondents reporting that generative AI was having
+an impact on their investment priorities, but only 4% had actually launched significant projects. In fact, most were still in the evaluation or proof of concept
+phase. This may be a fast moving area, but it fits with what we’re hearing in conversations with CIOs as well.
+
+That said, much like the consumerization of IT a decade ago, CIOs are under pressure to deliver the kind of experiences people are seeing when they play with
+ChatGPT online, says Jon Turow, a partner at Madrona Ventures.
+
+“I think it’s undeniable that enterprise employees, who are the internal customers of the CIO or CTO, have all tried ChatGPT and they know what amazing looks
+like. They know where it’s early, and they know where it’s inspiring, and for lack of a better word, where they see greatness.
+</item 42>
+
+<item 43>
+The story behind anguished Wallabies star's photo (Wide World Of Sports, 2023-10-07T22:10:40+00:00)
+NEW PODCAST! Michael Atkinson and Sam Worthington preview a thrilling final round of pool games to decide the quarter-finalists at the Rugby World Cup in
+France﻿
+
+He wanted to regain form at club level ﻿with Urayasu D-Rocks but his hand remained up for Test selection.
+
+"I chose to leave Australian shores and understand the ruling around that and what it holds," he said.
+
+"I've got to perform for my club first and if you get the call up, you get the call up. If you don't, I'll take my three months break and enjoy that."
+
+Kerevi is an unabashed Jones fan.
+
+Eddie Jones with fans during a Wallabies training session at Stade Roger Baudras. (Getty)
+
+"He's up at 4am working hard. We catch him in the gym, he's working hard and I swear he doesn't even sleep.
+</item 43>
+
+<item 44>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+I think even swifter than we realize.” The war in the Middle East may even be the tipping point, he theorized, as it’s now “abundantly clear” that we need
+something better to figure out the world than the platforms we have today.
+
+The founder, as you may recall, notably resigned from Reddit’s board in 2020 over differences of opinion on moderation and wanting to crack down on communities
+about violence and hate. It was a moment where he seemed to be reckoning with what his platform had wrought. At the time, he asked for his board seat to be
+replaced by a Black board member. The company agreed, appointing its first Black board member with Y Combinator partner Michael Seibel.
+
+Reddit also later banned several toxic communities, including r/donaldtrup following violence at the U.S. Capitol, and Ohanian says that the site has “gotten
+demonstrably better,” since, as well as better as a business.
+</item 44>
+
+<item 45>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Although many of us may have rosy memories of how magical and cool Google seemed in the early days, most SEOs consider the years between 2003 and 2011 to be the
+boom times, when you could still get a fake corporate website listed above the real corporate website, and you could mess with the search results for a major
+political figure such that something sexual or racist would come up first.
+
+Google is harder to game now — it’s true. But the sheer volume of SEO bait being produced is so massive and so complex that Google is overwhelmed. “It’s
+exponentially worse,” Ray said. “People can mass auto-generate content with AI and other tools,” she went on, and “in many cases, Google’s algorithms take a
+minute to catch onto it.”
+
+The future that Babin had cackled about at the alligator party was already here. We humans and our pedestrian questions were getting caught up in a war of
+robots fighting robots, of Google’s algorithms trying to find and stop the AI-enabled sites programmed by SEOs from infecting our internet experience.
+</item 45>
+
+<item 46>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+The founders don’t regret their experience building Pebble, even though it didn’t turn out as they hoped, they said.
+
+Says Cselle, “One thing that I learned is that there’s absolutely an audience that wants to see a new kind of Twitter-like platform built and will ask for the
+features that Twitter has.” He suspects the team might stay together to work on something new after Pebble wraps, taking the learnings from Pebble with them.
+That includes better communicating to users what great content should look like on a platform, and how they can win.
+
+“We’re at an inflection point in social media,” says Oh. “We had one hypothesis with T2 and Pebble. It obviously didn’t pan out the way that we wanted it to.
+But I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives,” she adds.
+</item 46>
+
+<item 47>
+Eddie Jones says he needs to ‘give myself an uppercut’ but ‘100 percent’ committed to coaching Wallabies (The Roar | Sports Writers Blog,
+2023-10-16T22:37:26+00:00)
+I’ve got the experience of being in difficult situations before,” Jones said.
+
+“This is not an unusual situation. You’ve got a team that was struggling for a period of time, you’ve got underneath it a system that’s not supporting it and at
+some stage you bottom out.
+
+“This is the opportunity now to change the team- as we’ve started with picking younger players with bright futures – and then we’ve got to look at the
+development system underneath as well.
+
+“It’s not a simple equation that the Wallabies are bad. Let’s be serious about this. The Wallabies are not where they need to be but underneath that we need to
+fix the system to go forward. And if we can do that now we’ve got a rosy future.”
+
+Sports opinion delivered daily
+</item 47>
+
+<item 48>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+“We were really seized by people saying they wanted something that felt safer, where they could speak openly without dogpiling,” says Oh. “And so we were
+confident that was an important thing to hit. Are there other things that are equally important and a great user experience? Yes.”
+
+“Twitter is you have real people…saying real things,” Oh continues. “At the expense of using a word that’s overused, ‘authentic.’ And our theory was always if
+you can create a space where people really feel like they can let down their hair, then you would get that authentic content. We didn’t quite get there,” she
+admits.
+
+Cselle agrees, noting that, perhaps, Pebble should have opened up enough space for disagreement to happen, while still drawing a hard line on the most
+disagreeable parts of running a Twitter-like platform.
+
+“I think we could have maybe moved a little bit further towards that,” he says. “There’s a lot of nice things that are said on Pebble, but maybe not enough
+breaking news.
+</item 48>
+
+<item 49>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+And I think also then access to content that spurs those conversations and seeds those conversations. And it all being kind of a delightful user experience —
+but we’re at the early days of that,” she adds.
+
+Another avenue of thought is to create spaces within the fediverse where consumers can have civil and direct conversations within smaller communities, instead
+of shouting into the void, so to speak. As to what that will look like, is less clear. Will it be different instances or just new ways of forming communities,
+by building out features or experiences? O’Hara couldn’t say, only noting that experimentation will be needed.
+
+Importantly, trust and safety will also be key to Mozilla’s instance. Its content policies indicate strict measures around hate speech, impersonation,
+self-harm, harassment, misinformation, violent and sexualized content, and more, in addition to illegal content, like CSAM (child sexual abuse material) and
+promotion of illegal goods.
+
+But there’s a chance that playing it too safe can make a product less compelling as a Twitter/X alternative.
+</item 49>
+
+<item 50>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+For most technical leads and software developers, this is a mode inversion from our traditional tactical and direct interaction with technology. The context
+switch from daily build-and-operate is challenging but is paramount to developing successful and innovative products. We are uniquely positioned to generate
+strategic insights translated from dense technical minutiae that drive innovative business cases and product experiences.
+
+A technology innovation must solve a business problem, such as improving operational efficiency, growing existing revenue streams, or generating new ones. The
+problem space may be customer-facing (e.g., how can we deliver a new feature?) or internal-facing (e.g., how can we make a process more efficient?). The problem
+is the paramount concern. The specific technologies or innovations used to solve the problem are often less critical. We cannot lose perspective of the business
+needs; otherwise, the activities become too academic or a paid hobby.
+
+An ordinary domestic analogy is hanging a picture. The hole size, bracket, or tools used to hang the picture are immaterial as long as the picture is on the
+wall and straight.
+</item 50>
+
+<item 51>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+As it learns from the publishers and other content creators what they want and need, it then intends to use that understanding to build features and drive
+efforts that can help them reach their audiences.
+
+So far, what Mozilla has learned is that publishers today feel somewhat resigned and pessimistic about social networks. Twitter isn’t driving much traffic and,
+even though Instagram Threads appears interesting, Meta specifically said it wasn’t going to prioritize news on that platform. What Mozilla wants to accomplish,
+then, is to help reconfigure the Mastodon onboarding process so that when someone — including a publisher or creator — joins its instance (or the fediverse in
+general) they’re able to build their audience with more ease.
+
+“The baseline is just better onboarding, better connecting with accounts and communities,” explains O’Hara. “You might be interested in spaces where you can
+have the kinds of conversations that you want to be able to have; trust and safety practices that make you feel safe in order to participate. And I think also
+then access to content that spurs those conversations and seeds those conversations.
+</item 51>
+
+<item 52>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 52>
+
+<item 53>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+You could use a WhatsApp-style messaging app that only cares about messages sent directly to someone’s inbox.
+
+You could try to do all those things, or you could try to do something nobody’s ever been able to do before. You could build a news reader that only includes
+posts with links to news sites and automatically loads those links in a nice reading interface. You could build a content moderation tool that any fediverse app
+could use to filter and manage content on their platform. You could build the perfect algorithm that only up-ranks shitposts and good jokes, and license that
+algorithm to any app that wants a “Epic Posts Only” mode. You could build an app that’s just an endless feed of great stuff for NBA fans. You could build one
+that’s just for crypto true believers. You could build one that lets you swipe from one to the other depending on your mood.
+
+There are already a few platforms built on ActivityPub and embracing the ideas of the fediverse.
+</item 53>
+
+<item 54>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+He speculated that the company didn’t want the public to think too hard about how search works because that awareness “encourages regulators and makes people
+realize, ‘Oh, there’s a lot of money here.’”
+
+There has always been advertising and polemics from cranks, scammers, and liars. But now we see this stuff surfacing alongside truth, and we can’t tell the
+difference. We move through our lives with a greater sense of distrust and fear and insecurity. At the end of the day, it’s Google’s world, and the SEOs are
+only living in it.
+
+And as much as I might hate the way the SEOs who don’t follow Google’s rules have altered my online experience, the reality is that most people running a
+company will break whatever rules they are able to get away with breaking.
+</item 54>
+
+<item 55>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Over the phone, Cutts came off as humble and thoughtful, acknowledging the nuances and challenges of the search engine business, while Sullivan sounded like an
+impatient corporate stooge, trying to gaslight me into believing the sky was red.
+
+But here’s the part where I started to feel the way I’ve felt so often in recent years, like I was losing my grip on reality: Sullivan was not the only person
+who tried to tell me that search results have improved significantly. Out of the dozen-plus SEOs that I spoke with at length, nearly every single one insisted
+that search results are way better than they used to be. And except for Sullivan, these were not people with an incentive to praise Google. If anything, these
+were folks who lamented how much harder it had become for them to take advantage of Google. Today, they told me, search results are just objectively more
+accurate. More useful. More difficult to manipulate.
+
+This was not what I had been noticing, and this was certainly not what I had been hearing from friends and journalists and friends who are journalists.
+</item 55>
+
+<item 56>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+It won’t always be right, though. But it becomes the epicenter of where the conversation is. And then I’ll think what percentage of our population really wants
+to earnestly take the breath and say, let me stop doomscrolling, and let me just wait until people can do the work, synthesize it and then help me react?” he
+continued.
+
+“We are also so plugged into all these storylines, whether it’s from traditional media, whether it’s from user-generated — someone on their phone, you know,
+posting to a Telegram group. We are overwhelmed and overloaded, and it’s unfortunately appealing to the worst parts of a lot of our instincts,” Ohanian added.
+
+In part, some of the issues around how social media platforms developed had to do with how the companies were originally developed. Ohanian, for example, shared
+that Reddit grew out of his running of a forum site in college, when he believed that online community felt as real as offline.
+</item 56>
+
+<item 57>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Welcome to Startups Weekly. Sign up here to get it in your inbox every Friday.
+
+A few months ago, Alexis Ohanian, the co-founder of Reddit, tweeted that if he could go back in time and do one thing differently when he was building Reddit,
+he would have spent significantly less time attending events. Personally I have a different experience — I always regret getting on a plane (or in an Uber, for
+that matter) to go to an event. However, as I’m traveling back, I’ve never regretted it: There’s always something magical that comes out of going to an event,
+in my experience.
+
+Our TC+ team is not interested in anecdotes, however: neither mine nor Alexis’. So, like the data-driven journalists they are, they surveyed more than 50
+founders, trying to figure out whether attending events still makes sense in 2023.
+
+Spoiler alert: There isn’t a real consensus, but there are some really good pros and cons.
+</item 57>
+
+<item 58>
+8 authors and their 8 gift book picks for this holiday season (TechCrunch, 2023-12-01T16:05:15+00:00)
+Though I think what I appreciate the most about this book is that when it comes to marketing and driving product adoption, even though she introduces four
+fundamentals of product marketing, the first and most critical to get right is customer insight. This is almost unheard of given the target market for this book
+is an industry where engineering and scale reign supreme.
+
+Scott Hurff
+
+As a writer, Scott Hurff doesn’t always write about product design; but when he does he is able to share his perspective as someone who’s also a product maker
+and designer. It is also this intersection that nurtured his book, “Designing Products People Love: How Great Designers Create Successful Products.”
+
+Book recommendation: “Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application,” by Jason Fried, David Heinemeier Hansson and Matthew
+Linderman
+
+“Getting Real” is an absolute treasure from 2006 and it’s still teaching me things.
+</item 58>
+
+<item 59>
+Twitch is the best way to watch sports, when you can actually watch sports on Twitch (Polygon, 2023-10-20T17:30:00+00:00)
+“I think what we’re looking at is either a very curated kind of managed channel, and more grassroots-like, creator-led experiences,” Casassovici says. “That’s
+clearly something that can be differentiated when it comes to streaming.”
+
+Twitch seems to see value when it comes to investing in sports streamers. A few years ago, the platform launched the Sports Accelerator Program to support
+sports content creators wanting to get into “sports talk,” like podcasts, talk shows, reaction streams, sidecasts, watch-alongs, and more, through live
+workshops and by providing opportunities to network and expand their viewership.
+
+U.K.-based Keira Megan, who goes by keirameganxx on Twitch and was previously part of the Sports Accelerator Program, has been on the platform for about a year
+and a half with a focus on soccer and motorsports like Formula 1.
+</item 59>
+
+<item 60>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 60>
+
+<item 61>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+“Firstly, you’ve never heard us say we’re favourites,” he said.
+
+‘We know these games are do or die. We’re going to have to improve our performance. The stage gets bigger at this time in the tournament and you’ve got to grow
+your game. That’s our strong focus. The best team on the night wins – Argentina has done that to us.”
+
+Cheika however was happy to remind the All Blacks who were favourites.
+
+“”New Zealand has always been an example in rugby, a benchmark. They make you think of high-level skills in a really open game but there are always threats in
+the lineout, mauls and rucks,” said Cheika, whose Wallabies lost in the 2015 final.
+
+“You have to take the moments you are in the game and see them coming at you at different times.
+
+Advertisement
+
+“In the game in 2020 there were things you could pinpoint.
+</item 61>
+
+<item 62>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+“Not everyone wants to use one product,” he said to my colleague Alex Heath earlier this fall, “and I think making it so that they can use an alternative but
+can still interact with people on the network will make it so that that product also is more valuable.” Mark Zuckerberg! Said that! He understands that people
+want to feel like their social connections and content belong to them, not to a company that can disappear or pivot or change its ways. And let’s be real: if
+Meta can’t build and maintain the One True Social Network For Everybody, nobody can. It’s well past time to try something else.
+
+The only way to see your Facebook posts is to sign up for Facebook’s rules, Facebook’s aesthetic, Facebook’s features, Facebook’s moderation, Facebook’s
+algorithm, and Facebook’s business model.
+
+Right now, every social platform is a universe unto itself.
+</item 62>
+
+<item 63>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 63>
+
+<item 64>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+Some critics, including Megan Grey, contend that Google uses semantic keyword matching to make searches less precise on purpose, which widens the pool of
+content served and increases auctions for its ads. The quality tests, then, would ensure that the systems were still returning results that were justifiably
+related to the input.
+</item 64>
+
+<item 65>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Does Reddit co-founder Alexis Ohanian have regrets over his creation? The entrepreneur and founder of venture fund Seven Seven Six, speaking at an event at the
+University of Virginia, espoused a fairly negative view of the current social media landscape and the creator economy — an environment where he says, everyone
+has “been so trained and conditioned now to just get the likes and retweets, get the upvotes…I wish I could be more optimistic about it, but we’re seeing it
+play out before our eyes.” Still, he ultimately described himself as a “techno-optimist” — an apparent nod to a16z General Partner Marc Andreessen’s recent
+diatribe where he claimed technology could solve all our problems.
+
+“Guilty as charged,” Ohanian said, during his interview with Kara Swisher. “I do think that pendulum will swing back. I think even swifter than we realize.”
+</item 65>
+
+<item 66>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Some people consider EEAT part of what’s making results better than ever. Others see it as a form of censorship, disproportionately affecting right-wing
+perspectives. Not every search query takes EEAT into account; Google has described heightened concern over sites that could impact safety, happiness, and the
+ability to be an informed citizen. But the point that really hit me was that for certain kinds of information, Google had undone one of the fundamental elements
+of what had made its results so appealing from the start. Now, instead of wild-west crowdsourcing, search was often reinforcing institutional authority.
+
+You can’t just be the most powerful observer in the world for two decades and not deeply warp what you are looking at
+
+This felt complicated at best. When it comes to health and wellness, for example, quackery is often in the eye of the beholder. Everyone knows someone who has
+struggled with the limits of Western medicine. So much of the original draw of the internet was the opportunity for outlier voices to be heard alongside
+established experts and elites.
+</item 66>
+
+<item 67>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Ian Foster, who made two changes to his starting side and three in total, was forced to defend his centre’s actions while twisting the knife into Sexton’s
+finish.
+
+“It happens on most sporting parks when tensions are high and a lot at stake,” Foster said.
+
+“Unfortunately recently it’s also included players saying a few things to referees. Is it right for the game? I don’t know. You don’t hear a lot of players
+complaining about it.”
+
+Advertisement
+
+Captain Sam Cane added: “It’s players’ different personalities and emotions running high in those moments. There’s always people who have different tactics but
+it’s always just left out there.”
+
+Foster recalled Sam Whitelock to the starting side in the only change to the pack.
+
+Whitelock, whose breakdown penalty win after 37 phases denied Ireland a match-winning penalty, has been recalled and will partner Scott Barrett in the
+second-row. Brodie Retallick will come off the bench.
+</item 67>
+
+<item 68>
+Flipboard becomes a federated app with support for ActivityPub (TechCrunch, 2023-12-18T16:00:49+00:00)
+“What are the implications of federation in the front end? How do we think about curation and all the things, all the capabilities and tools that we’ve created
+over the years? How does that work in a world that’s federated, and from a user experience point of view? That is a great question,” he said.
+
+Despite all the changes, Flipboard is not in need of raising funds to support its new developments. It’s running off the profits of its own business as it moves
+in this direction.
+
+The company is also betting on the fact that federated social media may only be the beginning of what’s to come for the web overall.
+
+“I saw what was happening with ActivityPub and it became very clear to me that this is the future of the web, period,” McCue said. “The social web is people
+linking to pages and people linking to people. So it’s a much more intricate web.”
+
+He sees Flipboard as a part of that opportunity.
+</item 68>
+
+<item 69>
+Travis Kelce admits the NFL is overdoing it with their Taylor Swift coverage (The Independent - Life and Style, 2023-10-04T19:58:00+00:00)
+“The Taylor Swift and Travis Kelce news has been a pop cultural moment we’ve leaned into in real time, as it’s an intersection of sport and entertainment, and
+we’ve seen an incredible amount of positivity around the sport.”
+
+“The vast majority of our content has remained focused on the game, our players and variety of other initiatives, including our Toy Story Funday Football
+alt-cast, the international games and more,” they continued.
+</item 69>
+
+<item 70>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Aside from forcing platforms to allow some forms of content that would otherwise be disallowed, these laws also seek to force social media companies to provide
+users with individualized explanations when their content is removed or restricted. Because this process is largely conducted algorithmically now — generally
+with light human intervention or oversight — social media companies might need to reimagine their content moderation systems or hire way more humans to respond
+to these incidents. Those kind of adjustments would likely be costly and difficult to scale.
+
+“As you can imagine, that can get kind of onerous when you’re taking down millions and millions of pieces of content a day, and much of that activity of the
+vast majority of it is currently being done automatically,” Barrett said. “The idea that a human being would have to go back and explain each time something
+came down would be quite a challenge.”
+</item 70>
+
+<item 71>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Forrester has a holistic understanding of the delicate push and pull between the SEOs desperate for clues on how to do their jobs better and the search engine
+trying to keep its secret-sauce algorithm proprietary. He also knows a huge range of people in the industry. Like Schwartz, he wanted to emphasize how hard
+everyone works. “I’ve lost track of how many people I know who built companies and sold them and have just, like, made wealth,” he told me. “That is not a
+40-hour commitment in the week. That is a 400-hour commitment.” (For the record, there are 168 hours in a week.)
+
+These days, Forrester lives in Los Angeles, and he asked me to meet him at one of his favorite restaurants, which felt like a British pub operated by Disney
+World, tucked away in a desert strip mall. Inside, every inch was covered in Anglophile paraphernalia, including Union Jack flags, a mural of Big Ben, and a red
+phone booth.
+</item 71>
+
+<item 72>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+In the beginning, the internet was seen as an improvement on the spirit of the public library. Here was an opportunity to transcend the gatekeepers controlling
+who could publish a book, allowing mankind to fully connect and share knowledge. Instead, we have ended up in a situation arguably worse than before, where
+nearly all online information runs through a single company, which assumes a veneer of civic utility, of impassive authority, when it is very much not a neutral
+entity.
+
+“There were so many true believers at Google in the early days,” Cutts told me. “As companies get big, it gets harder to get things done. Inevitably, people
+start to think about profit or quarterly numbers.” He claimed that, at least while he was there, search quality always came before financial goals, but he
+believes that the public underestimates how Google is shaping what they see, saying, “I deeply, deeply, deeply believe search engines are newspaper-like
+entities, making editorial decisions.”
+</item 72>
+
+<item 73>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+The article is well worth a read, to figure out in which circumstances you can expect a decent return on investment on your event-going antics.
+
+Today’s newsletter is going to be a bit more to the point than usual: I’m laid up at home with pneumonia (yes, I really am an 86-year-old grandmother.
+Surprise!), so forgive the antibiotics-addled ramblings this week. I hope I’ll be back with non-pharmaceutically-enhanced ramblings next week.
+
+Artificial intelligence: Y’all just can’t get enough
+
+Our most-read stories consistently continue to be about AI. No big surprise, perhaps, the AI hype cycle continues apace. This week there’s been a bunch of
+stories about the seedy underbelly of AI, including how humans are part of the problem, continuing to trick AI systems into generating boobs and 9/11 memes. Oh,
+humans. We spoke with investors to figure out whether the future of AI has hope for us beyond daft memes. (Spoiler alert: Yes.)
+</item 73>
+
+<item 74>
+Is the Coverage on Taylor Swift and Travis Kelce’s Romance Nothing but Hype or a Pivotal Shift in NFL’s Century-Old Game Plan Towards Global Recognition?
+(Essentially Sports, 2023-10-25T21:30:41+00:00)
+From Colin Kaepernick taking a knee during the national anthem to protest against racism, to domestic violence by players, to the Deflategate and Bountygate
+scandals. But there have been bigger crises as well. The Union of Concerned Scientists accused the NFL of trying to intimidate scientists studying the link
+between CTE and pro football. The NFL is already way past other leagues in terms of revenue, and now with the pivotal shift in its strategy, “America’s favorite
+pastime” is on its way to world domination.
+
+ADVERTISEMENT Article continues below this ad
+
+Editorial Disclaimer: The views expressed are those of the author and do not necessarily reflect the views of EssentiallySports.
+
+Watch This Story: Will Patrick Mahomes Eclipse Tom Brady as the NFL Goat? Travis Kelce Responds
+</item 74>
+
+<item 75>
+Dropout’s dropping CollegeHumor on its 5th anniversary — here’s why and what the future holds (Polygon, 2023-09-26T17:35:00+00:00)
+[laughs] Adam Conover, who is one of my dear, dear friends and also remains pretty mixed about digital versus traditional entertainment, he’s not sure where he
+wants to fall in terms of those those relative opportunities. He’s like, The thing about digital is you create for yourself a jail, and then you have to live in
+that jail forever, because your audience wants that from you, again and again and again. Whereas in traditional media, you have a certain amount of seasons, and
+maybe you get canceled, then you move on to something else.
+
+I think Brennan and I both are in jail right now. The way in which we’re lucky is we both jailed ourselves inside anthology series.
+
+Mulligan: Yeah.
+</item 75>
+
+<item 76>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+He said he never conceived of the influence the site would one day hold — when Reddit became a multibillion-dollar business with hundreds of millions of users.
+That thought would have been “ludicrous,” he said. And he certainly never could have imagined his startup could have become so successful that it could affect
+elections and democracies.
+
+“To… think Oh my god, I’m gonna be so successful, it could have a tremendous impact on democracy would take a level of delusion that even I, as a first-time
+CEO, just couldn’t have,” he noted. “Was that a blind spot? Absolutely,” he admitted.
+
+Ohanian identified that another part of the problem is that there are more people online today than early tech founders may have imagined. Though he’s glad that
+access to the technology has broadened, that has come with many complications.
+</item 76>
+
+<item 77>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 77>
+
+<item 78>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Advertisement
+
+“To inspire is not about results, it’s not just one player who played well; no, it’s about our behaviour in general, our ability to be ready to come back from
+difficult times and seizing our opportunities.
+
+“There are not a lot of opportunities in life – us playing in a semi-final is even rarer and we want to have no regrets.”
+</item 78>
+
+<item 79>
+‘It happens’: All Blacks defend star centre after spray as Cheika heaps pressure on ‘favourites’ New Zealand (The Roar | Sports Writers Blog,
+2023-10-18T20:55:55+00:00)
+Brodie Retallick will come off the bench.
+
+Elsewhere, Mark Telea has been recalled ahead of Leicester Fainga’anuku. The tryscoring machine was axed for the quarter-final after missing a team curfew.
+
+“That’s the team we think best for this week,” Foster said.
+
+“Mark has done his time. He made a mistake and accepted what was happening but you don’t linger in that space. He’s been our form winger. We have got a faith in
+him and think he is in good place to play this game.
+
+Advertisement
+
+“We really enjoyed Leicester Fainga’anuku]’s game last week and he should be proud of that and its’s a tough selection. It’s a chance for us to get Mark on the
+park.”
+
+The All Blacks are 18-point favourites for the opening semi-final.
+</item 79>
+
+<item 80>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+It’s just that in a fediverse-dominated world, the way to win is not to achieve excellent lock-in and network effects. The only way to win is to build the best
+product.
+
+This is really not a particularly hot take, by the way. Even the most successful centralized platforms have long understood that a protocol-driven social web is
+a good idea. Jack Dorsey used to say that Twitter was better as a protocol than a platform, and started the project that became Bluesky before also helping get
+Nostr going. (We really don’t need to get into the whole story of what happened to Twitter since then, except to say that the speed with which that platform
+changed made a lot of people acutely aware that we need a social ecosystem that can resist the whims of a single company or CEO.)
+
+Meanwhile, Meta CEO Mark Zuckerberg seems to earnestly believe that bringing Threads to the fediverse is a good idea, both for its product and for its business.
+</item 80>
+
+<item 81>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+The company also wants to address the needs of creators and publishers who want to broaden their audience as it moves forward with its fediverse plans.
+
+“From a content discovery standpoint, I’m really interested in how we can seed conversations and seed experiences with really high-quality content — certainly,
+editorial publisher content,” says O’Hara. “How can we get publishers and content providers involved early?… I think of them as a real constituency for us,” she
+says. Plus, Mozilla wants to bring in the originators whose posts lead to interesting conversations and keep the network active.
+
+O’Hara says Mozilla is now in active discussions with publishers to understand their needs, including both their social needs and business needs, and how those
+goals may have changed over the past year. As part of these discussions, Mozilla aims to convince publishers that Mastodon isn’t just another place they have to
+support, but one that could deliver on their objectives.
+</item 81>
+
+<item 82>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Translation? SEO is now baked into everything. Bastilla, for example, specializes in email campaigns, which he called “deliverability.”
+
+As a person who militantly unsubscribes to any and all marketing emails, I suddenly felt claustrophobic, surrounded by people who annoy the rest of us for a
+living. Why does it always seem to surprise me, even after all these years, that the way we behave on the internet is often quite different from how we act in
+real life?
+
+I wandered off to wait in line for a drink, where I noticed several people nonchalantly making space in a corner, as if to move out of the way for a bartender
+carrying empty glasses. There, squirming along the ground, was the alligator himself, wagging his tail, snout held shut by a thin strip of electrical tape. His
+handler was nowhere in sight. It was an unsettling vision, a predator pretending to be just another party guest.
+
+“They should untape the mouth!” someone shouted. “I’m not even scared.”
+</item 82>
+
+<item 83>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+Technologists must “find the grain” of a technology. In this way, they become an intermediary between the abstract nature of design and the pedantic nature of
+technology. This philosophical perspective is especially important when a product is in a growth stage or when using emerging technologies.
+
+Regardless of whether your product is growing or in a stable stage or employs established or emerging technologies, integrating technologists into the product
+strategy and design process enriches the final outcome. There is a technology perspective extending beyond the operations and mechanics of the code “factory
+floor,” which provokes innovation. Sometimes this leads to small, impactful moments of innovation — and sometimes it is a brilliant revolution.
+</item 83>
+
+<item 84>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+If anything, Ohanian credits Twitter (now called X) with coming up with the best system for moderation so far.
+
+“Community Notes, I personally think is a good — it’s the best measure I’ve seen yet. And frankly, I wish we had thought of it first,” he said.
+
+Still, he called out the notion that a platform, like X, can be a town square.
+
+“The public square [analogy]…falls flat. Because if that then implies that it’s a public square, which means like, what? a town or a city? If you’re the person
+in charge of it, you’re the mayor. But there’s no democratic election,” Ohanian pointed out. “You’re a CEO. So then you’re like the king? If you want to lean
+into the town square thing, fine. Just own it and say, yeah, it’s a town square and I am the infinite dictator, tyrant of it.”
+</item 84>
+
+<item 85>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Neither is recycling press releases as posts. To keep up with the evolving culture, candidates are expected to be content creators as much as they are
+politicians, regardless of the social media platform they’re using. Authenticity is currency online, even if it’s manufactured by a team of strategists.
+Candidates don’t need to have the innate knack for posting for successful campaigns, Riedl said, as long as they hire someone who does.
+
+Gen Z voters are particularly resistant to flagrant pandering, and quick to shut down any forced pop culture reference as cringe. Cringe exists across party
+lines — Hillary Clinton’s “Pokémon Go to the polls” still haunts the internet — but candidates don’t need to rely on youth culture to build followings.
+
+Memeing throughout his campaign worked for Fetterman, Henry said, because that dry humor aligns with his background as “a guy from rugged Pennsylvania” who
+“doesn’t try to act cool.”
+</item 85>
+
+<item 86>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Because they haven’t, he insisted. If anything, search results have gotten a lot better over time. Anyone who thought search quality was worse needed to take a
+hard look in the mirror.
+
+“We have an entire generation that grew up expecting the search box to do the work for them,” he said. “We might do a better job of matching for a bulk of
+people, but for people who are super sensitive, when they have that fail moment, now it becomes, ‘All my searches aren’t good.’”
+
+The problem was not Google. The problem was not SEOs. The problem was kids these days.
+
+Of course Sullivan would say this, though. He works for Google. I felt like I began to understand why many SEOs had told me that Cutts’ departure had marked a
+major turning point in the history of the internet, emblematic of Google’s transition from idealistic startup to one of the most valuable and powerful companies
+to ever exist.
+</item 86>
+
+<item 87>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“It’s because they don’t have the real expertise.” Clay is an avuncular man with a mustache who is often credited with coining the phrase “search engine
+optimization” and is therefore called “the father of SEO.” He told me his agency never hires an SEO with less than a decade of experience.
+
+“I don’t know if you can trust anything you read online.”
+
+Though Google publishes guidelines explaining how to do better in search (“Make your site interesting and useful”), the exact formula for how and why one
+website gets placed over another is top secret, meaning that SEO involves a lot of reverse engineering and guesswork. With no clear chain of cause and effect
+around why a site’s ranking has changed, a less talented practitioner can take on the mien of a premodern farmer, struggling to figure out how to make it rain.
+Should he do that dance he did last year the night before it poured? Or maybe sacrifice his firstborn?
+</item 87>
+
+<item 88>
+2023 in social media: the case for the fediverse (The Verge, 2023-12-19T13:00:00+00:00)
+Right now, every social platform is a universe unto itself. The only way to see your Facebook posts is to sign up for Facebook’s rules, Facebook’s aesthetic,
+Facebook’s features, Facebook’s moderation, Facebook’s algorithm, and Facebook’s business model. That’s not just a bad user experience, it’s a ridiculous way to
+run a company. Facebook has to invent and maintain all these things, just as every one of its competitors does. It’s an impossible task but just as impossible
+to compete with; you can’t build social products without building an entire social graph from scratch, and good luck with that.
+
+In a fediverse world, rather than try to build another all-encompassing Facebook from scratch, an enterprising developer can pick one or a few of its features
+and try to do better. Users can pick their favorite app — or two, or two hundred — through which to get their posts.
+</item 88>
+
+<item 89>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Third-party Reddit app Narwhal says it hopes to survive Reddit’s app purge with a subscription plan.
+
+Apropos “getting together,” Amanda reports that VidCon is still kickin’. For the first time, the conference hosted an industry leadership summit, where creator
+economy experts and creators could hash out their grievances with the state of the business and share ideas to make the job of a creator more sustainable. That
+makes sense, unlike creators raising venture capital: It’s so eye-wateringly hard to make money as a creator, I’d love to see the pitch that convinces a VC to
+cut a check to a creator, with a realistic expectation of a venture-scale return.
+
+Maybe they were hiding behind the sofa?: Sarah reports that Mastodon actually has 407K+ more monthly users than it thought — and it seems like Twitter has a lot
+more traffic than Musk said. Still, the peak now is about the same as it was a decade ago, and it’s unclear what the social platform can do to encourage more
+growth.
+</item 89>
+
+<item 90>
+Dropout’s dropping CollegeHumor on its 5th anniversary — here’s why and what the future holds (Polygon, 2023-09-26T17:35:00+00:00)
+But we’ve given them names and voices. And now we’ll see! Now we’ll see how glib they are!
+
+Reich: David Attenborough couldn’t do this!
+
+Sam, that reminds me of something you said to NPR earlier this year, about how you found success with Dropout in, instead of going broad for the viral video,
+going for “something that feels special to a small group of people.” Has five years of Dropout inspired any advice for creators, or producers, or fans —
+basically anyone who’s looking to get away from algorithmically powered viral demand, to other platform structures?
+
+Reich: My advice is find a better business model. I think we live in an era of online content right now that is being defined and shaped by algorithms. And
+that’s true no matter the platform. I think different platforms are shaping content in different ways, and that’s kind of exciting as a creator. Like, Which of
+these sports am I most excited to play?
+</item 90>
+
+<item 91>
+Why Mozilla is betting on a decentralized social networking future (TechCrunch, 2023-11-03T17:43:00+00:00)
+It also sees a role for its read-it-later app Pocket in this experience, as the app’s primary use case is to store links to articles and other content that
+people have signaled they want to read.
+
+“We are planning to open the beta in phases because we want to ensure that we have a content moderation team and other tools that can be scaled relative to the
+size of the user base. We’re not in a rush as we think it’s important to be deliberate about launching social media tools,” O’Hara says.
+
+“We have a lot of core competency that we brought over from our Pocket experience and other recommendation products that we put together to at least get that
+engine revving,” notes O’Hara.
+
+Initially, the company is running a Mastodon account, “@Pocket_Recommends@mozilla.social,” where it actively posts recommendations of stories to read. It’s the
+same sort of content you might find in the Pocket email newsletter, but now distributed on the fediverse.
+</item 91>
+
+<item 92>
+Is Google Search better than the rest? And is that fair? (The Age, 2023-10-22T18:00:00+00:00)
+The question remains, why do users prefer Google? And if the answer, as Walker says, is that Google is simply better, the question becomes whether that’s down
+to its scale, its longevity, its ubiquity and all the user data it sucks up, which no other company could possibly match.
+
+For the US, which has to prove that Google somehow broke the law to achieve the status quo, this legal case could be an uphill battle. But for the rest of us,
+it offers a rare opportunity for some insight into what the tech giant does with its enormous market share. Is it still focused on being the best? Or, as has
+been alleged, does it use its ubiquity to squeeze us for money even at the expense of product quality? How ‘organic’ are Google’s results? This month, Wired
+posted an opinion article by lawyer and privacy advocate Megan Gray, which alleged that Google had accidentally revealed during the trial that it manipulates
+people’s search queries for maximum ad revenue.
+</item 92>
+
+<item 93>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“My favorite question to ask an SEO,” Cutts told me, was, “What’s the worst thing you’ve ever done?” which prompted responses that felt like “a cross between
+showing off and a confessional.” So many SEOs were tempted to reveal the vulnerabilities they’d discovered in Google’s algorithms, even when they were talking
+to the one person they really shouldn’t have been talking to, the guy who was planning to go back to his office and make those vulnerabilities disappear.
+
+As a former SEO himself, Forrester understood that the quality of Bing’s search results would be impacted by the work of SEOs, so it made sense to communicate
+with SEOs as much as possible. Cutts similarly tried to serve as a conduit between SEOs and Google, but Forrester felt that Google projected an attitude he
+described as: “We know what we’re doing, we will stop your attempts to game this, and you know what? We’ll just kind of ignore you, and when you give us
+feedback, eh, we don’t really care.”
+</item 93>
+
+<item 94>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+With Amo, the founder of Zenly wants to make social apps social again The startup raised $20 million and is launching ID today
+
+In 2018, I wrote a TechCrunch article stating that 2018 was “the year social networks were no longer social.” Reflecting on that article, I’m not sure that 2018
+was the turning point. But the premise of the article still holds up well.
+
+At some point, social networks were no longer about connecting with your closest friends, keeping up with long-distance family members and feeling a special
+connection with people you love.
+
+TikTok, Instagram, Snapchat, Facebook, YouTube and X (formerly Twitter) are all slowly evolving to become the same infinite scrollable feed of
+algorithm-optimized short videos from top performers.
+
+And it turns out that I’m not the only one who has noticed that social networks have been slowly drifting away from their original purpose.
+</item 94>
+
+<item 95>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+I have to wonder if those decisions to change these policies were in response to competition from other platforms.
+
+I would say it this way: I think they are an acknowledgement, and maybe a closer connectivity to the community via Dan specifically. I credit Dan in his short
+time as CEO to really make some big, hard decisions. Both the launch of Partner Plus, as well as simulcasting, the embed stuff we talked about in the keynote —
+these are three things that I think are very much an acknowledgement of the feedback from the community. We’ve made that change, so I wouldn’t call it out of
+competitive pressures. I would call it out of focus on the community.
+</item 95>
+
+<item 96>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Even if Jake Paul was less despised online, endorsements aren’t as valuable as they used to be. A paper published in the International Journal of Communication
+this year reported that mobilizing influencers to build support for political causes is more effective than using their endorsements to gain votes. Blatant
+endorsements lack personal connection, and create an “authenticity gap.” Authentic creators are trustworthy, and in campaign strategy, that’s more valuable than
+the size of their following.
+
+Martin Riedl, a University of Tennessee, Knoxville professor who studies social media and co-authored the paper, said that society tends to reward public
+figures for speaking out on social justice issues because there’s more “situational awareness.”
+
+“If you use influencers in your campaign, it’s important that they can authentically believe in what you promote,” Riedl said. “And if that’s not the case, that
+makes it really difficult for people to take your campaign seriously.”
+
+Authenticity reigns
+
+Facebook ads, celebrity endorsements and campaign trail rallies aren’t enough to engage voters online.
+</item 96>
+
+<item 97>
+8 authors and their 8 gift book picks for this holiday season (TechCrunch, 2023-12-01T16:05:15+00:00)
+8 authors and their 8 gift book picks for this holiday season TechCrunch talked to eight authors with ties to the startup community to see which books they
+would gift this year
+
+Book blurbs have become a central part of the publishing industry: Who better to endorse a book than other authors and thought leaders? In that same spirit, we
+asked several writers to recommend books that you and other TechCrunch readers may want to gift this holiday season.
+
+Read on for recommendations from:
+
+The responses have been lightly edited for length and clarity. This article contains links to affiliate partners where available. When you buy through these
+links, TechCrunch may earn an affiliate commission.
+
+Jon Evans
+
+You may know Jon Evans as a former TechCrunch columnist or from his engineering and CTO roles, but he is also a novelist. Most of his books are technothrillers
+painting travelers caught in tricky situations in exotic locations.
+</item 97>
+
+<item 98>
+Legacy vs ego: The Springboks are playing for South Africa, the All Blacks are playing for themselves (The Roar | Sports Writers Blog,
+2023-10-26T22:19:21+00:00)
+The All Blacks will experience a changing of the guard next season.
+
+Indeed, the All Blacks’ social media channels described the team selection for the World Cup final as the “Last Dance”.
+
+2015 World Cup winner Dane Coles will call time on his career, while his tight-five teammates Brodie Retallick and Sam Whitelock, who is bidding to become the
+first player to win the Webb Ellis Cup for a third time, will head overseas.
+
+Fellow World Cup winners Aaron Smith and Beauden Barrett will also head to Japan.
+
+Coles, who was labelled by Samisoni Taukei’aho as a “Grandad” type figure in the All Blacks, has even been denied the chance of a farewell send-off after
+missing selection.
+
+Advertisement
+
+“Yeah, tough,” said coach Ian Foster of the conversation with the 36-year-old around leaving him out.
+</item 98>
+
+<item 99>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+First, the application must address a real enterprise pain point prioritized by executives. Second, to provide tangible benefits and long-term differentiation,
+the application should be composed of cutting-edge models that fit the specific and unique needs of the software. It’s not enough to simply plug into OpenAI;
+rather, applications should choose their models intentionally while balancing cost, compute, and performance.
+
+Third, the application is only as sophisticated as the data that it is fed. Proprietary data is necessary for specific and relevant insights and to ensure
+others cannot replicate the final product. To this end, in-house middle-layer capabilities provide a competitive edge while harnessing the power of foundational
+models. Finally, due to the inevitable margin of error of generative AI, the niche market must tolerate imprecision, which is inherently found in subjective and
+ambiguous content, like sales or marketing.
+
+How much technical competence can startups presume that their future enterprise AI customers will have in-house, and how much does that presumed expertise guide
+startup product selection and go-to-market motion?
+</item 99>
+
+<item 100>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+It doesn’t mean that Spotify’s contributions to podcasting will be insignificant — as one audio industry professional said to me, the translation thing could be
+a total game-changer for the medium (if it’s not a complete dud). But we should not expect those contributions to come in the form of original content.
+
+The main question I am left with after these results is where Spotify’s licensing deals fit in. I wish during the call that someone had asked Ek about the plan
+for big-name talent like Joe Rogan, Alex Cooper, and Dax Shepard as their deals come up for renewal. On one hand, they have the scale (Rogan especially). On the
+other, they cost a chunk of cash (... Rogan especially). I will have more on this later this week, but it will be interesting to see how much Spotify and its
+investors can stomach spending on the biggest names in podcasting.
+
+Wondery puts its podcasts on TV
+
+That’s certainly one way to get podcasts to the masses.
+</item 100>
+=== END ITEM id=db2da0a070757df1 ===

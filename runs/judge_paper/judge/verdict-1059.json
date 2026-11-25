@@ -1,0 +1,43 @@
+[
+  {"id": "660c2336e30197f0", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [
+      {"item": 90, "quote": "At the time, the music video for the song"},
+      {"item": 90, "quote": "which featured a woman with blonde hair"}
+    ]},
+    {"fact": "0.1", "status": "stated", "evidence": [
+      {"item": 90, "quote": "At the time, the music video for the song"},
+      {"item": 90, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}
+    ]},
+    {"fact": "0.2", "status": "stated", "evidence": [
+      {"item": 90, "quote": "sparked rumours that he and Spears broke up because she allegedly cheated on him."}
+    ]},
+    {"fact": "1.0", "status": "stated", "evidence": [
+      {"item": 52, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}
+    ]},
+    {"fact": "1.1", "status": "stated", "evidence": [
+      {"item": 52, "quote": "Also, another thing that hints towards their breakup is Danis’s first press conference for the Logan Paul fight."}
+    ]}
+  ]},
+  {"id": "0a1ba827c007fbfd", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "fc8cf637fc75a045", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]}
+]

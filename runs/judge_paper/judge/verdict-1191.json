@@ -1,0 +1,57 @@
+[
+  {
+    "id": "5184efe6306caf33",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "His career has only blossomed in the years since he took that trip"
+          }
+        ]
+      },
+      {
+        "fact": "0.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "while some artists might feel trepidation at the attainment of so much success from such an early age"
+          }
+        ]
+      },
+      {
+        "fact": "0.2",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 4,
+            "quote": "age, Mitchell is clear-eyed."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 62,
+            "quote": "Since then he’s been linked to club jobs in Europe"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 62,
+            "quote": "Since then he’s been linked to club jobs in Europe but opted to stick around with the national team."
+          }
+        ]
+      }
+    ]
+  }
+]

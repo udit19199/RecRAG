@@ -1,0 +1,24 @@
+{
+ "B4_200": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T233435801844Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T234714916617Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T235858693931Z"
+  ]
+ },
+ "B2_100": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261124T233435803112Z"
+  ],
+  "2": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261125T001309193739Z"
+  ],
+  "3": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261125T003507024645Z"
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+[
+  {"id": "4617002dc901bc0f", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "With this sale, they offer some of the best value in their class from one of the top names in the business."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

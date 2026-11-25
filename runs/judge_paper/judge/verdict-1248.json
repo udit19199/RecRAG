@@ -1,0 +1,37 @@
+[
+  {
+    "id": "e920645f472fadf6",
+    "facts": [
+      {
+        "fact": "0.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 28,
+            "quote": "“I’m here until the end,” she said in her press conference on Friday."
+          }
+        ]
+      },
+      {
+        "fact": "1.0",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 79,
+            "quote": "He has been out of work since his Blues tenure came to a close back in April"
+          }
+        ]
+      },
+      {
+        "fact": "1.1",
+        "status": "stated",
+        "evidence": [
+          {
+            "item": 79,
+            "quote": "it would be a hard sell to fans after his time with the London club went so poorly."
+          }
+        ]
+      }
+    ]
+  }
+]

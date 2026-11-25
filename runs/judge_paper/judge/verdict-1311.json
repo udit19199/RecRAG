@@ -1,0 +1,21 @@
+[
+{"id": "46c5690c8d1f87bc", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 67, "quote": "Inter Miami scheduled a two-match tour of China in early November after their regular season concluded."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 67, "quote": "Inter Miami scheduled a two-match tour of China in early November after their regular season concluded."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 67, "quote": "Likely with the sole intent of keeping Messi fit in that time off"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 67, "quote": "and the added bonus of raking in significant cash"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 64, "quote": "Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 64, "quote": "Alvaro Barreal’s 78th-minute goal ended any hope that Inter Miami had to complete a stunning playoff charge"}]},
+{"fact": "1.2", "status": "contradicted", "evidence": [{"item": 64, "quote": "and the defeat coupled with CF Montreal’s big 4-1 victory over Portland means Inter Miami are officially out of the postseason running."}, {"item": 88, "quote": "CF Montreal's 4-0 victory over Portland"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 57, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 57, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 57, "quote": "Lionel Messi's arrival at Inter Miami has brought with it a craze for fans to get a glimpse of one of the sport's most talented and legendary players of all time."}]}
+]},
+{"id": "f69d2053654641c9", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

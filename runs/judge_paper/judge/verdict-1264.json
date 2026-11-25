@@ -1,0 +1,26 @@
+[
+{"id": "926e15364a351d1f", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 81, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance,"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 81, "quote": "Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance,"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 81, "quote": "Bankman-Fried admitted he’d been told."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 81, "quote": "It was not until Judge Lewis Kaplan intervened to ask if Bankman-Fried had ever been told by Yedidia about that money, in words or in substance, that Bankman-Fried admitted he’d been told."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 30, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 30, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry."}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 24, "quote": "He defrauded sophisticated investors and lenders, and he emptied the accounts of ordinary customers, too."}, {"item": 96, "quote": "The defendant lied to the world"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 24, "quote": "He bought himself wealth, power and influence."}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 72, "quote": "Sam acted in good faith and took reasonable business measures"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 79, "quote": "Sam didn’t defraud anyone,"}, {"item": 71, "quote": "He didn’t steal any money."}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 24, "quote": "The defense, on the other hand, depicted SBF and his colleagues as in over their heads,"}]}
+]},
+{"id": "cdcac411c94d8f18", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]}
+]

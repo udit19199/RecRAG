@@ -1,0 +1,35 @@
+[
+{"id": "2f9180a9ad6f5a80", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 1, "quote": "The second week of the trial’s standout testimony came from Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 1, "quote": "Alameda Research’s former CEO Caroline Ellison"}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 1, "quote": "Caroline Ellison, who claimed she took $14 billion from customers"}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 1, "quote": "who claimed she took $14 billion from customers to repay debts to lenders"}]},
+{"fact": "0.4", "status": "stated", "evidence": [{"item": 1, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit"}]},
+{"fact": "0.5", "status": "stated", "evidence": [{"item": 1, "quote": "who claimed she took $14 billion from customers to repay debts to lenders, using them as a line of credit under the instruction of SBF"}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 77, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto"}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 77, "quote": "Before his fall, Bankman-Fried made himself out to be the Good Boy of crypto — the trustworthy face of a sometimes-shady industry"}]},
+{"fact": "2.0", "status": "stated", "evidence": [{"item": 28, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud"}]},
+{"fact": "2.1", "status": "stated", "evidence": [{"item": 28, "quote": "The prosecution painted Bankman-Fried as someone who knowingly committed fraud to achieve great wealth, power and influence"}]},
+{"fact": "2.2", "status": "stated", "evidence": [{"item": 28, "quote": "the defense countered that the FTX founder acted in good faith"}]},
+{"fact": "2.3", "status": "stated", "evidence": [{"item": 28, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal"}]},
+{"fact": "2.4", "status": "stated", "evidence": [{"item": 28, "quote": "the defense countered that the FTX founder acted in good faith, never meant to commit fraud or steal and basically got in over his head"}]}
+]},
+{"id": "65a2f7e5d4d7069c", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "0.4", "status": "missing", "evidence": []},
+{"fact": "0.5", "status": "missing", "evidence": []},
+{"fact": "0.6", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []},
+{"fact": "1.3", "status": "missing", "evidence": []}
+]},
+{"id": "9028ca36b86459e2", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []}
+]}
+]

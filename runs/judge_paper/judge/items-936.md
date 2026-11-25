@@ -1,0 +1,1475 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 3 items.
+
+=== ITEM id=d2d0c6756a312437 ===
+Gold sentences and facts:
+Sentence 0: While his Republican colleagues have largely shunned TikTok, Ramaswamy is presenting himself as one of the Cool Politicians who will actually use it.
+  Fact 0.0: Ramaswamy's Republican colleagues have largely shunned TikTok.
+  Fact 0.1: Ramaswamy is presenting himself as one of the Cool Politicians.
+  Fact 0.2: The Cool Politicians are politicians who will actually use TikTok.
+Sentence 1: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok, which audiences have started to resist.
+  Fact 1.0: Artists have spent the last few years trying to drum up engagement for their work by making their songs trend on TikTok.
+  Fact 1.1: Audiences have started to resist artists making their songs trend on TikTok.
+
+Retrieved items:
+<item 1>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Startups, he added, can use speed to their advantage as they work to “innovate, iterate and deploy solutions” to customers.
+
+Will that work prove defensible in the long run? Edward Tsai, a managing partner at Alumni Ventures, told us that he had a potentially “controversial opinion
+that VCs and startups may want to temporarily reduce their focus on defensibility and increase their focus on products that deliver compelling value and
+focusing on speed to market.” Presuming massive TAM, that could work!
+
+Read on for answers to all our questions from:
+
+Rick Grinnell, founder and managing partner, Glasswing Ventures
+
+There are several layers to the emerging LLM stack, including models, pre-training solutions and fine-tuning tools. Do you expect startups to build striated
+solutions for individual layers of the LLM stack, or pursue a more vertical approach?
+</item 1>
+
+<item 2>
+‘Mass breach of privacy’: TikTok under fire for tracking users online (The Age, 2023-12-25T18:00:00+00:00)
+Loading “This raises serious privacy concerns regarding the lack of transparency, misuse of personal information and disregard for consent requirements under
+current regulations such as the Privacy Act 1988. Civic Data’s recommendation is that all Australian businesses consider removing the TikTok pixel and other
+TikTok integrations from their platforms if they cannot guarantee that the data usage matches the consent given by consumers.” Civic Data’s clients include
+accounting software company Xero, Ticketek, Carsales, RACV and BlueScope. Call to protect Australians Senator James Paterson has called for an urgent probe by
+Australia’s information commissioner.
+
+Paterson, the Coalition’s cybersecurity spokesman, this year chaired a committee into foreign interference through social media that grilled TikTok executives.
+“This is a very serious and potentially unlawful mass breach of the privacy of TikTok users, former users and non-users,” he told this masthead. Senator James
+Paterson has called for an urgent probe by Australia’s information commissioner.
+</item 2>
+
+<item 3>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+To put into context the number of music subscribers at individual streaming services in the market, we reported in July that as of February, in the United
+States, Spotify counted 44.4 million paying subscribers, while Spotify rival Apple Music had 32.6 million subscribers, and Amazon Music had 29.3 million
+subscribers.
+
+The new TikTok study looked at consumption data from Luminate Connect, audience insight from the Luminate Music 360 Study, and TikTok engagement volumes
+provided by the platform in five markets: the US, UK, Brazil, Indonesia, and Germany, as well as globally (see below).
+
+Including both paid and ad-supported streaming services, roughly nine out of 10 TikTok users in each market studied used at least one music streaming service.
+
+In the US, 89% of TikTok users subscribed to at least one music streaming service, compared to 74% of overall consumers, while in the UK, 85% of TikTok users
+had a streaming service account, compared to 62% of consumers overall.
+</item 3>
+
+<item 4>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+There are a couple of things that I’ll point out. One is acknowledging what Dan has done as the CEO to get out and engage with streamers, hear their concerns,
+and really influence our priorities as a company, is really a consequence of him both being an active streamer as well as being extremely engaged within the
+community.
+
+And then, more broadly for both Jeremy [Jeremy Forrester is VP of Community Product] and myself as the product leaders, building the product is continuing to
+innovate and ensure that we are absolutely a unique service. Whether that’s features, like we’re working on Stories, whether that’s monetization — it’s all in
+service of ensuring that livestreaming creators can be more successful on Twitch.
+
+For a long time, there was a sort of exclusivity with Twitch, where there were exclusive deals, and simultaneous streaming on other platforms was forbidden. I
+have to wonder if those decisions to change these policies were in response to competition from other platforms.
+</item 4>
+
+<item 5>
+Dropout’s dropping CollegeHumor on its 5th anniversary — here’s why and what the future holds (Polygon, 2023-09-26T17:35:00+00:00)
+Like, Which of these sports am I most excited to play? Lately, TikTok has been prioritizing videos that are longer than a minute, because they’re trying to
+encourage watch time, while YouTube Shorts still doesn’t allow you to put up anything that’s longer than a minute. So, platforms compete with each other and
+themselves, and they yield these kind of Frankenstein products. And even in the midst of all of that I am regularly inspired by a lot of the stuff I see on
+there. I love hanging out on these platforms. I think some of these creators are getting really, really creative.
+
+But I think what the experience of doing Dropout has taught us — and what I would tell others — is for you to make this sustainable you need to have something
+to offer that’s off of those platforms. There’s lots of ways to do that. One of them is to create a subscription offering like on Patreon and try to drive
+people to it.
+</item 5>
+
+<item 6>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+It doesn’t mean that Spotify’s contributions to podcasting will be insignificant — as one audio industry professional said to me, the translation thing could be
+a total game-changer for the medium (if it’s not a complete dud). But we should not expect those contributions to come in the form of original content.
+
+The main question I am left with after these results is where Spotify’s licensing deals fit in. I wish during the call that someone had asked Ek about the plan
+for big-name talent like Joe Rogan, Alex Cooper, and Dax Shepard as their deals come up for renewal. On one hand, they have the scale (Rogan especially). On the
+other, they cost a chunk of cash (... Rogan especially). I will have more on this later this week, but it will be interesting to see how much Spotify and its
+investors can stomach spending on the biggest names in podcasting.
+
+Wondery puts its podcasts on TV
+
+That’s certainly one way to get podcasts to the masses.
+</item 6>
+
+<item 7>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+SBF allegedly tried to buy off Trump: The TC team’s been trained on the Manhattan Federal Court for the trial of Sam Bankman-Fried, the disgraced entrepreneur
+accused of orchestrating the collapse of cryptocurrency exchange FTX. But fascinating details about SBF’s political dealings are emerging from a book by Michael
+Lewis, “Going Infinite,” that debuted on the first day of the trial, like SBF’s attempt to buy off Trump to get him to not run again for president.
+
+Gmail fights back against spammers: Google this week announced a series of significant changes to how it handles email from bulk senders in an effort to cut
+down on spam and other unwanted emails. The company says that, starting next year, bulk senders will need to authenticate their emails, offer an easy way to
+unsubscribe and stay under a reported spam threshold.
+
+TikTok tests an ad-free tier: TikTok is testing an ad-free subscription tier for some users.
+</item 7>
+
+<item 8>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Does Reddit co-founder Alexis Ohanian have regrets over his creation? The entrepreneur and founder of venture fund Seven Seven Six, speaking at an event at the
+University of Virginia, espoused a fairly negative view of the current social media landscape and the creator economy — an environment where he says, everyone
+has “been so trained and conditioned now to just get the likes and retweets, get the upvotes…I wish I could be more optimistic about it, but we’re seeing it
+play out before our eyes.” Still, he ultimately described himself as a “techno-optimist” — an apparent nod to a16z General Partner Marc Andreessen’s recent
+diatribe where he claimed technology could solve all our problems.
+
+“Guilty as charged,” Ohanian said, during his interview with Kara Swisher. “I do think that pendulum will swing back. I think even swifter than we realize.”
+</item 8>
+
+<item 9>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+But as for social media as a whole, of which Reddit would presumably play a part, Ohanian said it brings out the “worst parts of our nature in many ways.”
+What’s more, he expressed worries about the desire for people to be first and win on whatever leaderboard a platform features, which then leads to a situation
+where misinformation is able to spread.
+
+Humans evolved trusting the faces & voices we knew around the campfire. The idea of believing something bc of experts/institutions you've never met is actually
+new to our species. I visited @UVADemocracy + chatted with @karaswisher + @dkroy about what's next for social media. pic.twitter.com/PMBXi7T3vv — Alexis Ohanian
+🇦🇲 (@alexisohanian) October 31, 2023
+
+“Now, there’s so much pressure to be first, and UGC — user-generated content — will always win. It won’t always be right, though.
+</item 9>
+
+<item 10>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+With Amo, the founder of Zenly wants to make social apps social again The startup raised $20 million and is launching ID today
+
+In 2018, I wrote a TechCrunch article stating that 2018 was “the year social networks were no longer social.” Reflecting on that article, I’m not sure that 2018
+was the turning point. But the premise of the article still holds up well.
+
+At some point, social networks were no longer about connecting with your closest friends, keeping up with long-distance family members and feeling a special
+connection with people you love.
+
+TikTok, Instagram, Snapchat, Facebook, YouTube and X (formerly Twitter) are all slowly evolving to become the same infinite scrollable feed of
+algorithm-optimized short videos from top performers.
+
+And it turns out that I’m not the only one who has noticed that social networks have been slowly drifting away from their original purpose.
+</item 10>
+
+<item 11>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+I have to wonder if those decisions to change these policies were in response to competition from other platforms.
+
+I would say it this way: I think they are an acknowledgement, and maybe a closer connectivity to the community via Dan specifically. I credit Dan in his short
+time as CEO to really make some big, hard decisions. Both the launch of Partner Plus, as well as simulcasting, the embed stuff we talked about in the keynote —
+these are three things that I think are very much an acknowledgement of the feedback from the community. We’ve made that change, so I wouldn’t call it out of
+competitive pressures. I would call it out of focus on the community.
+</item 11>
+
+<item 12>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Third-party Reddit app Narwhal says it hopes to survive Reddit’s app purge with a subscription plan.
+
+Apropos “getting together,” Amanda reports that VidCon is still kickin’. For the first time, the conference hosted an industry leadership summit, where creator
+economy experts and creators could hash out their grievances with the state of the business and share ideas to make the job of a creator more sustainable. That
+makes sense, unlike creators raising venture capital: It’s so eye-wateringly hard to make money as a creator, I’d love to see the pitch that convinces a VC to
+cut a check to a creator, with a realistic expectation of a venture-scale return.
+
+Maybe they were hiding behind the sofa?: Sarah reports that Mastodon actually has 407K+ more monthly users than it thought — and it seems like Twitter has a lot
+more traffic than Musk said. Still, the peak now is about the same as it was a decade ago, and it’s unclear what the social platform can do to encourage more
+growth.
+</item 12>
+
+<item 13>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+White House deputy chief of staff Jen O’Malley Dillon told Axios that the administration is trying to not only reach young people, but “people whose main way of
+getting information is digital.”
+
+“If you’re not going to be directly on the platform, having surrogates — whether those be influencers, celebrities, normal people — do the messaging, that’s
+likely going to be reaching people at a more personal level anyway,” Henry said.
+
+“Everyone has a vested interest, for the most part, in what the president of the United States has to say, but if it’s your friend, if it’s this person you’ve
+followed for five years, you have a vested interest that’s a little bit more personal. Usually that’s more effective.”
+
+The “influencer army” strategy could be legally and ethically murky when influencers are paid to spread political messaging, potentially skirting both federal
+campaign ad laws and platform rules. TikTok bans political ads, and in recent elections, cracked down on posting sponsored political content.
+</item 13>
+
+<item 14>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Despite cloud computing remaining critical, AI budgets are now more than double that of cloud computing. Eighty-two percent of business leaders believe the
+integration of AI solutions will increase their employee performance and job satisfaction, and startups should expect a high level of desire for and experience
+with AI solutions in their future customers.
+
+Finally, we’ve seen consumption, or usage-based priced tech products’ growth slow in recent quarters. Will that fact lead startups building modern AI tools to
+pursue more traditional SaaS pricing? (The OpenAI pricing schema based on tokens and usage led us to this question.)
+
+The trajectory of usage-based pricing has organically aligned with the needs of large language models, given that there is significant variation in
+prompt/output sizes and resource utilization per user. OpenAI itself racks upward of $700,000 per day on compute, so to achieve profitability, these operation
+costs need to be allocated effectively.
+
+Nevertheless, we’ve seen the sentiment that tying all costs to volume is generally unpopular with end users, who prefer predictable systems that allow them to
+budget more effectively.
+</item 14>
+
+<item 15>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+If anything, Ohanian credits Twitter (now called X) with coming up with the best system for moderation so far.
+
+“Community Notes, I personally think is a good — it’s the best measure I’ve seen yet. And frankly, I wish we had thought of it first,” he said.
+
+Still, he called out the notion that a platform, like X, can be a town square.
+
+“The public square [analogy]…falls flat. Because if that then implies that it’s a public square, which means like, what? a town or a city? If you’re the person
+in charge of it, you’re the mayor. But there’s no democratic election,” Ohanian pointed out. “You’re a CEO. So then you’re like the king? If you want to lean
+into the town square thing, fine. Just own it and say, yeah, it’s a town square and I am the infinite dictator, tyrant of it.”
+</item 15>
+
+<item 16>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Neither is recycling press releases as posts. To keep up with the evolving culture, candidates are expected to be content creators as much as they are
+politicians, regardless of the social media platform they’re using. Authenticity is currency online, even if it’s manufactured by a team of strategists.
+Candidates don’t need to have the innate knack for posting for successful campaigns, Riedl said, as long as they hire someone who does.
+
+Gen Z voters are particularly resistant to flagrant pandering, and quick to shut down any forced pop culture reference as cringe. Cringe exists across party
+lines — Hillary Clinton’s “Pokémon Go to the polls” still haunts the internet — but candidates don’t need to rely on youth culture to build followings.
+
+Memeing throughout his campaign worked for Fetterman, Henry said, because that dry humor aligns with his background as “a guy from rugged Pennsylvania” who
+“doesn’t try to act cool.”
+</item 16>
+
+<item 17>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“The amount of media and content that we consume, political and cultural, where people get their information … It’s getting more and more intertwined,” Henry
+said. “To be effective ideologically, when it comes to campaigns and these wins that we want, we have to understand how these ecosystems work, and be
+strategically using them or else we risk being left behind.”
+
+Engaging with voters online requires more than just working with popular creators. In Ramaswamy’s case, an endorsement from Jake Paul only drove animosity from
+TikTok viewers. While his older brother, Logan Paul, has made the occasional social commentary on his podcast, the younger Paul has rarely engaged with politics
+or social issues. Jake Paul is generally disliked online for the running list of allegations against him, including sexual assault accusations.
+
+The Paul brothers have a reputation of promoting anyone and anything for a paycheck, and when Jake Paul posted a political endorsement out of the blue, viewers
+immediately questioned how much Ramaswamy paid him.
+</item 17>
+
+<item 18>
+Tesla ‘digs its own grave with the Cybertruck,’ Convoy collapses and Rivian scores a win at Rebelle (TechCrunch, 2023-10-22T19:15:29+00:00)
+The former Amazon and Google executive, who has a background in strategy and management consulting, told TechCrunch that when he was struck by the urge to start
+a company, he researched the money-attracting industries of the world, and then, using AngelList, saw how many companies were trying to disrupt those
+industries.
+
+Here’s the nugget:
+
+His search yielded thousands of companies that were working on industries ranging from telecommunications and fashion to video games and food. Billions of
+dollars were going into trucking each year but fewer than 30 startups showed an interest in the field.
+
+“I saw a massive opportunity and few people going after it,” Lewis told TechCrunch.
+
+And then later, when asked if his method of deciding on a direction for a startup is still a good method, Lewis said, in short, yes. Read the whole interview
+from May 2022 here.
+
+Other deals that got our attention . . .
+</item 18>
+
+<item 19>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+He has also proposed barring anyone under 25 from voting, unless they serve in the military or pass a civics exam.
+
+His first videos portray him as the one candidate who cares about America’s youth. While his Republican colleagues have largely shunned TikTok, Ramaswamy is
+presenting himself as one of the Cool Politicians who will actually use it.
+
+“We have a generation of politicians that is badly out of touch,” Ramaswamy said in his inaugural video, which did not describe his policy stances.
+
+@jakepaul Getting Vivek on Tik Tok because i believe our politicians of the future should connect with gen z and milennials on social where we all live and
+breathe. Its bizarre that in this day and age our presidents have no connection with us via social. Only the occasional tweets.
+</item 19>
+
+<item 20>
+Can anyone survive Fortnite as a job? (Polygon, 2023-10-19T16:01:20+00:00)
+While the playing habits of a Twitch streamer don’t represent the average player by any means, content creators certainly shape public opinion about games.
+
+“Negative sentiment is very profitable,” says the AAA game developer, who noted that social media platforms are built to highlight popular — and sometimes
+caustic — content. This dynamic sets up an inherent tension between game developers and hardcore players like Twitch streamers, who are not the main audience of
+most games but are often some of the most visible players.
+
+“I don’t at all think that streamers are embodying some typical player behaviors, like ‘Brandon,’” the developer continues, posing a name for an imaginary
+everyday consumer. “There’s definitely a model of consumers nowadays who probably parrot those sentiments. They did not arrive at those conclusions themselves.”
+
+“There is inherently [a] vicious and negative cycle for everyone involved, for how live service interacts with Twitch as a medium”
+
+The misinformation will vary, but Twitch both shapes that discourse while also becoming the very metric that people use to make sense of a game’s situation.
+</item 20>
+
+<item 21>
+Temu was the most-downloaded iPhone app in the U.S. in 2023 (TechCrunch, 2023-12-12T16:47:19+00:00)
+It also points to the growing demand for apps from Chinese firms, like ByteDance, which are attracting younger users’ attention along with government scrutiny,
+with TikTok being banned from a number of government devices over concerns about its China ties. Montana also attempted to ban TikTok in its state, but that
+ruling was put on hold by the courts for the time being as TikTok’s lawsuit progresses.
+
+The negative attention TikTok has received in the year may account for its slip from being the No. 1 app last year to now the No. 5 app. But U.S. consumers
+haven’t sworn off Chinese apps by the looks of things, given Temu’s No. 1 position. Data from Apptopia, reported by Bloomberg, noted that consumers were
+spending 18 minutes per day in Temu’s app, compared with 10 minutes in Amazon. Younger users spent even higher amounts of time, at 19 minutes per day, on
+average.
+</item 21>
+
+<item 22>
+A provocative role for technologists in product innovation (TechCrunch, 2023-12-21T16:35:31+00:00)
+The specifics of the process and technologies are only important as they pertain to how well they solve the problem, the costs to do so, and the overall end
+user experience.
+
+Product innovation is experimental and should not always be expected to yield productive results. It requires a learning curve and patience, as the outcomes are
+often ambiguous and unknown. Business leadership can struggle with this perspective because it is indefinite (in terms of results and timelines), and it is
+challenging to translate pure technology innovation into value creation. A gap opens between technology and product teams wherein technology teams strain to
+articulate the capabilities and value of a technology innovation, leading to unfilled promises and the perception of “technology for the sake of technology” or
+quips like “a solution looking for a problem.”
+
+The current hype cycle in AI serves as a great concrete example. For technology or product executives, the challenge is how to do more than check the AI box —
+it’s about how to meaningfully incorporate AI into a product. Instead of forcing a technology onto a product, the design process flows to the technologies.
+</item 22>
+
+<item 23>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+CEO Daniel Ek echoed that sentiment. “We’re constantly finding new ways to bring more efficiencies out of the business… We’ve seen some improvements, but you
+should expect us to continue to look for more improvements going forward because that’s just our modus operandi.”
+
+While Ek and Vogel really hammered that “efficiency” theme (according to my transcript, they said the word more than 30 times over the course of the 50-minute
+call), what was left unsaid about podcasting spoke louder. In the past, they would excitedly tout how many millions of podcasts were on the platform, the latest
+new celebrity show, and the area’s explosive growth. But as investors have run out of patience for the time and money such ambitions required, the company’s
+leadership changed its tune.
+
+Rather than emphasizing, say, its new revenue sharing deal with Trevor Noah or the reliability of The Ringer, Ek pointed to Spotify’s new AI-driven translation
+product.
+</item 23>
+
+<item 24>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+A social social network network: Lauren reports that a former TikTok employee is building a social app for content creators to network and “spill the tea,” so
+creators can help each other out making better, more engaging content.
+
+X may go ad-free?: It appears that X (formerly Twitter) is testing three tiers of its Premium service, its CEO says. Under the hood, code shows one tier may be
+ad-free. If it’s also troll free, please take my money right now.
+
+Top reads on TechCrunch this week
+
+A lot of amazing news on the site this week, but if we go by the raw numbers, here are the most popular stories — the ones that I didn’t already cover above,
+that is.
+
+Passwords? We don’t need no steenkin’ passwords: Passkeys are a phishing-resistant alternative to passwords that allow users to sign in to accounts using the
+same biometrics or PINs they use to unlock their devices or with a physical security key. Google is now making it the default sign-in method for all users.
+</item 24>
+
+<item 25>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+They soon realized that China had entered a new era, where the regulatory hurdles for running a startup have significantly heightened.
+
+The year 2022 saw just $14.5 billion invested in Chinese companies by U.S.-headquartered VCs, compared to $45.4 billion the year before.
+
+To launch an AI service in China, for example, a company needs to navigate a multitude of complications, which can include obtaining a license for its large
+language model, seeking regulatory approval for its algorithms and implementing a costly censorship mechanism to comply with censorship requirements.
+
+“You need to pick sides. You either focus on China or go overseas, otherwise, you end up doing double the workload but with a lot less funding secured from the
+last two years,” said one of the five China-based VCs we interviewed for the story. We also spoke to six diaspora Chinese entrepreneurs. Due to the sensitivity
+of the topic, all of them have asked to remain anonymous.
+
+Some ambitious, well-funded AI startups want to target both sides.
+</item 25>
+
+<item 26>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Jacquelyn has been on the ground at the Southern District of New York courthouse, listening in to the trial in the same room as Bankman-Fried, so there was lots
+to talk about.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+Here are a few highlights from this week:
+
+Inside the SBF trial: Rebecca and Jacquelyn report on the second day of the SBF and FTX trial. The prosecution painted Bankman-Fried as someone who knowingly
+committed fraud to achieve great wealth, power and influence, while the defense countered that the FTX founder acted in good faith, never meant to commit fraud
+or steal and basically got in over his head.
+</item 26>
+
+<item 27>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Critics on both the right and the left described the launch as a disaster.
+
+Conservative organizations have proven especially out of their depth when facing the wrath of extremely online social media users, who mobilize trolling for
+social justice. In 2020, TikTok users reserved hundreds of tickets for a Trump rally and never showed up, leaving the president to face swaths of empty seats.
+When a Texas anti-abortion group opened an anonymous tip form to enforce the state’s ban on abortion after six weeks, Gen Z activists flooded the site with
+Shrek porn. This year, TikTok and Twitter users shut down the Missouri attorney general’s tip form for reporting clinics that provide gender-affirming care.
+Within days of launching, the site was spammed with fanfiction, satirical anecdotes about kids getting “transed” and fanfiction. The attorney general’s press
+secretary blamed the site’s downfall on activists “hacking the system.”
+</item 27>
+
+<item 28>
+Dropout’s dropping CollegeHumor on its 5th anniversary — here’s why and what the future holds (Polygon, 2023-09-26T17:35:00+00:00)
+But we’ve given them names and voices. And now we’ll see! Now we’ll see how glib they are!
+
+Reich: David Attenborough couldn’t do this!
+
+Sam, that reminds me of something you said to NPR earlier this year, about how you found success with Dropout in, instead of going broad for the viral video,
+going for “something that feels special to a small group of people.” Has five years of Dropout inspired any advice for creators, or producers, or fans —
+basically anyone who’s looking to get away from algorithmically powered viral demand, to other platform structures?
+
+Reich: My advice is find a better business model. I think we live in an era of online content right now that is being defined and shaped by algorithms. And
+that’s true no matter the platform. I think different platforms are shaping content in different ways, and that’s kind of exciting as a creator. Like, Which of
+these sports am I most excited to play?
+</item 28>
+
+<item 29>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+To produce TikTok’s new report, which you can read in full here, Luminate researchers studied data from the US, UK, Germany, Brazil and Indonesia, as well as
+global data, for a 12-month period from July 1, 2022 to June 30, 2023, and found that “compared to average consumers, TikTok users are significantly more likely
+to be music streamers”.
+
+We know that TikTok counted 150 million users in the United States as of February 2023, which means that, if we look at this stat through the lens of the
+Luminate analysis, then at this point it appears that approximately 93 million TikTok users in the US are paying for a subscription to one of the various
+streaming services available in the United States, including Spotify, Apple Music and others.
+</item 29>
+
+<item 30>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Oz. But his TikTok presence consisted of reformatted TV ads, rants attacking his opponent, now-Senator Fetterman, and unrelatable videos that inadvertently
+portrayed him as wealthy and out of touch.
+
+There have been Republican outliers who managed to build significant followings, but so far, none have managed to turn their social engagement into votes the
+way Trump’s Twitter account did in 2016. Pennsylvania Sen. Doug Mastriano shunned traditional media during the race, instead relying on Facebook Live to build a
+far-right grassroots network that secured him the Republican nomination in the state’s most recent gubernatorial race. He still lost to Josh Shapiro, whose
+campaign focused on reaching young voters through collaborations with Gen Z for Change, visiting college campuses and posting updates on BeReal.
+
+There’s clearly an audience for right-wing ideology online, as conservative influencers continue to build massive platforms, largely by provoking outrage.
+</item 30>
+
+<item 31>
+Pebble, the Twitter alternative previously known as T2, is shutting down (TechCrunch, 2023-10-24T16:00:41+00:00)
+“I think the competitive landscape evolved faster than we had thought,” he explains. “I didn’t think that quite as many people — established organizations and
+newcomers — would try to do the same thing that we were doing and in very similar ways.”
+
+Today, the market for Twitter alternatives is a crowded one, to say the least. There are numerous services for consumers to try, including the open source-based
+platform Mastodon, a soon-to-be decentralized system from Bluesky, plus smaller startups like Spill, Spoutible and Post, as well as a new app from Meta called
+Instagram Threads.
+
+Then, of course, there’s the X factor to consider. The default platform for short posts retains some pull, despite — or perhaps because of — new owner Elon
+Musk’s antics. Though the company may not have yet succeeded from a business and financial perspective, it’s been hard for others to duplicate its function as a
+breaking news platform and place for spirited debates.
+</item 31>
+
+<item 32>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+But costs are only one area where we have unanswered questions. We are also incredibly curious about how startups should approach building tools for AI
+technologies, how defensible startup-focused AI work will prove, and how upstart tech companies should charge for AI-powered tooling.
+
+With the amount of capital flowing to startups working with and building AI today, it’s critical that we understand the market as best we can. So we asked a
+number of venture capitalists who are active in the AI investing space to walk us through what they are seeing in the market today.
+
+What we learned from the investing side of the house was useful. Rick Grinnell, founder and managing partner at Glasswing Ventures, said that within the new AI
+tech stack, “most of the opportunity lies in the application layer,” where “the best applications will harness their in-house expertise to build specialized
+middle-layer tooling and blend them with the appropriate foundational models.”
+</item 32>
+
+<item 33>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+Before Rogier launched MasterClass, he worked as a VC, and — through his connections — he received a $500,000 seed round before he even had an idea for a
+company.
+
+And on Chain Reaction, Jacquelyn interviewed David Pakman, managing partner and head of venture investments at CoinFund. Before CoinFund, David spent 14 years
+at the venture capital firm Venrock. He also led the Series A and B rounds at Dollar Shave Club, which was acquired by Unilever for $1 billion. And, in 1991,
+David co-created Apple Music when he was part of Apple’s system software product marketing group.
+
+TechCrunch+
+
+TC+ subscribers get access to in-depth commentary, analysis and surveys — which you know if you’re already a subscriber. If you’re not, consider signing up.
+</item 33>
+
+<item 34>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+If you’re not, consider signing up. Here are a few highlights from this week:
+
+Bitcoin surge: Jacquelyn writes about Bitcoin’s rapid-fire ascent to $44,000, which came on the back of roughly 25% gains in the last week. Her piece for TC+
+explores what’s driving Bitcoin’s price ascent and similar value gains among other tokens — and whether the good vibes continue into the new year.
+
+To swap, or not to swap: Tim reports on how consumer EV battery swapping could usher in freedom for a wide range of people, allowing them to participate in the
+EV transition in ways that traditional built-in batteries don’t. The challenge is making the unit economics work.
+
+Coinbase and Robin and the future of fintech: Investors are betting that consumer trading of equity and crypto is rebounding and are consequently pushing the
+value of some former startups higher, Alex writes. That could spell good news for startups offering consumer trading services directly — or indirectly, for that
+matter.
+</item 34>
+
+<item 35>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+Brands, too: Remember the Tony the Tiger VTuber in August of 2022?
+
+Many creators that jumped on the trend have since stopped using their avatars, but at the start of the COVID-19 pandemic, there was a large increase in VTubers
+on Twitch and other streaming platforms, like YouTube, as models and equipment became more accessible to the general public. Twitch has since gone on to
+highlight a wide variety of VTubers through its VTuber Takeover promotion, which most recently ran in August. Twitch also reported that VTubing-related content
+on the platform shot up by some 350% between January and August 2022. Despite this, some have argued that the VTubing bubble has all but burst.
+
+Polygon is celebrating TwitchCon 2023 with a package of stories covering streaming trends and news from the show. Check it out!
+
+“I do feel that VTubing has become less novel as the market has become more saturated,” says a streamer with agency Nijisanji who is not approved to speak
+publicly.
+</item 35>
+
+<item 36>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+More broadly, you might ponder a bigger question.
+
+When the day comes that YouTube asks the world’s biggest superstars to wholeheartedly embrace ‘Dream Track’, will Google’s recent US Copyright Office filing
+give said superstars – and their record companies – pause for thought?
+
+JKBX (pronounced "Jukebox") unlocks shared value from things people love by offering consumers access to music as an asset class — it calls them Royalty Shares.
+In short: JKBX makes it possible for you to invest in music the same way you invest in stocks and other securities.Music Business Worldwide
+</item 36>
+
+<item 37>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+I think even swifter than we realize.” The war in the Middle East may even be the tipping point, he theorized, as it’s now “abundantly clear” that we need
+something better to figure out the world than the platforms we have today.
+
+The founder, as you may recall, notably resigned from Reddit’s board in 2020 over differences of opinion on moderation and wanting to crack down on communities
+about violence and hate. It was a moment where he seemed to be reckoning with what his platform had wrought. At the time, he asked for his board seat to be
+replaced by a Black board member. The company agreed, appointing its first Black board member with Y Combinator partner Michael Seibel.
+
+Reddit also later banned several toxic communities, including r/donaldtrup following violence at the U.S. Capitol, and Ohanian says that the site has “gotten
+demonstrably better,” since, as well as better as a business.
+</item 37>
+
+<item 38>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Hiya, folks, and welcome to Week in Review (WiR), TechCrunch’s digest of the past week in tech news. It’s TC’s column that highlights the major stories over the
+past few days, and — we humbly submit — it’s a darn useful resource for folks on the go.
+
+This week, we cover Sam Altman backing a teen’s AI startup, Google’s hardware event (and first impressions of the Pixel 8 Pro), Flexport drama, and the ongoing
+FTX fallout. Also on the agenda: Gmail’s harsher rules to prevent spam, TikTok testing an ad-free subscription plan, and LinkedIn going big on AI tools. And
+that’s not all.
+
+If you haven’t, sign up here to get WiR in your inbox every Saturday. And if you have, our thanks. Now, let’s get on with the news.
+</item 38>
+
+<item 39>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+In October 2019, Epic internally said it might pursue an aggressive pursuit model with the Epic Games Store, where it would aggressively pay more for exclusive
+games and really pull in more and more users. Are you in the aggressive pursuit model?
+
+No, we’re in a different model, which is called the “Ridiculously aggressive pursuit model.” If it’s a 10-slide deck, that’s on slide 11.
+
+Did you get a bingo on your Verge bingo card?
+
+Yeah, I think it was almost a complete shutout. I think there was only one cell in the entire board that was missing. I was really impressed — the thing for
+that bingo card that really impressed me was “lick the cookie.” Do you remember? You may not even be old enough, but “lick the cookie” was in the 1999 US v.
+Microsoft antitrust trial.
+</item 39>
+
+<item 40>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+First, the application must address a real enterprise pain point prioritized by executives. Second, to provide tangible benefits and long-term differentiation,
+the application should be composed of cutting-edge models that fit the specific and unique needs of the software. It’s not enough to simply plug into OpenAI;
+rather, applications should choose their models intentionally while balancing cost, compute, and performance.
+
+Third, the application is only as sophisticated as the data that it is fed. Proprietary data is necessary for specific and relevant insights and to ensure
+others cannot replicate the final product. To this end, in-house middle-layer capabilities provide a competitive edge while harnessing the power of foundational
+models. Finally, due to the inevitable margin of error of generative AI, the niche market must tolerate imprecision, which is inherently found in subjective and
+ambiguous content, like sales or marketing.
+
+How much technical competence can startups presume that their future enterprise AI customers will have in-house, and how much does that presumed expertise guide
+startup product selection and go-to-market motion?
+</item 40>
+
+<item 41>
+With Amo, the founder of Zenly wants to make social apps social again (TechCrunch, 2023-11-19T12:07:20+00:00)
+According to him, the current generation of social networks are very passive. You don’t have to do much to spend two hours on TikTok or YouTube because these
+companies want you to spend as much time as possible in these apps. “We aspire to go back to these earlier precepts and make them work,” Martin said.
+
+That’s also the reason why Amo doesn’t want you to spend hours in the app. When you have a few minutes, you can open the app to check what’s new on your
+friends’ profiles by swiping up on the notification cards.
+
+When you’ve reached the last card, ID shows you a message that says “get some fresh air.” And then, the app closes itself. You’re back on the home screen, you
+can put your phone back in your pocket.
+
+Amo & ID
+
+ID is an opinionated take on social apps, but is it going to work?
+</item 41>
+
+<item 42>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+That in and of itself is probably still largely unexplored territory that will see a lot of change and maturing in the next few years. One key aspect there
+might be cost monitoring as well since companies like OpenAI charge largely “by the token,” which is a very different metric than most cloud computing.
+
+What can be done to ensure industry-specific startups that tune generative AI models for a specific niche will prove defensible?
+</item 42>
+
+<item 43>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+She claimed X was seeing 500 million posts per day on the platform. So who’s right? Beats us.
+
+Former NSA director’s startup shutters: IronNet, a once-promising cybersecurity startup founded by a former NSA director, has shuttered and laid off its
+remaining staff following its collapse. The Virginia-based IronNet was founded in 2014 by retired four-star general Keith Alexander and had raised more than
+$400 million in funding. But IronNet failed to gain traction after going public in August 2021, and its stock price continued to steeply decline in the wake of
+an initial spike.
+
+Audio
+
+On the hunt for a new podcast to listen to while you work out, do the dishes or rake the leaves (now that fall’s arrived)? Look no further than TechCrunch’s
+roster, which covers the world of startups, the blockchain and more.
+</item 43>
+
+<item 44>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Ken Russell, a Democrat who left the Miami City Commission to run for a House seat in 2022, leaned into the cringe with bait-and-switch thirst traps reminding
+viewers to vote. In another video titled “Appealing to the youth vote,” he recreated Steve Buscemi’s “How do you do, fellow kids?” to encourage voter
+registration.
+
+Audience engagement doesn’t rely on forcing fun. North Carolina Rep. Jeff Jackson updates constituents on TikTok, breaking down topics like the government
+shutdown in concise explanatory videos without the frills of internet humor. Even though his content is less exciting, his account has over 2.2 million
+followers.
+
+As an alternative to the politician-influencer, some campaigns are focusing on mobilizing creators who already have an engaged audience. Biden is not on TikTok,
+but his digital strategy team is building an “army of influencers” to reach viewers who wouldn’t typically keep up with the White House press corps.
+</item 44>
+
+<item 45>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+And it was an incredible new revenue stream for everyone. AI is that with new super tools.”
+
+Kyncl was referring to YouTube’s Content ID system, which scours uploaded videos for copyrighted content (video and audio), then offers the copyright owner the
+option to monetize that video, or to request that it be taken down. The innovative system has essentially allowed YouTube users to upload content without paying
+much attention to copyright, while ensuring that copyright owners are paid.
+
+When it comes to the proliferation of AI, “we need to approach it with the same thoughtfulness, and we have to make sure that artists have a choice,” Kyncl
+added.
+
+And he made it clear that, in his view, simply rejecting AI and fighting against it is not an option.
+
+“You have to embrace technology, because it’s not like you can put technology in a bottle. The genie is not going back.”
+</item 45>
+
+<item 46>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+“I think VTubing content has become kind of stale,” she says. She goes on to mention that a lot of VTubers tend to be boxed into specific kinds of content —
+playing Minecraft or popular FPS games like Valorant. “In order for VTubing to continue to grow, VTubers need to branch out and create more content in line with
+other influencers,” she says.
+
+“Agencies should allow for talents to experiment, so long as it isn’t hurting anyone”
+
+Mugi says that if VTubers took cues from other content creators and explored options like lore analysis videos or short-form reviews, the scene wouldn’t be as
+stagnant. And like other VTubers, Mugi has dreams of going corporate. Already relatively successful, having created her own storefront that hosts collaborations
+and merchandise featuring other VTubers and artists, she has auditioned for several major agencies. She says that one agency asked if she would close down her
+business if she passed the interview phase and became one of its talents.
+</item 46>
+
+<item 47>
+What’s at stake in the Supreme Court’s landmark social media case (TechCrunch, 2023-10-04T20:07:42+00:00)
+Are the Texas and Florida laws identical?
+
+The two laws — HB 20 in Texas and SB 7072 in Florida — are very similar in their origins and intentions, but diverge slightly in how they seek to restrict
+social media platforms.
+
+In both instances, a provision of the state law instructed social media companies to stop removing certain kinds of content. In Texas, the law told social media
+companies that they could no longer remove or demonetize content based on the “viewpoint represented in the user’s expression.” In Florida, the law would stop
+social media companies from banning political candidates or removing or restricting their content. The laws have a few other provisions, but the idea is that
+conservative politicians in those states want to regulate how tech companies interact with political content.
+
+“They’re in the same ballpark, the sentiment is the same,” Barrett said.
+</item 47>
+
+<item 48>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+“Gen Z does not put up with bullshit,” Henry said. “That’s so much of what platforms like TikTok and Twitch cater to, and why they thrive on those platforms,
+because you can just pull out your phone and be talking while you’re getting ready with the worst angle possible. Republicans in general, it goes against so
+much of how they act otherwise and young people know that.”
+
+Ramaswamy’s TikTok strategy is puzzling; he appears to be trying to replicate the success of previous candidates who became social media stars over the course
+of their campaigns, but his TikTok presence conflicts with his own stances on social media and young voters. His communications director, Tricia McLaughlin, did
+not immediately respond to TechCrunch’s request for comment.
+
+Like many of his Republican colleagues, Ramaswamy has accused TikTok of being a threat to national security, and during a town hall days before he launched his
+account, described the platform as “digital fentanyl” from China.
+</item 48>
+
+<item 49>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Republicans still don’t know how to talk to young voters online Vivek Ramaswamy struggles to gain an edge in the face of TikTok trolls
+
+In an appeal to younger voters, Republican presidential candidate Vivek Ramaswamy — who proposed raising the voting age to 25 — launched his TikTok presence
+with an endorsement from Jake Paul, the YouTuber turned boxer who built a content empire by marketing to children.
+
+Ramaswamy is one of the only Republican politicians making an effort to connect with Gen Z and young millennials, a demographic that overwhelmingly supported
+Democrats in the midterm elections. Despite the popularity and growing influence of far-right creators online, Republican candidates have historically failed to
+engage young voters on social media, if they try at all.
+
+While Democratic politicians like Rep. Alexandria Ocasio-Cortez and Sen. John Fetterman’s social media campaign strategies set the blueprint for politicians
+seeking internet fame, Republicans have neglected to adopt the digital fluency required to secure the youth vote.
+</item 49>
+
+<item 50>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“This preference, combined with the high volume of music discovery and sharing activity on TikTok, can be harnessed to grow a fanbase without borders and has
+helped to launch global artists from genres such as Reggaeton, Afrobeats and K-Pop.”
+
+The report added: “TikTok users‘ interest in international music is evident in their music streaming preferences. Compared to the average music listener across
+each market, this audience is more likely to indicate that ‘access to music by global artists’ is an extremely important factor when selecting a music streaming
+service.”
+
+“TikTok is already famous for being the launchpad for creating viral hits and breaking new artists, but we wanted to understand how TikTok and its users impact
+the music industry more broadly,” Ole Obermann, TikTok’s Global Head of Music, said in a statement.
+</item 50>
+
+<item 51>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“Luminate’s findings prove what we had long known: that TikTok is the driving force behind music discovery in the industry, and that TikTok users are active,
+engaged and highly valuable drivers of music industry revenues.” Ole Obermann, TikTok
+
+This past summer, TikTok launched its own music streaming service, TikTok Music, a premium-only service initially available in Brazil and Indonesia, featuring
+the catalogs of all three of the major global recording companies (Sony Music, Warner Music Group and Universal Music Group).
+
+It quickly expanded the service to Australia, Mexico and Singapore, though without Universal’s catalog.
+
+This past October, TikTok announced it would be holding its first-ever live music event, dubbed “TikTok In The Mix.”
+</item 51>
+
+<item 52>
+Deepfake election risks trigger EU call for more generative AI safeguards (TechCrunch, 2023-09-26T17:26:57+00:00)
+The report also claims Microsoft has set up a “robust user reporting and appeal process to review and respond to user concerns of harmful or misleading
+content”.
+
+Over the next six months, the report does not commit Bing Search to any specific additional steps to address risk attached to the use of generative AI —
+Microsoft just says it’s keeping a watching brief, writing: “Bing is regularly reviewing and evaluating its policies and practices related to existing and new
+Bing features and adjusts and updates policies as needed.”
+
+TikTok
+
+In its report, TikTok focuses on AI-generated content in the context of ensuring the “integrity” of its services — flagging a recent update to its community
+guidelines which also saw it modify its synthetic media policy “to address the use of content created or modified by AI technology on our platform”.
+
+“While we welcome the creativity that new AI may unlock, in line with our updated policy, users must proactively disclose when their content is AI-generated or
+manipulated but shows realistic scenes,” it also writes.
+</item 52>
+
+<item 53>
+‘Mass breach of privacy’: TikTok under fire for tracking users online (The Age, 2023-12-25T18:00:00+00:00)
+Strategic Policy Institute researcher Samantha Hoffman said the data collected by TikTok’s pixel was similar to that of US-based tech giants Google and Meta,
+but the difference was “the intent”.
+
+Advertising data had “incredible propaganda value”, she said. Loading “If you think about that, plus the access that TikTok is required to give the Chinese
+government, that’s the problem.” In November 2022, TikTok changed its privacy policy to make it explicitly clear user data can be accessed by some employees
+from across the world, including China. “They talk about how even data collected overseas can be used by the company and its partners, and would be kept private
+unless security organisations make demands of it,” Hoffman said.
+</item 53>
+
+<item 54>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+On Twitch, debate streams between creators across the political spectrum are wildly popular, and between May 2021 and May 2022, the site’s Politics tag tripled
+in viewership. The platform itself is a haven for some figures on the far-right who have since been kicked off of YouTube.
+
+Republican politicians, however, have failed to establish the rapport with young voters that their Democratic counterparts have. While X, the site previously
+known as Twitter, has become a conservative incubator, Republican politicians haven’t taken advantage of the platform the way far-right influencers have.
+
+That gap in digital fluency is most apparent in the way politicians approach new platforms. In 2020, Ocasio-Cortez encouraged viewers to vote in the upcoming
+presidential election by inviting the most popular streamers to play the pandemic’s most popular game on her newly launched Twitch channel.
+</item 54>
+
+<item 55>
+Sony Music’s artists aren’t involved in YouTube’s new voice-cloning AI experiment. Not unrelated: Google’s recent filing with the US Copyright Office. (Music
+Business Worldwide, 2023-11-23T18:48:48+00:00)
+Especially when SME has shown its own willingness to experiment with generative AI music platforms this week via this announcement about a project with David
+Gilmour, The Orb, and AI company Vermillio?
+
+Sources close to Sony Music’s HQ in New York have suggested to MBW that the company is taking an “artist-led” approach to its experiments with any AI platform
+that can manipulate the work (or voice) of its roster.
+
+In the case of YouTube’s ‘Dream Track‘, MBW understands, SME first offered the opportunity to participate to a number of its artists, but this group of acts did
+not show enthusiasm about participating.
+
+(If one of these artists was Bad Bunny, signed to Sony’s The Orchard, you can see why: The Puerto Rican superstar expressed fury the other week about a popular
+track on TikTok that had cloned his vocal stylings via AI.)
+</item 55>
+
+<item 56>
+VTubers have reached their inevitable conclusion (Polygon, 2023-10-19T16:01:50+00:00)
+“Let people fail and still have that opportunity for growth in the future. More risk-taking and trying to branch out in other ways instead of simply just
+streaming or following preestablished methods.”
+
+According to both of the people we interviewed for this story, this is an agreed-upon sentiment — that to prevent further stagnation, this not-so-niche form of
+content creation needs to reinvent itself and allow more freedom to its talents. Time will tell if larger agencies like Hololive (which reported 50% growth in
+its 2023 financial report) and Nijisanji will allow their talents to break the mold.
+</item 56>
+
+<item 57>
+Google fakes an AI demo, Grand Theft Auto VI goes viral and Spotify cuts jobs (TechCrunch, 2023-12-09T21:16:17+00:00)
+The Bengaluru-headquartered startup employed about 150 people at peak and raised more than $130 million over its eight-year journey.
+
+Audio
+
+TechCrunch’s roster of podcast episodes keeps growing — just in time for weekend listening.
+
+Equity featured a throwback conversation from TechCrunch Disrupt 2023, when Alex sat down with Serhii Bohoslovskyi, the founder of a no-code app builder,
+Trible, that helps people construct online courses. The pair caught up on the state of the creator economy, the use of no-code tooling today (and how it’s
+received by nontechnical creators) and the security of startups with roots in Ukraine.
+
+Over on Found, the crew talked to David Rogier, the CEO and founder of MasterClass, a streaming platform where you can learn from the world’s experts on a range
+of topics.
+</item 57>
+
+<item 58>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+One remaining – and major – potential pitfall for TikTok has to do with the rise in tensions between China and Western countries.
+
+Amid concerns that parent company ByteDance may be sharing TikTok user data with the Chinese government, numerous governments – from the US to the European
+Union to Australia – have banned the app from government-issued devices.
+
+A small number of jurisdictions have banned or are attempting to ban TikTok altogether, including Montana and, most recently, Nepal.
+
+Cinq Music Group’s repertoire has won Grammy awards, dozens of Gold and Platinum RIAA certifications, and numerous No.1 chart positions on a variety of
+Billboard charts. Its repertoire includes heavyweights such as Bad Bunny, Janet Jackson, Daddy Yankee, T.I., Sean Kingston, Anuel, and hundreds more.Music
+Business Worldwide
+</item 58>
+
+<item 59>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+This is Hot Pod, The Verge’s newsletter about podcasting and the audio industry. Sign up here for more.
+
+In pursuit of profit, Spotify looks to AI rather than original content for its podcasting future
+
+Spotify shareholders are thrilled with the company reporting an operating profit for the first time in a year, sending the stock up nearly 10 percent on the
+news. The revenue bump was in large part due to the streamer’s $1 price increase earlier this year, but executives also pointed to the downsizing of the podcast
+operation — which included hundreds of layoffs and the dissolution of Gimlet and Parcast — as a contributing factor. The adage that “content is king” no longer
+applies, with Spotify increasingly focusing on tools that will scale the business rather than content that will attract listeners.
+
+In a call with investors, CFO Paul Vogel said that after being a real “drag” on profit margins in the past, podcasting will soon break even and turn toward
+profitability. CEO Daniel Ek echoed that sentiment.
+</item 59>
+
+<item 60>
+Warner Music Group boss Robert Kyncl on AI, why labels still exist, and 2 other things we learned from his Q&A at the Code Conference (Music Business Worldwide,
+2023-09-28T23:37:22+00:00)
+But what was maybe more surprising – for a techie like Kyncl, anyway – was his rational, level-headed explanation for why traditional music labels continue to
+be relevant, and continue to thrive, in the current music ecosystem.
+
+With the arrival of digital platforms, including open ones like YouTube and SoundCloud – and with the proliferation of indie music distribution platforms like
+DistroKid and TikTok’s SoundOn – it’s inevitable that music biz observers from the world of tech like to speculating about the possibility that music labels
+could, in the long-term, be headed for irrelevance.
+
+In a world where anyone can record music using a desktop audio workstation (DAW) and upload it direct to YouTube, or to Spotify via a distribution platform,
+labels have little left to do, the argument goes.
+
+Kyncl offered strong a counterpoint to this argument at Code Media, drawing a parallel between music labels today and the advertising industry a decade or two
+ago.
+</item 60>
+
+<item 61>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+It won’t always be right, though. But it becomes the epicenter of where the conversation is. And then I’ll think what percentage of our population really wants
+to earnestly take the breath and say, let me stop doomscrolling, and let me just wait until people can do the work, synthesize it and then help me react?” he
+continued.
+
+“We are also so plugged into all these storylines, whether it’s from traditional media, whether it’s from user-generated — someone on their phone, you know,
+posting to a Telegram group. We are overwhelmed and overloaded, and it’s unfortunately appealing to the worst parts of a lot of our instincts,” Ohanian added.
+
+In part, some of the issues around how social media platforms developed had to do with how the companies were originally developed. Ohanian, for example, shared
+that Reddit grew out of his running of a forum site in college, when he believed that online community felt as real as offline.
+</item 61>
+
+<item 62>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Do you expect startups to build striated solutions for individual layers of the LLM stack, or pursue a more vertical approach?
+
+While there are startups specializing in parts of the stack (like Pinecone), Valor’s focus is on applied AI, which we define as AI that is solving a customer
+problem. Saile.ai is a good example — it uses AI to generate closeable leads for the Fortune 500. Or Funding U using its own trained dataset to create a more
+useful credit risk score. Or Allelica, using AI on treatment solutions applied to individual DNA to find the best medical treatment for you personally in a
+given situation.
+
+Companies like Datadog are building products to support the expanding AI market, including releasing an LLM observability tool. Will efforts like what Datadog
+has built (and similar output from large/incumbent tech powers) curtail the market area where startups can build and compete?
+
+Tools like Datadog can only help the acceptance of AI tools if they succeed in monitoring AI performance bottlenecks.
+</item 62>
+
+<item 63>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+We need robust tools and platforms to enable broader utilization among businesses and individuals. Startups have the opportunity here to act quickly, find novel
+solutions to emerging problems, and define new categories.
+
+Interestingly, even large tech companies recognize the gaps in their services and have begun investing heavily in startups alongside VCs. These companies apply
+AI to their internal processes and thus see the value startups bring to LLM deployment and integration. Consider the recent investments from Microsoft, Nvidia,
+and Salesforce into companies like Inflection AI and Cohere.
+
+What can be done to ensure industry-specific startups that tune generative AI models for a specific niche will prove defensible?
+
+To ensure industry-specific startups will prove defensible in the rising climate of AI integration, startups must prioritize collecting proprietary data,
+integrating a sophisticated application layer and assuring output accuracy.
+
+We have established a framework to assess the defensibility of application layers of AI companies. First, the application must address a real enterprise pain
+point prioritized by executives.
+</item 63>
+
+<item 64>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+Welcome to Startups Weekly. Sign up here to get it in your inbox every Friday.
+
+A few months ago, Alexis Ohanian, the co-founder of Reddit, tweeted that if he could go back in time and do one thing differently when he was building Reddit,
+he would have spent significantly less time attending events. Personally I have a different experience — I always regret getting on a plane (or in an Uber, for
+that matter) to go to an event. However, as I’m traveling back, I’ve never regretted it: There’s always something magical that comes out of going to an event,
+in my experience.
+
+Our TC+ team is not interested in anecdotes, however: neither mine nor Alexis’. So, like the data-driven journalists they are, they surveyed more than 50
+founders, trying to figure out whether attending events still makes sense in 2023.
+
+Spoiler alert: There isn’t a real consensus, but there are some really good pros and cons.
+</item 64>
+
+<item 65>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+(The Justice Department ultimately concluded its investigation without charging Gaetz.)
+
+Looks like Matt Gaetz foray into streaming on Twitch is working out pic.twitter.com/S4GEDbgu8v — The Serfs (@theserfstv) September 30, 2022
+
+Platform culture matters
+
+To engage with users online, politicians must understand the culture of the platform. The streamers who appeared on Ocasio-Cortez’s stream brought their own
+fans, who may not have been politically engaged at all before their favorite creator introduced it to them. As a regular gamer herself, the representative is
+also up to date on the most popular games on Twitch; in 2020, it was “Among Us,” but in her most recent stream, she played the cooperative puzzle game “Pico
+Park.” Gaetz, on the other hand, fumbled his launch by treating his stream like a podcast recording, limiting the back-and-forth banter with viewers that makes
+Twitch so engaging.
+</item 65>
+
+<item 66>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+As the 2024 election approaches, Republican candidates may again fall behind in mobilizing voters on social media platforms.
+
+Ramaswamy is also the only Republican presidential candidate to engage with TikTok, and is one of the few in his party to even have an account. His Silicon
+Valley roots as a biotech entrepreneur and millennial upbringing set him apart from the other candidates, but he faces an uphill battle in convincing Gen Z to
+like him, much less show up at the polls. Though his videos receive hundreds of thousands of views, his comments are also overrun with sex jokes.
+
+Annie Wu Henry, the digital strategist behind Fetterman’s TikTok stardom, noted that younger voters who are very online tend to value raw, unfiltered
+authenticity. They don’t see that in many older politicians, and especially not in the Republican party.
+
+“Gen Z does not put up with bullshit,” Henry said.
+</item 66>
+
+<item 67>
+The new, ‘efficient’ Spotify has a very different approach to podcasting (The Verge, 2023-10-25T16:10:29+00:00)
+He pointed to the automatic translation tool as a way of seamlessly scaling podcasts and increasing the amount of content in non-English speaking markets. He
+also expects AI will be a boon for podcast advertising, as well.
+
+“Creating a great audio ad is something that’s quite costly and quite expensive for marketers to do,” he said. “What generative AI has the promise to do is
+allow for that creative cost to come down… It [also] allows you to scale that creative in unimaginable ways. You can translate whatever creative you had into
+lots of different languages; you can use the same voice actor; but instead of producing one or two ads, you can have 1,000 or 10,000 or even 100,000 ads that
+are individually created to each user.”
+
+I would take that with a grain of salt (we know Ek loves to dream big!!), but it does underscore the newest iteration of Spotify’s podcasting business — leaner,
+less splash, and more scale.
+</item 67>
+
+<item 68>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+In the years since, Democratic campaigns have increasingly prioritized social media strategy, establishing politician-influencers who wield content for votes.
+
+A 2022 midterm report by the Alliance for Securing Democracy found that in the Senate races, 47% of Democratic candidates had TikTok accounts, compared to 12%
+of Republican candidates. Of the major party House candidates, 30% of Democrats and 10% of Republicans were on TikTok, which as a platform was most prevalent in
+gubernatorial races.
+
+Though opposition to TikTok has been bipartisan, the crusade to ban the platform over national security concerns is primarily led by Republicans at the state
+level — a position that likely factors into the party’s social media struggles with young voters.
+
+Mehmet Oz, one of the few Republican candidates on TikTok, had the advantage of already having a large social media following when he announced his candidacy
+thanks to his popularity as Dr. Oz.
+</item 68>
+
+<item 69>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Nicki Minaj is an artist who’s been embroiled in controversy throughout her career, from posting bad takes about COVID vaccines to defending her husband Kenneth
+Petty, a convicted sex offender. She may be a brilliant artist, but her problematic history makes her far from the family-friendly public figure that brands are
+more likely to endorse.
+
+But with Gag City, Minaj has brands doing all of her marketing for her. “Pink Friday 2” is an artistic marvel in itself (though I am probably biased), but the
+free promotion that it’s been getting as a viral meme is particularly astounding. Artists have spent the last few years trying to drum up engagement for their
+work by making their songs trend on TikTok, which audiences have started to resist. Gag City doesn’t bank on being the viral song of the summer to drive
+streaming numbers — the bit is removed enough for non-stans to enjoy it, while still revolving around the album it’s promoting.
+</item 69>
+
+<item 70>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+I’ve spoken to a lot of creators over the course of my career, and a common gripe seems to be that they can’t subsist off of just subs and ad revenue. They have
+to have these branded partnerships that are difficult to land for midsize creators and smaller creators. What is Twitch doing specifically to diversify its
+branded partnership content?
+
+We have this unique opportunity, being part of the third largest and fastest growing advertising business in the world, AKA Amazon. So what we’re actively
+working on is, as advertisers that come in through Amazon advertising, that they understand the magic of Twitch, that they can easily set up influencer deals
+programmatically. And ultimately, you don’t have the measurement that they expect.
+
+But because of Amazon’s diversity of advertisers, this is where before it was more focused on endemic advertisers, game publishers, et cetera.
+</item 70>
+
+<item 71>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+You cannot escape conversations about AI no matter how far or fast you run. Hyperbole abounds around what current AI tech will be able to do (revolutionize
+every industry!) and what current AI tech will be able to do (take over the world!). Closer to the ground, TechCrunch+ is working to understand where startups
+might find footholds in the market by levering large language models (LLMs), a recent and impactful new method of creating artificially intelligent software.
+
+How AI will play in startup land is not a new topic of conversation. A few years back, one venture firm asked how AI-focused startups would monetize and whether
+they would suffer from impaired margins due to costs relating to running models on behalf of customers. That conversation died down, only to come roaring back
+in recent quarters as it became clear that while LLM technology is quickly advancing, it’s hardly cheap to run in its present form.
+
+But costs are only one area where we have unanswered questions.
+</item 71>
+
+<item 72>
+CEO David Baszucki’s mission to make Roblox a billion-player platform (The Verge, 2023-10-12T14:01:00+00:00)
+How big do you see the ads business being? Is it something that could potentially be as big as your core business today?
+
+“Our CFO’s friend was ... walking by a Vans store, and younger people wanted to go in there because they were familiar with that from Vans World on Roblox.”
+
+It’s interestingly big. We’re in a great position because we generate a really good business without advertising. So it gives us an opportunity to layer this in
+for older people in a very civil way, in a very careful way. But I think it’s arguably undetermined how big it is. We will see based on the power of the
+memories that people have in their brands. Anecdotally, our CFO’s friend was in Santa Monica and walking by a Vans store, and younger people wanted to go in
+there because they were familiar with that from Vans World on Roblox. So building digital memories and connecting with brands that are fun and exciting and then
+merging that with the physical world is new, uncharted territory.
+</item 72>
+
+<item 73>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Brand Twitter tends to turn fun trends into advertising opportunities, taking organic community interactions and spitting out contrived versions clearly made to
+go viral. It may be grating, but in this case, it’s working in Minaj’s favor. This week, everyone wants to go to Gag City.
+</item 73>
+
+<item 74>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+MBW’s Stat Of The Week is a series in which we highlight a data point that deserves the attention of the global music industry. Stat Of the Week is supported by
+Cinq Music Group , a technology-driven record label, distribution, and rights management company.
+
+TikTok is in the process of reinventing itself as both a partner to music companies, and a competitor to streaming and distribution services.
+
+Now, a new market analysis sheds some light on why the ByteDance-owned short video platform has focused so intensely on expanding its services in the music
+world, with the firm reporting to be a major driver of music consumption and spending.
+
+While that may not come as a surprise to those who’ve noted the overlap between TikTok and music culture, the numbers in the analysis shine a light on the scale
+of TikTok’s influence.
+
+According to the analysis, commissioned by TikTok and carried out by US market monitor Luminate, 62% of US TikTok users pay for a music streaming service,
+compared to 43% of all consumers.
+</item 74>
+
+<item 75>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“Luminate’s findings prove what we had long known: that TikTok is the driving force behind music discovery in the industry, and that TikTok users are active,
+engaged and highly valuable drivers of music industry revenues.”
+
+The new study is part of an ongoing effort by TikTok to highlight its growing role in the development of global music culture. Last year, TikTok released a
+report asserting that 13 out of the 14 songs to reach number on the US Billboard Hot 100 in 2022 were driven by viral trends on TikTok.
+
+The data clearly shows why TikTok has focused so heavily on developing music-related services, to the point that one could be forgiven for thinking the company
+plans to reinvent itself as a part of the music industry.
+
+Last year, TikTok launched SoundOn, its own music distribution service, which has partnered with Believe-owned distro company TuneCore and Downtown
+Holdings-owned B2B tech and services company FUGA.
+</item 75>
+
+<item 76>
+Alexis Ohanian says he’s a ‘techno optimist,’ despite social media’s impact on society (TechCrunch, 2023-10-31T17:21:47+00:00)
+Though he’s glad that access to the technology has broadened, that has come with many complications.
+
+“I don’t like the idea that the internet I’m so nostalgic for was actually an ivory tower,” he said, but on the flip side, he said, we’re all exposed to more
+people, in real-time, than we could have ever fathomed. And that can put people at odds with one another and with everyone’s different versions of the truth —
+even if their truth is believing in something as far-fetched as the earth being flat, he said, pointing to one example that has a following on Reddit.
+
+Meanwhile, asking platforms like Facebook, Twitter, or Reddit to be in charge of verifying truth and accuracy is a difficult task, he said. Ohanian also called
+out TikTok as “an arm for the Chinese government” that’s really good at “feeding us what we want, when we want it” — in other words, not always a fountain of
+truth, either.
+</item 76>
+
+<item 77>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+The same month, it struck a deal with Distrokid to have indie artists upload their music to TikTok Music and to Capcut, TikTok’s video editing software, as well
+as to TikTok’s Commercial Music Library, which offers a catalog of music for brands to use in their TikTok ads.
+
+Meanwhile, TikTok parent ByteDance has launched an AI music-making app, and most recently, TikTok unveiled the “Add to Music App” feature, which enables TikTok
+users to save music they’ve discovered directly to their Apple Music, Amazon Music (Prime or Unlimited) or Spotify accounts.
+
+These new partnerships indicate that TikTok is moving away from what at times appeared to be a trying relationship with the music industry. In one notable
+incident, TikTok disabled the use of copyrighted music for users in Australia, in what the platform described as an experiment, and what many observers saw as a
+hardball tactic in its licensing negotiations with music rights holders.
+</item 77>
+
+<item 78>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+In our proprietary view of the GenAI tech stack, we categorize the landscape into four distinct layers: foundation model providers, middle-tier companies,
+end-market or top-layer applications, and full stack or end-to-end vertical companies.
+
+We think that most of the opportunity lies in the application layer, and within that layer, we believe that in the near future, the best applications will
+harness their in-house expertise to build specialized middle-layer tooling and blend them with the appropriate foundational models. These are “vertically
+integrated” or “full-stack” applications. For startups, this approach means a shorter time-to-market. Without negotiating or integrating with external entities,
+startups can innovate, iterate and deploy solutions at an accelerated pace. This speed and agility can often be the differentiating factor in capturing market
+share or meeting a critical market need before competitors.
+
+On the other hand, we view the middle layer as a conduit, connecting the foundational aspects of AI with the refined specialized application layer.
+</item 78>
+
+<item 79>
+Meta turned a blind eye to kids on its platforms for years, unredacted lawsuit alleges (TechCrunch, 2023-11-27T21:20:32+00:00)
+It’s difficult to extrapolate from the 2015 and 2020 numbers to today’s (which, as we have seen from the evidence presented here, will almost certainly not be
+the whole story), but Bonta noted that the large figures are presented for impact, not as legal justification.
+
+“The basic premise remains that their social media platforms are used by millions of children under 13. Whether it’s 30 percent, or 20 or 10 percent… any child,
+it’s illegal,” he said. “If they were doing it at any time, it violated the law at that time. And we are not confident that they have changed their ways.”
+
+An internal presentation called “2017 Teens Strategic Focus” appears to specifically target kids under 13, noting that children use tablets as early as 3 or 4,
+and “Social identity is an Unmet need Ages 5-11.”
+</item 79>
+
+<item 80>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+And if you have, our thanks. Now, let’s get on with the news.
+
+Most read
+
+Altman backs teen entrepreneurs: Sam Altman is among the backers of an AI startup, founded by two teenagers, that’s aiming to assist businesses in automating
+workflows in “previously unexplored” ways. Manish writes that Induced AI, founded this year, lets businesses input their back-office tasks in plain English and
+converts the instructions to pseudo-code in real time.
+
+Google unveils new hardware: This week was Google’s annual hardware event, where the search and consumer tech giant showed off what it’s been working on.
+Christine wrote up a thorough roundup of the news, which included updates on the Pixel 8 and Pixel 8 Pro, Pixel Fold, Android 14, Pixel Buds, Google Assistant,
+Bard, Pixel Watch 2 and other goodies.
+</item 80>
+
+<item 81>
+‘Mass breach of privacy’: TikTok under fire for tracking users online (The Age, 2023-12-25T18:00:00+00:00)
+A TikTok spokeswoman denied the pixel breaches Australia’s privacy laws. “We strongly reject the suggestions outlined by Civic Data and are disappointed that a
+company would deliberately try to mislead or scare companies without regard to current law or the information available,” she said.
+
+“Pixel usage, which is voluntary for our advertising clients to adopt, is an industry-wide tool used to improve the effectiveness of advertising services. Our
+use of this tool is compliant with all current Australian privacy laws and regulations, and we dismiss any suggestion otherwise.” The China connection In 2016,
+China designated big data a “fundamental strategic resource”, and four years later its government designated data as the fifth “factor of production”, joining
+land, labour, capital and technology. Its national intelligence laws allow the ruling Communist Party to pull data upon request from companies based in the
+nation.
+</item 81>
+
+<item 82>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+On Equity this week, the crew talked about the SBF trial; deals from VR firms Rainforest, At One Ventures, Section 32 and Greylock, where venture funding has
+declined; and how Fearless Fund, a firm founded to invest in women of color, is being barred from awarding grants to Black women founders.
+
+Meanwhile, Found featured Esther Rodriguez-Villegas from Acurable, a medical device company that makes patient-friendly wearable devices to diagnose and manage
+respiratory conditions at home. As a career-long academic, Rodriguez-Villegas talks about how she never intended to be a founder until she learned about how the
+currently available medical devices make it extremely difficult to detect and treat diseases like sleep apnea and epilepsy.
+
+And over on Chain Reaction, Jacquelyn did a crossover episode with Alex about the SBF trial.
+</item 82>
+
+<item 83>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+A similar pattern was found in the four other countries they study looked at.
+
+The study also found that the TikTok audience can be an effective marketing tool for artists, as TikTok users, in particular, are considerably more likely to
+discover and share music than overall social media and short video platform (SFV) users.
+
+In the UK, TikTok users were 108% more likely to discover and share music than other social media users, while in Germany, they were 100% more likely. US TikTok
+users were 71% more likely to discover and share music.
+
+“In doing so, TikTok users help both emerging and established artists to reach new audiences,” the Luminate report stated.
+
+The study found that TikTok’s platform appears to be a major driver of the glocalization of music – the trend of local artists, performing in local languages,
+being elevated to a regional or global platform.
+
+“TikTok users have a stronger preference for international music than the average music listener,” the report said.
+</item 83>
+
+<item 84>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+For $4.99, subscribers get an ad-free experience on TikTok — no other strings attached. But don’t look for the option to arrive anytime soon. TikTok says that
+it’s piloting the plan in a single, English-speaking market outside the U.S. for now.
+
+LinkedIn leans into AI tools: LinkedIn this week unveiled a string of new AI features spanning its job hunting, marketing and sales products, Ingrid writes.
+They include a big update to its Recruiter talent sourcing platform, with AI assistance built into it throughout; an AI-powered LinkedIn Learning coach; and a
+new AI-powered tool for marketing campaigns.
+
+Musk comes clean about X’s metrics — maybe: In September, Elon Musk said that X users were generating a lot of content — creating 100 million to 200 million
+posts every day, excluding retweets. But speaking at an event this week, X CEO Linda Yaccarino offered a contradictory figure.
+</item 84>
+
+<item 85>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Only the occasional tweets. Meet @Vivek Ramaswamy ♬ original sound – GenosPicks
+
+Establishing himself as the millennial politician who’s cool enough to use TikTok but anti-woke enough to play in the divisive culture war isn’t working in
+Ramaswamy’s favor, though.
+
+His account, which has amassed over 50,000 followers in the weeks since he joined, has been barraged with comments either criticizing his positions or trolling
+him. He’s been the butt of Gen Z’s relentless comments about getting off to his content (the top comments on his videos are consistently jokes about edging). He
+also incited the wrath of witchtok creators, who filmed themselves casting hexes upon him and other conservatives.
+
+Ramaswamy is raking in TikTok engagement — even if it’s not how he intended — but Democrats are still dominating the Republican party in digital strategy.
+Ocasio-Cortez’s Instagram Stories garnered her nationwide popularity when she campaigned in 2018, reaching further than her local constituency.
+</item 85>
+
+<item 86>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+Influencer marketing agencies on both ends of the political spectrum are ramping up their recruitment faster than the Federal Elections Commission can regulate
+the industry. This year, the conservative agency Influenceable has been recruiting Gen Z creators to rally behind far-right politicians and parrot GOP talking
+points, without disclosing their pay. The tactic irked some Republicans, the Texas Tribune reported, including a Texas state representative who called for an
+investigation into the company.
+
+Given the resistance to Republican politicians in online spaces that attract young people, it’s unsurprising that candidates may rely on shadowy agencies like
+Influenceable to do the work for them. Republican politicians have a reputation for botching even the most straightforward digital campaigns. In May, Florida
+Gov. Ron DeSantis launched his presidential campaign on Twitter Spaces in an audio conversation with Elon Musk. The conversation started late and was so riddled
+with technical issues that it ended after just 21 minutes. Critics on both the right and the left described the launch as a disaster.
+</item 86>
+
+<item 87>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+You know, we expanded the company to nine times the size we were before Fortnite took off. And so we’re just trying to forge the strategy where we’re living
+within our means and doing everything we absolutely can.
+
+But we’ve gotten so much traction with Fortnite in so many different ways, and with the Epic Games Store, right, we’re going to continue investing heavily here.
+The Epic Games Store is the untold success story in the background. Since it launched in 2018, we now have 80 million monthly active users. Steam has 120
+million, so we’re catching them fast! Fortnite has more concurrent users right now than all Steam games combined. You should really expect dramatic changes that
+benefit all developers over the next few years.
+
+[Editor’s note: Sweeney isn’t right about Fortnite having more concurrent users than Steam. Epic spokesperson Natalie Muñoz confirmed Sweeney misinterpreted a
+Polygon story about how Fortnite hit 7.6 million players at a time when the entirety of Steam had 10.1 million.
+</item 87>
+
+<item 88>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+Along with TikTok on the social side, we have leveraged Instagram to drive engagement around Iñigo and the song globally. Our teams, who have a very robust
+video expertise to maximize content across platforms, built Iñigo’s YouTube channel from the ground up, optimizing it and directing traffic to it by creating
+the official lyric video as its first video, so that music fans could find and listen to his music on the platform.
+
+Since then, the lyric video for Si No Estás has reached 100 million views to date. [It’s currently ranked at #13 on YouTube’s Top 100 Global Music Videos.]
+
+We are now in a new phase to deepen and expand the success by promoting the track on more traditional media in key countries, where the track is rapidly gaining
+radio airplay and unlocking other promotional opportunities.
+
+The success of Si No Estás illustrates very well how much artist development has changed. Social media and digital music services have now become the #1 source
+of music discovery.
+</item 88>
+
+<item 89>
+Creatives across industries are strategizing together around AI concerns (TechCrunch, 2023-10-06T23:04:57+00:00)
+Spotify erased thousands of AI-crafted songs from its platform but also recently globally launched an AI-powered DJ that curates music for listeners while
+talking to them in a synthetic voice.
+
+“The training of generative AI using our artists’ music . . . begs the question as to which side of history all stakeholders in the music ecosystem want to be
+on: the side of artists, fans and human creative expression, or on the side of deep fakes, fraud and denying artists their due compensation,” Universal Music
+Group said after a song using AI to imitate Drake and The Weeknd, two of its artists, went viral.
+
+These same conversations and contradictions are manifesting across creative industries, but artists themselves don’t always have a seat at the table.
+Independent artists in particular are learning that their voices resonate louder when coming together across disciplines to push back against what Holland
+describes as an “extraordinary spectrum of exploitation” that leverages their work.
+</item 89>
+
+<item 90>
+X plans to use payment, phone and ID verification to stop bots, in addition to the new $1/yr fee (TechCrunch, 2023-10-18T17:33:48+00:00)
+A report this week from market intelligence firm Similarweb, for example, found that X’s web traffic and monthly active users on mobile had declined
+post-acquisition.
+
+Users today have far more options for microblogging and public discourse, thanks to products from Twitter-like startups and tech companies such as Spill,
+Bluesky, Pebble, Countersocial, Spoutible, Hive and the open source platform Mastodon, as well as efforts from tech giants, like Meta’s new app Threads. Few of
+the other social apps currently charge a fee, unless it’s for premium features, like some of the third-party Mastodon apps do.
+
+In addition to presenting friction at sign-up, other critics have argued a fee could exclude genuine users and increase the digital divide.
+</item 90>
+
+<item 91>
+Republicans still don’t know how to talk to young voters online (TechCrunch, 2023-10-02T21:42:14+00:00)
+The attorney general’s press secretary blamed the site’s downfall on activists “hacking the system.”
+
+The presidential election is more than a year away, but it may be too late for Ramaswamy to make any headway on TikTok, where the platform’s young users still
+don’t take him seriously. He recently posted a video about getting ready for the next Republican debate, and was hit with yet another wall of edging comments.
+
+Even if candidates like Ramaswamy did everything right — like having a platform that didn’t alienate young voters and working with creators with more favorable
+reputations — they’d still represent a party that many Gen Z and millennial voters aren’t aligned with.
+
+“It’s really hard to be effective with a generation when a lot of your policy is attacking them,” Henry said. “If all of your policy is highly unfavorable for
+that generation, that’s a hard sell in itself, even if you’re an effective communicator with all the strategy in the world, to sell someone something they don’t
+want.”
+</item 91>
+
+<item 92>
+Sam Altman backs teens’ startup, Google unveils the Pixel 8 and TikTok tests an ad-free tier (TechCrunch, 2023-10-07T20:15:26+00:00)
+Battery-boosting software tech: Tim covers Breathe Battery Technologies, a startup that’s developed a bit of software that can be slipped into just about any
+lithium-ion battery in use today — endowing it with either faster charging speeds or greater longevity.
+
+What lies beyond ChatGPT: Anna surveyed 10 investors about the future of AI and what they believe might be the next big thing. Among other topics, they touched
+on where startups still stand a chance, where oligopoly dynamics and first-mover advantages are shaping up and the value of proprietary data.
+</item 92>
+
+<item 93>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+And now we’re able to expand that reach to a much broader set of advertisers and serve the needs of both the affiliate marketing end of sponsorships, which is
+more of a performance model, as well as more of the top of the funnel, where you’re looking for more brand awareness.
+
+Obviously a lot of this discord among Twitch’s community also comes at a time when other streaming platforms like YouTube or Kick are starting to take off, and
+enticing streamers with better revenue splits. A common complaint that I’ve heard is that bigger streamers are going to be making money wherever they are, but
+smaller streamers who have less of an audience don’t qualify for Partner Plus will get a better deal at YouTube or Kick than at Twitch. What is Twitch doing to
+keep those streamers?
+
+There are a couple of things that I’ll point out.
+</item 93>
+
+<item 94>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+), the Empire State Building and countless others posted their versions of Gag City.
+
+On one hand, memes tend to die the minute brand accounts start co-opting them — nothing is more tiresome than seeing a fun joke turn into a corporate-friendly
+marketing ploy. AI-generated images are already ethically fraught, and critics have raised concerns over AI generators trained on artwork without the consent of
+the work’s artists. Artists have also criticized brands for using AI-generated art instead of commissioning work from a real, human artist. Though using
+AI-generated art for commercial use is legal, as copyright laws pertaining to AI are virtually non-existent, it’s generally seen as a shitty move by many in the
+art world.
+
+On the other, it’s free promotion for Minaj, and as a lifelong Barb who spent her adolescence running a stan account for “Pink Friday,” I consider it a win.
+</item 94>
+
+<item 95>
+Twitch’s money guy talks about the revenue split controversy and its monetization long game (TechCrunch, 2023-10-26T22:28:10+00:00)
+It’s a very reliable source of income for many streamers.
+
+So I think the combination of making it easier to run, increasing the rev share and then recently in the keynote, we talked about two new features to allow
+moderators to know when an ad break is coming, and adjust the ad break around the content because the problem in livestreaming, as you’re aware, is that people
+don’t want to miss out. So we’re very focused on improving the ad experience by allowing the ad breaks to be synchronized with the content and enrolling
+moderations and eventually the community in adjusting those ad breaks.
+
+Like you said, livestreaming is very different from static content, and tactics for monetization that work for Instagram or TikTok just don’t really work for
+Twitch or any livestreaming platform. In those cases, what has Twitch done differently from those more standard platforms in terms of making monetization more
+seamless?
+</item 95>
+
+<item 96>
+‘Latin artists have been paving the way for deals that offer more control, transparency, and better economics.’ (Music Business Worldwide,
+2023-12-07T20:32:11+00:00)
+Olea also discusses Believe’s unique position in the growth of Latin music – and, more generally, how she sees independent artists continually changing the game
+in the global business…
+
+What has been the story of Inigo’s global hit so far? Where did it come from and how did it explode in 2023?
+
+Believe has been working with Iñigo Quintero since March of this year. The success of the track is the result of outstanding teamwork between the artist, his
+label, Believe and our global digital partners, more specifically Spotify and TikTok in this case.
+
+In the initial discovery phase, we developed the audience of the track with the label mostly through Believe’s expertise of marketing on Spotify. Secondly
+thanks to our short-form video trends detection technology, we noticed some acceleration on the propagation of the track and consequently we leveraged our
+partnership with TikTok, as well as coordinated promotion from all our teams around the world with Spotify.
+</item 96>
+
+<item 97>
+Gag City is a viral win for Nicki Minaj (TechCrunch, 2023-12-09T02:34:35+00:00)
+Welcome to Gag City, the pink metropolis inhabited by stans and brands alike.
+
+In the days leading up to the release of “Pink Friday 2,” Nicki Minaj’s fifth studio album and sequel to her debut record “Pink Friday” that dropped on Friday,
+Twitter was flooded with AI-generated images of pink-toned cityscapes. Gag City, the dreamy false utopia ruled by Minaj and her Barbz, broke through stan
+Twitter and became a viral meme that brand accounts immediately used for their own marketing — promoting Minaj’s album for free.
+
+Is it an authentic stan-led campaign to build hype for Minaj? Is it a plant to game engagement for both the album and brands? What’s clear is that the viral
+moment is a win for Minaj, manufactured or not.
+
+It started in September, when Minaj teased the album’s cover art online. The image features Minaj on a pink subway car, drifting through pink clouds with a
+futuristic (and obviously, pink) city skyline in the background.
+</item 97>
+
+<item 98>
+Founders, are events useful? (TechCrunch, 2023-10-13T19:05:37+00:00)
+It is aiming to help any software play nice with ChatGPT and other LLM ecosystems.
+
+What big eyes you have: Adobe continues to push for easier image editing, showing off its Project Stardust as a sneak preview of its next-gen AI photo editing
+engine.
+
+Holding back the tide: Creatives across industries are strategizing in a campaign that targets potential corporate abuse of AI technology. The conglomeration is
+realistic about the ways that musicians and some other creatives could benefit on an individual level from automating parts of their work. The goal is that AI
+tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+Tech you can touch
+
+A while back I argued that Apple’s new AR headset is a game-changer for startups. It seems that’s likely the case at the high end. But more in the realm of
+affordability, Meta Quest 3 takes a step closer to mainstream AR/VR, Brian reports.
+</item 98>
+
+<item 99>
+62% of TikTok users in the United States pay for a music streaming service (report) (Music Business Worldwide, 2023-11-21T22:03:00+00:00)
+“In the global and US markets, TikTok user engagement metrics are strongly associated with streaming volumes. In other words, higher TikTok engagement — whether
+that’s likes, views or shares — corresponds with elevated streaming volumes,” the Luminate report stated.
+
+However, TikTok’s impact on music isn’t limited to DSPs. The analysis found that TikTok users are also larger spenders on music off-platform as well. By wide
+margins, they are more likely to buy merch and attend live shows than the average consumer.
+
+In the US, 45% of TikTok users bought music-related merch over a 12-month period, compared to 35% of overall music listeners. Meanwhile, 38% attended a live
+music event during the year, compared to 33% of overall music listeners.
+
+Overall, US TikTok users spent 22% more on music-related purchases, compared to overall music listeners. A similar pattern was found in the four other countries
+they study looked at.
+</item 99>
+
+<item 100>
+Creatives across industries are strategizing together around AI concerns (TechCrunch, 2023-10-06T23:04:57+00:00)
+The goal is that AI tools “become ways for individual humans to make more money, work less, and compete with the corporations that exploit them.”
+
+“It’s really interesting from a music perspective, specifically, because . . . musicians are perhaps more familiar with the idea of AI,” Holland said.
+“Musicians in general are more familiar with things like music production software, and AI tools like MIDI drum loops . . . so I think that there is a certain
+amount of more progressive learning from them, when it comes to technology, and its ability to make their music better.”
+
+When it comes to art and AI, the conversation is complicated, to say the least. Musicians are nervous about industry giants copyrighting AI music and cutting
+them out of the process. Major record labels are worried about AI models training on their catalogues and stealing a slice of their considerable pie.
+</item 100>
+=== END ITEM id=d2d0c6756a312437 ===
+
+=== ITEM id=70fd68e996f89ab2 ===
+Gold sentences and facts:
+Sentence 0: "And if the Braves let this be the story of their series, that's on them.
+  Fact 0.0: A quoted speaker says that if the Braves let this be the story of their series, that is on the Braves.
+Sentence 1: But while Nocturne could have easily settled and coasted on classic Castlevania vibes, the new show steps its game up considerably by using the franchise’s iconic lore to challenge your understanding of what it truly means to fight for freedom, equality, and fraternity.
+  Fact 1.0: Nocturne could have easily settled and coasted on classic Castlevania vibes.
+  Fact 1.1: The new Nocturne show steps its game up considerably.
+  Fact 1.2: The new Nocturne show uses the Castlevania franchise's iconic lore.
+  Fact 1.3: The new Nocturne show uses the franchise's iconic lore to challenge the viewer's understanding of what it truly means to fight for freedom, equality, and fraternity.
+
+Retrieved items:
+
+=== END ITEM id=70fd68e996f89ab2 ===
+
+=== ITEM id=cd763f958e639d2b ===
+Gold sentences and facts:
+Sentence 0: “But nah, it was awesome.” On Saturday, the competition also said goodbye to a range of players including Western Bulldogs forward Richelle Cranston, who has battled stage five chronic kidney disease while playing this season, and Hawthorn’s Akec Makur Chuot, who played 40 games for three clubs.
+  Fact 0.0: A speaker said 'But nah, it was awesome.'
+  Fact 0.1: On Saturday, the competition said goodbye to a range of players.
+  Fact 0.2: On Saturday, the competition said goodbye to Western Bulldogs forward Richelle Cranston.
+  Fact 0.3: Richelle Cranston has battled stage five chronic kidney disease while playing this season.
+  Fact 0.4: On Saturday, the competition said goodbye to Hawthorn's Akec Makur Chuot.
+  Fact 0.5: Akec Makur Chuot is a Hawthorn player.
+  Fact 0.6: Akec Makur Chuot played 40 games for three clubs.
+Sentence 1: The Dogs are Cranston’s third club after starting at Melbourne and having a stint with Geelong before heading to the Bulldogs last year.
+  Fact 1.0: The Dogs are Richelle Cranston's third club.
+  Fact 1.1: Richelle Cranston started at Melbourne.
+  Fact 1.2: Richelle Cranston had a stint with Geelong.
+  Fact 1.3: Richelle Cranston joined the Bulldogs last year.
+
+Retrieved items:
+
+=== END ITEM id=cd763f958e639d2b ===

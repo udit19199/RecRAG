@@ -1,0 +1,15 @@
+[
+  {"id": "b3f89908f2f7269c", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 78, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 78, "quote": "Defense analysts agree that much of the outlook for Ukraine is dependent on the outcome of the U.S. vote."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 31, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with"}, {"item": 31, "quote": "Russia’s most recent invasion of Ukraine."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 31, "quote": "Any illusion of the success of globalization, or of the twenty-first century representing a break from the brutal twentieth century, was stripped away with"}, {"item": 31, "quote": "Russia’s most recent invasion of Ukraine."}]}
+  ]},
+  {"id": "d571ae4f0b9d1e01", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []}
+  ]}
+]

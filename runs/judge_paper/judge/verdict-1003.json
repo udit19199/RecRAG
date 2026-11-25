@@ -1,0 +1,26 @@
+[
+  {
+    "id": "53f3f333ab5d3f23",
+    "facts": [
+      {"fact": "0.0", "status": "stated", "evidence": [{"item": 57, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+      {"fact": "0.1", "status": "stated", "evidence": [{"item": 57, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+      {"fact": "0.2", "status": "stated", "evidence": [{"item": 57, "quote": "Tyreek Hill had two touchdowns among his 157 yards receiving to help the Miami Dolphins rout the Washington Commanders 45-15."}]},
+      {"fact": "0.3", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "stated", "evidence": [{"item": 45, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+      {"fact": "1.1", "status": "stated", "evidence": [{"item": 45, "quote": "Six catches for 163 yards and a touchdown against Carolina left the Dolphins’ Tyreek Hill with 812 yards through the first six games."}]},
+      {"fact": "2.0", "status": "stated", "evidence": [{"item": 51, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]},
+      {"fact": "2.1", "status": "stated", "evidence": [{"item": 51, "quote": "Of Miami's five remaining opponents, four have pass defenses ranked in the league's top eight."}]}
+    ]
+  },
+  {
+    "id": "7d8e1edb92e961d3",
+    "facts": [
+      {"fact": "0.0", "status": "missing", "evidence": []},
+      {"fact": "1.0", "status": "missing", "evidence": []},
+      {"fact": "1.1", "status": "missing", "evidence": []},
+      {"fact": "1.2", "status": "missing", "evidence": []},
+      {"fact": "1.3", "status": "missing", "evidence": []},
+      {"fact": "1.4", "status": "missing", "evidence": []}
+    ]
+  }
+]

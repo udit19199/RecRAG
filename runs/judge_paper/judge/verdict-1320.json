@@ -1,0 +1,13 @@
+[
+  {"id": "ba82e32bb96da048", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 18, "quote": "hours after Harbaugh was suspended for the remainder of the regular season"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 15, "quote": "Despite the suspension, Jim Harbaugh held his usual weekly news conference Monday"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 15, "quote": "though he mostly avoided addressing the only topic on anyone's mind"}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 80, "quote": "It would be Harbaugh's second suspension of the season"}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 80, "quote": "as the Wolverines self-imposed a three-game ban on Harbaugh to start the season"}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 80, "quote": "self-imposed a three-game ban on Harbaugh to start the season amid an NCAA investigation"}]},
+    {"fact": "1.3", "status": "stated", "evidence": [{"item": 80, "quote": "an NCAA investigation that found Harbaugh lied to investigators."}]},
+    {"fact": "2.0", "status": "stated", "evidence": [{"item": 40, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]},
+    {"fact": "2.1", "status": "stated", "evidence": [{"item": 40, "quote": "Harbaugh reportedly watched the game from the team hotel, and now the leading piece of drama returns."}]}
+  ]}
+]

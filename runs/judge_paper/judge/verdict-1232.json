@@ -1,0 +1,29 @@
+[
+{"id": "60c9249464d308a1", "facts": [
+{"fact": "0.0", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.1", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.2", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "0.3", "status": "stated", "evidence": [{"item": 8, "quote": "You can find value in player and team props by gathering information from multiple sources and tracking how players and their teammates perform."}]},
+{"fact": "1.0", "status": "stated", "evidence": [{"item": 46, "quote": "You can also bet on team props, such as whether a team will lead at the end of a certain quarter or an over/under bet on the total number of points the team will score in the game."}]},
+{"fact": "1.1", "status": "stated", "evidence": [{"item": 46, "quote": "such as whether a team will lead at the end of a certain quarter"}]},
+{"fact": "1.2", "status": "stated", "evidence": [{"item": 46, "quote": "an over/under bet on the total number of points the team will score in the game."}]}
+]},
+{"id": "7d90c66dd948a13a", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "0.3", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "1.2", "status": "missing", "evidence": []}
+]},
+{"id": "88cfc6bef8668ad5", "facts": [
+{"fact": "0.0", "status": "missing", "evidence": []},
+{"fact": "0.1", "status": "missing", "evidence": []},
+{"fact": "0.2", "status": "missing", "evidence": []},
+{"fact": "1.0", "status": "missing", "evidence": []},
+{"fact": "1.1", "status": "missing", "evidence": []},
+{"fact": "2.0", "status": "missing", "evidence": []},
+{"fact": "2.1", "status": "missing", "evidence": []}
+]}
+]

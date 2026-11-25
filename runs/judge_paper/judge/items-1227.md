@@ -1,0 +1,1511 @@
+Prompt version 2026-11-10.haiku.2
+
+You check whether retrieved text states the facts of gold evidence sentences.
+
+Use only the retrieved items. Do not use outside knowledge and do not reason
+your way to a fact the text does not state; plain rewording, synonyms,
+abbreviations and different formatting are fine.
+
+For every fact give one status:
+- stated: some item says it, with every specific matching (names, numbers,
+  dates, places, who did what, qualifiers).
+- contradicted: some item gives a different value for the same specific, such
+  as another year or another person.
+- missing: neither of the above.
+If one item states the fact and another contradicts it, the status is contradicted.
+
+Evidence for stated or contradicted facts: copy one continuous passage from
+one item, character for character, with no ellipses or edits, and give that
+item's number. Never join separate words into a quote that does not appear as
+written; if the words are apart, quote the longer continuous passage that
+contains them. A fact spread across items may take several quotes. The quotes
+together must contain the words that state every specific of the fact (who,
+what, numbers, dates, reasons); a quote that only sets the topic, or stops
+before the specific, is not evidence. Missing facts take no evidence. Every quote is checked against the item text by a
+program, and a quote that does not appear there counts as missing.
+
+Write the verdict file named in your task as a JSON array with one object per
+item, in any order:
+{"id": "<item id>", "facts": [{"fact": "S.F", "status": "stated", "evidence": [{"item": 3, "quote": "..."}]}, ...]}
+where "S.F" is the fact's label as given (sentence number, fact number).
+Give exactly one entry for every fact label of the item. Use only ids from
+this file and do not skip any item.
+
+This file has 4 items.
+
+=== ITEM id=c9e1fa67ae57a6dc ===
+Gold sentences and facts:
+Sentence 0: “Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said.
+  Fact 0.0: Zapolsky said that even with those tools, some businesses selling on Amazon might still choose to set prices that are not competitive.
+Sentence 1: That means eBay will give you an eBay coupon for the difference in price between what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference.
+  Fact 1.0: eBay will give the buyer an eBay coupon for the difference in price between what the buyer paid for an item and what a competitor is selling it for.
+  Fact 1.1: The eBay coupon also includes an additional 10 percent of that price difference.
+
+Retrieved items:
+<item 1>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+He’s been selling on Discogs since 2009; since the recent changes, he’s lowered his prices to offset the higher shipping costs and was compelled to institute an
+order minimum — a major shift for a marketplace that had done considerable business in selling records under $10 and even under $5.
+
+Discogs attributed the need to raise fees to its “significant investments in recent years to ensure compliance with various regulatory programs, including tax
+support and privacy protection.” The company said the change would allow it to “continue to devote resources to maintaining the Discogs Marketplace and develop
+better tools for collecting, selling, and enjoying music.”
+
+Many sellers who spoke with The Verge speculated, in line with the viral thread, that the company was trying to pump up its valuation for a potential sale. All
+of them, though, had the sense that Discogs was trying to increase its profit margins without necessarily offering any improvements to its product in return.
+
+Discogs’ marketplace page showing copies of Olivia Rodrigo’s Guts for sale. The prices are generally higher than buying the album elsewhere.
+</item 1>
+
+<item 2>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“But I’m not sure if this would actually change that.” Scott Moller, an Amazon seller and co-founder of an agency that helps merchants run their storefronts,
+said the e-commerce giant has removed some of the challenges that used to be part of running an online business. With FBA, he said, he can ship an item into one
+of Amazon’s warehouses for $7.49 per package, while shipping it himself through a traditional carrier would cost him about $12. “I don’t have to have my own
+warehouse,” said Moller, who sells grilling accessories on Amazon under the brand Grill Sergeant. “I can use their staff, their storage, and I can instantly
+also take the data of advertising, so I can target ads.” He also disputed the FTC’s claim that Amazon has become littered with ads in search results, causing
+shoppers to wade through potentially less-relevant products of lesser quality. “We can tailor our ads to hit exactly the consumers we want,” Moller said.
+</item 2>
+
+<item 3>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+Amazon has a bunch of private-label clearance on sale for up to 55 percent off. Want D-cell batteries for $5? Here you go. How about compostable plates for $8?
+Giant crayons for $9? A truly hideous fanny pack for $12? The point is, there are 10 pages full of random items to choose from, and all of them are cheap. Go
+wild.
+
+Photograph: Amazon
+
+Other Echo Show devices are also on sale, but the Echo Show 8 is our favorite. This product comes with a free trial of Alexa Together, an Amazon service that
+aims to replicate the tasks of a caregiver. It usually costs $20 per month. Set a reminder to cancel it if you aren't interested in subsequent charges.
+
+The Echo Studio is the best-sounding Alexa speaker, but it's also pretty expensive. This price matches a low we've seen just once before. It has more powerful
+sound in general, but the changes are especially noticeable on the low end.
+</item 3>
+
+<item 4>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+PayPal also requires that every shipment has a tracking number, which can be a significant extra expense for international sales.
+
+The changes also arrived at the tail end of a phenomenon alluded to in the same original thread. The pandemic had created something of a record sales bubble:
+people who were already vinyl aficionados were stuck at home with their record players, stimulus checks, and nothing to spend them on besides survival and
+things you could do at home — like listen to music. Melkisethian says his sales actually grew during the pandemic in spite of the fact that his brick-and-mortar
+sales disappeared. According to him, the boom inflated record prices; now, with the higher fees Discogs is imposing, a sales decline that was almost inevitable
+post-lockdown has become steeper.
+
+“They’re under the impression that they’re the only game in town.”
+
+Even with all of those increasing costs, Discogs is still less expensive (albeit now only slightly) than alternatives like eBay or Amazon.
+</item 4>
+
+<item 5>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Google will say that every Samsung Galaxy phone has “a competing app store right there on the homescreen,” even though Google apparently tried to quash that
+store, too, fearing it could cost the company billions.
+
+We caught Google trying to play the China card in a pre-briefing with press, reminding us that Epic is 40 percent owned by Chinese company Tencent — even though
+Google itself allegedly considered teaming up with Tencent to eliminate the Epic threat. While the parties can’t argue it in court, Google can attempt to subtly
+play the China card: “Google may ask a witness once about Tencent’s domicile,” reads one of Judge Donato’s orders.
+
+In the same press briefing, Google suggested to journalists that Epic should have joined the company’s “User Choice Billing” program if it wanted an alternative
+payment system, instead of suing. But that program didn’t exist until 2022, long after the lawsuit, and it only knocks 4 percentage points off Google’s fee.
+
+When should we expect a jury verdict?
+</item 5>
+
+<item 6>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+On October 19, Expedia’s former chief operating officer, Jeff Hurst, told the court the company’s ad fees increased tenfold from $21 million in 2015 to $290
+million in 2019. And yet, Expedia’s traffic from Google did not increase. The implication was that this was due to direct competition from Google itself. Hurst
+pointed out that Google began sharing its own flight and hotel data in search results in that period, according to The Seattle Times.
+
+European antitrust fine spurs Google to beef up search engine quality
+
+The government argued on November 10 that Google only endeavored to enhance its search engine in the European Union after it was hit by a €5 billion antitrust
+fine in 2018, internal documents revealed, according to Bloomberg.
+
+The EU’s antitrust order forced Google to offer Android phone users a screen with five search engine options to choose from, according to the DOJ.
+</item 6>
+
+<item 7>
+Amazon’s latest Echo Frames are more style than substance (The Verge, 2023-12-07T15:00:00+00:00)
+Those get you the option of transition lenses, too, though the third-gen Echo Frames are at least on a similar playing field when it comes to style. Likewise,
+the Bose Frames Tempo and Soprano have a retail price of $249 — and can be found on sale for around $200. Those have similar battery life and better sound
+quality.
+
+Audio definitely leaks on these in quieter spaces.
+
+These make some small moves in the right direction. Again, improving the range of available styles was a much-needed change. It’s good to beef up the audio, but
+it wasn’t enough of a change to make these stand above the competition or a compelling alternative to wireless earbuds. But perhaps most crucially, I wasn’t
+convinced to use Alexa more than I otherwise would have. As it stands, I think Amazon’s getting there with form. It’s just not quite there with function.
+</item 7>
+
+<item 8>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+We know that because they came to us and told us they were doing that. And we know it because after all that went down, I talked to an Activision employee who
+was close to that effort, working with the team building the store, and he reported that the entire store team Activision had employed to build their competing
+store had been disbanded as soon as Activision signed their deal with Google.
+
+[Editor’s note: We did not hear from such a person at trial; I’d be eager to speak to them now!]
+
+We know Activision was telling Google they were building their computing store; we know in Google internal discussions they said they didn’t want Activision
+building a competing store. They agreed to sign this deal, and they were gleeful about the fact they dissuaded perhaps their number one competitor at the time
+from launching their own store.
+
+Four years later, Microsoft acquired Activision Blizzard — and one of the big talking points from Microsoft to the European Union was that the merger
+strengthened the company overall in order to provide a viable computing store on iOS and Android.
+</item 8>
+
+<item 9>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+she asked. “Or is this Google behaving differently than it used to?”
+
+Sullivan had tried to convince me that Google was not behaving differently and, in fact, had not changed its search criteria in any major way for the past 20
+years. Google wanted you to make good websites, and that was that. Everyone who tried to rank higher by messing with the algorithm would be blocked. Sullivan
+even insisted that what these rule-breakers did should not be called SEO: he deemed it all “spam.” What is spam? “Spam is stuff that search engines don’t like.”
+
+But the line between strategies that violate Google’s terms of service and strategies that don’t has always been blurry and inconsistently enforced. “I’ve never
+seen this much tension in the industry in terms of, like, what Google says to do and what people are doing and getting away with,” Ray told me. “If you’re gonna
+tell us that this stuff doesn’t work, make it stop working!”
+
+Ray seemed like the most reasonable person I had spoken to so far.
+</item 9>
+
+<item 10>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Regardless, you need to notify Newegg of the lower price within 14 days of purchase. You’ll then be issued a credit you can use on the Newegg website, though
+you’ll only have 90 days to do so.
+
+Newegg’s price-match guarantee is not valid during major holiday sales events, including Black Friday, Cyber Monday, and Green Monday.
+</item 10>
+
+<item 11>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Fred Ruckel
+
+Nearly three years later, Ruckel’s experience hits at the core of a sweeping antitrust lawsuit filed last week by the Federal Trade Commission against Amazon.
+The agency accused Amazon of wielding its monopoly power to squeeze merchants and thwart rivals. For consumers, that’s led to artificially inflated prices and a
+degraded shopping experience, the agency alleges. In the 172-page suit, the FTC said Amazon relies on an “anti-discounting strategy” and a “massive web-crawling
+apparatus that constantly tracks online prices” to stifle competition. The agency said Amazon punishes third-party sellers who offer cheaper products elsewhere
+by threatening to disqualify them from appearing in the buy box if it detects a lower price. Losing the buy box is an “existential threat” to sellers’
+businesses, the complaint alleges. The end result of these tactics, the FTC argues, is elevated prices across the web.
+</item 11>
+
+<item 12>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+Today’s announcement by the EU, following several months of in-depth examination looking at how the transaction might impact competition, lays out formal
+concerns for Amazon to respond to. The EU’s objections focus on foreclosure risks.
+
+The EU says its concerns focus on whether the deal will give Amazon the ability and incentive to foreclose iRobot’s rivals by deploying strategies aimed at
+preventing competitors from selling RVCs on Amazon’s marketplace and/or making it harder for them to do so — such as by delisting rival products; reducing their
+visibility in both non-paid (i.e. organic) and paid results (i.e. ads) displayed on its marketplace; limiting their access to certain widgets it operates (such
+as the “other products you may like” feature) or “certain commercially-attractive product labels” (e.g. ‘Amazon’s choice’ or ‘Works With Alexa’); and/or by
+directly or indirectly raising the costs of iRobot’s rivals to advertise and sell their RVCs on its marketplace.
+</item 12>
+
+<item 13>
+Epic v. Google, explained (The Verge, 2023-11-05T11:00:00+00:00)
+Looking at this from a less academic perspective, it’s worth noting that Google charges up to ten times more per transaction than you pay with PayPal or a
+credit card, which does seem like a lot! And though Epic can’t argue it in court, I’ll point out that Apple wasn’t able to explicitly justify a 30 percent fee
+to that case’s judge.
+
+On the other hand, it does kinda seem like Epic wants something for nothing! As far as I can tell, Epic hasn’t stated what kind of fee would actually be
+reasonable for Google to charge in exchange for placement in Google’s store — instead, Epic CEO Tim Sweeney seemingly suggests there shouldn’t be a Google fee
+at all if a developer wants to use its own payment system.
+
+How did Epic’s argument fare against Apple?
+
+Well… both sides lost! But Epic arguably lost more.
+</item 13>
+
+<item 14>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+</item 14>
+
+<item 15>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+Simonetti sounded the alarm about increasing fees and subsequently increasing prices, a growing influx of scammers, rising shipping costs, and the dysfunction
+of the website itself, among other issues.
+
+“We had kind of thought Discogs was on our side as sellers,” says Gene Melkisethian, who runs Joint Custody, a record store in Washington, DC, and sells on
+Discogs. “But when they started charging fees on shipping, it just felt really punitive.”
+
+“In their communication, it was beyond insulting the way they framed it. Like, ‘Oh, you can just not charge for shipping,’” says the Connecticut seller. “The
+sudden fee increase was a huge, huge blow to a lot of people.”
+
+The fee increase arrived shortly before USPS raised the price of its Media Mail service (the lower rates at which anyone can send media products like books,
+music, and movies) by an average of 7 percent — and a year after the site had switched all its transactions to PayPal, which charges its own fees on each
+transaction, ones that are higher on international purchases.
+</item 15>
+
+<item 16>
+More from the US v Google trial: vertical search, pre-installs and the case of Firefox/Yahoo (TechCrunch, 2023-11-13T14:37:44+00:00)
+The RSAs also motivate other companies to make or sell more Android devices, he said.
+
+Expedia complains of too many ads on search, expensive ad payments
+
+On November 1, Barry Diller, chair of Expedia and IAC, testified about his concerns regarding the increasing number of ads in search results having an impact on
+organic listings.
+
+“I must say I’m on the edge of revolt now that Google’s actions are so punitive, not just for Expedia but also for IAC and all the players that depend upon
+something of a level playing field,” wrote Diller in a letter to Google back in 2019, according to Bloomberg.
+
+Google CEO Sundar Pichai fired back that Google’s travel listings was one of the most popular experiences the company built.
+
+Expedia execs also testified about the cost of ads and how increases had no impact on search results.
+</item 16>
+
+<item 17>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+The database is another aspect of the site that could be threatened by the fee increases. If sellers and buyers move elsewhere, that database will likely become
+less exhaustive. “Ever since the price increases, I’ve noticed that less and less new albums are being added to the database,” says Martin. “When we get new
+stock in, we have to match it up with a UPC on Discogs and we’re noticing it’s not there as often as it used to be.”
+
+A beloved internet sanctuary gets bled for profit to the detriment of its functionality — by 2023, it’s become just about the most familiar story online.
+Discogs, hopefully, will not become the latest in a long line of formerly useful sites; for the moment, though, sellers feel alienated by the small company they
+once viewed as an ally in an optimistic mission to share knowledge about music.
+</item 17>
+
+<item 18>
+The 53 best Black Friday deals we could find at Amazon, Walmart, Target and more (Engadget, 2023-11-19T15:13:23+00:00)
+Walmart will match its online Black Friday deals in stores starting November 10.
+
+Will Amazon have a Black Friday sale in 2023?
+
+Amazon will likely have a Black Friday sale in 2023. While the online retailer hasn’t made its deals known yet like Walmart has, Amazon will almost certainly
+have deals across all of the types of products it sells, including electronics. We anticipate seeing record-low prices on Amazon devices in particular, like
+Echo speakers, Fire TVs, Kindles and more. In years past, Amazon Black Friday deals have brought some of the best prices of the year on our favorite gadgets and
+gear, including headphones, tablets, smartwatches, robot vacuums and more.
+
+What other retailers have Black Friday sales in 2023?
+
+Most retailers have Black Friday sales, so you can expect to see Target, Best Buy, and others join Walmart and Amazon in discounting inventory to capitalize on
+holiday shopping interest.
+</item 18>
+
+<item 19>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+It was easy: buy links that led to your site and watch your ranking in Google’s results rise.
+
+I came to understand that, since the dawn of the internet, there have been people attempting to manipulate search and then people decrying those manipulations
+as the end of search’s ability to be useful. It works in cycles. People doing SEO find loopholes in the algorithm; critics complain about search results; search
+engines innovate and close the loopholes. Rinse, repeat.
+
+Before our current moment of widespread disillusionment with online information, the rise of SEO had reached a breaking point multiple times. In 2003, as Google
+approached the deadline to disclose pertinent business information leading up to its IPO, the company quietly released an update cracking down. By 2011, SEO was
+once again oppressively pervasive. TechCrunch published a story called “Why We Desperately Need a New (and Better) Google,” which argued that “Google has become
+a jungle: a tropical paradise for spammers and marketers.”
+</item 19>
+
+<item 20>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Lastly, there are always exceptions to the rules. If you’re looking for a deal on a product and you know it’s available for a lower price elsewhere (or it was
+previously offered at the same retailer), it never hurts to call or chat with a customer service rep and ask if they’ll match the price. After all, what do you
+have to lose?
+
+If Best Buy offers a better discount than Target on the latest Kindle Paperwhite, Target will refund you the difference. Photo by Chaim Gartenberg / The Verge
+
+Amazon doesn’t offer price matching. Full stop. You can contact customer support, but even if you’re an Amazon Prime customer, they’re not likely going to help
+you out.
+
+That said, Amazon does offer a pretty liberal return policy, meaning you can often return an item you purchased from Amazon if it’s available for less elsewhere
+(or at Amazon). Then, you can just repurchase the product wherever it’s cheapest.
+</item 20>
+
+<item 21>
+78 Absolute Best October Prime Day Deals (2023) (Wired, 2023-10-10T14:23:00+00:00)
+How to find the best Prime Big Deal Days deals?
+
+WIRED is the only publication posting about Amazon Prime Day. Wait, sorry, looks a handful of other sites are, too. But you should only read WIRED, because we
+actually vet every deal and compare it to the actual street price instead of an absurd MSRP that you will never observe in the wild. Also, we review the
+products we recommend and don't just send you Prime Day deals on junk that will break. It's only a deal if you need it and it's good!
+
+Are other retailers running sales?
+
+Amazon Prime Day has inspired many imitators and you'll find sales from competitors like Best Buy, Target, and the like. Some of these sales are great, and
+we'll flag when they are, but others are worth holding off on until Black Friday and Cyber Monday, when WIRED will again be the Internet's only website with
+deals posts.
+
+Retailer Sale Pages
+</item 21>
+
+<item 22>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“I’ve lost a lot of sleep because of some of the things that they have done. And the issues that they brought up, while they are interesting, they haven’t
+created me a lot of pain.” Needham said he was particularly puzzled by the inclusion of the claims that Amazon is coercive in the way it encourages sellers to
+use its fulfillment service, known as Fulfillment by Amazon, or FBA. Needham said many sellers “love FBA” because of its compelling value in terms of the price
+and promise to deliver two-day shipping. For many, using FBA doesn’t feel like a requirement, but they believe using it will make their businesses "easier and
+more effective." "I think that the power that Amazon wields over sellers is considerable and absolutely worth looking into,” Needham said. “But I’m not sure if
+this would actually change that.”
+</item 22>
+
+<item 23>
+Coinbase rallies more than 60% in same month that FTX and Binance founders brace for prison (Cnbc | World Business News Leader, 2023-11-30T21:08:00+00:00)
+Mizuho raised its price target on the stock to $35 from $31, while keeping its underperform rating, which it's maintained since December.
+
+'Turn the page'
+
+A Coinbase spokesperson declined to comment for this story, but CEO Brian Armstrong told CNBC's Joumanna Bercetche earlier this week that the Binance settlement
+allows the crypto industry to move past a spate of scandals. "The enforcement action against Binance, that's allowing us to kind of turn the page on that and
+hopefully close that chapter of history," Armstrong said. "I think that regulatory clarity is going to help bring in more investment, especially from
+institutions."
+
+watch now
+
+Both Coinbase and Binance still face legal battles with the Securities and Exchange Commission, which was noticeably absent from the Binance settlement.
+Meanwhile, Coinbase executives have floated the idea of leaving the U.S. altogether for a jurisdiction with hard-and-fast rules on crypto, should the company be
+unable to come to a resolution with the SEC.
+</item 23>
+
+<item 24>
+A comprehensive list of 2023 tech layoffs (TechCrunch, 2023-09-28T20:04:20+00:00)
+Superpedestrian
+
+Is shutting down its U.S.-based shared scooter operation and exploring a sale of its European business, TechCrunch has exclusively learned.
+
+Bolt
+
+Confirmed it laid off 29% of its staff December 15. The e-commerce company known for its one-click checkout technology was at one time the subject of a federal
+probe.
+
+Cruise
+
+In an announcement obtained exclusively by TechCrunch, the embattled self-driving car company is cutting 900 employees, or 24% of its workforce, per a December
+14 email from new president and CTO Mo Elshenawy.
+
+Etsy
+
+Is laying off 11% of its workforce. In a letter to employees December 13, CEO Josh Silverman cited a “very challenging macro and competitive environment.”
+
+Chipper Cash
+
+Has reportedly laid off 15 people across various departments. It would be the fintech unicorn’s fourth round of layoffs this year.
+
+SmileDirectClub
+
+Has shut down three months after filing for Chapter 11 bankruptcy, citing $900 million of debt.
+</item 24>
+
+<item 25>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+The price-match policy does not apply to special events like Black Friday, though, and you must bring the ad or listing with you in-store to the register.
+Additionally, The Home Depot will only honor requests submitted by the original buyer — no friends or family allowed.
+
+You could potentially buy HP’s Spectre x360 14 at a lower price thanks to HP’s price-matching policy. Image: Monica Chin / The Verge
+
+According to HP’s website, the company will match the current pre-tax price for new comparable PCs and identical HP printer, display, and accessory model
+numbers from nationally recognized online retailers, such as Dell, Amazon, Newegg, and Best Buy. The specs have to be the same, but the product model number
+does not need to be identical for computers. You have to ask for the match at the time of purchase by calling 1-800-888-0229. You can’t request a price match
+via email or chat, though, and the policy does not extend to items bought during promotional periods.
+</item 25>
+
+<item 26>
+Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling (TechCrunch, 2023-10-30T10:15:24+00:00)
+After all, that would require Gogoro to set up a swapping network in those regions. But if so, it would signal a new revenue stream for the company, which has
+been struggling to reach profitability amid softening demand and large investments into international expansion.
+
+— Rebecca Bellan
+
+Deal of the week
+
+Well this is a fun one.
+
+Flexport is in talks to acquire the technology of Convoy, the once buzzy digital freight startup that abruptly shuttered after failing to find a buyer. This
+possible deal, which was reported by WSJ, didn’t have any other details, but it still made me raise an eyebrow.
+
+Lest you forget, Flexport founder Ryan Petersen just took back the CEO title after his hand-picked successor was pushed out. Petersen’s big message has been
+getting the company’s financial house back in order and has criticized former CEO Dave Clark of overspending, specifically around hiring and expanding too
+quickly.
+</item 26>
+
+<item 27>
+The 30 best Amazon Prime Day deals for October 2023 (Engadget, 2023-10-10T17:41:37+00:00)
+Engadget has been testing and reviewing consumer tech since 2004. Our stories may include affiliate links; if you buy something through a link, we may earn a
+commission. Read more about how we evaluate products.
+
+Here are the best Prime Day deals we could find gathered in one place.
+
+Amazon's second Prime Day-like sale event for 2023 kicked off in the wee hours this morning, and it's turning out to be a great opportunity to get holiday
+shopping done early. Or, if you missed out on any of the deals from Prime Day in July, this year's "Prime Big Deal Days" will let you make up for that. The sale
+has brought back many of the same steep discounts we saw during the summer as well as new sales. We've also put together category roundups for deals on
+headphones, tablets, TVs, video games and other gadgets.
+</item 27>
+
+<item 28>
+Cruise hits the brakes on driverless, UAW makes progress and more EV backpedaling (TechCrunch, 2023-10-30T10:15:24+00:00)
+Notable reads and other tidbits
+
+Autonomous vehicles
+
+Waymo driverless vehicles are now available through the Uber app, starting with Phoenix. The launch comes five months since the two companies announced a
+multi-year agreement for the autonomous vehicle service to be accessed via the Uber app.
+
+Electric vehicles, batteries & charging
+
+Ford is delaying about $12 billion in planned investments on EVs, including construction of a second battery plant with joint venture partner SK On due to
+softening demand for higher-priced premium electric vehicles. While EV sales have grown, consumers aren’t willing to pay a premium for an EV over a gas or
+hybrid vehicle. That price pressure has squeezed profits, and in the case of Ford’s EV business caused losses to grow.
+
+General Motors and long-time partner Honda have ended plans to build millions of affordable and smaller electric vehicles as the automakers come to terms with
+high interest rates and battery costs coupled with softening EV demand. Anyone spotting a trend here?
+</item 28>
+
+<item 29>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Hart said Amazon sales comprise about 90% of his business, meaning any hit those sales take on Amazon has a considerable impact. He recalled “24 anxious hours”
+in September 2022 when a third-party seller of his popular construction toy Brain Flakes listed the toy for a lower price on Target than it was offered on
+Amazon.
+
+Molson Hart, CEO of Viahart, an educational toy company that sells on Amazon. Courtesy: Molson Hart
+</item 29>
+
+<item 30>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+The stock gets a Hold rating from Seeking Alpha's Quant Rating system, a more cautious view than the consensus Buy rating from Wall Street analysts.
+
+"Cleveland-Cliffs is well-positioned to perform well over time, thanks to its strong position when it comes to supplying automobile companies and due to energy
+cost advantages compared to competitors from markets such as Europe," says investing group leader Jonathan Weber.
+
+Consensus EPS Estimates: $0.44
+
+Consensus Revenue Estimates: $5.53B
+
+Earnings Insight: The company has beaten EPS expectations in 3 of the past 8 quarters and revenue in 5 of those reports.
+
+Also reporting: Logitech International S.A. (LOGI), Koninklijke Philips N.V. (PHG), Packaging Corporation of America (PKG) and more.
+
+Tuesday, October 24
+
+Alphabet (GOOG) (GOOGL)
+
+Alphabet (GOOG) (GOOGL) will be announcing its Q3 results during Tuesday’s post-market session.
+</item 30>
+
+<item 31>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+The prices are generally higher than buying the album elsewhere.
+
+“It just seems like they’re actively trying to stop sales,” says the Connecticut seller. “You can raise your fees, but maybe you could do some promotions,
+coupon codes, sales — something that offsets the shift. Sellers can do it on their own, but that’s going to require them to lower their prices — it’s going to
+be a race to the bottom. If you were trying to ruin a sales forum, this is how you’d do it.”
+
+Discogs did have a sale in late August, but it featured just 11 of the site’s largest stores. “When I first saw it, I thought, maybe they’ll be randomly
+promoting stores or the best products,” says Martin. “I don’t know a big sale that most people are not part of that you promote to further depress our prices is
+the right direction.”
+
+The website itself is a frequent source of complaints, as is the lack of support.
+</item 31>
+
+<item 32>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Walmart doesn’t price-match the prices of its competitors, though Walmart’s online store offers price-matching on items purchased from Walmart stores if the
+item is in stock at Walmart.com.
+
+However, the policy doesn’t apply to those who live in Alaska, Hawaii, or Puerto Rico. Additionally, it doesn’t apply to special event prices, like those seen
+during Black Friday. Walmart also does not retroactively price-match items bought from Walmart.com that have dropped in price after the time of purchase. The
+retailer additionally doesn’t price-match items purchased from Walmart Marketplace retailers or third-party sellers.
+
+Apple doesn’t offer a price-matching policy, though you can price-match on devices like the 15-inch MacBook Air — assuming it’s on sale — elsewhere. Photo by
+Amelia Holowaty Krales / The Verge
+
+While we’ve seen some claims that Apple will price-match up to 10 percent for products bought at certain major retailers, there is no official policy on the
+company’s website.
+</item 32>
+
+<item 33>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+The EU has reached this pass of laying out formal concerns after conducting what it describes as a “wide-ranging investigation to understand the market and the
+potential impact of the deal”, which it says included analysing internal documents provided by Amazon and iRobot and gathering views from market participants
+such as suppliers of RVCs and other smart home devices, as well as from providers of online sales channels.
+
+It also says it closely cooperated with other competition authorities during both the initial investigation and the in-depth investigation, adding that it will
+continue to do so during the remainder of the in-depth investigation. Although the U.K.’s competition authority already cleared the deal back in June.
+
+Amazon was contacted for a response to the EU’s statement of objections. A company spokesperson sent us this statement in which it claims iRobot faces “intense
+competition” from other RVC suppliers:
+
+We continue to work through the process with the European Commission and are focused on addressing its questions and any identified concerns at this stage.
+</item 33>
+
+<item 34>
+Deft is building e-commerce search to help you find the right product quickly (TechCrunch, 2023-11-03T13:00:14+00:00)
+He said that the main problem for startups in this space is the go-to-market strategy and fundraising.
+
+“The problem with competing with e-commerce players is not just about user experience, it’s also about logistics infrastructure and supply chain. So a startup
+catering to consumer search has to invest a lot of money into making it a viable business,” Konigsberg told TechCrunch.
+
+He also added that it will be difficult for a startup like Deft to build user loyalty while competing against Google and Amazon.
+
+Both Pienaar and Konigsberg said that Deft will have to involve retailers in the mix either as partners or as customers of their search product. Either way,
+it’s going to be interesting to see if Deft can build a user base on its own or sell its search feature to e-commerce retailers.
+</item 34>
+
+<item 35>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+Thou shalt not have a competing store on iOS and thou shalt not use a competing payment method. And I think Apple should be receiving at least as harsh
+antitrust scrutiny as Google.
+
+It’s interesting to me that because Google distributes the Android operating system as open source, they had to put all these deals out in the open. More out in
+the open, I should say — certainly they still wanted to keep them secret.
+
+But I’m going down my story about all the best emails from the Epic v. Apple trial — and we do have a lot of documents from both Apple and Google that show they
+were similarly self-serving in terms of deals.
+
+I’d say this is the thing that’s disappointed me the most with Apple and Google: even at the peak of the antitrust trial against Microsoft, Microsoft was
+awesome to developers. Microsoft has always been awesome to developers, always being respectful, giving developers a great deal and treating them as partners,
+you know? And so even as Microsoft was crushing corporate competitors, the developer experience was excellent.
+</item 35>
+
+<item 36>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Shopify, for example, gives sellers much more control over how they communicate with customers, Needham said, adding that although Amazon still controls the
+communication process, at least there is one. "I wish it was a clear-cut case,” Needham said. “I have a vested interest in the marketplace doing really well, as
+a seller and as a service provider. And... this case, it doesn’t make the marketplace better for sellers."
+
+Concerns over Amazon pricing policies, fees
+
+Many sellers have zeroed in on Amazon’s pricing policies and rising fees as rightful areas of concern in the FTC's lawsuit. Molson Hart, whose company Viahart
+sells toys on Amazon, has been a longtime critic of Amazon’s pricing policies. Hart complained of how Amazon’s seller fees impact pricing in a 2019 Medium post
+and later that year testified about his experience before a House committee.
+</item 36>
+
+<item 37>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+However, it likely won’t be the last opportunity for you to save. As someone who’s been covering deals for The Verge and Polygon for years, I’m shocked by how
+often I see these low prices, often spoken of as if they’re a flash in the pan, extending through much of December. That said, it’s more likely that price cuts
+on products you want can go by unnoticed unless you’re tracking deals yourself.
+
+Track deals yourself
+
+We love to tell you about great deals. But there’s a limit to the kind of products that we write about, and the ones that we see. If you’re not comfortable
+leaving it up to the chance that we’re going to tell you about price cuts on the products you really want, you have the power to track deals with relative ease.
+
+If you only shop on Amazon, CamelCamelCamel remains one of the best tools for tracking price changes and history for products.
+</item 37>
+
+<item 38>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+The seller went on to describe the experience as a “race to the bottom.” “It's long overdue," another commenter wrote. "When they close me down, I'm applying
+for a job with the FTC.” Still, others commented that the FTC’s complaint is misguided. “Selling on Amazon is a life-changing opportunity and the amount of
+sellers that throw stones at the platform is astounding,” one user wrote.
+
+Seller skepticism
+
+Even sellers who may be sympathetic to the idea of regulating Amazon have concerns, specifically that the FTC's highlighted issues aren't necessarily ones that
+would make the seller and consumer experience better. Scott Needham, who sells on Amazon and runs a product-finder tool for other Amazon sellers, said he was
+“surprised by some of the points that the FTC selected.”
+
+watch now
+
+“I have over the years been very critical of Amazon,” Needham told CNBC. “I’ve lost a lot of sleep because of some of the things that they have done.
+</item 38>
+
+<item 39>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Lenovo also offers a price guarantee refund for laptops and personal desktop computers bought from Lenovo.com within 30 days of purchase. To receive a refund,
+you must contact Customer Care and show the lower price of the identical product offered on Lenovo.com. This policy doesn’t apply to doorbuster or clearance
+products, however.
+
+Lowe’s will match the price of identical, in-stock products when you present an ad, product listing, or photo from a qualifying online or local retailer,
+including Amazon, Best Buy, Target, and Walmart. The product must be purchased directly from the retailer and not a third-party seller, however, and it doesn’t
+apply to special sales like Black Friday and other various holiday promotions. Lowe’s also doesn’t match prices from one Lowe’s store to another. To request a
+price match, head to the store, call 1-877-465-6937, or chat online.
+
+If Microsoft lowers the price of the Xbox Series X, Microsoft could refund you the difference.
+</item 39>
+
+<item 40>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+If you find a lower price from a qualifying competitor on an eBay Deal item that you bought within 48 hours — or on another product with the “Best Price
+Guarantee” symbol attached to it — you’ll get “110 percent” of the difference. That means eBay will give you an eBay coupon for the difference in price between
+what you bought the item for and what the competitor is selling it for, plus an additional 10 percent of that price difference. Note, however, that these
+coupons will expire within 30 days of being issued.
+
+The products must be new, unopened, and identical to the competitor’s item. You have to contact eBay Customer Service, and if they verify your claims are
+legitimate, you will receive the coupon and be able to use it toward your next eBay purchase.
+
+GameStop does not mention an official price-matching policy on its website. Last year, however, GameStop tweeted that the store will price-match items sold and
+shipped by Amazon as long as they’re available online or in-store.
+</item 40>
+
+<item 41>
+The inside story of Dave Clark's tumultuous last days at Flexport (Cnbc | World Business News Leader, 2023-10-02T17:46:00+00:00)
+Clark and Petersen flew to Miami to meet with Shopify's leadership. As a transaction was nearing, Clark, who had a reputation as a deft negotiator, got Shopify,
+which was already an investor in Flexport, to sweeten it with $40 million in cash and the framework for a $260 million convertible note that could help Flexport
+on its path to an IPO, according to an internal document analyzing the deal. The sale would be announced alongside Shopify's first-quarter earnings report on
+May 4. "We did not change the terms of a deal or rush it just to have it line up with an earnings call," Shopify said in a statement. With Flexport, "we are
+tightly mission-aligned to ensure the success of our merchants, which is why we chose to deepen our partnership with them earlier this year." The night before
+the announcement, Petersen appeared at a "Tech Talk" at Flexport's Bellevue, Washington, office to pitch the "Flexport vision" to hundreds of people.
+</item 41>
+
+<item 42>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+European Union regulators have sent Amazon a formal statement of objections setting out competition concerns over its proposed acquisition of robot vacuum
+maker, iRobot.
+
+The step does not confirm the EU will seek to block the deal but it shows antitrust regulators do remain concerned. It could therefore push Amazon to offer
+remedies to EU authorities to settle the investigation and avoid the risk of the acquisition being blocked.
+
+Amazon has already lowered its acquisition price for iRobot — which was originally an all-cash offer of $1.7 billion back in August 2022 — by 15% owing to
+increased debt taken on by its target while regulatory snags delayed closing the deal at the original purchase price.
+
+The bloc has been closely scrutinizing the Amazon-iRobot deal since July when the EU announced its in-depth probe. The Commission said at the time it was
+worried the transaction would allow Amazon to restrict competition in the market for robot vacuum cleaners (RVCs) and strengthen its position as online
+marketplace provider in a number of ways.
+</item 42>
+
+<item 43>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+Amazon does not price match, which is annoying, but it’s tolerable since it often has the lowest prices of all retailers anyway. Amazon only protects the price
+on pre-orders that have its “Pre-order Price Guarantee,” which ensures that you’ll pay the lowest amount a product sells for before it’s launched.
+
+Not only does Best Buy match prices from “qualified competitors,” but its site says that most products bought between now and Dec. 30 can be price-matched
+through Jan. 13, 2024.
+
+Walmart’s policy says it won’t price match with competitors, nor does it price match for products purchased online that later decrease in price.
+
+Target says that purchases made between Oct. 22 and Dec. 24 can be price-adjusted if the cost lowers in the span of time, and if you show proof of purchase. You
+may be eligible for a price match on a purchase, but the rules for submitting documentation vary depending on whether you’re shopping online or in store. It’s
+all explained here.
+</item 43>
+
+<item 44>
+ASX set to rise ahead of inflation report after big tech lifts Wall Street (The Sydney Morning Herald, 2023-10-24T20:05:06+00:00)
+Google, which is also seeking to capitalise on surging demand for AI technology, saw revenue climb 11 per cent to $US76.7 billion, with net income of $US19.7
+billion thanks to a recovery in digital advertising revenue. However, its closely watched cloud division, which houses its data storage business and many of its
+AI efforts, missed Wall Street expectations. “Investors were disappointed by the relatively weak performance at its Google cloud platform, which is at risk of
+falling further behind” competitors’ offerings, Jesse Cohen, a senior analyst at Investing.com, wrote in an email. Loading During trading hours, the S&P 500
+slipped off session highs, led by losses in energy shares as oil slid below $US84 a barrel, but once again the index found support above the key 4200 mark.
+Verizon Communications, 3M and General Electric climbed on bullish forecasts. Facebook and Instagram owner Meta dropped after being sued by California and dozen
+of other US states over harmful youth marketing claims.
+</item 44>
+
+<item 45>
+How to tackle Black Friday shopping like a boss (Polygon, 2023-11-12T15:00:00+00:00)
+While you don’t need an account to see pricing information available through the app, making a profile will allow you to set up watchlists and get email price
+alerts for your favorite products. You’re welcome to manually populate your own watchlist, but the app also allows you to import any existing Amazon wishlist
+into your CamelCamelCamel profile. Make sure to grab its Camelizer browser extension, too.
+
+Honey and its accompanying extension allow you to track pricing history changes on specific products, but across a number of retailers, not just Amazon. Also,
+as an added bonus, Honey will also automatically search for promo codes when you check out at a supported retailer.
+</item 45>
+
+<item 46>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+The end result of these tactics, the FTC argues, is elevated prices across the web. The company steadily hikes the fees it charges sellers and prevents them
+from discounting on other sites, so sellers often inflate their prices off of Amazon, creating an “artificial price floor everywhere,” according to the
+complaint. The FTC is seeking to hold Amazon liable for allegedly violating anti-monopoly law, though it has not yet outlined the specific remedies it believes
+would best resolve its concerns. In antitrust cases, remedies are often determined only after a court finds the defendant liable. In a blog post, Amazon general
+counsel David Zapolsky said third-party sellers set their own prices on the marketplace. The company also invests in tools to help sellers offer “competitive
+prices,” he said. “Even with those tools, some of the businesses selling on Amazon might still choose to set prices that aren’t competitive,” Zapolsky said.
+</item 46>
+
+<item 47>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+iRobot, which faces intense competition from other vacuum cleaner suppliers, offers practical and inventive products. We believe Amazon can offer a company like
+iRobot the resources to accelerate innovation and invest in critical features while lowering prices for consumers.
+
+Late last year the EU settled with Amazon over two earlier competition probes — one delving into antitrust concerns about Amazon’s use of merchant data to
+bolster its own retail business; and a second one looking at how it operated the “Buy Box” and its Prime loyalty program.
+
+In those cases Amazon agreed a series of commitments to end the probes — including saying it would stop using non-public data from its marketplace sellers and
+boost transparency for merchants; and pledging to treat all sellers equally, regardless of whether they pay for its logistics services.
+</item 47>
+
+<item 48>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“We can tailor our ads to hit exactly the consumers we want,” Moller said. “It’s a perfect marriage of a transaction, and that’s one of the beauties of what
+their marketplace offers.” Needham said he feels he would have been more supportive of the case if it were filed a few years ago, pre-pandemic. At that time, he
+said, "I would have felt, yes Amazon is a monopoly… But actually after Covid, into 2023, ecommerce has had a lot of big changes.” He added, "The competition is
+just not what it was in 2019." Competitors like Shopify and Walmart are increasingly viable alternatives for many categories of sellers, Needham said, not to
+mention rapidly growing Chinese e=commerce companies like Temu. As a result, Needham said he’s seen some significant changes from Amazon. Among those is a
+greater ability for Amazon sellers to communicate with buyers, offering select customers certain promotions.
+</item 48>
+
+<item 49>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+Amazon in recent years made the forum anonymous, but users must have a seller account in order to post. Another post included a screenshot of a message Amazon
+sent to sellers the day after the FTC filed its complaint, which said, “As your partners, we know that this news may generate questions for you and our business
+together. This lawsuit does not change anything about our relationship with you or how we operate today.” One user called it “BS verbiage,” adding, “Businesses
+that sell in their store are indeed customers. And which of us has gotten good customer service?” Another user described their experience in the last 12 months
+of selling on Amazon as “being up all night at an effing casino but I'm stuck, the drugs are starting to wear off, but I'm trying to break even on the mortgage
+payment I'm using to play. That's how it is selling on Amazon right now to me.” The seller went on to describe the experience as a “race to the bottom.”
+</item 49>
+
+<item 50>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+He speculated that the company didn’t want the public to think too hard about how search works because that awareness “encourages regulators and makes people
+realize, ‘Oh, there’s a lot of money here.’”
+
+There has always been advertising and polemics from cranks, scammers, and liars. But now we see this stuff surfacing alongside truth, and we can’t tell the
+difference. We move through our lives with a greater sense of distrust and fear and insecurity. At the end of the day, it’s Google’s world, and the SEOs are
+only living in it.
+
+And as much as I might hate the way the SEOs who don’t follow Google’s rules have altered my online experience, the reality is that most people running a
+company will break whatever rules they are able to get away with breaking.
+</item 50>
+
+<item 51>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+In October 2019, Epic internally said it might pursue an aggressive pursuit model with the Epic Games Store, where it would aggressively pay more for exclusive
+games and really pull in more and more users. Are you in the aggressive pursuit model?
+
+No, we’re in a different model, which is called the “Ridiculously aggressive pursuit model.” If it’s a 10-slide deck, that’s on slide 11.
+
+Did you get a bingo on your Verge bingo card?
+
+Yeah, I think it was almost a complete shutout. I think there was only one cell in the entire board that was missing. I was really impressed — the thing for
+that bingo card that really impressed me was “lick the cookie.” Do you remember? You may not even be old enough, but “lick the cookie” was in the 1999 US v.
+Microsoft antitrust trial.
+</item 51>
+
+<item 52>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+The list of companies reporting also includes major automakers General Motors (NYSE:GM) and Ford (NYSE:F), consumer staples manufacturers Coca-Cola (NYSE:KO),
+and Colgate Palmolive (NYSE:CL), defense leaders Boeing (BA), L3Harris Technologies (LHX), Raytheon Technologies (RTX), General Dynamics (GD), and Northrop
+Grumman (NOC), energy sector giants ExxonMobil (NYSE:XOM) and Chevron (NYSE:CVX), payment processors Visa (NYSE:V) and Mastercard (NYSE:MA) and major airline
+Southwest Airlines (NYSE:LUV).
+
+Below is a rundown of major quarterly updates anticipated in the week of October 23 to 27:
+
+Monday, October 23
+
+Cleveland-Cliffs (NYSE:CLF)
+
+Cleveland-Cliffs (CLF) is scheduled to announce Q3 earnings results on Monday, after market close. Analysts expect profit to surge by more than 50%, while
+revenue is projected to go down slightly.
+</item 52>
+
+<item 53>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+But those alternatives, being considerably larger and more mainstream, offer a much broader base of potential buyers as well as a more solid infrastructure and
+support system.
+
+“eBay has much more of a user base, so for the little bit of extra cost it’s a no brainer,” says Martin, who says that, for him, eBay’s fees are usually around
+1 percent higher than Discogs’. “It’s probably double [the business] I do on Discogs, and that’s only grown since they raised the fees.” He sells primarily new
+vinyl and uses Amazon, Walmart, eBay, and Discogs, along with his own website, apocalypsevinyl.com. With the new fees and the competitiveness of the Discogs
+market, the platform is becoming less and less useful as a selling channel.
+
+“They’re under the impression that they’re the only game in town,” says the Connecticut seller of Discogs. “The fees were relatively low, but now that they’re
+higher, there doesn’t seem to be a reason to use that anymore.”
+</item 53>
+
+<item 54>
+The shipping industry’s boom-and-bust cycle is so severe carriers face going from bumper profits to losing money in the space of a few years: 'I'm certainly
+concerned' (Fortune, 2023-11-12T17:51:37+00:00)
+Companies including clothing brand Under Armour Inc. and furniture maker Lovesac Co. cited relief from lower ocean shipping expenses over the past quarter.
+
+With inflation eating away at their paychecks, consumers are being cautious about spending and seeking cheaper ways to have parcels delivered.
+
+“Our own data tells us that the wider economic picture may be having an influence on the services our customers opt for, with many looking for more
+cost-effective shipping options,” said Karen Reddington, president of FedEx Express Europe. “We expect external business conditions to be challenging in the
+near term, and there remains uncertainty with respect to the timing of demand recovery.”
+
+Read More: Powell Says Fed to Be Careful, Won’t Hesitate to Hike If Needed
+
+For the container carriers, the cost of moving merchandise can’t stay this low indefinitely, because their expenses are heading in the opposite direction.
+</item 54>
+
+<item 55>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+It also doesn’t apply to products that require that you log in to see the price, “Marketplace” items from third-party sellers, or lower-priced items purchased
+from other Target stores.
+
+Best Buy’s Price Match Guarantee states that a product could be eligible for a price reduction if it’s new, identical to the competitor’s product, immediately
+available at a qualifying competitor’s store or on its site, and not shown on Best Buy’s exclusion list (which includes “items for sale the Friday before
+Thanksgiving Day through the Monday after Thanksgiving”).
+
+To get the difference, you have to contact Best Buy via its on-site chat and be able to show the ad or website with a lower price point. Alternatively, you can
+call 1-888-237-8289 or visit any Best Buy or Pacific Sales store.
+
+Best Buy will also, upon request, match an in-store or online price that was lowered during the return and exchange period, which typically lasts up to 15 days.
+</item 55>
+
+<item 56>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+“Amazon may have the ability to foreclose iRobot’s rivals because Amazon’s online marketplace is a particularly important channel to sell RVCs in France,
+Germany, Italy, and Spain,” the Commission writes in a press release. “RVC customers in these countries particularly rely on Amazon both in terms of product
+discovery as well as for their final purchasing decision.”
+
+The Commission is also worried Amazon may have the incentive to foreclose iRobot’s rivals because it may be economically profitable for it to do so. “The merged
+entity would likely gain more from additional sales of iRobot RVCs, than it would lose from fewer sales of iRobot’s rivals and other related products on Amazon.
+Such gains include benefits from additional data gathered from iRobot’s users,” it suggests.
+
+Were Amazon to deploy such foreclosure strategies the Commission’s view at this stage of the probe is it could restrict competition in the market for RVCs,
+leading to “higher prices, lower quality, and less innovation for consumers”.
+</item 56>
+
+<item 57>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+“I would wake up in a city and not know what time zone I was in,” he recalled. To slow the pace, he upped it to $5,000 a day, but “it seemed the more I raised
+my rates, the more gigs I was getting.”
+
+Nowadays, he mostly invests in cannabis and psychedelics. SEO just got to be too complicated for not enough money, he told me. Ward had told me the same thing,
+that she had stopped focusing on SEO years ago.
+
+I was considering how it was possible that so many people have been complaining recently about SEO ruining the internet if these people were telling me the SEO
+business is in decline when I met Jairo Bastilla. He was the kind of tall, charming man who described himself multiple times as “a nerd,” and he pointed out
+that even though working directly with search engine rankings is “no longer monetizing at the highest payout,” the same “core knowledge of SEO” remains relevant
+for everything from native advertising to social media.
+
+Translation? SEO is now baked into everything.
+</item 57>
+
+<item 58>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+On a YTD basis, Amazon shares have expanded by almost 50% in value.
+
+"AMZN's cost-cutting initiatives and margin improvements make it a solid buying opportunity, despite concerns such as the FTC lawsuit and a weakening economy."
+writes SA Investing Group Leader Danie Jones with a bullish stance on the stock. Meanwhile, fellow Investing Group Leader Sensor Unlimited expects the stock to
+continue being range-bound in the near term due to the key challenges on its operating margins, competition in key growth areas, and valuation risks.
+
+Consensus EPS Estimates: $0.60
+
+Consensus Revenue Estimates: $141.621B
+
+Earnings Insight: Amazon has beaten EPS and revenue expectations in half of the past 8 quarters.
+
+Also reporting: Kenvue (KVUE), Intel (INTC), Ford Motor Company (F), Altria Group (MO), Merck & Co.
+</item 58>
+
+<item 59>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+But the questions put to Cue were the same ones the DOJ is going to keep asking: is Google really the best search engine, or is it just the one writing the
+biggest checks? And if those checks went away, what would the search engine market look like? Cue said Apple’s never really thought about it. Google said Apple
+would be silly to do so. And the Justice Department thinks it’s about time Apple starts doing so.
+</item 59>
+
+<item 60>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Ray reassured me that I was not crazy. Google results today do feel different from how they felt just five or six years ago for two major reasons. The first was
+Google’s response to the disinformation panic around the 2016 election, which involved questioning the notion that the most reliable information could be chosen
+by a form of popularity, meaning how many links a site received from other sites. As a result, the algorithm seemed to change its approach to links, especially
+when it came to news and sites offering legal, financial, or health advice, and instead paid more attention to what Google came to call E-E-A-T: experience,
+expertise, authoritativeness, and trustworthiness.
+
+“E-E-A-T has had a pretty big impact on what types of results you see,” Ray told me. She’s done extensive (and fascinating) research around how certain sites
+have fared under these new guidelines: Urban Dictionary, down! Mayo Clinic, up! Some people consider EEAT part of what’s making results better than ever.
+</item 60>
+
+<item 61>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+Shares of the now-Virginia-based industrial and defense giant have dropped over 7% over the past 6 months, attracting a cautious view of Hold from Seeking
+Alpha's Quant Rating system, pointing to valuation concerns. Meanwhile, Wall Street analysts rate the stock a Buy.
+
+During the third quarter, Boeing and its supplier Spirit AeroSystems (SPR) determined that the aft pressure bulkhead on many Boeing 737 MAX airplanes had
+erroneously drilled fastening holes. At the 2023 Industrial Conference, CFO Brian West claimed that the current issue will affect 75% of the 220 planes in
+inventory, or 165 planes. Despite persistent 737 manufacturing problems, the firm reiterated its ambitions to boost 787 production from three to four per month
+by the end of 2023.
+
+The company delivered 27 commercial jets to customers in the month of September, raising its yearly total to 371 planes.
+</item 61>
+
+<item 62>
+6 VCs explain how startups can capture and defend marketshare in the AI era (TechCrunch, 2023-10-13T20:01:40+00:00)
+Despite cloud computing remaining critical, AI budgets are now more than double that of cloud computing. Eighty-two percent of business leaders believe the
+integration of AI solutions will increase their employee performance and job satisfaction, and startups should expect a high level of desire for and experience
+with AI solutions in their future customers.
+
+Finally, we’ve seen consumption, or usage-based priced tech products’ growth slow in recent quarters. Will that fact lead startups building modern AI tools to
+pursue more traditional SaaS pricing? (The OpenAI pricing schema based on tokens and usage led us to this question.)
+
+The trajectory of usage-based pricing has organically aligned with the needs of large language models, given that there is significant variation in
+prompt/output sizes and resource utilization per user. OpenAI itself racks upward of $700,000 per day on compute, so to achieve profitability, these operation
+costs need to be allocated effectively.
+
+Nevertheless, we’ve seen the sentiment that tying all costs to volume is generally unpopular with end users, who prefer predictable systems that allow them to
+budget more effectively.
+</item 62>
+
+<item 63>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+Despite both stocks lagging behind the broader market index, Seeking Alpha's Quant Rating system has approached them cautiously, assigning a Hold rating. In
+contrast, Wall Street analysts express optimism, giving both stocks a Buy rating.
+
+Given the prevailing market conditions and the upward trend in crude oil prices, analysts anticipate Y/Y growth in earnings per share and revenue for CVX, while
+expecting a decline for XOM.
+
+Also reporting: WisdomTree (WT), AbbVie (NYSE:ABBV), Phillips 66 (PSX), Colgate-Palmolive Company (CL), Sanofi (SNY), T. Rowe Price Group (TROW), Stanley Black
+& Decker (SWK), Charter Communications (CHTR), Newell Brands (NWL), Xcel Energy (XEL), Aon (AON), AutoNation (AN), CBRE Group (CBRE), and more.
+
+Related stock stories:
+</item 63>
+
+<item 64>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What were your settlement talks with Google CEO Sundar Pichai like?
+
+We can’t talk about content, but we met for an hour and had a professional discussion... in which we didn’t reach a settlement. We were rather far apart, let’s
+say, because what Epic wants ultimately is free competition and fair competition for everybody, and the removal of the payments tie and removal of the
+anticompetitive measures, which obviously leads to far better deals for consumers and developers.
+
+What we don’t want is a special deal just for ourselves, and Google’s strategy so far as you’ve seen from all these deals has been to basically take out all
+their potential competitors one at a time while they’re still weak and small, before they build up or unite into a formidable force. Epic’s not going to go
+along with something like that and do a special deal just for ourselves.
+
+You’ve said that a couple times, but the email that you accused Google of leaking suggested that Epic was interested in a special deal of some sort at that
+time.
+</item 64>
+
+<item 65>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Nothing is more frustrating than buying a new pair of headphones, an OLED TV, or a backpack just to find out that you could have gotten it for a lot cheaper
+somewhere else. In order to keep customers happy — and prevent them from going elsewhere — many retailers offer price-matching policies where they promise to
+match a lower price you’ve found elsewhere. That’s information that could come in handy now that Black Friday and Cyber Monday are just around the corner.
+
+What follows are the price-matching policies for a variety of major retailers. There are a few things to make note of here. First, all price-matching policies
+have a number of rules attached to them. We’ve summarized some of the rules here, but you’d be advised to go to the links that we’ve provided and read the
+policy carefully. Second, and logically enough, retailers that serve as marketplaces for other sellers, such as Costco, don’t have price-matching policies.
+
+Lastly, there are always exceptions to the rules.
+</item 65>
+
+<item 66>
+Here’s how Rainforest, a budding Stripe rival, aims to win over software companies (TechCrunch, 2023-10-08T14:16:01+00:00)
+They said: “Visa and MasterCard once imposed similar anti-steering rules on merchants accepting their cards but, after the Justice Department sued the networks
+for antitrust violations, they agreed in 2010 to eliminate their anti-steering rules as part of the settlement. With payments transitioning into the digital
+realm, PayPal has simply ripped a page right from the Visa and MasterCard [sic] playbook.”
+
+Meanwhile, Patrick McGahan, a partner at Scott+Scott who focuses on antitrust litigation, had an interesting take that actually involves both of those card
+giants. He told TechCrunch that the case illustrates that “the tensions between merchants and the payment system providers are not over, and that litigation
+regarding this key cost faced by merchants is likely to continue for some time.”
+
+He added: “Platform companies that operate as gatekeepers in their market, such as PayPal, will continue to be the subject of antitrust litigation as a result
+of the significant fees they charge.
+</item 66>
+
+<item 67>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+What would you say the differences are between the Apple and Google cases?
+
+I would say Apple was ice and Google was fire.
+
+The thing with Apple is all of their antitrust trickery is internal to the company. They use their store, their payments, they force developers to all have the
+same terms, they force OEMs and carriers to all have the same terms.
+
+Whereas Google, to achieve things with Android, they were going around and paying off game developers, dozens of game developers, to not compete. And they’re
+paying off dozens of carriers and OEMs to not compete — and when all of these different companies do deals together, lots of people put things in writing, and
+it’s right there for everybody to read and to see plainly.
+
+I think the Apple case would be no less interesting if we could see all of their internal thoughts and deliberations, but Apple was not putting it in writing,
+whereas Google was. You know, I think Apple is... it’s a little bit unfortunate that in a lot of ways Apple’s restrictions on competition are absolute.
+</item 67>
+
+<item 68>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“Below is a list of product(s) in your catalog that are not currently eligible to be the Featured Offer because they are not priced competitively compared to
+prices for those products from retailers outside Amazon,” according to the email, which was viewed by CNBC. Unbeknownst to him, Chewy was running a discount
+promotion, and dropped the price of his product by a few dollars to $39.99 – less than the $43 offer on Amazon. The algorithm had flagged it as a lower offer,
+even though the item on Chewy cost $48.54 after shipping and taxes. Ruckel had to make a choice: Lower the price on Amazon or ask Chewy to raise the price of
+his product. He opted for the latter.
+
+Fred Ruckel's company Snuggly Cat makes Ripple Rug, an interactive play mat for cats.
+</item 68>
+
+<item 69>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+The search-engine giant has outperformed the broader market index with a 55% growth rate this year, surpassing the S&P 500's 12%.
+
+Following the tech behemoth's upbeat Q2 results, investment firm Bank of America said it is expecting "favorable" headlines, due in part to strength in YouTube,
+search, and artificial intelligence.
+
+Just a few days before the earnings report, Seeking Alpha's Quant Rating system changed its view from Strong Buy to Hold, while Wall Street analysts maintained
+a bullish view on the stock, giving it a Strong Buy rating.
+
+Consensus EPS Estimates: $1.45
+
+Consensus Revenue Estimates: $75.73B
+
+Earnings Insight: Google has topped EPS expectations in 4 of the past 8 quarters, beating revenue estimates in 5 of those reports.
+
+Microsoft (MSFT)
+
+Joining Alphabet on Tuesday, Microsoft (MSFT) is also set to report its Q4 performance after the closing bell.
+</item 69>
+
+<item 70>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+If you bought the product from a Costco warehouse location, visit the membership counter at the store where you made the purchase. Costco doesn’t price-match
+items bought from Costco warehouses with Costco.com purchases.
+
+Dell will price-match identical products from Dell, Amazon, Best Buy, Walmart, Target, HP, Apple, Lenovo, and a number of other retailers. You can call
+1-877-275-3355 or chat online to run a price check, but you’ll need to provide a link to the competitor’s product.
+
+You can also contact the company about a price difference within 30 days of purchase. However, there is a long list of restrictions, and none of this is
+available between Thanksgiving Day and the Monday following Thanksgiving (or on Green Monday).
+
+As a general rule, eBay doesn’t match the prices of purchases made during the weeks of Thanksgiving and Cyber Monday. It does, however, offer a generous
+price-matching policy for items bought before or after that time period.
+</item 70>
+
+<item 71>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+It also doesn’t apply to membership stores like Costco and Sam’s Club.
+
+If you find a comparable product at a lower price during the return period, you can email HP at myhpsales@hp.com. This only applies to branded HP products and
+doesn’t apply to products purchased during certain promotional events. This includes Green Monday and products on sale during the week of Thanksgiving and the
+week after.
+
+Lenovo matches pricing on comparable PCs from Lenovo, HP, or Dell with the same key specs as long as they’re sold through a list of recognized retailers. The
+comparable PC must also be in stock and readily available from both Lenovo and the competing retailer, and you have to contact a Lenovo sales rep in order to
+facilitate the match.
+
+That said, you can’t take advantage of coupons or special discounts while receiving a price match, and the policy doesn’t apply to membership stores like
+Costco. The policy also doesn’t apply to “Marketplace” items where third parties fulfill the order, so double-check that you bought the product directly from
+the retailer.
+</item 71>
+
+<item 72>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The amount that Google spent on homepage market share has been a fixing point in the trial. Earlier this month, the CEOs of Microsoft and DuckDuckGo testified
+that their search engines would have been far more successful, even competitive with Google, had they been able to make similar deals with Apple. Microsoft CEO
+Satya Nadella even said he was willing to spend $15 billion per year to get Bing into Apple’s default search, per The Information.
+
+Google agreed not to promote Chrome to Safari users
+
+As part of its search deal with Apple, Google agreed not to promote Chrome to Safari users, reports Bloomberg. Google would have been able to do this with
+banners, pop-ups and other annoying means in other Google apps.
+
+The agreement also meant that Apple never switched to a Google competitor or allowed users to choose their browser when setting up their iPhones.
+
+Google tried to be preinstalled on iPhones
+
+Pichai admitted to attempting to get Tim Cook to preinstall Google on every iOS device back in 2018, according to The Verge.
+</item 72>
+
+<item 73>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+Meta's cost-cutting actions and a rebound in ad income boosted the stock's performance this year, which has climbed by about 150%. The stock has been rated as a
+Strong Buy by sell-side analysts and Seeking Alpha's Quant Rating system.
+
+Recently, Alphabet's unit Google (GOOG) (GOOGL), Meta Platforms (META), and Apple (AAPL) have received approval from U.S. regulators to deploy the new set of
+mobile AR/VR devices, including goggles and in-car connections.
+
+Consensus EPS Estimates: $3.60
+
+Consensus Revenue Estimates: $33.43B
+
+Earnings Insight: Meta has topped EPS expectations in 4 of the past 8 quarters, beating revenue estimates in 5 of those reports.
+
+Boeing (BA)
+
+Boeing (BA) is preparing to report Q3 results after the closing bell on Wednesday.
+</item 73>
+
+<item 74>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+Consensus EPS Estimates: $-2.53
+
+Consensus Revenue Estimates: $18.37B
+
+Earnings Insight: Boeing has beaten EPS expectations just once in the past 8 quarters and revenue just twice in that span.
+
+Also reporting: International Business Machines (IBM), QuantumScape Corporation (QS), ServiceNow (NOW), General Dynamics (GD), Automatic Data Processing (ADP),
+Baker Hughes Company (BKR), KLA Corporation (KLAC) and more.
+
+Thursday, October 26
+
+Amazon (AMZN)
+
+Ecommerce and cloud giant Amazon (AMZN) is due to release its Q3 earnings on Thursday after the market closes. The quarter will focus on Amazon's cost-cutting
+initiatives, supply chain management, and AI product deployment as potential positive factors for attracting investment in equities amidst current market
+environments.
+
+Wall Street analysts have a consensus Strong Buy rating, but Seeking Alpha Quant Ratings assesses the company as a Hold. On a YTD basis, Amazon shares have
+expanded by almost 50% in value.
+</item 74>
+
+<item 75>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+If Microsoft lowers the price of the Xbox Series X, Microsoft could refund you the difference. Photo by Vjeran Pavic / The Verge
+
+Now through January 31st, Microsoft will refund you the difference if it drops the price of a physical product purchased online from the Microsoft Store. The
+same policy also applies if you find the product on sale at a lower price at a qualifying retailer, such as Amazon or Best Buy.
+
+You can contact Microsoft’s Sales and Support team at 1-877-696-7786 to get a refund. If you purchase an item from a Microsoft Experience Center, you’ll have to
+go back to that location with your receipt.
+
+Newegg offers price matching on select items; these products are identified by the label “Price Match Guarantee” that appears in the price box on the right side
+of the product page. This applies whether you find that lower price on Newegg or at what Newegg judges to be a major retailer.
+</item 75>
+
+<item 76>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+The earnings season is slated to peak in the upcoming week, with a wide range of companies across various sectors reporting their financial results. The focus
+will be on mega-cap tech giants, but many other firms from wide-ranging sectors will announce results, including those from consumer staples, industrial,
+automobile, airline and energy segments.
+
+Facebook parent Meta (NASDAQ:META), Amazon (NASDAQ:AMZN), Alphabet (NASDAQ:GOOGL) (NASDAQ:GOOG) and Microsoft (NASDAQ:MSFT) are all set to release their
+quarterly results.
+</item 76>
+
+<item 77>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+“Just like any store owner who wouldn’t want to promote a bad deal to their customers, we don’t highlight or promote offers that are not competitively priced.”
+Zapolsky argued the FTC’s lawsuit could force it to stop highlighting low prices, “a perverse result that would be directly opposed to the goals of antitrust
+law.”
+
+“Long overdue” lawsuit
+
+On Amazon’s own forum for merchants, called Seller Central, several users cheered on the FTC and said they hoped it would result in changes to the company’s
+business practices. Amazon’s tense relationship with merchants has been well-chronicled over the years, with sellers expressing a range of grievances over
+issues like rising fees, an arcane suspensions process, and heightened competition on the marketplace from all sides, including the e-commerce giant. “I think
+it’s great, Amazon deserves it,” one person commented, adding, “More should be coming on the way.”
+</item 77>
+
+<item 78>
+The Epic v. Google trial may come down to simple v. complicated (The Verge, 2023-11-07T15:00:40+00:00)
+The upshot for consumers, Epic’s earlier legal filings have suggested, is that we pay higher prices for apps than we would if there were more competition and /
+or lower app store and payment processing fees. But while this will probably come up later in the trial, Epic chose to focus more on simply painting Google as
+the bad guy on day one.
+
+It’s not clear how much of that evidence will hold up on closer examination. That $360 million, for instance, refers to an alleged payment that kept Activision
+from opening an app store that could compete with Google Play. But Activision told The Verge in 2022 that it “never entered into an agreement that Activision
+would not open its own app store” — and Google is now, it says, armed with the evidence to prove it. On Monday, Epic’s attorney admitted Google “was too clever”
+to draw up contracts that specifically forced developers not to compete with the Play Store. The overall narrative is compelling, though — and I’m not sure
+Google’s opening statement countered it.
+</item 78>
+
+<item 79>
+The inside story of Dave Clark's tumultuous last days at Flexport (Cnbc | World Business News Leader, 2023-10-02T17:46:00+00:00)
+Shopify had acquired Deliverr in May 2022 for $2.1 billion. But the e-commerce software company was getting hammered by Wall Street as its Covid pandemic pop
+faded. By January 2023, CEO Tobias Lutke knew he needed to get rid of Deliverr. Around that time, Lutke first approached Petersen to float the possibility of a
+deal, according to a person familiar with the matter. Petersen told Clark he should engage with Shopify's team, according to a person with direct knowledge of
+the negotiations. Initial talks fell apart, but resumed when Flexport executives learned that Shopify was about to execute deep cost cuts and was eager to sell
+Deliverr. Clark and Petersen flew to Miami to meet with Shopify's leadership.
+</item 79>
+
+<item 80>
+Tim Sweeney on Epic’s victory royale over Google (The Verge, 2023-12-12T19:17:14+00:00)
+[Editor’s note: Every journalist in the courtroom agreed the jury was attentive; most were also surprised by the rapid verdict.]
+
+They got it, they got it quickly, and they were able to pull apart what was going on and contrast it with the fiction of the story that Google was trying to
+tell.
+
+What was something that surprised you in the courtroom, something you heard come to light that you hadn’t heard before?
+
+I’d suspected a lot of the practices that Google had, you know, since 2018 or so when we first started this, to such an extent that some folks would
+occasionally call me a conspiracy theorist. It was really, really interesting to see that my understandings of what Google was doing behind the scenes were
+actually true — you’re leaking our conversations to reporters to get negative stories written about us; you’re paying other developers off to convince them not
+to launch their own stores; they were going around and paying carriers and OEMs secretly not to carry competing stores.
+</item 80>
+
+<item 81>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+These are exactly the arguments that other search engine companies, like DuckDuckGo, Brave or Microsoft’s Bing, make when they accuse Google of being
+anticompetitive by making deals with Apple and others. The DOJ doubled down on this, saying Google has become the monopoly it denounced years ago.
+
+What does it all mean?
+
+The case is expected to continue for several weeks, bringing to a head one of the biggest fights in tech antitrust since the U.S. took Microsoft to trial in the
+1990s.
+
+If the judge rules against Google, the outcome could look a lot like the Microsoft deal, in which the computer company was required to change its behavior and
+share its APIs with third-party developers. Microsoft was also banned from making anticompetitive and exclusive deals with computer manufacturers.
+
+Google might end up having to turn over all or most of the data it has collected to other search engines so they can improve their products and attract more
+users. The DOJ has said that Google gets 16 times more data than Bing does everyday.
+</item 81>
+
+<item 82>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Apple does say that if it reduces its price on an Apple-branded product within 14 days from when you received your item, you can visit an Apple Store or contact
+the Apple Contact Center at 1-800-676-2775 to request a refund or get credit for the price difference. However, that doesn’t apply to special sales like Black
+Friday or Cyber Monday.
+
+B&H says that it might be able to honor a current lower price or match the price of a competitor, but it does so on a case-by-case basis. You have to contact
+its Customer Service team using the on-site chat, email, or by calling 800-606-6969 / 212-444-6615.
+
+Costco does not price-match with competitors. However, according to the website, it will issue a credit for the difference between the price a member has paid
+and a promotional price if you bought the item online at Costco and requested the credit up to 30 days before the change in price.
+</item 82>
+
+<item 83>
+The people who ruined the internet (The Verge, 2023-11-01T13:00:00+00:00)
+Looking back on all that had changed around what first attracted people to Google, from the introduction of ads to the efforts to keep users within the universe
+of Google products, this seemed to be the last straw.
+
+The second major reason why Google results feel different lately was, of course, SEO — specifically, the obnoxious-kid-refusing-to-behave-in-class kind of SEO.
+
+“SEO that goes against Google’s guidelines, it’s not new,” Ray explained. A decade ago, it used to be called “black hat” SEO, in comparison to the search
+engine-approved “white hat” tactics. And Google has, as Sullivan and many SEOs told me, gotten better over time at catching SEOs playing tricks on the
+algorithm.
+</item 83>
+
+<item 84>
+Coinbase rallies more than 60% in same month that FTX and Binance founders brace for prison (Cnbc | World Business News Leader, 2023-11-30T21:08:00+00:00)
+Wall Street appears to be shrugging off that concern. Analysts at Needham, who recommend buying Coinbase shares, wrote in a report on Nov. 21 that the company
+"exited the crypto 'winter' better positioned than in the prior up cycle." They also noted that in addition to FTX's failure and Binance's retreat, crypto
+trading platform Bittrex has also exited the market. Bittrex said on Nov. 20, that effective Dec. 4, "all trading activity on Bittrex Global will be disabled,"
+and it encouraged customers "to log into their account and withdraw assets as soon as possible." In April, the SEC charged Bittrex and its ex-CEO with operating
+an unregistered exchange. Yet there may be a new competitive threat on the horizon. U.S. regulators are expected to soon approve the first U.S.
+</item 84>
+
+<item 85>
+Apple defends Google Search deal in court: ‘There wasn’t a valid alternative’ (The Verge, 2023-09-26T17:01:22+00:00)
+Discussion of specific numbers was reserved for closed court sessions, but Cue wanted Apple to get a higher percentage, while Pichai wanted to keep the deal as
+it was. They eventually compromised on some other number we weren’t told in court, and Google has been paying Apple that amount since.
+
+“I always felt like it was in Google’s best interest, and our best interest, to get a deal done.”
+
+Meagan Bellshaw, a Justice Department lawyer, asked Cue if he would have walked away from the deal if the two sides couldn’t agree on a revenue-share figure.
+Cue said he’d never really considered that an option: “I always felt like it was in Google’s best interest, and our best interest, to get a deal done.” Cue also
+argued that the deal was about more than economics and that Apple never seriously considered switching to another provider or building its own search product.
+“Certainly there wasn’t a valid alternative to Google at the time,” Cue said. He said there still isn’t one.
+</item 85>
+
+<item 86>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+Seeking Alpha's Quant Rating system turned bullish on the stock just a few days before the earnings by upgrading its view to Strong Buy from Hold. Meanwhile,
+Wall Street analysts maintain their optimism about the stock with a Strong Buy rating.
+
+After more than a year of rigorous examination by antitrust investigators across the world, Microsoft just completed its $69B acquisition of Activision
+Blizzard, the largest deal in video game history. Its benefits, however, will not be reflected in the company's financial report.
+
+Consensus EPS Estimates: $2.65
+
+Consensus Revenue Estimates: $54.54B
+
+Earnings Insight: Microsoft has outperformed EPS forecasts in 7 of the last 8 quarters, and revenue in 6 of those quarters.
+
+Also reporting: General Electric Company (NYSE:GE), Verizon Communications (VZ), Visa Inc. (V), The Coca-Cola Company (KO), 3M Company (MMM), General Motors
+Company (GM), Raytheon Technologies Corporation (RTX), Teladoc Health, Inc.
+</item 86>
+
+<item 87>
+5 things we learned so far about the Google antitrust case (TechCrunch, 2023-10-31T02:30:32+00:00)
+The DOJ has said that Google gets 16 times more data than Bing does everyday.
+
+The Google outcome could also have a ripple effect on other Big Tech cases. The FTC sued Amazon in September for using anticompetitive and unfair strategies to
+illegally maintain its monopoly power. The DOJ has been investigating Apple for years over the company’s policy for third-party apps on its devices and whether
+it unfairly favors its own products. There’s an ongoing case between the FTC and Facebook, wherein the agency calls on Facebook to sell Instagram and WhatsApp.
+
+Enforcers will want to show that antitrust law is still relevant and can successfully take on the biggest, most powerful companies in the world.
+</item 87>
+
+<item 88>
+Amazon’s iRobot purchase sucks up formal competition concerns in EU (TechCrunch, 2023-11-27T23:29:10+00:00)
+At the time the EU’s then competition chief, Margrethe Vestager, trumpeted the outcome as setting what she dubbed “new rules for how Amazon operates its
+business in Europe” — arguing the settlement meant the ecommerce giant could “no longer abuse its dual role” as marketplace operator and own brand retailer; and
+further claiming the outcome would ensure “competing independent retailers and carriers as well as consumers will benefit from these changes opening up new
+opportunities and choice.”
+
+Given the commitments the EU already extracted from Amazon after those earlier investigations it’s interesting to see the bloc remains concerned over levers the
+ecommerce behemoth still has its disposal to potentially influence competitive outcomes on its marketplace vis-à-vis iRobot vs rival robot vacs.
+
+Since then Amazon has also been named a gatekeeper under the EU’s shiny new ex ante competition regulation, the Digital Markets Act — which lists its
+marketplace as a core platform service. This designation means Amazon must comply with a series of up-front obligations, which include restrictions on self
+preferencing.
+</item 88>
+
+<item 89>
+The best anti-Prime Big Deal Day deals (The Verge, 2023-10-10T22:24:13+00:00)
+Amazon’s fall Prime Day event is underway. For more deals we recommend across all categories, check out our full roundup here.
+
+Despite what the name might suggest, Amazon’s fall Prime Day event isn’t just a day filled with deals for Prime members. Thanks to competing sales from
+retailers like Best Buy and Walmart, everybody can take advantage of steep discounts without needing to pay a monthly premium to join in on the fun.
+
+In some cases, retailers are matching Amazon’s pricing, meaning you can score the same discounts available to Prime members on items like the Kindle Paperwhite
+and Echo Pop. There are also terrific deals available on other gadgets, including noise-canceling headphones, tablets, and smartwatches. To make the deal
+hunting easier for you, we’ve rounded up all the discounted all of the worthwhile anti-Prime Day deals below.
+</item 89>
+
+<item 90>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Although GameStop only mentioned Amazon in the tweet, others have reported that the store will price-match items purchased from Target and elsewhere.
+
+Google will match online pricing from select retailers — specifically Amazon, Best Buy, Walmart, B&H Photo, and Target — if a request is made within the
+standard return period. It doesn’t, however, match preorder pricing from other retailers or carrier deals. The product also must be identical, right down to the
+color and configuration, and must be in stock. Plus, you need to provide a public link to the promo page or product listing to verify the rival’s price.
+
+You may also get the difference if a product purchased from the Google Store lowers in price within the standard return period. To get the price match or
+correction, contact Google.
+
+The Home Depot will match the price of identical, in-stock products from other retailers, except for membership-based wholesalers.
+</item 90>
+
+<item 91>
+Amazon sellers sound off on the FTC's 'long-overdue' antitrust case (Cnbc | World Business News Leader, 2023-10-06T21:31:00+00:00)
+A worker sorts out parcels in the outbound dock at the Amazon fulfillment center in Eastvale, California, on Aug. 31, 2021. Watchara Phomicinda | MediaNews
+Group | The Riverside Press-Enterprise via Getty Images
+
+It was late in the day on Oct. 27, 2021, when Fred Ruckel received the dreaded automated email from Amazon . Amazon’s software had detected that Ruckel’s
+popular cat toy, called the Ripple Rug, was being sold somewhere else for a cheaper price. His product would no longer be shown in Amazon’s all-important buy
+box, an area of the listing where shoppers click “Add to Cart.” Ruckel is the sole seller of the Ripple Rug on Amazon, so the move all but ensured his product
+would disappear from the website, costing him thousands of dollars per day.
+</item 91>
+
+<item 92>
+Know the price-matching policies for Best Buy, Target, Walmart, and others (The Verge, 2023-10-25T22:03:19+00:00)
+Then, you can just repurchase the product wherever it’s cheapest.
+
+As of October 22nd, Target will match the price of any item purchased online or in-store from Target that goes on sale through December 24th. However, the
+current price-matching policy doesn’t apply to products you may have bought from one Target store and found for less at another.
+
+Target will also match the price of items purchased from Amazon, Best Buy, and a select group of competitors if you ask for it at the time of or within 14 days
+of your purchase. You must bring the original ad or listing, whether digital or in print, along with your receipt into the store. Alternatively, you can call
+for online purchases at 1-800-591-3869 or chat online via contactus.target.com.
+
+Be mindful, however, that Target’s policy excludes doorbusters and competitors’ lightning sales, like those that Amazon offers.
+</item 92>
+
+<item 93>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+There are no signs that USD funds’ dealmaking in China will bounce back to its heights in the foreseeable future. The PitchBook report predicts that VC activity
+with U.S. participation in China during 2023 will hit a nine-year low, followed by a decade low in 2024. Many Chinese general partners have already been
+sourcing capital from the Middle East, which might eventually limit the impact of U.S. investors’ pullback. But the question is whether Chinese tech firms, now
+under a new stringent regulatory regime, can deliver the same level of strong growth and returns they experienced in the previous laissez-faire era.
+
+If the U.S. market turns out to be too challenging to penetrate due to competitive and geopolitical factors, there are still other markets to explore. Japan,
+known for its openness to new technologies, has been particularly popular among China’s SaaS startups venturing abroad.
+</item 93>
+
+<item 94>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+According to the sellers who spoke with The Verge, bugs abound: the European seller, for example, had just been dealing with an issue with the platform’s refund
+button. “Discogs said it was PayPal’s fault, and PayPal said it was Discogs’ fault,” he says. “It caused stress for the buyers, and so I had to do direct
+refunds — which meant I was refunding not just what I made but Discogs’ and PayPal’s commissions as well, effectively losing money on the refund.” Melkisethian,
+speaking a month later, had just noticed a shift in the way shipments are processed that required manually entering information in steps that used to be
+automated.
+
+Besides the baseline functionality of the site, there are other improvements that could bring Discogs closer in line with its competitors. “There are other
+seller tools and seller initiatives that we’ve been asking for for years that have never been done — like any kind of tie-in with Google, any kind of
+integration with social media, the kinds of things basically other platform has,” says Martin.
+</item 94>
+
+<item 95>
+Earnings week ahead: Amazon, Microsoft, Alphabet, Meta, Ford, GM and more (Seeking Alpha, 2023-10-22T12:13:00+00:00)
+(TDOC), Dow (DOW), Snap (SNAP), Texas Instruments Incorporated (TXN), Halliburton Company (HAL), Corning Incorporated (GLW), Novartis AG (NVS), Waste Management
+(WM), Spotify Technology S.A. (SPOT), Kimberly-Clark (KMB) and more.
+
+Wednesday, October 25
+
+Meta Platforms (META)
+
+Facebook parent Meta Platforms (META) is scheduled to announce its Q3 results after the close on Wednesday. After exceeding expectations in Q2, the social media
+giant forecast Q3 revenue in the range of $32B–$34.5B.
+
+SA contributor Dair Sansyzbayev, who is extremely optimistic about the company's near-term prospects, says, "Meta Platforms stock remains undervalued despite a
+tripling price since November 2022. Quarterly earnings show revenue growth, profitability, and solid cash flow, while Meta's expansion and large user base
+present potential revenue streams."
+</item 95>
+
+<item 96>
+Here’s how Rainforest, a budding Stripe rival, aims to win over software companies (TechCrunch, 2023-10-08T14:16:01+00:00)
+Listen to TC+ editor Alex Wilhelm and I talk more about how there’s plenty of market share to go around in Friday’s episode of the Equity podcast below. — Mary
+Ann
+
+PayPal is being sued for alleged “Draconian” payment policies
+
+On October 5, Mary Ann broke the news that PayPal has been hit with a class action lawsuit by consumers represented by law firm Hagens Berman alleging that the
+fintech giant’s anti-steering rules stifle competition against lower-cost payment platforms such as Stripe and Shopify. Specifically, according to an
+investigation conducted by the firm’s consumer rights attorneys, PayPal has subjected consumers to excess charges when purchasing from online merchants that
+accept PayPal or Venmo.
+
+Someone commented on social media that they didn’t see the problem with what PayPal is doing and questioned whether or not Visa and Mastercard do the same
+thing. So I went back to the attorneys who filed the lawsuit, who noted that the “anti-steering rules” are not the first of their kind.
+</item 96>
+
+<item 97>
+Discogs’ vibrant vinyl community is shattering (The Verge, 2023-10-07T14:00:00+00:00)
+To make up for the lost revenue, Discogs suggested sellers use a tool it had created to raise the prices of all of their inventory by a percentage; another
+Discogs email to sellers suggested they offer free shipping to avoid the fee, without accounting for the fact that the seller would then be either covering that
+cost out of pocket or integrating it into the price of the record — which would, of course, result in the same amount of money going to Discogs. Essentially,
+sellers were told to raise their prices and / or offer free shipping — two options that threaten their bottom lines. “Their communication, too — it’s like, ‘I
+said what I said, and we’re done,’” says Martin. “Well, you’re really not, because we all have to live with this and so do you.”
+
+The tension between Discogs’ old-internet charm and its attempts at growth came to a head earlier this summer around a since-deleted viral Twitter thread by
+artist and label head Mike Simonetti lamenting “the fall of discogs.”
+</item 97>
+
+<item 98>
+Here’s how Rainforest, a budding Stripe rival, aims to win over software companies (TechCrunch, 2023-10-08T14:16:01+00:00)
+PayPal’s fees are, however, driven by the costs imposed upon them by the dominant card schemes, Visa, Mastercard and American Express. So, we can expect PayPal
+will respond to this suit by arguing that it is as much of a price taker as the merchants themselves, and that the terms imposed upon it by the card schemes
+drive some of its anti-steering rules.”
+
+PayPal did not respond to requests for comment. — Mary Ann
+
+Bolt CEO gets frank about SEC probe
+
+Bolt Financial CEO Maju Kuruvilla told me in an interview that the one-click checkout company is putting a recent U.S. Securities and Exchange Commission probe
+behind it and is moving on.
+
+“It obviously is a very, very involved process, but we’re really happy to put that behind us,” Kuruvilla told TechCrunch.
+</item 98>
+
+<item 99>
+The fate of US venture capital in China teeters on uncertainty (TechCrunch, 2023-11-25T09:32:47+00:00)
+VCs fear that their portfolio companies might encounter a fate akin to that of Ant Group, whose colossal initial public offering was called off, and Didi, which
+weathered an extensive data security probe that eventually led to its delisting from New York. With China tightening its grip on overseas IPOs, investors who
+once relied on taking Chinese firms public in the U.S. are no longer assured of an exit channel.
+
+In the meantime, Washington has stepped up restrictions on the flow of U.S. money into China amid an escalating tech war between the two superpowers. In August,
+President Joe Biden signed an executive order barring U.S. investments in three strategically critical sectors in China — artificial intelligence, quantum
+computing and semiconductors.
+
+As USD funds in China await further clarity on the scope of the ban, they are practicing more discretion than ever before. They slow down capital deployment
+even amidst a global AI fervor that has given rise to a parallel AI universe in China.
+</item 99>
+
+<item 100>
+Uber’s Q3 numbers include impressive profitability gains, slower-than-expected growth (TechCrunch, 2023-11-07T17:03:41+00:00)
+In business segment terms, Uber generated $17.9 billion in ride-hailing bookings (+31% year over year), and $16.1 billion worth of delivery bookings (+18%).
+Those key business groups at the company generated $5.1 billion and $2.9 billion in revenue, respectively, during the September quarter.
+
+There’s nuance to the revenue figures that we need to consider as the rule-changes in question do affect startups that operate in related categories. On the
+ride-hailing front, Uber told its investors that its Q3 2023 revenue was “negatively impacted by business model changes in some countries that classified
+certain sales and marketing costs as contra revenue by $161 million.” That was not the only legal change that led to Uber’s results changing shape. Under its
+delivery business results, the company added that its revenue result was “negatively impacted by business model changes that classified certain sales and
+marketing costs as contra revenue by $360 million.”
+
+The combined impact of those two items was 8 percentage points of growth.
+</item 100>
+=== END ITEM id=c9e1fa67ae57a6dc ===
+
+=== ITEM id=e8528e0db00c8234 ===
+Gold sentences and facts:
+Sentence 0: Erik ten Hag is a top coach from Ajax but they need a top blueprint not only for now but for the next five years, and work towards that, and sometimes on that journey there are hard moments when you don't get the right results, even though you're doing the right things.
+  Fact 0.0: Erik ten Hag is a top coach from Ajax.
+  Fact 0.1: The club needs a top blueprint not only for now but for the next five years.
+  Fact 0.2: The club should work towards that blueprint.
+  Fact 0.3: Sometimes on that journey there are hard moments when the club does not get the right results.
+  Fact 0.4: The club can be doing the right things even when it does not get the right results.
+Sentence 1: Manchester United are out of Europe altogether after a limp display against Bayern at Old Trafford, where Kingsley Coman sealed a 1-0 win for Thomas Tuchel's side.
+  Fact 1.0: Manchester United are out of Europe altogether.
+  Fact 1.1: Manchester United put in a limp display against Bayern at Old Trafford.
+  Fact 1.2: Kingsley Coman sealed a 1-0 win at Old Trafford.
+  Fact 1.3: Kingsley Coman's 1-0 win was for Thomas Tuchel's side.
+
+Retrieved items:
+
+=== END ITEM id=e8528e0db00c8234 ===
+
+=== ITEM id=4114006c863ee525 ===
+Gold sentences and facts:
+Sentence 0: Eventually, as inflation fades leading the Fed to cut interest rates, housing affordability will improve.
+  Fact 0.0: Inflation is expected to fade eventually.
+  Fact 0.1: The Fed is expected to cut interest rates as inflation fades.
+  Fact 0.2: Eventually, housing affordability will improve.
+Sentence 1: While some economic factors are stronger today than they were during the GFC, housing affordability is undeniably worse.
+  Fact 1.0: Some economic factors are stronger today than they were during the GFC.
+  Fact 1.1: Housing affordability is undeniably worse than it was during the GFC.
+
+Retrieved items:
+
+=== END ITEM id=4114006c863ee525 ===
+
+=== ITEM id=bc48b662f1fcd765 ===
+Gold sentences and facts:
+Sentence 0: In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Sorcerer builds for season 2.
+  Fact 0.0: The guide is a Diablo 4 guide.
+  Fact 0.1: The guide gathers the best Diablo 4 Sorcerer builds for season 2.
+  Fact 0.2: The guide simplifies the best Diablo 4 Sorcerer builds for season 2.
+Sentence 1: In this Diablo 4 guide, we’ve gathered and simplified the best Diablo 4 Barbarian builds for season 2.
+  Fact 1.0: The guide is a Diablo 4 guide.
+  Fact 1.1: The guide gathers the best Diablo 4 Barbarian builds for season 2.
+  Fact 1.2: The guide simplifies the best Diablo 4 Barbarian builds for season 2.
+
+Retrieved items:
+
+=== END ITEM id=bc48b662f1fcd765 ===

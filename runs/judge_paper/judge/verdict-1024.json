@@ -1,0 +1,21 @@
+[
+  {"id": "4dd04af83e70f994", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 23, "quote": "I think we’ll look back and see this past year is a really important turning point for the role that social media plays in our lives"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 23, "quote": "in our lives,” she adds."}]},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]},
+  {"id": "9483edeee994808f", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []}
+  ]}
+]

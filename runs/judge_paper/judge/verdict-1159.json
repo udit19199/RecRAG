@@ -1,0 +1,29 @@
+[
+  {"id": "4de951f78fa31fb8", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+    {"fact": "0.2", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+    {"fact": "0.3", "status": "stated", "evidence": [{"item": 30, "quote": "After learning of Diana’s death from his father at the royal residence of Balmoral in Scotland, William (Rufus Kampa) is left heartbroken with grief and angry"}]},
+    {"fact": "0.4", "status": "stated", "evidence": [{"item": 30, "quote": "William (Rufus Kampa) is left heartbroken with grief and angry at his family’s response to it."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 9, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 9, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]},
+    {"fact": "1.2", "status": "stated", "evidence": [{"item": 9, "quote": "takes place between the late 1990s to mid-2000s, and includes the lead-up to Princess Diana’s fatal Paris car crash in 1997."}]}
+  ]},
+  {"id": "abccf022dbcf5dd7", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "0b756f3da66a36d5", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []}
+  ]}
+]

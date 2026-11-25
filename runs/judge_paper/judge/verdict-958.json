@@ -1,0 +1,45 @@
+[
+  {"id": "8cb0dde0b8298f6e", "facts": [
+    {"fact": "0.0", "status": "stated", "evidence": [{"item": 3, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+    {"fact": "0.1", "status": "stated", "evidence": [{"item": 3, "quote": "Halloween isn’t the only holiday on the horizon now that October is drawing to a close."}]},
+    {"fact": "1.0", "status": "stated", "evidence": [{"item": 19, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]},
+    {"fact": "1.1", "status": "stated", "evidence": [{"item": 19, "quote": "If you’re in the midst of a new relationship this holiday season, you may be faced with the opportunity to introduce your significant other to your family."}]}
+  ]},
+  {"id": "ac5233007bffc604", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "2.0", "status": "missing", "evidence": []},
+    {"fact": "2.1", "status": "missing", "evidence": []},
+    {"fact": "2.2", "status": "missing", "evidence": []},
+    {"fact": "2.3", "status": "missing", "evidence": []},
+    {"fact": "2.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "92c3d931372c5630", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "0.3", "status": "missing", "evidence": []},
+    {"fact": "0.4", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []},
+    {"fact": "1.4", "status": "missing", "evidence": []}
+  ]},
+  {"id": "e1099f40b1d91a83", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "0.2", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []}
+  ]},
+  {"id": "2e28933d27284283", "facts": [
+    {"fact": "0.0", "status": "missing", "evidence": []},
+    {"fact": "0.1", "status": "missing", "evidence": []},
+    {"fact": "1.0", "status": "missing", "evidence": []},
+    {"fact": "1.1", "status": "missing", "evidence": []},
+    {"fact": "1.2", "status": "missing", "evidence": []},
+    {"fact": "1.3", "status": "missing", "evidence": []}
+  ]}
+]
