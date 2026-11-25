@@ -120,15 +120,22 @@ Content:
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
   dates or a timeline. Plain words a non-specialist can follow; explain any
   technical term you keep. Exact prompts stay word for word.
-- Only Agentic Hybrid RAG gets method slides: 01-02 how it works (flow; graph
-  and tools), 03-04 its prompts, 05 how answers are judged, 06-07 judge prompts,
-  15 what changed between the runs, 16 question 747. Slide 11 explains why the
-  previous run's repeats were far apart (`runs/final500/repeat_variation/`). No architecture slides for
-  Normal RAG, RAPTOR or HippoRAG. There is no separate "what the graph adds"
-  slide: its facts live on 16.
-- Slide 09 is the agent with the graph switched off (`runs/nograph/`), and
-  slide 10 splits the latest run into the 100 questions per type both runs
-  answered and the 25 new ones. Only the 100 compare the runs.
+- Order (2026-11-25): 01-02 how Agentic Hybrid RAG works, 03-04 its prompts,
+  05 how answers are judged, 06-07 judge prompts. Then what was already
+  discussed: 08 what changed between the runs, 09 question 747, 10 why the
+  previous run's repeats were far apart (`runs/final500/repeat_variation/`),
+  11 the 100 questions per type both runs answered and the 25 new ones (only
+  the 100 compare the runs), 12 inference + null, 13 HotpotQA + Natural
+  Questions. The main flow starts at 14 comparison + temporal, then 15 is it
+  the graph (`runs/nograph/`), 16 is it the picking, 17 more chunks, 18 LLM
+  picks vs top 50/100 question by question, 19 chunk order, 20 answer
+  changes, 21 guessing, 22 made-up answers, 23 Neo4j vs Milvus, 24 what we
+  found (the conclusion), 25 next phase.
+- Method slides are for Agentic Hybrid RAG only; no architecture slides for
+  Normal RAG, RAPTOR or HippoRAG. Each setup is explained once, in the legend
+  of the first slide it appears on; Normal RAG and Milvus need no legend.
+- "Agent picks, no graph rows" is not shown: Udit found it confusing
+  (2026-11-25). Its data stays in `runs/nograph/`.
 - Prompts are shown in Comic Shanns (`fontFamily` 8), as bands: grey same in
   both runs, blue added in the latest run, orange the previous run's replaced
   text. Keep the previous run's judge prompts: its numbers still use them.
