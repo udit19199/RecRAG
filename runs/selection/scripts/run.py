@@ -15,6 +15,7 @@ VARIANT:
   B2_100  as B2, candidates top 100 instead of top 50 (25 Nov 2026).
   B4_20   as B4, top 20.      B4_30   as B4, top 30.      B4_100  as B4, top 100 (25 Nov 2026).
   B4_200  as B4, top 200 (25 Nov 2026).
+  B4_200_rev as B4_200, the 200 in reversed order (best-scoring last).
   B4_rev  as B4, the 50 in reversed order (best-scoring last).
   B4_shuf as B4, the 50 shuffled; the order is fixed per question (seeded by the
           question text), so the 3 repeats differ only in the answer call.
@@ -35,6 +36,13 @@ picking; used for the inference/null question set, 25 Nov 2026).
 
 RECRAG_QUESTIONS (path to a questions json with "indices") overrides the
 question set; default runs/nograph/questions.json.
+
+RECRAG_DATASET selects the dataset (default multihop_rag; also hotpotqa and
+natural_questions, the runs/final500 question sets loaded exactly as
+runs/final500 loaded them: HotpotQA rows_file questions_rows.json, record
+indices 0-499; Natural Questions validation rows 0-499). Each dataset has its
+own never-rebuilt Normal RAG index (SPEC.md); the run folder still goes under
+runs/selection/runs/ and variant.json records the dataset.
 """
 
 import json
@@ -48,15 +56,35 @@ variant, rep = sys.argv[1], sys.argv[2]
 shard, shards = int(sys.argv[3]), int(sys.argv[4])
 limit = int(sys.argv[5]) if len(sys.argv) > 5 else None
 MILVUS = os.environ.get("RECRAG_VECTOR_DB") == "milvus"
-B4 = {"B4": 50, "B4_20": 20, "B4_30": 30, "B4_100": 100, "B4_200": 200, "B4_rev": 50, "B4_shuf": 50}
+DATASET = os.environ.get("RECRAG_DATASET", "multihop_rag")
+assert DATASET in ("multihop_rag", "hotpotqa", "natural_questions")
+B4 = {"B4": 50, "B4_20": 20, "B4_30": 30, "B4_100": 100, "B4_200": 200, "B4_rev": 50, "B4_shuf": 50, "B4_200_rev": 200}
 B2 = {"B2": 50, "B2_100": 100}
 assert variant in ("B0", "B1", "B3", *B2, *B4)
 os.environ["RECRAG_RUN_NAMESPACE"] = "milvus/runs" if MILVUS else "selection/runs"
-questions_path = Path(os.environ.get("RECRAG_QUESTIONS", ROOT / "runs/nograph/questions.json"))
-indices = json.loads((ROOT / questions_path if not questions_path.is_absolute() else questions_path).read_text())["indices"][shard::shards]
+# Per-dataset Normal RAG index (never rebuilt; SPEC.md) and question set.
+INDEXES = {
+    "multihop_rag": "runs/rag/indexes/07062033a2e929ec10405ef3a38d541e51b907cbb7041de545f72ab1e7b71799",
+    "hotpotqa": "runs/final500/hotpotqa/rag/indexes/5dff86f578fac0ee98ceddd583c63294ee8a51349b436bda8d4f81883734fa73",
+    "natural_questions": "runs/final500/natural_questions/rag/indexes/f1fbc2708604669b3504eb39ea7c8172c11217d3f05513532b546e9be650e045",
+}
+INDEX = ROOT / INDEXES[DATASET]
+if "RECRAG_QUESTIONS" in os.environ:
+    questions_path = Path(os.environ["RECRAG_QUESTIONS"])
+    indices = json.loads((ROOT / questions_path if not questions_path.is_absolute() else questions_path).read_text())["indices"]
+elif DATASET == "multihop_rag":
+    indices = json.loads((ROOT / "runs/nograph/questions.json").read_text())["indices"]
+else:
+    # Same question set runs/final500 used for this dataset.
+    if DATASET == "hotpotqa":
+        os.environ["RECRAG_HOTPOTQA_ROWS"] = str(ROOT / "runs/final500/hotpotqa/questions_rows.json")
+    else:
+        os.environ["RECRAG_NQ_CORPUS_ROWS"] = "0-499"
+        os.environ["RECRAG_NQ_RECORDS"] = str(ROOT / "runs/final500/natural_questions/records.json")
+    indices = json.loads((ROOT / "runs/final500/questions.json").read_text())[DATASET]["record_indices"]
+indices = indices[shard::shards]
 if limit:
     indices = indices[:limit]
-INDEX = ROOT / "runs/rag/indexes/07062033a2e929ec10405ef3a38d541e51b907cbb7041de545f72ab1e7b71799"
 if not MILVUS and not (INDEX / "index_store.json").exists():
     raise SystemExit(f"No Normal RAG index at {INDEX}; refusing to build.")
 
@@ -215,12 +243,12 @@ def select(question, initial, search, llm, options, reranker):
 
 
 def reorder(question, initial, search, llm, options, reranker):
-    """B4_rev / B4_shuf: same top 50, different order; no model call."""
+    """*_rev / *_shuf: same top k, different order; no model call."""
     import random
     from hashlib import sha256
 
     order = list(range(len(initial.passages)))
-    if variant == "B4_rev":
+    if variant.endswith("_rev"):
         order.reverse()
     else:
         random.Random(sha256(question.encode()).hexdigest()).shuffle(order)
@@ -236,7 +264,7 @@ elif variant in B4:
     # Same retrieval call as B2 (Normal RAG index, question top k by vector
     # score), but the picking call is skipped: every candidate goes to the answer.
     options = RetrievalOptions(top_k=B4[variant])
-    if variant in ("B4_rev", "B4_shuf"):
+    if variant.endswith(("_rev", "_shuf")):
         benchmark.refine_retrieval = reorder
 elif variant == "B1":
     options = RetrievalOptions(top_k=TOP, rerank=True, rerank_candidate_k=50, rerank_top_k=TOP)
@@ -246,13 +274,15 @@ else:
     # B2_100's the top 100.
     options = RetrievalOptions(top_k=B2.get(variant, 20))
 os.environ["RECRAG_CONCURRENCY"] = "1"
-path = benchmark.run("rag", "multihop_rag", 0, len(indices), options=options, record_indices=indices)
+path = benchmark.run("rag", DATASET, 0, len(indices), options=options, record_indices=indices)
 run_dir = Path(path).parent if Path(path).is_file() else Path(path)
 (run_dir / "variant.json").write_text(
-    json.dumps({"variant": variant, "vector_db": "milvus 2.5.10 rag_chunks" if MILVUS else "llama-index", "rep": rep, "shard": shard, "shards": shards, "limit": limit,
+    json.dumps({"variant": variant, "dataset": DATASET,
+                "service_tier": os.environ.get("RECRAG_QUESTION_SERVICE_TIER", "default"),
+                "vector_db": "milvus 2.5.10 rag_chunks" if MILVUS else "llama-index", "rep": rep, "shard": shard, "shards": shards, "limit": limit,
                 "select_instruction": SELECT_INSTRUCTION if variant in ("B2", "B2_100", "B3") else None,
                 "query_instruction": QUERY_INSTRUCTION if variant == "B3" else None,
                 "passages_to_answer": B4.get(variant, TOP),
-                "order": {"B4_rev": "reversed", "B4_shuf": "shuffled, seed sha256(question)"}.get(variant, "retrieval")}) + "\n"
+                "order": "reversed" if variant.endswith("_rev") else "shuffled, seed sha256(question)" if variant.endswith("_shuf") else "retrieval"}) + "\n"
 )
 print("RESULTS", path, flush=True)
