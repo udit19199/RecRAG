@@ -8,8 +8,8 @@
 #   LIMIT:   optional, passed to run.py (trial runs)
 # One repeat, no reruns: a variant whose log already has RESULTS is skipped;
 # a failed variant is recorded in the status file and the script goes on.
-# At most 3 lanes in parallel. Writes jobs/STATUS_DS_<DATASET>.md and
-# jobs/DS_<DATASET>_check.txt.
+# LANES (default 3) variants in parallel. Writes jobs/STATUS_DS_<DATASET>.md
+# and jobs/DS_<DATASET>_check.txt.
 cd "$(dirname "$0")/../../.." || exit 1
 export PYTHONPATH=. RECRAG_QUESTION_SERVICE_TIER=flex HF_HOME=$HOME/.cache/huggingface
 DS=$1; LIMIT=${2:-}
@@ -40,11 +40,12 @@ runit() {
 }
 
 st running "$DS: $VARIANTS" none
+LANES=${LANES:-3}
 n=0
 for v in $VARIANTS; do
   runit $v &
   n=$((n + 1))
-  [ $((n % 3)) = 0 ] && wait
+  [ $((n % LANES)) = 0 ] && wait
 done
 wait
 
