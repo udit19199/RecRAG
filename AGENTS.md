@@ -111,7 +111,11 @@ Content:
   deck has no backup slides.
 - Repeat spread sits on the result charts: a thin line from lowest to highest
   repeat, and the lowest and highest repeat written in small type under each
-  average ("68.8–72.0"). There is no stability slide.
+  average ("68.8–72.0") only when they are 2 or more points apart. There is
+  no stability slide.
+- Slides carry no takeaway subtitles, footnotes or commentary and no "What we
+  tested" overview: a title, the setup legend and the charts. Takeaways and
+  chart keys go in the frame's presenter notes.
 - A new run joins the slides beside the older runs, whose results stay.
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
   dates or a timeline. Plain words a non-specialist can follow; explain any
