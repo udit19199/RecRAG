@@ -1,0 +1,1 @@
+{"variant": "B4_30", "dataset": "natural_questions", "service_tier": "flex", "vector_db": "llama-index", "rep": "1", "shard": 0, "shards": 1, "limit": 5, "select_instruction": null, "query_instruction": null, "passages_to_answer": 30, "order": "retrieval"}
