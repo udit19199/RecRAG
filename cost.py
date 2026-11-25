@@ -33,13 +33,24 @@ class Pricing(BaseModel):
     embedding_per_million: float = Field(default=0.02, ge=0)
 
     def list_usd(self, call: APICall) -> float | None:
-        """Price at the uncached list rate, so cost does not depend on run order."""
+        """Price at the uncached list rate, so cost does not depend on run order.
+        The service tier's own list rate applies (flex/batch half, priority double)."""
         if call.kind == "embeddings" and call.model == self.embedding_model:
             return call.input_tokens * self.embedding_per_million / 1_000_000
         if call.kind == "responses" and call.model == self.llm_model:
+            tier_factor = (
+                0.5
+                if call.service_tier in {"flex", "batch"}
+                else 2
+                if call.service_tier in {"priority", "fast"}
+                else 1
+            )
             return (
-                call.input_tokens * self.input_per_million
-                + call.output_tokens * self.output_per_million
+                tier_factor
+                * (
+                    call.input_tokens * self.input_per_million
+                    + call.output_tokens * self.output_per_million
+                )
             ) / 1_000_000
         return None
 
