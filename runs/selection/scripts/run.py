@@ -162,12 +162,20 @@ QUERY_INSTRUCTION = (
 def pick(question: str, passages: list[str], scores: list[float], llm) -> tuple[list[str], list[float], str]:
     ids = [evidence_id(p) for p in passages]
     lines = "\n".join(f"[{i}] {' '.join(p.split())}" for i, p in zip(ids, passages))
-    reply = llm.infer(
-        [
-            Message(role="system", content=SELECT_INSTRUCTION).model_dump(),
-            Message(role="user", content=f"Question: {question}\n\nResults:\n{lines}").model_dump(),
-        ]
-    )[0]
+    try:
+        reply = llm.infer(
+            [
+                Message(role="system", content=SELECT_INSTRUCTION).model_dump(),
+                Message(role="user", content=f"Question: {question}\n\nResults:\n{lines}").model_dump(),
+            ]
+        )[0]
+    except RuntimeError as e:
+        # On unanswerable (null) questions the model often returns an empty
+        # response instead of naming IDs; treat that as no picks, so the fill
+        # rule below (first 10 by score) applies instead of a failed question.
+        if "did not complete" not in str(e):
+            raise
+        reply = ""
     order: list[int] = []
     for found in EVIDENCE_ID.findall(reply):
         if found in ids and ids.index(found) not in order:
