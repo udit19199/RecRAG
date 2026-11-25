@@ -27,16 +27,25 @@ esac
 
 runit() {
   v=$1
-  log=$J/${DS}_${v}.log
+  if [ -n "$LIMIT" ]; then
+    log=$J/${DS}_${v}.trial.log
+  else
+    log=$J/${DS}_${v}.log
+  fi
   grep -q '^RESULTS ' $log 2>/dev/null && return 0
-  echo "$(date -u +%FT%TZ) start $DS $v" >> $J/DS_${DS}_lanes.log
+  if [ -n "$LIMIT" ]; then
+    lanes=$J/DS_${DS}_trial_lanes.log
+  else
+    lanes=$J/DS_${DS}_lanes.log
+  fi
+  echo "$(date -u +%FT%TZ) start $DS $v" >> $lanes
   if [ "$DS" = multihop_rev ]; then
     RECRAG_DATASET=multihop_rag .venv/bin/python runs/selection/scripts/run.py $v 1 0 1 $LIMIT > $log 2>&1
   else
     RECRAG_DATASET=$DS .venv/bin/python runs/selection/scripts/run.py $v 1 0 1 $LIMIT > $log 2>&1
   fi \
-    && echo "$(date -u +%FT%TZ) done $DS $v" >> $J/DS_${DS}_lanes.log \
-    || echo "$(date -u +%FT%TZ) FAILED $DS $v" >> $J/DS_${DS}_lanes.log
+    && echo "$(date -u +%FT%TZ) done $DS $v" >> $lanes \
+    || echo "$(date -u +%FT%TZ) FAILED $DS $v" >> $lanes
 }
 
 st running "$DS: $VARIANTS" none
@@ -59,7 +68,7 @@ want = int(limit) if limit else qs
 K = {"B4_20": 20, "B4_30": 30, "B4": 50, "B4_100": 100, "B4_200": 200,
      "B4_200_rev": 200, "B2": 10, "B2_100": 10, "B1": 10}
 for v in variants:
-    log = J / f"{ds}_{v}.log"
+    log = J / f"{ds}_{v}{'.trial' if limit else ''}.log"
     txt = log.read_text() if log.exists() else ""
     m = re.search(r"^RESULTS (.*)$", txt, re.M)
     if not m:
@@ -81,7 +90,7 @@ for v in variants:
           "types", types, "empty answers", sum(not r["answer"] for r in res),
           "failed", sum(1 for r in res if r.get("failed_attempts")))
 EOF
-fails=$(grep -c FAILED $J/DS_${DS}_lanes.log 2>/dev/null || echo 0)
+fails=$(grep -c "FAILED $DS" $J/DS_${DS}_lanes.log 2>/dev/null || true)
 if [ "$fails" -gt 0 ]; then
   st partial "$(grep -c ' done ' $J/DS_${DS}_lanes.log) variants done, $fails failed" "$(grep FAILED $J/DS_${DS}_lanes.log | tail -n 1)"
 else
