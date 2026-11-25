@@ -107,3 +107,28 @@ index: runs/rag/indexes/07062033… (Normal RAG, never rebuilt)
 answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (benchmark.py); B2_100 reuses the B2 picking prompt (SELECT_INSTRUCTION) word for word
 scoring: answered right (exact match, then Claude Haiku answer judge); gold facts found for B2_100 (Claude Haiku fact judge, frozen runs/final500 claims); B4_200 answered right only ("not scored" for facts)
 where: Instabox VM, runs/selection/scripts/vm_next.sh, 3 lanes in parallel
+
+## The selection setups on HotpotQA and Natural Questions, at the flex price (25 Nov 2026)
+
+Udit's words (25 Nov 2026):
+> We need to complete the results for other datasets to man we have so many approaches but they have not been tested on other datasets
+> Bro we cannot spend that much are you dumb. We have 10 dollars at max to verify everything. Why would we run everything from scratch we need to run the extra stuff
+> We need to use batch pricing
+> No retries this time.
+
+Question: do the MultiHop-RAG findings (more chunks straight beat picking past about 100; the LLM picker beats sending 50 straight; the reranker trails) hold on HotpotQA and Natural Questions? Only the missing setups run; Normal RAG top 10, Agentic Hybrid RAG, RAPTOR, HippoRAG and closed book on these datasets are reused from runs/final500.
+
+datasets: hotpotqa, natural_questions
+questions: 500 per dataset = the runs/final500 questions (runs/final500/questions.json; HotpotQA 250 bridge + 250 comparison from runs/final500/hotpotqa/questions_rows.json, record indices 0-499; Natural Questions validation rows 0-499), loaded exactly as runs/final500 loaded them
+variants: B4_20, B4_30, B4_50 (= B4), B4_100, B4_200 (top k straight); B2 (LLM picks up to 10 of top 50); B2_100 (LLM picks up to 10 of top 100); B1 (BAAI/bge-reranker-large keeps 10 of top 50)
+repeats: 1
+index: the runs/final500 Normal RAG index of each dataset, never rebuilt: runs/final500/hotpotqa/rag/indexes/5dff86f578fac0ee98ceddd583c63294ee8a51349b436bda8d4f81883734fa73 and runs/final500/natural_questions/rag/indexes/f1fbc2708604669b3504eb39ea7c8172c11217d3f05513532b546e9be650e045
+index check: the first 10 passages of every new top-k retrieval equal runs/final500 Normal RAG repeat 1's 10 passages for the same question
+answer model: gpt-6-luna, reasoning effort medium, Normal RAG answer prompt (benchmark.py); picking prompt SELECT_INSTRUCTION word for word
+service tier: flex (Batch API price) for every picking and answer call, RECRAG_QUESTION_SERVICE_TIER=flex; a flex request the API keeps refusing (429) is not resent at the default tier: the question fails
+retries: none. A failed run or question is reported, not rerun.
+budget: $10 list price for everything in this section, OpenAI only; stop before any launch that would pass it
+also, MultiHop-RAG: B4_200_rev = top 200 in reversed order (best-scoring last), the default 250 comparison and temporal questions (runs/nograph/questions.json), 1 repeat, flex
+scoring: answered right (exact match, then the Claude Haiku answer judge, evals/subagent_judge.py). HotpotQA is reported pooled (bridge + comparison), Natural Questions as one set.
+not run: Agentic Hybrid RAG with the graph off on these datasets (needs the Neo4j Desktop graphs on the Mac; waits for Udit); bge-reranker-v2-m3 (chunks average 122-227 tokens, under bge-reranker-large's 512-token limit, so the old reranker is not cut short)
+where: Instabox VM, one dataset at a time (VM /data has about 1.4 GB free): copy that dataset's index in, run, copy the run folders back to the Mac, remove them and the index copy from the VM
