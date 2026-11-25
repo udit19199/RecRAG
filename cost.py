@@ -262,9 +262,14 @@ def record_response(response, seconds: float = 0.0) -> None:
 # build's Responses request body and nothing else: same prompt, model,
 # reasoning effort and settings, so the build's caches and index keys are
 # unchanged. Flex is billed at the Batch API rate but answers synchronously,
-# so the build code runs as before. Question-time calls are never changed.
+# so the build code runs as before. RECRAG_QUESTION_SERVICE_TIER does the same
+# for question-time Responses calls (a question meter is active and it is not
+# the build meter). Unlike a build tier, a question tier never falls back to
+# the default tier: after FLEX_ATTEMPTS 429s the request fails (Udit, 25 Nov
+# 2026: no full-price resends). Without the env var, question-time calls are
+# never changed.
 # A flex request the API cannot serve right now (429) was not processed; it is
-# retried with backoff, then sent once at the default tier.
+# retried with backoff, then (build calls only) sent once at the default tier.
 FLEX_ATTEMPTS = 5
 # Flex requests can wait in OpenAI's queue far longer than the 120 s config
 # timeout (13 Nov: builds stopped on timeouts), so a flex build request gets
@@ -313,12 +318,28 @@ def _with_tier(request, tier: str | None):
     )
 
 
+def _question_tier(request) -> str | None:
+    tier = os.environ.get("RECRAG_QUESTION_SERVICE_TIER")
+    meter = _current()
+    if (
+        not tier
+        or meter is None
+        or meter is (_build_meter.get() or _active_build)
+        or request.method != "POST"
+        or _kind(request) != "responses"
+    ):
+        return None
+    return tier
+
+
 def _tier_plan(request) -> list[str | None]:
     tier = _build_tier(request)
+    if tier is not None:
+        return [tier] * FLEX_ATTEMPTS + ["default"]
+    tier = _question_tier(request)
     if tier is None:
         return [None]
-    plan: list[str | None] = [tier] * FLEX_ATTEMPTS
-    return [*plan, "default"]
+    return [tier] * FLEX_ATTEMPTS
 
 
 class MeteredClient(DefaultHttpxClient):
