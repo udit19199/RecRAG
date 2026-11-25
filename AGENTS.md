@@ -63,7 +63,10 @@ can be deleted; run results in `runs/` are committed.
 - The main comparison is Agentic Hybrid RAG vs Normal RAG on temporal and
   comparison questions: Normal RAG sits next to Agentic on every chart, so no
   separate confusion-matrix slide.
-- Cost and latency per question type go on one slide, both runs.
+- No cost or latency slides: Udit removed them on 2026-11-25 because the runs'
+  timings came from different days, machines and concurrency, so they did not
+  compare fairly. Cost and latency stay in the run data
+  (`runs/selection/paired/cost.json`).
 - When you need a past result, look in the scene first, then in `runs/`.
 - Before deleting run folders, check that their results are already in the
   scene.
