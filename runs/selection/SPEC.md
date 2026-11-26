@@ -190,3 +190,16 @@ List-price total for this batch: about $1.63 (under the $2.50 stop line).
 The HotpotQA B4_200 results.jsonl is 114 MB and is committed as results.jsonl.gz.
 The VM-side output check crashed only because the verified run folders had already
 been pulled and deleted first; the runs themselves all completed.
+
+## Natural Questions rescored, always-"Yes" check (27 Nov 2026, deck review)
+
+The Natural Questions numbers above count every "Insufficient Information" as wrong. Slide 13
+(runs/final500/scripts/report.py) counts it as right when the gold answer is "No answer"
+(142 of the 500 questions). Udit chose that rule for both slides (27 Nov). Rescored with
+runs/selection/paired/review_checks.py (no model calls; saved answers and Haiku verdicts):
+
+  Normal RAG 68.2 / 68.2 / 69.2 (68.5)   Agentic Hybrid RAG 68.0 / 67.2 / 67.2 (67.5)
+  B4_20 67.4   B4_30 68.2   B4 68.0   B4_100 67.2   B4_200 68.0
+
+Always "Yes" on the 250 MultiHop-RAG comparison + temporal questions: comparison 78 of 125
+(62.4), temporal 60 of 125 (48.0). Shown on slide 21.

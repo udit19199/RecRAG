@@ -133,6 +133,13 @@ Content:
   changes, 21 guessing, 22 made-up answers, 23 Neo4j vs Milvus, 24 what we
   found (the conclusion), 25 next phase.
 - "LLM picks 10 of 50/100" is not shown and not run again: Udit, 2026-11-26.
+- Natural Questions answered right: "Insufficient Information" counts as right when the gold
+  answer is "No answer" (142 of 500), on every slide (Udit, 2026-11-27;
+  `runs/final500/scripts/report.py`, `runs/selection/paired/review_checks.py`).
+- Slide 21 shows always "Yes" (62.4 comparison, 48.0 temporal) beside the floor bars, and
+  slide 24 states it: answering "Yes" every time beats Normal RAG on comparison.
+- Graph claims are about our graph as built ("Our graph, as built, adds nothing"), not graphs
+  in general; top K claims say the agent sends 10.
   Its data stays in `runs/selection/`.
 - Method slides are for Agentic Hybrid RAG only; no architecture slides for
   Normal RAG, RAPTOR or HippoRAG. Each setup is explained once, in the legend
