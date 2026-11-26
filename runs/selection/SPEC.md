@@ -154,3 +154,24 @@ multihop_rag B4_200_rev (250 comparison + temporal questions, top 200 reversed, 
 
 List-price total for the full dataset runs above: about $5.1 (well under the $10 cap; every answer
 call carried service_tier "flex", embeddings calls have no flex tier and are charged "default").
+
+## MultiHop-RAG inference + null chunk counts, and the HotpotQA top-200 rerun (26 Nov 2026)
+
+Udit's words (26 Nov 2026):
+> 1 repeat, and no need for checking order like reversed and stuff
+> (LLM picks 10 of 50/100) are not to be run again nor should they be mentioned again — "Remove it everywhere"
+> (HotpotQA top 200 rerun) "Yes, rerun"
+
+Two runs, both at the flex price, 1 repeat, no retries, no default-tier fallback:
+
+- MultiHop-RAG inference + null (runs/selection/questions_infnull.json, 250 questions):
+  B4_20, B4_30, B4_100, B4_200 straight, and WRONG10 (the wrong-chunks floor; donor
+  map built for inference/null the same way as wrong10_donors.json — same question
+  type, no gold-article overlap — saved as runs/selection/paired/wrong10_infnull_donors.json,
+  the comparison/temporal map is not overwritten). No order checks, no B2/B2_100, no reranker.
+- HotpotQA B4_200 straight, the 500 questions, 1 repeat: the rerun Udit approved of the
+  run lost during copy-back.
+
+Same index, answer model, prompt, service tier and index check (first 10 passages ==
+Normal RAG repeat 1) as the sections above. Max 3 lanes on the VM. Budget for this
+batch: about $2.50 list price.
