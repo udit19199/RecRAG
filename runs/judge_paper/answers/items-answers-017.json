@@ -1,0 +1,793 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "ef3689a89d6c8836",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Savannah regions of Sub-Saharan Africa, monsoon regions of Asia and Australia, and much of tropical Africa."
+  },
+  {
+   "id": "25a50380add6105e",
+   "kind": "answer",
+   "question": "describe the impact of the crisis at little rock on the american government",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It established federal authority to enforce school desegregation, as Eisenhower sent troops to protect the students."
+  },
+  {
+   "id": "08a911d46fbb9a30",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "The distinction is blurred, but painting generally applies liquid paint while drawing marks lines and tones."
+  },
+  {
+   "id": "06a0aa3ff628a601",
+   "kind": "answer",
+   "question": "superhero names that start with the letter b",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Black Tiger, Butterball, Blue Marvel, Black Panther, Beast, Battlestar, and Bucky"
+  },
+  {
+   "id": "81a5e62b03579fae",
+   "kind": "answer",
+   "question": "where did the idea of fortnite come from",
+   "gold_answers": [
+    "as a cross between Minecraft and Left 4 Dead"
+   ],
+   "model_answer": "An internal game jam project at Epic Games."
+  },
+  {
+   "id": "888afbaeb615bbd4",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "As of 2017, all four couples were still together: Russ and Pao were in Miami, Alan and Kirlyam were expecting a son, and Aya and Louis and Aziza and Mike remained married."
+  },
+  {
+   "id": "30b8a5a8a60614f1",
+   "kind": "answer",
+   "question": "what purpose did seasonal monsoon winds have on trade",
+   "gold_answers": [
+    "enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans"
+   ],
+   "model_answer": "They helped sailing ships travel trade routes across the oceans."
+  },
+  {
+   "id": "ca85b1a2a0a8120c",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law to standardize sentencing, establish the Sentencing Commission, and abolish federal parole."
+  },
+  {
+   "id": "1cb4d7a05ebd9a3d",
+   "kind": "answer",
+   "question": "where can you find dna in the body",
+   "gold_answers": [
+    "inside the cell nucleus",
+    "in organelles, such as mitochondria or chloroplasts",
+    "chromosomes in a cell"
+   ],
+   "model_answer": "In the cell nucleus, with small amounts in mitochondria."
+  },
+  {
+   "id": "c536bbb3931cba45",
+   "kind": "answer",
+   "question": "who got what in the compromise of 1877",
+   "gold_answers": [
+    "The Compromise of 1877 was an informal , unwritten deal that settled the intensely disputed 1876 U.S. presidential election . It resulted in the United States federal government pulling the last troops out of the South , and formally ended the Reconstruction Era . Through the Compromise , Republican Rutherford B. Hayes was awarded the White House over Democrat Samuel J. Tilden on the understanding that Hayes would remove the federal troops whose support was essential for the survival of Republican state governments in South Carolina , Florida and Louisiana . The compromise involved Democrats who controlled the House of Representatives allowing the decision of the Electoral Commission to take effect . The outgoing president , Republican Ulysses S. Grant , removed the soldiers from Florida . As president , Hayes removed the remaining troops from South Carolina and Louisiana . As soon as the troops left , many white Republicans also left , and the `` Redeemer '' Democrats took control . They already dominated other state governments in the South . What was exactly agreed is somewhat contested as the documentation is insufficient ."
+   ],
+   "model_answer": "Republicans got Hayes as president; Southern Democrats got federal troop withdrawal and “home rule” in the South."
+  },
+  {
+   "id": "f2ef27f1b4948df6",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy and his friends journey to rescue Grover and retrieve the Golden Fleece to save Camp Half-Blood."
+  },
+  {
+   "id": "732179e618de3e46",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The Niger Delta and offshore coastal regions of Sub-Saharan Africa"
+  },
+  {
+   "id": "43ea222a767523d1",
+   "kind": "answer",
+   "question": "what do the films mean in high castle",
+   "gold_answers": [
+    "The Grasshopper Lies Heavy is a series of newsreel films depicting multiple alternative realities",
+    "as-yet-unknown purpose"
+   ],
+   "model_answer": "Films depicting alternative realities, including worlds where the Allies won World War II."
+  },
+  {
+   "id": "46df009365b1ce3a",
+   "kind": "answer",
+   "question": "when does the new episode of criminal minds air",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "October 4, 2017\n"
+  },
+  {
+   "id": "fa21ab199da3a60f",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Handles minor legal matters and maintains the peace."
+  },
+  {
+   "id": "0da108e41479fe1c",
+   "kind": "answer",
+   "question": "when's the last time the philadelphia eagles played the new england patriots",
+   "gold_answers": [
+    "in Super Bowl LII"
+   ],
+   "model_answer": "February 4, 2018"
+  },
+  {
+   "id": "9ed005c03d72034a",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Patriots besieged Boston and forced the British to leave; they also defeated Burgoyne’s army at Saratoga."
+  },
+  {
+   "id": "e0c5a0a241907812",
+   "kind": "answer",
+   "question": "what platform is sandringham line at flinders st",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Platform 13 (weekday services)"
+  },
+  {
+   "id": "ad21f47cc27aab58",
+   "kind": "answer",
+   "question": "when did god save the queen became the national anthem",
+   "gold_answers": [
+    "in the 1780s and 1790s",
+    "After the Battle of Culloden"
+   ],
+   "model_answer": "By the 1780s and 1790s"
+  },
+  {
+   "id": "3b06e4a75490b15b",
+   "kind": "answer",
+   "question": "2014 election results in andhra pradesh district wise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "District-wise, TDP won 103 seats and YSRCP 66 across Andhra Pradesh’s 13 districts; BJP and others won the remaining 6."
+  },
+  {
+   "id": "03a0be3594528e6a",
+   "kind": "answer",
+   "question": "what were the technological developments of the old stone age",
+   "gold_answers": [
+    "Stone tools were made from a variety of stones . For example , flint and chert were shaped ( or chipped ) for use as cutting tools and weapons , while basalt and sandstone were used for ground stone tools , such as quern - stones . Wood , bone , shell , antler ( deer ) and other materials were widely used , as well . During the most recent part of the period , sediments ( such as clay ) were used to make pottery . Agriculture was developed and certain animals were domesticated as well ."
+   ],
+   "model_answer": "Oldowan core-and-flake tools, Acheulean hand axes, specialized flake tools, and mastery of fire."
+  },
+  {
+   "id": "71b6315e33b10fef",
+   "kind": "answer",
+   "question": "fear the walking dead season 1 episode 4 explained",
+   "gold_answers": [
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) `` Pilot '' Adam Davidson Robert Kirkman & Dave Erickson August 23 , 2015 ( 2015 - 08 - 23 ) 10.13 Nick awakens in a heroin den in an abandoned church , to find his girlfriend Gloria eating a corpse . While fleeing , he is hit by a car and hospitalized . The doctor tells Madison and Travis that Nick 's claims about the incident are heroin hallucinations , but Travis believes Nick after visiting the church himself . Alicia becomes more worried about Nick 's chemical dependency . The next day , school closes early due to the high levels of absenteeism and rumors of an epidemic . Nick escapes from the hospital and meets with Calvin , hoping to learn if the drugs Calvin sold him caused him to hallucinate in the church . Calvin tries to kill Nick to prevent him from exposing Calvin as a drug dealer or impugning the quality of his drugs . In the ensuing struggle , Calvin is mortally shot . After Travis and Madison arrive , the zombified Calvin attacks them . Nick runs over Calvin repeatedly with Travis ' truck , and the three watch in disbelief as the mutilated Calvin is still able to turn his head towards them . `` So Close , Yet So Far '' Adam Davidson Marco Ramirez August 30 , 2015 ( 2015 - 08 - 30 ) 8.18 After the run - in with zombified Calvin , Nick , Madison , and Travis choose to flee to the desert , and they want Alicia , Liza , and Chris to follow . Alicia finds Matt ill in his disheveled house . Travis arrives and sees a bite on Matt , who convinces Alicia to leave . The group returns to Madison 's home to gather supplies . Nick suffers from heroin withdrawal , so Madison drives to her school to get him Oxycodone . There , she encounters Tobias scavenging food . A zombified Artie tries to bite Tobias , so Madison kills Artie and drives Tobias home . Chris ' bus is trapped in a traffic jam caused by a zombie shooting by the police . He films the event and joins in a protest against that and other recent fatal police shootings , when Travis and Liza meet up with him . A riot erupts after police shoot down another zombie , but the three Manawas find refuge with the Salazars in their gated barbershop - home . Travis tells Madison to take the kids to the desert without him ; he will catch up . Alicia witnesses her zombified neighbor , Mr. Dawson , attacking Mrs. Cruz across the street , but Madison prevents her from intervening . The group inside the barbershop remains trapped , while the riot outside intensifies . `` The Dog '' Adam Davidson Jack LoGiudice September 13 , 2015 ( 2015 - 09 - 13 ) 7.19 While a riot rages outside , a mob sets fire to the store adjoining the barbershop , forcing the Salazars and Manawas to flee . The group reaches Travis ' truck and escapes , but not before Griselda is injured by a collapsing scaffold . Unable to reach a hospital , the group drives to Madison 's house , where Nick , Madison , and Alicia temporarily flee when the zombified Mr. Dawson attempts to enter , attracted by the barking dog Nick had let in . Nick leads Madison and Alicia to the Trans ' house next door , where they take a shotgun . Travis arrives and is attacked by Mr. Dawson , who is shot and killed by Daniel . All three families decide to stay the night and evacuate in the morning . Nurse Liza tends to Griselda 's injured foot but notes that Griselda will die if not treated by a doctor . Ofelia tells Daniel they should flee with Travis , but Daniel insists his family can survive alone and will join his cousin later . The next morning , as the Clarks and Manawas start driving away , the National Guard arrives and quarantines the block . While Travis says , `` It 's going to get better , '' Daniel laments that it 's , `` too late , '' as he watches a guardsman mark the neighboring house . `` Not Fade Away '' Kari Skogland Meaghan Oppenheimer September 20 , 2015 ( 2015 - 09 - 20 ) 6.62 Days after the National Guard quarantines the neighborhood into a Safe Zone , residents try to live normally . Tensions build under the military rule . Madison is stressed by extra work caused by her home 's being overcrowded and Travis ' new role as civilian liaison . Chris shows a video to Travis and Madison of a light signaling from the Dead Zone . Travis talks Doug into getting mental help . Liza medically helps neighbors . Nick steals morphine from Hector via IV drip . Ofelia kisses Adams , who was unable to get Griselda 's medicine . Madison exchanges signals with the flashing light in the Dead Zone . She sneaks outside the fence to investigate and finds evidence that the guardsmen killed civilians , even the uninfected . Travis learns that Doug has been hospitalized for his mental issues . Dr. Exner determines that Liza is not technically a nurse . Daniel warns Madison of his El Salvador experience , when the sick were taken under the guise of receiving hospitalization but instead killed . Soldiers take Griselda and Nick to a hospital , but Nick 's family protests his departure . Liza agrees to go to assist the medical team , despite not wanting to leave her son . Travis retreats to the roof and sees the signal from the Dead Zone . Seconds later , he sees and hears gunfire , followed by darkness . 5 5 `` Cobalt '' Kari Skogland David Wiener September 27 , 2015 ( 2015 - 09 - 27 ) 6.66 In a military cell , Strand bribes a guardsman to save feverish Nick from being moved . Liza helps Dr. Exner with patients at the hospital . Chris is devastated that Liza left voluntarily to help at the hospital , but Travis promises to bring her back . Madison discovers Daniel detaining Adams in the Trans ' basement . Alicia and Chris get drunk in and vandalize the abandoned home of a wealthy family . Strand recruits Nick for an escape plot . Travis convinces Moyers ' squad to take him to the hospital to check on his friends . While en route , Moyers encourages Travis to shoot a zombie , but Travis is emotionally unable to pull the trigger . The soldiers stop to assist another squad in a building infested by zombies , and most of those soldiers , including Moyers , are overcome . The few survivors flee and drop off Travis near the Safe Zone . Travis learns that Daniel tortured Adams into revealing what `` Cobalt '' means : in the morning , all civilians will be killed , and the guardsmen will evacuate the city . Griselda dies of septic shock at the hospital ; Liza shoots her brain to prevent reanimation . Daniel visits a nearby sports arena to verify Adams ' story that it was sealed with 2,000 now - zombified civilians inside . 6 6 `` The Good Man '' Stefan Schwartz Robert Kirkman & Dave Erickson October 4 , 2015 ( 2015 - 10 - 04 ) 6.86 The group drives to the National Guard 's headquarters to rescue Liza , Griselda , and Nick . Adams agrees to be their guide when let go by Travis . The group infiltrates the base after Daniel distracts the guards by leading a horde of walkers from the arena . Travis , Madison , Daniel , and Ofelia go inside , while Alicia and Chris stay behind . Meanwhile , the walkers breach the perimeter defenses and swarm the base . Travis ' group reach the holding cells and set the detainees free before reuniting with Nick , Liza , and Strand . They try to escape through the medical ward , where they discover Dr. Exner has euthanized all of the patients . Dr. Exner tells them of an escape route before presumably committing suicide . Before they can escape , the group encounters Adams , who shoots Ofelia in the arm . Enraged , Travis brutally beats Adams and leaves him for dead . Strand leads the group to his oceanside mansion , where he reveals to Nick that he owns a yacht which he plans to escape on , called the Abigail . On the beach , Liza reveals to Madison that she had been bitten during the escape . Liza pleads with Madison and Travis to euthanize her before she turns . Travis promises to protect Chris before shooting Liza ."
+   ],
+   "model_answer": "Madison discovers the military is killing civilians outside the Safe Zone."
+  },
+  {
+   "id": "aa326f5f5b67c0b4",
+   "kind": "answer",
+   "question": "who dies in season 6 of once upon a time",
+   "gold_answers": [
+    "Edmond Dantes, The Count of Monte Cristo",
+    "Jekyll",
+    "Hyde"
+   ],
+   "model_answer": "Mary, Dr. Jekyll, Hyde, Edmond, Robert, the Oracle, Fiona, and the Evil Queen."
+  },
+  {
+   "id": "5e131ee921a3b953",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "It was originally an Australian interjection, possibly derived from the military warning “beware before.”"
+  },
+  {
+   "id": "45f040353ba0200d",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "Free or inexpensive land attracted settlers westward."
+  },
+  {
+   "id": "ce3fcc5a19d2a5dd",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and Valerie Keene flee a secret government agency, uncovering a conspiracy as they confront Spencer’s violent past and begin a new life with a resistance group."
+  },
+  {
+   "id": "a527f9149c837db0",
+   "kind": "answer",
+   "question": "did anyone die from ebola in the us",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—Thomas Eric Duncan and Dr. Martin Salia died in the United States."
+  },
+  {
+   "id": "4c24f037b9f403dd",
+   "kind": "answer",
+   "question": "what awards did the harry potter movies win",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Saturn Award for Costume Design; BAFTA awards for Best Feature Film and Best Production Design; BMI Film Music Award; ITV National Movie Awards; Empire Awards for Best Director and Best Fantasy Film; National Movie Award for Best Family Movie; Phoenix Film Critics Society Award for Best Live Action Family Film; BAFTA Award for Best Special Visual Effects; BAFTA Outstanding British Contribution to Cinema; and the AFI Special Award."
+  },
+  {
+   "id": "bdf2462d5f598607",
+   "kind": "answer",
+   "question": "who played in the movie harper valley pta",
+   "gold_answers": [
+    "Barbara Eden as Stella Johnson , a widowed cosmetics salesperson with a young daughter , whose joie de vivre , her principles , and her individuality anger most of the powerful people in town and on the Parent Teachers Association board . She inevitably becomes PTA president after embarrassing Flora , the snobby former President and her equally snobby friends . Ronny Cox as Willis `` Will '' Newton , a wealthy member of the PTA who does n't agree with Flora and her snobby allies and is in love with Stella . He and Stella get married at the end of the movie . Nanette Fabray as Alice Finley , Stella 's best friend and co-conspirator against the snobs of Harper Valley . She owns and operates the La Moderne Beauty Shop . Louis Nye as Kirby Baker , a local real estate agent who is allied with Flora and her friends . Notorious for being a lecherous playboy and infamous for impregnating his secretaries , one of whom , Gladys Wilmot , left town to see an abortionist in Cincinnati . As part of a plan to discredit Stella , he tries to foreclose on Stella 's house , which infuriates her . He then gets arrested and jailed for attacking Myrna Wong , a friend of Stella 's , who rebuffs his advances , throwing him by use of martial arts and destroying the office . John Fiedler as Bobby Taylor , a man on the PTA who lusts after Stella . Overly dominated by his wife , Holly . Although open to allow Stella to speak , he is not above having a fellow PTA board member kidnapped to commit election fraud . He was arrested for indecent exposure after being set up by Stella . Ron Masak as Herbie Maddox , the head bartender at Kelly 's bar , and Stella 's ally against Flora and her friends . He has a crush on Stella , and is one of her friends . Clint Howard as Corley , a young delivery person , who works for the local florist shop , who brings Stella flowers from Will . Susan Swift as Dee Johnson , Stella 's 14 - year - old daughter , who is threatened with expulsion from school if her mother does n't conform to the way the PTA wants her to behave . She has a hand in assisting her mother and Alice with one of their revenge schemes . She loses her braces , gets a makeover , and ends up with a boyfriend , Carlyle . Pat Paulsen as Otis Harper , the descendant of the founding family of Harper Valley . A PTA member who is allied with Flora and her friends . Has a tendency to drink all the time , which annoys his wife , Bertha . He had a stampede of elephants , painted pink , stormed through his house , destroying it . Amzie Strickland as Shirley Thompson , a member of the PTA board who tends to drink a lot of gin . Though she is allied with Flora and her friends , she is one of four PTA members ( Will , Skeeter and Holly Taylor are the others ) who are spared any retribution from Stella . She was seen as the most sympathetic of the board , as she tended to be more manipulated as opposed to being manipulative . It was never revealed whether or not she retained her seat on the PTA , but it is presumed that she became more sympathetic towards Stella as she was seen waving goodbye at Olive as she was being arrested . Bob Hastings as Skeeter Duggan , a member of the PTA board , and the town 's Notary public who is sympathetic to Stella . He is kidnapped by Dutch and Tex at Flora Simpson Reilly 's orders . Audrey Christie as Flora Simpson - Reilly , The movie 's main antagonist . She is the pompous and extremely snobbish president of the PTA board who thoroughly despises Stella ( who defeats her for president at the end of the movie ) and all she stands for . So desperate is she to retain her power and prestige in the community that she has a fellow member of the PTA ( Skeeter Duggan ) kidnapped so she and her allies can commit election fraud . She is embarrassed when her permanent set is destroyed by a hair depilatory at the beauty salon . Molly Dodd as Olive Glover , the recording secretary of the PTA who is a gambling addict . Clearly the most corrupt and most vindictive member of the PTA board , she is eventually arrested for embezzlement after having a load of hay and horse manure dumped on top of her . She is the one who initially angers Stella by sending her the letter denouncing her , and tries to get Dee 's friend , Mavis , arrested for embezzlement . Fay DeWitt as Willamae Jones , a snide biology teacher at the junior high school who is also a member of the PTA . She makes no secret of the fact that she favors the Reilly twins , due to the connections between her and Flora . Notorious for being a nymphomaniac ( though she hides it under a prim - and - proper façade ) , she is caught in flagrante delicto with Barney Crunk , the town 's mailman , on film . DeVera Marcus as Holly Taylor , Bobby 's obviously overbearing wife , who tends to drink a lot when Bobby is out of town , and does n't approve of Bobby 's lusting , or of anything else he does ( this is different from the character in the song , who `` seems to use a lot of ice whenever ( her husband ) 's away '' , implying adultery with the iceman ) . However , despite her ties to Flora and her scheming friends , she , like Shirley Thompson , is spared any retribution from Stella , due to Stella refusing to date Bobby . Louise Foley as Mavis , Dee Johnson 's best friend , who is nearly framed for a crime she did not commit by the vindictive Olive Glover . Brian Cook as Carlyle , a popular track star who chooses Dee , after she gets a makeover , and angers Bettina Reilly in the process . Laura Teige as Bettina Reilly , One of Flora 's twin granddaughters , who wants to be with Carlyle , and is jealous when he chooses Dee over her . She tends to be as snotty as her grandmother . Jan Teige as Edwina Reilly , Bettina 's twin sister , who is just as snotty as her . Irene Yah - Ling Sun as Myrna Wong , a friend of Stella 's who is a judo expert ; she is assaulted by Kirby Baker ( after leading him on ; she destroys him and his office in retaliation ) and has him sent to jail for assault . Tobias Anderson as `` Cranky '' Barney Crunk , the town 's nosy mailman who had the bad habit of peeking in everyone 's mail . He is caught in flagrante delicto on film with Willamae Jones . Royce D. Applegate as Dutch , one of two kidnappers who abduct Skeeter Duggan at Flora Simpson - Reilly 's orders . J.J. Barry as Tex , the mastermind of the kidnap plot to get Skeeter Duggan out of the way so Flora Simpson - Reilly and her friends could commit election fraud . He and his accomplice Dutch are arrested and the two of them rat out Flora and her friends on their scheme . Pitt Herbert as Henry Reilly , Flora 's overly dominated husband and grandfather to Edwina and Bettina . Henry is wealthy , but is very weak - willed and is known for acquiescing to his wife 's schemes . Arlen Stuart as Bertha Harper , wife of Otis Harper , who gets annoyed by her husband 's continual drinking . She is terrified when her house is destroyed by pink - painted elephants ."
+   ],
+   "model_answer": "Barbara Eden, Ronny Cox, Nanette Fabray, Louis Nye, and Susan Swift."
+  },
+  {
+   "id": "3dad0b92005b44c0",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—George W. Bush owned a share of the Texas Rangers."
+  },
+  {
+   "id": "2513d491730b5548",
+   "kind": "answer",
+   "question": "what was going on in 1954 in the us",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Major civil-rights and Cold War events, including Brown v. Board of Education and the Army–McCarthy hearings."
+  },
+  {
+   "id": "1712a89e34348df3",
+   "kind": "answer",
+   "question": "who may be affected by monetary penalties imposed by the irs",
+   "gold_answers": [
+    "Taxpayers in the United States"
+   ],
+   "model_answer": "Taxpayers, employers, and tax advisers."
+  },
+  {
+   "id": "d7181429e339e197",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "A bicameral Congress with proportional representation in the House and equal state representation in the Senate."
+  },
+  {
+   "id": "37fd89893dd2a38b",
+   "kind": "answer",
+   "question": "horatio spafford story it is well with my soul",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He wrote “It Is Well With My Soul” while sailing to England after his four daughters died in the Ville du Havre shipwreck."
+  },
+  {
+   "id": "7e85c6ed86e80b4d",
+   "kind": "answer",
+   "question": "what is the short story the gift of the magi about",
+   "gold_answers": [
+    "a young husband and wife and how they deal with the challenge of buying secret Christmas gifts for each other with very little money"
+   ],
+   "model_answer": "A young couple secretly sacrifice their most prized possessions to buy each other Christmas gifts, revealing the depth of their love."
+  },
+  {
+   "id": "1fe975133ad5ef5f",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $204,060 in the U.S. through age 18, excluding college."
+  },
+  {
+   "id": "047a760442e225a5",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mischief is okay if you clean up afterward."
+  },
+  {
+   "id": "9993a0a8a79b4751",
+   "kind": "answer",
+   "question": "make a project report on agricultural crops grown in india",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "India’s major agricultural crops include rice, wheat, pulses, sugarcane, cotton, oilseeds, fruits, vegetables, spices, tea, and jute."
+  },
+  {
+   "id": "ca885fe9d1f973fd",
+   "kind": "answer",
+   "question": "where do honey bees live in the world",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Across much of the world, originally native to South and Southeast Asia and Africa."
+  },
+  {
+   "id": "71ad306b34792f11",
+   "kind": "answer",
+   "question": "when did the dallas cowboys win their last playoff game",
+   "gold_answers": [
+    "2014",
+    "2016"
+   ],
+   "model_answer": "2014 (against the Lions)"
+  },
+  {
+   "id": "61126f144f683453",
+   "kind": "answer",
+   "question": "where does captain america civil war take place",
+   "gold_answers": [
+    "approximately one year after Ultron's defeat in the nation of Sokovia at the hands of the Avengers"
+   ],
+   "model_answer": "Lagos, Bucharest, Berlin, and Siberia."
+  },
+  {
+   "id": "8b87f82cfdb39dd3",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a major geographic barrier in Africa."
+  },
+  {
+   "id": "40928a7263a406d4",
+   "kind": "answer",
+   "question": "are there many copies of sir gawain and the green knight",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only one manuscript survives."
+  },
+  {
+   "id": "99b610c6a34838c7",
+   "kind": "answer",
+   "question": "lil dicky ft chris brown freaky friday song",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Freaky Friday” is a 2018 single by Lil Dicky featuring Chris Brown."
+  },
+  {
+   "id": "afec473a11726eba",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Highly praised: Belfast Live gave it 4/5 stars, while The Irish Times awarded it 5/5."
+  },
+  {
+   "id": "80f5e679eec49808",
+   "kind": "answer",
+   "question": "where is the stanley cup being held this year",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Bridgestone Arena, Nashville, Tennessee"
+  },
+  {
+   "id": "836cda7d62fee929",
+   "kind": "answer",
+   "question": "why is the new disney movie called coco",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "It is named after Miguel’s great-grandmother, Coco."
+  },
+  {
+   "id": "70f66aa2f04b9b45",
+   "kind": "answer",
+   "question": "who sang go tell it on the mountain",
+   "gold_answers": [
+    "`` Go Tell It on the Mountain '' is an African - American spiritual song , compiled by John Wesley Work , Jr. , dating back to at least 1865 , that has been sung and recorded by many gospel and secular performers . It is considered a Christmas carol because its original lyrics celebrate the Nativity of Jesus :"
+   ],
+   "model_answer": "Many artists, including Mahalia Jackson and Little Big Town."
+  },
+  {
+   "id": "4b287450da1a6600",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Factional divisions over federal power, intensified by the disputed 1824 election."
+  },
+  {
+   "id": "9fd3ec2896f7536f",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation reduces the purchasing power of foreign-exchange reserves and can cause losses."
+  },
+  {
+   "id": "ad363db30ea5965f",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, a former lover of Paul Spector who is kidnapped and held captive by him."
+  },
+  {
+   "id": "1126d4571f083854",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Positive: higher incomes, opportunities, skills, and remittances. Negative: hukou-based exclusion, low wages, unsafe work, family separation, and barriers to education and services."
+  },
+  {
+   "id": "bf812d38cd20d5dc",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through Indigenous traditions, British heritage, and immigration that enriched its cuisine, arts, lifestyle, and sporting culture."
+  },
+  {
+   "id": "e5ead575f75ac051",
+   "kind": "answer",
+   "question": "if there is a line that lies parallel to the horizon it is said to be",
+   "gold_answers": [
+    "A vanishing point"
+   ],
+   "model_answer": "Parallel to the image plane"
+  },
+  {
+   "id": "8a87f10f0e0299d4",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Infections, irritation or moisture from saliva, allergies, and nutritional deficiencies."
+  },
+  {
+   "id": "7692f46f5b369677",
+   "kind": "answer",
+   "question": "where does the brain get its energy from",
+   "gold_answers": [
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar),[73] but ketones provide a major alternative source, together with contributions from medium chain fatty acids (caprylic[78] and heptanoic[79] acids), lactate,[80] acetate,[81] and possibly amino acids",
+    "most of its energy from oxygen-dependent metabolism of glucose (i.e., blood sugar)"
+   ],
+   "model_answer": "Primarily from glucose through oxygen-dependent metabolism."
+  },
+  {
+   "id": "b2d34c296cab659d",
+   "kind": "answer",
+   "question": "where are the orcs made in lord of the rings",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Muddy pits in Isengard."
+  },
+  {
+   "id": "309b64cf49c70d27",
+   "kind": "answer",
+   "question": "which of the following was not a major battle of world war i",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Battle of Lake Erie"
+  },
+  {
+   "id": "12e2639ab36b3a93",
+   "kind": "answer",
+   "question": "what is windows defender and what does it do",
+   "gold_answers": [
+    "Windows Defender , officially called Windows Defender Antivirus in Windows 10 Creators Update , is an anti-malware component of Microsoft Windows.It was first released as a free antispyware program download for Windows XP , shipped with Windows Vista and Windows 7 and made into a full antivirus program replacing Microsoft Security Essentials as part of Windows 8 and later versions ."
+   ],
+   "model_answer": "Microsoft’s built-in antimalware software that detects and removes spyware, viruses, and other malware."
+  },
+  {
+   "id": "ba55e3b43ec772fc",
+   "kind": "answer",
+   "question": "suzanne's story orange is the new black",
+   "gold_answers": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ],
+   "model_answer": "Suzanne “Crazy Eyes” Warren is a socially awkward inmate whose longing for connection leads to emotional turmoil; she is imprisoned for the accidental death of a child she befriended."
+  },
+  {
+   "id": "d763055ec5500fce",
+   "kind": "answer",
+   "question": "what is the first basic process in the light reaction of photosynthesis",
+   "gold_answers": [
+    "one molecule of the pigment chlorophyll absorbs one photon and loses one electron",
+    "energy from light is absorbed by proteins called reaction centres that contain green chlorophyll pigments"
+   ],
+   "model_answer": "Chlorophyll absorbs a photon and loses an electron."
+  },
+  {
+   "id": "26113d68b30a41d1",
+   "kind": "answer",
+   "question": "where was the music video what ifs filmed",
+   "gold_answers": [
+    "along the Californian coast at The Inn at Newport Ranch, a resort and cattle ranch to the north of San Francisco"
+   ],
+   "model_answer": "The Inn at Newport Ranch on the Californian coast, north of San Francisco\n"
+  },
+  {
+   "id": "899992ac4b4f42c6",
+   "kind": "answer",
+   "question": "who wants a heart in the wizard of oz",
+   "gold_answers": [
+    "the Tin Woodman",
+    "Tin Woodman"
+   ],
+   "model_answer": "The Tin Woodman (Tin Man)"
+  },
+  {
+   "id": "77520786bd340e1a",
+   "kind": "answer",
+   "question": "who were the church fathers and what did they do in the catholic church",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Ancient Christian theologians and teachers who shaped Catholic doctrine, interpreted Scripture, and defended the Church."
+  },
+  {
+   "id": "71c94a5aaa767929",
+   "kind": "answer",
+   "question": "jane the virgin recap season 4 episode 16",
+   "gold_answers": [
+    "Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out .",
+    "No . overall No. in season Title Directed by Written by Original air date U.S. viewers ( millions ) 65 `` Chapter Sixty - Five '' Brad Silberling Jennie Snyder Urman & Paul Sciarrotta October 13 , 2017 ( 2017 - 10 - 13 ) 0.68 Picking up immediately after where Season 3 left off , Jane is reunited with her first love , Adam , who found the love letter that Michael wrote . She is surprised , but happy , to see him . However , both Xo and Alba are less thrilled that he is back . Meanwhile , Rafael loses ownership of the hotel to his sister and as a result , he finds himself living at Jane 's house , broke and homeless . Jane and Rafael learn that the missing Petra has been found after she got away from Anezka and they rush to her side , but Anezka is nowhere to be found . When Petra returns to the hotel , Luisa thinks that Petra is Anezka . Petra goes along with the game , until the real Anezka returns . Elsewhere , Xo and Rogelio 's married life is interrupted when they confront the realization that Darci is having Rogelio 's baby and she wants full custody . 66 `` Chapter Sixty - Six '' Gina Lamar Valentina Garza & Jessica O'Toole & Amy Rardin October 20 , 2017 ( 2017 - 10 - 20 ) 0.61 Jane 's relationship with Adam helps bring out her `` fun side '' and reminds her that she is n't just a mom . However , when Adam gets a job opportunity out of state , he asks for Jane 's opinion on if he should stay or go . Meanwhile , Rogelio continues to face issues with his co-star at work and things are about to get even worse . Xo is helping to take care of Darci to prove that Rogelio is committed to being a father to the baby . Also , Petra and Rafael begin working together to try and buy back the hotel from Luisa , but they are running into trouble involving Anezka , causing tension between them . 67 `` Chapter Sixty - Seven '' Fernando Sariñana Carolina Rivera & Micah Schraft October 27 , 2017 ( 2017 - 10 - 27 ) 0.60 Jane and Adam 's relationship seems to be moving on , and Jane thinks that it might be time for him to meet her son Mateo , but Rafael is not happy with this idea . Meanwhile , as the arrival of Darci 's baby approaches , Rogelio 's jealously of her new boyfriend increases as well . Trying to be supportive , Xo encourages Rogelio to step up and be the father he was meant to be . Elsewhere , Rafael is determined to get his hotel and life back from Luisa and will do whatever he has to do to make it happen , with or without Petra 's help . 68 `` Chapter Sixty - Eight '' Gina Lamar Deirdre Shaw & Chantelle M. Wells November 3 , 2017 ( 2017 - 11 - 03 ) 0.69 Jane becomes angry when she learns that Rafael introduced Mateo to his new girlfriend , Katherine , without her consent because she thinks Katherine is a negative influence on both Rafael and Mateo . Jane turns to Petra for help with the situation . Meanwhile , Rogelio and Darci struggle to choose a name for the baby . Elsewhere , Xo , who is focused on opening her own dance studio , decides to go into business with an unlikely foe . 69 5 `` Chapter Sixty - Nine '' Stuart Gillard Paul Sciarrotta November 10 , 2017 ( 2017 - 11 - 10 ) 0.65 After Adam reveals his dating past to Jane , she becomes so unsure and insecure that it puts a strain on their relationship . Meanwhile , Lina seeks Jane 's advice about whether she should get married or not . Petra hears some important information that could help Rafael get the hotel back . Also , Xo asks Rogelio to consider having a medical procedure ( vasectomy ) done , but he is very hesitant . 70 6 `` Chapter Seventy '' Melanie Mayron Carolina Rivera & Micah Schraft November 17 , 2017 ( 2017 - 11 - 17 ) 0.61 Jane 's book is finally being released but her plans to have a party at the local bookshop where she was inspired to be a writer hit a snag . Always wanting to help Jane , Rogelio devises a plan to save the day , but one of his arch - rivals threatens to ruin the day . Meanwhile , Rafael gets a new job , but it is not exactly what he was hoping for . Also , Petra has come up with an interesting strategy to get the Marbella Hotel back from Luisa , but Rafael wants nothing to do with the scheme . 71 7 `` Chapter Seventy - One '' Micah Schraft Valentina Garza & Deidre Shaw December 8 , 2017 ( 2017 - 12 - 08 ) 0.65 Anezka is revealed to have faked her death to see where her loyalties lie ; initially , she trusts Petra after believing she saw her cry , but after finding out she was n't crying because of her fake death , she threatens Petra . Later , Anezka falls from Petra 's apartment to her death ... for real . Meanwhile , Xiomara and Jane set off on Jane 's book tour , when Alba decides to tag along . After they get back , Jane and Rafael share a kiss . 72 8 `` Chapter Seventy - Two '' Melanie Mayron Carolina Rivera & Paul Sciarrotta January 26 , 2018 ( 2018 - 01 - 26 ) 0.68 Mateo starts kindergarten and invites a friend over to Xiomara and Rogelio 's house . Jane and Rafael try to cover up that they are pretending to live in their house so they do n't get kicked out . Jane and Rafael show mixed emotions following the kiss and try again , which Mateo notices . He then proclaims : `` Does this mean you 're going to get married ? '' After Xo convinces Rogelio to attend couples therapy , they both are surprised by their emotions . Meanwhile , Petra hires a lawyer named Jane Ramos ( Rosario Dawson ) , to ensure she gets no charges pending Anezka 's death . Also , Rafael moves out of Jane 's house into his new apartment . 73 9 `` Chapter Seventy - Three '' Eric Lea Valentina Garza & Chantelle M. Wells February 2 , 2018 ( 2018 - 02 - 02 ) 0.67 When Jane and Rafael finally realize that the uncertain state of their relationship ( or lack of it ) is stressing out Mateo , they decide that they need to make a decision . Meanwhile , Petra is on the outs with Jane and Rafael after the Luisa fiasco , so she tries to figure out a way to get back into their good graces . Elsewhere , Rogelio and Xo are both contemplating their career choices . 74 10 `` Chapter Seventy - Four '' Gina Rodriguez Micah Schraft & Paul Sciarrotta February 9 , 2018 ( 2018 - 02 - 09 ) 0.80 Jane and Rafael try to be friends , which works great until Jane goes on a date . Meanwhile , Petra and Jane 's new partnership is off to a rocky start , but they both know they have to find a way to work together somehow . Rogelio is convinced he has male post-partum depression , which puts him at odds with with celebrity Post-Partum Advocate River Fields ( guest star Brooke Shields ) on The Talk . Also , Alba finally confides in Jane why she turned down the marriage proposal , leaving Jane to help Alba in the romance department when Jane takes Alba to a sex store and buys her a vibrator . Elsewhere , Jane and Rafael agree to have sex , and Petra questions her own sexual identity when she starts to have sex dreams about Jane `` J.R. '' Ramos after the lawyer begins flirting with her . 75 11 `` Chapter Seventy - Five '' Gina Lamar Merigan Mulhern March 2 , 2018 ( 2018 - 03 - 02 ) 0.59 Jane is ready to move on from the Marbella Hotel issues and pursue writing full time , but an unexpected development forces her to consider returning to her teaching roots . Xiomara decides to go back to school where she listens in on an art history class , while Jane teaches a seminar about writing . Here , Jane finds out Jonathan Chavez , her former advisor , is taking advantage of another student of his . While trying to warn the student , Jane accidentally grabs her breasts to avoid falling over and , as a result , does n't get the teaching job she was applying for . Meanwhile , Petra gets arrested for Anezka 's murder due to the blackmailer planting the screws in her apartment , leading Jane Ramos to tell Petra that she was framing her because she was being threatened by an unknown blackmailer . Also , Rafael and Jane continue their affair . Elsewhere , Rogelio tries to get Eva Longoria to join his Passions of Santos reboot , but instead finds out the two are distant cousins . 76 12 `` Chapter Seventy - Six '' Melanie Mayron Leah Longoria March 9 , 2018 ( 2018 - 03 - 09 ) 0.58 Jane 's fixation on a negative review has left her with writer 's block , so Rogelio suggests she take a writing class to help . With the encouragement of Jane , Rafael is ready to dig into his past to find out who his real biological parents are . Meanwhile , Rogelio is trying to make things less about him and more about Xo , but he grows suspicious when he learns she is keeping a secret from him . But the secret Xo has been keeping is not what Rogelio suspected . Elsewhere , Petra tests the loyalty of her lawyer , Jane Ramos , by pretending to be romantically interested in her while trying to find out the identity of the blackmailer . After Petra confides in Jane R. of her feelings which are not fake , the two of them sleep together for the first time . 77 13 `` Chapter Seventy - Seven '' Gina Lamar Deirdre Shaw & Chantelle M. Wells March 16 , 2018 ( 2018 - 03 - 16 ) 0.59 When Jane , Rogelio and Alba learn what is going on with Xo who might have breast cancer , they all try to comfort her , but Xo insists they let her live her life . Meanwhile , Rogelio finally gets River Fields to agree to meet with him , but he learns that River has another plan in mind . Also , Rafael is on a mission to find his sister , who may have the information he has been looking for of his origins . Rafael visits Rose in prison to ask for her help , but he quickly turns her down when she makes a demand to know Luisa 's location . Also , Jane is upset with Petra after her twin girls spill a secret to Mateo about the Tooth Fairy being make believe . At the same time , Jane ' J.R. ' Ramos tells Petra after their romantic night together that she is not interested in a relationship due to the blackmailer paying a visit to Jane R. 's dementia - stricken mother in a rest home . At the end , the identity of Jane R 's blackmailer is finally revealed . 78 14 `` Chapter Seventy - Eight '' Justin Baldoni Valentina Garza & Micah Schraft March 23 , 2018 ( 2018 - 03 - 23 ) 0.65 Xo struggles to make an important decision on whether or not to get a full mastectomy and looks to Jane for guidance , leaving Rogelio feeling like an outsider . Alba is frustrated with Rogelio when it seems he is once again making his career a priority over Xo 's well being . Meanwhile , Petra turns to Rafael for advice on her love life after he finally learns about her new romance with J.R. 79 15 `` Chapter Seventy - Nine '' Gina Lamar Paul Sciarrotta April 6 , 2018 ( 2018 - 04 - 06 ) 0.53 80 16 `` Chapter Eighty '' Micah Schraft Micah Schraft April 13 , 2018 ( 2018 - 04 - 13 ) 0.57 Jane and Rafael start saving up to buy a one - bedroom apartment , but their plan falls apart when Mateo breaks an antique $4,000 clock . Rafael moves into the Villanueva house , but after Alba hits Mateo , the two get into a heated argument and Rafael moves back out . Xiomara starts chemotherapy , and makes a friend named Donna . The timeline moves forward nine weeks , and Donna dies of unforeseen consequences . Xiomara is shown not to be doing well due to the chemotherapy , Alba and Rafael are still in a fight and River and Rogelio are still arguing over the Passions of Santos adaptation . Alba breaks down to Jane , and she and Rafael make up . Xiomara bonds with River over telenovelas , after she accidentally eats a pot brownie , and she agrees to do the Passions of Steve and Brenda the Latin American way . Jane Ramos gets herself disbarred , and as a result gets the case against Petra thrown out . 81 17 `` Chapter Eighty - One '' Gina Lamar Jennie Snyder Urman & Paul Sciarrotta April 20 , 2018 ( 2018 - 04 - 20 ) 0.58 Rafael intends to propose to Jane , however Rose 's news unsettles him . Alba becomes a citizen and the Villanueva 's throw her a surprise party . Jane Ramos and Petra plan to move in together , until Jane finds out that Petra killed Anezka . As she walks out , Krishna tells her that her life is in danger . J.R. saves Petra 's life by shooting , and killing , the blackmailer . As Jane meets Rafael , Michael is revealed to be alive ."
+   ],
+   "model_answer": "Jane and Rafael’s apartment plan falls apart when Mateo breaks a $4,000 clock. After Alba hits Mateo, Rafael moves out of the Villanueva house. Xiomara begins chemotherapy and befriends Donna, who dies nine weeks later."
+  },
+  {
+   "id": "dc1747fe98d18bdf",
+   "kind": "answer",
+   "question": "when does bloom find out who she is",
+   "gold_answers": [
+    "Addio Magix!\"  / \"The Font of Dragon Fire"
+   ],
+   "model_answer": "March 8, 2004 (episode 18)"
+  },
+  {
+   "id": "2c624f87109dc6c1",
+   "kind": "answer",
+   "question": "who do the characters represent in 8 mile",
+   "gold_answers": [
+    "loosely on Eminem"
+   ],
+   "model_answer": "Jimmy “B-Rabbit” Smith Jr. is loosely based on Eminem."
+  },
+  {
+   "id": "ce4d8b736fe216aa",
+   "kind": "answer",
+   "question": "when did they replace lead with graphite in pencils",
+   "gold_answers": [
+    "never contained the element lead"
+   ],
+   "model_answer": "They never did; pencil cores contain graphite, not lead."
+  },
+  {
+   "id": "dea830883af03384",
+   "kind": "answer",
+   "question": "the chinese restaurant. season 2 episode 11",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Yes, it is Season 2, Episode 11."
+  },
+  {
+   "id": "296e36bc1ea1373c",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Product and raw material costs, freight, direct labor, and allocated factory overhead."
+  },
+  {
+   "id": "c5a20112c07970d5",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near urban areas and transport links, close to labor, materials, energy, and markets."
+  },
+  {
+   "id": "5f58af36d42751ca",
+   "kind": "answer",
+   "question": "what is the largest bill in american money",
+   "gold_answers": [
+    "$100"
+   ],
+   "model_answer": "$100,000 bill (Gold Certificate)"
+  },
+  {
+   "id": "f97e82e1707f66a2",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "November 24, 2012"
+  },
+  {
+   "id": "d0cd81cd76597521",
+   "kind": "answer",
+   "question": "differentiate between dot matrix printer and daisy wheel printer",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dot-matrix: characters formed from dots; daisy wheel: pre-formed characters struck from a replaceable wheel."
+  },
+  {
+   "id": "6583af99f9967216",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "Throughout the Constitution, particularly in the Tenth Amendment."
+  },
+  {
+   "id": "963f7a61a45ac1d2",
+   "kind": "answer",
+   "question": "when does the i come before the e",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Before e, except after c when it makes the “ee” sound."
+  },
+  {
+   "id": "37e31f66fba36bab",
+   "kind": "answer",
+   "question": "where do they grow hops in the us",
+   "gold_answers": [
+    "the Yakima (Washington) and Willamette (Oregon) valleys",
+    "western Canyon County, Idaho",
+    "the leading potato-growing states in the United States",
+    "western Canyon County, Idaho (including the communities of Parma, Wilder, Greenleaf, and Notus)",
+    "Washington",
+    "Oregon",
+    "Idaho",
+    "Yakima (Washington)",
+    "Willamette (Oregon)"
+   ],
+   "model_answer": "Washington’s Yakima Valley, Oregon’s Willamette Valley, and western Idaho’s Canyon County."
+  },
+  {
+   "id": "a6c1730190320c9c",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "Light-sensitive photoreceptor proteins (eyespots) that detect ambient brightness\n"
+  },
+  {
+   "id": "9fee40274fad81e5",
+   "kind": "answer",
+   "question": "how much does it cost for the olympics",
+   "gold_answers": [
+    "on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars"
+   ],
+   "model_answer": "Average: $5.2 billion for the Summer Olympics and $3.1 billion for the Winter Olympics."
+  },
+  {
+   "id": "633e915a13e7f509",
+   "kind": "answer",
+   "question": "where are the coastal plains located in india",
+   "gold_answers": [
+    "between the Eastern Ghats and the Bay of Bengal"
+   ],
+   "model_answer": "Between the Eastern Ghats and the Bay of Bengal, stretching from Tamil Nadu to West Bengal."
+  },
+  {
+   "id": "e6abbf732e06819d",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The rise of mercantilism and commercial agriculture."
+  },
+  {
+   "id": "3d3f43023ec30d80",
+   "kind": "answer",
+   "question": "akhada the authorized biography of mahavir singh phogat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "An authorized biography of Indian wrestling coach Mahavir Singh Phogat by Saurabh Duggal."
+  },
+  {
+   "id": "159eb5ad12a983cb",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful human movement with aesthetic or symbolic value; its main kinds are theatrical/performance and participatory/social dance."
+  },
+  {
+   "id": "30ce594643f24e33",
+   "kind": "answer",
+   "question": "how did the apostles creed get its name",
+   "gold_answers": [
+    "The first mention of the expression `` Apostles ' Creed '' occurs in a letter of AD 390 from a synod in Milan and may have been associated with the belief , widely accepted in the 4th century , that , under the inspiration of the Holy Spirit , each of the Twelve Apostles contributed an article of a creed .",
+    "The title Symbolum Apostolicum ( Symbol or Creed of the Apostles ) appears for the first time in a letter , probably written by Ambrose , from a Council in Milan to Pope Siricius in about AD 390 `` Let them give credit to the Creed of the Apostles , which the Roman Church has always kept and preserved undefiled '' . But what existed at that time was not what is now known as the Apostles ' Creed but a shorter statement of belief that , for instance , did not include the phrase `` maker of heaven and earth '' , a phrase that may have been inserted only in the 7th century ."
+   ],
+   "model_answer": "It was believed that each of the twelve apostles contributed one article under the inspiration of the Holy Spirit."
+  }
+ ],
+ "evidence": []
+}
