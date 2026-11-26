@@ -252,5 +252,70 @@
   "3": [
    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261125T011559356601Z"
   ]
+ },
+ "B4_30:hotpotqa": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-hotpotqa/20261125T122427850551Z"
+  ]
+ },
+ "B4_20:hotpotqa": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-hotpotqa/20261125T122427850552Z"
+  ]
+ },
+ "B4:hotpotqa": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-hotpotqa/20261125T122427850578Z"
+  ]
+ },
+ "B4_100:hotpotqa": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-hotpotqa/20261125T144340442710Z"
+  ]
+ },
+ "B2:hotpotqa": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-hotpotqa/20261125T144340442758Z"
+  ]
+ },
+ "B2_100:hotpotqa": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-hotpotqa/20261125T195852202515Z"
+  ]
+ },
+ "B4_200_rev:multihop_rag": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-multihop-rev-20261125T213901450021Z"
+  ]
+ },
+ "B4:natural_questions": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261125T213728130915Z"
+  ]
+ },
+ "B4_20:natural_questions": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261125T214205637812Z"
+  ]
+ },
+ "B4_30:natural_questions": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261125T214205642349Z"
+  ]
+ },
+ "B4_200:natural_questions": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261125T232958602388Z"
+  ]
+ },
+ "B4_100:natural_questions": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261125T232958707010Z"
+  ]
+ },
+ "B2:natural_questions": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261125T232958711250Z"
+  ]
  }
 }
