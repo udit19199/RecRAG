@@ -69,3 +69,11 @@ datasets/hotpotqa/*
 .gemini/
 skills-lock.json
 runs/handoff/cache/
+
+# raw >95MB results kept on disk; committed as .jsonl.gz
+runs/selection/runs/rag/20261124T233435801844Z/results.jsonl
+runs/selection/runs/rag/20261124T234714916617Z/results.jsonl
+runs/selection/runs/rag/20261124T235858693931Z/results.jsonl
+runs/selection/runs/rag/20261124T235858693931Z_fix/results.jsonl
+runs/selection/runs/rag-natural_questions/20261125T232958602388Z/results.jsonl
+runs/selection/runs/rag-multihop-rev-20261125T213901450021Z/results.jsonl
