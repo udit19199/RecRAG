@@ -148,7 +148,8 @@ PAIRS = [("B2", "B4"), ("B2", "rag"), ("B4", "rag"), ("B4", "B4_rev"), ("B4", "B
 ORDERS = "B4+B4_rev+B4_shuf"
 PAIRS += [("B2", "B4_rev"), ("B2", "B4_shuf"), ("B2", ORDERS)]
 if "B4_100" in methods:
-    PAIRS += [("B4_100", "B4"), ("B4_100", "B2")]
+    PAIRS += [("B4_100", "B4"), ("B4_100", "B2"), ("B4_100", "graphrag")]
+PAIRS += [("graphrag", "rag"), ("nograph", "rag")]  # paper (27 Nov 2026)
 if "B4_200" in methods:
     PAIRS += [("B4_200", "B4_100"), ("B4_200", "B2"), ("B4_200", "graphrag")]
 if "B2_100" in methods:

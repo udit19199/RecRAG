@@ -114,8 +114,10 @@ Content:
   average ("68.8–72.0") only when they are 2 or more points apart. There is
   no stability slide.
 - Slides carry no takeaway subtitles, footnotes or commentary and no "What we
-  tested" overview: a title, the setup legend and the charts. Takeaways and
-  chart keys go in the frame's presenter notes.
+  tested" overview: a title, the setup legend and the charts.
+- No presenter (speaker) notes on any slide (Udit, 2026-11-27); `deckops.call`
+  strips any a builder writes. Detail lives in `runs/` and the paper. The
+  notes as of 27 Nov are kept in `~/Workspace/local/hpe/deck_presenter_notes_2026-11-27.json`.
 - A new run joins the slides beside the older runs, whose results stay.
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
   dates or a timeline. Plain words a non-specialist can follow; explain any
@@ -183,7 +185,7 @@ Helpers in `~/Workspace/local/hpe-diagrams/` (outside the repo):
 - Fill each slide: no large empty band at the bottom or beside a column.
 - Text slides: headings do the work, one short line per point, no filled
   coloured cards (neutral greys; orange/blue only as thin run markers), each
-  fact once in the deck; detail goes in the frame's presenter notes.
+  fact once in the deck; detail stays in `runs/` and the paper.
 - `declutter_a.py s02|s05|s09` and `declutter_13_14.py` build slides 02, 05,
   11, 15 and 16 in that style (script names keep the old numbers).
 - `newslides.py` (`stacked_chart`, `new_frame`, `delete`, `by_name`) and

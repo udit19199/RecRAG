@@ -39,6 +39,12 @@ CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by ma
     B4_100 vs B4       temp: diff +11.5 (95% +6.1 to +17.3)  both 87 only-B4_100 18 only-B4 2 neither 18  sign-test p=0.00
     B4_100 vs B2       comp: diff +2.7 (95% -3.2 to +8.8)  both 95 only-B4_100 11 only-B2 5 neither 14  sign-test p=0.21
     B4_100 vs B2       temp: diff +7.7 (95% +2.4 to +13.3)  both 92 only-B4_100 13 only-B2 5 neither 15  sign-test p=0.10
+    B4_100 vs graphrag comp: diff +12.3 (95% +5.9 to +18.9)  both 81 only-B4_100 25 only-graphrag 4 neither 15  sign-test p=0.00
+    B4_100 vs graphrag temp: diff +8.3 (95% +2.1 to +14.7)  both 91 only-B4_100 14 only-graphrag 6 neither 14  sign-test p=0.12
+  graphrag vs rag      comp: diff +18.7 (95% +11.2 to +26.1)  both 59 only-graphrag 26 only-rag 7 neither 33  sign-test p=0.00
+  graphrag vs rag      temp: diff +28.8 (95% +21.3 to +36.5)  both 56 only-graphrag 41 only-rag 3 neither 25  sign-test p=0.00
+   nograph vs rag      comp: diff +18.4 (95% +11.7 to +25.6)  both 64 only-nograph 27 only-rag 2 neither 32  sign-test p=0.00
+   nograph vs rag      temp: diff +27.2 (95% +19.7 to +34.9)  both 55 only-nograph 39 only-rag 4 neither 27  sign-test p=0.00
     B4_200 vs B4_100   comp: diff +3.2 (95% -1.1 to +7.7)  both 102 only-B4_200 6 only-B4_100 4 neither 13  sign-test p=0.75
     B4_200 vs B4_100   temp: diff +0.5 (95% -2.9 to +4.0)  both 102 only-B4_200 6 only-B4_100 3 neither 14  sign-test p=0.51
     B4_200 vs B2       comp: diff +5.9 (95% -0.8 to +12.8)  both 94 only-B4_200 14 only-B2 6 neither 11  sign-test p=0.12
