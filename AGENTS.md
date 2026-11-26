@@ -126,11 +126,12 @@ Content:
   previous run's repeats were far apart (`runs/final500/repeat_variation/`),
   11 the 100 questions per type both runs answered and the 25 new ones (only
   the 100 compare the runs), 12 inference + null, 13 HotpotQA + Natural
-  Questions. The main flow starts at 14 comparison + temporal, then 15 is it
-  the graph (`runs/nograph/`), 16 is it the picking, 17 more chunks, 18 LLM
-  picks vs top 50/100 question by question, 19 chunk order, 20 answer
-  changes, 21 guessing, 22 made-up answers, 23 Neo4j vs Milvus, 24 what we
-  found (the conclusion), 25 next phase.
+  Questions, 14 HotpotQA + Natural Questions: more chunks. The main flow
+  starts at 15 comparison + temporal, then 16 is it
+  the graph (`runs/nograph/`), 17 is it the picking, 18 more chunks, 19 LLM
+  picks vs top 50/100 question by question, 20 chunk order, 21 answer
+  changes, 22 guessing, 23 made-up answers, 24 Neo4j vs Milvus, 25 what we
+  found (the conclusion), 26 next phase.
 - Method slides are for Agentic Hybrid RAG only; no architecture slides for
   Normal RAG, RAPTOR or HippoRAG. Each setup is explained once, in the legend
   of the first slide it appears on; Normal RAG and Milvus need no legend.
