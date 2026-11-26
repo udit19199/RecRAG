@@ -322,5 +322,25 @@
   "1": [
    "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag-natural_questions/20261126T021013755365Z"
   ]
+ },
+ "B4_30_infnull": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261126T104228862346Z"
+  ]
+ },
+ "B4_20_infnull": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261126T104228868495Z"
+  ]
+ },
+ "B4_100_infnull": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261126T110043040746Z"
+  ]
+ },
+ "B4_200_infnull": {
+  "1": [
+   "/Users/uditagarwal19199/Workspace/HPE/RecRAG/runs/selection/runs/rag/20261126T110141367022Z"
+  ]
  }
 }

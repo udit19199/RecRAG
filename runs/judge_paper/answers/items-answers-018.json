@@ -1,0 +1,105 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "d355ef867dcb073c",
+   "kind": "answer",
+   "question": "Considering the information from a Wall Street Journal article and a New York Times piece on Andrew Beaton, which NFL team, known for its distinct helmet design, was the subject of Beaton's analysis regarding their strategic decisions in the off-season as reported by the Wall Street Journal, and also mentioned in the New York Times for their unexpected player trade move?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "San Francisco 49ers"
+  },
+  {
+   "id": "e8deeb45b5edf7fc",
+   "kind": "answer",
+   "question": "Who is the individual that, prior to a major cryptocurrency platform's downfall, was seen as a credible figure within the industry, but is now accused by the prosecution of utilizing a colleague for covert control over customer funds and is facing legal scrutiny for not addressing a significant financial shortfall, as reported by Fortune, The Verge, and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried."
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "a3cb034d44d1a130",
+   "kind": "answer",
+   "question": "Considering the information from an article by The Verge about the iPad Air's new processor and another article by CNET discussing the device's compatibility with a specific accessory, which generation of iPad Air, represented by a single numeral, is the first to incorporate the mentioned processor and also supports the accessory discussed in the CNET article?",
+   "gold_answers": [
+    "Insufficient information."
+   ],
+   "model_answer": "5th"
+  },
+  {
+   "id": "d9ddbb7e431fb27e",
+   "kind": "answer",
+   "question": "Who is the individual associated with FTX that is alleged to have committed fraud for personal gain, advised another trader on the limits of withdrawals in relation to total revenue, and made a decision to use customer funds to settle with a competitor, as reported by The Verge and TechCrunch?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "82ed09c6537a9a20",
+   "kind": "answer",
+   "question": "Considering the information provided by TechCrunch regarding Meta's alleged GDPR non-compliance, its proposal to shift teen app oversight to parents, the accusation of neglecting children's online privacy, and the reported suppression of Palestinian voices, which company is implicated in multiple controversies related to user privacy, content moderation, and the responsibility of safeguarding young users' online activities?",
+   "gold_answers": [
+    "Meta"
+   ],
+   "model_answer": "Meta Platforms (Meta)"
+  },
+  {
+   "id": "48cc1305854b9feb",
+   "kind": "answer",
+   "question": "Which company spent $26.3 billion to ensure its position as the default search engine, while being accused of manipulating search results to maximize ad revenue and siphoning off content and ad revenue from news publishers, as reported by TechCrunch and The Age?",
+   "gold_answers": [
+    "Google."
+   ],
+   "model_answer": "Google (Alphabet)"
+  },
+  {
+   "id": "238468be7ae9e9a1",
+   "kind": "answer",
+   "question": "Which company was depicted as an antagonist by Epic Games in a legal case reported by The Verge, is considered by Apple as the only viable option for search engine services according to a court defense also covered by The Verge, and is accused in a class action antitrust suit reported by TechCrunch of harming news publishers' revenues and readership through its business practices?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Google (Alphabet)"
+  },
+  {
+   "id": "af20dafb76fa2720",
+   "kind": "answer",
+   "question": "Who is the individual under 30, formerly associated with FTX and Alameda Research, who was described by 'Fortune' as using a front for secret access to customer funds, by 'The Verge' as overwhelmed by the growth of his company to manage it alongside another, and by 'TechCrunch' as both the richest person in his age group with altruistic spending intentions and as someone accused of committing fraud for personal gain?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  },
+  {
+   "id": "91fb2af1ac261dc1",
+   "kind": "answer",
+   "question": "What team, which has players like Steve Smith and Aaron Finch contributing to a score of 328 for 7 wickets in a 2015 World Cup semi-final and also won a match against India by just one run, recently experienced their first four-day game loss since January 2014 during a tour of India, as reported by 'The Roar | Sports Writers Blog' and 'Zee Business'?",
+   "gold_answers": [
+    "Australia's cricket team"
+   ],
+   "model_answer": "Australiaablytyped"
+  },
+  {
+   "id": "c90dafbf86ad6863",
+   "kind": "answer",
+   "question": "Which company, as reported by TechCrunch, is facing scrutiny for its market practices in areas ranging from app distribution and advertising to search engine defaults and content sharing, without planning new measures for its video platform in the next six months?",
+   "gold_answers": [
+    "Google"
+   ],
+   "model_answer": "Microsoft"
+  },
+  {
+   "id": "7fbbaa6813558d2a",
+   "kind": "answer",
+   "question": "Who is the individual associated with the FTX collapse, facing a trial for fraud and conspiracy charges, and was previously compared to Warren Buffet, yet was not by TechCrunch, and is also accused by the prosecution of using customer funds to repay debts under his direction?",
+   "gold_answers": [
+    "Sam Bankman-Fried"
+   ],
+   "model_answer": "Sam Bankman-Fried (SBF)"
+  }
+ ],
+ "evidence": []
+}
