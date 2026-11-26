@@ -175,3 +175,18 @@ Two runs, both at the flex price, 1 repeat, no retries, no default-tier fallback
 Same index, answer model, prompt, service tier and index check (first 10 passages ==
 Normal RAG repeat 1) as the sections above. Max 3 lanes on the VM. Budget for this
 batch: about $2.50 list price.
+
+Results (26 Nov 2026; answered right = exact match then Claude Haiku; 0 empty answers,
+0 failed questions in every run):
+
+- MultiHop-RAG inference / null (250 questions, 125 per type):
+  B4_20  99.2 / 94.4 ($0.0633)   B4_30  99.2 / 92.8 ($0.0913)
+  B4_100 98.4 / 89.6 ($0.2865)   B4_200 98.4 / 90.4 ($0.5646)
+  WRONG10 (same-type donor's top 10, no gold overlap): inference 4.0, null 100.0
+  (answer calls not metered by the synthetic donor script; cost fields are None).
+- HotpotQA B4_200 (500 questions): bridge 88.0, comparison 90.8, pooled 89.4 ($0.6245).
+
+List-price total for this batch: about $1.63 (under the $2.50 stop line).
+The HotpotQA B4_200 results.jsonl is 114 MB and is committed as results.jsonl.gz.
+The VM-side output check crashed only because the verified run folders had already
+been pulled and deleted first; the runs themselves all completed.

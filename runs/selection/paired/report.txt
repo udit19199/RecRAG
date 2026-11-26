@@ -89,6 +89,8 @@ Repeat range of answered right (lowest-highest of 3 repeats), per setup
   B4_20                    temp 55.2-56.0 (mean 55.5)
   B4_200                   comp 84.8-86.4 (mean 85.9)
   B4_200                   temp 83.2-88.0 (mean 85.3)
+  B4_200_rev:multihop_rag  comp 0.0-87.2 (mean 29.1)
+  B4_200_rev:multihop_rag  temp 0.0-85.6 (mean 28.5)
   B4_30                    comp 68.0-72.0 (mean 70.4)
   B4_30                    temp 61.6-65.6 (mean 63.5)
   B4_rev                   comp 77.6-79.2 (mean 78.1)
@@ -397,12 +399,34 @@ right = said 'Insufficient Information' (exact match) or a Haiku verdict.
   rag          null_quer right  93.6  insufficient   0.0  wrong   6.4  right range 92.8-94.4
   B0_infnull   inference right  97.3  insufficient   1.1  wrong   1.6  right range 96.0-98.4
   B0_infnull   null_quer right  94.4  insufficient   0.0  wrong   5.6  right range 94.4-94.4
+  B4_20_infnull inference right  99.2  insufficient   0.0  wrong   0.8  right range 0.0-99.2
+  B4_20_infnull null_quer right  94.4  insufficient   0.0  wrong   5.6  right range 0.0-94.4
+  B4_30_infnull inference right  99.2  insufficient   0.0  wrong   0.8  right range 0.0-99.2
+  B4_30_infnull null_quer right  92.8  insufficient   0.0  wrong   7.2  right range 0.0-92.8
   B4_infnull   inference right  99.2  insufficient   0.0  wrong   0.8  right range 99.2-99.2
   B4_infnull   null_quer right  93.1  insufficient   0.0  wrong   6.9  right range 92.0-94.4
+  B4_100_infnull inference right  98.4  insufficient   0.0  wrong   1.6  right range 0.0-98.4
+  B4_100_infnull null_quer right  89.6  insufficient   0.0  wrong  10.4  right range 0.0-89.6
+  B4_200_infnull inference right  98.4  insufficient   0.0  wrong   1.6  right range 0.0-98.4
+  B4_200_infnull null_quer right  90.4  insufficient   0.0  wrong   9.6  right range 0.0-90.4
+  WRONG10_infnull inference right   4.0  insufficient  95.2  wrong   0.8  right range 0.0-4.0
+  WRONG10_infnull null_quer right 100.0  insufficient   0.0  wrong   0.0  right range 0.0-100.0
   B2_infnull   inference right  99.2  insufficient   0.0  wrong   0.8  right range 99.2-99.2
   B2_infnull   null_quer right  91.2  insufficient   0.0  wrong   8.8  right range 90.4-92.0
   graphrag     inference right  98.1  insufficient   0.8  wrong   1.1  right range 97.6-98.4
   graphrag     null_quer right  92.5  insufficient   0.0  wrong   7.5  right range 91.2-93.6
+  paired B4_20_infnull vs rag          inference: +2.7 (95% +0.5 to +5.3)
+  paired B4_20_infnull vs rag          null_quer: +0.8 (95% -2.1 to +3.7)
+  paired B4_30_infnull vs rag          inference: +2.7 (95% +0.5 to +5.3)
+  paired B4_30_infnull vs rag          null_quer: -0.8 (95% -4.8 to +2.9)
+  paired B4_100_infnull vs rag          inference: +1.9 (95% -0.8 to +4.8)
+  paired B4_100_infnull vs rag          null_quer: -4.0 (95% -8.3 to +0.0)
+  paired B4_200_infnull vs rag          inference: +1.9 (95% -0.3 to +4.5)
+  paired B4_200_infnull vs rag          null_quer: -3.2 (95% -7.7 to +1.1)
+  paired B4_200_infnull vs B4_infnull   inference: -0.8 (95% -2.4 to +0.0)
+  paired B4_200_infnull vs B4_infnull   null_quer: -2.7 (95% -6.9 to +1.1)
+  paired WRONG10_infnull vs rag          inference: -92.5 (95% -96.5 to -88.0)
+  paired WRONG10_infnull vs rag          null_quer: +6.4 (95% +2.7 to +10.7)
   paired   B2_infnull vs rag          inference: +2.7 (95% +0.5 to +5.3)
   paired   B2_infnull vs rag          null_quer: -2.4 (95% -5.6 to +0.5)
   paired   B4_infnull vs rag          inference: +2.7 (95% +0.5 to +5.3)

@@ -964,6 +964,18 @@
     84.8
    ]
   },
+  "B4_200_rev:multihop_rag": {
+   "comparison_query": [
+    87.2,
+    0.0,
+    0.0
+   ],
+   "temporal_query": [
+    85.6,
+    0.0,
+    0.0
+   ]
+  },
   "B4_30": {
    "comparison_query": [
     71.2,
@@ -2639,6 +2651,26 @@
     "abstain": 0.0,
     "wrong": 5.6
    },
+   "B4_20_infnull inference_query": {
+    "right": 99.2,
+    "abstain": 0.0,
+    "wrong": 0.8
+   },
+   "B4_20_infnull null_query": {
+    "right": 94.4,
+    "abstain": 0.0,
+    "wrong": 5.6
+   },
+   "B4_30_infnull inference_query": {
+    "right": 99.2,
+    "abstain": 0.0,
+    "wrong": 0.8
+   },
+   "B4_30_infnull null_query": {
+    "right": 92.8,
+    "abstain": 0.0,
+    "wrong": 7.2
+   },
    "B4_infnull inference_query": {
     "right": 99.2,
     "abstain": 0.0,
@@ -2648,6 +2680,36 @@
     "right": 93.06666666666666,
     "abstain": 0.0,
     "wrong": 6.933333333333334
+   },
+   "B4_100_infnull inference_query": {
+    "right": 98.4,
+    "abstain": 0.0,
+    "wrong": 1.6
+   },
+   "B4_100_infnull null_query": {
+    "right": 89.6,
+    "abstain": 0.0,
+    "wrong": 10.4
+   },
+   "B4_200_infnull inference_query": {
+    "right": 98.4,
+    "abstain": 0.0,
+    "wrong": 1.6
+   },
+   "B4_200_infnull null_query": {
+    "right": 90.4,
+    "abstain": 0.0,
+    "wrong": 9.6
+   },
+   "WRONG10_infnull inference_query": {
+    "right": 4.0,
+    "abstain": 95.2,
+    "wrong": 0.8
+   },
+   "WRONG10_infnull null_query": {
+    "right": 100.0,
+    "abstain": 0.0,
+    "wrong": 0.0
    },
    "B2_infnull inference_query": {
     "right": 99.2,
@@ -2691,6 +2753,26 @@
     94.4,
     94.4
    ],
+   "B4_20_infnull inference_query": [
+    99.2,
+    0.0,
+    0.0
+   ],
+   "B4_20_infnull null_query": [
+    94.4,
+    0.0,
+    0.0
+   ],
+   "B4_30_infnull inference_query": [
+    99.2,
+    0.0,
+    0.0
+   ],
+   "B4_30_infnull null_query": [
+    92.8,
+    0.0,
+    0.0
+   ],
    "B4_infnull inference_query": [
     99.2,
     99.2,
@@ -2700,6 +2782,36 @@
     94.4,
     92.8,
     92.0
+   ],
+   "B4_100_infnull inference_query": [
+    98.4,
+    0.0,
+    0.0
+   ],
+   "B4_100_infnull null_query": [
+    89.6,
+    0.0,
+    0.0
+   ],
+   "B4_200_infnull inference_query": [
+    98.4,
+    0.0,
+    0.0
+   ],
+   "B4_200_infnull null_query": [
+    90.4,
+    0.0,
+    0.0
+   ],
+   "WRONG10_infnull inference_query": [
+    4.0,
+    0.0,
+    0.0
+   ],
+   "WRONG10_infnull null_query": [
+    100.0,
+    0.0,
+    0.0
    ],
    "B2_infnull inference_query": [
     99.2,
@@ -2723,6 +2835,102 @@
    ]
   },
   "paired": {
+   "B4_20_infnull vs rag inference_query": {
+    "questions": 125,
+    "mean_diff_points": 2.666666666666667,
+    "ci95": [
+     0.5333333333333334,
+     5.333333333333334
+    ]
+   },
+   "B4_20_infnull vs rag null_query": {
+    "questions": 125,
+    "mean_diff_points": 0.8000000000000003,
+    "ci95": [
+     -2.1333333333333333,
+     3.733333333333334
+    ]
+   },
+   "B4_30_infnull vs rag inference_query": {
+    "questions": 125,
+    "mean_diff_points": 2.666666666666667,
+    "ci95": [
+     0.5333333333333334,
+     5.333333333333334
+    ]
+   },
+   "B4_30_infnull vs rag null_query": {
+    "questions": 125,
+    "mean_diff_points": -0.7999999999999998,
+    "ci95": [
+     -4.8,
+     2.9333333333333336
+    ]
+   },
+   "B4_100_infnull vs rag inference_query": {
+    "questions": 125,
+    "mean_diff_points": 1.8666666666666667,
+    "ci95": [
+     -0.7999999999999998,
+     4.8
+    ]
+   },
+   "B4_100_infnull vs rag null_query": {
+    "questions": 125,
+    "mean_diff_points": -4.0,
+    "ci95": [
+     -8.266666666666666,
+     2.220446049250313e-16
+    ]
+   },
+   "B4_200_infnull vs rag inference_query": {
+    "questions": 125,
+    "mean_diff_points": 1.8666666666666667,
+    "ci95": [
+     -0.2666666666666666,
+     4.533333333333333
+    ]
+   },
+   "B4_200_infnull vs rag null_query": {
+    "questions": 125,
+    "mean_diff_points": -3.2,
+    "ci95": [
+     -7.7333333333333325,
+     1.0666666666666669
+    ]
+   },
+   "B4_200_infnull vs B4_infnull inference_query": {
+    "questions": 125,
+    "mean_diff_points": -0.8,
+    "ci95": [
+     -2.4,
+     0.0
+    ]
+   },
+   "B4_200_infnull vs B4_infnull null_query": {
+    "questions": 125,
+    "mean_diff_points": -2.6666666666666665,
+    "ci95": [
+     -6.933333333333333,
+     1.066666666666667
+    ]
+   },
+   "WRONG10_infnull vs rag inference_query": {
+    "questions": 125,
+    "mean_diff_points": -92.53333333333335,
+    "ci95": [
+     -96.53333333333333,
+     -88.0
+    ]
+   },
+   "WRONG10_infnull vs rag null_query": {
+    "questions": 125,
+    "mean_diff_points": 6.4,
+    "ci95": [
+     2.666666666666667,
+     10.666666666666668
+    ]
+   },
    "B2_infnull vs rag inference_query": {
     "questions": 125,
     "mean_diff_points": 2.666666666666667,

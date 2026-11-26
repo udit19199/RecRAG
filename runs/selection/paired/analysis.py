@@ -380,7 +380,9 @@ for m, reps in IREG.items():
                     "qt": r["question_type"], "right": ok,
                     "abstain": a == ABSTAIN and not ok}
 iqids = {qt: sorted({q for (_, _, q), v in irows.items() if v["qt"] == qt}) for qt in ITYPES}
-imethods = [m for m in ("rag", "B0_infnull", "B4_infnull", "B2_infnull", "graphrag")
+imethods = [m for m in ("rag", "B0_infnull", "B4_20_infnull", "B4_30_infnull",
+                        "B4_infnull", "B4_100_infnull", "B4_200_infnull",
+                        "WRONG10_infnull", "B2_infnull", "graphrag")
             if any(k[0] == m for k in irows)]
 out["infnull"] = {"answer_mix": {}, "repeat_range": {}, "paired": {}}
 for m in imethods:
@@ -417,7 +419,10 @@ def ipaired(a, b, qt):
             "ci95": [100 * boots[250], 100 * boots[9750]]}
 
 
-for a, b in (("B2_infnull", "rag"), ("B4_infnull", "rag"), ("B2_infnull", "B4_infnull"), ("graphrag", "rag")):
+for a, b in (("B4_20_infnull", "rag"), ("B4_30_infnull", "rag"), ("B4_100_infnull", "rag"),
+             ("B4_200_infnull", "rag"), ("B4_200_infnull", "B4_infnull"),
+             ("WRONG10_infnull", "rag"),
+             ("B2_infnull", "rag"), ("B4_infnull", "rag"), ("B2_infnull", "B4_infnull"), ("graphrag", "rag")):
     if not any(k[0] == a for k in irows) or not any(k[0] == b for k in irows):
         continue
     for qt in ITYPES:

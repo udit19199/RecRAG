@@ -1,0 +1,123 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "77e5b7600e71aaf1",
+   "kind": "answer",
+   "question": "What are some other areas that share a common deer species with the forests of Mara and Mondrem?",
+   "gold_answers": [
+    "New Zealand, Canada, the United States, the Falkland Islands, and Peru."
+   ],
+   "model_answer": "Europe, the Caucasus, Asia Minor, and Iran."
+  },
+  {
+   "id": "3061685854152435",
+   "kind": "answer",
+   "question": "In addition to the best known comic servant from Commedia dell'arte, who else is featured in La Surprise de l'amour?",
+   "gold_answers": [
+    "Columbine"
+   ],
+   "model_answer": "Columbine (Colombine)"
+  },
+  {
+   "id": "e56cee8078956233",
+   "kind": "answer",
+   "question": "What aspect of the board game Diplomacy is not found in the board game Uncle Wiggily?",
+   "gold_answers": [
+    "negotiation phases"
+   ],
+   "model_answer": "Negotiation phases for forming and betraying alliances"
+  },
+  {
+   "id": "b430c0afefba06d6",
+   "kind": "answer",
+   "question": "What is Rachelle Amy Beinart's role in the film that follows a group of rebels on a mission?",
+   "gold_answers": [
+    "stunt performances"
+   ],
+   "model_answer": "Stunt performer in Rogue One: A Star Wars Story"
+  },
+  {
+   "id": "6f1fba0ca16e284c",
+   "kind": "answer",
+   "question": "Are the 1908 Ex parte Young and 1948 McCollum v. Board of Education United States Supreme Court cases related to each other in any way?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No direct relationship is stated."
+  },
+  {
+   "id": "9a3558c76c208cac",
+   "kind": "answer",
+   "question": "Do both Adventist World and Girls' Life have a headquarter or editor based in Maryland?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both."
+  },
+  {
+   "id": "1d885f139bbcb067",
+   "kind": "answer",
+   "question": "Are both Leycesteria and Anigozanthos native to Australia?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—only Anigozanthos is native to Australia."
+  },
+  {
+   "id": "41d2a0536ff19c87",
+   "kind": "answer",
+   "question": "Both Mulled wine and Blue Lagoon are considered primarily alcoholic or non-alcoholic?",
+   "gold_answers": [
+    "alcoholic"
+   ],
+   "model_answer": "Alcoholic (though non-alcoholic mulled wine versions exist)"
+  },
+  {
+   "id": "92a9f3042f1457e7",
+   "kind": "answer",
+   "question": "In between The Bears and I and Oceans which was released on July 31, 1974, by Buena Vista Distribution?",
+   "gold_answers": [
+    "The Bears and I"
+   ],
+   "model_answer": "Buena Vista Distribution"
+  },
+  {
+   "id": "b01221a4a384a7bc",
+   "kind": "answer",
+   "question": "The Ronkonkama railroad station and the town of Islip, New York are near?",
+   "gold_answers": [
+    "Long Island"
+   ],
+   "model_answer": "Yes, Ronkonkoma station is in the Town of Islip."
+  },
+  {
+   "id": "cd8625ff78c2f1f0",
+   "kind": "answer",
+   "question": "What profession is shared by both Monty Banks and George Seaton?",
+   "gold_answers": [
+    "film director"
+   ],
+   "model_answer": "Film directors"
+  },
+  {
+   "id": "3b85cd89e1347b0c",
+   "kind": "answer",
+   "question": "Were Darby O'Gill and the Little People and Dangal only produced by Walt Disney Pictures?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No; Dangal was co-produced with Aamir Khan Productions and UTV Motion Pictures."
+  },
+  {
+   "id": "5b7f161c5584bdbd",
+   "kind": "answer",
+   "question": "Have Jelena Janković and Marat Safin both played tennis professionally?",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes, both have played professionally."
+  }
+ ],
+ "evidence": []
+}
