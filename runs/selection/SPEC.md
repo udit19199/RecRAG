@@ -135,3 +135,22 @@ where: Instabox VM, one dataset at a time (VM /data has about 1.4 GB free): copy
 lost: the HotpotQA B4_200 run completed (500 questions) but its run folder was lost during copy-back to the Mac (a directory transfer failed past the 32 MiB limit and the VM copy was removed); not a model or API failure, and under the no-retries rule it is not rerun
 
 not run: B1 was not run to completion on HotpotQA or Natural Questions — bge-reranker-large on the VM CPU was too slow (~4 min/question; host CPU steal ~60-70% for most of the run window made even thread-pinned scoring ~20+ h per dataset). HotpotQA B1 reached 76/500 scored-and-cached pairs before the stop (cache retained in runs/selection/cache, not committed); the NQ B1 lane was stopped at 1/500. Recorded per the no-retries rule; not a model or API failure.
+
+Results (1 repeat, flex on the answer calls; answered right = exact match, then the Claude Haiku judge):
+
+hotpotqa (500 questions, bridge + comparison pooled; B4_200 lost during copy-back, B1 not run):
+  B4_20  87.8% ($0.0702)   B4_30 87.6% ($0.1014)   B4      87.4% ($0.1637)
+  B4_100 88.8% ($0.3180)   B2    87.0% ($0.2109)   B2_100  88.2% ($0.3702)
+  0 empty answers in every variant; 0 questions failed (transient flex 429s retried in-run, not counted as failures).
+
+natural_questions (500 questions, one set; B1 not run, B2_100 pending at time of writing):
+  B4_20  57.6% ($0.1224)   B4_30 60.0% ($0.1780)   B4      59.0% ($0.2883)
+  B4_100 59.0% ($0.5643)   B4_200 59.2% ($1.1172)  B2      59.4% ($0.3688)
+  0 empty answers, 0 failed questions in every variant.
+
+multihop_rag B4_200_rev (250 comparison + temporal questions, top 200 reversed, best last):
+  comparison 87.2%, temporal 85.6% ($0.5667) — vs B4_200 repeat 1 on the same questions:
+  comparison 86.4%, temporal 83.2%. Reversing the order did not lower the score.
+
+List-price total for the full dataset runs above: about $4.4 (well under the $10 cap; every answer
+call carried service_tier "flex", embeddings calls have no flex tier and are charged "default").

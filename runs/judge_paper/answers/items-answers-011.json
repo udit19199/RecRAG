@@ -1,0 +1,933 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "5d28398b7ae73c42",
+   "kind": "answer",
+   "question": "where in the constitution is the concept of federalism established",
+   "gold_answers": [
+    "Because the states were preexisting political entities , the U.S. Constitution did not need to define or explain federalism in any one section but it often mentions the rights and responsibilities of state governments and state officials in relation to the federal government . The federal government has certain express powers ( also called enumerated powers ) which are powers spelled out in the Constitution , including the right to levy taxes , declare war , and regulate interstate and foreign commerce . In addition , the Necessary and Proper Clause gives the federal government the implied power to pass any law `` necessary and proper '' for the execution of its express powers . Other powers -- the reserved powers -- are reserved to the people or the states . The power delegated to the federal government was significantly expanded by the Supreme Court decision in McCulloch v. Maryland ( 1819 ) , amendments to the Constitution following the Civil War , and by some later amendments -- as well as the overall claim of the Civil War , that the states were legally subject to the final dictates of the federal government ."
+   ],
+   "model_answer": "Tenth Amendment of the U.S. Constitution"
+  },
+  {
+   "id": "921a4f36f5f8a6c1",
+   "kind": "answer",
+   "question": "how much does it cost for the olympics",
+   "gold_answers": [
+    "on average USD 5.2 billion and for the Winter Games USD 3.1 billion dollars"
+   ],
+   "model_answer": "Summer Olympics average $5.2 billion; Winter Olympics average $3.1 billion."
+  },
+  {
+   "id": "b1a2a85a99863bda",
+   "kind": "answer",
+   "question": "What other things did  blind Arab philosopher who is also  Abd Allah ibn al-Fadl teacher do ",
+   "gold_answers": [
+    "poet, and writer"
+   ],
+   "model_answer": "He was also a poet and writer, and held an irreligious worldview."
+  },
+  {
+   "id": "fb2b8c60e7464f58",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They offered surveyed land for free or at low cost to settlers willing to farm it."
+  },
+  {
+   "id": "7d072554992ac83a",
+   "kind": "answer",
+   "question": "where do car factories tend to be located and why",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Near urban areas and transport links, close to workers, materials, energy, and markets."
+  },
+  {
+   "id": "a40f9d792e432360",
+   "kind": "answer",
+   "question": "why top soil has most amount of humus",
+   "gold_answers": [
+    "Much of the humus in most soils has persisted for more than 100 years , rather than having been decomposed into CO , and can be regarded as stable ; this organic matter has been protected from decomposition by microbial or enzyme action because it is hidden ( occluded ) inside small aggregates of soil particles , or tightly sorbed or complexed ) to clays . Most humus that is not protected in this way is decomposed within 10 years and can be regarded as less stable or more labile . Stable humus contributes few plant - available nutrients in soil , but it helps maintain its physical structure . A very stable form of humus is formed from the slow oxidation of soil carbon after the incorporation of finely powdered charcoal into the topsoil . This process is speculated to have been important in the formation of the very fertile Amazonian terra preta do Indio ."
+   ],
+   "model_answer": "Because dead plant and animal matter accumulates and decays at the soil surface."
+  },
+  {
+   "id": "59fd30f6d5a12171",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "All four couples were still together as of 2017."
+  },
+  {
+   "id": "2c3bc17c2f4bfce1",
+   "kind": "answer",
+   "question": "what was taking place before the industrial revolution",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mercantilism and the enclosure of common lands."
+  },
+  {
+   "id": "2b19c65c851841d0",
+   "kind": "answer",
+   "question": "where no man has gone before episode cast",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "William Shatner, Leonard Nimoy, James Doohan, George Takei, Gary Lockwood, Sally Kellerman, Lloyd Haynes, Paul Fix, Paul Carr, Andrea Dromm, and Eddie Paskey."
+  },
+  {
+   "id": "f0cfa22729f1ae67",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, silly song with largely nonsensical lyrics."
+  },
+  {
+   "id": "a741a9a65b30a2c3",
+   "kind": "answer",
+   "question": "which regions on earth have seasons tied to the amount of rainfall",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Tropical and monsoon regions, including parts of Africa, Asia, and Australia."
+  },
+  {
+   "id": "965c4088b9dc5e89",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Purchase and production costs, including materials, labor, freight, storage, and factory overhead."
+  },
+  {
+   "id": "4f1048033bd9cdea",
+   "kind": "answer",
+   "question": "what is the moral of cat in the hat",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Mischief can be fun, but you should clean up your mess."
+  },
+  {
+   "id": "0ffb3dd12fd02423",
+   "kind": "answer",
+   "question": "what is the first step in the evolution of the eye",
+   "gold_answers": [
+    "photoreceptor proteins that sense light",
+    "eyespots",
+    "photoreceptor proteins that sense light, found even in unicellular organisms, called \"eyespots\""
+   ],
+   "model_answer": "Light-sensitive photoreceptor proteins (eyespots) detecting ambient brightness"
+  },
+  {
+   "id": "ac09c5b824f725bf",
+   "kind": "answer",
+   "question": "how much does.it cost to raise a child",
+   "gold_answers": [
+    "Dual - Parent Family - USDA Average Spending per Child ( not the basic cost of raising ) Age of Child Housing Food Transport . Clothing Health Child Care / Education Misc . Total Before - tax income : Less than $59,410 ( Average = $38,000 ) 0 to 2 2,990 1,160 1,170 640 630 2,040 420 9,050 3 to 5 2,990 1,260 1,230 500 590 1,910 620 9,100 6 to 8 2,990 1,710 1,350 570 660 1,290 630 8,760 9 to 11 2,990 1,970 1,350 580 710 1,910 630 9,520 12 to 14 2,990 2,130 1,480 690 1,090 1,110 700 9,960 15 to 17 2,990 2,120 1,630 730 1,010 1,290 580 9,970 Total 53,820 31,050 24,630 11,130 14,070 23,640 10,740 169,080 Before - tax income : $59,410 to $102,870 ( Average = $79,940 ) 0 to 2 3,920 1,405 1,690 760 850 2,860 890 12,370 3 to 5 3,920 1,490 1,740 610 800 2,740 1,090 12,390 6 to 8 3,920 2,100 1,860 680 940 1,680 1,110 12,290 9 to 11 3,920 2,400 1,870 710 1,000 2,110 1,100 13,110 12 to 14 3,920 2,580 1,990 840 1,410 1,910 1,170 13,820 15 to 17 3,920 2,570 2,150 900 1,330 2,400 1,050 14,320 Total 70,560 37,620 33,900 13,500 18,990 41,100 19,230 234,900 Before - tax income : More than $102,870 ( Average = $180,040 ) 0 to 2 7,100 1,900 2,550 1,050 980 5,090 1,790 20,460 3 to 5 7,100 2,000 2,610 880 930 4,970 1,990 20,480 6 to 8 7,100 2,630 2,730 970 1,080 3,910 2,000 20,420 9 to 11 7,100 2,980 2,730 1,010 1,150 4,350 2,000 21,320 12 to 14 7,100 3,190 2,860 1,170 1,610 4,700 2,070 22,700 15 to 17 7,100 3,180 3,020 1,280 1,520 6,460 1,950 24,510 Total 127,800 47,640 49,500 19,080 21,810 88,440 35,400 389,670"
+   ],
+   "model_answer": "About $234,900 in the U.S. for a middle-income, dual-parent family through age 18."
+  },
+  {
+   "id": "d74e459dfc50feb8",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "German Lutheran traditions."
+  },
+  {
+   "id": "1f46b1e9f09fc783",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A playful, nonsensical song meant to be silly."
+  },
+  {
+   "id": "fe0cb5ca0ba73549",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "Disagreements over federal power and the disputed 1824 election split the party into Jacksonian and National Republican factions."
+  },
+  {
+   "id": "761a99db0fa3293d",
+   "kind": "answer",
+   "question": "dean koontz dark rivers of the heart summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Spencer Grant and Valerie Keene flee a secret government agency, confronting Spencer’s troubled past before escaping to start a new life with a resistance group."
+  },
+  {
+   "id": "967e3c46a0c04e1b",
+   "kind": "answer",
+   "question": "where do we draw the line between painting and drawing",
+   "gold_answers": [
+    "Drawing is one of the major forms of expression within the visual arts . It is generally concerned with the marking of lines and areas of tone onto paper / other material , where the accurate representation of the visual world is expressed upon a plane surface . Traditional drawings were monochrome , or at least had little colour , while modern colored - pencil drawings may approach or cross a boundary between drawing and painting . In Western terminology , drawing is distinct from painting , even though similar media often are employed in both tasks . Dry media , normally associated with drawing , such as chalk , may be used in pastel paintings . Drawing may be done with a liquid medium , applied with brushes or pens . Similar supports likewise can serve both : painting generally involves the application of liquid paint onto prepared canvas or panels , but sometimes an underdrawing is drawn first on that same support ."
+   ],
+   "model_answer": "The distinction is blurred; painting generally applies liquid paint to a prepared surface."
+  },
+  {
+   "id": "79d584cd849dd0be",
+   "kind": "answer",
+   "question": "wizards of waverly place does max turn back into a boy",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—in “Back to Max.”"
+  },
+  {
+   "id": "d7921d505e75f200",
+   "kind": "answer",
+   "question": "who's playing the late game on sunday night football",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Philadelphia Eagles vs. Dallas Cowboys"
+  },
+  {
+   "id": "803b36904b4fa877",
+   "kind": "answer",
+   "question": "when did australia get rid of the death penalty",
+   "gold_answers": [
+    "Capital punishment in Australia has been abolished in all jurisdictions . Queensland abolished the death penalty in 1922 . Tasmania did the same in 1968 , the federal government abolished the death penalty in 1973 , with application also in the Australian Capital Territory and the Northern Territory . Victoria did so in 1975 , South Australia in 1976 , and Western Australia in 1984 . New South Wales abolished the death penalty for murder in 1955 , and for all crimes in 1985 . In 2010 , the federal government passed legislation prohibiting the re-establishment of capital punishment by any state or territory . Neither the Commonwealth nor any of the states will extradite or deport a prisoner to another jurisdiction if they will face the death penalty , and police co-operation with other countries which have the death penalty has been questioned ."
+   ],
+   "model_answer": "By 1985, all Australian jurisdictions had abolished it."
+  },
+  {
+   "id": "a494b0ecf64fad01",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "Usually after graduating from law school."
+  },
+  {
+   "id": "53797177e71e1346",
+   "kind": "answer",
+   "question": "why did government sponsored surveys and land acts encourage migration to the west",
+   "gold_answers": [
+    "The Homestead Acts were several United States federal laws that gave an applicant ownership of land , typically called a `` homestead , '' at no cost . In all , more than 270 million acres of public land , or nearly 10 % of the total area of the U.S. , was given away free to 1.6 million homesteaders ; most of the homesteads were west of the Mississippi River .",
+    "An extension of the Homestead Principle in law , the Homestead Acts were an expression of the `` Free Soil '' policy of Northerners who wanted individual farmers to own and operate their own farms , as opposed to Southern slave - owners who wanted to buy up large tracts of land and use slave labor , thereby shutting out free white men ."
+   ],
+   "model_answer": "They made western land accessible and available to settlers, often free or cheaply."
+  },
+  {
+   "id": "63b50ceb8d6567f9",
+   "kind": "answer",
+   "question": "did the bush family own a baseball team",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—George W. Bush co-owned the Texas Rangers."
+  },
+  {
+   "id": "a710fcce9382763a",
+   "kind": "answer",
+   "question": "what does cost of goods sold consist of",
+   "gold_answers": [
+    "Costs are associated with particular goods using one of the several formulas , including specific identification , first - in first - out ( FIFO ) , or average cost . Costs include all costs of purchase , costs of conversion and other costs that are incurred in bringing the inventories to their present location and condition . Costs of goods made by the businesses include material , labor , and allocated overhead . The costs of those goods which are not yet sold are deferred as costs of inventory until the inventory is sold or written down in value ."
+   ],
+   "model_answer": "Product or raw-material costs, freight, storage, direct labor, and factory overhead."
+  },
+  {
+   "id": "6ed90542d2d9ef3e",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To evangelize settlers and inspire repentance and conversion to Christianity."
+  },
+  {
+   "id": "31dcfcf5baef34ee",
+   "kind": "answer",
+   "question": "percy jackson and the olympians sea of monsters summary",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Percy, Annabeth, and Tyson rescue Grover and retrieve the Golden Fleece to save Camp Half-Blood."
+  },
+  {
+   "id": "b220ceca890fa342",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a major geographic barrier across North Africa."
+  },
+  {
+   "id": "bd3e8843b8b549dd",
+   "kind": "answer",
+   "question": "where does the word fore in golf originated",
+   "gold_answers": [
+    "`` Fore ! '' , originally an Australian interjection , is used to warn anyone standing or moving in the flight of a golf ball . The mention of the term in an 1881 Australian Golf Museum indicates that the term was in use at least as early as that period ."
+   ],
+   "model_answer": "It was originally an Australian interjection."
+  },
+  {
+   "id": "b8187a8e72cdc82e",
+   "kind": "answer",
+   "question": "who won the national championship in volleyball 2017",
+   "gold_answers": [
+    "Ohio State"
+   ],
+   "model_answer": "Ohio State Bruins"
+  },
+  {
+   "id": "8f78934ad9fed54d",
+   "kind": "answer",
+   "question": "Why is Minister Pool important to Black Country and the West Midlands in England?",
+   "gold_answers": [
+    "defence of the Cathedral"
+   ],
+   "model_answer": "It is a historic Lichfield landmark, once helping defend the Cathedral Close and power a mill."
+  },
+  {
+   "id": "380be4f945137e96",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "To serve as a proposed border between Poland and the Soviet Union."
+  },
+  {
+   "id": "9f639c851e7e8b70",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, The Dark Knight Rises, Dirty Girl, Cracks, Jack & Diane, Magic Magic, Lovelace, Small Apartments, and One Percent More Humid."
+  },
+  {
+   "id": "82e3ff4d7575bcc9",
+   "kind": "answer",
+   "question": "steps party on the dance floor tour review",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Four out of five stars in Belfast and five out of five in Dublin."
+  },
+  {
+   "id": "e4ee72ef01517f35",
+   "kind": "answer",
+   "question": "when do you hear the lub and dub sounds of the heart",
+   "gold_answers": [
+    "the closing of the atrioventricular valves and semilunar valves, respectively"
+   ],
+   "model_answer": "Lub at the start of ventricular systole; dub at the start of diastole."
+  },
+  {
+   "id": "75a85f4448746ec6",
+   "kind": "answer",
+   "question": "in which regions are most of africa petroleum and natural gas found",
+   "gold_answers": [
+    "Nigeria"
+   ],
+   "model_answer": "The Niger Delta and adjacent offshore coastal regions\n"
+  },
+  {
+   "id": "2688d9c7efc11435",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Black Mass, The Other Boleyn Girl, Wild Child, Atonement, Maleficent, The Three Musketeers, The Dark Knight Rises, Dirty Girl, Cracks, Jack & Diane, Magic Magic, Lovelace, Small Apartments, Wonder Wheel, and One Percent More Humid."
+  },
+  {
+   "id": "1372ffbb49089113",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "As of 2017, Russ and Paola, Kirlyam and Alan, Aya and Louis, and Aziza and Mike were all still together."
+  },
+  {
+   "id": "58b690a45615869c",
+   "kind": "answer",
+   "question": "you gotta fight for your right to party cover",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Coldplay (acoustic cover)"
+  },
+  {
+   "id": "6b7a9dc0e589fb4b",
+   "kind": "answer",
+   "question": "with which regions does australia have historical ties",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Europe and Asia-Pacific regions"
+  },
+  {
+   "id": "ff7762e24efcf40a",
+   "kind": "answer",
+   "question": "2. describing write about two instances where the colonists did not submit to the british",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "They seized colonial governments and arms; they laid siege to British forces in Boston."
+  },
+  {
+   "id": "6a4d46260b50754e",
+   "kind": "answer",
+   "question": "how does the romanesque bust reliquary reflect another culture's influence",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Byzantine artistic influence."
+  },
+  {
+   "id": "41b27bcca56c3e58",
+   "kind": "answer",
+   "question": "when is the rock n roll hall of fame",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Induction ceremonies are held annually."
+  },
+  {
+   "id": "bdd997f3a1aa5c75",
+   "kind": "answer",
+   "question": "meaning of joy to the world by three dog night",
+   "gold_answers": [
+    "When Hoyt Axton performed the song to the group , two of the three main vocalists -- Danny Hutton and Cory Wells -- rejected the song , but Chuck Negron felt that the band needed a `` silly song '' to help bring the band back together as a working unit . Negron also felt that the song `` was n't even close to our best record , but it might have been one of our most honest . ''",
+    "The song , which has been described by members of Three Dog Night as a `` kid 's song '' and a `` silly song '' , topped the main singles charts in North America , was certified gold by the RIAA , and has since been covered by multiple artists ."
+   ],
+   "model_answer": "A deliberately silly, mostly nonsensical song."
+  },
+  {
+   "id": "fc898209e931bb6a",
+   "kind": "answer",
+   "question": "when is the fourth movie of the divergent series coming out",
+   "gold_answers": [
+    "never made"
+   ],
+   "model_answer": "It was cancelled and is not coming out."
+  },
+  {
+   "id": "02884dd076263417",
+   "kind": "answer",
+   "question": "What movies has Juno Temple starred in?",
+   "gold_answers": [
+    "She has appeared in films such as \" Black Mass\", \"The Other Boleyn Girl\", \"Wild Child\", \"Atonement\", \"Maleficent\", \"The Three Musketeers\" and \"The Dark Knight Rises\"."
+   ],
+   "model_answer": "Dirty Girl, Cracks, Jack & Diane, Magic Magic, Lovelace, Small Apartments, One Percent More Humid, and Wonder Wheel."
+  },
+  {
+   "id": "bb64825d48e13c3b",
+   "kind": "answer",
+   "question": "what is the job of justice of the peace",
+   "gold_answers": [
+    "a judicial officer, of a lower or puisne court, elected or appointed by means of a commission (letters patent) to keep the peace.",
+    "dispense summary justice",
+    "deal with local administrative applications in common law jurisdictions"
+   ],
+   "model_answer": "Handles minor legal matters and helps keep the peace."
+  },
+  {
+   "id": "08a6d25d3676e7b7",
+   "kind": "answer",
+   "question": "when did they replace lead with graphite in pencils",
+   "gold_answers": [
+    "never contained the element lead"
+   ],
+   "model_answer": "They never did; pencils never contained lead."
+  },
+  {
+   "id": "6c13ecf21a1729dd",
+   "kind": "answer",
+   "question": "what is a real world application of an atwood machine",
+   "gold_answers": [
+    "An elevator with a counterbalance"
+   ],
+   "model_answer": "Elevator counterbalance"
+  },
+  {
+   "id": "a41c0293b159d869",
+   "kind": "answer",
+   "question": "what was the purpose of a revival meeting during the second great awakening",
+   "gold_answers": [
+    "evangelizing"
+   ],
+   "model_answer": "To evangelize and bring people to Christ."
+  },
+  {
+   "id": "701a3fe609b1dde9",
+   "kind": "answer",
+   "question": "who wrote the first declaration of human rights",
+   "gold_answers": [
+    "Cyrus"
+   ],
+   "model_answer": "Cyrus the Great (according to the traditional attribution)"
+  },
+  {
+   "id": "ea4eea1762f11f57",
+   "kind": "answer",
+   "question": "What is the name of the so-called reform opera for Vienna that came before the one first performed in Vienna in the presence of Empress Maria Theresa?",
+   "gold_answers": [
+    "\"Alceste\""
+   ],
+   "model_answer": "None—Orfeo ed Euridice was Gluck’s first reform opera."
+  },
+  {
+   "id": "71bbe79912373d4f",
+   "kind": "answer",
+   "question": "when do the grand magic games start in fairy tail",
+   "gold_answers": [
+    "Crocus, the Flower-Blooming Capital"
+   ],
+   "model_answer": "Three months after Fairy Tail decides to enter."
+  },
+  {
+   "id": "59d949da56173c6e",
+   "kind": "answer",
+   "question": "who wrote the music for the partridge family",
+   "gold_answers": [
+    "The Partridge Family Genre Musical sitcom Created by Bernard Slade Starring Shirley Jones David Cassidy Danny Bonaduce Susan Dey Suzanne Crough Jeremy Gelbwaks Dave Madden Brian Forster Theme music composer Diane Hilderbrand Danny Janssen Wes Farrell Opening theme `` When We 're Singin ' '' ( 1970 -- 71 ) `` C'mon , Get Happy '' ( 1971 -- 74 ) Composer ( s ) George Duning Benny Golson Warren Barker Hugo Montenegro Shorty Rogers Country of origin United States Original language ( s ) English No. of seasons No. of episodes 96 ( list of episodes ) Production Executive producer ( s ) Bob Claver Producer ( s ) William Bickley Paul Junger Witt Dale McRaven Larry Rosen Mel Swope Cinematography Fred Jackman , Jr . Irving Lippman Camera setup Single - camera Running time 25 minutes Production company ( s ) Screen Gems Television ( 1970 -- 1974 ) Distributor Columbia Pictures Television ( 1974 -- 84 ; 1989 -- 96 ) DFS Program Exchange ( 1984 -- 87 ) The Program Exchange ( 1987 -- 89 ) Columbia TriStar Television ( 1996 -- 2002 ) Sony Pictures Television ( 2002 -- present ) Release Original network ABC Audio format Monaural Original release September 25 , 1970 ( 1970 - 09 - 25 ) -- March 23 , 1974 ( 1974 - 03 - 23 ) Chronology Related shows Getting Together Goober and the Ghost Chasers Partridge Family 2200 A.D."
+   ],
+   "model_answer": "Diane Hilderbrand and Danny Janssen"
+  },
+  {
+   "id": "b35fc6b50cf14c60",
+   "kind": "answer",
+   "question": "when is the fourth movie of the divergent series coming out",
+   "gold_answers": [
+    "never made"
+   ],
+   "model_answer": "Never; it was cancelled."
+  },
+  {
+   "id": "fb47f17d9307554a",
+   "kind": "answer",
+   "question": "discuss the impact of devaluation on foreign exchange reserve",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Devaluation may deplete reserves when the central bank sells foreign currency to defend its currency."
+  },
+  {
+   "id": "72f0bd496f704e9d",
+   "kind": "answer",
+   "question": "fitting of rim on a locomotive wheel is done by",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Heating the steel tire to expand it, then fitting it over the wheel centre."
+  },
+  {
+   "id": "7b767a87c8e3e495",
+   "kind": "answer",
+   "question": "positive and negative impacts of internal migration in china",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "More jobs, income, skills and mobility; but low wages, discrimination, hukou-based exclusion from services, and schooling and health challenges."
+  },
+  {
+   "id": "63aa0ced8053530e",
+   "kind": "answer",
+   "question": "who is jessie's girl on breaking bad",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Jane Margolis (Krysten Ritter)"
+  },
+  {
+   "id": "8ff9dc30ac04d96e",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful, culturally recognized human movement; its main kinds are theatrical/performance and participatory/social dance."
+  },
+  {
+   "id": "7beb687c915bcd4c",
+   "kind": "answer",
+   "question": "which of the following was a result of the connecticut compromise",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Equal state representation in the Senate and proportional representation in the House."
+  },
+  {
+   "id": "cf16643569b9ce9c",
+   "kind": "answer",
+   "question": "what purpose did seasonal monsoon winds have on trade",
+   "gold_answers": [
+    "enabled European empire expansion into the Americas and trade routes to become established across the Atlantic and Pacific oceans"
+   ],
+   "model_answer": "They enabled ships to sail predictable trade routes across the oceans."
+  },
+  {
+   "id": "35cda0bad39c7e66",
+   "kind": "answer",
+   "question": "suzanne's story orange is the new black",
+   "gold_answers": [
+    "In episode 3 , `` Hugs Can Be Deceiving '' , Suzanne 's backstory is revealed via a flashback . She was adopted by white parents and raised in the suburbs , but her mental instability alienated her classmates and their parents alike . Her adoptive mother pushed her to excel at everything she did to prove that she was as good as everyone else ; ironically , the constant pressure only made Suzanne 's psychological problems worse . In the same episode , it is revealed that Suzanne had run outside and knocked Chapman unconscious after Chapman had beaten Tiffany `` Pennsatucky '' Doggett ( Taryn Manning ) unconscious at the end of season 1 ."
+   ],
+   "model_answer": "Suzanne “Crazy Eyes” Warren is an intelligent but socially awkward inmate serving time after accidentally causing a child’s death. At Litchfield, she seeks affection, becomes devoted to Vee, writes stories, and struggles with her mental health."
+  },
+  {
+   "id": "4567bcbc8fc21a5f",
+   "kind": "answer",
+   "question": "where are located the acetabulum and the glenoid cavities",
+   "gold_answers": [
+    "Compared to the acetabulum ( at the hip - joint ) the glenoid cavity is relatively shallow . This makes the shoulder joint prone to dislocation ( luxation ) . Strong glenohumeral ligaments and muscles prevents dislocation in most cases ."
+   ],
+   "model_answer": "The acetabulum is at the hip; the glenoid cavity is on the lateral angle of the scapula."
+  },
+  {
+   "id": "2f88a7bd6f0305c4",
+   "kind": "answer",
+   "question": "Between two bands, Mastodon and Hole, which one has more members?",
+   "gold_answers": [
+    "Mastodon"
+   ],
+   "model_answer": "Hole (band)"
+  },
+  {
+   "id": "443ee4148f01acec",
+   "kind": "answer",
+   "question": "head over boots for you by jon pardi",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "“Head Over Boots” is a 2015 country single by Jon Pardi."
+  },
+  {
+   "id": "80792c9902fb9f76",
+   "kind": "answer",
+   "question": "what causes cracked skin at the corners of your mouth",
+   "gold_answers": [
+    "infection",
+    "irritation",
+    "allergies"
+   ],
+   "model_answer": "Angular cheilitis, often caused by saliva irritation or fungal or bacterial infection."
+  },
+  {
+   "id": "adbc5c474a33475b",
+   "kind": "answer",
+   "question": "what is the share of agriculture in indian economy",
+   "gold_answers": [
+    "17.32%",
+    "23%"
+   ],
+   "model_answer": "About 16% of GDP (2011)"
+  },
+  {
+   "id": "afdd0c1b938edb14",
+   "kind": "answer",
+   "question": "what is the sentencing reform act of 1984",
+   "gold_answers": [
+    "U.S. federal statute intended to increase consistency in United States federal sentencing",
+    "a U.S. federal statute intended to increase consistency in United States federal sentencing"
+   ],
+   "model_answer": "A U.S. federal law aimed at making sentencing more consistent, establishing the Sentencing Commission and abolishing federal parole."
+  },
+  {
+   "id": "72154ca7edf69808",
+   "kind": "answer",
+   "question": "Kresy, which roughly was a part of the land beyond the so-called Curson Line, was drawn for what reason?",
+   "gold_answers": [
+    "demarcation line between the newly emerging states, the Second Polish Republic, and the Soviet Union"
+   ],
+   "model_answer": "To demarcate the border between the Second Polish Republic and the Soviet Union."
+  },
+  {
+   "id": "5d72a6443b1c41d1",
+   "kind": "answer",
+   "question": "when do law students take the bar exam",
+   "gold_answers": [
+    "Each state controls where it administers its bar exam . Because the MBE ( below ) is a standardized test , it must be administered on the same day across the country . That day occurs twice a year as the last Wednesday in July and the last Wednesday in February . Two states , Delaware and North Dakota , may administer their bar exams only once , in July , if they do not have enough applicants to merit a second sitting . North Dakota requires ten applicants in order to administer the February exam . Most bar exams are administered on consecutive days . Louisiana is the exception , with the Louisiana Bar Exam being a three - day examination on Monday , Wednesday and Friday . Also , Louisiana 's examination is the longest in the country in terms of examination time , with seven hours on Monday and Wednesday and seven and one half hours on Friday for a total of 21.5 hours of testing . Montana 's bar examination also occurs over a three - day period , with a total of 18 hours of testing . The bar exams in Delaware , Nevada , Ohio , South Carolina , and Texas are also three days long . The California bar exam moved to a two - day format beginning with the July , 2017 exam .",
+    "To refresh their memory on `` black - letter rules '' tested on the bar , most students engage in a regimen of study ( called `` bar review '' ) between graduating from law school and sitting for the bar . For bar review , most students in the United States attend a private bar review course which is provided by a third - party company and not their law school ."
+   ],
+   "model_answer": "After law school graduation, either before, during, or after articling, depending on the jurisdiction."
+  },
+  {
+   "id": "057cdae46cefa9e3",
+   "kind": "answer",
+   "question": "who is the richest club in the championship",
+   "gold_answers": [
+    "Manchester City",
+    "Aston Villa"
+   ],
+   "model_answer": "Fulham F.C."
+  },
+  {
+   "id": "dd7a1b1c0ca6c19f",
+   "kind": "answer",
+   "question": "meaning of lyrics to wade in the water",
+   "gold_answers": [
+    "The song relates to both the Old and New Testaments . The verses reflect the Israelites ' escape out of Egypt as found in Exodus 14 . The chorus refers to healing : see John 5 : 4 , `` For an angel went down at a certain season into the pool , and troubled the water : whosoever then first after the troubling of the water stepped in was made whole of whatsoever disease he had . ''"
+   ],
+   "model_answer": "The verses reflect the Israelites’ escape from Egypt, and the chorus refers to healing through troubled water."
+  },
+  {
+   "id": "7f888ced80c3ba78",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Russ & Paola, Kirlyam & Alan, Aya & Louis, and Aziza & Mike were all still together as of 2017."
+  },
+  {
+   "id": "eb1e6f704601edb2",
+   "kind": "answer",
+   "question": "where have the good guys gone to hideaway",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The jail\n"
+  },
+  {
+   "id": "eda601568932c268",
+   "kind": "answer",
+   "question": "who said if a tree falls in the woods and nobody hears it",
+   "gold_answers": [
+    "Charles Riborg Mann",
+    "George Ransom Twiss",
+    "Charles Riborg Mann and George Ransom Twiss",
+    "Philosopher George Berkeley"
+   ],
+   "model_answer": "Its source is unknown."
+  },
+  {
+   "id": "a3a29dd84a010a38",
+   "kind": "answer",
+   "question": "explain how an operating system talks to hardware",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Through device drivers, which let the operating system’s kernel communicate with hardware."
+  },
+  {
+   "id": "fcb50a2042d94241",
+   "kind": "answer",
+   "question": "90 day fiance 1st season where are they now",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "As of 2017, all four Season 1 couples—Russ and Pao, Alan and Kirlyam, Louis and Aya, and Mike and Aziza—were still together."
+  },
+  {
+   "id": "f6b59926ec6839fa",
+   "kind": "answer",
+   "question": "how has australia been influenced by other cultures",
+   "gold_answers": [
+    "The culture of Australia is a Western culture , derived primarily from Britain but also influenced by the unique geography of Australia , the diverse input of Aboriginal , Torres Strait Islander and other Australian people . The British colonization of Australia began in 1788 , and waves of multi-ethnic migration followed . Evidence of a significant Anglo - Celtic heritage includes the predominance of the English language , the existence of a democratic system of government drawing upon the British traditions of Westminster Government , Parliamentarianism and constitutional monarchy , American constitutionalist and federalist traditions , Christianity as the dominant religion , and the popularity of sports originating in ( or influenced by ) the British Isles . Australian culture has diverged significantly since British settlement ."
+   ],
+   "model_answer": "Through immigration, which has diversified Australian cuisine, arts, humour, and sports."
+  },
+  {
+   "id": "0543a75af22ab48f",
+   "kind": "answer",
+   "question": "what is the weight of a honda fit",
+   "gold_answers": [
+    "1,020–1,080 kg"
+   ],
+   "model_answer": "1,020–1,170 kg, depending on model and configuration"
+  },
+  {
+   "id": "5613dde3c962c9bd",
+   "kind": "answer",
+   "question": "the first european town in the present-day united states was new orleans",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No—New Orleans was founded in 1718."
+  },
+  {
+   "id": "fa0f83a18ad10fae",
+   "kind": "answer",
+   "question": "Suicide's 1977 released album features a song based on what brand's comic character?",
+   "gold_answers": [
+    "Marvel"
+   ],
+   "model_answer": "Marvel Comics' Ghost Rider\n"
+  },
+  {
+   "id": "c5c6f4aee3d06883",
+   "kind": "answer",
+   "question": "why does prince edward island have red sand",
+   "gold_answers": [
+    "sedimentary rock and other material with a high iron concentration which oxidizes upon exposure to the air"
+   ],
+   "model_answer": "Iron-rich sediments oxidize when exposed to air."
+  },
+  {
+   "id": "c9cbb1c5974cf2fb",
+   "kind": "answer",
+   "question": "was nightmare before christmas originally a disney movie",
+   "gold_answers": [
+    "yes"
+   ],
+   "model_answer": "Yes—produced by Disney, but originally released under its Touchstone Pictures label."
+  },
+  {
+   "id": "3fbfab13e6e59add",
+   "kind": "answer",
+   "question": "what events occurred in the fighting at seas and near the great lakes",
+   "gold_answers": [
+    "The Battle of Lake Erie , sometimes called the Battle of Put - in - Bay , was fought on 10 September 1813 , in Lake Erie off the coast of Ohio during the War of 1812 . Nine vessels of the United States Navy defeated and captured six vessels of the British Royal Navy . This ensured American control of the lake for the rest of the war , which in turn allowed the Americans to recover Detroit and win the Battle of the Thames to break the Indian confederation of Tecumseh . It was one of the biggest naval battles of the War of 1812 ."
+   ],
+   "model_answer": "Naval battles and captures across the Atlantic and Great Lakes, including the Battle of Lake Erie."
+  },
+  {
+   "id": "e80212c134cc2c1b",
+   "kind": "answer",
+   "question": "what is the significance of the sahara desert",
+   "gold_answers": [
+    "the largest hot desert and the third largest desert in the world after Antarctica and the Arctic",
+    "the largest hot desert",
+    "the third largest desert in the world after Antarctica and the Arctic"
+   ],
+   "model_answer": "The world’s largest hot desert and a major geographic and historical region of North Africa."
+  },
+  {
+   "id": "460e23647a90760b",
+   "kind": "answer",
+   "question": "who is rose in the fall season 2",
+   "gold_answers": [
+    "a woman who had a sexual relationship with Paul whilst at university",
+    "Valene Kane"
+   ],
+   "model_answer": "Rose Stagg, kidnapped and held captive by Paul Spector."
+  },
+  {
+   "id": "e628f529c5b70bea",
+   "kind": "answer",
+   "question": "what are the kinds of dance and its definition",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Dance is purposeful, expressive human movement; its main kinds are theatrical (performance) and participatory (social) dance."
+  },
+  {
+   "id": "5898c2e858deed4f",
+   "kind": "answer",
+   "question": "when does karev die in grey's anatomy",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "He doesn’t die."
+  },
+  {
+   "id": "5765f146dd7c6cdb",
+   "kind": "answer",
+   "question": "where is most vascular tissue found in plants",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "Throughout the plant’s roots, stems, and leaves"
+  },
+  {
+   "id": "a5339204fb447dde",
+   "kind": "answer",
+   "question": "Migene González-Wippler is leading expert on a religion that developed among which ethnic group ?",
+   "gold_answers": [
+    "West African descendants"
+   ],
+   "model_answer": "West African descendants in the Spanish Empire\n"
+  },
+  {
+   "id": "9c6dc2cdb3880cd1",
+   "kind": "answer",
+   "question": "how do you think south africa compared with singapore",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "South Africa is larger and more populous; Singapore is far more densely populated."
+  },
+  {
+   "id": "a8c5d1c569aa95c6",
+   "kind": "answer",
+   "question": "what caused the breakup of the democratic republican party",
+   "gold_answers": [
+    "the disputed 1824 presidential election"
+   ],
+   "model_answer": "The disputed 1824 election and divisions over federal power and economic modernization."
+  },
+  {
+   "id": "a3210d327e4cf6fd",
+   "kind": "answer",
+   "question": "turkish finnish and hungarian belong to which family of languages",
+   "gold_answers": [
+    "Uralic languages"
+   ],
+   "model_answer": "No accepted common language family."
+  },
+  {
+   "id": "cee716a43cea3de8",
+   "kind": "answer",
+   "question": "where was uncle tom's cabin first published",
+   "gold_answers": [
+    "in The National Era, an abolitionist periodical, starting with the June 5, 1851, issue",
+    "The National Era",
+    "The National Era, an abolitionist periodical"
+   ],
+   "model_answer": "The National Era 񟿿"
+  },
+  {
+   "id": "18000d52e804fea5",
+   "kind": "answer",
+   "question": "where did the easter eggs and bunny come from",
+   "gold_answers": [
+    "No answer"
+   ],
+   "model_answer": "The Easter Bunny originated among German Lutherans; Easter eggs stem from ancient fertility symbols and European traditions."
+  },
+  {
+   "id": "b0d00da2896f7f4c",
+   "kind": "answer",
+   "question": "Migene González-Wippler is leading expert on a religion that developed among which ethnic group ?",
+   "gold_answers": [
+    "West African descendants"
+   ],
+   "model_answer": "West African descendants of the Caribbean\n"
+  },
+  {
+   "id": "98940b20e52c4e01",
+   "kind": "answer",
+   "question": "where is the north pole on the world map",
+   "gold_answers": [
+    "90°N 0°W﻿ / ﻿90°N -0°E",
+    "latitude 90° North"
+   ],
+   "model_answer": "At 90° North, in the Arctic Ocean."
+  }
+ ],
+ "evidence": []
+}
