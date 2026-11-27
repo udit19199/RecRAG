@@ -79,9 +79,11 @@ yes = {}
 for r in rows(mh):
     if r["record_id"] not in qs or r["question_type"] not in ("comparison_query", "temporal_query"):
         continue
-    t = yes.setdefault(r["question_type"], {"n": 0, "right": 0})
+    t = yes.setdefault(r["question_type"], {"n": 0, "right": 0, "yes_or_no": 0})
+    g = [normalize_answer(a) for a in gold(r)]
     t["n"] += 1
-    t["right"] += normalize_answer("Yes") in [normalize_answer(a) for a in gold(r)]
+    t["right"] += normalize_answer("Yes") in g
+    t["yes_or_no"] += bool({normalize_answer("Yes"), normalize_answer("No")} & set(g))
 for t in yes.values():
     t["pct"] = round(100 * t["right"] / t["n"], 1)
 

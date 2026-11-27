@@ -64,11 +64,13 @@
   "comparison_query": {
    "n": 125,
    "right": 78,
+   "yes_or_no": 121,
    "pct": 62.4
   },
   "temporal_query": {
    "n": 125,
    "right": 60,
+   "yes_or_no": 112,
    "pct": 48.0
   }
  }

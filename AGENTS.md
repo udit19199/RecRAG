@@ -65,8 +65,10 @@ can be deleted; run results in `runs/` are committed.
   separate confusion-matrix slide.
 - No cost or latency slides: Udit removed them on 2026-11-25 because the runs'
   timings came from different days, machines and concurrency, so they did not
-  compare fairly. Cost and latency stay in the run data
-  (`runs/selection/paired/cost.json`).
+  compare fairly. Latency stays in the run data (`runs/selection/paired/cost.json`).
+  Tokens, model calls and list price per question do not depend on timing: one line
+  of them sits on "What we found" (27 Nov audit, Udit approved), from
+  `runs/judge_paper/paper_numbers.json` (median tokens; graph build not counted).
 - When you need a past result, look in the scene first, then in `runs/`.
 - Before deleting run folders, check that their results are already in the
   scene.
@@ -122,24 +124,30 @@ Content:
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
   dates or a timeline. Plain words a non-specialist can follow; explain any
   technical term you keep. Exact prompts stay word for word.
-- Order (2026-11-25): 01-02 how Agentic Hybrid RAG works, 03-04 its prompts,
-  05 how answers are judged, 06-07 judge prompts. Then what was already
-  discussed: 08 what changed between the runs, 09 question 747, 10 why the
-  previous run's repeats were far apart (`runs/final500/repeat_variation/`),
-  11 the 100 questions per type both runs answered and the 25 new ones (only
-  the 100 compare the runs), 12 inference + null, 13 HotpotQA + Natural
-  Questions, 14 HotpotQA + Natural Questions: more chunks. The main flow
-  starts at 15 comparison + temporal, then 16 is it
-  the graph (`runs/nograph/`), 17 is it the picking, 18 more chunks, 19
-  chunk order, 20 answer
-  changes, 21 guessing, 22 made-up answers, 23 Neo4j vs Milvus, 24 what we
-  found (the conclusion), 25 next phase.
+- Order (2026-11-27, answer first, for the Labs VP audience; replaces the 25 Nov
+  order): 01-02 how Agentic Hybrid RAG works, 03 the short answer (three lines, no
+  numbers; the numbers live on 17), 04 how answers are judged. Main flow: 05
+  comparison + temporal, 06 is it the graph (`runs/nograph/`), 07 is it the
+  picking, 08 more chunks, 09 chunk order, 10 answer changes, 11 guessing, 12
+  made-up answers, 13 Neo4j vs Milvus, 14 inference + null, 15 HotpotQA +
+  Natural Questions, 16 HotpotQA + Natural Questions: more chunks, 17 what we
+  found (ends with the "For HPE" do-this line). Detail after the conclusion:
+  18-19 agent prompts, 20-21 judge prompts, 22 what changed between the runs,
+  23 question 747, 24 why the previous run's repeats were far apart
+  (`runs/final500/repeat_variation/`), 25 the 100 questions per type both runs
+  answered and the 25 new ones. 26 next phase, titled as separate work.
+- A bar from a single repeat says "1 repeat" under its value (`bars(...,
+  mark1=True)` in `story_slides.py`).
+- Slide 11 (guessing): "No chunks (refuses)", the yes/no share of gold answers
+  (121 and 112 of 125, `review_checks.json` `yes_or_no`), and the top-50 table
+  labelled "majority of 3 repeats".
 - "LLM picks 10 of 50/100" is not shown and not run again: Udit, 2026-11-26.
 - Natural Questions answered right: "Insufficient Information" counts as right when the gold
   answer is "No answer" (142 of 500), on every slide (Udit, 2026-11-27;
   `runs/final500/scripts/report.py`, `runs/selection/paired/review_checks.py`).
-- Slide 21 shows always "Yes" (62.4 comparison, 48.0 temporal) beside the floor bars, and
-  slide 24 states it: answering "Yes" every time beats Normal RAG on comparison.
+- The guessing slide shows always "Yes" (62.4 comparison, 48.0 temporal) beside the floor
+  bars, and "What we found" states it: answering "Yes" every time beats Normal RAG on
+  comparison.
 - Graph claims are about our graph as built ("Our graph, as built, adds nothing"), not graphs
   in general; top K claims say the agent sends 10.
   Its data stays in `runs/selection/`.
@@ -182,6 +190,9 @@ Helpers in `~/Workspace/local/hpe-diagrams/` (outside the repo):
   (`PROMPT_SLIDES`); its `check` confirms it still matches the sources.
 - `fill_slides.py s01|s06|s16`: slide 01's previous-run row, the judging rows
   on 05 and the next-phase table. `repeat_slide.py build`: slide 11.
+- `rework.py short|found3|strip08|strip12|strip23`: slide 03 (short answer), slide 17
+  (what we found) and the subtitle removals (names keep the pre-27 Nov numbers).
+  `story_slides.py dschunks|sorder|guessing|chunks` build slides 16, 09, 11, 08.
 - Fill each slide: no large empty band at the bottom or beside a column.
 - Text slides: headings do the work, one short line per point, no filled
   coloured cards (neutral greys; orange/blue only as thin run markers), each
