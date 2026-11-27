@@ -55,7 +55,8 @@ def qmean(k, qt):
 
 
 PAIRS = [("AGENT_FILL100", "B4_100"), ("AGENT_FILL100", "graphrag"), ("FORCED_TOP10", "rag"),
-         ("FORCED_CLOSED", "CLOSED"), ("FORCED_TOP10", "FORCED_CLOSED")]
+         ("FORCED_CLOSED", "CLOSED"), ("FORCED_TOP10", "FORCED_CLOSED"),
+         ("B4_100", "FORCED_CLOSED"), ("graphrag", "FORCED_CLOSED"), ("AGENT_FILL100", "FORCED_CLOSED")]
 for a, b in PAIRS:
     for qt in CT:
         A, B = qmean(a, qt), qmean(b, qt)
