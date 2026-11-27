@@ -149,7 +149,7 @@ ORDERS = "B4+B4_rev+B4_shuf"
 PAIRS += [("B2", "B4_rev"), ("B2", "B4_shuf"), ("B2", ORDERS)]
 if "B4_100" in methods:
     PAIRS += [("B4_100", "B4"), ("B4_100", "B2"), ("B4_100", "graphrag")]
-PAIRS += [("graphrag", "rag"), ("nograph", "rag")]  # paper (27 Nov 2026)
+PAIRS += [("graphrag", "rag"), ("nograph", "rag"), ("graphrag", "A2_graph_top10"), ("graphrag", "B1")]  # paper (27 Nov 2026)
 if "B4_200" in methods:
     PAIRS += [("B4_200", "B4_100"), ("B4_200", "B2"), ("B4_200", "graphrag")]
 if "B2_100" in methods:
@@ -255,7 +255,7 @@ for m in ("B4", "B2"):
 say()
 say("How answers change: Normal RAG answer -> other setup answer, same question and repeat number (all 3 repeats pooled, out of 375)")
 out["transition"] = {}
-for tgt in ("B2", "B4"):
+for tgt in ("B2", "B4", "B4_100", "B4_200", "graphrag"):  # last three: paper (27 Nov 2026)
     for qt in TYPES:
         c = Counter()
         for rep in "123":

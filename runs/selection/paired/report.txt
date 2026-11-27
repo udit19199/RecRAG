@@ -45,6 +45,10 @@ CHECK 1 and 6: paired differences (A minus B), answered right, points; 2x2 by ma
   graphrag vs rag      temp: diff +28.8 (95% +21.3 to +36.5)  both 56 only-graphrag 41 only-rag 3 neither 25  sign-test p=0.00
    nograph vs rag      comp: diff +18.4 (95% +11.7 to +25.6)  both 64 only-nograph 27 only-rag 2 neither 32  sign-test p=0.00
    nograph vs rag      temp: diff +27.2 (95% +19.7 to +34.9)  both 55 only-nograph 39 only-rag 4 neither 27  sign-test p=0.00
+  graphrag vs A2_graph_top10 comp: diff +14.1 (95% +9.1 to +19.5)  both 66 only-graphrag 19 only-A2_graph_top10 5 neither 35  sign-test p=0.01
+  graphrag vs A2_graph_top10 temp: diff +9.6 (95% +4.0 to +15.5)  both 79 only-graphrag 18 only-A2_graph_top10 5 neither 23  sign-test p=0.01
+  graphrag vs B1       comp: diff +10.7 (95% +2.9 to +18.4)  both 63 only-graphrag 22 only-B1 13 neither 27  sign-test p=0.18
+  graphrag vs B1       temp: diff +13.9 (95% +6.4 to +21.6)  both 71 only-graphrag 26 only-B1 8 neither 20  sign-test p=0.00
     B4_200 vs B4_100   comp: diff +3.2 (95% -1.1 to +7.7)  both 102 only-B4_200 6 only-B4_100 4 neither 13  sign-test p=0.75
     B4_200 vs B4_100   temp: diff +0.5 (95% -2.9 to +4.0)  both 102 only-B4_200 6 only-B4_100 3 neither 14  sign-test p=0.51
     B4_200 vs B2       comp: diff +5.9 (95% -0.8 to +12.8)  both 94 only-B4_200 14 only-B2 6 neither 11  sign-test p=0.12
@@ -329,6 +333,12 @@ How answers change: Normal RAG answer -> other setup answer, same question and r
   rag->B2 temp right->right:170  right->insufficient:5  right->wrong:4  insufficient->right:104  insufficient->insufficient:44  insufficient->wrong:18  wrong->right:15  wrong->insufficient:0  wrong->wrong:15
   rag->B4 comp right->right:189  right->insufficient:0  right->wrong:5  insufficient->right:72  insufficient->insufficient:8  insufficient->wrong:39  wrong->right:25  wrong->insufficient:3  wrong->wrong:34
   rag->B4 temp right->right:168  right->insufficient:0  right->wrong:11  insufficient->right:95  insufficient->insufficient:51  insufficient->wrong:20  wrong->right:12  wrong->insufficient:1  wrong->wrong:17
+  rag->B4_100 comp right->right:185  right->insufficient:1  right->wrong:8  insufficient->right:85  insufficient->insufficient:1  insufficient->wrong:33  wrong->right:40  wrong->insufficient:1  wrong->wrong:21
+  rag->B4_100 temp right->right:170  right->insufficient:1  right->wrong:8  insufficient->right:135  insufficient->insufficient:14  insufficient->wrong:17  wrong->right:13  wrong->insufficient:1  wrong->wrong:16
+  rag->B4_200 comp right->right:185  right->insufficient:1  right->wrong:8  insufficient->right:95  insufficient->insufficient:0  insufficient->wrong:24  wrong->right:42  wrong->insufficient:0  wrong->wrong:20
+  rag->B4_200 temp right->right:172  right->insufficient:0  right->wrong:7  insufficient->right:133  insufficient->insufficient:9  insufficient->wrong:24  wrong->right:15  wrong->insufficient:0  wrong->wrong:15
+  rag->graphrag comp right->right:174  right->insufficient:9  right->wrong:11  insufficient->right:65  insufficient->insufficient:22  insufficient->wrong:32  wrong->right:25  wrong->insufficient:3  wrong->wrong:34
+  rag->graphrag temp right->right:169  right->insufficient:1  right->wrong:9  insufficient->right:104  insufficient->insufficient:42  insufficient->wrong:20  wrong->right:14  wrong->insufficient:0  wrong->wrong:16
 
 CHECK 4: does a question whose Normal RAG top 50 lacks gold still get answered right? (text match, every setup)
   comp: complete 84, incomplete 41; yes/no gold answers: 121 of 125 overall, 41 of the 41 incomplete

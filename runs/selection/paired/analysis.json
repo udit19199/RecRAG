@@ -598,6 +598,58 @@
    "neither": 27,
    "sign_test_p": 3.1081526685738936e-08
   },
+  "graphrag vs A2_graph_top10 comparison_query": {
+   "questions": 125,
+   "mean_diff_points": 14.133333333333335,
+   "ci95": [
+    9.066666666666666,
+    19.466666666666665
+   ],
+   "both_right": 66,
+   "only_a": 19,
+   "only_b": 5,
+   "neither": 35,
+   "sign_test_p": 0.006610751152038574
+  },
+  "graphrag vs A2_graph_top10 temporal_query": {
+   "questions": 125,
+   "mean_diff_points": 9.6,
+   "ci95": [
+    4.000000000000001,
+    15.466666666666667
+   ],
+   "both_right": 79,
+   "only_a": 18,
+   "only_b": 5,
+   "neither": 23,
+   "sign_test_p": 0.010622024536132812
+  },
+  "graphrag vs B1 comparison_query": {
+   "questions": 125,
+   "mean_diff_points": 10.666666666666666,
+   "ci95": [
+    2.9333333333333322,
+    18.4
+   ],
+   "both_right": 63,
+   "only_a": 22,
+   "only_b": 13,
+   "neither": 27,
+   "sign_test_p": 0.17546524899080396
+  },
+  "graphrag vs B1 temporal_query": {
+   "questions": 125,
+   "mean_diff_points": 13.866666666666665,
+   "ci95": [
+    6.4,
+    21.6
+   ],
+   "both_right": 71,
+   "only_a": 26,
+   "only_b": 8,
+   "neither": 20,
+   "sign_test_p": 0.0029350556433200836
+  },
   "B4_200 vs B4_100 comparison_query": {
    "questions": 125,
    "mean_diff_points": 3.2,
@@ -2163,6 +2215,72 @@
    "wrong->right": 12,
    "wrong->insufficient": 1,
    "wrong->wrong": 17
+  },
+  "rag->B4_100 comparison_query": {
+   "right->right": 185,
+   "right->insufficient": 1,
+   "right->wrong": 8,
+   "insufficient->right": 85,
+   "insufficient->insufficient": 1,
+   "insufficient->wrong": 33,
+   "wrong->right": 40,
+   "wrong->insufficient": 1,
+   "wrong->wrong": 21
+  },
+  "rag->B4_100 temporal_query": {
+   "right->right": 170,
+   "right->insufficient": 1,
+   "right->wrong": 8,
+   "insufficient->right": 135,
+   "insufficient->insufficient": 14,
+   "insufficient->wrong": 17,
+   "wrong->right": 13,
+   "wrong->insufficient": 1,
+   "wrong->wrong": 16
+  },
+  "rag->B4_200 comparison_query": {
+   "right->right": 185,
+   "right->insufficient": 1,
+   "right->wrong": 8,
+   "insufficient->right": 95,
+   "insufficient->insufficient": 0,
+   "insufficient->wrong": 24,
+   "wrong->right": 42,
+   "wrong->insufficient": 0,
+   "wrong->wrong": 20
+  },
+  "rag->B4_200 temporal_query": {
+   "right->right": 172,
+   "right->insufficient": 0,
+   "right->wrong": 7,
+   "insufficient->right": 133,
+   "insufficient->insufficient": 9,
+   "insufficient->wrong": 24,
+   "wrong->right": 15,
+   "wrong->insufficient": 0,
+   "wrong->wrong": 15
+  },
+  "rag->graphrag comparison_query": {
+   "right->right": 174,
+   "right->insufficient": 9,
+   "right->wrong": 11,
+   "insufficient->right": 65,
+   "insufficient->insufficient": 22,
+   "insufficient->wrong": 32,
+   "wrong->right": 25,
+   "wrong->insufficient": 3,
+   "wrong->wrong": 34
+  },
+  "rag->graphrag temporal_query": {
+   "right->right": 169,
+   "right->insufficient": 1,
+   "right->wrong": 9,
+   "insufficient->right": 104,
+   "insufficient->insufficient": 42,
+   "insufficient->wrong": 20,
+   "wrong->right": 14,
+   "wrong->insufficient": 0,
+   "wrong->wrong": 16
   }
  },
  "incomplete": {

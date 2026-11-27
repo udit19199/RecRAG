@@ -78,10 +78,10 @@ QS = {f"multihop-rag-{i}" for i in json.load(open("runs/nograph/questions.json")
 final = json.load(open("runs/final500/run_registry.json"))["multihop_rag"]
 REG = {"rag": final["rag"], "graphrag": final["graphrag"]}
 REG.update({k: v for k, v in json.load(open("runs/judge_paper/runs.json")).items()
-            if k in ("B4", "B4_100", "B4_200", "B4_20", "B4_30")})
+            if k in ("B4", "B4_100", "B4_200", "B4_20", "B4_30", "B1", "A2_graph_top10")})
 REG["nograph"] = json.load(open("runs/nograph/run_registry.json"))  # {"1": [...], ...}
 for m, reps in REG.items():
-    tok, calls = [], []
+    tok, calls, usd = [], [], []
     for rep in "123":
         for d in reps.get(rep, []):
             p = loc(d) / "results.jsonl"
@@ -95,9 +95,11 @@ for m, reps in REG.items():
                 u = ast.literal_eval(u) if isinstance(u, str) else u
                 tok.append(sum(x.get("total_tokens", 0) for x in u))
                 calls.append(len(u))
+                usd.append(float(r["list_question_cost_usd"]))
     if tok:
         out["tokens"][m] = {"answers": len(tok), "median_tokens": median(tok), "mean_tokens": round(mean(tok)),
-                            "mean_model_calls": round(mean(calls), 2)}
+                            "mean_model_calls": round(mean(calls), 2),
+                            "list_usd_per_1000": round(1000 * mean(usd), 2)}
 
 OUT.write_text(json.dumps(out, indent=1))
 print(json.dumps({"tokens": out["tokens"], "cost": out["cost_per_1000_list_usd"]}, indent=1))

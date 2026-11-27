@@ -3370,6 +3370,38 @@
    ],
    "questions": 125
   },
+  "graphrag vs A2_graph_top10 comparison_query": {
+   "mean_diff": 14.1,
+   "ci95": [
+    9.1,
+    19.5
+   ],
+   "questions": 125
+  },
+  "graphrag vs A2_graph_top10 temporal_query": {
+   "mean_diff": 9.6,
+   "ci95": [
+    4.0,
+    15.5
+   ],
+   "questions": 125
+  },
+  "graphrag vs B1 comparison_query": {
+   "mean_diff": 10.7,
+   "ci95": [
+    2.9,
+    18.4
+   ],
+   "questions": 125
+  },
+  "graphrag vs B1 temporal_query": {
+   "mean_diff": 13.9,
+   "ci95": [
+    6.4,
+    21.6
+   ],
+   "questions": 125
+  },
   "B4_200 vs B4_100 comparison_query": {
    "mean_diff": 3.2,
    "ci95": [
@@ -3702,49 +3734,71 @@
    "answers": 750,
    "median_tokens": 2548.0,
    "mean_tokens": 2545,
-   "mean_model_calls": 1
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 0.29
   },
   "graphrag": {
    "answers": 750,
    "median_tokens": 28512.0,
    "mean_tokens": 29076,
-   "mean_model_calls": 5.96
+   "mean_model_calls": 5.96,
+   "list_usd_per_1000": 3.82
+  },
+  "A2_graph_top10": {
+   "answers": 750,
+   "median_tokens": 28543.5,
+   "mean_tokens": 29090,
+   "mean_model_calls": 5.96,
+   "list_usd_per_1000": 3.82
+  },
+  "B1": {
+   "answers": 750,
+   "median_tokens": 2570.0,
+   "mean_tokens": 2572,
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 0.29
   },
   "B4_20": {
    "answers": 750,
    "median_tokens": 4797.0,
    "mean_tokens": 4782,
-   "mean_model_calls": 1
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 0.52
   },
   "B4_30": {
    "answers": 750,
    "median_tokens": 7044.0,
    "mean_tokens": 7030,
-   "mean_model_calls": 1
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 0.74
   },
   "B4": {
    "answers": 750,
    "median_tokens": 11515.5,
    "mean_tokens": 11484,
-   "mean_model_calls": 1
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 1.19
   },
   "B4_100": {
    "answers": 750,
    "median_tokens": 22677.0,
    "mean_tokens": 22641,
-   "mean_model_calls": 1
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 2.3
   },
   "B4_200": {
    "answers": 750,
    "median_tokens": 44929.0,
    "mean_tokens": 44907,
-   "mean_model_calls": 1
+   "mean_model_calls": 1,
+   "list_usd_per_1000": 4.53
   },
   "nograph": {
    "answers": 750,
    "median_tokens": 12667.0,
    "mean_tokens": 16597,
-   "mean_model_calls": 4.32
+   "mean_model_calls": 4.32,
+   "list_usd_per_1000": 1.83
   }
  },
  "review_checks": {
