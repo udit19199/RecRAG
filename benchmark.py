@@ -113,6 +113,19 @@ NEWS_QA_INSTRUCTION = (
     " 2. If the question cannot be answered with the provided context, respond ONLY with 'Insufficient Information'."
     " 3. For binary questions (e.g., those starting with 'Does', 'Was', 'Is', etc.), respond ONLY with 'Yes' or 'No'."
 )
+# Forced-answer control (runs/selection/SPEC.md, 27 Nov 2026): NEWS_QA_INSTRUCTION with rule 2
+# replaced, so the model may not answer 'Insufficient Information'. Used only when
+# RECRAG_FORCED_ANSWER=1.
+NEWS_QA_FORCED_INSTRUCTION = (
+    "You are an AI assistant that answers questions using the provided context. "
+    "Always base your answers strictly on the given context and provide clear, concise, and accurate responses."
+    " Follow these rules when answering:"
+    " 1. If the question requires inference (e.g., identifying an entity, extracting information, or summarizing context), "
+    "provide the answer as the relevant entity or a short phrase."
+    " 2. Always give an answer. Never respond 'Insufficient Information'; if the context does not settle the question, "
+    "give your best answer."
+    " 3. For binary questions (e.g., those starting with 'Does', 'Was', 'Is', etc.), respond ONLY with 'Yes' or 'No'."
+)
 NOVELQA_QA_INSTRUCTION = (
     "Answer only from the provided context. If the question lists options, "
     "return only the letter of the best option. Otherwise, give a short answer."
@@ -718,7 +731,9 @@ def answer_saved(retrieval_path: Path) -> Path:
                             [
                                 Message(
                                     role="system",
-                                    content=NEWS_QA_INSTRUCTION
+                                    content=(NEWS_QA_FORCED_INSTRUCTION
+                                             if os.environ.get("RECRAG_FORCED_ANSWER") == "1"
+                                             else NEWS_QA_INSTRUCTION)
                                     if dataset == "multihop_rag"
                                     else NOVELQA_QA_INSTRUCTION
                                     if dataset == "novelqa"

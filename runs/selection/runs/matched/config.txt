@@ -1,0 +1,35 @@
+AGENT_FILL100 passages: 100
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+AGENT_FILL100 passages: 100
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+AGENT_FILL100 passages: 100
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+FORCED_CLOSED passages: 0
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+FORCED_CLOSED passages: 0
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+FORCED_CLOSED passages: 0
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+FORCED_TOP10 passages: 10
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+FORCED_TOP10 passages: 10
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+FORCED_TOP10 passages: 10
+questions: 250  types: {'comparison_query': 125, 'temporal_query': 125}
+repeats: 3
+answer model: gpt-6-luna
+reasoning effort: medium
+forced prompt env: RECRAG_FORCED_ANSWER=1
+question set: runs/nograph/questions.json comparison_query + temporal_query
+service tier: default
+where: Instabox VM, runs/selection/scripts/vm_matched.sh, 3 lanes in parallel
+scoring: answered right (exact match, then Claude Haiku answer judge); no gold-facts judging
+compare with: B4_100 (top 100 straight), rag (Normal RAG top 10), CLOSED

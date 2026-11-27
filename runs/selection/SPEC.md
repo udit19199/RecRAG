@@ -203,3 +203,15 @@ runs/selection/paired/review_checks.py (no model calls; saved answers and Haiku 
 
 Always "Yes" on the 250 MultiHop-RAG comparison + temporal questions: comparison 78 of 125
 (62.4), temporal 60 of 125 (48.0). Shown on slide 21.
+
+## Matched-budget agent and forced-answer controls (27 Nov 2026)
+
+Spec, inputs and outputs: runs/selection/runs/matched/ (SPEC.md there). Built by
+scripts/matched_prep.py (no model calls), answered on the VM by scripts/vm_matched.sh.
+- AGENT_FILL100: the agent's 10 items as sent (Agentic Hybrid RAG repeat r), then Normal RAG's
+  top 100 in rank order, skipping duplicates, to 100 items. On average 9.4 of the agent's 10 are
+  already in the top 100 (0.54-0.62 per question are not).
+- FORCED_TOP10 / FORCED_CLOSED: Normal RAG top 10 / no chunks, answered with
+  NEWS_QA_FORCED_INSTRUCTION (benchmark.py, RECRAG_FORCED_ANSWER=1): rule 2 replaced by "Always
+  give an answer. Never respond 'Insufficient Information'; if the context does not settle the
+  question, give your best answer."
