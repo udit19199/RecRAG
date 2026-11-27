@@ -219,8 +219,9 @@ Steps for any deck change:
 4. After any layout move, run `restore_offsets` against the backup, and fix
    slide-number references after a reorder.
 5. Screenshot every changed slide and look at it.
-6. One Opus review subagent checks the numbers and layout. Done when it passes
-   and the screenshots are clean; only then show the user.
+6. One independent review subagent checks the numbers and layout; the main
+   agent chooses its model task by task under the global model-choice rule.
+   Done when it passes and the screenshots are clean; only then show the user.
 
 ## Setup
 
