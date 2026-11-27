@@ -1,0 +1,9 @@
+AGENT_FILL100_r1 rows 250 passages {100} empty 0 insufficient 2
+AGENT_FILL100_r2 rows 250 passages {100} empty 0 insufficient 2
+AGENT_FILL100_r3 rows 250 passages {100} empty 0 insufficient 3
+FORCED_CLOSED_r1 rows 250 passages {0} empty 0 insufficient 0
+FORCED_CLOSED_r2 rows 250 passages {0} empty 0 insufficient 0
+FORCED_CLOSED_r3 rows 250 passages {0} empty 0 insufficient 0
+FORCED_TOP10_r1 rows 250 passages {10} empty 0 insufficient 0
+FORCED_TOP10_r2 rows 250 passages {10} empty 0 insufficient 0
+FORCED_TOP10_r3 rows 250 passages {10} empty 0 insufficient 0

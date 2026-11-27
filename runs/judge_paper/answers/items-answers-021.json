@@ -1,0 +1,672 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "bb5ec353a90c115e",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's actions published before October 31, 2023, and The Verge report on Sam Bankman-Fried's acknowledgment of financial discrepancies, was there a change in the narrative regarding Sam Bankman-Fried's awareness of the financial issues?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—he shifted from claiming he was unaware of the shortfall to acknowledging he’d been told about it earlier."
+  },
+  {
+   "id": "0534f746c8fc139c",
+   "kind": "answer",
+   "question": "Between the Sporting News report on Jim Harbaugh's situation published on November 6, 2023, and the subsequent report on Michigan's performance without Jim Harbaugh against Penn State published on November 11, 2023, was there a change in the reporting regarding Jim Harbaugh's presence with the team?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from expected to travel with the team to not coaching against Penn State."
+  },
+  {
+   "id": "eb41dc461949dc1e",
+   "kind": "answer",
+   "question": "Does the TechCrunch article suggest that Sam Bankman-Fried's intentions for his wealth were different from the portrayal of his actions in the Fortune article, and do both these characterizations align with the allegations of fraud mentioned in another TechCrunch article?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes, but no."
+  },
+  {
+   "id": "bfaf0b8678b0fbdf",
+   "kind": "answer",
+   "question": "After the TechCrunch report on November 18, 2023, suggesting that Sam Altman was not being fully truthful with the board, and the Fortune article on the same day stating that Sam Altman and the ex-chairman were shocked and saddened by the board's actions, was the reporting from TechCrunch later on November 18, 2023, about Sam Altman's plans consistent with the earlier reports from TechCrunch and Fortune?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No."
+  },
+  {
+   "id": "ec735b97103d39d1",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency; The Verge reported that eBay continued offering its price-match guarantee."
+  },
+  {
+   "id": "869b177f1ce61d7f",
+   "kind": "answer",
+   "question": "Between the report by The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the report by TechCrunch on the class action antitrust suit against Google published on December 15, 2023, was there a change in the portrayal of Google's business practices with respect to their impact on other companies?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from a defended business deal to alleged practices that harmed other companies."
+  },
+  {
+   "id": "1bb37def8c5712e0",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay offered a 110% price-difference coupon for qualifying lower-priced competitor items."
+  },
+  {
+   "id": "cac1b66b4d149c7b",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "They align: both express concern that high and rising national debt poses economic risks."
+  },
+  {
+   "id": "c56ea1c20c8d555d",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay still offered conditional price matching, including 110% of the price difference on qualifying items."
+  },
+  {
+   "id": "4424a280978dc0d8",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "They portray different levels, but the provided context indicates Bankman-Fried knew of and approved the misuse of customer funds."
+  },
+  {
+   "id": "110ba57cd04c2698",
+   "kind": "answer",
+   "question": "After Sporting News reported on Alejandro Mata's successful 31-yard field goal for Colorado on October 28, 2023, did the same news source report a successful or unsuccessful field goal attempt by Jayden Fielding in a later article?",
+   "gold_answers": [
+    "Unsuccessful"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "30e14bdb5c3e3e16",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different stages: Gemini debuted with the lighter Gemini Pro version, while the more capable Gemini Ultra was expected later."
+  },
+  {
+   "id": "5180810edd19f442",
+   "kind": "answer",
+   "question": "Did the 'Sporting News' article suggest that the Dallas Cowboys' offensive effectiveness against the 49ers came early in the game, while the same source indicates that Joe Mixon's offensive role for the Cincinnati Bengals has decreased due to Joe Burrow's absence?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "0020bda6818a59a5",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "They align; both highlight potential economic risks from rising government debt."
+  },
+  {
+   "id": "1bdf7e58eb6968c8",
+   "kind": "answer",
+   "question": "Between the report by Cnbc | World Business News Leader on Sam Bankman-Fried's intentions for FTX's board composition before and the allegations reported by TechCrunch regarding Sam Bankman-Fried's fraudulent activities, was there a change in the narrative surrounding Sam Bankman-Fried's professional conduct?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes—from board-governance concerns to allegations of fraud."
+  },
+  {
+   "id": "4398bfb419c04a17",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes—from alleged deliberate misappropriation to a portrayal of him as inattentive and unable to manage FTX and Alameda."
+  },
+  {
+   "id": "a705eaab5f5110f7",
+   "kind": "answer",
+   "question": "Did the article from 'The Age' about Tyler Mitchell suggest that his career has been unsuccessful due to his early photography experiences, while the article from 'The Roar | Sports Writers Blog' about Graham Arnold indicates that his career choices involved staying with the Australian national team despite offers from Europe?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "c489234ad9b6fb58",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes—he shifted from being portrayed as managing both firms to claiming he couldn’t oversee them both and lacked knowledge of key operations."
+  },
+  {
+   "id": "228c268babd81dc2",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present challenges to the All Blacks’ gameplay, but in different situations."
+  },
+  {
+   "id": "6e3940746132729a",
+   "kind": "answer",
+   "question": "Has the perspective on managing dementia in 'The Guardian' articles shown a change from the time Susan Saunders was reported to be caring for her mother with dementia (published at '2023-10-10') to the more recent report on new Alzheimer’s drugs (published at '2023-12-17')?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from caregiving and lifestyle advice to new treatments and earlier diagnosis."
+  },
+  {
+   "id": "e1a9db9a72b58e18",
+   "kind": "answer",
+   "question": "After Sporting News reported on Alejandro Mata's successful 31-yard field goal for Colorado on October 28, 2023, did the same news source report a successful or unsuccessful field goal attempt by Jayden Fielding in a later article?",
+   "gold_answers": [
+    "Unsuccessful"
+   ],
+   "model_answer": "Yes—unsuccessful; Fielding missed wide left."
+  },
+  {
+   "id": "767576788fc2a6a3",
+   "kind": "answer",
+   "question": "Has the focus of the European Commission's involvement reported by TechCrunch changed from addressing competition concerns in Amazon's iRobot purchase to facilitating dialogue and assessing issues with Meta's ad-free subscription service to probing Elon Musk's X over illegal content risks and moderation practices?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "5c7988eaf81e9f32",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on high-performance centralisation; the QRU only rejects centralising its commercial and corporate functions."
+  },
+  {
+   "id": "be2d19ea58d5cf88",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "They align: both express concern that rising national debt could constrain the economy and private investment."
+  },
+  {
+   "id": "06097ebb13b81bd8",
+   "kind": "answer",
+   "question": "Has the approach to content moderation by social media companies, as reported by TechCrunch, changed from the time when the Supreme Court was set to hear cases on state laws restricting moderation (published at '2023-10-04T20:07:42+00:00') to the period when Twitter (now called X) under Elon Musk's leadership implemented a crowdsourced moderation system (published at '2023-11-03T17:43:00+00:00')?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes. X shifted from formal content moderation to crowdsourced moderation through Community Notes."
+  },
+  {
+   "id": "ac748aa78f425197",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Google's AI demo involving the Gemini Ultra model and the TechCrunch report on the antitrust suit filed against Google, was there a change in the nature of the issues reported concerning Google's practices?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from a misleading AI demo to alleged antitrust harms to publishers."
+  },
+  {
+   "id": "a2cdb1ade702ba7a",
+   "kind": "answer",
+   "question": "Between the report from Cnbc | World Business News Leader on Sam Bankman-Fried's intentions for FTX's board composition and the report from The Verge on Sam Bankman-Fried's denial regarding financial discrepancies, was there a change in the narrative concerning Sam Bankman-Fried's awareness and management decisions?\n\nBetween the allegations reported by TechCrunch in favor of Sam Bankman-Fried and the subsequent report from The Verge, is there consistency in the portrayal of Sam Bankman-Fried's knowledge of the financial issues?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "No. The Verge portrays him as denying knowledge of financial issues, while the reported evidence suggests awareness and poor oversight."
+  },
+  {
+   "id": "bba6e1302075e8af",
+   "kind": "answer",
+   "question": "After TechCrunch reported on the shutdown of Pebble, the Twitter alternative previously known as T2, on October 24, 2023, did the role of social media as highlighted by FOX News - Health in the \"Save Lucas\" campaign by The Goeller family on December 9, 2023, remain consistent or inconsistent with the importance of social media's role as mentioned in the TechCrunch article?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Inconsistent."
+  },
+  {
+   "id": "95eda841e06ec020",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "They refer to different versions and stages."
+  },
+  {
+   "id": "e7a1bfbe7a7fe190",
+   "kind": "answer",
+   "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—the narrative shifted from Cohen portraying Ellison as responsible for Alameda’s decisions to her testimony describing actions taken at Bankman-Fried’s direction."
+  },
+  {
+   "id": "e8c8dee24159a9f5",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles assert different levels of Sam Bankman-Fried’s involvement."
+  },
+  {
+   "id": "7a9b203ac7fd14f2",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay offered price matching for qualifying purchases, except during Thanksgiving and Cyber Monday weeks."
+  },
+  {
+   "id": "0fc6693aed67cd38",
+   "kind": "answer",
+   "question": "Does the TechCrunch article discussing Google's spending to become the default search engine on various platforms report the same amount of $26.3 billion in 2021 as the claim made in another TechCrunch article covering the US v Google trial, or do they report different amounts?",
+   "gold_answers": [
+    "Same"
+   ],
+   "model_answer": "They report the same amount: $26.3 billion in 2021."
+  },
+  {
+   "id": "43b5c60623577271",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Altman's involvement with a teen's AI startup published on October 7, 2023, and the TechCrunch article suggesting doubts about Sam Altman's truthfulness with the board published on November 18, 2023, was there a change in the portrayal of Sam Altman's professional conduct?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from startup involvement to questions about his candor with OpenAI’s board."
+  },
+  {
+   "id": "61f32e748e2f4b3f",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: a difficult World Cup final versus past defeats and preparation for Argentina."
+  },
+  {
+   "id": "87f2fafa3e00be76",
+   "kind": "answer",
+   "question": "Did the TechCrunch article fail to report a workforce reduction at Epic Games, while The Verge article discusses Epic Games' portrayal in a legal battle, without mentioning any layoffs?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "61a16be152b94cba",
+   "kind": "answer",
+   "question": "Does the TechCrunch article that discusses the expected debut of DeepMind's next-generation chatbot Gemini by the end of the year align with the TechCrunch article mentioning Google's release of only the \"lite\" version known as Gemini Pro, or do they refer to different stages or versions of the Gemini project?",
+   "gold_answers": [
+    "Different stages or versions"
+   ],
+   "model_answer": "Different stages and versions: Gemini Pro was the “lite” release, while Gemini Ultra was expected later."
+  },
+  {
+   "id": "5d7bda73aea68f2a",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's legal situation published after October 2, 2023, and The Verge's coverage of Sam Bankman-Fried's testimony, was there a change in the narrative regarding his ability to manage FTX and Alameda Research?",
+   "gold_answers": [
+    "No"
+   ],
+   "model_answer": "Yes—from a hands-on leader to someone claiming he lacked oversight of key FTX and Alameda operations."
+  },
+  {
+   "id": "44acc672db62f6cf",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from long-term planning for sustainable success to a narrative of poor European performance and present dysfunction."
+  },
+  {
+   "id": "dd7a89ba14e43242",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "The Verge reported a change."
+  },
+  {
+   "id": "c19706145c794342",
+   "kind": "answer",
+   "question": "Between the report by The Age on October 22, 2023, claiming that Google manipulates Search to maximize ad revenue, and the TechCrunch report on December 15, 2023, alleging that Google \"siphons off\" news publishers' content, readers, and ad revenue through anticompetitive means, was there consistency in the portrayal of Google's business practices by these news sources?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—both portrayed Google as using its dominance to benefit its business at others’ expense."
+  },
+  {
+   "id": "06f42ade17c8cba0",
+   "kind": "answer",
+   "question": "Does the article from Cnbc | World Business News Leader suggest that the U.S. presidential election has a significant influence on Ukraine's future, whereas the article from Engadget implies that Russia's invasion of Ukraine has had a major impact on Globalization and the perception of the twenty-first century, indicating differing primary concerns for Ukraine's situation?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "89c7354d612525d1",
+   "kind": "answer",
+   "question": "Between the report by The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the report by TechCrunch on the class action antitrust suit against Google published on December 15, 2023, was there a change in the portrayal of Google's business practices with respect to their impact on other companies?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—portrayal shifted from Apple defending the deal as necessary to Google’s practices being framed as harming competitors."
+  },
+  {
+   "id": "d1bfd25469f58d75",
+   "kind": "answer",
+   "question": "Was there inconsistency in the portrayal of Sam Bankman-Fried's legal challenges between the TechCrunch report published on October 1, 2023, and the TechCrunch report on October 7, 2023, and was there disagreement between the TechCrunch report on October 1, 2023, and the report by Cnbc | World Business News Leader on Sam Bankman-Fried's approach to the board composition for FTX?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "e69ac68a70c1d876",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency: eBay’s article described its existing price-guarantee policy."
+  },
+  {
+   "id": "e3642028c3746d41",
+   "kind": "answer",
+   "question": "Did both the Sporting News report and the CBSSports.com report state that Tyreek Hill's chances of achieving 2,000-plus receiving yards before December 5, 2023, remained unchanged in their reporting of his progress towards his season goal?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "3a4d51ed134ae965",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: gameplay struggles in the final versus past losses to Argentina and the challenge of preparing for the semi-final."
+  },
+  {
+   "id": "2a189173a77e142b",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay’s approach remained unchanged."
+  },
+  {
+   "id": "aa38b0ffbef41cc7",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes— the narrative shifted from advocating a long-term blueprint for sustainable success to emphasizing United’s poor performances and ongoing dysfunction."
+  },
+  {
+   "id": "b81cab438feaf390",
+   "kind": "answer",
+   "question": "Does 'The New York Times' article suggest that Chelsea Football Club's expansion in the U.S. market is a result of random chance under Todd Boehly's co-ownership, while 'The Guardian' and 'Sky Sports' articles focus on Chelsea Football Club's recent match outcomes and player fitness concerns, respectively, without discussing strategic market expansion?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "57195b2a20fc8bf6",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from a defense of the deal to allegations of anticompetitive market dominance."
+  },
+  {
+   "id": "490d6eb946885e56",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the class action antitrust suit against Google reported by TechCrunch, was there a change in the portrayal of Google's business practices related to competition and market dominance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from “no valid alternative” to allegations that Google used deals to block competition and maintain its dominance."
+  },
+  {
+   "id": "e3e91389522ff3ca",
+   "kind": "answer",
+   "question": "Did 'The Verge' article suggest that Sam Bankman-Fried set withdrawal permissions based on FTX's customer satisfaction scores, while 'Fortune' and 'TechCrunch' articles focus on the jury's determination of his truthfulness and allegations of committing fraud for personal gain, respectively, without mentioning specific operational practices like withdrawal permissions?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes."
+  },
+  {
+   "id": "6ace46a113145b7d",
+   "kind": "answer",
+   "question": "Between the TalkSport report on Manchester United's future plans published on October 16, 2023, and the Sporting News report on Manchester United's performance in European competitions published on December 12, 2023, was there a change in the narrative regarding Manchester United's success and planning?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from long-term planning for sustainable success to a narrative of poor results and European failure."
+  },
+  {
+   "id": "0c29bbf259cf94f0",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Google's AI demo involving the Gemini Ultra model and the TechCrunch report on the antitrust suit filed against Google, was there a change in the nature of the issues reported concerning Google's practices?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from AI demo concerns to allegations of anticompetitive practices harming publishers."
+  },
+  {
+   "id": "fea0b78a3d07516e",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Google's AI demo involving the Gemini Ultra model and the TechCrunch report on the antitrust suit filed against Google, was there a change in the nature of the issues reported concerning Google's practices?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from concerns about the Gemini demo’s authenticity to alleged anticompetitive practices harming publishers."
+  },
+  {
+   "id": "e2807f925e7bc86b",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from changes to search results and user experience to alleged broader harm to publishers and the digital ecosystem."
+  },
+  {
+   "id": "1d552cef69764601",
+   "kind": "answer",
+   "question": "Between the report from Fortune published on October 4, 2023, which discussed Mark Cohen's claims about Caroline Ellison, and the subsequent reports from The Verge regarding statements made by Caroline Ellison, was there a change in the narrative concerning her role and actions as the CEO of Alameda Research?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from portraying Ellison as responsible for Alameda’s decisions to describing her as acting under Bankman-Fried’s direction while acknowledging her own role."
+  },
+  {
+   "id": "ae11883ffd72c3ae",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while The Verge article alleges that Sam Bankman-Fried himself made the decision to use FTX customer funds to buy out Binance, indicating a difference in the reported involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "207600df28863014",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "They portray different situations: gameplay errors in the final versus past losses and uncertainty against Argentina."
+  },
+  {
+   "id": "00070098e8ccf60f",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both articles assert Sam Bankman-Fried’s involvement; TechCrunch says Ellison took the funds under his instruction."
+  },
+  {
+   "id": "9b2534394748886d",
+   "kind": "answer",
+   "question": "Does the Queensland Rugby Union's stance on maintaining control over their high-performance model, as reported by The Roar | Sports Writers Blog, align with Rugby Australia's efforts to centralize high-performance programs across Super Rugby teams, or are their approaches different?",
+   "gold_answers": [
+    "Different"
+   ],
+   "model_answer": "They align on centralising high performance, but differ over commercial and corporate control."
+  },
+  {
+   "id": "0faedd8557069836",
+   "kind": "answer",
+   "question": "Does the 'Business World' article suggesting that the 'Philippines government' could hinder private investment due to rising national debt align with the concern over the 'Philippines' debt-to-GDP ratio' expressed in another 'Business World' article, or do they present differing implications for the country's economy?",
+   "gold_answers": [
+    "Align"
+   ],
+   "model_answer": "They align: both express concern about rising debt and its economic risks."
+  },
+  {
+   "id": "515d94dd9d3ac996",
+   "kind": "answer",
+   "question": "Between the report by The Verge on Apple's defense of its Google Search deal published on September 26, 2023, and the report by TechCrunch on the class action antitrust suit against Google published on December 15, 2023, was there a change in the portrayal of Google's business practices with respect to their impact on other companies?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from a mutually beneficial deal to practices portrayed as harming competitors."
+  },
+  {
+   "id": "1aa6f4b64efd6f09",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Google's hardware developments published on October 7, 2023, and the TechCrunch report on the antitrust suit against Google published on December 15, 2023, was there a change in the nature of the issues reported concerning Google?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from hardware developments to an antitrust lawsuit."
+  },
+  {
+   "id": "2164a34150fc85a0",
+   "kind": "answer",
+   "question": "After Sporting News reported on Najee Harris being the preferred goal-line back for the Steelers with touchdowns in three recent games on December 7, 2023, did Rivals report any touchdowns by Jonah Coleman for the Wildcats in the game against Utah before that date?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "561402c5db96f434",
+   "kind": "answer",
+   "question": "Do the articles from The Roar | Sports Writers Blog discussing The All Blacks' actions in the Rugby World Cup final and their previous encounters with Argentina both present The All Blacks as having faced challenges in their gameplay, or do they portray different situations regarding The All Blacks' performance?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Both present the All Blacks as facing gameplay challenges, though in different situations."
+  },
+  {
+   "id": "7f1f90af8b7804bc",
+   "kind": "answer",
+   "question": "Between the report from The Age on Richelle Cranston's club history in the AFLW published on October 20, 2023, and The Age's report on Richelle Cranston's health condition while playing this season published on November 3, 2023, has the information regarding Richelle Cranston's AFLW career remained consistent?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "509b6ba2453b8e71",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from broadly shaping the internet to allegedly harming publishers through content extraction, lost traffic, and AI search."
+  },
+  {
+   "id": "cd13990b92f9dd99",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's trial and the subsequent report by the same source on the prosecution's allegations against him, was there consistency in the portrayal of the charges he is facing?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "79b2f634a53a06d4",
+   "kind": "answer",
+   "question": "Between the TechCrunch article published on October 31, 2023, regarding Google's financial strategies to maintain its default search engine status, and the TechCrunch article on November 13, 2023, covering similar aspects of Google's expenditures for default search engine positioning, was there agreement in the reported amount Google spent in 2021?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—both reported $26.3 billion."
+  },
+  {
+   "id": "7211a7afd0f51672",
+   "kind": "answer",
+   "question": "Does the Fortune article claim that Sam Bankman-Fried used Caroline Ellison as a front for secret access to customer funds at Alameda Research, while the TechCrunch article alleges that Caroline Ellison took $14 billion from customers to repay debts without Sam Bankman-Fried's knowledge, or do both articles assert different levels of involvement of Sam Bankman-Fried in the misuse of customer funds?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Both indicate SBF was involved in the misuse of customer funds, not that Ellison acted without his knowledge."
+  },
+  {
+   "id": "7b3fafe252ee8309",
+   "kind": "answer",
+   "question": "Between the report from The Verge on Google's impact on the internet's appearance published on November 1, 2023, and the report from TechCrunch on a class action antitrust suit against Google published later, was there a change in the portrayal of Google's influence on the digital ecosystem?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "Yes—from shaping the internet’s appearance to facing scrutiny over its control of the digital ecosystem."
+  },
+  {
+   "id": "a77d8ea5026f8c9a",
+   "kind": "answer",
+   "question": "After the report by Cnbc | World Business News Leader on October 6, 2023, stating that businesses selling on Amazon might opt to set non-competitive prices, did The Verge report a change or consistency in eBay's approach to pricing competitiveness in their article on October 25, 2023?",
+   "gold_answers": [
+    "Consistency"
+   ],
+   "model_answer": "Consistency—eBay maintained its approach to pricing competitiveness."
+  }
+ ],
+ "evidence": []
+}

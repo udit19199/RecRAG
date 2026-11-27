@@ -1,0 +1,69 @@
+{
+ "guide": "You are grading a question-answering benchmark. Judge each item on its own.\n\nFor an \"answer\" item: is the model answer the same answer as any gold answer?\nCount it correct when it names the same entity, value or yes/no decision, even\nwith different wording, extra title words, or a short explanation. Count it\nwrong when it is a different entity, hedges between options, says it cannot\nanswer, or adds a claim that contradicts the gold answer.\n\nFor an \"evidence\" item: list the indexes of the gold sentences whose fact is\nstated by the evidence text. A fact is stated when a reader of the evidence\nalone would learn it (same entity, same claim, same date or number when the\nsentence has one). Be strict: topic overlap or a generic description of the\nsame subject is not enough. Return an empty list when none.\n\nWrite verdicts.json as a JSON array with one object per item, in any order:\n{\"id\": \"...\", \"correct\": true}             for answer items\n{\"id\": \"...\", \"supported\": [0, 2]}          for evidence items\nUse only ids from items.json and do not skip any item.",
+ "answers": [
+  {
+   "id": "cb2b391429e511fb",
+   "kind": "answer",
+   "question": "After Sporting News reported on Alejandro Mata's successful 31-yard field goal for Colorado on October 28, 2023, did the same news source report a successful or unsuccessful field goal attempt by Jayden Fielding in a later article?",
+   "gold_answers": [
+    "Unsuccessful"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "d5a339d4f344339c",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried published on October 2, 2023, and the TechCrunch report on Sam Bankman-Fried published on October 7, 2023, was there consistency in the portrayal of Sam Bankman-Fried's alleged actions?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "7ee4d93b5bfdd229",
+   "kind": "answer",
+   "question": "Does 'The Guardian' article describe 'the match' as a contest of disparity between a wealthy team and a young team, while the 'Sporting News' article focuses on 'Shohei Ohtani's' decision on team selection without mentioning any disparity?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  },
+  {
+   "id": "ffe8e8d077176cc3",
+   "kind": "answer",
+   "question": "Between the TechCrunch report on Sam Bankman-Fried's trial and the subsequent report by the same source on the prosecution's allegations against him, was there inconsistency in the portrayal of the charges he is facing?",
+   "gold_answers": [
+    "no"
+   ],
+   "model_answer": "Yes"
+  },
+  {
+   "id": "e2c0767b734dadf3",
+   "kind": "answer",
+   "question": "After TechCrunch reported on Google's annual hardware event on October 7, 2023, and then on Google's expenditure to be the default search engine on various platforms on November 13, 2023, did TechCrunch's subsequent report on December 15, 2023, regarding a class action antitrust suit against Google indicate a consistent or inconsistent portrayal of Google's business practices?",
+   "gold_answers": [
+    "Consistent"
+   ],
+   "model_answer": "Consistent portrayal."
+  },
+  {
+   "id": "5315e4539f0eab70",
+   "kind": "answer",
+   "question": "After Sporting News reported on Johnny Cardoso's inclusion in the USMNT squad post-injury on October 4, 2023, and CBSSports.com announced De'Von Achane's move to Injured Reserve on October 12, 2023, which player's status changed between the two reports, Johnny Cardoso or De'Von Achane?",
+   "gold_answers": [
+    "Johnny Cardoso"
+   ],
+   "model_answer": "De'Von Achane"
+  },
+  {
+   "id": "4ac6e88478597963",
+   "kind": "answer",
+   "question": "Does the TechCrunch article suggest a different perception of Sam Bankman-Fried's character compared to the portrayal by The Verge, with TechCrunch not referring to him as the white horse of crypto, while The Verge discusses his instructions on withdrawal permissions relative to trading revenue?",
+   "gold_answers": [
+    "Yes"
+   ],
+   "model_answer": "No"
+  }
+ ],
+ "evidence": []
+}

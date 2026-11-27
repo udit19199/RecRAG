@@ -1,0 +1,1 @@
+{"variant": "AGENT_FILL100", "rep": "1", "passages_to_answer": 100, "forced_answer": false, "note": "agent's 10 as sent, then top 100 fill; mean agent items not in top 100: 0.62"}
