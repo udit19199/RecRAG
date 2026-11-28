@@ -135,13 +135,16 @@ Content:
   (answered right only), 14 HotpotQA + Natural Questions (four methods beside more
   chunks, answered right only), 15 what we found. The removed slides are in
   `~/Workspace/local/hpe-backups/Experiments-before-15-slides-20261129T001343.json`.
-- Business deck (imported into Google Slides): `~/Documents/HPE/meetings/upcoming-deck/build6.py`
-  writes `RecRAG-HPE-meeting-v6.pptx`, 12 slides, less detail than the scene: one chart and
-  at most one caption line per slide, no scoring method, no checks. It is general, not
-  about our datasets (Udit, 2026-11-28): question kinds ("single-fact", "two-document",
-  "multi-document") in titles and labels, dataset names only in grey captions; one
-  market slide with sourced survey figures; the message is that a recommender has little
-  to choose between, so start with simple RAG and send more passages; one impact slide.
+- Business deck (imported into Google Slides): `~/Documents/HPE/meetings/upcoming-deck/build7.py`
+  writes `RecRAG-HPE-meeting-v7.pptx`, 10 slides (Udit, 2026-11-28/29). One story: teams add
+  graphs and agents to RAG, is it worth it; what we did; demo; simple RAG is as good on most
+  questions; the agent's win is not the graph and more passages beat it; more passages find
+  more and cost less; what a team should do; next phase. Rules: general question kinds
+  ("single-fact", "two-document", "multi-document") in titles and labels, dataset names only
+  in grey captions; only Simple RAG and the agent on charts (RAPTOR and HippoRAG 2 in one
+  caption); every outside number carries its source on the slide (Menlo Ventures 2024 and
+  2025 reports, Xiang et al. ICLR 2026); our numbers cite the public repo; each chart has a
+  takeaway panel beside it, no filler boxes, no half-empty slides.
 - A bar from a single repeat says "1 repeat" under its value (`bars(...,
   mark1=True)` in `story_slides.py`).
 - Slide 11 (guessing): six bars per type and the yes/no share of gold answers
