@@ -135,9 +135,13 @@ Content:
   (answered right only), 14 HotpotQA + Natural Questions (four methods beside more
   chunks, answered right only), 15 what we found. The removed slides are in
   `~/Workspace/local/hpe-backups/Experiments-before-15-slides-20261129T001343.json`.
-- Business deck (imported into Google Slides): `~/Documents/HPE/meetings/upcoming-deck/build5.py`
-  writes `RecRAG-HPE-meeting-v5.pptx`, 12 slides, less detail than the scene: one chart and
-  at most one caption line per slide, no scoring method, no checks.
+- Business deck (imported into Google Slides): `~/Documents/HPE/meetings/upcoming-deck/build6.py`
+  writes `RecRAG-HPE-meeting-v6.pptx`, 12 slides, less detail than the scene: one chart and
+  at most one caption line per slide, no scoring method, no checks. It is general, not
+  about our datasets (Udit, 2026-11-28): question kinds ("single-fact", "two-document",
+  "multi-document") in titles and labels, dataset names only in grey captions; one
+  market slide with sourced survey figures; the message is that a recommender has little
+  to choose between, so start with simple RAG and send more passages; one impact slide.
 - A bar from a single repeat says "1 repeat" under its value (`bars(...,
   mark1=True)` in `story_slides.py`).
 - Slide 11 (guessing): six bars per type and the yes/no share of gold answers
