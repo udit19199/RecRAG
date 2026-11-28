@@ -124,18 +124,20 @@ Content:
 - Wording: "changes", not "fixes"; "previous run" and "latest run", never
   dates or a timeline. Plain words a non-specialist can follow; explain any
   technical term you keep. Exact prompts stay word for word.
-- Order (2026-11-27, answer first, for the Labs VP audience; replaces the 25 Nov
-  order): 01-02 how Agentic Hybrid RAG works, 03 the short answer (three lines; the
-  only number is the 77-79% of line 3, the rest live on 17), 04 how answers are judged. Main flow: 05
-  comparison + temporal, 06 is it the graph (`runs/nograph/`), 07 is it the
-  picking, 08 more chunks, 09 chunk order, 10 answer changes, 11 guessing, 12
-  made-up answers, 13 Neo4j vs Milvus, 14 inference + null, 15 HotpotQA +
-  Natural Questions, 16 HotpotQA + Natural Questions: more chunks, 17 what we
-  found (ends with the "For HPE" do-this line). Detail after the conclusion:
-  18-19 agent prompts, 20-21 judge prompts, 22 what changed between the runs,
-  23 question 747, 24 why the previous run's repeats were far apart
-  (`runs/final500/repeat_variation/`), 25 the 100 questions per type both runs
-  answered and the 25 new ones. 26 next phase, titled as separate work.
+- Final deck (Udit, 2026-11-28; replaces the 27 Nov order and every "both runs" rule in
+  this file): at most 15 slides including the title and team slide, and the final output
+  only. Nothing about the previous run, what changed between runs or prompts, no prompt
+  slides, no next-phase slide; every chart is latest-run blue, with no orange. Order: 01
+  title and team, 02 how Agentic Hybrid RAG works, 03 the graph and the tools, 04 the short
+  answer (three lines; the only number is 77-79%), 05 how answers are judged, 06
+  comparison + temporal (four methods), 07 is it the graph, 08 is it the picking, 09 more
+  chunks, 10 answer changes, 11 guessing, 12 made-up answers, 13 chunk order and database
+  (answered right only), 14 HotpotQA + Natural Questions (four methods beside more
+  chunks, answered right only), 15 what we found. The removed slides are in
+  `~/Workspace/local/hpe-backups/Experiments-before-15-slides-20261129T001343.json`.
+- Business deck (imported into Google Slides): `~/Documents/HPE/meetings/upcoming-deck/build5.py`
+  writes `RecRAG-HPE-meeting-v5.pptx`, 12 slides, less detail than the scene: one chart and
+  at most one caption line per slide, no scoring method, no checks.
 - A bar from a single repeat says "1 repeat" under its value (`bars(...,
   mark1=True)` in `story_slides.py`).
 - Slide 11 (guessing): six bars per type and the yes/no share of gold answers
