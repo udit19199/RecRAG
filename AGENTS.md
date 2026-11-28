@@ -125,8 +125,8 @@ Content:
   dates or a timeline. Plain words a non-specialist can follow; explain any
   technical term you keep. Exact prompts stay word for word.
 - Order (2026-11-27, answer first, for the Labs VP audience; replaces the 25 Nov
-  order): 01-02 how Agentic Hybrid RAG works, 03 the short answer (four lines; the
-  only number is the 77-79% of line 4, the rest live on 17), 04 how answers are judged. Main flow: 05
+  order): 01-02 how Agentic Hybrid RAG works, 03 the short answer (three lines; the
+  only number is the 77-79% of line 3, the rest live on 17), 04 how answers are judged. Main flow: 05
   comparison + temporal, 06 is it the graph (`runs/nograph/`), 07 is it the
   picking, 08 more chunks, 09 chunk order, 10 answer changes, 11 guessing, 12
   made-up answers, 13 Neo4j vs Milvus, 14 inference + null, 15 HotpotQA +
@@ -138,17 +138,22 @@ Content:
   answered and the 25 new ones. 26 next phase, titled as separate work.
 - A bar from a single repeat says "1 repeat" under its value (`bars(...,
   mark1=True)` in `story_slides.py`).
-- Slide 11 (guessing): "No chunks (refuses)", the yes/no share of gold answers
-  (121 and 112 of 125, `review_checks.json` `yes_or_no`), and the top-50 table
-  labelled "majority of 3 repeats".
+- Slide 11 (guessing): six bars per type and the yes/no share of gold answers
+  (121 and 112 of 125, `review_checks.json` `yes_or_no`). The top-50 2x2 table was
+  removed in the 28 Nov word cut; its numbers stay in `runs/selection/paired/analysis.json`
+  (`evidence_2x2_majority`) and the paper.
+- Word cut (Udit, 2026-11-28: "too many words that are not required"): each setup is
+  defined once in the deck, on the first slide that shows it, in one short grey line; no
+  "Closest in meaning = semantic similarity" line; no grey how-to-read footers except one
+  on slide 05 ("Bar: average of 3 repeats. Small numbers: lowest–highest repeat.");
+  "What we found" has six points, one detail line each, and a one-line "For HPE".
 - Forced answers (2026-11-28, `runs/selection/runs/matched/`): with no chunks and
   "Insufficient Information" forbidden, the model answers 76.8% (comparison) and
   78.7% (temporal) right, so answered right on these yes/no questions mostly shows
   whether the model answers. Lead retrieval claims with gold facts found. Slide 11
   shows "No chunks (must answer)" beside "Top 100 straight", in the latest-run blue
-  (orange means the previous run only); slides 03 and 17 carry the "Careful" line,
-  and the "For HPE" line gives gold facts found (top 100: all facts for 4 in 5
-  questions, agent: 1 in 3), not "more accurate".
+  (orange means the previous run only); slides 03 and 17 state it, and 17 gives
+  gold facts found beside it (top 100: all facts for 4 in 5 questions, agent: 1 in 3).
 - The agent's choice plus the top 100 (`AGENT_FILL100`) scores 85.6 and 85.6, the
   same as top 100 within the 95% range: "The agent's choice helps only at 10 chunks".
 - "LLM picks 10 of 50/100" is not shown and not run again: Udit, 2026-11-26.
